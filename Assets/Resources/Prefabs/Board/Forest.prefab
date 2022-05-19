@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5446795632980062014
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1639098555202725608, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
+      propertyPath: popBase
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639098555202725608, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
+      propertyPath: tileType
+      value: Forest
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639098555202725608, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
+      propertyPath: maxPopulationBase
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3135597305725448633, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3135597305725448633, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3135597305725448633, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3135597305725448633, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3135597305725448633, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3135597305725448633, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3135597305725448633, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3135597305725448633, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3135597305725448633, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3135597305725448633, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3135597305725448633, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4794923790133444121, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 166940745, guid: 8fbfd668c9667c240a54ea626bd159cd, type: 3}
+    - target: {fileID: 6168205754475305981, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
+      propertyPath: TileType
+      value: Forest
+      objectReference: {fileID: 0}
+    - target: {fileID: 8882980994967741360, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
+      propertyPath: m_Name
+      value: Forest
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
