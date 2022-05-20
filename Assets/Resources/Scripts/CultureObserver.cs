@@ -36,7 +36,7 @@ public class CultureObserver : MonoBehaviour
 
         }
         CultureAggregation newAggregation = new CultureAggregation(cultureToUpdate);
-        Debug.Log("Adding new culture " + cultureToUpdate.name + "(" + cultureToUpdate.GetHashCode() + ") as aggregation " + newAggregation.GetHashCode());
+        //Debug.Log("Adding new culture " + cultureToUpdate.name + "(" + cultureToUpdate.GetHashCode() + ") as aggregation " + newAggregation.GetHashCode());
 
         cultures.Add(cultureToUpdate.name, newAggregation);
         EventManager.TriggerEvent("CultureAggregateAdded", new Dictionary<string, object> { { "cultureAggregate", newAggregation } });
@@ -51,7 +51,7 @@ public class CultureObserver : MonoBehaviour
             potentialCulture.RemoveCulture(culture);
             if (potentialCulture.totalPopulation == 0)
             {
-                Debug.Log("removing " + culture.name + " from observer as aggregate " + potentialCulture.GetHashCode());
+                //Debug.Log("removing " + culture.name + " from observer as aggregate " + potentialCulture.GetHashCode());
                 cultures.Remove(potentialCulture.name);
                 EventManager.TriggerEvent("CultureAggregateRemoved"+potentialCulture.name, new Dictionary<string, object> { { "cultureAggregate", potentialCulture } });
 
