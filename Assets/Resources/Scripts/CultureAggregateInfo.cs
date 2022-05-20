@@ -7,7 +7,7 @@ using TMPro;
 public class CultureAggregateInfo : MonoBehaviour
 {
 
-    CultureAggregation cultureAggregate;
+    public CultureAggregation cultureAggregate;
 
 
     Image cultureColor;
