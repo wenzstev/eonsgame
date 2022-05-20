@@ -349,7 +349,7 @@ public class Culture : MonoBehaviour
 
     public void DestroyCulture()
     {
-        Debug.Log("Destroying " + name + "(" + GetHashCode() + ")");
+        //Debug.Log("Destroying " + name + "(" + GetHashCode() + ")");
         EventManager.StopListening("Tick", OnTick);
         EventManager.TriggerEvent("CultureRemoved", new Dictionary<string, object>() { { "culture", this } });
         Destroy(gameObject);
@@ -372,7 +372,7 @@ public class Culture : MonoBehaviour
 
     public void AddPopulation(int num)
     {
-        Debug.Log("Adding one population to " + name + "(" + this.GetHashCode() + ")");
+        //Debug.Log("Adding one population to " + name + "(" + this.GetHashCode() + ")");
         population += num;
         EventManager.TriggerEvent("CultureUpdated", new Dictionary<string, object> { { "culture", this } });
 
@@ -416,7 +416,7 @@ public class Culture : MonoBehaviour
         Culture potentialSameCulture = null;
         if(newTileInfo.cultures.TryGetValue(cultureToMove.name, out potentialSameCulture))
         {
-            Debug.Log("found culture on tile. Merging " + this.name + " code " + this.GetHashCode() + " with  " + potentialSameCulture.name + " code "+ potentialSameCulture.GetHashCode());
+            //Debug.Log("found culture on tile. Merging " + this.name + " code " + this.GetHashCode() + " with  " + potentialSameCulture.name + " code "+ potentialSameCulture.GetHashCode());
             MergeWith(potentialSameCulture);
         }
         else
@@ -427,7 +427,7 @@ public class Culture : MonoBehaviour
             cultureToMove.isAnimationPlaying = false;
         }
 
-        Debug.Log("cultures on new tile: " + newTileInfo.cultures.Count);
+        //Debug.Log("cultures on new tile: " + newTileInfo.cultures.Count);
         if(newTileInfo.cultures.Count > 1)
         {
 
