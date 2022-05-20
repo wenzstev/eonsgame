@@ -17,12 +17,10 @@ public class CultureInfoPanelHover : MonoBehaviour, IPointerEnterHandler, IPoint
     {
         EventManager.TriggerEvent("ChangeViewMode", new Dictionary<string, object> { { "view", ViewController.Views.Highlight } });
         EventManager.TriggerEvent("HoverCulture" + aggregation.name, null);
-        Debug.Log("hovering on " + aggregation.name);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         EventManager.TriggerEvent("HoverOff", null);
-        Debug.Log("off hover");
     }
 }

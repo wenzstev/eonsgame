@@ -29,7 +29,6 @@ public class ViewController : MonoBehaviour
     {
         if ((Views)newView["view"] == Views.Highlight)
         {
-            Debug.Log("new view is highlight. Storing " + view);
             previousView = view;
         }
 

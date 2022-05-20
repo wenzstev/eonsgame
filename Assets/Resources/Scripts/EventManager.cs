@@ -69,6 +69,7 @@ public class EventManager : MonoBehaviour
 
     public static void TriggerEvent(string eventName, Dictionary<string, object> message)
     {
+        Debug.Log("triggering event: " + eventName);
         Action<Dictionary<string, object>> thisEvent = null;
         if (instance.eventDictionary.TryGetValue(eventName, out thisEvent))
         {
