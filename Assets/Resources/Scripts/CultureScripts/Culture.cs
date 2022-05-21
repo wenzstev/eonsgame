@@ -9,6 +9,8 @@ public class Culture : MonoBehaviour
     public Tile tile;
     TileInfo tileInfo;
 
+    DecisionMaker decisionMaker;
+
 
 
 
@@ -20,17 +22,13 @@ public class Culture : MonoBehaviour
 
     public int population;
 
-    [Range(0, .05f)]
-    public float spreadChance = .01f;
-
-    [Range(0, .01f)]
-    public float mutateChance = .003f;
+    public float spreadChance = 1f;
 
     [Range(0, .05f)]
     public float shareCultureChance = .05f;
 
     [Range(0, .05f)]
-    public float mutationMax = .01f;
+    public float baseMutationMax = .001f;
 
     [Range(0, .01f)]
     public float transferRate = .001f;
@@ -49,7 +47,7 @@ public class Culture : MonoBehaviour
 
     public int maxPopTransfer = 1;
 
-    //[System.NonSerialized]
+    [System.NonSerialized]
     public bool isAnimationPlaying = false;
 
 
@@ -62,9 +60,9 @@ public class Culture : MonoBehaviour
  
 
 
-    State currentState;
+    public State currentState;
 
-    enum State
+    public enum State
     {
         Default, 
         Refugee, 
@@ -72,6 +70,8 @@ public class Culture : MonoBehaviour
         Invaded,
         Invader,
         NewCulture,
+        StartMove,
+        Moving,
        
     }
 
@@ -80,6 +80,7 @@ public class Culture : MonoBehaviour
         EventManager.StartListening("Tick", OnTick);
         layerMode = transform.GetChild(0).GetComponent<SpriteRenderer>();
         circleMode = transform.GetChild(1).GetComponent<SpriteRenderer>();
+        decisionMaker = new DecisionMaker(this);
     }
 
     public void Init(Tile t)
@@ -112,66 +113,11 @@ public class Culture : MonoBehaviour
 
     void ExecuteTurn()
     {
-        switch(currentState)
-        {
-            case State.Repelled:
-                MoveBack();
-                break;
-            case State.Invaded:
-                AttemptRepel();
-                break;
-            case State.Default:
-            case State.Invader:
-            case State.NewCulture:
-                ExecuteMoveTurn();
-                break;
-            default:
-                break;
-        }
-        if(Random.value < gainAffinityChance)
-        {
-            GainAffinity();
-            return;
-        }
+        Turn turn = decisionMaker.ExecuteTurn();
+        turn.pushChangesToCulture(this);
     }
 
-    void ExecuteMoveTurn()
-    {
-
-        GameObject prospectiveTile = tile.GetRandomNeighbor();
-        if (prospectiveTile == null || prospectiveTile.GetComponent<TileInfo>().hasTransition)
-        {
-            return;
-        }
-
-
-        if (currentState == State.Refugee)
-        {
-            Flee();
-            return;
-        }
-
-        if (Random.value < spreadChance)
-        {
-            AttemptMove(prospectiveTile);
-            return;
-        }
-        if (Random.value < mutateChance)
-        {
-            Mutate();
-            return;
-        }
-        if (Random.value < shareCultureChance)
-        {
-            InteractWithNeighbor(prospectiveTile);
-            return;
-        }
-        if (Random.value < growPopulationChance)
-        {
-            GrowPopulation();
-            return;
-        }
-    }
+   
 
     private void OnTick(Dictionary<string, object> empty)
     {
@@ -207,7 +153,6 @@ public class Culture : MonoBehaviour
             return true;
         }
         return false;
-
     }
 
     public void MoveBack()
@@ -247,26 +192,7 @@ public class Culture : MonoBehaviour
         // set each piece back to default behavior
     }
 
-    public bool Invade(Culture victim)
-    {
-        // if invaded, one of these can happen:
-        // repelled
 
-        if (maxPopTransfer <= victim.population)
-        {
-            // repelled or merged
-            if (Random.value < victim.repelChance)
-            {
-                return false; // repelled
-            }
-            MergeWith(victim); // merged
-            return true;
-        }
-
-        SpreadToNewTile(victim.tile.gameObject); // invasion successful, invaded is forced to be displaced
-        victim.DestroyCulture();
-        return true;
-    }
 
     public void Mutate()
     {
@@ -413,6 +339,8 @@ public class Culture : MonoBehaviour
         cultureObj.transform.SetParent(newTile.transform);
         //newTileInfo.hasTransition = false;
 
+        cultureToMove.currentState = State.Default;
+
         Culture potentialSameCulture = null;
         if(newTileInfo.cultures.TryGetValue(cultureToMove.name, out potentialSameCulture))
         {
@@ -441,6 +369,8 @@ public class Culture : MonoBehaviour
             }
 
         }
+
+
 
 
 
@@ -495,7 +425,7 @@ public class Culture : MonoBehaviour
     {
         float getMutationRate()
         {
-            return (Random.value * mutationMax) - (mutationMax / 2);
+            return (Random.value * baseMutationMax) - (baseMutationMax / 2);
         }
         return new Color(getMutationRate() + parentColor.r, getMutationRate() + parentColor.g, getMutationRate() + parentColor.b);
     }
