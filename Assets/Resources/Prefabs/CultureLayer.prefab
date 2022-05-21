@@ -55,20 +55,19 @@ MonoBehaviour:
   tile: {fileID: 0}
   cultureTemplate: {fileID: 3768529557212743783}
   population: 0
-  spreadChance: 0.05
-  mutateChance: 0.05
+  spreadChance: 1
   shareCultureChance: 0.05
-  mutationMax: 0.05
+  baseMutationMax: 0.001
   transferRate: 0
   sameCultureCutoff: 0.1
   growPopulationChance: 0.01
   repelChance: 0.903
   gainAffinityChance: 0.01
   maxPopTransfer: 1
-  isAnimationPlaying: 0
   moveTime: 0.1
   affinity: 
   maxOnTile: 0
+  currentState: 0
 --- !u!114 &2397938024399410024
 MonoBehaviour:
   m_ObjectHideFlags: 0
