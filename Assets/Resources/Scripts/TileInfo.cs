@@ -61,7 +61,7 @@ public class TileInfo : MonoBehaviour
 
 
             nextCulture.population -= 1;
-            Debug.Log("removing one from " + nextCulture.name + "(" + nextCulture.GetHashCode() + ")");
+            //  Debug.Log("removing one from " + nextCulture.name + "(" + nextCulture.GetHashCode() + ")");
             EventManager.TriggerEvent("CultureUpdated", new Dictionary<string, object> { { "culture", nextCulture } });
 
             if (nextCulture.population < 1)

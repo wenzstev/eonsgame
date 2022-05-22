@@ -40,27 +40,22 @@ public class CultureTestSuite
     [UnityTest]
     public IEnumerator TestMoveTile()
     {
-        testCulture.moveTime = .1f;
-        testCulture.StartCoroutine(testCulture.MoveTile(testCulture.gameObject, projectedTile));
+        testCulture.StartCoroutine(CultureMoveAction.MoveTile(testCulture.gameObject, projectedTile));
 
-        Assert.That(testCulture.isAnimationPlaying == true, "Culture's animation isn't set as true!");
         Assert.That(projectedTile.GetComponent<TileInfo>().hasTransition == true, "Projected tile doesn't have its animation set!");
 
 
         yield return null;
 
-        Assert.That(testCulture.isAnimationPlaying == true, "Culture's animation isn't set as true!");
         Assert.That(projectedTile.GetComponent<TileInfo>().hasTransition == true, "Projected tile doesn't have its animation set!");
 
         yield return new WaitForSeconds(.05f);
 
-        Assert.That(testCulture.isAnimationPlaying == true, "Culture's animation isn't set as true!");
         Assert.That(projectedTile.GetComponent<TileInfo>().hasTransition == true, "Projected tile doesn't have its animation set!");
 
         yield return new WaitForSeconds(.06f);
 
         Assert.That(testCulture.tile == projectedTile.GetComponent<Tile>(), "Culture doesn't have new tile set as it's tile!");
-        Assert.That(testCulture.isAnimationPlaying == false, "Culture is still indicating that the animation is playing!");
         Assert.That(projectedTile.GetComponent<TileInfo>().hasTransition == false, "Tile says transition is ongoing!");
         Assert.That(testCulture.transform.parent == projectedTile.transform, "Culture's parent isn't the new tile!");
         Assert.That(testCulture.transform.position == projectedTile.transform.position, "Culture is not directly on tile!");

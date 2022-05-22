@@ -58,14 +58,13 @@ MonoBehaviour:
   population: 0
   spreadChance: 0.01
   shareCultureChance: 0.05
-  baseMutationMax: 0.001
+  baseMutationMax: 0.005
   transferRate: 0
   sameCultureCutoff: 0.1
   growPopulationChance: 0.01
   repelChance: 0.903
   gainAffinityChance: 0.01
   maxPopTransfer: 1
-  moveTime: 0.1
   affinity: 
   maxOnTile: 0
   currentState: 0
