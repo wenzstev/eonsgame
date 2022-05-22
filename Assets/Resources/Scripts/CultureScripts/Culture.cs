@@ -11,10 +11,6 @@ public class Culture : MonoBehaviour
 
     DecisionMaker decisionMaker;
 
-
-
-
-
     public GameObject cultureTemplate;
 
     SpriteRenderer layerMode;
@@ -28,7 +24,7 @@ public class Culture : MonoBehaviour
     public float shareCultureChance = .05f;
 
     [Range(0, .05f)]
-    public float baseMutationMax = .001f;
+    public float baseMutationMax = .01f;
 
     [Range(0, .01f)]
     public float transferRate = .001f;
@@ -47,12 +43,6 @@ public class Culture : MonoBehaviour
 
     public int maxPopTransfer = 1;
 
-    [System.NonSerialized]
-    public bool isAnimationPlaying = false;
-
-
-
-    public float moveTime = .1f;
 
     public string affinity = "";
 
@@ -107,7 +97,7 @@ public class Culture : MonoBehaviour
 
     void InitParentTile(Tile t)
     {
-        ChangeTile(t);
+        SetTile(t);
         transform.SetParent(t.gameObject.transform);
     }
 
@@ -117,128 +107,19 @@ public class Culture : MonoBehaviour
         turn.pushChangesToCulture(this);
     }
 
-   
-
     private void OnTick(Dictionary<string, object> empty)
     {
-        if (!isAnimationPlaying)
-        {
-            ExecuteTurn();
-        }
-    }
-
-    public bool AttemptMove(GameObject tileToMoveTo)
-    {
-        if (population > maxPopTransfer)
-        {
-            GameObject splitCulture = SplitCultureFromParent();
-            bool didMove = splitCulture.GetComponent<Culture>().AttemptMove(tileToMoveTo);
-            if (!didMove)
-            {
-                splitCulture.GetComponent<Culture>().MergeWith(this);
-            }
-            return didMove;
-        }
-
-        if(affinity == tileToMoveTo.GetComponent<TileInfo>().tileType || Random.value < .01f)
-        {
-            StartCoroutine(MoveTile(gameObject, tileToMoveTo));
-            return true;
-        }
-        return false;
-    }
-
-    public void MoveBack()
-    {
-        Debug.Log(name + " is repelled, moving back to " + GetComponent<CultureMemory>().previousTile.gameObject);
-        StartCoroutine(MoveTile(gameObject, GetComponent<CultureMemory>().previousTile.gameObject));
-        currentState = State.Default;
-    }
-
-    public void AttemptRepel()
-    {
-        foreach(Culture c in tileInfo.orderToRemoveCulturesIn)
-        {
-            if(c.currentState == State.Invader)
-            {
-                // ability to repel is function of population and affinity (and later tech)
-                float hasAffinityAdvantage = c.affinity == affinity ? 0 : .2f;
-                float popAdvantage = ((float)population - c.population) / 10f;
-                float repelThreshold = .6f + hasAffinityAdvantage + popAdvantage;
-                Debug.Log("repel threshold = .6 + " + hasAffinityAdvantage + " + " + popAdvantage);
-                if(Random.value < repelThreshold)
-                {
-                    c.currentState = State.Repelled;
-                    Debug.Log(c.name + " is repelled by " + name);
-                    break;
-                }
-            }
-        }
-        currentState = State.Default;
-    }
-
-    public void Flee()
-    {
-        // split into pieces small enough to move
-        // for each piece, attempt to move to adjacent tile
-        // if each piece can't move after 3 tries, destroy that piece
-        // set each piece back to default behavior
+        ExecuteTurn();
     }
 
 
-
-    public void Mutate()
+    public void GainAffinity(string newAffinity)
     {
-        SetColor(mutateColor(color));
-        EventManager.TriggerEvent("CultureUpdated", new Dictionary<string, object> { { "culture", this } });
-
-    }
-
-    public bool InteractWithNeighbor(GameObject tileToShareWith)
-    {
-        if (tileToShareWith == null || tileToShareWith.GetComponentInChildren<Culture>() == null)
-        {
-            return false;
-        }
-
-        Culture otherCulture = tileToShareWith.GetComponent<TileInfo>().GetRandomCulture();
-        if(otherCulture.name == name && CultureAggregation.GetCultureDistance(otherCulture.color, color) > sameCultureCutoff)
-        {
-            CreateAsNewCulture();
-            return true;
-        }
-
-        if(currentState == State.NewCulture && otherCulture.name == GetComponent<CultureMemory>().cultureParentName && CultureAggregation.GetCultureDistance(otherCulture.color, color) < sameCultureCutoff)
-        {
-            otherCulture.ShiftCulture(name);
-        }
-        
-
-
-        //tileToShareWith.GetComponentInChildren<Culture>().InfluenceByColor(this);
-        return true;
-    }
-
-    public void InfluenceByColor(Culture influencer)
-    {
-        if (name == influencer.name)
-        {
-            SetColor(Color.Lerp(color, influencer.color, .5f));
-        }
-        else
-        {
-            SetColor(Color.Lerp(color, influencer.color, transferRate));
-        }
-    }
-
-    public void GainAffinity()
-    {
-        affinity = tileInfo.tileType;
+        affinity = newAffinity;
         maxOnTile = tileInfo.tileType == affinity ? tileInfo.popBase + 2 : tileInfo.popBase;
         tileInfo.UpdateCultureSurvivability();
     }
 
-    // --- change state functions
 
     public GameObject SplitCultureFromParent() // creates new culture group from parent
     {
@@ -258,6 +139,22 @@ public class Culture : MonoBehaviour
     }
 
 
+    public bool AttemptMerge(Culture other)
+    {
+        Debug.Log("Attempting to merge " + this + "(" + this.GetHashCode() + ")" + " with " + other + "(" + other.GetHashCode() + ")");
+        float mergeThreshold = Mathf.Min(sameCultureCutoff, other.sameCultureCutoff);
+        float cultureDistance = CultureHelperMethods.GetCultureDistance(this, other);
+
+        if(cultureDistance < mergeThreshold )
+        {
+            MergeWith(other);
+            return true;
+        }
+
+        return false;
+
+    }
+
     public void MergeWith(Culture other)
     {
         //Debug.Log("merging " + name + " code " + this.GetHashCode() + " with " + other.name + " code " + other.GetHashCode());
@@ -270,125 +167,22 @@ public class Culture : MonoBehaviour
 
     public void DestroyCulture()
     {
-        //Debug.Log("Destroying " + name + "(" + GetHashCode() + ")");
+        Debug.Log("Destroying " + name + "(" + GetHashCode() + ")");
         EventManager.StopListening("Tick", OnTick);
         EventManager.TriggerEvent("CultureRemoved", new Dictionary<string, object>() { { "culture", this } });
-        Destroy(gameObject);
-
-    }
-
-  
-
-    public bool GrowPopulation()
-    {
-        
-        if(population < tile.gameObject.GetComponent<TileInfo>().popBase)
+        if(tileInfo != null)
         {
-     
-            AddPopulation(1);
-            return true;
+            tileInfo.RemoveCulture(this);
         }
-        return false;
+        Destroy(gameObject);
     }
 
     public void AddPopulation(int num)
     {
-        //Debug.Log("Adding one population to " + name + "(" + this.GetHashCode() + ")");
         population += num;
-        EventManager.TriggerEvent("CultureUpdated", new Dictionary<string, object> { { "culture", this } });
-
-    }
-
-    Culture RemoveCultureFromOldTile(GameObject cultureObj)
-    {
-        Culture cultureToMove = cultureObj.GetComponent<Culture>();
-        cultureToMove.tile.GetComponent<TileInfo>().RemoveCulture(cultureToMove);
-
-        if (currentState != State.Repelled)
-        {
-            GetComponent<CultureMemory>().previousTile = cultureToMove.tile;
-        }
-
-        cultureToMove.tile = null;
-        cultureToMove.tileInfo = null;
-
-        return cultureToMove;
-    }
-
-    void CombineCultureWithNewTile(GameObject cultureObj, GameObject newTile, Culture cultureToMove)
-    {
-        cultureObj.transform.SetParent(newTile.transform);
-        TileInfo newTileInfo = newTile.GetComponent<TileInfo>();
-        Debug.Log("move complete. changing state to default");
-        cultureToMove.currentState = State.Default;
-
-        Culture potentialSameCulture = null;
-        if (newTileInfo.cultures.TryGetValue(cultureToMove.name, out potentialSameCulture))
-        {
-            cultureToMove.MergeWith(potentialSameCulture);
-        }
-        else
-        {
-            newTileInfo.AddCulture(cultureToMove);
-            cultureToMove.ChangeTile(newTile.GetComponent<Tile>());
-        }
-
-        if (newTileInfo.cultures.Count > 1)
-        {
-            SetInvadersAndInvaded(newTileInfo, cultureToMove);
-        }
-
-    }
-
-    void SetInvadersAndInvaded(TileInfo newTileInfo, Culture cultureToMove)
-    {
-        cultureToMove.currentState = State.Invader;
-        foreach (Culture c in newTileInfo.orderToRemoveCulturesIn)
-        {
-            if (c.name != name)
-            {
-                c.currentState = State.Invaded;
-            }
-        }
-
-    }
-
-    public IEnumerator MoveTile (GameObject cultureObj, GameObject newTile)
-    {
-
-        Culture cultureToMove = RemoveCultureFromOldTile(cultureObj);
-
-        Vector3 startPosition = cultureObj.transform.position;
-
-        for (float t = 0; t < moveTime; t += Time.deltaTime)
-        {
-            float curDistance = Mathf.InverseLerp(0, moveTime, t);
-            cultureObj.transform.position = Vector3.Lerp(startPosition, newTile.transform.position, curDistance);
-            yield return null;
-        }
-
-        cultureObj.transform.position = newTile.transform.position;
-
-        CombineCultureWithNewTile(cultureObj, newTile, cultureToMove);
     }
 
 
-
-    public void CreateAsNewCulture()
-    {
-        string newName = getRandomString(5);
-        Debug.Log("renaming " + name + "(" + GetHashCode() + ") to " + newName);
-        GetComponent<CultureMemory>().cultureParentName = name;
-
-        EventManager.TriggerEvent("CultureRemoved", new Dictionary<string, object> { { "culture", this } });
-
-
-        tile.GetComponent<TileInfo>().UpdateCultureName(name, newName);
-        name = newName;
-        gameObject.name = newName;
-
-        EventManager.TriggerEvent("CultureUpdated", new Dictionary<string, object> { { "culture", this } });
-    }
 
     public void ShiftCulture(string newName)
     {
@@ -403,20 +197,13 @@ public class Culture : MonoBehaviour
         EventManager.TriggerEvent("CultureUpdated", new Dictionary<string, object> { { "culture", this } });
     }
 
-    void ChangeTile(Tile newTile)
+
+    public void SetTile(Tile newTile)
     {
-        Debug.Log("changing tile to " + newTile);
         tile = newTile;
         tileInfo = newTile.GetComponent<TileInfo>();
         maxOnTile = tileInfo.tileType == affinity ? tileInfo.popBase + 2 : tileInfo.popBase;
-        Debug.Log("tile is " + tile);
     }
-
-   
-
-    // ----- helper functions
-
-
 
     public Color mutateColor(Color parentColor)
     {
@@ -438,5 +225,19 @@ public class Culture : MonoBehaviour
         }
         return rand;
     }
-     
+
+    public void CreateAsNewCulture()
+    {
+        string newName = Culture.getRandomString(5);
+        Debug.Log("renaming " + name + "(" + GetHashCode() + ") to " + newName);
+        GetComponent<CultureMemory>().cultureParentName = name;
+
+        EventManager.TriggerEvent("CultureRemoved", new Dictionary<string, object> { { "culture", this } });
+
+        name = newName;
+        gameObject.name = newName;
+
+        EventManager.TriggerEvent("CultureUpdated", new Dictionary<string, object> { { "culture", this } });
+    }
+
 }

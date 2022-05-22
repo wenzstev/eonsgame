@@ -22,19 +22,11 @@ public class CultureObserver : MonoBehaviour
         CultureAggregation potentialCulture = null;
         if (cultures.TryGetValue(cultureToUpdate.name, out potentialCulture))
         {
-            if (potentialCulture.UpdateCultureStats(cultureToUpdate))
-            {
-                //Debug.Log("Updating culture " + cultureToUpdate.name + "(" + cultureToUpdate.GetHashCode() + ") in aggregation " + potentialCulture.GetHashCode());
-
-                EventManager.TriggerEvent("CultureAggregateUpdated" + potentialCulture.name, new Dictionary<string, object> { { "cultureAggregate", potentialCulture } });
-                return;
-            }
-            else
-            {
-                cultureToUpdate.CreateAsNewCulture();
-            }
-
+            potentialCulture.UpdateCultureStats(cultureToUpdate);
+            EventManager.TriggerEvent("CultureAggregateUpdated" + potentialCulture.name, new Dictionary<string, object> { { "cultureAggregate", potentialCulture } });
+            return;
         }
+
         CultureAggregation newAggregation = new CultureAggregation(cultureToUpdate);
         //Debug.Log("Adding new culture " + cultureToUpdate.name + "(" + cultureToUpdate.GetHashCode() + ") as aggregation " + newAggregation.GetHashCode());
 
@@ -96,12 +88,11 @@ public class CultureAggregation
         RecaulculateStats();
     }
 
-    public bool UpdateCultureStats(Culture cultureToAdd)
+    public void UpdateCultureStats(Culture cultureToAdd)
     {
 
         AddCulture(cultureToAdd);
         RecaulculateStats();
-        return true;
 
     }
 
@@ -137,10 +128,5 @@ public class CultureAggregation
         cultures.Add(culture);
     }
 
-    public static float GetCultureDistance(Color first, Color second)
-    {
-        float colorDistanceSquared = Mathf.Pow((first.r - second.r), 2) + Mathf.Pow((first.g - second.g), 2) + Mathf.Pow((first.b - second.b), 2);
-        float colorDistanceNormalized = Mathf.Lerp(0, 3, colorDistanceSquared);
-        return colorDistanceNormalized;
-    }
+
 }
