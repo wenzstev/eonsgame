@@ -2279,11 +2279,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 734804678373380932, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: width
-      value: 20
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 734804678373380932, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: height
-      value: 20
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 734804678373380933, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: m_RootOrder
