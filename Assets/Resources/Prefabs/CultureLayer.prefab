@@ -53,9 +53,10 @@ MonoBehaviour:
   name: 
   color: {r: 0, g: 0, b: 0, a: 0}
   tile: {fileID: 0}
+  tileInfo: {fileID: 0}
   cultureTemplate: {fileID: 3768529557212743783}
   population: 0
-  spreadChance: 1
+  spreadChance: 0.01
   shareCultureChance: 0.05
   baseMutationMax: 0.001
   transferRate: 0
