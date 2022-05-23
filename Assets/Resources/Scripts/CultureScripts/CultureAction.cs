@@ -40,7 +40,14 @@ public class DefaultAction : CultureAction
         }
 
         turn.newState = culture.currentState;
-        if (Random.value < culture.growPopulationChance && culture.population <= culture.maxOnTile)
+
+        if(culture.tileInfo.currentMaxPopulation < culture.tileInfo.tilePopulation)
+        {
+            turn.popChange--;
+        }
+
+
+        if (Random.value < culture.growPopulationChance)
         {
             turn.popChange++;
         }
@@ -115,7 +122,6 @@ public class Turn
         {
             c.GainAffinity(newAffinity);
         }
-
         EventManager.TriggerEvent("CultureUpdated", new Dictionary<string, object> { { "culture", c } });
 
     }

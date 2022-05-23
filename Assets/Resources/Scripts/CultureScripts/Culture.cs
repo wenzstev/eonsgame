@@ -47,6 +47,8 @@ public class Culture : MonoBehaviour
     public string affinity = "";
 
     public int maxOnTile;
+
+    float timeSinceMoveStart = 0;
  
 
 
@@ -95,6 +97,8 @@ public class Culture : MonoBehaviour
         InitParentTile(t);
     }
 
+
+
     void InitParentTile(Tile t)
     {
         SetTile(t);
@@ -127,6 +131,7 @@ public class Culture : MonoBehaviour
         Culture newCulture = newCultureObj.GetComponent<Culture>();
         newCulture.Init(tile, color, maxPopTransfer, name);
         AddPopulation(-maxPopTransfer);
+
         
         return newCultureObj;
     }
@@ -169,7 +174,7 @@ public class Culture : MonoBehaviour
     {
         Debug.Log("Destroying " + name + "(" + GetHashCode() + ")");
         EventManager.StopListening("Tick", OnTick);
-        EventManager.TriggerEvent("CultureRemoved", new Dictionary<string, object>() { { "culture", this } });
+        //EventManager.TriggerEvent("CultureRemoved", new Dictionary<string, object>() { { "culture", this } });
         if(tileInfo != null)
         {
             tileInfo.RemoveCulture(this);
@@ -180,21 +185,10 @@ public class Culture : MonoBehaviour
     public void AddPopulation(int num)
     {
         population += num;
-    }
-
-
-
-    public void ShiftCulture(string newName)
-    {
-        GetComponent<CultureMemory>().cultureParentName = name;
-        tile.GetComponent<TileInfo>().UpdateCultureName(name, newName);
-
-        EventManager.TriggerEvent("CultureRemoved", new Dictionary<string, object> { { "culture", this } });
-
-
-        name = newName;
-        gameObject.name = newName;
-        EventManager.TriggerEvent("CultureUpdated", new Dictionary<string, object> { { "culture", this } });
+        if(population == 0)
+        {
+            DestroyCulture();
+        }
     }
 
 

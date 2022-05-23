@@ -6,6 +6,7 @@ public class ViewController : MonoBehaviour
 {
 
     public static ViewController Instance;
+
     public Views view;
     Views previousView;
 
@@ -22,6 +23,7 @@ public class ViewController : MonoBehaviour
         Instance = this;
         EventManager.StartListening("ChangeViewMode", updateView);
         EventManager.StartListening("HoverOff", RemoveHighlightView);
+        EventManager.StartListening("CurrentViewRequested", ProvideCurrentView);
     }
 
 
@@ -40,6 +42,11 @@ public class ViewController : MonoBehaviour
     {
         view = previousView;
         EventManager.TriggerEvent("ChangeViewMode", new Dictionary<string, object> { { "view", view } });
+    }
+
+    public void ProvideCurrentView(Dictionary<string, object> empty)
+    {
+        EventManager.TriggerEvent("CurrentView", new Dictionary<string, object> { { "view", view } });
     }
 }
 
