@@ -58,6 +58,7 @@ public class EventManager : MonoBehaviour
 
     public static void StopListening(string eventName, Action<Dictionary<string, object>> listener)
     {
+        Debug.Log("stop listning for " + eventName);
         if (eventManager == null) return;
         Action<Dictionary<string, object>> thisEvent;
         if (instance.eventDictionary.TryGetValue(eventName, out thisEvent))

@@ -58,7 +58,7 @@ MonoBehaviour:
   population: 0
   spreadChance: 0.01
   shareCultureChance: 0.05
-  baseMutationMax: 0.005
+  baseMutationMax: 0.05
   transferRate: 0
   sameCultureCutoff: 0.1
   growPopulationChance: 0.01

@@ -23,9 +23,11 @@ public class MoveTileAction : CultureMoveAction
 
         if (culture.population > culture.maxPopTransfer)
         {
-            GameObject splitCulture = culture.SplitCultureFromParent();
-            culture.StartCoroutine(MoveTile(splitCulture, prospectiveTile));
-            splitCulture.GetComponent<Culture>().currentState = Culture.State.Moving;
+            GameObject splitCultureObj = culture.SplitCultureFromParent();
+            Culture splitCulture = splitCultureObj.GetComponent<Culture>();
+
+            splitCulture.StartCoroutine(MoveTile(splitCultureObj, prospectiveTile));
+            splitCultureObj.GetComponent<Culture>().currentState = Culture.State.Moving;    
             return Culture.State.Default;
         }
 

@@ -2279,11 +2279,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 734804678373380932, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: width
-      value: 20
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 734804678373380932, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: height
-      value: 20
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 734804678373380933, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: m_RootOrder
@@ -3022,7 +3022,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 16857794732596036, guid: 2a28ac8093d445f40ab20b07479d98c0, type: 3}
       propertyPath: scale
-      value: 3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 16857794732596037, guid: 2a28ac8093d445f40ab20b07479d98c0, type: 3}
       propertyPath: m_RootOrder
@@ -3081,6 +3081,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1386483416396047162, guid: 870e20867e49b0a4f85cc779e4b0f115, type: 3}
+      propertyPath: fastSpeed
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 1386483416698094434, guid: 870e20867e49b0a4f85cc779e4b0f115, type: 3}
       propertyPath: m_Name
       value: Controllers
