@@ -8,17 +8,17 @@ public class MoveTileAction : CultureMoveAction
 
     public override Turn ExecuteTurn()
     {
-        turn.newState = AttemptMove();
-        return turn;
+        return AttemptMove();
 
     }
 
-    Culture.State AttemptMove()
+    Turn AttemptMove()
     {
 
         if (prospectiveTile == null || !(culture.affinity == prospectiveTile.GetComponent<TileInfo>().tileType || Random.value < .01))
         {
-            return Culture.State.Default;
+            turn.UpdateCulture(culture).newState = Culture.State.Default;
+            return turn;
         }
 
         if (culture.population > culture.maxPopTransfer)
@@ -27,12 +27,15 @@ public class MoveTileAction : CultureMoveAction
             Culture splitCulture = splitCultureObj.GetComponent<Culture>();
 
             splitCulture.StartCoroutine(MoveTile(splitCultureObj, prospectiveTile));
-            splitCultureObj.GetComponent<Culture>().currentState = Culture.State.Moving;    
-            return Culture.State.Default;
+            turn.UpdateCulture(splitCulture).newState = Culture.State.Moving;
+            turn.UpdateCulture(culture).newState = Culture.State.Default;
+
+            return turn;
         }
 
         culture.StartCoroutine(MoveTile(culture.gameObject, prospectiveTile));
-        return Culture.State.Moving;
+        turn.UpdateCulture(culture).newState = Culture.State.Moving;
+        return turn;
 
     }
 }

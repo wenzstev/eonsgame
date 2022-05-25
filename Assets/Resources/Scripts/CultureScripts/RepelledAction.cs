@@ -8,14 +8,14 @@ public class RepelledAction : CultureMoveAction
 
     public override Turn ExecuteTurn()
     {
-        turn.newState = ReturnToPreviousTile();
-        return turn;
+        return ReturnToPreviousTile();
     }
 
-    Culture.State ReturnToPreviousTile()
+    Turn ReturnToPreviousTile()
     {
         culture.StartCoroutine(MoveTile(culture.gameObject, culture.GetComponent<CultureMemory>().previousTile.gameObject));
-        return Culture.State.Moving;
+        turn.UpdateCulture(culture).newState = Culture.State.Moving;
+        return turn;
     }
  
 }
