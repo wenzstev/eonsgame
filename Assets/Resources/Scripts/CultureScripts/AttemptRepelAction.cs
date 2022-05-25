@@ -8,11 +8,10 @@ public class AttemptRepelAction : CultureAction
 
     public override Turn ExecuteTurn()
     {
-        turn.newState = AttemptRepel();
-        return turn;
+        return AttemptRepel();
     }
 
-    Culture.State AttemptRepel()
+    Turn AttemptRepel()
     {
         foreach (Culture c in culture.tileInfo.orderToRemoveCulturesIn)
         {
@@ -25,16 +24,16 @@ public class AttemptRepelAction : CultureAction
                 Debug.Log("repel threshold = .6 + " + hasAffinityAdvantage + " + " + popAdvantage);
                 if (Random.value < repelThreshold)
                 {
-                    c.currentState = Culture.State.Repelled;
+                    turn.UpdateCulture(c).newState = Culture.State.Repelled;
                     Debug.Log(c.name + " is repelled by " + culture.name);
                     break;
                 }
                 if(Random.value < .01f)
                 {
-                    turn.popChange -= 1; // killed in repelling effort
+                    turn.UpdateCulture(culture).popChange -= 1; // killed in repelling effort
                 }
             }
         }
-        return Culture.State.Default;
+        return turn;
     }
 }

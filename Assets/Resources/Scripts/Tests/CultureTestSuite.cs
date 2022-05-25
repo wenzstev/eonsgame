@@ -40,7 +40,7 @@ public class CultureTestSuite
     [UnityTest]
     public IEnumerator TestMoveTile()
     {
-        testCulture.StartCoroutine(CultureMoveAction.MoveTile(testCulture.gameObject, projectedTile));
+        //testCulture.StartCoroutine(CultureMoveAction.MoveTile(testCulture.gameObject, projectedTile));
 
         Assert.That(projectedTile.GetComponent<TileInfo>().hasTransition == true, "Projected tile doesn't have its animation set!");
 
@@ -63,34 +63,6 @@ public class CultureTestSuite
         Assert.That(!homeTile.GetComponent<TileInfo>().cultures.ContainsKey(testCulture.name), "Old tile is still referencing culture!");
     }
 
-    [UnityTest]
-    public IEnumerator TestSplitCulture()
-    {
-        testCulture.AddPopulation(3);
-        GameObject testCultureChildObj = testCulture.SplitCultureFromParent();
-        yield return null;
-
-        Culture child = testCultureChildObj.GetComponent<Culture>();
-        Assert.That(child.population == testCulture.maxPopTransfer, "New culture is the wrong size!");
-        Assert.That(child.color == testCulture.color, "New culture is the wrong color!");
-        Assert.That(child.tile == homeTile.GetComponent<Tile>(), "New culture is not on tile!");
-    }
-
-    [UnityTest]
-    public IEnumerator TestMergeWith()
-    {
-        GameObject otherCultureObj = Object.Instantiate(Resources.Load<GameObject>("Prefabs/CultureLayer"), Vector3.zero, Quaternion.identity);
-        Culture otherCulture = otherCultureObj.GetComponent<Culture>();
-        testCulture.color = Color.red;
-        otherCulture.color = Color.green;
-        testCulture.population = 1;
-        otherCulture.population = 1;
-        otherCulture.MergeWith(testCulture);
-        yield return null;
-
-        Assert.That(otherCulture == null, "Other culture wasn't destroyed!");
-        Assert.That(testCulture.color.r == .5f && testCulture.color.g == .5f && testCulture.color.b == 0, "Color is not matched!");
-    }
 
     [TearDown]
     public void TearDown()

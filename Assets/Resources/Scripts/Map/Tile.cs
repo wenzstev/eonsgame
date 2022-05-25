@@ -7,7 +7,19 @@ public class Tile : MonoBehaviour
 
     public Board board;
 
-
+    static GameObject _moveTile;
+    public static GameObject moveTile
+    {
+        get
+        {
+            if(_moveTile == null)
+            {
+                _moveTile = Instantiate(Resources.Load<GameObject>("Prefabs/Board/Tile"));
+                return _moveTile;
+            }
+            return _moveTile;
+        }
+    }
 
     public Dictionary<Direction, GameObject> neighbors;
 

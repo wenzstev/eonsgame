@@ -7,33 +7,23 @@ public class CultureObserver : MonoBehaviour
     Dictionary<string, CultureAggregation> cultures;
 
  
-
     private void Start()
     {
         cultures = new Dictionary<string, CultureAggregation>();
-        EventManager.StartListening("CultureUpdated", UpdateCulture);
+
+        EventManager.StartListening("CultureCreated", CreateCulture);
         EventManager.StartListening("CultureAggregateRemoved", RemoveAggregate);
-        EventManager.StartListening("CultureRemoved", RemoveCulture);
     }
 
-    void UpdateCulture(Dictionary<string, object> cultureToAdd)
+    void CreateCulture(Dictionary<string, object> newCultureDict)
     {
-        Culture cultureToUpdate = (Culture) cultureToAdd["culture"];
-        Debug.Log("updating " + cultureToUpdate.GetHashCode());
-
-        CultureAggregation potentialCulture = null;
-        if (cultures.TryGetValue(cultureToUpdate.name, out potentialCulture))
+        Culture newCulture = (Culture)newCultureDict["culture"];
+        if (cultures.ContainsKey(newCulture.name))
         {
-            potentialCulture.UpdateCultureStats(cultureToUpdate);
-            Debug.Log("triggering on " + potentialCulture.name);
+            Debug.LogError("Attempting to create a culture (" + newCulture.name + ") that already exists!");
             return;
         }
-
-        CultureAggregation newAggregation = new CultureAggregation(cultureToUpdate);
-        //Debug.Log("Adding new culture " + cultureToUpdate.name + "(" + cultureToUpdate.GetHashCode() + ") as aggregation " + newAggregation.GetHashCode());
-
-        cultures.Add(cultureToUpdate.name, newAggregation);
-        EventManager.TriggerEvent("CultureAggregateAdded", new Dictionary<string, object> { { "cultureAggregate", newAggregation } });
+        CultureAggregation newAggregation = new CultureAggregation(newCulture);
     }
 
     void RemoveAggregate(Dictionary<string, object> aggregateToRemove)
@@ -42,23 +32,6 @@ public class CultureObserver : MonoBehaviour
         cultures.Remove(aggregate.name);
 
     }
-
-    void RemoveCulture(Dictionary<string, object> cultureToRemove)
-    {
-        Culture culture = (Culture) cultureToRemove["culture"];
-        CultureAggregation potentialCulture = null;
-        if (cultures.TryGetValue(culture.name, out potentialCulture))
-        {
-            potentialCulture.RemoveCulture(culture);
-            return;
-        }
-
-        Debug.LogError("attempted to remove a culture (" + culture.name + ") that doesn't exist!");
-    }
-
-
-
-
 }
 
 public class CultureAggregation
@@ -67,7 +40,6 @@ public class CultureAggregation
     public int totalPopulation;
     public Color avgColor;
     public string name;
-    float cultureDistanceThreshold = .1f;
 
     public CultureAggregation(Culture culture)
     {
@@ -77,27 +49,28 @@ public class CultureAggregation
         name = culture.name;
         totalPopulation = culture.population;
 
+        EventManager.StartListening("CultureUpdated" + name, UpdateCultureStats);
+        EventManager.StartListening("CultureRemoved" + name, RemoveCulture);
+
     }
 
-    public void RemoveCulture(Culture cultureToRemove)
+    public void RemoveCulture(Dictionary<string, object> removedCultureDict)
     {
+        Culture cultureToRemove = (Culture)removedCultureDict["culture"];
         cultures.Remove(cultureToRemove);
         RecaulculateStats();
-
     }
 
-    public void UpdateCultureStats(Culture cultureToAdd)
+    public void UpdateCultureStats(Dictionary<string, object> updatedCultureDict)
     {
+        Culture updatedCulture = (Culture)updatedCultureDict["culture"];
 
-        
-        AddCulture(cultureToAdd);
-        if(cultureToAdd.population == 0)
+        AddCulture(updatedCulture);
+        if(updatedCulture.population == 0)
         {
-            cultures.Remove(cultureToAdd);
+            cultures.Remove(updatedCulture);
         }
-
         RecaulculateStats();
-
     }
 
     void RecaulculateStats()
@@ -121,7 +94,7 @@ public class CultureAggregation
         avgColor = new Color(r / numCultures, g / numCultures, b / numCultures);
         if(totalPopulation == 0)
         {
-            Debug.Log("pop of " + name + "  is zero. destroying");
+            Debug.Log("pop of " + name + "  is zero. destroying aggregate");
             EventManager.TriggerEvent("CultureAggregateRemoved", new Dictionary<string, object> { { "cultureAggregate", this } });
             EventManager.TriggerEvent("CultureAggregateRemoved" + name, new Dictionary<string, object> { { "cultureAggregate", this } });
         }

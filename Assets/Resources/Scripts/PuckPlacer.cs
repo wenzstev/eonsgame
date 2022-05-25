@@ -17,7 +17,6 @@ public class PuckPlacer : MonoBehaviour
         GameObject tileClicked = (GameObject)message["tile"];
         GameObject puck = Instantiate(culturePuck, tileClicked.transform.position, Quaternion.identity);
         puck.GetComponent<Culture>().Init(tileClicked.GetComponent<Tile>());
-        tileClicked.GetComponent<TileInfo>().AddCulture(puck.GetComponent<Culture>());
-        EventManager.TriggerEvent("CultureUpdated", new Dictionary<string, object> { { "culture", puck.GetComponent<Culture>() } });
+        EventManager.TriggerEvent("CultureCreated", new Dictionary<string, object> { { "culture", puck.GetComponent<Culture>() } });
     }
 }

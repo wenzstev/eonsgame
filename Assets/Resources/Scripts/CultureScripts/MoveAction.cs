@@ -15,7 +15,7 @@ public abstract class CultureMoveAction : CultureAction
         prospectiveTile = c.tile.GetRandomNeighbor();
     }
 
-    public static IEnumerator MoveTile(GameObject cultureObj, GameObject newTile)
+    public IEnumerator MoveTile(GameObject cultureObj, GameObject newTile)
     {
 
         Culture cultureToMove = RemoveCultureFromOldTile(cultureObj);
@@ -30,11 +30,13 @@ public abstract class CultureMoveAction : CultureAction
         }
 
         cultureObj.transform.position = newTile.transform.position;
+        cultureObj.transform.SetParent(newTile.transform);
 
-        CombineCultureWithNewTile(cultureObj, newTile, cultureToMove);
+        turn.UpdateCulture(cultureToMove).newState = Culture.State.NewOnTile;
+
     }
 
-    static Culture RemoveCultureFromOldTile(GameObject cultureObj)
+    Culture RemoveCultureFromOldTile(GameObject cultureObj)
     {
         Culture cultureToMove = cultureObj.GetComponent<Culture>();
         cultureToMove.tile.GetComponent<TileInfo>().RemoveCulture(cultureToMove);
@@ -44,61 +46,14 @@ public abstract class CultureMoveAction : CultureAction
             cultureToMove.GetComponent<CultureMemory>().previousTile = cultureToMove.tile;
         }
 
-        cultureToMove.tile = null;
-        cultureToMove.tileInfo = null;
+        turn.UpdateCulture(cultureToMove).newTile = Tile.moveTile.GetComponent<Tile>();
 
         return cultureToMove;
     }
 
 
-    static void CombineCultureWithNewTile(GameObject cultureObj, GameObject newTile, Culture cultureToMove)
-    {
-        cultureObj.transform.SetParent(newTile.transform);
-        TileInfo newTileInfo = newTile.GetComponent<TileInfo>();
-        cultureToMove.currentState = Culture.State.Default;
 
-        Culture potentialSameCulture = null;
-        if (newTileInfo.cultures.TryGetValue(cultureToMove.name, out potentialSameCulture))
-        {
-            bool didMerge = cultureToMove.AttemptMerge(potentialSameCulture);
-            if(!didMerge)
-            {
-                cultureToMove.CreateAsNewCulture();
-                newTileInfo.AddCulture(cultureToMove);
-                cultureToMove.SetTile(newTile.GetComponent<Tile>());
-            }
-        }
-        else if (newTileInfo.cultures.TryGetValue(cultureToMove.GetComponent<CultureMemory>().cultureParentName, out potentialSameCulture))
-        {
-            potentialSameCulture.AttemptMerge(cultureToMove);
-            newTileInfo.AddCulture(cultureToMove);
-            cultureToMove.SetTile(newTile.GetComponent<Tile>());
-        }
-        else
-        {
-            newTileInfo.AddCulture(cultureToMove);
-            cultureToMove.SetTile(newTile.GetComponent<Tile>());
-        }
 
-        if (newTileInfo.cultures.Count > 1)
-        {
-            SetInvadersAndInvaded(newTileInfo, cultureToMove);
-        }
-
-    }
-
-    static void SetInvadersAndInvaded(TileInfo newTileInfo, Culture cultureToMove)
-    {
-        cultureToMove.currentState = Culture.State.Invader;
-        foreach (Culture c in newTileInfo.orderToRemoveCulturesIn)
-        {
-            if (c.name != cultureToMove.name)
-            {
-                c.currentState = Culture.State.Invaded;
-            }
-        }
-
-    }
 
 
 }

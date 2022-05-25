@@ -39,22 +39,22 @@ public class DefaultAction : CultureAction
             return moveTile.ExecuteTurn();
         }
 
-        turn.newState = culture.currentState;
+        turn.UpdateCulture(culture).newState = culture.currentState;
 
         if(culture.tileInfo.currentMaxPopulation < culture.tileInfo.tilePopulation)
         {
-            turn.popChange--;
+            turn.UpdateCulture(culture).popChange--;
         }
 
 
         if (Random.value < culture.growPopulationChance)
         {
-            turn.popChange++;
+            turn.UpdateCulture(culture).popChange++;
         }
 
         if (Random.value < culture.gainAffinityChance)
         {
-            turn.newAffinity = culture.tileInfo.tileType;
+            turn.UpdateCulture(culture).newAffinity = culture.tileInfo.tileType;
         }
 
         return turn;
@@ -62,6 +62,7 @@ public class DefaultAction : CultureAction
 
     }
 }
+
 
 public class DecisionMaker
 {
@@ -88,6 +89,10 @@ public class DecisionMaker
             case Culture.State.Repelled:
                 action = new RepelledAction(culture);
                 break;
+            case Culture.State.NewOnTile:
+                action = new MergeAction(culture);
+                break;
+            case Culture.State.PendingRemoval:
             default:
                 break;
         }
@@ -98,32 +103,56 @@ public class DecisionMaker
 
 public class Turn
 {
+    Dictionary<Culture, CultureTurnUpdate> turnUpdates;
+
+    public Turn(Culture c)
+    {
+        turnUpdates = new Dictionary<Culture, CultureTurnUpdate>();
+        AddTurnUpdate(c);
+    }
+
+    public CultureTurnUpdate UpdateCulture(Culture c)
+    {
+        CultureTurnUpdate potentialUpdate;
+        if(turnUpdates.TryGetValue(c, out potentialUpdate))
+        {
+            return potentialUpdate;
+        }
+        turnUpdates.Add(c, new CultureTurnUpdate(c));
+        return turnUpdates[c];
+    }
+
+    public void AddTurnUpdate(Culture c)
+    {
+        turnUpdates.Add(c, new CultureTurnUpdate(c));
+    }
+
+    public void UpdateAllCultures()
+    {
+        foreach(KeyValuePair<Culture, CultureTurnUpdate> c in turnUpdates)
+        {
+            c.Key.UpdateForTurn(c.Value);
+        }
+    }
+
+
+}
+
+public class CultureTurnUpdate
+{
     public Culture culture;
     public Culture.State newState;
     public int popChange = 0;
     public int techChange = 0;
     public string newAffinity = "";
     public Color newColor;
+    public Tile newTile;
+    public string newName;
 
-    public Turn(Culture c)
+    public CultureTurnUpdate(Culture c)
     {
         culture = c;
         newState = c.currentState;
         newColor = c.mutateColor(c.color); // mutate color slightly every turn
     }
-
-
-    public void pushChangesToCulture(Culture c)
-    {
-        c.AddPopulation(popChange);
-        c.SetColor(newColor);
-        c.currentState = newState;
-        if(newAffinity != "")
-        {
-            c.GainAffinity(newAffinity);
-        }
-        EventManager.TriggerEvent("CultureUpdated", new Dictionary<string, object> { { "culture", c } });
-
-    }
-
 }
