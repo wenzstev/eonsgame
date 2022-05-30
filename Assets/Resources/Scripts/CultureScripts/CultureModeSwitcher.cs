@@ -34,7 +34,7 @@ public class CultureModeSwitcher : MonoBehaviour
 
     void SetView(Dictionary<string, object> newView)
     {
-        Debug.Log(GetHashCode() + ": setting view to " + newView["view"]);
+        //Debug.Log(GetHashCode() + ": setting view to " + newView["view"]);
         views[(int)currentView].SetActive(false);
         views[(int)newView["view"]].SetActive(true);
         currentView = (ViewController.Views) newView["view"];

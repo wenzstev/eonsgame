@@ -58,7 +58,7 @@ public class TileInfo : MonoBehaviour
 
     public void AddCulture(Culture culture)
     {
-        cultures.Add(culture.name, culture);
+        cultures.Add(culture.name, culture);    
         orderToRemoveCulturesIn.Add(culture);
         UpdateCultureSurvivability();
         currentMaxPopulation = Mathf.Max(culture.maxOnTile, currentMaxPopulation);

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MoveTileAction : CultureMoveAction
 {
+    public float moveChance = .01f;
+
     public MoveTileAction(Culture c) : base(c) { }
 
     public override Turn ExecuteTurn()
@@ -15,7 +17,7 @@ public class MoveTileAction : CultureMoveAction
     Turn AttemptMove()
     {
 
-        if (prospectiveTile == null || !(culture.affinity == prospectiveTile.GetComponent<TileInfo>().tileType || Random.value < .01))
+        if (prospectiveTile == null || !(culture.affinity == prospectiveTile.GetComponent<TileInfo>().tileType || Random.value < moveChance))
         {
             turn.UpdateCulture(culture).newState = Culture.State.Default;
             return turn;
@@ -23,19 +25,25 @@ public class MoveTileAction : CultureMoveAction
 
         if (culture.population > culture.maxPopTransfer)
         {
-            GameObject splitCultureObj = culture.SplitCultureFromParent();
-            Culture splitCulture = splitCultureObj.GetComponent<Culture>();
-
-            splitCulture.StartCoroutine(MoveTile(splitCultureObj, prospectiveTile));
-            turn.UpdateCulture(splitCulture).newState = Culture.State.Moving;
-            turn.UpdateCulture(culture).newState = Culture.State.Default;
-
-            return turn;
+            return MoveSplitCulture(); ;
         }
+        return MoveWholeCulture();
+    }
 
+    Turn MoveSplitCulture()
+    {
+        GameObject splitCultureObj = culture.SplitCultureFromParent();
+        Culture splitCulture = splitCultureObj.GetComponent<Culture>();
+        splitCulture.StartCoroutine(MoveTile(splitCulture.gameObject, prospectiveTile));
+        turn.UpdateCulture(splitCulture).newState = Culture.State.Moving;
+        turn.UpdateCulture(culture).newState = Culture.State.Default;
+        return turn;
+    }
+
+    Turn MoveWholeCulture()
+    {
         culture.StartCoroutine(MoveTile(culture.gameObject, prospectiveTile));
         turn.UpdateCulture(culture).newState = Culture.State.Moving;
         return turn;
-
     }
 }

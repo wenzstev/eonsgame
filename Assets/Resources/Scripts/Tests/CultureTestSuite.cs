@@ -6,68 +6,60 @@ using NUnit.Framework;
 
 public class CultureTestSuite 
 {
-    GameObject testCultureObj;
-    GameObject homeTile;
-    GameObject projectedTile;
     Culture testCulture;
+    Tile testTile;
 
-
-    [UnitySetUp]
-    public IEnumerator SetUp()
+    [SetUp]
+    public void SetUp()
     {
-        Object.Instantiate(Resources.Load<GameObject>("Prefabs/Controllers/EventManager"));
-        Object.Instantiate(Resources.Load<GameObject>("Prefabs/Controllers/Controllers"));
-
-        testCultureObj = Object.Instantiate(Resources.Load<GameObject>("Prefabs/CultureLayer"), Vector3.zero, Quaternion.identity);
+        MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Controllers/EventManager"));
+        GameObject testCultureObj = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/CultureLayer"));
         testCulture = testCultureObj.GetComponent<Culture>();
 
-        homeTile = Object.Instantiate(Resources.Load<GameObject>("Prefabs/Board/Tile"), Vector3.zero, Quaternion.identity);
-        projectedTile = Object.Instantiate(Resources.Load<GameObject>("Prefabs/Board/Tile"), Vector3.right, Quaternion.identity);
+        GameObject testTileObj = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Board/Tile"));
+        testTile = testTileObj.GetComponent<Tile>();
 
-        yield return new WaitForFixedUpdate();
-
-        testCulture.Init(homeTile.GetComponent<Tile>());
-
-
-        testCultureObj.transform.position = homeTile.transform.position;
-        testCultureObj.transform.SetParent(homeTile.transform);
-        homeTile.GetComponent<TileInfo>().AddCulture(testCulture);
-
-
+        testCulture.Init(testTile);
     }
-    
 
-    [UnityTest]
-    public IEnumerator TestMoveTile()
+    [Test]
+    public void TestSplitCulture()
     {
-        //testCulture.StartCoroutine(CultureMoveAction.MoveTile(testCulture.gameObject, projectedTile));
+        
+        testCulture.AddPopulation(4);
+        int oldPopulation = testCulture.population;
 
-        Assert.That(projectedTile.GetComponent<TileInfo>().hasTransition == true, "Projected tile doesn't have its animation set!");
+        GameObject splitCultureObj = testCulture.SplitCultureFromParent();
+        Culture splitCulture = splitCultureObj.GetComponent<Culture>();
 
-
-        yield return null;
-
-        Assert.That(projectedTile.GetComponent<TileInfo>().hasTransition == true, "Projected tile doesn't have its animation set!");
-
-        yield return new WaitForSeconds(.05f);
-
-        Assert.That(projectedTile.GetComponent<TileInfo>().hasTransition == true, "Projected tile doesn't have its animation set!");
-
-        yield return new WaitForSeconds(.06f);
-
-        Assert.That(testCulture.tile == projectedTile.GetComponent<Tile>(), "Culture doesn't have new tile set as it's tile!");
-        Assert.That(projectedTile.GetComponent<TileInfo>().hasTransition == false, "Tile says transition is ongoing!");
-        Assert.That(testCulture.transform.parent == projectedTile.transform, "Culture's parent isn't the new tile!");
-        Assert.That(testCulture.transform.position == projectedTile.transform.position, "Culture is not directly on tile!");
-        Assert.That(projectedTile.GetComponent<TileInfo>().cultures.ContainsKey(testCulture.name), "New tile isn't set to have this culture!");
-        Assert.That(!homeTile.GetComponent<TileInfo>().cultures.ContainsKey(testCulture.name), "Old tile is still referencing culture!");
+        Assert.That(splitCulture.name == testCulture.name, "Split culture's name doesn't match!");
+        Assert.That(splitCulture.population == testCulture.maxPopTransfer, "Split culture's size doesn't match split amount!");
+        Assert.That(testCulture.population == oldPopulation - testCulture.maxPopTransfer, "Parent culture's population wasn't lowered!");
+        Assert.That(splitCulture.GetComponent<CultureMemory>().cultureParentName == testCulture.GetComponent<CultureMemory>().cultureParentName, "Split culture doesn't have the same parent!");
+        Assert.That(testCulture.tile == splitCulture.transform.parent.GetComponent<Tile>(), "Split culture wasn't set as parent of tile!");
     }
 
+    [Test]
+    public void TestCanMerge()
+    {
+        GameObject mergeCultureObj = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/CultureLayer"));
+        Culture mergeCulture = mergeCultureObj.GetComponent<Culture>();
+
+        mergeCulture.SetColor(Color.blue);
+
+        Assert.That(!testCulture.CanMerge(mergeCulture), "CanMerge returned true when should return false!");
+
+        testCulture.SetColor(Color.blue);
+
+        Assert.That(testCulture.CanMerge(mergeCulture), "CanMerge returned false when should return true!");
+        
+        
+    }
 
     [TearDown]
     public void TearDown()
     {
-        foreach(GameObject o in Object.FindObjectsOfType<GameObject>())
+        foreach (GameObject o in Object.FindObjectsOfType<GameObject>())
         {
             Object.Destroy(o);
         }

@@ -47,10 +47,10 @@ public class Culture : MonoBehaviour
     public string affinity { get; private set; }
 
     public int maxOnTile;
- 
 
 
-    public State currentState { get; private set; }
+
+    public State currentState; 
 
     public enum State
     {
@@ -95,7 +95,7 @@ public class Culture : MonoBehaviour
         name = n;
         gameObject.name = name;
         transform.SetParent(t.gameObject.transform);
-        SetTileWithoutInformingTileInfo(t);
+        //SetTileWithoutInformingTileInfo(t);
     }
 
     void ExecuteTurn()
@@ -106,14 +106,20 @@ public class Culture : MonoBehaviour
 
     public void UpdateForTurn(CultureTurnUpdate t)
     {
-        if (currentState == State.PendingRemoval)
+        if (t.newState == State.PendingRemoval)
         {
             DestroyCulture();
             return;
         }
 
+        if (t.newName != null)
+        {
+            RenameCulture(t.newName);
+        }
+
         AddPopulation(t.popChange);
         SetColor(t.newColor);
+        //Debug.Log("setting state for " + GetHashCode() + " to " + t.newState);
         currentState = t.newState;
         if (t.newAffinity != "")
         {
@@ -123,10 +129,7 @@ public class Culture : MonoBehaviour
         {
             SetTile(t.newTile); // maybe give them some offscreen placeholder tile?
         }
-        if(t.newName != null)
-        {
-            RenameCulture(t.newName);
-        }
+
 
         EventManager.TriggerEvent("CultureUpdated" + name, new Dictionary<string, object> { { "culture", this } });
     }
@@ -152,12 +155,13 @@ public class Culture : MonoBehaviour
         Culture newCulture = newCultureObj.GetComponent<Culture>();
         newCulture.Init(tile, color, maxPopTransfer, name);
         AddPopulation(-maxPopTransfer);
+        newCulture.GetComponent<CultureMemory>().previousTile = tile;
 
         
         return newCultureObj;
     }
 
-    private void SetColor(Color c)
+    public void SetColor(Color c)
     {
         color = c;
         layerMode.color = c;
@@ -179,9 +183,9 @@ public class Culture : MonoBehaviour
 
     void DestroyCulture()
     {
-        Debug.Log("Destroying " + name + "(" + GetHashCode() + ")");
+        //Debug.Log("Destroying " + name + "(" + GetHashCode() + ")");
         EventManager.StopListening("Tick", OnTick);
-        EventManager.TriggerEvent("CultureRemoved", new Dictionary<string, object>() { { "culture", this } });
+        EventManager.TriggerEvent("CultureRemoved" + name, new Dictionary<string, object>() { { "culture", this } });
         if(tileInfo != null)
         {
             tileInfo.RemoveCulture(this);
@@ -189,8 +193,8 @@ public class Culture : MonoBehaviour
         Destroy(gameObject);
     }
 
-    void AddPopulation(int num)
-    {
+    public void AddPopulation(int num)
+    { 
         population += num;
         if(population == 0)
         {
@@ -207,8 +211,25 @@ public class Culture : MonoBehaviour
 
     void SetTile(Tile newTile)
     {
+        //Debug.Log("setting culture " + name + "("+GetHashCode()+") to tile " + newTile);
+        if(tileInfo != null)
+        {
+            tileInfo.RemoveCulture(this);
+        }
+
+        if (newTile.gameObject != Tile.moveTile) // move tile is a special tile that holds all moving cultures, can't add it to tileinfo because there will be more than one of the same culture
+        {
+            newTile.GetComponent<TileInfo>().AddCulture(this);
+        }
+
+        CultureMemory cm = GetComponent<CultureMemory>();
+
+        cm.previousTile = tile;
+
+
         SetTileWithoutInformingTileInfo(newTile);
-        newTile.GetComponent<TileInfo>().AddCulture(this);
+
+
     }
 
     void RenameCulture(string newName)
@@ -217,6 +238,7 @@ public class Culture : MonoBehaviour
         GetComponent<CultureMemory>().cultureParentName = name;
         name = newName;
         gameObject.name = newName;
+        EventManager.TriggerEvent("CultureUpdated" + newName, new Dictionary<string, object> { { "culture", this } });
     }
 
     public Color mutateColor(Color parentColor)

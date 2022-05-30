@@ -553,31 +553,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 114118713}
   m_CullTransparentMesh: 1
---- !u!1 &191360132 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 734804678373380931, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
-  m_PrefabInstance: {fileID: 1630311595}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &191360135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 191360132}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1adf2111c2d550346a7a82c0271969b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bg: {fileID: 1950132320}
-  tiles:
-  - {fileID: 7417488487907784279, guid: 9a6e3391cce88b34ab1426a5840353fe, type: 3}
-  - {fileID: 6821989227695789434, guid: d4599aa13219d5c48a7533f9772b3cef, type: 3}
-  - {fileID: 3517407943802080398, guid: 6f497194a45a4ee4484e1ba2c65e9217, type: 3}
-  - {fileID: 5323336950972137596, guid: 1e326386dc5fa2f4ca18f10e22bd67bd, type: 3}
-  - {fileID: 6622275044617704145, guid: 376176d76cc55364fa17591865b5b303, type: 3}
-  offset: 0.05
 --- !u!1 &272620466
 GameObject:
   m_ObjectHideFlags: 0
@@ -2273,17 +2248,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 191360135, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
+      propertyPath: bg
+      value: 
+      objectReference: {fileID: 1950132320}
     - target: {fileID: 734804678373380931, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: m_Name
       value: Board
       objectReference: {fileID: 0}
     - target: {fileID: 734804678373380932, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: width
-      value: 2
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 734804678373380932, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: height
-      value: 2
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 734804678373380933, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: m_RootOrder
@@ -3022,7 +3001,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 16857794732596036, guid: 2a28ac8093d445f40ab20b07479d98c0, type: 3}
       propertyPath: scale
-      value: 0.2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 16857794732596037, guid: 2a28ac8093d445f40ab20b07479d98c0, type: 3}
       propertyPath: m_RootOrder

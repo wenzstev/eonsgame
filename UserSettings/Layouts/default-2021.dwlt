@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1349.3334
   m_ShowMode: 4
-  m_Title: Console
+  m_Title: Game
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 94
+  controlID: 15
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -64,12 +64,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1787.3334
+    x: 2135.3333
     y: 0
-    width: 772.6666
+    width: 424.66675
     height: 1299.3334
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -92,8 +92,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 259.33334
-    height: 824.6667
+    width: 836
+    height: 750
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
@@ -118,9 +118,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 824.6667
-    width: 1787.3334
-    height: 474.6667
+    y: 750
+    width: 2135.3333
+    height: 549.3334
   m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
@@ -219,12 +219,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1787.3334
+    width: 2135.3333
     height: 1299.3334
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 18
+  controlID: 16
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,12 +244,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1787.3334
-    height: 824.6667
+    width: 2135.3333
+    height: 750
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 19
+  controlID: 17
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -265,10 +265,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 259.33334
+    x: 836
     y: 0
-    width: 1528
-    height: 824.6667
+    width: 1299.3333
+    height: 750
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
@@ -299,19 +299,19 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 72.66667
-    width: 695.6667
-    height: 713.6667
+    width: 1023.6666
+    height: 729
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 2193
+    ID: 129
     splitterInitialOffset: 445.66666
     currentActiveSplitter: -1
     realSizes:
-    - 355.33334
-    - 287.33334
+    - 364
+    - 294.6667
     relativeSizes:
     - 0.55309737
     - 0.44690263
@@ -321,7 +321,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 642.6667
+    lastTotalSize: 658.6667
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -337,9 +337,9 @@ MonoBehaviour:
       uniqueId: '[My project][suite]'
       name: My project
       fullName: My project
-      resultStatus: 1
-      duration: 0.3084445
-      messages: 
+      resultStatus: 2
+      duration: 0.4982453
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -350,12 +350,12 @@ MonoBehaviour:
       parentId: 
       parentUniqueId: 
     - id: 1003
-      uniqueId: '[Tests][C:/Users/wenze/Documents/Unity/zombieshooter/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+      uniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
       name: Tests.dll
-      fullName: C:/Users/wenze/Documents/Unity/zombieshooter/Eons/Library/ScriptAssemblies/Tests.dll
-      resultStatus: 1
-      duration: 0.2130296
-      messages: 
+      fullName: C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll
+      resultStatus: 2
+      duration: 0.4267764
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -369,8 +369,8 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][CultureTestSuite][suite]
       name: CultureTestSuite
       fullName: CultureTestSuite
-      resultStatus: 1
-      duration: 0.2062759
+      resultStatus: 0
+      duration: 0
       messages: 
       output: 
       stacktrace: 
@@ -379,18 +379,16 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1003
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/zombieshooter/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1004
-      uniqueId: Tests.dll/CultureTestSuite/[Tests][CultureTestSuite.TestMergeWith]
-      name: TestMergeWith
-      fullName: CultureTestSuite.TestMergeWith
-      resultStatus: 1
-      duration: 0.0311781
+      parentId: 1011
+      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1003
+      uniqueId: Tests.dll/CultureTestSuite/[Tests][CultureTestSuite.TestCanMerge]
+      name: TestCanMerge
+      fullName: CultureTestSuite.TestCanMerge
+      resultStatus: 0
+      duration: 0
       messages: 
-      output: 'merging  with ebmlzv (Culture)
-
-'
+      output: 
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -401,28 +399,11 @@ MonoBehaviour:
       parentId: 1001
       parentUniqueId: Tests.dll/[Tests][CultureTestSuite][suite]
     - id: 1002
-      uniqueId: Tests.dll/CultureTestSuite/[Tests][CultureTestSuite.TestMoveTile]
-      name: TestMoveTile
-      fullName: CultureTestSuite.TestMoveTile
-      resultStatus: 1
-      duration: 0.1386103
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: Tests.dll/[Tests][CultureTestSuite][suite]
-    - id: 1003
       uniqueId: Tests.dll/CultureTestSuite/[Tests][CultureTestSuite.TestSplitCulture]
       name: TestSplitCulture
       fullName: CultureTestSuite.TestSplitCulture
-      resultStatus: 1
-      duration: 0.0237139
+      resultStatus: 0
+      duration: 0
       messages: 
       output: 
       stacktrace: 
@@ -434,13 +415,222 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1001
       parentUniqueId: Tests.dll/[Tests][CultureTestSuite][suite]
-    m_ResultText: TestMoveTile (0.139s)
+    - id: 1001
+      uniqueId: Tests.dll/[Tests][MergeActionTestSuite][suite]
+      name: MergeActionTestSuite
+      fullName: MergeActionTestSuite
+      resultStatus: 2
+      duration: 0.0100486
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1009
+      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1006
+      uniqueId: Tests.dll/MergeActionTestSuite/[Tests][MergeActionTestSuite.CanAddNewCultureToTile]
+      name: CanAddNewCultureToTile
+      fullName: MergeActionTestSuite.CanAddNewCultureToTile
+      resultStatus: 2
+      duration: 0
+      messages: Method marked with UnityTest must return IEnumerator.
+      output: 
+      stacktrace: 
+      notRunnable: 1
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Tests.dll/[Tests][MergeActionTestSuite][suite]
+    - id: 1005
+      uniqueId: Tests.dll/MergeActionTestSuite/[Tests][MergeActionTestSuite.CanMergeCultures]
+      name: CanMergeCultures
+      fullName: MergeActionTestSuite.CanMergeCultures
+      resultStatus: 2
+      duration: 0
+      messages: Method marked with UnityTest must return IEnumerator.
+      output: 
+      stacktrace: 
+      notRunnable: 1
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Tests.dll/[Tests][MergeActionTestSuite][suite]
+    - id: 1007
+      uniqueId: Tests.dll/MergeActionTestSuite/[Tests][MergeActionTestSuite.CanMergeWithParentCulture]
+      name: CanMergeWithParentCulture
+      fullName: MergeActionTestSuite.CanMergeWithParentCulture
+      resultStatus: 2
+      duration: 0
+      messages: Method marked with UnityTest must return IEnumerator.
+      output: 
+      stacktrace: 
+      notRunnable: 1
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Tests.dll/[Tests][MergeActionTestSuite][suite]
+    - id: 1001
+      uniqueId: Tests.dll/[Tests][MoveActionTestSuite][suite]
+      name: MoveActionTestSuite
+      fullName: MoveActionTestSuite
+      resultStatus: 1
+      duration: 0.4093754
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1004
+      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1002
+      uniqueId: Tests.dll/MoveActionTestSuite/[Tests][MoveActionTestSuite.MoveTileActionTest]
+      name: MoveTileActionTest
+      fullName: MoveActionTestSuite.MoveTileActionTest
+      resultStatus: 1
+      duration: 0.1798755
+      messages: 
+      output: '-9134: setting view to Culture
+
+        stop listning for CurrentView
+
+        adding
+        pop of 0
+
+        hooking current turn from move
+
+        adding pop of
+        0
+
+        stop listning for ChangeViewMode
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][MoveActionTestSuite][suite]
+    - id: 1002
+      uniqueId: Tests.dll/MoveActionTestSuite/[Tests][MoveActionTestSuite.MoveTileActionWhenLargeTest]
+      name: MoveTileActionWhenLargeTest
+      fullName: MoveActionTestSuite.MoveTileActionWhenLargeTest
+      resultStatus: 1
+      duration: 0.1131653
+      messages: 
+      output: '-9276: setting view to Culture
+
+        stop listning for CurrentView
+
+        adding
+        pop of 5
+
+        Counter at 0
+
+        Counter at 1
+
+        Counter
+        at 2
+
+        adding pop of -1
+
+        splitting culture otsvzw -9336
+
+        previopus
+        tile for (-9336) is 0, 0 (Tile)
+
+        -9338: setting view to Culture
+
+        stop
+        listning for CurrentView
+
+        adding pop of 0
+
+        adding pop of
+        0
+
+        hooking current turn from move
+
+        adding pop of 0
+
+        stop
+        listning for ChangeViewMode
+
+        stop listning for ChangeViewMode
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][MoveActionTestSuite][suite]
+    - id: 1003
+      uniqueId: Tests.dll/MoveActionTestSuite/[Tests][MoveActionTestSuite.RepelledActionTest]
+      name: RepelledActionTest
+      fullName: MoveActionTestSuite.RepelledActionTest
+      resultStatus: 1
+      duration: 0.1100238
+      messages: 
+      output: '-9456: setting view to Culture
+
+        stop listning for CurrentView
+
+        1,
+        0 (Tile)
+
+        adding pop of 0
+
+        hooking current turn from move
+
+        adding
+        pop of 0
+
+        stop listning for ChangeViewMode
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][MoveActionTestSuite][suite]
+    m_ResultText: 'CanAddNewCultureToTile (0.000s)
+
+      ---
+
+      Method marked
+      with UnityTest must return IEnumerator.'
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 034f6f63
-      m_LastClickedID: 1668239107
-      m_ExpandedIDs: 4580fecc03fe443357683e34ffffff7f
+      m_SelectedIDs: 24e68d5c
+      m_LastClickedID: 1552803364
+      m_ExpandedIDs: c2778cab4580fecc03fe443357683e3426ecfc37b71a1147eb084855ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -539,9 +729,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 897.3334
-    width: 1786.3334
-    height: 453.6667
+    y: 822.6667
+    width: 2134.3333
+    height: 528.3334
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -559,22 +749,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Scripts/CultureScripts
+    - Assets/Resources/Prefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Scripts/CultureScripts
+  - Assets/Resources/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\wenze\Documents\Unity\Eons
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: fa5b0000
-    m_LastClickedID: 23546
-    m_ExpandedIDs: 00000000e45b0000e65b0000e85b000000ca9a3bffffff7f
+    m_SelectedIDs: ec5b0000
+    m_LastClickedID: 23532
+    m_ExpandedIDs: 00000000e25b0000e45b0000e65b0000ec5b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -602,7 +792,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e45b0000e65b0000e85b0000
+    m_ExpandedIDs: 00000000e25b0000e45b0000e65b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -627,8 +817,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 960e0000
-    m_LastClickedInstanceID: 3734
+    m_SelectedInstanceIDs: 5a5a0000
+    m_LastClickedInstanceID: 23130
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300009e5f0000946c0000
     m_RenameOverlay:
@@ -678,9 +868,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1787.3334
+    x: 2135.3335
     y: 72.66667
-    width: 771.6666
+    width: 423.66675
     height: 1278.3334
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -721,8 +911,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 72.66667
-    width: 258.33334
-    height: 803.6667
+    width: 835
+    height: 729
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -730,9 +920,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 960e0000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 2efbffff38fbffff
+      m_SelectedIDs: 30daffff
+      m_LastClickedID: -9680
+      m_ExpandedIDs: 1cc8f5ffccddf6ff0ed4f7ff7615f8ff8a15f8ff82abfcffd2d3fcff24daffff30daffff32daffff7adaffff9eddffff74e6ffffbce6ffffc4e8ffff64f2ffff78f2ffff8cf2ffff8af3ffff8cf3ffffd4f3ffffdef5ffff38f7ffff80f7ffff24faffff38fbffffb66e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -776,10 +966,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 259.33334
+    x: 836
     y: 72.66667
-    width: 1526
-    height: 803.6667
+    width: 1297.3333
+    height: 729
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -981,9 +1171,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 790.45984, y: 388.97626, z: 58.56405}
+    m_Target: {x: 29.108564, y: 14.830022, z: 75.996254}
     speed: 2
-    m_Value: {x: 790.45984, y: 388.97626, z: 58.56405}
+    m_Value: {x: 29.108564, y: 14.830022, z: 75.996254}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1034,9 +1224,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 731.9082
+    m_Target: 22.111238
     speed: 2
-    m_Value: 731.9082
+    m_Value: 22.111238
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1081,10 +1271,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 259.33334
+    x: 836
     y: 72.66667
-    width: 1526
-    height: 803.6667
+    width: 1297.3333
+    height: 729
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1095,7 +1285,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1526, y: 782.6667}
+  m_TargetSize: {x: 1297.3333, y: 708}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1110,10 +1300,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -508.6667
-    m_HBaseRangeMax: 508.6667
-    m_VBaseRangeMin: -260.88892
-    m_VBaseRangeMax: 260.88892
+    m_HBaseRangeMin: -432.44443
+    m_HBaseRangeMax: 432.44443
+    m_VBaseRangeMin: -236
+    m_VBaseRangeMax: 236
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1122,7 +1312,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -1131,23 +1321,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1526
-      height: 782.6667
+      width: 1297.3333
+      height: 708
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 763, y: 391.33334}
+    m_Translation: {x: 648.6666, y: 354}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -763
-      y: -391.33334
-      width: 1526
-      height: 782.6667
+      x: -648.6666
+      y: -354
+      width: 1297.3333
+      height: 708
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 2289, y: 1205.5}
+  m_LastWindowPixelSize: {x: 1945.9999, y: 1093.5}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -1174,9 +1364,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 897.3334
-    width: 1786.3334
-    height: 453.6667
+    y: 822.6667
+    width: 2134.3333
+    height: 528.3334
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default

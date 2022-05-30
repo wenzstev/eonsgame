@@ -17,7 +17,10 @@ public abstract class CultureMoveAction : CultureAction
 
     public IEnumerator MoveTile(GameObject cultureObj, GameObject newTile)
     {
-
+        if(newTile == Tile.moveTile)
+        {
+            Debug.LogError("About to physically move to move tile!");
+        }
         Culture cultureToMove = RemoveCultureFromOldTile(cultureObj);
 
         Vector3 startPosition = cultureObj.transform.position;
@@ -32,19 +35,14 @@ public abstract class CultureMoveAction : CultureAction
         cultureObj.transform.position = newTile.transform.position;
         cultureObj.transform.SetParent(newTile.transform);
 
-        turn.UpdateCulture(cultureToMove).newState = Culture.State.NewOnTile;
+        //Debug.Log("hooking current turn from move");
+        Turn.HookTurn().UpdateCulture(cultureToMove).newState = Culture.State.NewOnTile; // hook turn because the old one was already used
 
     }
 
     Culture RemoveCultureFromOldTile(GameObject cultureObj)
     {
         Culture cultureToMove = cultureObj.GetComponent<Culture>();
-        cultureToMove.tile.GetComponent<TileInfo>().RemoveCulture(cultureToMove);
-
-        if (cultureToMove.currentState != Culture.State.Repelled)
-        {
-            cultureToMove.GetComponent<CultureMemory>().previousTile = cultureToMove.tile;
-        }
 
         turn.UpdateCulture(cultureToMove).newTile = Tile.moveTile.GetComponent<Tile>();
 

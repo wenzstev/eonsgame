@@ -9,8 +9,9 @@ public abstract class CultureAction
 
     protected CultureAction(Culture c)
     {
+        //Debug.Log("starting turn for " + c.GetHashCode());
         culture = c;
-        turn = new Turn(c);
+        turn = Turn.HookTurn();
     }
 
     public abstract Turn ExecuteTurn();
@@ -103,12 +104,25 @@ public class DecisionMaker
 
 public class Turn
 {
-    Dictionary<Culture, CultureTurnUpdate> turnUpdates;
+    public Dictionary<Culture, CultureTurnUpdate> turnUpdates { get; private set; }
 
-    public Turn(Culture c)
+    static Turn currentTurn;
+    bool hasBeenPushed = false;
+
+    Turn()
     {
         turnUpdates = new Dictionary<Culture, CultureTurnUpdate>();
-        AddTurnUpdate(c);
+    }
+
+    public static Turn HookTurn()
+    {
+        if(currentTurn == null || currentTurn.hasBeenPushed)
+        {
+            //Debug.Log("getting new turn");
+            currentTurn = new Turn();
+        }
+        //Debug.Log("hooking current turn");
+        return currentTurn;
     }
 
     public CultureTurnUpdate UpdateCulture(Culture c)
@@ -122,18 +136,17 @@ public class Turn
         return turnUpdates[c];
     }
 
-    public void AddTurnUpdate(Culture c)
-    {
-        turnUpdates.Add(c, new CultureTurnUpdate(c));
-    }
-
     public void UpdateAllCultures()
     {
+        //Debug.Log("updating culture. setting pushed to true");
+        hasBeenPushed = true;
         foreach(KeyValuePair<Culture, CultureTurnUpdate> c in turnUpdates)
         {
             c.Key.UpdateForTurn(c.Value);
         }
     }
+
+    
 
 
 }

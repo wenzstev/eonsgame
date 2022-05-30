@@ -17,10 +17,10 @@ public class CultureObserver : MonoBehaviour
 
     void CreateCulture(Dictionary<string, object> newCultureDict)
     {
-        Culture newCulture = (Culture)newCultureDict["culture"];
-        if (cultures.ContainsKey(newCulture.name))
+        string newCulture = (string)newCultureDict["culture"];
+        if (cultures.ContainsKey(newCulture))
         {
-            Debug.LogError("Attempting to create a culture (" + newCulture.name + ") that already exists!");
+            Debug.LogError("Attempting to create a culture (" + newCulture + ") that already exists!");
             return;
         }
         CultureAggregation newAggregation = new CultureAggregation(newCulture);
@@ -41,6 +41,16 @@ public class CultureAggregation
     public Color avgColor;
     public string name;
 
+    public CultureAggregation(string newCultureName)
+    {
+        name = newCultureName;
+        cultures = new HashSet<Culture>();
+
+        EventManager.StartListening("CultureUpdated" + name, UpdateCultureStats);
+        EventManager.StartListening("CultureRemoved" + name, RemoveCulture);
+        EventManager.TriggerEvent("CultureAggregateAdded", new Dictionary<string, object> { { "cultureAggregate", this } });
+    }
+
     public CultureAggregation(Culture culture)
     {
         cultures = new HashSet<Culture>();
@@ -51,6 +61,8 @@ public class CultureAggregation
 
         EventManager.StartListening("CultureUpdated" + name, UpdateCultureStats);
         EventManager.StartListening("CultureRemoved" + name, RemoveCulture);
+        EventManager.TriggerEvent("CultureAggregateAdded", new Dictionary<string, object> { { "cultureAggregate", this } });
+
 
     }
 
@@ -94,7 +106,7 @@ public class CultureAggregation
         avgColor = new Color(r / numCultures, g / numCultures, b / numCultures);
         if(totalPopulation == 0)
         {
-            Debug.Log("pop of " + name + "  is zero. destroying aggregate");
+            //Debug.Log("pop of " + name + "  is zero. destroying aggregate");
             EventManager.TriggerEvent("CultureAggregateRemoved", new Dictionary<string, object> { { "cultureAggregate", this } });
             EventManager.TriggerEvent("CultureAggregateRemoved" + name, new Dictionary<string, object> { { "cultureAggregate", this } });
         }

@@ -51,7 +51,7 @@ public class BoardTileRelationship
     }
 
     public GameObject getNeighbor(GameObject tile, Direction d)
-    {
+    {   
         (int x, int y) coords;
         if(tileLookup.TryGetValue(tile, out coords))
         {
@@ -66,5 +66,10 @@ public class BoardTileRelationship
             }
         }
         return null;
+    }
+
+    public GameObject GetTile(int x, int y)
+    {
+        return tiles[x, y];
     }
 }

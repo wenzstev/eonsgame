@@ -26,14 +26,19 @@ public class AttemptRepelAction : CultureAction
                 {
                     turn.UpdateCulture(c).newState = Culture.State.Repelled;
                     Debug.Log(c.name + " is repelled by " + culture.name);
-                    break;
+                }
+                else
+                {
+                    turn.UpdateCulture(c).newState = Culture.State.Default;
                 }
                 if(Random.value < .01f)
                 {
                     turn.UpdateCulture(culture).popChange -= 1; // killed in repelling effort
                 }
+                break;
             }
         }
+        turn.UpdateCulture(culture).newState = Culture.State.Default;
         return turn;
     }
 }
