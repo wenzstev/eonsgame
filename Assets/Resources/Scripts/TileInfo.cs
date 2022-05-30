@@ -10,8 +10,7 @@ public class TileInfo : MonoBehaviour
     public int popBase;
     public int currentMaxPopulation;
     public int killoffSize = 1;
-    int ticksInYear = 10;
-    int counter = 0;
+
 
 
 
@@ -35,49 +34,11 @@ public class TileInfo : MonoBehaviour
     private void Awake()
     {
         cultures = new Dictionary<string, Culture>();
-        EventManager.StartListening("Tick", OnTick);
         currentMaxPopulation = popBase;
         orderToRemoveCulturesIn = new List<Culture>();
     }
 
-    void OnTick(Dictionary<string, object> empty)
-    {
-        
-        if(tilePopulation > popBase && Random.value < .1f)
-        {
-            KillOff();
-        }
-    }
-
-    void KillOff()
-    {
-        
-        int killedOff = 0;
-
-
-        while(tilePopulation > currentMaxPopulation && killedOff <= killoffSize)
-        {
-            Culture nextCulture = orderToRemoveCulturesIn[0];
-
-
-            nextCulture.population -= 1;
-            Debug.Log("removing one from " + nextCulture.name + "(" + nextCulture.GetHashCode() + ")");
-            EventManager.TriggerEvent("CultureUpdated", new Dictionary<string, object> { { "culture", nextCulture } });
-
-            if (nextCulture.population < 1)
-            {
-                EventManager.TriggerEvent("CultureUpdated", new Dictionary<string, object> { { "culture", nextCulture } });
-
-                Debug.Log("destroying " + nextCulture.name + "(" + nextCulture.GetHashCode() + "), pop at zero");
-                RemoveCulture(nextCulture);
-                nextCulture.DestroyCulture();
-
-            }
-            killedOff += 1;
-        }
-
-       
-    }
+ 
 
     public void Init(string TileType, int popBase)
     {
@@ -97,7 +58,7 @@ public class TileInfo : MonoBehaviour
 
     public void AddCulture(Culture culture)
     {
-        cultures.Add(culture.name, culture);
+        cultures.Add(culture.name, culture);    
         orderToRemoveCulturesIn.Add(culture);
         UpdateCultureSurvivability();
         currentMaxPopulation = Mathf.Max(culture.maxOnTile, currentMaxPopulation);

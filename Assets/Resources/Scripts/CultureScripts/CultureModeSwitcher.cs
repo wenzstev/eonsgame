@@ -28,14 +28,22 @@ public class CultureModeSwitcher : MonoBehaviour
         currentView = ViewController.Views.Culture;
 
         EventManager.StartListening("ChangeViewMode", SetView);
+        EventManager.StartListening("CurrentView", GetViewOnStart);
+        EventManager.TriggerEvent("CurrentViewRequested", null);
     }
 
     void SetView(Dictionary<string, object> newView)
     {
+        //Debug.Log(GetHashCode() + ": setting view to " + newView["view"]);
         views[(int)currentView].SetActive(false);
         views[(int)newView["view"]].SetActive(true);
         currentView = (ViewController.Views) newView["view"];
+    }
 
+    void GetViewOnStart(Dictionary<string, object> currentView)
+    {
+        SetView(currentView);
+        EventManager.StopListening("CurrentView", GetViewOnStart);
     }
 
     private void OnDestroy()
