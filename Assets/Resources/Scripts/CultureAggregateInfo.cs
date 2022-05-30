@@ -36,6 +36,7 @@ public class CultureAggregateInfo : MonoBehaviour
 
     void OnCultureAggregateRemoved(Dictionary<string, object> empty)
     {
+        Debug.Log("destroying info panel for " + cultureAggregate.name);
         EventManager.StopListening("CultureAggregateUpdated" + cultureAggregate.name, OnCultureAggregateUpdated);
         EventManager.StopListening("CultureAggregateRemoved" + cultureAggregate.name, OnCultureAggregateRemoved);
         Destroy(gameObject);

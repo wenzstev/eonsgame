@@ -50,25 +50,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f819dac6b9cd8946b1d59b038c4200d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: 
-  color: {r: 0, g: 0, b: 0, a: 0}
-  tile: {fileID: 0}
   cultureTemplate: {fileID: 3768529557212743783}
-  population: 0
-  spreadChance: 0.05
-  mutateChance: 0.05
+  spreadChance: 0.01
   shareCultureChance: 0.05
-  mutationMax: 0.05
+  baseMutationMax: 0.0015
   transferRate: 0
   sameCultureCutoff: 0.1
   growPopulationChance: 0.01
   repelChance: 0.903
   gainAffinityChance: 0.01
   maxPopTransfer: 1
-  isAnimationPlaying: 0
-  moveTime: 0.1
-  affinity: 
   maxOnTile: 0
+  currentState: 0
 --- !u!114 &2397938024399410024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,7 +86,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f14d02641015ec49949b1ccef59f257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  previousTile: {fileID: 0}
   cultureParentName: 
 --- !u!1 &4987526667517434846
 GameObject:
@@ -449,8 +441,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2031148329
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
