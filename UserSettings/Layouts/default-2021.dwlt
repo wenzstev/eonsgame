@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 163
+  controlID: 121
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 424.66675
     height: 1299.3334
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 836
     height: 750
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 15}
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 164
+  controlID: 49
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 27
+  controlID: 50
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -269,8 +269,8 @@ MonoBehaviour:
     y: 0
     width: 1299.3333
     height: 750
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -306,7 +306,7 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 123
+    ID: 129
     splitterInitialOffset: 445.66666
     currentActiveSplitter: -1
     realSizes:
@@ -338,7 +338,7 @@ MonoBehaviour:
       name: My project
       fullName: My project
       resultStatus: 2
-      duration: 0.5480354
+      duration: 0.5258633
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -354,7 +354,7 @@ MonoBehaviour:
       name: Tests.dll
       fullName: C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll
       resultStatus: 2
-      duration: 0.473358
+      duration: 0.4398117
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -370,7 +370,7 @@ MonoBehaviour:
       name: CultureTestSuite
       fullName: CultureTestSuite
       resultStatus: 1
-      duration: 0.0279667
+      duration: 0.0271743
       messages: 
       output: 
       stacktrace: 
@@ -386,7 +386,7 @@ MonoBehaviour:
       name: TestCanMerge
       fullName: CultureTestSuite.TestCanMerge
       resultStatus: 1
-      duration: 0.0146145
+      duration: 0.0138435
       messages: 
       output: 
       stacktrace: 
@@ -403,7 +403,7 @@ MonoBehaviour:
       name: TestSplitCulture
       fullName: CultureTestSuite.TestSplitCulture
       resultStatus: 1
-      duration: 0.0013363
+      duration: 0.0014249
       messages: 
       output: 
       stacktrace: 
@@ -420,7 +420,7 @@ MonoBehaviour:
       name: MergeActionTestSuite
       fullName: MergeActionTestSuite
       resultStatus: 2
-      duration: 0.0601978
+      duration: 0.0396651
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -436,7 +436,7 @@ MonoBehaviour:
       name: CanAddNewCultureToTile
       fullName: MergeActionTestSuite.CanAddNewCultureToTile
       resultStatus: 2
-      duration: 0.0250859
+      duration: 0.0178385
       messages: "  Test not yet implemented!\r\n  Expected: True\r\n  But was:  False\r\n"
       output: 
       stacktrace: 'at MergeActionTestSuite+<CanAddNewCultureToTile>d__5.MoveNext
@@ -460,7 +460,7 @@ MonoBehaviour:
       name: CanMergeCultures
       fullName: MergeActionTestSuite.CanMergeCultures
       resultStatus: 2
-      duration: 0.0187628
+      duration: 0.0119354
       messages: "  Test not yet implemented!\r\n  Expected: True\r\n  But was:  False\r\n"
       output: 
       stacktrace: 'at MergeActionTestSuite+<CanMergeCultures>d__4.MoveNext () [0x0002e]
@@ -484,7 +484,7 @@ MonoBehaviour:
       name: CanMergeWithParentCulture
       fullName: MergeActionTestSuite.CanMergeWithParentCulture
       resultStatus: 2
-      duration: 0.0121609
+      duration: 0.0073925
       messages: "  Test not yet implemented!\r\n  Expected: True\r\n  But was:  False\r\n"
       output: 
       stacktrace: 'at MergeActionTestSuite+<CanMergeWithParentCulture>d__6.MoveNext
@@ -508,7 +508,7 @@ MonoBehaviour:
       name: MoveActionTestSuite
       fullName: MoveActionTestSuite
       resultStatus: 1
-      duration: 0.3790876
+      duration: 0.3673638
       messages: 
       output: 
       stacktrace: 
@@ -524,7 +524,7 @@ MonoBehaviour:
       name: MoveTileActionTest
       fullName: MoveActionTestSuite.MoveTileActionTest
       resultStatus: 1
-      duration: 0.1500385
+      duration: 0.1459571
       messages: 
       output: 
       stacktrace: 
@@ -541,61 +541,11 @@ MonoBehaviour:
       name: MoveTileActionWhenLargeTest
       fullName: MoveActionTestSuite.MoveTileActionWhenLargeTest
       resultStatus: 1
-      duration: 0.1137485
+      duration: 0.1102303
       messages: 
       output: 'Counter at 0
 
         Counter at 1
-
-        Counter at 2
-
-        Counter
-        at 3
-
-        Counter at 4
-
-        Counter at 5
-
-        Counter at 6
-
-        Counter
-        at 7
-
-        Counter at 8
-
-        Counter at 9
-
-        Counter at 10
-
-        Counter
-        at 11
-
-        Counter at 12
-
-        Counter at 13
-
-        Counter at
-        14
-
-        Counter at 15
-
-        Counter at 16
-
-        Counter at 17
-
-        Counter
-        at 18
-
-        Counter at 19
-
-        Counter at 20
-
-        Counter at
-        21
-
-        Counter at 22
-
-        Counter at 23
 
 '
       stacktrace: 
@@ -612,7 +562,7 @@ MonoBehaviour:
       name: RepelledActionTest
       fullName: MoveActionTestSuite.RepelledActionTest
       resultStatus: 1
-      duration: 0.1090739
+      duration: 0.108217
       messages: 
       output: '1, 0 (Tile)
 
@@ -626,23 +576,17 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1001
       parentUniqueId: Tests.dll/[Tests][MoveActionTestSuite][suite]
-    m_ResultText: "CanAddNewCultureToTile (0.025s)\n---\nTest not yet implemented!\r\n 
-      Expected: True\r\n  But was:  False\n---\nat MergeActionTestSuite+<CanAddNewCultureToTile>d__5.MoveNext
-      () [0x0002e] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\MergeActionTestSuite.cs:44\r\nat
-      UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in
-      C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46"
-    m_ResultStacktrace: 'at MergeActionTestSuite+<CanAddNewCultureToTile>d__5.MoveNext
-      () [0x0002e] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\MergeActionTestSuite.cs:44
+    m_ResultText: 'My project (0.526s)
 
-      at
-      UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in
-      C:\Users\wenze\Documents\Unity\Eons\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
+      ---
 
-'
+      One or more child tests
+      had errors'
+    m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 24e68d5c
-      m_LastClickedID: 1552803364
+      m_SelectedIDs: 03fe4433
+      m_LastClickedID: 860159491
       m_ExpandedIDs: c2778cab4580fecc03fe443357683e3426ecfc37b71a1147eb084855ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -775,9 +719,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 045c0000
-    m_LastClickedID: 23556
-    m_ExpandedIDs: 00000000e65b0000e85b0000ea5b0000ec5b000000ca9a3bffffff7f
+    m_SelectedIDs: 005c0000
+    m_LastClickedID: 23552
+    m_ExpandedIDs: 00000000ec5b0000ee5b0000f05b0000f25b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -805,7 +749,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e65b0000e85b0000ea5b0000ec5b0000
+    m_ExpandedIDs: 00000000ec5b0000ee5b0000f05b0000f25b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -933,9 +877,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 88720000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 64d6ffffacd6ffff32dcffff8addffffd2ddffffb4e2ffff12e4ffff5ae4ffff30e6ffffc2e8ffff0ae9ffffe0eaffff24eeffff6ceeffff1af0ffff72f1ffffbaf1ffff3cf3ffff68f4ffffaef4ffff2af5ffff34f6ffff7cf6fffffef9ffff38fbffff
+      m_ExpandedIDs: a074ffff4af4ffff92f4ffff1efaffff38fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
