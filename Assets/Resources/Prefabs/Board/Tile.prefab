@@ -140,7 +140,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62f2aba96c5b0984c98fb8abef93e66e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileType: 
 --- !u!114 &1639098555202725608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,7 +153,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileType: 
-  culture: {fileID: 0}
+  popBase: 0
+  currentMaxPopulation: 0
+  killoffSize: 1
+  orderToRemoveCulturesIn: []
+  hasTransition: 0
 --- !u!1001 &756627589101669879
 PrefabInstance:
   m_ObjectHideFlags: 0
