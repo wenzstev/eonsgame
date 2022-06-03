@@ -50,8 +50,6 @@ public class TileInfo : MonoBehaviour
     {
         Culture cultureToChangeName = cultures[oldname];
 
-
-
         cultures.Add(newname, cultureToChangeName);
         cultures.Remove(oldname);
     }
