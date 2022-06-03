@@ -9,6 +9,8 @@ public class Culture : MonoBehaviour
     public Tile tile { get; private set; }
     public TileInfo tileInfo { get; private set; }
 
+    public CultureMemory cultureMemory { get; private set; }
+
     DecisionMaker decisionMaker;
 
     public GameObject cultureTemplate;
@@ -85,6 +87,8 @@ public class Culture : MonoBehaviour
         SetColor(color);
         gameObject.name = name;
 
+        cultureMemory = GetComponent<CultureMemory>();
+
     }
 
     public void Init(Tile t, Color parent, int pop, string n)
@@ -95,6 +99,8 @@ public class Culture : MonoBehaviour
         name = n;
         gameObject.name = name;
         transform.SetParent(t.gameObject.transform);
+        cultureMemory = GetComponent<CultureMemory>();
+
         //SetTileWithoutInformingTileInfo(t);
     }
 
@@ -155,7 +161,7 @@ public class Culture : MonoBehaviour
         Culture newCulture = newCultureObj.GetComponent<Culture>();
         newCulture.Init(tile, color, maxPopTransfer, name);
         AddPopulation(-maxPopTransfer);
-        newCulture.GetComponent<CultureMemory>().previousTile = tile;
+        newCulture.cultureMemory.previousTile = tile;
 
         
         return newCultureObj;
@@ -235,10 +241,15 @@ public class Culture : MonoBehaviour
     void RenameCulture(string newName)
     {
         EventManager.TriggerEvent("CultureRemoved" + name, new Dictionary<string, object> { { "culture", this } });
-        GetComponent<CultureMemory>().cultureParentName = name;
+       cultureMemory.cultureParentName = name;
         name = newName;
         gameObject.name = newName;
         EventManager.TriggerEvent("CultureUpdated" + newName, new Dictionary<string, object> { { "culture", this } });
+        if(tileInfo != null)
+        {
+            Debug.LogWarning("Culture has tileInfo, not changing. Unless this is a test it may be a bug.");
+        }
+    
     }
 
     public Color mutateColor(Color parentColor)
