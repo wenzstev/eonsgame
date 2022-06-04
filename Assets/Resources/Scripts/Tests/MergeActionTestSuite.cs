@@ -116,11 +116,25 @@ public class MergeActionTestSuite
         Assert.That(newInfoMergeCulture.newTile == testTile, "Merged culture isn't moving to tile!");
     }
 
-    [UnityTest]
-    public IEnumerator CanCreateAsNewCulture()
+    [Test]
+    public void CanCreateAsNewCulture()
     {
-        yield return null;
-        Assert.That(false, "Test not yet implemented!");
+        Turn.HookTurn().UpdateCulture(testCulture).newName = "test";
+        Turn.HookTurn().UpdateCulture(testCultureMerge).newName = "test";
+        Turn.HookTurn().UpdateCulture(testCulture).newColor = Color.blue;
+        Turn.HookTurn().UpdateCulture(testCultureMerge).newColor = Color.red;
+        Turn.HookTurn().UpdateAllCultures();
+
+        MergeAction testMergeAction = new MergeAction(testCultureMerge);
+        Turn mergeTurn = testMergeAction.ExecuteTurn();
+
+        CultureTurnUpdate newInfoTestCulture = mergeTurn.turnUpdates[testCulture];
+        CultureTurnUpdate newInfoMergeCulture = mergeTurn.turnUpdates[testCultureMerge];
+
+        Assert.That(newInfoMergeCulture.newName != "", "Culture didn't get a name change!");
+        Assert.That(newInfoMergeCulture.newState == Culture.State.Invader, "Culture isn't an invader!");
+        Assert.That(newInfoTestCulture.newState == Culture.State.Invaded, "Invaded culture isn't marked as such!");
+        Assert.That(newInfoMergeCulture.newTile == testTile, "New Culture hasn't moved to tile!");
     }
 
     [TearDown]
