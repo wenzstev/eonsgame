@@ -18,8 +18,8 @@ public class CultureAggregateInfo : MonoBehaviour
     public void Init(CultureAggregation ca)
     {
         cultureColor = transform.GetChild(0).GetComponent<Image>();
-        name = transform.GetChild(1).GetComponent<TextMeshProUGUI>();
-        population = transform.GetChild(2).GetComponent<TextMeshProUGUI>();
+        name = transform.GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>();
+        population = transform.GetChild(1).GetChild(1).GetComponent<TextMeshProUGUI>();
 
         cultureAggregate = ca;
         EventManager.StartListening("CultureAggregateUpdated" + ca.name, OnCultureAggregateUpdated);
