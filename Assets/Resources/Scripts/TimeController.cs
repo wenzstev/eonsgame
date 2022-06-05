@@ -10,7 +10,7 @@ public class TimeController : MonoBehaviour
     float timeBetweenTicks;
     float timer = 0;
 
-    bool isPaused = false;
+    bool isPaused = true;
 
 
     private void Start()
