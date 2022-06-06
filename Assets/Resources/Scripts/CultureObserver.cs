@@ -87,6 +87,7 @@ public class CultureAggregation
 
     void RecaulculateStats()
     {
+        Debug.Log("name is " + name);
         totalPopulation = 0;
         float r = 0;
         float g = 0;
@@ -109,6 +110,8 @@ public class CultureAggregation
             //Debug.Log("pop of " + name + "  is zero. destroying aggregate");
             EventManager.TriggerEvent("CultureAggregateRemoved", new Dictionary<string, object> { { "cultureAggregate", this } });
             EventManager.TriggerEvent("CultureAggregateRemoved" + name, new Dictionary<string, object> { { "cultureAggregate", this } });
+            EventManager.StopListening("CultureUpdated" + name, UpdateCultureStats);
+            EventManager.StopListening("CultureRemoved" + name, RemoveCulture);
         }
         else
         {

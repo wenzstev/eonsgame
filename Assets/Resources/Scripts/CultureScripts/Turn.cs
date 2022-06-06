@@ -9,6 +9,8 @@ public class Turn
     static Turn currentTurn;
     bool hasBeenPushed = false;
 
+    static int turnNumber;
+
     Turn()
     {
         turnUpdates = new Dictionary<Culture, CultureTurnUpdate>();
@@ -38,10 +40,11 @@ public class Turn
 
     public void UpdateAllCultures()
     {
-        //Debug.Log("updating culture. setting pushed to true");
+        turnNumber++;
         hasBeenPushed = true;
         foreach (KeyValuePair<Culture, CultureTurnUpdate> c in turnUpdates)
         {
+            Debug.Log("updating " + c.Key.name + " in turn " + turnNumber);
             c.Key.UpdateForTurn(c.Value);
         }
     }
