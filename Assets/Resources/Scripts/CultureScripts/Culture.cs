@@ -112,18 +112,25 @@ public class Culture : MonoBehaviour
 
     public void UpdateForTurn(CultureTurnUpdate t)
     {
+
         if (t.newState == State.PendingRemoval)
         {
             DestroyCulture();
             return;
         }
 
+        AddPopulation(t.popChange);
+
+
+        Debug.Log("shouldn't be here if culture was destroyed");
+
         if (t.newName != null)
         {
             RenameCulture(t.newName);
         }
 
-        AddPopulation(t.popChange);
+
+
         SetColor(t.newColor);
         //Debug.Log("setting state for " + GetHashCode() + " to " + t.newState);
         currentState = t.newState;
@@ -189,7 +196,7 @@ public class Culture : MonoBehaviour
 
     void DestroyCulture()
     {
-        //Debug.Log("Destroying " + name + "(" + GetHashCode() + ")");
+        Debug.Log("Destroying " + name + "(" + GetHashCode() + ")");
         EventManager.StopListening("Tick", OnTick);
         EventManager.TriggerEvent("CultureRemoved" + name, new Dictionary<string, object>() { { "culture", this } });
         if(tileInfo != null)
