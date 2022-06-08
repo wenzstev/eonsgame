@@ -67,7 +67,14 @@ public class EventManager : MonoBehaviour
             //Debug.Log("listener is " + listener);
 
             thisEvent -= listener;
-            instance.eventDictionary[eventName] = thisEvent;
+            if(thisEvent!= null)
+            {
+                instance.eventDictionary[eventName] = thisEvent;
+            } 
+            else
+            {
+                instance.eventDictionary.Remove(eventName);
+            }
         }
     }
 
