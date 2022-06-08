@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1349.3334
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Console
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 163
+  controlID: 90
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -64,9 +64,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 2135.3333
+    x: 1789.3334
     y: 0
-    width: 424.66675
+    width: 770.6666
     height: 1299.3334
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
@@ -85,23 +85,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
+  m_Name: SceneHierarchyWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 836
-    height: 750
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 12}
+    width: 537.3333
+    height: 724
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
   - {fileID: 12}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -112,23 +112,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 750
-    width: 2135.3333
-    height: 549.3334
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 13}
+    y: 724
+    width: 1789.3334
+    height: 575.3334
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 13}
   - {fileID: 18}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -219,12 +219,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2135.3333
+    width: 1789.3334
     height: 1299.3334
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 164
+  controlID: 54
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,12 +244,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2135.3333
-    height: 750
+    width: 1789.3334
+    height: 724
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 27
+  controlID: 46
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -265,10 +265,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 836
+    x: 537.3333
     y: 0
-    width: 1299.3333
-    height: 750
+    width: 1252
+    height: 724
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 16}
@@ -299,19 +299,19 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 72.66667
-    width: 835
-    height: 729
+    width: 647.6667
+    height: 926.3333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 123
+    ID: 113
     splitterInitialOffset: 445.66666
     currentActiveSplitter: -1
     realSizes:
-    - 364
-    - 294.6667
+    - 473.33334
+    - 382.66666
     relativeSizes:
     - 0.55309737
     - 0.44690263
@@ -321,7 +321,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 658.6667
+    lastTotalSize: 856
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -337,9 +337,9 @@ MonoBehaviour:
       uniqueId: '[My project][suite]'
       name: My project
       fullName: My project
-      resultStatus: 2
-      duration: 0.5480354
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.1058041
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -353,9 +353,9 @@ MonoBehaviour:
       uniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
       name: Tests.dll
       fullName: C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll
-      resultStatus: 2
-      duration: 0.473358
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.035657
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -370,7 +370,7 @@ MonoBehaviour:
       name: CultureTestSuite
       fullName: CultureTestSuite
       resultStatus: 1
-      duration: 0.0279667
+      duration: 0.0271743
       messages: 
       output: 
       stacktrace: 
@@ -386,7 +386,7 @@ MonoBehaviour:
       name: TestCanMerge
       fullName: CultureTestSuite.TestCanMerge
       resultStatus: 1
-      duration: 0.0146145
+      duration: 0.0138435
       messages: 
       output: 
       stacktrace: 
@@ -403,7 +403,7 @@ MonoBehaviour:
       name: TestSplitCulture
       fullName: CultureTestSuite.TestSplitCulture
       resultStatus: 1
-      duration: 0.0013363
+      duration: 0.0014249
       messages: 
       output: 
       stacktrace: 
@@ -419,9 +419,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][MergeActionTestSuite][suite]
       name: MergeActionTestSuite
       fullName: MergeActionTestSuite
-      resultStatus: 2
-      duration: 0.0601978
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.0307042
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -435,18 +435,34 @@ MonoBehaviour:
       uniqueId: Tests.dll/MergeActionTestSuite/[Tests][MergeActionTestSuite.CanAddNewCultureToTile]
       name: CanAddNewCultureToTile
       fullName: MergeActionTestSuite.CanAddNewCultureToTile
-      resultStatus: 2
-      duration: 0.0250859
-      messages: "  Test not yet implemented!\r\n  Expected: True\r\n  But was:  False\r\n"
+      resultStatus: 1
+      duration: 0.0310524
+      messages: 
       output: 
-      stacktrace: 'at MergeActionTestSuite+<CanAddNewCultureToTile>d__5.MoveNext
-        () [0x0002e] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\MergeActionTestSuite.cs:44
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Tests.dll/[Tests][MergeActionTestSuite][suite]
+    - id: 1008
+      uniqueId: Tests.dll/MergeActionTestSuite/[Tests][MergeActionTestSuite.CanCreateAsNewCulture]
+      name: CanCreateAsNewCulture
+      fullName: MergeActionTestSuite.CanCreateAsNewCulture
+      resultStatus: 1
+      duration: 0.0200281
+      messages: 
+      output: 'Culture has tileInfo, not changing. Unless this is a test it may be
+        a bug.
 
-        at
-        UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
-        in C:\Users\wenze\Documents\Unity\Eons\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
+        Culture has tileInfo, not changing. Unless this is a test
+        it may be a bug.
 
 '
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -459,18 +475,19 @@ MonoBehaviour:
       uniqueId: Tests.dll/MergeActionTestSuite/[Tests][MergeActionTestSuite.CanMergeCultures]
       name: CanMergeCultures
       fullName: MergeActionTestSuite.CanMergeCultures
-      resultStatus: 2
-      duration: 0.0187628
-      messages: "  Test not yet implemented!\r\n  Expected: True\r\n  But was:  False\r\n"
-      output: 
-      stacktrace: 'at MergeActionTestSuite+<CanMergeCultures>d__4.MoveNext () [0x0002e]
-        in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\MergeActionTestSuite.cs:36
+      resultStatus: 1
+      duration: 0.040085
+      messages: 
+      output: 'Culture has tileInfo, not changing. Unless this is a test it may be
+        a bug.
 
-        at
-        UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
-        in C:\Users\wenze\Documents\Unity\Eons\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
+        Culture has tileInfo, not changing. Unless this is a test
+        it may be a bug.
+
+        test (Culture)
 
 '
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -483,18 +500,20 @@ MonoBehaviour:
       uniqueId: Tests.dll/MergeActionTestSuite/[Tests][MergeActionTestSuite.CanMergeWithParentCulture]
       name: CanMergeWithParentCulture
       fullName: MergeActionTestSuite.CanMergeWithParentCulture
-      resultStatus: 2
-      duration: 0.0121609
-      messages: "  Test not yet implemented!\r\n  Expected: True\r\n  But was:  False\r\n"
-      output: 
-      stacktrace: 'at MergeActionTestSuite+<CanMergeWithParentCulture>d__6.MoveNext
-        () [0x0002e] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\MergeActionTestSuite.cs:52
+      resultStatus: 1
+      duration: 0.0261168
+      messages: 
+      output: 'Culture has tileInfo, not changing. Unless this is a test it may be
+        a bug.
 
-        at
-        UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
-        in C:\Users\wenze\Documents\Unity\Eons\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
+        Culture has tileInfo, not changing. Unless this is a test
+        it may be a bug.
+
+        Culture has tileInfo, not changing. Unless this
+        is a test it may be a bug.
 
 '
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -508,7 +527,7 @@ MonoBehaviour:
       name: MoveActionTestSuite
       fullName: MoveActionTestSuite
       resultStatus: 1
-      duration: 0.3790876
+      duration: 0.3673638
       messages: 
       output: 
       stacktrace: 
@@ -524,7 +543,7 @@ MonoBehaviour:
       name: MoveTileActionTest
       fullName: MoveActionTestSuite.MoveTileActionTest
       resultStatus: 1
-      duration: 0.1500385
+      duration: 0.1459571
       messages: 
       output: 
       stacktrace: 
@@ -541,61 +560,11 @@ MonoBehaviour:
       name: MoveTileActionWhenLargeTest
       fullName: MoveActionTestSuite.MoveTileActionWhenLargeTest
       resultStatus: 1
-      duration: 0.1137485
+      duration: 0.1102303
       messages: 
       output: 'Counter at 0
 
         Counter at 1
-
-        Counter at 2
-
-        Counter
-        at 3
-
-        Counter at 4
-
-        Counter at 5
-
-        Counter at 6
-
-        Counter
-        at 7
-
-        Counter at 8
-
-        Counter at 9
-
-        Counter at 10
-
-        Counter
-        at 11
-
-        Counter at 12
-
-        Counter at 13
-
-        Counter at
-        14
-
-        Counter at 15
-
-        Counter at 16
-
-        Counter at 17
-
-        Counter
-        at 18
-
-        Counter at 19
-
-        Counter at 20
-
-        Counter at
-        21
-
-        Counter at 22
-
-        Counter at 23
 
 '
       stacktrace: 
@@ -612,7 +581,7 @@ MonoBehaviour:
       name: RepelledActionTest
       fullName: MoveActionTestSuite.RepelledActionTest
       resultStatus: 1
-      duration: 0.1090739
+      duration: 0.108217
       messages: 
       output: '1, 0 (Tile)
 
@@ -626,23 +595,20 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1001
       parentUniqueId: Tests.dll/[Tests][MoveActionTestSuite][suite]
-    m_ResultText: "CanAddNewCultureToTile (0.025s)\n---\nTest not yet implemented!\r\n 
-      Expected: True\r\n  But was:  False\n---\nat MergeActionTestSuite+<CanAddNewCultureToTile>d__5.MoveNext
-      () [0x0002e] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\MergeActionTestSuite.cs:44\r\nat
-      UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in
-      C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46"
-    m_ResultStacktrace: 'at MergeActionTestSuite+<CanAddNewCultureToTile>d__5.MoveNext
-      () [0x0002e] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\MergeActionTestSuite.cs:44
+    m_ResultText: 'CanCreateAsNewCulture (0.020s)
 
-      at
-      UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in
-      C:\Users\wenze\Documents\Unity\Eons\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
+      ---
 
-'
+      Culture has tileInfo,
+      not changing. Unless this is a test it may be a bug.
+
+      Culture has tileInfo,
+      not changing. Unless this is a test it may be a bug.'
+    m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 24e68d5c
-      m_LastClickedID: 1552803364
+      m_SelectedIDs: 9ccc6ad5
+      m_LastClickedID: -714421092
       m_ExpandedIDs: c2778cab4580fecc03fe443357683e3426ecfc37b71a1147eb084855ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -742,9 +708,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 822.6667
-    width: 2134.3333
-    height: 528.3334
+    y: 796.6667
+    width: 1788.3334
+    height: 554.3334
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -762,22 +728,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Scripts/CultureScripts
+    - Assets/Resources/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Scripts/CultureScripts
+  - Assets/Resources/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\wenze\Documents\Unity\Eons
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 045c0000
-    m_LastClickedID: 23556
-    m_ExpandedIDs: 00000000e65b0000e85b0000ea5b0000ec5b000000ca9a3bffffff7f
+    m_SelectedIDs: 505c0000
+    m_LastClickedID: 23632
+    m_ExpandedIDs: 000000004e5c0000505c0000525c0000545c0000565c0000585c000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -805,7 +771,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e65b0000e85b0000ea5b0000ec5b0000
+    m_ExpandedIDs: 000000004e5c0000505c0000525c0000545c0000565c0000585c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -830,10 +796,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 440e0000
+    m_LastClickedInstanceID: 3652
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300009e5f0000946c0000
+    m_ExpandedInstanceIDs: c62300009e5f0000946c0000ca59000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -881,9 +847,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2135.3335
+    x: 1789.3334
     y: 72.66667
-    width: 423.66675
+    width: 769.6666
     height: 1278.3334
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -924,8 +890,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 72.66667
-    width: 835
-    height: 729
+    width: 536.3333
+    height: 703
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -933,9 +899,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 88720000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 64d6ffffacd6ffff32dcffff8addffffd2ddffffb4e2ffff12e4ffff5ae4ffff30e6ffffc2e8ffff0ae9ffffe0eaffff24eeffff6ceeffff1af0ffff72f1ffffbaf1ffff3cf3ffff68f4ffffaef4ffff2af5ffff34f6ffff7cf6fffffef9ffff38fbffff
+      m_ExpandedIDs: 2afbffff38fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -979,10 +945,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 836
+    x: 537.3334
     y: 72.66667
-    width: 1297.3333
-    height: 729
+    width: 1250
+    height: 703
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1184,9 +1150,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 29.108564, y: 14.830022, z: 75.996254}
+    m_Target: {x: 1108.7783, y: 505.72345, z: 0.32898322}
     speed: 2
-    m_Value: {x: 29.108564, y: 14.830022, z: 75.996254}
+    m_Value: {x: 1108.7783, y: 505.72345, z: 0.32898322}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1237,9 +1203,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 22.111238
+    m_Target: 670.36444
     speed: 2
-    m_Value: 22.111238
+    m_Value: 670.36444
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1284,10 +1250,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 836
+    x: 537.3334
     y: 72.66667
-    width: 1297.3333
-    height: 729
+    width: 1250
+    height: 703
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1298,7 +1264,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1297.3333, y: 708}
+  m_TargetSize: {x: 1920, y: 1080}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1306,17 +1272,17 @@ MonoBehaviour:
   m_UseMipMap: 0
   m_VSyncEnabled: 0
   m_Gizmos: 0
-  m_Stats: 1
-  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_Stats: 0
+  m_SelectedSizes: 03000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -432.44443
-    m_HBaseRangeMax: 432.44443
-    m_VBaseRangeMin: -236
-    m_VBaseRangeMax: 236
+    m_HBaseRangeMin: -640
+    m_HBaseRangeMax: 640
+    m_VBaseRangeMin: -360
+    m_VBaseRangeMax: 360
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1325,7 +1291,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -1334,23 +1300,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1297.3333
-      height: 708
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 648.6666, y: 354}
+      width: 1250
+      height: 682
+    m_Scale: {x: 0.94722223, y: 0.94722223}
+    m_Translation: {x: 625, y: 341}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -648.6666
-      y: -354
-      width: 1297.3333
-      height: 708
+      x: -659.82404
+      y: -360
+      width: 1319.6481
+      height: 720
     m_MinimalGUI: 1
-  m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1945.9999, y: 1093.5}
+  m_defaultScale: 0.94722223
+  m_LastWindowPixelSize: {x: 1875, y: 1054.5}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -1377,9 +1343,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 822.6667
-    width: 2134.3333
-    height: 528.3334
+    y: 796.6667
+    width: 1788.3334
+    height: 554.3334
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
