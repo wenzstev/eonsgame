@@ -53,7 +53,7 @@ MonoBehaviour:
   cultureTemplate: {fileID: 3768529557212743783}
   spreadChance: 0.01
   shareCultureChance: 0.05
-  baseMutationMax: 0.0015
+  baseMutationMax: 0.05
   transferRate: 0
   sameCultureCutoff: 0.1
   growPopulationChance: 0.01
