@@ -45,6 +45,9 @@ public class Culture : MonoBehaviour
 
     public int maxPopTransfer = 1;
 
+    [Range(0, .05f)]
+    public float influenceRate = .05f;
+
 
     public string affinity { get; private set; }
 
@@ -266,6 +269,12 @@ public class Culture : MonoBehaviour
             return (Random.value * baseMutationMax) - (baseMutationMax / 2);
         }
         return new Color(getMutationRate() + parentColor.r, getMutationRate() + parentColor.g, getMutationRate() + parentColor.b);
+    }
+
+    public static Color influenceColor(Culture parent, Culture influencer)
+    {
+        float rate = Random.value * influencer.influenceRate;
+        return Color.Lerp(parent.color, influencer.color, rate);
     }
 
     public static string getRandomString(int length)

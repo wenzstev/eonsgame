@@ -15,6 +15,15 @@ public class DefaultAction : CultureAction
             return moveTile.ExecuteTurn();
         }
 
+        if(culture.tileInfo.cultures.Count > 1)
+        {
+            // influence
+            foreach(Culture c in culture.tileInfo.cultures.Values)
+            {
+                turn.UpdateCulture(c).newColor = Culture.influenceColor(c, culture);
+            }
+        }
+
         turn.UpdateCulture(culture).newState = culture.currentState;
 
         if (culture.tileInfo.currentMaxPopulation < culture.tileInfo.tilePopulation)
