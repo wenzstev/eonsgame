@@ -21,7 +21,7 @@ public class HighlightCultureController : MonoBehaviour
 
     void OnEnable()
     {
-        Debug.Log("enabling " + culture.name);
+        //Debug.Log("enabling " + culture.name);
         sr.color = offHighlight;
         sr.sortingOrder = 0;
         EventManager.StartListening("HoverCulture" + culture.name, HighlightCulture);

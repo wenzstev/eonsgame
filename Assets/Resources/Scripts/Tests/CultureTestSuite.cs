@@ -59,6 +59,8 @@ public class CultureTestSuite
     [TearDown]
     public void TearDown()
     {
+        Turn.HookTurn().UpdateAllCultures();
+
         foreach (GameObject o in Object.FindObjectsOfType<GameObject>())
         {
             Object.Destroy(o);

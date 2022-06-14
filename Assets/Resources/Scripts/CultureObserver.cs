@@ -87,7 +87,7 @@ public class CultureAggregation
 
     void RecaulculateStats()
     {
-        Debug.Log("name is " + name);
+        //Debug.Log("name is " + name);
         totalPopulation = 0;
         float r = 0;
         float g = 0;

@@ -114,6 +114,7 @@ public class MergeActionTestSuite
         Assert.That(newInfoTestCulture.newState == Culture.State.PendingRemoval, "Merging culture isn't slated for removal!");
         Assert.That(newInfoTestCulture.popChange == -testCulture.population, "Merging culture doesn't have pop set to zero!");
         Assert.That(newInfoMergeCulture.newTile == testTile, "Merged culture isn't moving to tile!");
+
     }
 
     [Test]
@@ -140,6 +141,8 @@ public class MergeActionTestSuite
     [TearDown]
     public void TearDown()
     {
+        Turn.HookTurn().UpdateAllCultures();
+        Debug.Log("tearing down");
         foreach (GameObject o in Object.FindObjectsOfType<GameObject>())
         {
             Object.Destroy(o);

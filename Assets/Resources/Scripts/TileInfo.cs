@@ -38,6 +38,16 @@ public class TileInfo : MonoBehaviour
         orderToRemoveCulturesIn = new List<Culture>();
     }
 
+    public void UpdateMaxOnTile(Culture c)
+    {
+        if(!cultures.ContainsKey(c.name))
+        {
+            Debug.LogError("Attempting to update max without culture being on tile!");
+            return;
+        }
+        currentMaxPopulation = Mathf.Max(c.maxOnTile, currentMaxPopulation);
+
+    }
  
 
     public void Init(string TileType, int popBase)

@@ -44,8 +44,23 @@ public class Turn
         hasBeenPushed = true;
         foreach (KeyValuePair<Culture, CultureTurnUpdate> c in turnUpdates)
         {
-            Debug.Log("updating " + c.Key.name + " in turn " + turnNumber);
             c.Key.UpdateForTurn(c.Value);
+        }
+    }
+
+    public void CombineTurns(Turn other)
+    {
+        foreach (CultureTurnUpdate update in other.turnUpdates.Values)
+        {
+            CultureTurnUpdate potentialUpdate;
+            if(turnUpdates.TryGetValue(update.culture, out potentialUpdate))
+            {
+                potentialUpdate.MergeUpdates(update);
+            }
+            else 
+            {
+                turnUpdates.Add(update.culture, update);
+            }
         }
     }
 }
@@ -67,5 +82,21 @@ public class CultureTurnUpdate
         culture = c;
         newState = c.currentState;
         newColor = c.mutateColor(c.color); // mutate color slightly every turn
+    }
+
+    public void MergeUpdates(CultureTurnUpdate other) 
+    {
+        if(culture != other.culture)
+        {
+            Debug.LogError("trying to merge unrelated updates!");
+        }
+        // values are combined, other takes precedence
+        newState = other.newState;
+        popChange += other.popChange;
+        techChange += other.techChange;
+        newAffinity = other.newAffinity;
+        newColor = other.newColor;
+        newTile = other.newTile;
+        newName = other.newName;
     }
 }

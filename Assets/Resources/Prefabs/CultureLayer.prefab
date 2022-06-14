@@ -56,7 +56,7 @@ MonoBehaviour:
   baseMutationMax: 0.0032
   transferRate: 0
   sameCultureCutoff: 0.1
-  growPopulationChance: 0.01
+  growPopulationChance: 0.001
   repelChance: 0.903
   gainAffinityChance: 0.01
   maxPopTransfer: 1
