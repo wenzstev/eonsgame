@@ -8,6 +8,8 @@ public class BoardGenerator : MonoBehaviour
     public Vector2 startPosition;
     public float scale;
 
+    public bool randomCoords;
+
 
 
 
@@ -30,6 +32,10 @@ public class BoardGenerator : MonoBehaviour
 
     float[,] createPerlinBoard(Vector2 startPosition, float scale, int sampleNumX, int sampleNumY)
     {
+        if(randomCoords)
+        {
+            startPosition = new Vector2(Random.value * 10, Random.value * 10);
+        }
         float[,] points = new float[sampleNumX, sampleNumY];
         for(int i = 0; i < sampleNumY; i++)
         {

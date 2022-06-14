@@ -25,11 +25,13 @@ public class AttemptRepelAction : CultureAction
                 if (Random.value < repelThreshold)
                 {
                     turn.UpdateCulture(c).newState = Culture.State.Repelled;
-                    Debug.Log(c.name + " is repelled by " + culture.name);
+                    //Debug.Log(c.name + " is repelled by " + culture.name);
                 }
                 else
                 {
                     turn.UpdateCulture(c).newState = Culture.State.Default;
+                    //Debug.Log(c.tile.name);
+                    //EventManager.TriggerEvent("PauseSpeed", null);
                 }
                 if(Random.value < .01f)
                 {

@@ -125,7 +125,6 @@ public class Culture : MonoBehaviour
         AddPopulation(t.popChange);
 
 
-        Debug.Log("shouldn't be here if culture was destroyed");
 
         if (t.newName != null)
         {
@@ -162,6 +161,7 @@ public class Culture : MonoBehaviour
         affinity = newAffinity;
         maxOnTile = tileInfo.tileType == affinity ? tileInfo.popBase + 2 : tileInfo.popBase;
         tileInfo.UpdateCultureSurvivability();
+        tileInfo.UpdateMaxOnTile(this);
     }
 
 
@@ -199,7 +199,7 @@ public class Culture : MonoBehaviour
 
     void DestroyCulture()
     {
-        Debug.Log("Destroying " + name + "(" + GetHashCode() + ")");
+        //Debug.Log("Destroying " + name + "(" + GetHashCode() + ")");
         EventManager.StopListening("Tick", OnTick);
         EventManager.TriggerEvent("CultureRemoved" + name, new Dictionary<string, object>() { { "culture", this } });
         if(tileInfo != null)
@@ -211,6 +211,7 @@ public class Culture : MonoBehaviour
 
     public void AddPopulation(int num)
     { 
+        //Debug.Log("adding " + num + " to  " + GetHashCode());
         population += num;
         if(population == 0)
         {
