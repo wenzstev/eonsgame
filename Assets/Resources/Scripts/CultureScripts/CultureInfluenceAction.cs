@@ -1,0 +1,45 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CultureInfluenceAction : CultureAction
+{
+    public CultureInfluenceAction(Culture c) : base(c) {}
+
+    public override Turn ExecuteTurn()
+    {
+        TileInfo ti = culture.tileInfo;
+
+        foreach(Culture c in ti.cultures.Values)
+        {
+            if(culture.CanMerge(c))
+            {
+                MergeCulture(c);
+            }
+            else 
+            {
+                InfluenceCulture(c);
+            }
+        }
+        return turn;
+    }
+
+    void MergeCulture(Culture other)
+    {
+        // duplicated code x1. if happens again, pull out into static helper method
+        float percentThisPopulation = (float)culture.population / (culture.population + other.maxPopTransfer);
+        turn.UpdateCulture(culture).newColor = Color.Lerp(culture.color, other.color, percentThisPopulation);
+        turn.UpdateCulture(culture).popChange += other.population;
+        turn.UpdateCulture(other).popChange -= other.population;
+        turn.UpdateCulture(other).newState = Culture.State.PendingRemoval;
+    }
+
+    void InfluenceCulture(Culture other)
+    {
+        float influenceValue = Random.value * culture.influenceRate;
+        turn.UpdateCulture(other).newColor = Color.Lerp(other.color, culture.color, influenceValue);
+        EventManager.TriggerEvent("PauseSpeed", null);
+    }
+
+
+}

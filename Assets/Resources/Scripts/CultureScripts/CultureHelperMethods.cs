@@ -9,8 +9,13 @@ public static class CultureHelperMethods
         Color first = firstCulture.color;
         Color second = secondCulture.color;
 
-        float colorDistanceSquared = Mathf.Pow((first.r - second.r), 2) + Mathf.Pow((first.g - second.g), 2) + Mathf.Pow((first.b - second.b), 2);
+        float colorDistanceSquared = GetColorDistance(first, second);
         float colorDistanceNormalized = Mathf.Lerp(0, 3, colorDistanceSquared);
         return colorDistanceNormalized;
+    }
+
+    public static float GetColorDistance(Color first, Color second)
+    {
+        return Mathf.Pow((first.r - second.r), 2) + Mathf.Pow((first.g - second.g), 2) + Mathf.Pow((first.b - second.b), 2);
     }
 }

@@ -15,11 +15,29 @@ public class DefaultAction : CultureAction
             return moveTile.ExecuteTurn();
         }
 
+        if(culture.tileInfo.cultures.Count > 1 && Random.value < .1f)
+        {
+            CultureInfluenceAction influenceNeighbors = new CultureInfluenceAction(culture);
+            return influenceNeighbors.ExecuteTurn();
+
+            // how do I want merging/influence to work?
+            // - let's create a cultureinfluenceaction
+            // - each culture has a small influence on each other culture on the tile
+            // - influence level is determined by culture's population and (later) it's tech level
+            // - if two cultures are close enough in color, they can merge, creating new culture
+            
+
+
+
+        }
+
         turn.UpdateCulture(culture).newState = culture.currentState;
 
         if (culture.tileInfo.currentMaxPopulation < culture.tileInfo.tilePopulation)
         {
             turn.UpdateCulture(culture).popChange--;
+            //Debug.Log(culture.tileInfo.name + " " + culture.GetHashCode() + " " + culture.population);
+            //EventManager.TriggerEvent("PauseSpeed", null);
         }
 
 
