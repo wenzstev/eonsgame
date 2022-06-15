@@ -16,6 +16,7 @@ public class CultureMemory : MonoBehaviour
             }
         } 
     }
+
     public string cultureParentName;
 
 
