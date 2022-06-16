@@ -20,6 +20,7 @@ public class MoveTileAction : CultureMoveAction
         if (prospectiveTile == null || !(culture.affinity == prospectiveTile.GetComponent<TileInfo>().tileType || Random.value < moveChance))
         {
             turn.UpdateCulture(culture).newState = Culture.State.Default;
+
             return turn;
         }
 
