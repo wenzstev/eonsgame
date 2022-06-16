@@ -8,8 +8,6 @@ public class OverpopulationAction : CultureAction
 
     public override Turn ExecuteTurn()
     {
-        throw new System.NotImplementedException();
-
         CultureAction moveTile = new MoveTileAction(culture);
         return moveTile.ExecuteTurn();
 
