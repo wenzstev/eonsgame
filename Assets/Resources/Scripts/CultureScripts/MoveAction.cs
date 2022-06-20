@@ -49,6 +49,11 @@ public abstract class CultureMoveAction : CultureAction
         return cultureToMove;
     }
 
+    public bool canMove()
+    {
+        return prospectiveTile != null;
+    }
+
 
 
 

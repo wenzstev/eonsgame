@@ -8,7 +8,7 @@ public class OverpopulationActionTestSuite
 {
     Tile testTile;
     Culture testCultureA;
-    Culture testCultureB;
+    //Culture testCultureB;
 
     [UnitySetUp]
     public IEnumerator SetUp()
@@ -23,14 +23,14 @@ public class OverpopulationActionTestSuite
         Board testBoard = testBoardObj.GetComponent<Board>();
         testBoard.GetComponent<BoardInputReader>().bg = testBoardGeneratorObj.GetComponent<BoardGenerator>();
 
-        testBoard.height = 1;
-        testBoard.width = 2;
+        testBoard.height = 3;
+        testBoard.width = 3;
 
         yield return null; // CreateBoard() is run in Board's Start() command
 
-        GameObject testTileObj = testBoard.tiles.GetTile(0, 0);
+        GameObject testTileObj = testBoard.tiles.GetTile(1, 1);
         GameObject testCultureAObj = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/CultureLayer"));
-        GameObject testCultureBObj = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/CultureLayer"));
+        //GameObject testCultureBObj = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/CultureLayer"));
 
         testTile = testTileObj.GetComponent<Tile>();
         testCultureA = testCultureAObj.GetComponent<Culture>();
@@ -50,7 +50,20 @@ public class OverpopulationActionTestSuite
     }
 
     [Test]
-    public void TestPopulationMove()
+    public void TestPopulationDrop()
+    {
+        OverpopulationAction opa = new OverpopulationAction(testCultureA);
+        opa.popLossChance = 1f;
+        Turn turn = opa.ExecuteTurn();
+
+        CultureTurnUpdate cta = turn.turnUpdates[testCultureA];
+        Assert.That(cta.popChange == -1, "Culture did not lose size!");
+
+
+    }
+
+    [Test]
+    public void TestPopulationMoveAndDrop()
     {
         // if population is too high,
         // culture can attempt to flee and split off
@@ -59,18 +72,15 @@ public class OverpopulationActionTestSuite
 
 
         OverpopulationAction opa = new OverpopulationAction(testCultureA);
+        opa.popLossChance = 0f;
         Turn turn = opa.ExecuteTurn();
 
         CultureTurnUpdate cta = turn.turnUpdates[testCultureA];
         Assert.That(turn.turnUpdates.Count == 2, "Culture did not split!");
-        Assert.That(testCultureA.population == 9, "Culture did not lose size!");
+        Assert.That(testCultureA.population == 10, "Culture did not lose size!");
     }
     
-    [Test]
-    public void TestPopulationDrop()
-    {
 
-    }
 
     [TearDown]
     public void TearDown()

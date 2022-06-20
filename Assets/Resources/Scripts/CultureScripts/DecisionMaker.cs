@@ -30,6 +30,9 @@ public class DecisionMaker
             case Culture.State.NewOnTile:
                 action = new MergeAction(culture);
                 break;
+            case Culture.State.Overpopulated:
+                action = new OverpopulationAction(culture);
+                break;
             case Culture.State.PendingRemoval:
             default:
                 break;
