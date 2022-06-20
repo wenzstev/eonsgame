@@ -19,6 +19,23 @@ public class CultureMemory : MonoBehaviour
 
     public string cultureParentName;
 
+    Culture.State _previousState;
+
+    public Culture.State previousState
+    {
+        get => _previousState;
+        set
+        {
+            if(value == Culture.State.Repelled)
+            {
+                wasRepelled = true;
+            }
+            _previousState = value;
+        }
+    }
+
+    public bool wasRepelled;
+
 
 
     

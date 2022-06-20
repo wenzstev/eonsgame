@@ -67,7 +67,7 @@ public class Culture : MonoBehaviour
         Moving,
         NewOnTile,
         PendingRemoval,
-        Overpopulated,
+        Overpopulated
        
     }
 
@@ -136,7 +136,9 @@ public class Culture : MonoBehaviour
 
         SetColor(t.newColor);
         //Debug.Log("setting state for " + GetHashCode() + " to " + t.newState);
-        currentState = t.newState;
+
+        ChangeState(t.newState);
+
         if (t.newAffinity != "")
         {
             GainAffinity(t.newAffinity);
@@ -156,6 +158,18 @@ public class Culture : MonoBehaviour
     }
 
 
+    private void ChangeState(State newState)
+    {
+        if(cultureMemory.previousState != newState)
+        {
+            cultureMemory.previousState = currentState;
+        }
+        if(newState == State.Default)
+        {
+            cultureMemory.wasRepelled = false;
+        }
+        currentState = newState;
+    }
 
     private void GainAffinity(string newAffinity)
     {
