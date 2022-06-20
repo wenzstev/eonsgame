@@ -30,6 +30,7 @@ public class AttemptRepelAction : CultureAction
                 else
                 {
                     turn.UpdateCulture(c).newState = Culture.State.Default;
+
                     //Debug.Log(c.tile.name);
                     //EventManager.TriggerEvent("PauseSpeed", null);
                 }

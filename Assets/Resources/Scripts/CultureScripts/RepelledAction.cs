@@ -8,6 +8,11 @@ public class RepelledAction : CultureMoveAction
 
     public override Turn ExecuteTurn()
     {
+        if(culture.GetComponent<CultureMemory>().wasRepelled)
+        {
+            return WasPreviouslyRepelled();
+        }
+
         return ReturnToPreviousTile();
     }
 
@@ -18,6 +23,12 @@ public class RepelledAction : CultureMoveAction
         culture.StartCoroutine(MoveTile(culture.gameObject, culture.GetComponent<CultureMemory>().previousTile.gameObject));
         turn.UpdateCulture(culture).newState = Culture.State.Moving;
         return turn;
+    }
+
+    Turn WasPreviouslyRepelled()
+    {
+        MoveTileAction mta = new MoveTileAction(culture);
+        return mta.ExecuteTurn();
     }
  
 }
