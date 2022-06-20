@@ -67,6 +67,7 @@ public class Culture : MonoBehaviour
         Moving,
         NewOnTile,
         PendingRemoval,
+        Overpopulated,
        
     }
 

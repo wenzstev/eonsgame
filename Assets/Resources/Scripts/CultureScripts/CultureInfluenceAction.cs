@@ -38,7 +38,7 @@ public class CultureInfluenceAction : CultureAction
     {
         float influenceValue = Random.value * culture.influenceRate;
         turn.UpdateCulture(other).newColor = Color.Lerp(other.color, culture.color, influenceValue);
-        EventManager.TriggerEvent("PauseSpeed", null);
+        //  EventManager.TriggerEvent("PauseSpeed", null);
     }
 
 
