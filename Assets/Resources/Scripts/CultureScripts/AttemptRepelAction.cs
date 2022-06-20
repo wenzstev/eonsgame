@@ -21,7 +21,7 @@ public class AttemptRepelAction : CultureAction
                 float hasAffinityAdvantage = c.affinity == culture.affinity ? 0 : .2f;
                 float popAdvantage = ((float)culture.population - c.population) / 10f;
                 float repelThreshold = .6f + hasAffinityAdvantage + popAdvantage;
-                Debug.Log("repel threshold = .6 + " + hasAffinityAdvantage + " + " + popAdvantage);
+                //Debug.Log("repel threshold = .6 + " + hasAffinityAdvantage + " + " + popAdvantage);
                 if (Random.value < repelThreshold)
                 {
                     turn.UpdateCulture(c).newState = Culture.State.Repelled;

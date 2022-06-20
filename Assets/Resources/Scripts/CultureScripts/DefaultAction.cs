@@ -26,8 +26,8 @@ public class DefaultAction : CultureAction
 
         if (culture.tileInfo.currentMaxPopulation < culture.tileInfo.tilePopulation)
         {
-            OverpopulationAction overpopulationAction = new OverpopulationAction(culture);
-            return overpopulationAction.ExecuteTurn();
+            turn.UpdateCulture(culture).newState = Culture.State.Overpopulated;
+            return turn;
         }
 
 
