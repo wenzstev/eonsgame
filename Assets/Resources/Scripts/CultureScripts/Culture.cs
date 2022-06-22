@@ -37,8 +37,6 @@ public class Culture : MonoBehaviour
     [Range(0, .01f)]
     public float growPopulationChance = .01f;
 
-    [Range(0, 1)]
-    public float repelChance = .9f;
 
     [Range(0, 1)]
     public float gainAffinityChance = .003f;
@@ -119,6 +117,7 @@ public class Culture : MonoBehaviour
 
         if (t.newState == State.PendingRemoval)
         {
+            //Debug.Log("state is pending removal");
             DestroyCulture();
             return;
         }
