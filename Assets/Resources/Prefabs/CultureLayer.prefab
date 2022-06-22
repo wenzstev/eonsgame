@@ -53,14 +53,12 @@ MonoBehaviour:
   cultureTemplate: {fileID: 3768529557212743783}
   spreadChance: 0.01
   shareCultureChance: 0.05
-  baseMutationMax: 0.0032
-  transferRate: 0
+  baseMutationMax: 0.0049
   sameCultureCutoff: 0.1
   growPopulationChance: 0.001
-  repelChance: 0.903
   gainAffinityChance: 0.01
   maxPopTransfer: 1
-  influenceRate: 0.05
+  influenceRate: 0.0001
   maxOnTile: 0
   currentState: 0
 --- !u!114 &2397938024399410024
@@ -88,6 +86,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cultureParentName: 
+  wasRepelled: 0
 --- !u!1 &4987526667517434846
 GameObject:
   m_ObjectHideFlags: 0
