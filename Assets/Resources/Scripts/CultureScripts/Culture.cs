@@ -28,17 +28,12 @@ public class Culture : MonoBehaviour
     [Range(0, .05f)]
     public float baseMutationMax = .01f;
 
-    [Range(0, .01f)]
-    public float transferRate = .001f;
-
     [Range(0, .1f)]
     public float sameCultureCutoff = .1f;
 
     [Range(0, .01f)]
     public float growPopulationChance = .01f;
 
-    [Range(0, 1)]
-    public float repelChance = .9f;
 
     [Range(0, 1)]
     public float gainAffinityChance = .003f;
@@ -67,7 +62,7 @@ public class Culture : MonoBehaviour
         Moving,
         NewOnTile,
         PendingRemoval,
-        Overpopulated,
+        Overpopulated
        
     }
 
@@ -119,6 +114,7 @@ public class Culture : MonoBehaviour
 
         if (t.newState == State.PendingRemoval)
         {
+            //Debug.Log("state is pending removal");
             DestroyCulture();
             return;
         }
@@ -136,7 +132,9 @@ public class Culture : MonoBehaviour
 
         SetColor(t.newColor);
         //Debug.Log("setting state for " + GetHashCode() + " to " + t.newState);
-        currentState = t.newState;
+
+        ChangeState(t.newState);
+
         if (t.newAffinity != "")
         {
             GainAffinity(t.newAffinity);
@@ -156,6 +154,18 @@ public class Culture : MonoBehaviour
     }
 
 
+    private void ChangeState(State newState)
+    {
+        if(cultureMemory.previousState != newState)
+        {
+            cultureMemory.previousState = currentState;
+        }
+        if(newState == State.Default)
+        {
+            cultureMemory.wasRepelled = false;
+        }
+        currentState = newState;
+    }
 
     private void GainAffinity(string newAffinity)
     {

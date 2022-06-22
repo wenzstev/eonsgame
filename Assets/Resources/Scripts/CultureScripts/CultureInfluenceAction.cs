@@ -12,6 +12,7 @@ public class CultureInfluenceAction : CultureAction
 
         foreach(Culture c in ti.cultures.Values)
         {
+            if (c == culture) continue;
             if(culture.CanMerge(c))
             {
                 MergeCulture(c);
@@ -36,9 +37,10 @@ public class CultureInfluenceAction : CultureAction
 
     void InfluenceCulture(Culture other)
     {
+        //Debug.Log("in influenceculture");
         float influenceValue = Random.value * culture.influenceRate;
         turn.UpdateCulture(other).newColor = Color.Lerp(other.color, culture.color, influenceValue);
-        //  EventManager.TriggerEvent("PauseSpeed", null);
+        //EventManager.TriggerEvent("PauseSpeed", null);
     }
 
 

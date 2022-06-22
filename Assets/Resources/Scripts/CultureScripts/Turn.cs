@@ -69,7 +69,15 @@ public class Turn
 public class CultureTurnUpdate
 {
     public Culture culture;
-    public Culture.State newState;
+    Culture.State _newState;
+    public Culture.State newState
+    {
+        get { return _newState; }
+        set {
+            //Debug.Log("setting newstate to " + value);
+            _newState = value;
+        }
+    }
     public int popChange = 0;
     public int techChange = 0;
     public string newAffinity = "";
