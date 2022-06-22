@@ -33,13 +33,11 @@ public class InfluenceActionTestSuite
         CultureInfluenceAction cia = new CultureInfluenceAction(testCulture);
         Turn turn = cia.ExecuteTurn();
 
-        Assert.That(turn.turnUpdates.ContainsKey(testCulture), "Test culture experiencing no changes!");
         Assert.That(turn.turnUpdates.ContainsKey(neighbor), "Neighbor experiencing no changes!");
 
-        CultureTurnUpdate testCultureUpdate = turn.turnUpdates[testCulture];
         CultureTurnUpdate neighborUpdate = turn.turnUpdates[neighbor];
 
-        Assert.That(CultureHelperMethods.GetColorDistance(testCultureUpdate.newColor, neighborUpdate.newColor) 
+        Assert.That(CultureHelperMethods.GetColorDistance(testCulture.color, neighborUpdate.newColor) 
                     < CultureHelperMethods.GetColorDistance(testCulture.color, neighbor.color),
                     "Cultures are not closer together!");
 

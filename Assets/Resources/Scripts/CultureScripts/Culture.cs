@@ -28,9 +28,6 @@ public class Culture : MonoBehaviour
     [Range(0, .05f)]
     public float baseMutationMax = .01f;
 
-    [Range(0, .01f)]
-    public float transferRate = .001f;
-
     [Range(0, .1f)]
     public float sameCultureCutoff = .1f;
 
