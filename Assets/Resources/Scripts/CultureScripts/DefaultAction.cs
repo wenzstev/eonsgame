@@ -17,6 +17,7 @@ public class DefaultAction : CultureAction
 
         if(culture.tileInfo.cultures.Count > 1 && Random.value < .1f)
         {
+            //Debug.Log("influencing neighbors");
             CultureInfluenceAction influenceNeighbors = new CultureInfluenceAction(culture);
             return influenceNeighbors.ExecuteTurn();
         }
