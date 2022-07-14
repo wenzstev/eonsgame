@@ -63,7 +63,6 @@ public class Culture : MonoBehaviour
         NewOnTile,
         PendingRemoval,
         Overpopulated
-       
     }
 
     private void Awake()
