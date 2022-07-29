@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class Culture : MonoBehaviour
 {
     new public string name { get; private set; }
+
     public Color color { get; private set; }
     public Tile tile { get; private set; }
     public TileInfo tileInfo { get; private set; }
@@ -44,7 +46,7 @@ public class Culture : MonoBehaviour
     public float influenceRate = .05f;
 
 
-    public string affinity { get; private set; }
+    public TileInfo.TileType affinity { get; private set; }
 
     public int maxOnTile;
 
@@ -134,7 +136,7 @@ public class Culture : MonoBehaviour
 
         ChangeState(t.newState);
 
-        if (t.newAffinity != "")
+        if (t.newAffinity > 0)
         {
             GainAffinity(t.newAffinity);
         }
@@ -166,9 +168,9 @@ public class Culture : MonoBehaviour
         currentState = newState;
     }
 
-    private void GainAffinity(string newAffinity)
+    private void GainAffinity(int newAffinity)
     {
-        affinity = newAffinity;
+        affinity = (TileInfo.TileType) newAffinity;
         maxOnTile = tileInfo.tileType == affinity ? tileInfo.popBase + 2 : tileInfo.popBase;
         tileInfo.UpdateCultureSurvivability();
         tileInfo.UpdateMaxOnTile(this);

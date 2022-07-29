@@ -8,21 +8,18 @@ public class Board : MonoBehaviour
 
     public BoardTileRelationship tiles;
 
-
-
     public int width;
     public int height;
 
 
-    private void Start()
-    {
-        CreateBoard();
-
-    }
-
     public void CreateBoard()
     {
         tiles = GetComponent<BoardInputReader>().GetBoardFromInput(width, height);
+    }
+
+    public void CreateBoardFromValues(int[,] values)
+    {
+        tiles = GetComponent<BoardInputReader>().GetBoardFromInput(values);
     }
 
     public GameObject getNeighbor(GameObject tile, Direction d)
@@ -30,13 +27,35 @@ public class Board : MonoBehaviour
         return tiles.getNeighbor(tile, d);
     }
 
-    
+    public GameObject GetTileByID(int id)
+    {
+        if(id > width * height - 1)
+        {
+            throw new System.Exception("Tried to get ID that is too big for board!");
+        }
+
+        int xpos = id;
+        int ypos = 0;
+        while(xpos > width)
+        {
+            xpos -= width;
+            ypos += 1;
+        }
+
+        return tiles.GetTile(xpos, ypos);
+    }
+
+    public void CreateTilesFromSerializedData(List<SerializedTile> tiles)
+    {
+        this.tiles = GetComponent<BoardInputReader>().GetBoardFromSerializedTiles(tiles, height, width);
+    }
+
 
 }
 
 public class BoardTileRelationship
 {
-    public GameObject[,] tiles;
+    GameObject[,] tiles;
     public Dictionary<GameObject, (int, int)> tileLookup;
 
     static (int, int)[] directionToCoords = new (int, int)[]
