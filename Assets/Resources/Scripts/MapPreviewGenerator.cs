@@ -21,13 +21,16 @@ public class MapPreviewGenerator : MonoBehaviour
 
     float height;
 
+    int[,] values;
+
+    public string[] biomeTypes;
+
     private void Start()
     {
         currentTiles = new List<GameObject>();
         gl = GetComponent<GridLayoutGroup>();
         gl.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
         bg = GetComponentInChildren<BoardGenerator>();
-
     }
 
     public void GeneratePreview()
@@ -44,7 +47,7 @@ public class MapPreviewGenerator : MonoBehaviour
         gl.cellSize = new Vector2(celldimensions, celldimensions);
 
 
-        int[,] coords = bg.getLevelledBoard(5, x, y);
+        values = bg.getLevelledBoard(biomeTypes.Length, x, y);
 
 
 
@@ -60,11 +63,17 @@ public class MapPreviewGenerator : MonoBehaviour
             {
                 GameObject currentTile = Instantiate(baseTile);
                 currentTile.transform.parent = transform;
-                currentTile.GetComponent<Image>().color = Color.Lerp(Color.black, Color.white, (float) coords[numX, numY] / 5);
+                currentTile.GetComponent<Image>().color = Color.Lerp(Color.black, Color.white, (float) values[numX, numY] / 5);
                 currentTiles.Add(currentTile);
             }
         }
 
         EventManager.TriggerEvent("MapDraftCreated", null);
     }
+
+    public void OnSaveButtonClicked()
+    {
+        EventManager.TriggerEvent("MapSaved", new Dictionary<string, object> { { "mapValues", values }, { "biomes", biomeTypes } });
+    }
+
 }
