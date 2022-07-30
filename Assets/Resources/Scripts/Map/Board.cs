@@ -50,6 +50,10 @@ public class Board : MonoBehaviour
         this.tiles = GetComponent<BoardInputReader>().GetBoardFromSerializedTiles(tiles, height, width);
     }
 
+    public GameObject GetTile(int x, int y)
+    {
+        return tiles.GetTile(x, y);
+    }
 
 }
 

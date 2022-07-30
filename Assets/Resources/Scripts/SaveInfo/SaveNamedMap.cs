@@ -19,8 +19,12 @@ public class SaveNamedMap : MonoBehaviour
     void OnBoardProvided(Dictionary<string, object> payload)
     {
         string saveName = input.text;
+        Debug.Log(saveName);
+
 
         Board b = (Board)payload["board"];
+
+        Debug.Log(b);
 
         Save save = new Save(b);
         Save.SerializeSave(save, saveName);

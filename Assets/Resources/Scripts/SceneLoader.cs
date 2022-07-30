@@ -17,6 +17,6 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadLoadMapScene()
     {
-        SceneManager.LoadScene("Load Map");
+        SceneManager.LoadScene("Load Screen");
     }
 }

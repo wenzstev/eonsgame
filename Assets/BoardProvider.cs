@@ -15,4 +15,9 @@ public class BoardProvider : MonoBehaviour
         Board b = GetComponent<Board>();
         EventManager.TriggerEvent("BoardProvided", new Dictionary<string, object> { {"board", b } });
     }
+
+    private void OnDestroy()
+    {
+        EventManager.StopListening("BoardRequested", OnBoardRequested);
+    }
 }

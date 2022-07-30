@@ -104,6 +104,20 @@ public class Culture : MonoBehaviour
         //SetTileWithoutInformingTileInfo(t);
     }
 
+    public void LoadFromSave(SerializedCulture s, Tile t)
+    {
+        SetColor(s.color.UnserializeColor());
+        name = s.name;
+        gameObject.name = s.name;
+        currentState = (State) s.currentState;
+        population = s.population;
+        affinity = (TileInfo.TileType) s.affinity;
+        SetTile(t);
+        GetComponent<CultureMemory>().LoadFromSave(s.cultureMemory, t);
+        cultureMemory = GetComponent<CultureMemory>();
+        
+    }
+
     void ExecuteTurn()
     {
         Turn turn = decisionMaker.ExecuteTurn();
@@ -157,6 +171,8 @@ public class Culture : MonoBehaviour
 
     private void ChangeState(State newState)
     {
+        Debug.Log(cultureMemory);
+        Debug.Log(cultureMemory.previousState);
         if(cultureMemory.previousState != newState)
         {
             cultureMemory.previousState = currentState;
@@ -282,6 +298,12 @@ public class Culture : MonoBehaviour
             return (Random.value * baseMutationMax) - (baseMutationMax / 2);
         }
         return new Color(getMutationRate() + parentColor.r, getMutationRate() + parentColor.g, getMutationRate() + parentColor.b);
+    }
+
+    private void OnDestroy()
+    {
+        EventManager.StopListening("Tick", OnTick);
+
     }
 
     public static Color influenceColor(Culture parent, Culture influencer)
