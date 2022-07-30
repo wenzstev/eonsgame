@@ -80,7 +80,7 @@ public class CultureTurnUpdate
     }
     public int popChange = 0;
     public int techChange = 0;
-    public string newAffinity = "";
+    public int newAffinity = -1;
     public Color newColor;
     public Tile newTile;
     public string newName;

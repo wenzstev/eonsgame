@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class Culture : MonoBehaviour
 {
     new public string name { get; private set; }
+
     public Color color { get; private set; }
     public Tile tile { get; private set; }
     public TileInfo tileInfo { get; private set; }
@@ -44,7 +46,7 @@ public class Culture : MonoBehaviour
     public float influenceRate = .05f;
 
 
-    public string affinity { get; private set; }
+    public TileInfo.TileType affinity { get; private set; }
 
     public int maxOnTile;
 
@@ -63,7 +65,6 @@ public class Culture : MonoBehaviour
         NewOnTile,
         PendingRemoval,
         Overpopulated
-       
     }
 
     private void Awake()
@@ -103,6 +104,20 @@ public class Culture : MonoBehaviour
         //SetTileWithoutInformingTileInfo(t);
     }
 
+    public void LoadFromSave(SerializedCulture s, Tile t)
+    {
+        SetColor(s.color.UnserializeColor());
+        name = s.name;
+        gameObject.name = s.name;
+        currentState = (State) s.currentState;
+        population = s.population;
+        affinity = (TileInfo.TileType) s.affinity;
+        SetTile(t);
+        GetComponent<CultureMemory>().LoadFromSave(s.cultureMemory, t);
+        cultureMemory = GetComponent<CultureMemory>();
+        
+    }
+
     void ExecuteTurn()
     {
         Turn turn = decisionMaker.ExecuteTurn();
@@ -135,7 +150,7 @@ public class Culture : MonoBehaviour
 
         ChangeState(t.newState);
 
-        if (t.newAffinity != "")
+        if (t.newAffinity > 0)
         {
             GainAffinity(t.newAffinity);
         }
@@ -156,6 +171,8 @@ public class Culture : MonoBehaviour
 
     private void ChangeState(State newState)
     {
+        Debug.Log(cultureMemory);
+        Debug.Log(cultureMemory.previousState);
         if(cultureMemory.previousState != newState)
         {
             cultureMemory.previousState = currentState;
@@ -167,9 +184,9 @@ public class Culture : MonoBehaviour
         currentState = newState;
     }
 
-    private void GainAffinity(string newAffinity)
+    private void GainAffinity(int newAffinity)
     {
-        affinity = newAffinity;
+        affinity = (TileInfo.TileType) newAffinity;
         maxOnTile = tileInfo.tileType == affinity ? tileInfo.popBase + 2 : tileInfo.popBase;
         tileInfo.UpdateCultureSurvivability();
         tileInfo.UpdateMaxOnTile(this);
@@ -281,6 +298,12 @@ public class Culture : MonoBehaviour
             return (Random.value * baseMutationMax) - (baseMutationMax / 2);
         }
         return new Color(getMutationRate() + parentColor.r, getMutationRate() + parentColor.g, getMutationRate() + parentColor.b);
+    }
+
+    private void OnDestroy()
+    {
+        EventManager.StopListening("Tick", OnTick);
+
     }
 
     public static Color influenceColor(Culture parent, Culture influencer)

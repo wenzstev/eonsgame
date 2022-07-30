@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1639098555202725608, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
       propertyPath: tileType
-      value: Desert
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3135597305725448633, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
       propertyPath: m_RootOrder
