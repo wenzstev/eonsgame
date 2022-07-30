@@ -25,9 +25,9 @@ public class TileMouseInteractions : MonoBehaviour
         tileActive.SetActive(false);
     }
 
-    private void OnMouseDown()
+    private void OnMouseUp()
     {
-        EventManager.TriggerEvent("MouseDownTile", new Dictionary<string, object> { { "tile", gameObject } });
+        EventManager.TriggerEvent("MouseUpTile", new Dictionary<string, object> { { "tile", gameObject } });
     }
 
 }

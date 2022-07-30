@@ -7,6 +7,8 @@ public class Tile : MonoBehaviour
 
     public Board board;
 
+    public int id;
+
     static GameObject _moveTile;
     public static GameObject moveTile
     {

@@ -39,7 +39,7 @@ public class DefaultAction : CultureAction
 
         if (Random.value < culture.gainAffinityChance)
         {
-            turn.UpdateCulture(culture).newAffinity = culture.tileInfo.tileType;
+            turn.UpdateCulture(culture).newAffinity = (int) culture.tileInfo.tileType;
         }
 
         return turn;
