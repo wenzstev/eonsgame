@@ -39,7 +39,6 @@ public class MouseDrag : MonoBehaviour
             EventManager.TriggerEvent("MouseDragInAction", null);
         }
 
-        Debug.Log(pos);
         float size = Camera.main.orthographicSize;
         Vector3 adjustedPos = Vector3.Scale(pos, new Vector3(size * speedModifierX, size * speedModifierY, 1));
         Vector3 newPos = cameraOriginPosition - adjustedPos;

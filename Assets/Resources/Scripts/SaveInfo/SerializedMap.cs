@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
 [System.Serializable]
@@ -47,6 +46,14 @@ public class Save
     {
         string saveJson = File.ReadAllText(savePath);
         return JsonUtility.FromJson<Save>(saveJson);
+    }
+
+    public static GameObject CreatePersistantSave(Save save)
+    {
+        GameObject saveObj = new GameObject("SaveFile");
+        SaveObject so = saveObj.AddComponent<SaveObject>();
+        so.InitializeSave(save);
+        return saveObj;
     }
 
    
@@ -125,6 +132,11 @@ public class SerializedColor
         this.g = c.g;
         this.b = c.b;
     }
+
+    public Color UnserializeColor()
+    {
+        return new Color(r, g, b);
+    }
 }
 
 [System.Serializable]
@@ -142,4 +154,6 @@ public class SerializedCultureMemory
         cultureParentName = cm.cultureParentName;
         wasRepelled = cm.wasRepelled;
     }
+
+
 }

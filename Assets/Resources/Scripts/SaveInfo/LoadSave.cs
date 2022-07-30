@@ -5,12 +5,19 @@ using UnityEngine;
 public class LoadSave : MonoBehaviour
 {
     public GameObject boardObject;
+    public CultureLoader cl;
 
     // Start is called before the first frame update
     void Start()
     {
-        string saveLocation = Application.persistentDataPath + "/gamedata.json";
-        Save save = Save.UnserializeSave(saveLocation);
+        SaveObject[] saveObj = FindObjectsOfType<SaveObject>();
+        if (saveObj.Length != 1)
+        {
+            Debug.LogError("Incorrect number of saves in scene.");
+            return;
+        }
+
+        Save save = saveObj[0].save;
 
         Board b = boardObject.GetComponent<Board>();
 
@@ -18,6 +25,9 @@ public class LoadSave : MonoBehaviour
         b.height = save.height;
 
         b.CreateTilesFromSerializedData(save.tiles);
+        cl.CreateCultures(save.tiles);
+
+        Destroy(saveObj[0]);
 
     }
 

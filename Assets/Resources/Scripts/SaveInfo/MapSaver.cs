@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MapSaver : MonoBehaviour
 {
@@ -30,7 +31,7 @@ public class MapSaver : MonoBehaviour
 
         Save save = new Save(b);
         Save.SerializeSave(save, "untitled");
-
-
+        Save.CreatePersistantSave(save);
+        SceneManager.LoadScene("TestScene");
     }
 }
