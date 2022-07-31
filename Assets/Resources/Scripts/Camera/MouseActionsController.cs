@@ -32,4 +32,11 @@ public class MouseActionsController : MonoBehaviour
         isMouseMovingCamera = false;
     }
 
+    private void OnDestroy()
+    {
+        EventManager.StopListening("MouseUpTile", DetermineIfTileCanInteract);
+        EventManager.StopListening("MouseDragInAction", SetMouseDragToTrue);
+        EventManager.StopListening("MouseDragStopped", SetMouseDragToFalse);
+    }
+
 }

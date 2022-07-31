@@ -14,10 +14,16 @@ public class PuckPlacer : MonoBehaviour
 
     void placePuck(Dictionary<string, object> message)
     {
+        //Debug.Log($"{ gameObject.GetHashCode()} is placing a tile");
         GameObject tileClicked = (GameObject)message["tile"];
         GameObject puck = Instantiate(culturePuck, tileClicked.transform.position, Quaternion.identity);
         puck.GetComponent<Culture>().Init(tileClicked.GetComponent<Tile>());
         EventManager.TriggerEvent("CultureCreated", new Dictionary<string, object> { { "culture", puck.GetComponent<Culture>().name } });
         EventManager.TriggerEvent("CultureUpdated" + puck.GetComponent<Culture>().name, new Dictionary<string, object> { { "culture", puck.GetComponent<Culture>() } });
+    }
+
+    private void OnDestroy()
+    {
+        EventManager.StopListening("InteractiveMouseUp", placePuck);
     }
 }
