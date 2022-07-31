@@ -42,6 +42,7 @@ public class EventManager : MonoBehaviour
 
     public static void StartListening(string eventName, Action<Dictionary<string, object>> listener)
     {
+        //Debug.Log($"starting to listen to {eventName}");
         Action<Dictionary<string, object>> thisEvent;
 
         if (instance.eventDictionary.TryGetValue(eventName, out thisEvent))
@@ -58,7 +59,7 @@ public class EventManager : MonoBehaviour
 
     public static void StopListening(string eventName, Action<Dictionary<string, object>> listener)
     {
-        //Debug.Log("stop listning for " + eventName);
+        //Debug.Log($"stopped listening to {eventName}");
         if (eventManager == null) return;
         Action<Dictionary<string, object>> thisEvent;
         if (instance.eventDictionary.TryGetValue(eventName, out thisEvent))
