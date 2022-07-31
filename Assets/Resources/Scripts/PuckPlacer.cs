@@ -14,7 +14,7 @@ public class PuckPlacer : MonoBehaviour
 
     void placePuck(Dictionary<string, object> message)
     {
-        Debug.Log($"{ gameObject.GetHashCode()} is placing a tile");
+        //Debug.Log($"{ gameObject.GetHashCode()} is placing a tile");
         GameObject tileClicked = (GameObject)message["tile"];
         GameObject puck = Instantiate(culturePuck, tileClicked.transform.position, Quaternion.identity);
         puck.GetComponent<Culture>().Init(tileClicked.GetComponent<Tile>());
