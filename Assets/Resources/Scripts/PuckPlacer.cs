@@ -9,7 +9,7 @@ public class PuckPlacer : MonoBehaviour
 
     private void Start()
     {
-        EventManager.StartListening("MouseDownTile", placePuck);
+        EventManager.StartListening("InteractiveMouseUp", placePuck);
     }
 
     void placePuck(Dictionary<string, object> message)

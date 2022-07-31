@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1639098555202725608, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
       propertyPath: tileType
-      value: Forest
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1639098555202725608, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
       propertyPath: maxPopulationBase

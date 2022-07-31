@@ -17,7 +17,7 @@ public class TileInfoDisplayPanel : MonoBehaviour
     void OnMouseOverTile(Dictionary<string, object> message)
     {
         TileInfo tileInfo = (TileInfo) message["TileInfo"];
-        text.text = tileInfo.tileType;
+        text.text = tileInfo.tileType.ToString();
     }
 
 }

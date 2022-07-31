@@ -36,7 +36,13 @@ public class CultureMemory : MonoBehaviour
 
     public bool wasRepelled;
 
+    public void LoadFromSave(SerializedCultureMemory scm, Tile currentTile)
+    {
+        previousTile = currentTile.board.GetComponent<Board>().GetTileByID(scm.previousTile).GetComponent<Tile>(); // whoof
+        cultureParentName = scm.cultureParentName;
+        _previousState = (Culture.State)scm.previousState;
+        wasRepelled = scm.wasRepelled;
+    }
 
 
-    
 }
