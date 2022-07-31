@@ -32,6 +32,16 @@ public class CultureObserver : MonoBehaviour
         cultures.Remove(aggregate.name);
 
     }
+
+    private void OnDestroy()
+    {
+        EventManager.StopListening("CultureCreated", CreateCulture);
+        EventManager.StopListening("CultureAggregateRemoved", RemoveAggregate);
+        foreach(CultureAggregation ca in cultures.Values)
+        {
+            ca.RemoveAggregate();
+        }
+    }
 }
 
 public class CultureAggregation
@@ -108,10 +118,7 @@ public class CultureAggregation
         if(totalPopulation == 0)
         {
             //Debug.Log("pop of " + name + "  is zero. destroying aggregate");
-            EventManager.TriggerEvent("CultureAggregateRemoved", new Dictionary<string, object> { { "cultureAggregate", this } });
-            EventManager.TriggerEvent("CultureAggregateRemoved" + name, new Dictionary<string, object> { { "cultureAggregate", this } });
-            EventManager.StopListening("CultureUpdated" + name, UpdateCultureStats);
-            EventManager.StopListening("CultureRemoved" + name, RemoveCulture);
+            RemoveAggregate();
         }
         else
         {
@@ -129,6 +136,14 @@ public class CultureAggregation
     void AddCulture(Culture culture)
     {
         cultures.Add(culture);
+    }
+
+    public void RemoveAggregate()
+    {
+        EventManager.TriggerEvent("CultureAggregateRemoved", new Dictionary<string, object> { { "cultureAggregate", this } });
+        EventManager.TriggerEvent("CultureAggregateRemoved" + name, new Dictionary<string, object> { { "cultureAggregate", this } });
+        EventManager.StopListening("CultureUpdated" + name, UpdateCultureStats);
+        EventManager.StopListening("CultureRemoved" + name, RemoveCulture);
     }
 
 
