@@ -27,4 +27,9 @@ public class CulturePanelCreator : MonoBehaviour
         newInfoPanel.GetComponent<CultureAggregateInfo>().Init(ca);
     }
 
+    private void OnDestroy()
+    {
+        EventManager.StopListening("CultureAggregateAdded", AddNewInfoPanel);
+    }
+
 }

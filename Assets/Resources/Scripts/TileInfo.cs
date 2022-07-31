@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class TileInfo : MonoBehaviour
 {
-    public string tileType;
+    public TileType tileType;
     public Dictionary<string, Culture> cultures;
     public int popBase;
     public int currentMaxPopulation;
@@ -16,6 +16,14 @@ public class TileInfo : MonoBehaviour
 
     public List<Culture> orderToRemoveCulturesIn;
 
+    public enum TileType
+    {
+        Grassland,
+        Forest,
+        Desert,
+        Mountain,
+        Tundra
+    }
 
     public int tilePopulation {
         get 
@@ -50,9 +58,9 @@ public class TileInfo : MonoBehaviour
     }
  
 
-    public void Init(string TileType, int popBase)
+    public void Init(int ttype, int popBase)
     {
-        tileType = TileType;
+        tileType = (TileType) ttype;
         this.popBase = popBase;
     }
 
