@@ -12,7 +12,7 @@ public class CulturePanelCreator : MonoBehaviour
     
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         EventManager.StartListening("CultureAggregateAdded", AddNewInfoPanel);
     }
