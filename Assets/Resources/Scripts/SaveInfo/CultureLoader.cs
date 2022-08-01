@@ -14,7 +14,7 @@ public class CultureLoader : MonoBehaviour
             {
                 // assuming that the tile has been created
                 GameObject curTile = b.GetTile(tile.x, tile.y);
-                GameObject curCultureObj = Instantiate(CultureTile, curTile.transform.position, Quaternion.identity);
+                GameObject curCultureObj = Instantiate(CultureTile, curTile.transform);
                 Culture curCulture = curCultureObj.GetComponent<Culture>();
                 curCulture.LoadFromSave(sc, curTile.GetComponent<Tile>());
                 EventManager.TriggerEvent("CultureCreated", new Dictionary<string, object> { { "culture", curCulture.name } });

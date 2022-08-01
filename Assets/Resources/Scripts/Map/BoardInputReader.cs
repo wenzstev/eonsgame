@@ -37,7 +37,7 @@ public class BoardInputReader : MonoBehaviour
 
         foreach(SerializedTile t in tiles)
         {
-            Debug.Log(t.x + "  " + t.y + "  " +  t.type);
+            //Debug.Log(t.x + "  " + t.y + "  " +  t.type);
             GameObject curTile = createTile(i, j, t.type);
             boardTiles[i, j] = curTile;
             tileLookup.Add(curTile, (i, j));
