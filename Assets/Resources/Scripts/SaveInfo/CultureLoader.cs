@@ -14,7 +14,6 @@ public class CultureLoader : MonoBehaviour
             {
                 // assuming that the tile has been created
                 GameObject curTile = b.GetTile(tile.x, tile.y);
-                Debug.Log(curTile);
                 GameObject curCultureObj = Instantiate(CultureTile, curTile.transform);
                 Culture curCulture = curCultureObj.GetComponent<Culture>();
                 curCulture.LoadFromSave(sc, curTile.GetComponent<Tile>());
