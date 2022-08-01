@@ -48,4 +48,10 @@ public class CultureAggregateInfo : MonoBehaviour
         population.text = "Population: " + cultureAggregate.totalPopulation;
     }
 
+    private void OnDestroy()
+    {
+        EventManager.StopListening("CultureAggregateUpdated" + cultureAggregate.name, OnCultureAggregateUpdated);
+        EventManager.StopListening("CultureAggregateRemoved" + cultureAggregate.name, OnCultureAggregateRemoved);
+    }
+
 }
