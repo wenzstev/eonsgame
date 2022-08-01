@@ -13,7 +13,6 @@ public class CultureLoader : MonoBehaviour
             foreach (SerializedCulture sc in tile.cultures)
             {
                 // assuming that the tile has been created
-                Debug.Log("found culture");
                 GameObject curTile = b.GetTile(tile.x, tile.y);
                 Debug.Log(curTile);
                 GameObject curCultureObj = Instantiate(CultureTile, curTile.transform);
