@@ -38,10 +38,10 @@ public class LoadInfo : MonoBehaviour
 
     public static string GetFilenameFromPath(string filePath)
     {
-        Debug.Log(filePath);
+        //Debug.Log(filePath);
         Regex rx = new Regex(@"\\(.*).json");
-        Debug.Log(rx);
-        Debug.Log(rx.Match(filePath));
+        //Debug.Log(rx);
+        //Debug.Log(rx.Match(filePath));
         Match match = rx.Match(filePath);
         if(match.Success)
         {
