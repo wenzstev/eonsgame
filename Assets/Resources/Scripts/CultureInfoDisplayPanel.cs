@@ -23,5 +23,10 @@ public class CultureInfoDisplayPanel : MonoBehaviour
             text.text += c.name + "\nPopulation: " + c.population + "\n" + "Affinity: " + c.affinity + "\n\n";
         }
     }
-    
+
+    private void OnDestroy()
+    {
+        EventManager.StartListening("MouseOnTile", OnMouseOnTile);
+    }
+
 }
