@@ -9,7 +9,7 @@ public class CultureObserver : MonoBehaviour
  
     private void Awake()
     {
-        Debug.Log("starting observer");
+        //Debug.Log("starting observer");
         cultures = new Dictionary<string, CultureAggregation>();
 
         EventManager.StartListening("CultureCreated", CreateCulture);
