@@ -63,17 +63,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4710547446352574617, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
+      propertyPath: spriteAtlas
+      value: 
+      objectReference: {fileID: 4343727234628468602, guid: ebb8d59cd2d5ea9428f2cd46ee536012, type: 2}
     - target: {fileID: 4794923790133444121, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 1a55b84957a3c044391d0a2afdf5da5d, type: 3}
+      objectReference: {fileID: -914337969, guid: 46b42d7d50a40f241af9d359ff32e080, type: 3}
     - target: {fileID: 5710317791447832219, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.1666666
+      value: 4.23
       objectReference: {fileID: 0}
     - target: {fileID: 5710317791447832219, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1.1472223
+      value: 4.2
       objectReference: {fileID: 0}
     - target: {fileID: 6168205754475305981, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
       propertyPath: TileType
