@@ -56,6 +56,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4710547446352574617, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
+      propertyPath: topAtlas
+      value: 
+      objectReference: {fileID: 4343727234628468602, guid: 8d21ae5bd3cb81f438b1feaf1e009b18, type: 2}
+    - target: {fileID: 4710547446352574617, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
+      propertyPath: groundAtlas
+      value: 
+      objectReference: {fileID: 4343727234628468602, guid: 756583e560d69594e9187f5031f9fece, type: 2}
+    - target: {fileID: 4710547446352574617, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
       propertyPath: spriteAtlas
       value: 
       objectReference: {fileID: 4343727234628468602, guid: 756583e560d69594e9187f5031f9fece, type: 2}

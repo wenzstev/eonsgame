@@ -19,6 +19,10 @@ PrefabInstance:
       propertyPath: maxPopulationBase
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2583751277384828290, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3135597305725448633, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -64,6 +68,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4710547446352574617, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
+      propertyPath: topAtlas
+      value: 
+      objectReference: {fileID: 4343727234628468602, guid: 5cfba115c86f68c40b5f20e0f619bf23, type: 2}
+    - target: {fileID: 4710547446352574617, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
+      propertyPath: groundAtlas
+      value: 
+      objectReference: {fileID: 4343727234628468602, guid: ebb8d59cd2d5ea9428f2cd46ee536012, type: 2}
+    - target: {fileID: 4710547446352574617, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
       propertyPath: spriteAtlas
       value: 
       objectReference: {fileID: 4343727234628468602, guid: ebb8d59cd2d5ea9428f2cd46ee536012, type: 2}
@@ -71,6 +83,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -914337969, guid: 46b42d7d50a40f241af9d359ff32e080, type: 3}
+    - target: {fileID: 4794923790133444121, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5710317791447832219, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 4.23

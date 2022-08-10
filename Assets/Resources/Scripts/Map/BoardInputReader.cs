@@ -37,7 +37,7 @@ public class BoardInputReader : MonoBehaviour
         foreach(SerializedTile t in tiles)
         {
             //Debug.Log(t.x + "  " + t.y + "  " +  t.type);
-            GameObject curTile = createTile(i, j, t.type, t.tileId);
+            GameObject curTile = createTile(i, j, t.type, t.tileGroundId, t.tileTopId); // TODO: break the ground and top IDs off into their own struct (maybe type too?) 
             boardTiles[i, j] = curTile;
             tileLookup.Add(curTile, (i, j));
             curTile.GetComponent<Tile>().id = j * width + 1;
@@ -53,14 +53,14 @@ public class BoardInputReader : MonoBehaviour
         return new BoardTileRelationship(boardTiles, tileLookup);
     }
 
-    public GameObject createTile(int i, int j, int type, int tileId=-1)
+    public GameObject createTile(int i, int j, int type, int spriteGroundId = -1, int spriteTopId = -1)
     {
         GameObject newTile = Instantiate(tileTypes[type], new Vector3(i + (offset * i), j + (offset * j), 0), Quaternion.identity);
         newTile.transform.SetParent(transform);
         newTile.GetComponent<Tile>().board = GetComponent<Board>();
         newTile.name = i + ", " + j;
 
-        newTile.GetComponent<TileSpriteLoader>().Load(tileId);
+        newTile.GetComponent<TileSpriteLoader>().Load(spriteGroundId, spriteTopId);
 
         return newTile;
     }
