@@ -67,6 +67,7 @@ public class SerializedTile
     public int x;
     public int y;
     public int type;
+    public int tileId;
 
     public List<SerializedCulture> cultures;
     
@@ -81,9 +82,10 @@ public class SerializedTile
         cultures = new List<SerializedCulture>();
 
         TileInfo ti = tile.GetComponent<TileInfo>();
-        Debug.Log(ti.tileType);
+        //Debug.Log(ti.tileType);
         type = (int) ti.tileType;
-        Debug.Log(type);
+        //Debug.Log(type);
+        tileId = ti.GetComponent<TileSpriteLoader>().spriteId;
 
         foreach(Culture c in ti.cultures.Values)
         {

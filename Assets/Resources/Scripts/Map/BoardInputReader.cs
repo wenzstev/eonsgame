@@ -25,7 +25,6 @@ public class BoardInputReader : MonoBehaviour
         return MakeTiles(rawTileValues);
     }
 
-    // TODO: This may need to be moved into the LoadSave class, since I'll probably also want to unpack all of the cultures as well
     public BoardTileRelationship GetBoardFromSerializedTiles(List<SerializedTile> tiles, int height, int width)
     {
 
@@ -38,7 +37,7 @@ public class BoardInputReader : MonoBehaviour
         foreach(SerializedTile t in tiles)
         {
             //Debug.Log(t.x + "  " + t.y + "  " +  t.type);
-            GameObject curTile = createTile(i, j, t.type);
+            GameObject curTile = createTile(i, j, t.type, t.tileId);
             boardTiles[i, j] = curTile;
             tileLookup.Add(curTile, (i, j));
             curTile.GetComponent<Tile>().id = j * width + 1;
@@ -54,12 +53,15 @@ public class BoardInputReader : MonoBehaviour
         return new BoardTileRelationship(boardTiles, tileLookup);
     }
 
-    public GameObject createTile(int i, int j, int type)
+    public GameObject createTile(int i, int j, int type, int tileId=-1)
     {
         GameObject newTile = Instantiate(tileTypes[type], new Vector3(i + (offset * i), j + (offset * j), 0), Quaternion.identity);
         newTile.transform.SetParent(transform);
         newTile.GetComponent<Tile>().board = GetComponent<Board>();
         newTile.name = i + ", " + j;
+
+        newTile.GetComponent<TileSpriteLoader>().Load(tileId);
+
         return newTile;
     }
 

@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1639098555202725608, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
       propertyPath: tileType
-      value: Grassland
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1639098555202725608, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
       propertyPath: maxPopulationBase
@@ -63,10 +63,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4710547446352574617, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
+      propertyPath: spriteAtlas
+      value: 
+      objectReference: {fileID: 4343727234628468602, guid: 9a3f15b72a0f77d4c9be3cbf28c8ebf0, type: 2}
     - target: {fileID: 4794923790133444121, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 1905064341, guid: 8fbfd668c9667c240a54ea626bd159cd, type: 3}
+      objectReference: {fileID: 21300000, guid: 2a1529d485432114fa488fabce91bbb6, type: 3}
+    - target: {fileID: 5710317791447832219, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5710317791447832219, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.05
+      objectReference: {fileID: 0}
     - target: {fileID: 6168205754475305981, guid: cfc4c4c76440e974da53fc5b58c0870f, type: 3}
       propertyPath: TileType
       value: Grassland
