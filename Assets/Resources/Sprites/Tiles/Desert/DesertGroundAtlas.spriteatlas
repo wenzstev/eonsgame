@@ -6,7 +6,7 @@ SpriteAtlas:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DesertAtlas 1
+  m_Name: DesertGroundAtlas
   m_EditorData:
     serializedVersion: 2
     textureSettings:
@@ -42,5 +42,5 @@ SpriteAtlas:
   m_PackedSpriteNamesToIndex:
   - DesertGround
   m_RenderDataMap: {}
-  m_Tag: DesertAtlas 1
+  m_Tag: DesertGroundAtlas
   m_IsVariant: 0
