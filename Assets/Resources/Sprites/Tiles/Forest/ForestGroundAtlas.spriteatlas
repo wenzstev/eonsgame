@@ -6,7 +6,7 @@ SpriteAtlas:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MountainAtlas
+  m_Name: ForestGroundAtlas
   m_EditorData:
     serializedVersion: 2
     textureSettings:
@@ -32,15 +32,18 @@ SpriteAtlas:
     secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
-    - {fileID: 1745256249, guid: 8fbfd668c9667c240a54ea626bd159cd, type: 3}
+    - {fileID: 1726558191, guid: ab5eb7c5a8bafc14092c84c03d44ce6e, type: 3}
+    - {fileID: 239061175, guid: ab5eb7c5a8bafc14092c84c03d44ce6e, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
-  - {fileID: 1745256249, guid: 8fbfd668c9667c240a54ea626bd159cd, type: 3}
+  - {fileID: 1726558191, guid: ab5eb7c5a8bafc14092c84c03d44ce6e, type: 3}
+  - {fileID: 239061175, guid: ab5eb7c5a8bafc14092c84c03d44ce6e, type: 3}
   m_PackedSpriteNamesToIndex:
-  - Tiles_4
+  - ForestTileGround_0
+  - ForestTileGround_1
   m_RenderDataMap: {}
-  m_Tag: MountainAtlas
+  m_Tag: ForestGroundAtlas
   m_IsVariant: 0
