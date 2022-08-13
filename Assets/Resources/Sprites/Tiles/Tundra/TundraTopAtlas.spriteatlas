@@ -6,7 +6,7 @@ SpriteAtlas:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MountainAtlas
+  m_Name: TundraTopAtlas
   m_EditorData:
     serializedVersion: 2
     textureSettings:
@@ -31,16 +31,13 @@ SpriteAtlas:
       enableAlphaDilation: 0
     secondaryTextureSettings: {}
     variantMultiplier: 1
-    packables:
-    - {fileID: 1745256249, guid: 8fbfd668c9667c240a54ea626bd159cd, type: 3}
+    packables: []
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
-  m_PackedSprites:
-  - {fileID: 1745256249, guid: 8fbfd668c9667c240a54ea626bd159cd, type: 3}
-  m_PackedSpriteNamesToIndex:
-  - Tiles_4
+  m_PackedSprites: []
+  m_PackedSpriteNamesToIndex: []
   m_RenderDataMap: {}
-  m_Tag: MountainAtlas
+  m_Tag: TundraTopAtlas
   m_IsVariant: 0
