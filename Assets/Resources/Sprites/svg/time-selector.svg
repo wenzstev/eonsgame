@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="244.80002mm"
+   height="240.00002mm"
+   viewBox="0 0 244.80001 240.00001"
+   version="1.1"
+   id="svg26588"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   sodipodi:docname="time-selector.svg"
+   inkscape:export-filename="C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Sprites\UI\Dial.png"
+   inkscape:export-xdpi="260.10001"
+   inkscape:export-ydpi="260.10001"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview26590"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.5554293"
+     inkscape:cx="415.96233"
+     inkscape:cy="515.61328"
+     inkscape:window-width="3840"
+     inkscape:window-height="2054"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     showguides="false" />
+  <defs
+     id="defs26585">
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter2939"
+       x="-inf"
+       y="-inf"
+       width="inf"
+       height="inf">
+      <feFlood
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood2929" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite2931" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="1"
+         result="blur"
+         id="feGaussianBlur2933" />
+      <feOffset
+         dx="-2.77556e-17"
+         dy="1.5"
+         result="offset"
+         id="feOffset2935" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite2937" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       inkscape:label="Drop Shadow"
+       id="filter4307"
+       x="-0.112"
+       y="-0.012"
+       width="1.2240001"
+       height="1.0315">
+      <feFlood
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         id="feFlood4297" />
+      <feComposite
+         in="flood"
+         in2="SourceGraphic"
+         operator="in"
+         result="composite1"
+         id="feComposite4299" />
+      <feGaussianBlur
+         in="composite1"
+         stdDeviation="1"
+         result="blur"
+         id="feGaussianBlur4301" />
+      <feOffset
+         dx="-2.77556e-17"
+         dy="1.5"
+         result="offset"
+         id="feOffset4303" />
+      <feComposite
+         in="SourceGraphic"
+         in2="offset"
+         operator="over"
+         result="composite2"
+         id="feComposite4305" />
+    </filter>
+  </defs>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Wheel"
+     style="display:none"
+     sodipodi:insensitive="true"
+     transform="translate(22.400001,19.867707)">
+    <g
+       id="g2423"
+       transform="translate(-26.917522,-3.9535985)"
+       inkscape:export-filename="C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Sprites\UI\Swivel.png"
+       inkscape:export-xdpi="66.669998"
+       inkscape:export-ydpi="66.669998">
+      <circle
+         style="fill:#f65816;fill-opacity:1;stroke:none;stroke-width:4.16102;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle23072"
+         cx="128.88824"
+         cy="104.56349"
+         r="97.5" />
+      <path
+         style="fill:#4d8521;fill-opacity:1;stroke-width:0.266999"
+         id="path855"
+         sodipodi:type="arc"
+         sodipodi:cx="-128.83846"
+         sodipodi:cy="-104.3436"
+         sodipodi:rx="97.5"
+         sodipodi:ry="97.5"
+         sodipodi:start="0"
+         sodipodi:end="3.1415927"
+         sodipodi:arc-type="slice"
+         d="m -31.338455,-104.3436 a 97.5,97.5 0 0 1 -48.750002,84.43748 97.5,97.5 0 0 1 -97.500003,-2e-6 97.5,97.5 0 0 1 -48.75,-84.437478 h 97.5 z"
+         transform="scale(-1)" />
+    </g>
+  </g>
+  <g
+     inkscape:label="Selector"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(14.19382,1.115139)"
+     style="display:inline">
+    <path
+       style="fill:none;fill-opacity:1;stroke:#d9d9d9;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter2939)"
+       d="M 108.20618,18.884861 V 218.88486"
+       id="path12591"
+       inkscape:export-filename="C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Sprites\UI\Dial.png"
+       inkscape:export-xdpi="130.048"
+       inkscape:export-ydpi="130.048" />
+    <g
+       id="g4295"
+       inkscape:export-filename="C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Sprites\UI\Dial.png"
+       inkscape:export-xdpi="260.10001"
+       inkscape:export-ydpi="260.10001"
+       style="filter:url(#filter4307)">
+      <circle
+         style="fill:none;stroke:#d9d9d9;stroke-width:5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path26704"
+         cx="108.20618"
+         cy="118.75256"
+         r="97.910721"
+         inkscape:export-filename="C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Sprites\UI\Dial.png"
+         inkscape:export-xdpi="130.048"
+         inkscape:export-ydpi="130.048" />
+      <circle
+         style="fill:#d9d9d9;fill-opacity:1;stroke:#d9d9d9;stroke-width:3.94418;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="circle27778"
+         cx="108.20618"
+         cy="118.75256"
+         r="73.027908"
+         inkscape:export-filename="C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Sprites\UI\Dial.png"
+         inkscape:export-xdpi="130.048"
+         inkscape:export-ydpi="130.048" />
+      <path
+         style="fill:none;fill-opacity:1;stroke:#d9d9d9;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter2939)"
+         d="M 8.206181,118.88486 H 208.20618"
+         id="path27813"
+         inkscape:export-filename="C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Sprites\UI\Dial.png"
+         inkscape:export-xdpi="130.048"
+         inkscape:export-ydpi="130.048" />
+      <path
+         style="fill:none;fill-opacity:1;stroke:#d9d9d9;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 8.2061842,118.88486 H 208.20618"
+         id="path12759"
+         inkscape:export-filename="C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Sprites\UI\Dial.png"
+         inkscape:export-xdpi="130.048"
+         inkscape:export-ydpi="130.048" />
+      <path
+         style="fill:none;fill-opacity:1;stroke:#d9d9d9;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 92.562736,217.65369 123.84963,20.116027"
+         id="path12761"
+         inkscape:export-filename="C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Sprites\UI\Dial.png"
+         inkscape:export-xdpi="130.048"
+         inkscape:export-ydpi="130.048" />
+      <path
+         style="fill:none;fill-opacity:1;stroke:#d9d9d9;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 62.807131,207.98551 153.60524,29.784209"
+         id="path12763"
+         inkscape:export-filename="C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Sprites\UI\Dial.png"
+         inkscape:export-xdpi="130.048"
+         inkscape:export-ydpi="130.048" />
+      <path
+         style="fill:none;fill-opacity:1;stroke:#d9d9d9;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 37.495503,189.59554 178.91686,48.174183"
+         id="path12765"
+         inkscape:export-filename="C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Sprites\UI\Dial.png"
+         inkscape:export-xdpi="130.048"
+         inkscape:export-ydpi="130.048" />
+      <path
+         style="fill:none;fill-opacity:1;stroke:#d9d9d9;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 19.105528,164.28391 197.30683,73.485811"
+         id="path12767"
+         inkscape:export-filename="C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Sprites\UI\Dial.png"
+         inkscape:export-xdpi="130.048"
+         inkscape:export-ydpi="130.048" />
+      <path
+         style="fill:none;fill-opacity:1;stroke:#d9d9d9;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 9.4373502,134.52831 206.97501,103.24141"
+         id="path1210"
+         inkscape:export-filename="C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Sprites\UI\Dial.png"
+         inkscape:export-xdpi="130.048"
+         inkscape:export-ydpi="130.048" />
+      <path
+         style="fill:none;fill-opacity:1;stroke:#d9d9d9;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="M 108.20618,218.88486 V 18.884862"
+         id="path1212"
+         inkscape:export-filename="C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Sprites\UI\Dial.png"
+         inkscape:export-xdpi="130.048"
+         inkscape:export-ydpi="130.048" />
+      <path
+         style="fill:#d9d9d9;fill-opacity:1;stroke-width:3.88961"
+         d="m 103.3073,216.07927 c -3.18217,-0.17729 -8.184691,-0.68487 -8.346698,-0.84689 -0.05369,-0.0537 0.756998,-5.50707 1.801543,-12.11863 l 1.899172,-12.02101 2.374453,0.24709 c 1.30594,0.13591 3.09225,0.25176 3.96958,0.25746 l 1.59514,0.01 v 12.34948 c 0,6.79221 -0.0695,12.33575 -0.15436,12.31897 -0.0849,-0.0168 -1.49738,-0.10538 -3.13883,-0.19682 z"
+         id="path1544" />
+      <path
+         style="fill:#d9d9d9;fill-opacity:1;stroke-width:3.7086"
+         d="m 11.654872,131.3611 c -0.231936,-0.99938 -0.923213,-8.44189 -0.939481,-10.11475 -0.003,-0.30821 0.715284,-0.32745 12.228578,-0.32745 h 12.231763 l 0.109032,0.98234 c 0.363075,3.27124 0.548605,6.19011 0.400751,6.30491 -0.09428,0.0731 -5.358207,0.86825 -11.697608,1.76678 -6.339403,0.89854 -11.685187,1.67557 -11.879523,1.72675 -0.246168,0.0648 -0.383719,-0.0378 -0.453509,-0.33858 z"
+         id="path3687" />
+    </g>
+  </g>
+</svg>
