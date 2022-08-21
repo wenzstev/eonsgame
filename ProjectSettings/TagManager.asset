@@ -41,6 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Ground
+    uniqueID: 3569139937
+    locked: 0
+  - name: GroundTop
+    uniqueID: 3281714277
+    locked: 0
   - name: PuckBackground
     uniqueID: 2263818967
     locked: 0
