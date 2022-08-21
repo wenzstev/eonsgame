@@ -57,5 +57,11 @@ public class DialController : MonoBehaviour
         RotateWheel((int)setPoint["index"]);
     }
 
+    private void OnDestroy()
+    {
+        EventManager.StopListening("DialRotated", OnDialRotated);
+        EventManager.StopListening("DialSetTo", OnDialSetTo);
+    }
+
 
 }

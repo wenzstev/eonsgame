@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class TimeController : MonoBehaviour
 {
-    public int normalSpeed;
-    public int fastSpeed;
+    public int[] speeds;
 
     float timeBetweenTicks;
     float timer = 0;
@@ -16,10 +15,9 @@ public class TimeController : MonoBehaviour
     private void Start()
     {
         EventManager.StartListening("PauseSpeed", TogglePause);
-        EventManager.StartListening("NormalSpeed", SetSpeedNormal);
-        EventManager.StartListening("FastSpeed", SetSpeedFast);
+        EventManager.StartListening("SpeedChange", ChangeSpeed);
 
-        timeBetweenTicks = normalSpeed;
+        timeBetweenTicks = 1 / (float) speeds[0];
     }
 
 
@@ -41,22 +39,20 @@ public class TimeController : MonoBehaviour
         }
     }
 
-    void ChangeSpeed(int newSpeed)
+    void ChangeSpeed(Dictionary<string, object> newSpeedDict)
     {
+        int newSpeedLevel = (int)newSpeedDict["speed"];
+        if(newSpeedLevel < 0 || newSpeedLevel >= speeds.Length)
+        {
+            Debug.LogWarning("Tried to change to nonexistant speed!");
+            return;
+        }
+
+        int newSpeed = speeds[newSpeedLevel];
+
         timeBetweenTicks = 1 / (float) newSpeed;
-        isPaused = false;
     }
 
-
-    void SetSpeedNormal(Dictionary<string, object> empty)
-    {
-        ChangeSpeed(normalSpeed);
-    }
-
-    void SetSpeedFast(Dictionary<string, object> empty)
-    {
-        ChangeSpeed(fastSpeed);
-    }
 
     void TogglePause(Dictionary<string, object> empty)
     {
