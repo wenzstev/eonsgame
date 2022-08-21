@@ -18,6 +18,7 @@ public class TileSpriteLoader : MonoBehaviour
     public void ChooseSprites()
     {
         spriteGroundId = GetRandomInt(groundAtlas.spriteCount);
+        Debug.Log($"choosing sprites for {gameObject.name}. count is {groundAtlas.spriteCount} and int is {spriteGroundId}");
         if(topAtlas)
         {
             spriteTopId = GetRandomInt(topAtlas.spriteCount);
@@ -35,11 +36,11 @@ public class TileSpriteLoader : MonoBehaviour
         spriteTopId = topId;
     }
 
-    // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("loading sprite");
-        Debug.Log("ground id is " + spriteGroundId);
+
+        Debug.Log($"for {gameObject.name}, ground ID is {spriteGroundId} and top id is {spriteTopId}");
+        Debug.Log($"for {gameObject.name}, groundAtlas is {groundAtlas} and topAtlas is {topAtlas}");
         if(spriteGroundId == -1)
         {
             Debug.LogError("Attempting to load tile without setting it's sprite Id");
@@ -51,9 +52,11 @@ public class TileSpriteLoader : MonoBehaviour
         groundAtlas.GetSprites(groundSprites);
         topAtlas.GetSprites(topSprites);
 
-        if (spriteGroundId > groundSprites.Length || spriteTopId > topSprites.Length)
+        
+
+        if (spriteGroundId >= groundSprites.Length || spriteTopId >= topSprites.Length)
         {
-            Debug.LogError("Trying to load a sprite with ID outside of range!");
+            Debug.LogError($"{gameObject.name} is trying to load a sprite with ID outside of range!");
             return;
         }
 
