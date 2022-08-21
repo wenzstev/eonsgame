@@ -32,6 +32,6 @@ public class MapSaver : MonoBehaviour
         Save save = new Save(b);
         Save.SerializeSave(save, "untitled");
         Save.CreatePersistantSave(save);
-        SceneManager.LoadScene("TestScene");
+        SceneManager.LoadScene("PlayScene");
     }
 }
