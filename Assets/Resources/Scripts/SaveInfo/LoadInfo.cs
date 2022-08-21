@@ -33,7 +33,7 @@ public class LoadInfo : MonoBehaviour
     {
         Save save = Save.UnserializeSave(filePath);
         Save.CreatePersistantSave(save);
-        SceneManager.LoadScene("TestScene");
+        SceneManager.LoadScene("PlayScene");
     }
 
     public static string GetFilenameFromPath(string filePath)

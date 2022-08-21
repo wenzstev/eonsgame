@@ -62,9 +62,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bg: {fileID: 0}
   tileTypes:
-  - {fileID: 7417488487907784279, guid: 9a6e3391cce88b34ab1426a5840353fe, type: 3}
   - {fileID: 6821989227695789434, guid: d4599aa13219d5c48a7533f9772b3cef, type: 3}
   - {fileID: 3517407943802080398, guid: 6f497194a45a4ee4484e1ba2c65e9217, type: 3}
+  - {fileID: 7417488487907784279, guid: 9a6e3391cce88b34ab1426a5840353fe, type: 3}
   - {fileID: 5323336950972137596, guid: 1e326386dc5fa2f4ca18f10e22bd67bd, type: 3}
   - {fileID: 6622275044617704145, guid: 376176d76cc55364fa17591865b5b303, type: 3}
-  offset: 0.05
+  offset: 0
