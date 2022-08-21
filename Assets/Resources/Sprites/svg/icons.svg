@@ -20,20 +20,35 @@
      borderopacity="1.0"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
+     inkscape:pagecheckerboard="true"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="6.2217172"
-     inkscape:cx="566.40311"
-     inkscape:cy="173.58552"
-     inkscape:window-width="3840"
-     inkscape:window-height="2054"
-     inkscape:window-x="-11"
-     inkscape:window-y="-11"
-     inkscape:window-maximized="1"
+     inkscape:zoom="1.5554293"
+     inkscape:cx="214.0888"
+     inkscape:cy="375.7805"
+     inkscape:window-width="2286"
+     inkscape:window-height="2041"
+     inkscape:window-x="1541"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
   <defs
-     id="defs2" />
+     id="defs2">
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="90.929687,40.032266"
+       end_point="50.394973,68.109318"
+       center_point="70.66233,54.070792"
+       id="path-effect1647"
+       is_visible="true"
+       lpeversion="1.1"
+       mode="free"
+       discard_orig_path="false"
+       fuse_paths="false"
+       oposite_fuse="false"
+       split_items="false"
+       split_open="false" />
+  </defs>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
@@ -52,5 +67,13 @@
        inkscape:export-filename="C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Sprites\UI\arrow.png"
        inkscape:export-xdpi="260.10001"
        inkscape:export-ydpi="260.10001" />
+    <path
+       id="path3780"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 196.23438 165.61328 C 163.56092 166.35462 154.32857 253.83249 178.47852 262.72852 C 184.70272 265.0213 196.06749 268.92766 208.65234 273.20312 L 246.24219 241.19336 L 249.95703 206.35742 L 196.23438 165.61328 z M 279.7207 171.2832 C 277.05568 171.3604 272.99464 174.97178 266.80664 185.80078 C 263.02817 192.4131 259.3817 199.12357 255.9043 205.66797 L 253.64062 234.89453 L 275.00391 216.70312 C 280.05314 199.46665 284.80859 183.87109 284.80859 183.87109 C 284.80859 183.87109 284.80848 171.13583 279.7207 171.2832 z M 278.17773 227.76172 L 252.59766 248.36523 L 249.60547 286.97852 C 273.80117 295.0421 294.96484 302.01953 294.96484 302.01953 C 294.96484 302.01953 361.02351 310.91519 352.5 298.3125 C 343.97649 285.70982 302.7793 246.41992 302.7793 246.41992 L 278.17773 227.76172 z M 244.80859 254.63867 L 213.77734 279.63281 C 188.28236 316.9868 145.62401 380.51624 143.36914 390.88867 C 140.15459 405.67558 90.007813 514.32812 90.007812 514.32812 C 90.007812 514.32812 117.6516 518.18527 126.65234 511.11328 C 135.65307 504.04126 182.58594 382.53125 182.58594 382.53125 C 182.58594 382.53125 215.72827 332.25474 241.00391 290.33008 L 244.80859 254.63867 z "
+       transform="scale(0.26458333)"
+       inkscape:export-filename="C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Sprites\UI\hammer.png"
+       inkscape:export-xdpi="400"
+       inkscape:export-ydpi="400" />
   </g>
 </svg>

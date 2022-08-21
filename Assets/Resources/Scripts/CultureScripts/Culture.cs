@@ -71,7 +71,7 @@ public class Culture : MonoBehaviour
     {
         EventManager.StartListening("Tick", OnTick);
         layerMode = transform.GetChild(0).GetComponent<SpriteRenderer>();
-        circleMode = transform.GetChild(1).GetComponent<SpriteRenderer>();
+        //circleMode = transform.GetChild(1).GetComponent<SpriteRenderer>();
         decisionMaker = new DecisionMaker(this);
     }
 
@@ -209,7 +209,7 @@ public class Culture : MonoBehaviour
     {
         color = c;
         layerMode.color = c;
-        circleMode.color = c;
+        //circleMode.color = c;
     }
 
 
