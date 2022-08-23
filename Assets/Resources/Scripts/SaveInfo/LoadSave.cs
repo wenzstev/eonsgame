@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class LoadSave : MonoBehaviour
@@ -7,17 +8,14 @@ public class LoadSave : MonoBehaviour
     public GameObject boardObject;
     public CultureLoader cl;
 
+    public bool DEBUG_LOAD_DEFAULT;
+
+    Save save;
+
     // Start is called before the first frame update
     void Start()
     {
-        SaveObject[] saveObj = FindObjectsOfType<SaveObject>();
-        if (saveObj.Length != 1)
-        {
-            Debug.LogError("Incorrect number of saves in scene.");
-            return;
-        }
-
-        Save save = saveObj[0].save;
+        save = DEBUG_LOAD_DEFAULT ? LoadDefault() : LoadFromScene();
 
         Board b = boardObject.GetComponent<Board>();
 
@@ -26,9 +24,31 @@ public class LoadSave : MonoBehaviour
 
         b.CreateTilesFromSerializedData(save.tiles);
         cl.CreateCultures(save.tiles);
+    }
 
-        Destroy(saveObj[0]);
+    private void OnDestroy()
+    {
+        foreach(SaveObject saveObj in FindObjectsOfType<SaveObject>())
+        {
+            Destroy(saveObj);
+        }
+    }
 
+    Save LoadFromScene()
+    {
+        SaveObject[] saveObj = FindObjectsOfType<SaveObject>();
+        if (saveObj.Length != 1)
+        {
+            throw new ArgumentException("Must have one save instance in scene!");
+        }
+
+       return saveObj[0].save;
+    }
+
+    Save LoadDefault()
+    {
+        string loadSave = $"{Application.persistentDataPath}/untitled.json";
+        return Save.UnserializeSave(loadSave);
     }
 
 }
