@@ -24,16 +24,30 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.5554293"
-     inkscape:cx="214.0888"
-     inkscape:cy="375.7805"
+     inkscape:cx="572.83221"
+     inkscape:cy="746.09627"
      inkscape:window-width="2286"
      inkscape:window-height="2041"
-     inkscape:window-x="1541"
+     inkscape:window-x="1532"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
   <defs
      id="defs2">
+    <inkscape:path-effect
+       effect="mirror_symmetry"
+       start_point="121.99138,149.79337"
+       end_point="121.64054,178.50192"
+       center_point="121.81596,164.14765"
+       id="path-effect1005"
+       is_visible="true"
+       lpeversion="1.1"
+       mode="free"
+       discard_orig_path="false"
+       fuse_paths="false"
+       oposite_fuse="false"
+       split_items="false"
+       split_open="false" />
     <inkscape:path-effect
        effect="mirror_symmetry"
        start_point="90.929687,40.032266"
@@ -75,5 +89,18 @@
        inkscape:export-filename="C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Sprites\UI\hammer.png"
        inkscape:export-xdpi="400"
        inkscape:export-ydpi="400" />
+    <circle
+       style="fill:#000000;fill-opacity:1;stroke-width:1.5;stroke-linecap:round;paint-order:stroke fill markers"
+       id="path869"
+       cx="122.24575"
+       cy="142.84886"
+       r="13.097938" />
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 104.99614,149.94587 c 2.58029,0.45676 3.83327,4.5765 11.47163,7.37583 3.12001,1.14343 5.33698,1.1877 5.33698,1.1877 l -0.17048,19.52474 c 0,0 -12.43894,0.0758 -17.16102,-3.93102 -4.722083,-4.00678 -4.36765,-24.19977 0.52282,-24.15725 z m 33.98168,0.41528 c -2.59068,0.39357 -3.94397,4.48146 -11.64845,7.09329 -3.14703,1.06684 -5.36442,1.05692 -5.36442,1.05692 l -0.30671,19.52307 c 0,0 12.43338,0.37976 17.25196,-3.51047 4.81859,-3.89018 4.95774,-24.08581 0.0677,-24.16281 z"
+       id="path1003"
+       inkscape:path-effect="#path-effect1005"
+       inkscape:original-d="m 104.99614,149.94587 c 2.58029,0.45676 3.83327,4.5765 11.47163,7.37583 3.12001,1.14343 5.33698,1.1877 5.33698,1.1877 l -0.17048,19.52474 c 0,0 -12.43894,0.0758 -17.16102,-3.93102 -4.722083,-4.00678 -4.36765,-24.19977 0.52282,-24.15725 z"
+       sodipodi:nodetypes="cscczcc" />
   </g>
 </svg>

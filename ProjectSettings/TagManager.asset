@@ -47,12 +47,12 @@ TagManager:
   - name: GroundTop
     uniqueID: 3281714277
     locked: 0
+  - name: TileSelect
+    uniqueID: 3468030211
+    locked: 0
   - name: PuckBackground
     uniqueID: 2263818967
     locked: 0
   - name: Puck Icon
     uniqueID: 2727039759
-    locked: 0
-  - name: TileSelect
-    uniqueID: 3468030211
     locked: 0
