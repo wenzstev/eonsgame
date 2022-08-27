@@ -39,8 +39,8 @@ public class TileSpriteLoader : MonoBehaviour
     void Start()
     {
 
-        Debug.Log($"for {gameObject.name}, ground ID is {spriteGroundId} and top id is {spriteTopId}");
-        Debug.Log($"for {gameObject.name}, groundAtlas is {groundAtlas} and topAtlas is {topAtlas}");
+        //Debug.Log($"for {gameObject.name}, ground ID is {spriteGroundId} and top id is {spriteTopId}");
+        //Debug.Log($"for {gameObject.name}, groundAtlas is {groundAtlas} and topAtlas is {topAtlas}");
         if(spriteGroundId == -1)
         {
             Debug.LogError("Attempting to load tile without setting it's sprite Id");

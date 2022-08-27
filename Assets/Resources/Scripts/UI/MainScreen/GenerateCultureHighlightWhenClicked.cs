@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class GenerateCultureHighlightWhenClicked : MonoBehaviour
 {
-    public GameObject cultureHighlighterObj;
+    public GameObject CultureHighlightPanelPefab;
 
-    private void OnMouseUp()
+    private void OnMouseUp() // TODO: change this to an event so that it can be combined with the main system
     {
-        GameObject.Instantiate(cultureHighlighterObj);
-        cultureHighlighterObj.GetComponent<CultureHighlighter>().SetPosition(transform);
+        GameObject cultureHighlighterObj = Instantiate(CultureHighlightPanelPefab, Vector3.zero, Quaternion.identity) as GameObject;
+        CultureHighlightPanel chp = cultureHighlighterObj.GetComponent<CultureHighlightPanel>();
+        chp.Init(gameObject);
     }
 }
