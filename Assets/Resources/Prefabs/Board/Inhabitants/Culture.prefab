@@ -252,4 +252,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9eb99b9d2c757f742953164d2aabcfcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cultureHighlighterObj: {fileID: 5405400365266782984, guid: 87e4b57308ccbeb4f865808eb7cbe030, type: 3}
+  CultureHighlightPanelPefab: {fileID: 5405400365266782984, guid: 87e4b57308ccbeb4f865808eb7cbe030, type: 3}
