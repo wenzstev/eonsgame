@@ -358,6 +358,7 @@ GameObject:
   - component: {fileID: 5405400365266783095}
   - component: {fileID: 5405400365266783093}
   - component: {fileID: 5405400365266783094}
+  - component: {fileID: -3988949223465433314}
   m_Layer: 5
   m_Name: CultureHighlight
   m_TagString: Untagged
@@ -427,6 +428,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &-3988949223465433314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5405400365266782984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ae0f6330f87f054486b4c32ff195939, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentUIObj: {fileID: 6689928551049796461, guid: 2551ca4844e4c374ab1fcb4f328286a6, type: 3}
 --- !u!1 &5405400366026782707
 GameObject:
   m_ObjectHideFlags: 0
