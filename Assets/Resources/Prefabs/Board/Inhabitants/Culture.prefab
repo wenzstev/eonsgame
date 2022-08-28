@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2621647803606292}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.099, y: 0.0545, z: 0}
   m_LocalScale: {x: 0.8014409, y: 1.7382866, z: 1}
   m_ConstrainProportionsScale: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2031148329
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -96,6 +96,9 @@ GameObject:
   - component: {fileID: -2590900883632236751}
   - component: {fileID: 5402215717768767427}
   - component: {fileID: 1772662126385334965}
+  - component: {fileID: 2254175048405440385}
+  - component: {fileID: 2844702702715120133}
+  - component: {fileID: -8479225915283109699}
   m_Layer: 0
   m_Name: Culture
   m_TagString: Untagged
@@ -158,7 +161,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1567927537
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6199f427a0291cf4b98e5ed78bf6c876, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -208,3 +211,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cultureParentName: 
   wasRepelled: 0
+--- !u!70 &2254175048405440385
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829645622402238992}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1.672, y: 2.19}
+  m_Direction: 0
+--- !u!114 &2844702702715120133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829645622402238992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adec70acd389407448971746440dee39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hovered: {fileID: 21300000, guid: b2d2c898db8549a408519d93cf38fcad, type: 3}
+--- !u!114 &-8479225915283109699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829645622402238992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eb99b9d2c757f742953164d2aabcfcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CultureHighlightPanelPefab: {fileID: 5405400365266782984, guid: 87e4b57308ccbeb4f865808eb7cbe030, type: 3}
