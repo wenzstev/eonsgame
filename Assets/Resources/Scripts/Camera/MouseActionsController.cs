@@ -9,9 +9,17 @@ public class MouseActionsController : MonoBehaviour
 
     private void Start()
     {
-        EventManager.StartListening("MouseUpTile", DetermineIfTileCanInteract);
+        EventManager.StartListening("MouseUpTile", DetermineIfTileCanInteract); // TODO: change this so that the "MouseUp" event is triggered generically for items in the scene
         EventManager.StartListening("MouseDragInAction", SetMouseDragToTrue);
         EventManager.StartListening("MouseDragStopped", SetMouseDragToFalse);
+    }
+
+    void Update()
+    {
+        if(Input.GetMouseButtonUp(0) && !isMouseMovingCamera) // TODO: move all mouse button commands into a single input class
+        {
+            EventManager.TriggerEvent("MouseUpGeneric", new Dictionary<string, object>() { { "button", 1 } });
+        }
     }
 
     void DetermineIfTileCanInteract(Dictionary<string, object> tileInfo)
