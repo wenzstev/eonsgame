@@ -80,7 +80,7 @@ public class BoardInputReader : MonoBehaviour
         {
             for (int i = 0; i < width; i++)
             {
-                Debug.Log($"Creating tile for {i}, {j}, of type {rawTileValues[i, j]}");
+                //Debug.Log($"Creating tile for {i}, {j}, of type {rawTileValues[i, j]}");
                 GameObject curTile = createTile(i, j, rawTileValues[i, j]);
                 curTile.GetComponent<Tile>().id = j * width + i; // unique id for each tile
                 boardTiles[i, j] = curTile;

@@ -15,7 +15,6 @@ public class CultureHighlightPanel : MonoBehaviour
         transform.SetParent(canvas.transform);
 
         rectTransform = GetComponent<RectTransform>();
-        StartCoroutine(StartListeningForClickAway());
         SetPanelToCultureInfo(cultureObj.GetComponent<Culture>());
     }
 
