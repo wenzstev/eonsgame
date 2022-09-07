@@ -57,15 +57,18 @@ public class SlowScroll : MonoBehaviour
             transform.Translate(curSpeed);
             yield return null;
         }
+        yield return null;
     }
 
     public IEnumerator MainScroll(Vector3 speed, float end)
     {
-        while (Mathf.Abs(transform.position.x - end) < .005f) 
+        while (Mathf.Abs(transform.position.x - end) > .005f) 
         {
             transform.Translate(speed);
             yield return null;
         }
+        yield return null;
+
     }
 
 }
