@@ -17,7 +17,7 @@ public class MapPreviewGenerator : MonoBehaviour
 
     GridLayoutGroup gl;
 
-    BoardGenerator bg;
+    BoardGenAlgorithm bg;
 
     float height;
 
@@ -30,7 +30,7 @@ public class MapPreviewGenerator : MonoBehaviour
         currentTiles = new List<GameObject>();
         gl = GetComponent<GridLayoutGroup>();
         gl.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
-        bg = GetComponentInChildren<BoardGenerator>();
+        bg = GetComponentInChildren<BoardGenAlgorithm>();
     }
 
     public void GeneratePreview()
