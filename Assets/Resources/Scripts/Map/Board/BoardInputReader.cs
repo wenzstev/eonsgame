@@ -5,7 +5,7 @@ using UnityEngine;
 public class BoardInputReader : MonoBehaviour
 {
 
-    public BoardGenerator bg;
+    public BoardGenAlgorithm bg;
 
     public GameObject[] tileTypes;
 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoardGenerator : MonoBehaviour
+public class PerlinBoardGenerator : BoardGenAlgorithm
 {
 
     public Vector2 startPosition;
@@ -11,10 +11,8 @@ public class BoardGenerator : MonoBehaviour
     public bool randomCoords;
 
 
-
-
     // creates a perlin board and levels it based on the number of levels requested
-    public int[,] getLevelledBoard(int numLevels, int boardWidth, int boardHeight)
+    public override int[,] getLevelledBoard(int numLevels, int boardWidth, int boardHeight)
     {
         float[,] perlinBoard = createPerlinBoard(startPosition, scale, boardWidth, boardHeight);
 

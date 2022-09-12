@@ -9,6 +9,15 @@ public class Board : MonoBehaviour
     public int width;
     public int height;
 
+    public bool DEBUG_TEST_GEN = false;
+
+    private void Start()
+    {
+        if(DEBUG_TEST_GEN)
+        {
+            CreateBoard();
+        }
+    }
 
     public void CreateBoard()
     {

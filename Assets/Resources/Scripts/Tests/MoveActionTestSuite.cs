@@ -23,7 +23,7 @@ public class MoveActionTestSuite
         GameObject testBoardGeneratorObj = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Board/BoardGenerator"));
         
         Board testBoard = testBoardObj.GetComponent<Board>();
-        testBoard.GetComponent<BoardInputReader>().bg = testBoardGeneratorObj.GetComponent<BoardGenerator>();
+        testBoard.GetComponent<BoardInputReader>().bg = testBoardGeneratorObj.GetComponent<BoardGenAlgorithm>();
 
         testBoard.height = 1;
         testBoard.width = 2;
