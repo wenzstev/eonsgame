@@ -123,17 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &39166066 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 16857794732596036, guid: 2a28ac8093d445f40ab20b07479d98c0, type: 3}
-  m_PrefabInstance: {fileID: 92158186}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1306ebbfd82924acf9740198dd024ff2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &92158186
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -197,8 +186,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardGenerator
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 16857794732596036, guid: 2a28ac8093d445f40ab20b07479d98c0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2a28ac8093d445f40ab20b07479d98c0, type: 3}
+--- !u!1 &444759043 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 16857794732596091, guid: 2a28ac8093d445f40ab20b07479d98c0, type: 3}
+  m_PrefabInstance: {fileID: 92158186}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &444759045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444759043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76d3e805cb2d20d4d87c17e949010fdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterLevel: 0.9
+  globalTemp: 0
+  globalHumidity: 0
 --- !u!1 &1271303100
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,18 +303,18 @@ PrefabInstance:
     - target: {fileID: 191360135, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: bg
       value: 
-      objectReference: {fileID: 39166066}
+      objectReference: {fileID: 444759045}
     - target: {fileID: 734804678373380931, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: m_Name
       value: Board
       objectReference: {fileID: 0}
     - target: {fileID: 734804678373380932, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: width
-      value: 20
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 734804678373380932, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: height
-      value: 20
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 734804678373380932, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: DEBUG_TEST_GEN
