@@ -7,14 +7,26 @@ public class BoardInputReader : MonoBehaviour
 
     public BoardGenAlgorithm bg;
 
-    public GameObject[] tileTypes;
+    BoardStats boardStats;
+
+    public GameObject[] tileTypes {
+        get
+        {
+            return boardStats.tileTypes;
+        }
+    }
 
     public float offset;
 
-    public BoardTileRelationship GetBoardFromInput(int width, int height)
+    private void Start()
+    {
+        boardStats = GetComponent<BoardStats>();
+    }
+
+    public BoardTileRelationship GetBoardFromInput()
     {
 
-        int[,] rawTileValues = bg.getLevelledBoard(tileTypes.Length, width, height);
+        int[,] rawTileValues = bg.getLevelledBoard(boardStats);
 
         return MakeTiles(rawTileValues);
         

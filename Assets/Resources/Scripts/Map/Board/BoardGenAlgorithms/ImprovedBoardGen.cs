@@ -7,20 +7,16 @@ public class ImprovedBoardGen : BoardGenAlgorithm
 {
     const float SCALE = 2f;
 
-    public float waterLevel;
-    public float globalTemp;
-    public float globalHumidity;
 
-
-    public override int[,] getLevelledBoard(int numLevels, int boardWidth, int boardHeight)
+    public override int[,] getLevelledBoard(BoardStats bs)
     {
-        float[,] perlinBoard = createPerlinBoard(SCALE, boardWidth, boardHeight);
-        TileChars[,] tiles = InitializeTileChars(perlinBoard);
+        float[,] perlinBoard = createPerlinBoard(SCALE, bs.width, bs.height);
+        TileChars[,] tiles = InitializeTileChars(perlinBoard, bs);
         return convertTileTypesToLevelledBoard(tiles);
     }
 
 
-    TileChars[,] InitializeTileChars(float[,] heightMap)
+    TileChars[,] InitializeTileChars(float[,] heightMap, BoardStats bs)
     {
         TileChars[,] tiles = new TileChars[heightMap.GetLength(0), heightMap.GetLength(1)];
 
@@ -28,7 +24,7 @@ public class ImprovedBoardGen : BoardGenAlgorithm
         {
             for(int x = 0; x < tiles.GetLength(0); x++)
             {
-                tiles[x, y] = new TileChars(this, heightMap[x,y]);
+                tiles[x, y] = new TileChars(bs, heightMap[x,y]);
             }
         }
         return tiles;
@@ -51,18 +47,17 @@ public class ImprovedBoardGen : BoardGenAlgorithm
 
 
 
-
     class TileChars
     {
         public float height;
         public float humidity;
         public float temperature;
         public bool isUnderwater;
-        ImprovedBoardGen boardInfo;
+        BoardStats boardStats;
 
-        public TileChars(ImprovedBoardGen b, float h)
+        public TileChars(BoardStats bs, float h)
         {
-            boardInfo = b;
+            boardStats = bs;
             height = h;
 
             GenerateStats();
@@ -70,17 +65,21 @@ public class ImprovedBoardGen : BoardGenAlgorithm
 
         public void GenerateStats()
         {
-            if(height < boardInfo.waterLevel)
+            if(height < boardStats.waterLevel)
             {
                 isUnderwater = true;
+                return;
             }
+
+
+            // to get temperature, function of height and proximity to equator
+
+
         }
 
         public int GetTileType()
         {
             return isUnderwater ? 0 : 1;
         }
-        
-
     }
 }
