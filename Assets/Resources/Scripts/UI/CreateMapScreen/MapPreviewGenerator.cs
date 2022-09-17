@@ -19,6 +19,8 @@ public class MapPreviewGenerator : MonoBehaviour
 
     BoardGenAlgorithm bg;
 
+    GameObject boardObj;
+
     float height;
 
     int[,] values;
@@ -46,8 +48,14 @@ public class MapPreviewGenerator : MonoBehaviour
 
         gl.cellSize = new Vector2(celldimensions, celldimensions);
 
+        // imperfect but needed to not break everything at the moment. would like to overhaul preview system entirely
+        GameObject instantiatedBoard = Instantiate(boardObj);
+        BoardStats boardStats = instantiatedBoard.GetComponent<BoardStats>();
+        boardStats.height = y;
+        boardStats.width = x;
+        boardStats.tileTypes = new GameObject[biomeTypes.Length];
 
-        values = bg.getLevelledBoard(biomeTypes.Length, x, y);
+        values = bg.getLevelledBoard(boardStats);
 
 
 

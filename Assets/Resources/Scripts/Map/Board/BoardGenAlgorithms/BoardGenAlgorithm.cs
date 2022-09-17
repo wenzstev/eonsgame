@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class BoardGenAlgorithm : MonoBehaviour
 {
-    public abstract int[,] getLevelledBoard(int numLevels, int boardWidth, int boardHeight);
+    public abstract int[,] getLevelledBoard(BoardStats bs);
 
     protected float[,] createPerlinBoard(float scale, int sampleNumX, int sampleNumY)
     {
