@@ -19,10 +19,7 @@ public class LoadSave : MonoBehaviour
 
         Board b = boardObject.GetComponent<Board>();
 
-        b.width = save.width;
-        b.height = save.height;
-
-        b.CreateTilesFromSerializedData(save.tiles);
+        b.CreateTilesFromSerializedData(save.tiles, b.Width, b.Height);
         cl.CreateCultures(save.tiles);
     }
 

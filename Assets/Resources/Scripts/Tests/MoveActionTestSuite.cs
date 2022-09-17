@@ -25,8 +25,10 @@ public class MoveActionTestSuite
         Board testBoard = testBoardObj.GetComponent<Board>();
         testBoard.GetComponent<BoardInputReader>().bg = testBoardGeneratorObj.GetComponent<BoardGenAlgorithm>();
 
-        testBoard.height = 1;
-        testBoard.width = 2;
+        BoardStats boardStats = testBoard.GetComponent<BoardStats>();
+
+        boardStats.height = 1;
+        boardStats.width = 2;
 
         yield return null;
 
