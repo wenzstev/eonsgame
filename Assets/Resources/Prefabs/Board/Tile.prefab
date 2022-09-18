@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 6168205754475305981}
   - component: {fileID: 1639098555202725608}
   - component: {fileID: 4710547446352574617}
+  - component: {fileID: -5901846302662888019}
   m_Layer: 0
   m_Name: Tile
   m_TagString: Untagged
@@ -346,6 +347,22 @@ MonoBehaviour:
   topAtlas: {fileID: 0}
   groundSr: {fileID: 1749456369673014290}
   topSr: {fileID: 2583751277384828290}
+--- !u!114 &-5901846302662888019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8882980994967741360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbb7dcc0380b7f3428887aa48bdabfa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elevation: 0
+  humidity: 0
+  temperature: 0
+  isUnderwater: 0
 --- !u!1001 &756627589101669879
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -371,7 +388,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3043850971505870648, guid: 85ad7f1298e8c4746b89943560af3245, type: 3}
       propertyPath: m_SortingLayer
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3043850971505870648, guid: 85ad7f1298e8c4746b89943560af3245, type: 3}
       propertyPath: m_SortingOrder

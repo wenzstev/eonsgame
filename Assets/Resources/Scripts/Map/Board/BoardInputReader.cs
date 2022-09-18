@@ -23,14 +23,12 @@ public class BoardInputReader : MonoBehaviour
         boardStats = GetComponent<BoardStats>();
     }
 
-    public BoardTileRelationship GetBoardFromInput()
+    public BoardTileRelationship GenerateBoard()
     {
-
-        int[,] rawTileValues = bg.getLevelledBoard(boardStats);
-
-        return MakeTiles(rawTileValues);
-        
+        return bg.CreateBoard(GetComponent<BoardStats>());
     }
+
+  
 
     public BoardTileRelationship GetBoardFromInput(int[,] rawTileValues)
     {
