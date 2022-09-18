@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ImprovedBoardGen : BoardGenAlgorithm
 {
-    const float SCALE = 2f;
+    const float SCALE = 5f;
 
 
     public override int[,] getLevelledBoard(BoardStats bs)
@@ -24,7 +24,7 @@ public class ImprovedBoardGen : BoardGenAlgorithm
         {
             for(int x = 0; x < tiles.GetLength(0); x++)
             {
-                tiles[x, y] = new TileChars(bs, heightMap[x,y]);
+                tiles[x, y] = new TileChars(bs, heightMap[x,y], x, y);
             }
         }
         return tiles;
@@ -49,37 +49,78 @@ public class ImprovedBoardGen : BoardGenAlgorithm
 
     class TileChars
     {
-        public float height;
+        int x;
+        int y;
+
+        public float elevation;
+        float absoluteHeight;
         public float humidity;
         public float temperature;
         public bool isUnderwater;
         BoardStats boardStats;
 
-        public TileChars(BoardStats bs, float h)
+        public TileChars(BoardStats bs, float h, int x, int y)
         {
             boardStats = bs;
-            height = h;
+            absoluteHeight = h * bs.elevationRange;
+            elevation = Mathf.Max(0, absoluteHeight - bs.seaLevel);
+            this.x = x;
+            this.y = y;
 
             GenerateStats();
         }
 
         public void GenerateStats()
         {
-            if(height < boardStats.waterLevel)
+            if(elevation == 0)
             {
                 isUnderwater = true;
-                return;
             }
 
 
             // to get temperature, function of height and proximity to equator
+            temperature = calculateTemperature();
 
+        }
 
+        float calculateTemperature()
+        {
+            // average temperature is at middle latitudes
+            float distanceFromEquator = Mathf.Abs(boardStats.equator - y) / (float) boardStats.maxDistFromEquator;
+            float tempWithoutElevation = boardStats.globalTemp - (distanceFromEquator * boardStats.tempVariance) + boardStats.tempVariance/2;
+
+            // TODO: mediating effects of water?
+
+            return tempWithoutElevation - elevation / 100; // elevation is in meters, lose 1 degree Celcius per 100 meters in height change
         }
 
         public int GetTileType()
         {
-            return isUnderwater ? 0 : 1;
+            if (temperature < 0f)
+            {
+                return 4; // 4 is tundra
+            }
+
+            if (isUnderwater)
+            {
+                return 0; // 0 is ocean
+            }
+
+  
+
+            if (temperature > 15f)
+            {
+                return 3; // 3 is desert
+            }
+
+
+
+            if(elevation > 6000f)
+            {
+                return 5; // 5 is mountain peak
+            }
+
+            return 1; // 1 is grassland, "default" right now
         }
     }
 }

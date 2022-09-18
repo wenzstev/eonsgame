@@ -206,9 +206,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76d3e805cb2d20d4d87c17e949010fdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waterLevel: 0.9
-  globalTemp: 0
-  globalHumidity: 0
 --- !u!1 &1271303100
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,7 +259,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 11.752154
+  orthographic size: 30
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -286,7 +283,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1271303100}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.71, y: 10.12, z: -10}
+  m_LocalPosition: {x: 40.3, y: 25, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -304,21 +301,45 @@ PrefabInstance:
       propertyPath: bg
       value: 
       objectReference: {fileID: 444759045}
-    - target: {fileID: 734804678373380931, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
-      propertyPath: m_Name
-      value: Board
-      objectReference: {fileID: 0}
-    - target: {fileID: 734804678373380932, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
+    - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: width
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
-    - target: {fileID: 734804678373380932, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
+    - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: height
       value: 50
       objectReference: {fileID: 0}
-    - target: {fileID: 734804678373380932, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
-      propertyPath: DEBUG_TEST_GEN
-      value: 1
+    - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
+      propertyPath: globalTemp
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
+      propertyPath: isHemisphere
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
+      propertyPath: tempVariance
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
+      propertyPath: elevationRange
+      value: 8000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
+      propertyPath: percentUnderWater
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
+      propertyPath: tileTypes.Array.data[4]
+      value: 
+      objectReference: {fileID: 6622275044617704145, guid: 376176d76cc55364fa17591865b5b303, type: 3}
+    - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
+      propertyPath: tileTypes.Array.data[5]
+      value: 
+      objectReference: {fileID: 5323336950972137596, guid: 1e326386dc5fa2f4ca18f10e22bd67bd, type: 3}
+    - target: {fileID: 734804678373380931, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
+      propertyPath: m_Name
+      value: Board
       objectReference: {fileID: 0}
     - target: {fileID: 734804678373380933, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: m_RootOrder

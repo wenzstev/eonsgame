@@ -14,14 +14,38 @@ public class BoardStats : MonoBehaviour
             return tileTypes.Length;
         }
     }
+    public float tempVariance = 25f;
 
-    public float waterLevel;
+    public float percentUnderWater;
     public float globalTemp;
     public float globalHumidity;
     public bool isHemisphere = false;
-    public int equator;
+    public float seaLevel
+    {
+        get
+        {
+            return percentUnderWater * elevationRange;
+        }
+    }
+
+    public float elevationRange;
+    public int equator { 
+        get
+        {
+            return isHemisphere ? 0 : Mathf.FloorToInt(height / 2);
+        }
+    }
+
+    public int maxDistFromEquator
+    {
+        get
+        {
+            return isHemisphere ? height : Mathf.FloorToInt(height / 2);
+        }
+    }
 
     public GameObject[] tileTypes;
+
 
 
 }
