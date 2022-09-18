@@ -7,12 +7,24 @@ public class ImprovedBoardGen : BoardGenAlgorithm
 {
     const float SCALE = 5f;
 
+    GameObject boardObj;
 
-    public override int[,] getLevelledBoard(BoardStats bs)
+
+    public override BoardTileRelationship CreateBoard(BoardStats bs)
     {
-        float[,] perlinBoard = createPerlinBoard(SCALE, bs.width, bs.height);
-        TileChars[,] tiles = InitializeTileChars(perlinBoard, bs);
-        return convertTileTypesToLevelledBoard(tiles);
+        boardObj = bs.gameObject;
+        // step 1: heightmap
+        BoardTileRelationship perlinBoard = CreateRawPerlinBoard(boardObj, SCALE, bs.width, bs.height);
+
+        // step 2: temperature
+        CalculateTemperatures(perlinBoard.tiles);
+
+        // step 3: humidity
+
+        // step 4: determine tile types (with sprites)
+        DetermineTileTypes(perlinBoard.tiles);
+
+        return perlinBoard;
     }
 
 
@@ -45,82 +57,50 @@ public class ImprovedBoardGen : BoardGenAlgorithm
         return levelledBoard;
     }
 
-
-
-    class TileChars
+    float calculateHumidity(GameObject [,] tiles)
     {
-        int x;
-        int y;
 
-        public float elevation;
-        float absoluteHeight;
-        public float humidity;
-        public float temperature;
-        public bool isUnderwater;
-        BoardStats boardStats;
-
-        public TileChars(BoardStats bs, float h, int x, int y)
+        for (int y = 0; y < tiles.GetLength(1); y++)
         {
-            boardStats = bs;
-            absoluteHeight = h * bs.elevationRange;
-            elevation = Mathf.Max(0, absoluteHeight - bs.seaLevel);
-            this.x = x;
-            this.y = y;
-
-            GenerateStats();
+            for(int x = 0; x < tiles.GetLength(0); x++)
+            {
+            }
         }
 
-        public void GenerateStats()
+        return 0;
+    }
+
+    void CalculateTemperatures(GameObject[,] tiles)
+    {
+        for (int y = 0; y < tiles.GetLength(1); y++)
         {
-            if(elevation == 0)
+            for (int x = 0; x < tiles.GetLength(0); x++)
             {
-                isUnderwater = true;
+                CalculateTileTemperature(tiles[x, y].GetComponent<TileChars>());
             }
-
-
-            // to get temperature, function of height and proximity to equator
-            temperature = calculateTemperature();
-
         }
+    }
 
-        float calculateTemperature()
+    float CalculateTileTemperature(TileChars tileChars)
+    {
+        BoardStats boardStats = boardObj.GetComponent<BoardStats>();
+        // average temperature is at middle latitudes
+        float distanceFromEquator = Mathf.Abs(boardStats.equator - tileChars.y) / (float)boardStats.maxDistFromEquator;
+        float tempWithoutElevation = boardStats.globalTemp - (distanceFromEquator * boardStats.tempVariance) + boardStats.tempVariance / 2;
+
+        // TODO: mediating effects of water?
+
+        return tempWithoutElevation - tileChars.elevation / 100; // elevation is in meters, lose 1 degree Celcius per 100 meters in height change
+    }
+
+    void DetermineTileTypes(GameObject[,] tiles)
+    {
+        for (int y = 0; y < tiles.GetLength(1); y++)
         {
-            // average temperature is at middle latitudes
-            float distanceFromEquator = Mathf.Abs(boardStats.equator - y) / (float) boardStats.maxDistFromEquator;
-            float tempWithoutElevation = boardStats.globalTemp - (distanceFromEquator * boardStats.tempVariance) + boardStats.tempVariance/2;
-
-            // TODO: mediating effects of water?
-
-            return tempWithoutElevation - elevation / 100; // elevation is in meters, lose 1 degree Celcius per 100 meters in height change
-        }
-
-        public int GetTileType()
-        {
-            if (temperature < 0f)
+            for (int x = 0; x < tiles.GetLength(0); x++)
             {
-                return 4; // 4 is tundra
+                // TODO determine the right type of tile to exist here, maybe from scriptableobject?
             }
-
-            if (isUnderwater)
-            {
-                return 0; // 0 is ocean
-            }
-
-  
-
-            if (temperature > 15f)
-            {
-                return 3; // 3 is desert
-            }
-
-
-
-            if(elevation > 6000f)
-            {
-                return 5; // 5 is mountain peak
-            }
-
-            return 1; // 1 is grassland, "default" right now
         }
     }
 }

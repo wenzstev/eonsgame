@@ -55,7 +55,7 @@ public class MapPreviewGenerator : MonoBehaviour
         boardStats.width = x;
         boardStats.tileTypes = new GameObject[biomeTypes.Length];
 
-        values = bg.getLevelledBoard(boardStats);
+        //values = bg.CreateBoard(boardStats);
 
 
 
@@ -71,7 +71,7 @@ public class MapPreviewGenerator : MonoBehaviour
             {
                 GameObject currentTile = Instantiate(baseTile);
                 currentTile.transform.parent = transform;
-                currentTile.GetComponent<Image>().color = Color.Lerp(Color.black, Color.white, (float) values[numX, numY] / 5);
+                //currentTile.GetComponent<Image>().color = Color.Lerp(Color.black, Color.white, (float) values[numX, numY] / 5);
                 currentTiles.Add(currentTile);
             }
         }
