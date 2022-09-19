@@ -22,7 +22,7 @@ public class ImprovedBoardGen : BoardGenAlgorithm
         // step 3: humidity
 
         // step 4: determine tile types (with sprites)
-        DetermineTileTypes(perlinBoard.tiles);
+        //DetermineTileTypes(perlinBoard.tiles);
 
         return perlinBoard;
     }
@@ -100,6 +100,7 @@ public class ImprovedBoardGen : BoardGenAlgorithm
             for (int x = 0; x < tiles.GetLength(0); x++)
             {
                 // TODO determine the right type of tile to exist here, maybe from scriptableobject?
+
             }
         }
     }
