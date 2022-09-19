@@ -17,17 +17,17 @@ public abstract class BoardGenAlgorithm : MonoBehaviour
 
         Vector2 startPosition = new Vector2(Random.value * 10, Random.value * 10);
         float[,] points = new float[sampleNumX, sampleNumY];
-        for (int i = 0; i < sampleNumY; i++)
+        for (int y = 0; y < sampleNumY; y++)
         {
-            for (int j = 0; j < sampleNumX; j++)
+            for (int x = 0; x < sampleNumX; x++)
             {
-                float currentSampleX = Mathf.Lerp(startPosition.x, startPosition.x + scale, Mathf.InverseLerp(0, sampleNumX, j));
-                float currentSampleY = Mathf.Lerp(startPosition.y, startPosition.y + scale, Mathf.InverseLerp(0, sampleNumY, i));
+                float currentSampleX = Mathf.Lerp(startPosition.x, startPosition.x + scale, Mathf.InverseLerp(0, sampleNumX, x));
+                float currentSampleY = Mathf.Lerp(startPosition.y, startPosition.y + scale, Mathf.InverseLerp(0, sampleNumY, y));
                 float curHeightPoint = Mathf.PerlinNoise(currentSampleX, currentSampleY);
-                Tiles[j, i] = InitializeTile(i, j, boardObj.GetComponent<Board>());
-                tileLookup.Add(Tiles[i, j], (i, j));
+                Tiles[x, y] = InitializeTile(x, y, boardObj.GetComponent<Board>());
+                tileLookup.Add(Tiles[x, y], (x, y));
 
-                AddElevationAndStats(Tiles[i, j], boardObj.GetComponent<BoardStats>(), curHeightPoint);
+                AddElevationAndStats(Tiles[x, y], boardObj.GetComponent<BoardStats>(), curHeightPoint);
             }
         }
 
@@ -41,7 +41,7 @@ public abstract class BoardGenAlgorithm : MonoBehaviour
         newTile.transform.SetParent(b.transform);
         newTile.name = x + ", " + y;
 
-        Tile tileComponent = newTile.AddComponent<Tile>();
+        Tile tileComponent = newTile.GetComponent<Tile>();
         tileComponent.board = b;
         tileComponent.id = y * b.Width + x; // unique id for each tile
 
@@ -50,7 +50,7 @@ public abstract class BoardGenAlgorithm : MonoBehaviour
 
     public void AddElevationAndStats(GameObject tile, BoardStats boardStats, float perlinHeight)
     {
-        TileChars tileChars = tile.AddComponent<TileChars>();
+        TileChars tileChars = tile.GetComponent<TileChars>();
         tileChars.elevation = perlinHeight * boardStats.elevationRange;
     }
 
