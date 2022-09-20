@@ -6,12 +6,14 @@ public class Board : MonoBehaviour
 {
     public BoardTileRelationship tiles;
 
-    public int Width { get
+    public int Width { 
+        get
         {
             return boardStats.width;
         }
     }
-    public int Height { get
+    public int Height { 
+        get
         {
             return boardStats.height;
         }
@@ -30,9 +32,16 @@ public class Board : MonoBehaviour
         }
     }
 
+    public void SetBoardTiles(Dictionary<string, object> boardDict)
+    {
+        tiles = (BoardTileRelationship) boardDict["tiles"];
+        EventManager.StopListening("BoardCreated", SetBoardTiles);
+
+    }
+
     public void CreateBoard()
     {
-        tiles = GetComponent<BoardInputReader>().GetBoardFromInput();
+        tiles = GetComponent<BoardInputReader>().GenerateBoard();
     }
 
     public void CreateBoardFromValues(int[,] values, int w, int h)
@@ -82,7 +91,7 @@ public class Board : MonoBehaviour
 
 public class BoardTileRelationship
 {
-    GameObject[,] tiles;
+    public GameObject[,] tiles;
     public Dictionary<GameObject, (int, int)> tileLookup;
 
     static (int, int)[] directionToCoords = new (int, int)[]

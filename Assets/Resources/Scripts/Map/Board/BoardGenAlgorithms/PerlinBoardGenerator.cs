@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// DEPRECATED AND BROKEN (for now; new tile gen has changed too much to be backwards compatabile without a lot of pointless work)
 public class PerlinBoardGenerator : BoardGenAlgorithm
 {
 
@@ -11,20 +12,18 @@ public class PerlinBoardGenerator : BoardGenAlgorithm
 
 
     // creates a perlin board and levels it based on the number of levels requested
-    public override int[,] getLevelledBoard(BoardStats bs)
+    public override BoardTileRelationship CreateBoard(BoardStats bs)
     {
-        float[,] perlinBoard = createPerlinBoard(scale, bs.width, bs.height);
+        BoardTileRelationship perlinBoard = CreateRawPerlinBoard(bs.gameObject, scale, bs.width, bs.height);
 
-        int[,] levelledBoard = new int[perlinBoard.GetLength(0), perlinBoard.GetLength(1)];
-
-        for (int j = 0; j < levelledBoard.GetLength(1); j++)
+        for (int j = 0; j < perlinBoard.tiles.GetLength(1); j++)
         {
-            for (int i = 0; i < levelledBoard.GetLength(0); i++)
+            for (int i = 0; i < perlinBoard.tiles.GetLength(0); i++)
             {
-                levelledBoard[i, j] = Mathf.FloorToInt(perlinBoard[i, j] * bs.numLevels);
+                // TODO: implement way to convert base tile to certain type with elevation
             }
         }
-        return levelledBoard;
+        return perlinBoard;
     }
 
 
