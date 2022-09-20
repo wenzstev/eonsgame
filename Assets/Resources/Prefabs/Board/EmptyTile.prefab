@@ -199,10 +199,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   x: 0
   y: 0
-  elevation: 0
+  isCoast: 0
+  absoluteHeight: 0
   humidity: 0
   temperature: 0
-  isUnderwater: 0
 --- !u!114 &-1921199301808142677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,12 +215,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b82bc6acddd69644eb4ca3a3d07cd8dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tempMin: {r: 0, g: 0.75591254, b: 1, a: 0}
-  tempMax: {r: 1, g: 0.5539104, b: 0.12893075, a: 0}
-  humidityMin: {r: 1, g: 0.7696314, b: 0, a: 0}
-  humidityMax: {r: 0.03166628, g: 1, b: 0, a: 0}
+  tempMin: {r: 0.34591186, g: 1, b: 0.7699876, a: 1}
+  tempMax: {r: 1, g: 0.5539104, b: 0.12893075, a: 1}
+  humidityMin: {r: 1, g: 0.7696314, b: 0, a: 1}
+  humidityMax: {r: 0.03166628, g: 1, b: 0, a: 1}
+  waterColor: {r: 0, g: 0.12593818, b: 1, a: 1}
+  frozenColor: {r: 0, g: 0.68605995, b: 1, a: 1}
   tempMinValue: 0
   tempMaxValue: 30
+  precipitationMinValue: 0
+  precipitationMaxValue: 1000
 --- !u!114 &-9027881737880411949
 MonoBehaviour:
   m_ObjectHideFlags: 0
