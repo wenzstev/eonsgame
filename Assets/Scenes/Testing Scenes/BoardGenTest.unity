@@ -206,6 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76d3e805cb2d20d4d87c17e949010fdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EmptyTile: {fileID: 2394264196207273235, guid: f1f23fe5e71224d48812a5e386bf80bf, type: 3}
 --- !u!1 &1271303100
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,7 +304,7 @@ PrefabInstance:
       objectReference: {fileID: 444759045}
     - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: width
-      value: 100
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: height
@@ -311,7 +312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: globalTemp
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: isHemisphere
@@ -324,6 +325,10 @@ PrefabInstance:
     - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: elevationRange
       value: 8000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
+      propertyPath: globalHumidity
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: percentUnderWater

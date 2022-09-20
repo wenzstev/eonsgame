@@ -7,120 +7,95 @@ public class ImprovedBoardGen : BoardGenAlgorithm
 {
     const float SCALE = 5f;
 
+    GameObject boardObj;
 
-    public override int[,] getLevelledBoard(BoardStats bs)
+
+    public override BoardTileRelationship CreateBoard(BoardStats bs)
     {
-        float[,] perlinBoard = createPerlinBoard(SCALE, bs.width, bs.height);
-        TileChars[,] tiles = InitializeTileChars(perlinBoard, bs);
-        return convertTileTypesToLevelledBoard(tiles);
+        boardObj = bs.gameObject;
+        // step 1: heightmap
+        BoardTileRelationship perlinBoard = CreateRawPerlinBoard(boardObj, SCALE, bs.width, bs.height);
+        bs.GetComponent<Board>().tiles = perlinBoard;
+
+        // step 2: temperature
+        CalculateTemperatures(perlinBoard.tiles);
+
+        // step 3: humidity
+        CalculateHumidity(perlinBoard.tiles);
+
+        // step 4: determine tile types (with sprites)
+        //DetermineTileTypes(perlinBoard.tiles);
+
+        return perlinBoard;
     }
 
 
-    TileChars[,] InitializeTileChars(float[,] heightMap, BoardStats bs)
+    void CalculateHumidity(GameObject [,] tiles)
     {
-        TileChars[,] tiles = new TileChars[heightMap.GetLength(0), heightMap.GetLength(1)];
+        HashSet<GameObject> passedTiles = new HashSet<GameObject>();
+        List<GameObject> nextTiles = new List<GameObject>();
 
-        for(int y = 0; y < tiles.GetLength(1); y++)
+        // step 1: find all coasts, give "rain" porportionate to amount of adjacent ocean tiles
+        for (int y = 0; y < tiles.GetLength(1); y++)
         {
             for(int x = 0; x < tiles.GetLength(0); x++)
             {
-                tiles[x, y] = new TileChars(bs, heightMap[x,y], x, y);
+                TileChars curTileChars = tiles[x, y].GetComponent<TileChars>();
+                if (curTileChars.isUnderwater)
+                {
+                    passedTiles.Add(curTileChars.gameObject);
+                    continue;
+                }
+
+                Tile curTile = tiles[x, y].GetComponent<Tile>();
+                int numAdjacentOceanTiles = 0;
+
+                for (int i = 0; i < 7; i++)
+                {
+                    if(curTile.GetNeighbor((Direction)i) && curTile.GetNeighbor((Direction)i).GetComponent<TileChars>().isUnderwater) // if there is a neighbor in that direction, and that neighbor is underwater
+                    {
+                        numAdjacentOceanTiles++;
+                    }
+                    curTileChars.humidity = numAdjacentOceanTiles * boardObj.GetComponent<BoardStats>().globalHumidity;
+                }
+
+                passedTiles.Add(curTileChars.gameObject);     
             }
         }
-        return tiles;
+
+        // step 2: iterate through adjacent tiles in breadth-first algorithm
     }
 
-    int[,] convertTileTypesToLevelledBoard(TileChars[,] tiles)
-    {
-        int[,] levelledBoard = new int[tiles.GetLength(0), tiles.GetLength(1)];
 
+    float CalculateHumidity(TileChars tileChars)
+    {
+
+
+        return 0;
+    }
+
+    void CalculateTemperatures(GameObject[,] tiles)
+    {
         for (int y = 0; y < tiles.GetLength(1); y++)
         {
             for (int x = 0; x < tiles.GetLength(0); x++)
             {
-                levelledBoard[x, y] = tiles[x, y].GetTileType();
+                tiles[x,y].GetComponent<TileChars>().temperature = CalculateTileTemperature(tiles[x, y].GetComponent<TileChars>());
             }
         }
-
-        return levelledBoard;
     }
 
-
-
-    class TileChars
+    float CalculateTileTemperature(TileChars tileChars)
     {
-        int x;
-        int y;
+        BoardStats boardStats = boardObj.GetComponent<BoardStats>();
+        // average temperature is at middle latitudes
+        float distanceFromEquator = Mathf.Abs(boardStats.equator - tileChars.y) / (float)boardStats.maxDistFromEquator;
+        float tempWithoutElevation = boardStats.globalTemp - (distanceFromEquator * boardStats.tempVariance) + boardStats.tempVariance / 2;
 
-        public float elevation;
-        float absoluteHeight;
-        public float humidity;
-        public float temperature;
-        public bool isUnderwater;
-        BoardStats boardStats;
+        // TODO: mediating effects of water?
 
-        public TileChars(BoardStats bs, float h, int x, int y)
-        {
-            boardStats = bs;
-            absoluteHeight = h * bs.elevationRange;
-            elevation = Mathf.Max(0, absoluteHeight - bs.seaLevel);
-            this.x = x;
-            this.y = y;
-
-            GenerateStats();
-        }
-
-        public void GenerateStats()
-        {
-            if(elevation == 0)
-            {
-                isUnderwater = true;
-            }
-
-
-            // to get temperature, function of height and proximity to equator
-            temperature = calculateTemperature();
-
-        }
-
-        float calculateTemperature()
-        {
-            // average temperature is at middle latitudes
-            float distanceFromEquator = Mathf.Abs(boardStats.equator - y) / (float) boardStats.maxDistFromEquator;
-            float tempWithoutElevation = boardStats.globalTemp - (distanceFromEquator * boardStats.tempVariance) + boardStats.tempVariance/2;
-
-            // TODO: mediating effects of water?
-
-            return tempWithoutElevation - elevation / 100; // elevation is in meters, lose 1 degree Celcius per 100 meters in height change
-        }
-
-        public int GetTileType()
-        {
-            if (temperature < 0f)
-            {
-                return 4; // 4 is tundra
-            }
-
-            if (isUnderwater)
-            {
-                return 0; // 0 is ocean
-            }
-
-  
-
-            if (temperature > 15f)
-            {
-                return 3; // 3 is desert
-            }
-
-
-
-            if(elevation > 6000f)
-            {
-                return 5; // 5 is mountain peak
-            }
-
-            return 1; // 1 is grassland, "default" right now
-        }
+        return tempWithoutElevation - tileChars.elevation / 100; // elevation is in meters, lose 1 degree Celcius per 100 meters in height change
     }
+
+
 }

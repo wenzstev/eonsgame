@@ -26,7 +26,7 @@ public class Tile : MonoBehaviour
 
     public Dictionary<Direction, GameObject> neighbors;
 
-    void Start()
+    void Awake()
     {
         neighbors = new Dictionary<Direction, GameObject>();
     }
