@@ -7,36 +7,39 @@ public class TileChars : MonoBehaviour
     public int x;
     public int y;
 
-    public float elevation;
-    float absoluteHeight;
+    public float elevation
+    {
+        get
+        {
+            return Mathf.Max(0, absoluteHeight - boardStats.seaLevel);
+        }
+    }
+
+    public bool isUnderwater
+    {
+        get
+        {
+            return elevation == 0;
+        }
+    }
+
+    public bool isFrozenOver
+    {
+        get
+        {
+            float threshold = isUnderwater ? -5 : 0;
+            return temperature < threshold;
+        }
+    }
+
+
+    public bool isCoast;
+    public float absoluteHeight;
     public float humidity;
     public float temperature;
-    public bool isUnderwater;
-    BoardStats boardStats;
 
-    public TileChars(BoardStats bs, float h, int x, int y)
-    {
-        boardStats = bs;
-        absoluteHeight = h * bs.elevationRange;
-        elevation = Mathf.Max(0, absoluteHeight - bs.seaLevel);
-        this.x = x;
-        this.y = y;
-
-        GenerateStats();
-    }
-
-    public void GenerateStats()
-    {
-        if (elevation == 0)
-        {
-            isUnderwater = true;
-        }
-
-
-        // to get temperature, function of height and proximity to equator
-
-    }
-
+    [System.NonSerialized]
+    public BoardStats boardStats;
 
 
     public int GetTileType()

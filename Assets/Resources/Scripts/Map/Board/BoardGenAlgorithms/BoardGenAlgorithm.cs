@@ -45,13 +45,18 @@ public abstract class BoardGenAlgorithm : MonoBehaviour
         tileComponent.board = b;
         tileComponent.id = y * b.Width + x; // unique id for each tile
 
+        TileChars tileChars = newTile.GetComponent<TileChars>();
+        tileChars.x = x;
+        tileChars.y = y;
+
         return newTile;
     }
 
     public void AddElevationAndStats(GameObject tile, BoardStats boardStats, float perlinHeight)
     {
         TileChars tileChars = tile.GetComponent<TileChars>();
-        tileChars.elevation = perlinHeight * boardStats.elevationRange;
+        tileChars.boardStats = boardStats;
+        tileChars.absoluteHeight = perlinHeight * boardStats.elevationRange;
     }
 
 }

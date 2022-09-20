@@ -26,6 +26,8 @@ public class BoardStats : MonoBehaviour
         }
     }
 
+
+
     public int height;
     public int width;
 

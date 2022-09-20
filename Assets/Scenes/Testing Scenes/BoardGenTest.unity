@@ -304,7 +304,7 @@ PrefabInstance:
       objectReference: {fileID: 444759045}
     - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: width
-      value: 100
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: height
@@ -312,7 +312,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: globalTemp
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: isHemisphere
@@ -325,6 +325,10 @@ PrefabInstance:
     - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: elevationRange
       value: 8000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
+      propertyPath: globalHumidity
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: percentUnderWater
