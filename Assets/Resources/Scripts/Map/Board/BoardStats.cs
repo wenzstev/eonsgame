@@ -31,12 +31,6 @@ public class BoardStats : MonoBehaviour
     public int height;
     public int width;
 
-    public int numLevels {
-        get
-        {
-            return tileTypes.Length;
-        }
-    }
     public float tempVariance = 25f;
 
     public float percentUnderWater;

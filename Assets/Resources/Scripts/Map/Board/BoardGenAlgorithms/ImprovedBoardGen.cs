@@ -5,7 +5,10 @@ using UnityEngine;
 
 public class ImprovedBoardGen : BoardGenAlgorithm
 {
-    const float SCALE = 5f;
+    public float SCALE = 5f;
+
+    public float humidityDropoff = .1f;
+    public float elevationModifier = .05f;
 
     GameObject boardObj;
 
@@ -33,46 +36,70 @@ public class ImprovedBoardGen : BoardGenAlgorithm
     void CalculateHumidity(GameObject [,] tiles)
     {
         HashSet<GameObject> passedTiles = new HashSet<GameObject>();
-        List<GameObject> nextTiles = new List<GameObject>();
+        HashSet<GameObject> firstPass = new HashSet<GameObject>();
+        HashSet<GameObject> secondPass = new HashSet<GameObject>();
 
-        // step 1: find all coasts, give "rain" porportionate to amount of adjacent ocean tiles
+        Queue<GameObject> nextTiles = new Queue<GameObject>();
+
+        // step 1: find all coasts
         for (int y = 0; y < tiles.GetLength(1); y++)
         {
             for(int x = 0; x < tiles.GetLength(0); x++)
             {
                 TileChars curTileChars = tiles[x, y].GetComponent<TileChars>();
-                if (curTileChars.isUnderwater)
-                {
-                    passedTiles.Add(curTileChars.gameObject);
-                    continue;
-                }
+
+                if (!curTileChars.isUnderwater) continue;
+                
 
                 Tile curTile = tiles[x, y].GetComponent<Tile>();
-                int numAdjacentOceanTiles = 0;
 
-                for (int i = 0; i < 7; i++)
-                {
-                    if(curTile.GetNeighbor((Direction)i) && curTile.GetNeighbor((Direction)i).GetComponent<TileChars>().isUnderwater) // if there is a neighbor in that direction, and that neighbor is underwater
-                    {
-                        numAdjacentOceanTiles++;
-                    }
-                    curTileChars.humidity = numAdjacentOceanTiles * boardObj.GetComponent<BoardStats>().globalHumidity;
-                }
 
-                passedTiles.Add(curTileChars.gameObject);     
+                // linq is cool 
+                var neighbors = Enumerable.Range(0, 8).Select((i) => curTile.GetNeighbor((Direction)i)).Where(e => e != null);
+                HashSet<GameObject> coastNeighbors = neighbors.Where(neighbor => neighbor.GetComponent<TileChars>().isUnderwater == false).ToHashSet();
+                firstPass.UnionWith(coastNeighbors);
+                curTileChars.humidity = boardObj.GetComponent<BoardStats>().globalHumidity;
+                passedTiles.Add(curTile.gameObject);
             }
         }
 
-        // step 2: iterate through adjacent tiles in breadth-first algorithm
+        // step two: pass in successive rings farther from the coast
+        while(firstPass.Count > 0)
+        {
+            foreach(GameObject tileObj in firstPass)
+            {
+                Tile curTile = tileObj.GetComponent<Tile>();
+                var neighbors = Enumerable.Range(0, 8).Select(i => curTile.GetNeighbor((Direction)i)).Where(e => e != null);
+
+                var passedNeighbors = neighbors.Where(e => passedTiles.Contains(e));
+                curTile.GetComponent<TileChars>().humidity = passedNeighbors.Average(e => calculateHumidity(curTile.gameObject, e)); // actual humidity calculation is here
+
+                secondPass.UnionWith(neighbors.Where(e => !passedNeighbors.Contains(e)));
+            }
+
+            passedTiles.UnionWith(firstPass); 
+            firstPass.Clear();
+            firstPass.UnionWith(secondPass);
+            secondPass.Clear();
+        }
     }
 
-
-    float CalculateHumidity(TileChars tileChars)
+    float calculateHumidity(GameObject curTile, GameObject adjacentTile)
     {
+        float contributedHumidity;
+        TileChars curTileChars = curTile.GetComponent<TileChars>();
+        TileChars adjacentTileChars = adjacentTile.GetComponent<TileChars>();
 
+        contributedHumidity = adjacentTileChars.humidity * (1-humidityDropoff);
 
-        return 0;
+        float elevationDistance = Mathf.Max(0, curTileChars.elevation - adjacentTileChars.elevation);
+
+        contributedHumidity -= elevationDistance * elevationModifier;
+
+        return contributedHumidity;
     }
+
+
 
     void CalculateTemperatures(GameObject[,] tiles)
     {
