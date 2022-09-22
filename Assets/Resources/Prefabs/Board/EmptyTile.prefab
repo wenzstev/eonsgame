@@ -224,7 +224,7 @@ MonoBehaviour:
   tempMinValue: 0
   tempMaxValue: 30
   precipitationMinValue: 0
-  precipitationMaxValue: 1000
+  precipitationMaxValue: 100
 --- !u!114 &-9027881737880411949
 MonoBehaviour:
   m_ObjectHideFlags: 0
