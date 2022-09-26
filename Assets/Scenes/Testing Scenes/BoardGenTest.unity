@@ -207,9 +207,58 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EmptyTile: {fileID: 2394264196207273235, guid: f1f23fe5e71224d48812a5e386bf80bf, type: 3}
-  SCALE: 5
-  humidityDropoff: 0.2
+  humidityDropoff: 0.15
   elevationModifier: 0.005
+--- !u!114 &444759047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444759043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52ccf995411bf664a85209718ad73738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  octaves: 3
+  persistance: 0.5
+  lacunarity: 2
+  scale: 12.19
+  seed: 32
+  heightModifier:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.86511976
+      value: 0.50829524
+      inSlope: 1.496906
+      outSlope: 1.496906
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1271303100
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: globalTemp
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: isHemisphere
@@ -323,7 +372,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: tempVariance
-      value: 45
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: elevationRange
@@ -331,11 +380,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: globalHumidity
-      value: 100
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: percentUnderWater
-      value: 0.5
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: tileTypes.Array.data[4]

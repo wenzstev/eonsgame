@@ -5,19 +5,20 @@ using UnityEngine;
 
 public class ImprovedBoardGen : BoardGenAlgorithm
 {
-    public float SCALE = 5f;
-
     public float humidityDropoff = .1f;
     public float elevationModifier = .05f;
 
     GameObject boardObj;
 
+   
 
     public override BoardTileRelationship CreateBoard(BoardStats bs)
     {
+        HeightmapGenerator heightmapGenerator = GetComponent<HeightmapGenerator>();
+
         boardObj = bs.gameObject;
         // step 1: heightmap
-        BoardTileRelationship perlinBoard = CreateRawPerlinBoard(boardObj, SCALE, bs.width, bs.height);
+        BoardTileRelationship perlinBoard = CreateRawBoard(boardObj, bs.width, bs.height, heightmapGenerator);
         bs.GetComponent<Board>().tiles = perlinBoard;
 
         // step 2: temperature
@@ -90,7 +91,7 @@ public class ImprovedBoardGen : BoardGenAlgorithm
         TileChars curTileChars = curTile.GetComponent<TileChars>();
         TileChars adjacentTileChars = adjacentTile.GetComponent<TileChars>();
 
-        contributedHumidity = adjacentTileChars.humidity * (1-humidityDropoff);
+        contributedHumidity = adjacentTileChars.humidity * (1-humidityDropoff) * Mathf.Clamp(.033f * curTileChars.temperature, 0.01f, 1);
 
         float elevationDistance = Mathf.Max(0, curTileChars.elevation - adjacentTileChars.elevation);
 
