@@ -22,9 +22,10 @@ public class OverpopulationActionTestSuite
 
         Board testBoard = testBoardObj.GetComponent<Board>();
         testBoard.GetComponent<BoardInputReader>().bg = testBoardGeneratorObj.GetComponent<BoardGenAlgorithm>();
+        BoardStats boardStats = testBoard.GetComponent<BoardStats>();
 
-        testBoard.height = 3;
-        testBoard.width = 3;
+        boardStats.height = 3;
+        boardStats.width = 3;
 
         yield return null; // CreateBoard() is run in Board's Start() command
 

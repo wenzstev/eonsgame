@@ -123,17 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &39166066 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 16857794732596036, guid: 2a28ac8093d445f40ab20b07479d98c0, type: 3}
-  m_PrefabInstance: {fileID: 92158186}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1306ebbfd82924acf9740198dd024ff2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &92158186
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -197,8 +186,79 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoardGenerator
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 16857794732596036, guid: 2a28ac8093d445f40ab20b07479d98c0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2a28ac8093d445f40ab20b07479d98c0, type: 3}
+--- !u!1 &444759043 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 16857794732596091, guid: 2a28ac8093d445f40ab20b07479d98c0, type: 3}
+  m_PrefabInstance: {fileID: 92158186}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &444759045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444759043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76d3e805cb2d20d4d87c17e949010fdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EmptyTile: {fileID: 2394264196207273235, guid: f1f23fe5e71224d48812a5e386bf80bf, type: 3}
+  humidityDropoff: 0.15
+  elevationModifier: 0.005
+--- !u!114 &444759047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444759043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52ccf995411bf664a85209718ad73738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  octaves: 3
+  persistance: 0.5
+  lacunarity: 2
+  scale: 12.19
+  seed: 32
+  heightModifier:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.86511976
+      value: 0.50829524
+      inSlope: 1.496906
+      outSlope: 1.496906
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1271303100
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,7 +312,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 11.752154
+  orthographic size: 30
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -276,7 +336,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1271303100}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.71, y: 10.12, z: -10}
+  m_LocalPosition: {x: 40.3, y: 25, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -293,22 +353,50 @@ PrefabInstance:
     - target: {fileID: 191360135, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: bg
       value: 
-      objectReference: {fileID: 39166066}
+      objectReference: {fileID: 444759045}
+    - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
+      propertyPath: width
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
+      propertyPath: height
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
+      propertyPath: globalTemp
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
+      propertyPath: isHemisphere
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
+      propertyPath: tempVariance
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
+      propertyPath: elevationRange
+      value: 8000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
+      propertyPath: globalHumidity
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
+      propertyPath: percentUnderWater
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
+      propertyPath: tileTypes.Array.data[4]
+      value: 
+      objectReference: {fileID: 6622275044617704145, guid: 376176d76cc55364fa17591865b5b303, type: 3}
+    - target: {fileID: 2029181838, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
+      propertyPath: tileTypes.Array.data[5]
+      value: 
+      objectReference: {fileID: 5323336950972137596, guid: 1e326386dc5fa2f4ca18f10e22bd67bd, type: 3}
     - target: {fileID: 734804678373380931, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: m_Name
       value: Board
-      objectReference: {fileID: 0}
-    - target: {fileID: 734804678373380932, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
-      propertyPath: width
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 734804678373380932, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
-      propertyPath: height
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 734804678373380932, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
-      propertyPath: DEBUG_TEST_GEN
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 734804678373380933, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
       propertyPath: m_RootOrder

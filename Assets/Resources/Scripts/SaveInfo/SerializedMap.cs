@@ -12,8 +12,8 @@ public class Save
 
     public Save(Board b)
     {
-        width = b.width;
-        height = b.height;
+        width = b.Width;
+        height = b.Height;
         tiles = new List<SerializedTile>();
 
         for (int y = 0; y < height; y++)

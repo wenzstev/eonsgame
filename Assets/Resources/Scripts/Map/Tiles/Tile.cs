@@ -24,12 +24,13 @@ public class Tile : MonoBehaviour
         }
     }
 
-    public Dictionary<Direction, GameObject> neighbors;
+    Dictionary<Direction, GameObject> neighbors;
 
-    void Start()
+    void Awake()
     {
         neighbors = new Dictionary<Direction, GameObject>();
     }
+
 
     public GameObject GetNeighbor(Direction d)
     {
