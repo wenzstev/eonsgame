@@ -225,6 +225,17 @@ MonoBehaviour:
   tempMaxValue: 30
   precipitationMinValue: 0
   precipitationMaxValue: 100
+  DesertColor: {r: 0.9716981, g: 0.9579877, b: 0, a: 1}
+  SavannahColor: {r: 1, g: 0.5735978, b: 0, a: 1}
+  TropicalRainforestColor: {r: 0.13052988, g: 0.6981132, b: 0, a: 1}
+  GrasslandColor: {r: 0.4811321, g: 0.4782446, b: 0, a: 1}
+  WoodlandColor: {r: 0.3199936, g: 0.41568628, b: 0, a: 1}
+  SeasonalForestColor: {r: 0.44141975, g: 0.5754717, b: 0.23163636, a: 1}
+  TemperateRainForestColor: {r: 0.052040704, g: 0.3679245, b: 0, a: 1}
+  BorealForestColor: {r: 0.73537797, g: 0.6313726, b: 0, a: 1}
+  TundraColor: {r: 0.32935798, g: 0.5754717, b: 0.40612617, a: 1}
+  IceColor: {r: 1, g: 1, b: 1, a: 1}
+  WaterColor: {r: 0.32704395, g: 0.46702567, b: 1, a: 1}
 --- !u!114 &-9027881737880411949
 MonoBehaviour:
   m_ObjectHideFlags: 0

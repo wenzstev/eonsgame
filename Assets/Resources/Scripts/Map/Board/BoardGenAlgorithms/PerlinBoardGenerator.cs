@@ -14,7 +14,8 @@ public class PerlinBoardGenerator : BoardGenAlgorithm
     // creates a perlin board and levels it based on the number of levels requested
     public override BoardTileRelationship CreateBoard(BoardStats bs)
     {
-        BoardTileRelationship perlinBoard = CreateRawPerlinBoard(bs.gameObject, scale, bs.width, bs.height);
+        HeightmapGenerator heightmapGenerator = GetComponent<HeightmapGenerator>();
+        BoardTileRelationship perlinBoard = CreateRawBoard(bs.gameObject, bs.width, bs.height, heightmapGenerator);
 
         for (int j = 0; j < perlinBoard.tiles.GetLength(1); j++)
         {

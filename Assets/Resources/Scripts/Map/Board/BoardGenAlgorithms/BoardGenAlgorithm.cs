@@ -6,28 +6,22 @@ public abstract class BoardGenAlgorithm : MonoBehaviour
 {
     public GameObject EmptyTile;
 
-
     public abstract BoardTileRelationship CreateBoard(BoardStats bs);
 
-    protected BoardTileRelationship CreateRawPerlinBoard(GameObject boardObj, float scale, int sampleNumX, int sampleNumY)
+    protected BoardTileRelationship CreateRawBoard(GameObject boardObj, int sampleNumX, int sampleNumY, HeightmapGenerator heightmapGenerator)
     {
-        GameObject[,] Tiles = new GameObject[sampleNumX, sampleNumY];
+        float[,] heightmap = heightmapGenerator.CreateHeightmap(sampleNumX, sampleNumY);
+
+        GameObject[,] Tiles = new GameObject[heightmap.GetLength(0), heightmap.GetLength(1)];
         Dictionary<GameObject, (int, int)> tileLookup = new Dictionary<GameObject, (int, int)>();
 
-
-        Vector2 startPosition = new Vector2(Random.value * 10, Random.value * 10);
-        float[,] points = new float[sampleNumX, sampleNumY];
         for (int y = 0; y < sampleNumY; y++)
         {
             for (int x = 0; x < sampleNumX; x++)
             {
-                float currentSampleX = Mathf.Lerp(startPosition.x, startPosition.x + scale, Mathf.InverseLerp(0, sampleNumX, x));
-                float currentSampleY = Mathf.Lerp(startPosition.y, startPosition.y + scale, Mathf.InverseLerp(0, sampleNumY, y));
-                float curHeightPoint = Mathf.PerlinNoise(currentSampleX, currentSampleY);
                 Tiles[x, y] = InitializeTile(x, y, boardObj.GetComponent<Board>());
                 tileLookup.Add(Tiles[x, y], (x, y));
-
-                AddElevationAndStats(Tiles[x, y], boardObj.GetComponent<BoardStats>(), curHeightPoint);
+                AddElevationAndStats(Tiles[x, y], boardObj.GetComponent<BoardStats>(), heightmap[x,y]);
             }
         }
 
