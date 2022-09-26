@@ -46,7 +46,7 @@ public class Culture : MonoBehaviour
     public float influenceRate = .05f;
 
 
-    public TileInfo.TileType affinity { get; private set; }
+    public TileDrawer.BiomeType affinity { get; private set; }
 
     public int maxOnTile;
 
@@ -111,7 +111,7 @@ public class Culture : MonoBehaviour
         gameObject.name = s.name;
         currentState = (State) s.currentState;
         population = s.population;
-        affinity = (TileInfo.TileType) s.affinity;
+        affinity = (TileDrawer.BiomeType) s.affinity;
         SetTile(t);
         GetComponent<CultureMemory>().LoadFromSave(s.cultureMemory, t);
         cultureMemory = GetComponent<CultureMemory>();
@@ -186,7 +186,7 @@ public class Culture : MonoBehaviour
 
     private void GainAffinity(int newAffinity)
     {
-        affinity = (TileInfo.TileType) newAffinity;
+        affinity = (TileDrawer.BiomeType) newAffinity;
         maxOnTile = tileInfo.tileType == affinity ? tileInfo.popBase + 2 : tileInfo.popBase;
         tileInfo.UpdateCultureSurvivability();
         tileInfo.UpdateMaxOnTile(this);
