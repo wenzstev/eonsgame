@@ -6,26 +6,49 @@ public class Board : MonoBehaviour
 {
     public BoardTileRelationship tiles;
 
-    public int width;
-    public int height;
+    public int Width { 
+        get
+        {
+            return boardStats.width;
+        }
+    }
+    public int Height { 
+        get
+        {
+            return boardStats.height;
+        }
+    }
 
     public bool DEBUG_TEST_GEN = false;
 
+    BoardStats boardStats;
+
     private void Start()
     {
+        boardStats = GetComponent<BoardStats>();
         if(DEBUG_TEST_GEN)
         {
             CreateBoard();
         }
     }
 
-    public void CreateBoard()
+    public void SetBoardTiles(Dictionary<string, object> boardDict)
     {
-        tiles = GetComponent<BoardInputReader>().GetBoardFromInput(width, height);
+        tiles = (BoardTileRelationship) boardDict["tiles"];
+        EventManager.StopListening("BoardCreated", SetBoardTiles);
+
     }
 
-    public void CreateBoardFromValues(int[,] values)
+    public void CreateBoard()
     {
+        tiles = GetComponent<BoardInputReader>().GenerateBoard();
+    }
+
+    public void CreateBoardFromValues(int[,] values, int w, int h)
+    {
+        boardStats.width = w;
+        boardStats.height = h;
+
         tiles = GetComponent<BoardInputReader>().GetBoardFromInput(values);
     }
 
@@ -36,25 +59,27 @@ public class Board : MonoBehaviour
 
     public GameObject GetTileByID(int id)
     {
-        if(id > width * height - 1)
+        if(id > Width * Height - 1)
         {
             throw new System.Exception("Tried to get ID that is too big for board!");
         }
 
         int xpos = id;
         int ypos = 0;
-        while(xpos > width)
+        while(xpos > Width)
         {
-            xpos -= width;
+            xpos -= Width;
             ypos += 1;
         }
 
         return tiles.GetTile(xpos, ypos);
     }
 
-    public void CreateTilesFromSerializedData(List<SerializedTile> tiles)
+    public void CreateTilesFromSerializedData(List<SerializedTile> tiles, int h, int w)
     {
-        this.tiles = GetComponent<BoardInputReader>().GetBoardFromSerializedTiles(tiles, height, width);
+        boardStats.height = h;
+        boardStats.width = w;
+        this.tiles = GetComponent<BoardInputReader>().GetBoardFromSerializedTiles(tiles, Height, Width);
     }
 
     public GameObject GetTile(int x, int y)
@@ -66,7 +91,7 @@ public class Board : MonoBehaviour
 
 public class BoardTileRelationship
 {
-    GameObject[,] tiles;
+    public GameObject[,] tiles;
     public Dictionary<GameObject, (int, int)> tileLookup;
 
     static (int, int)[] directionToCoords = new (int, int)[]
