@@ -75,11 +75,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   height: 50
   width: 50
-  waterLevel: 0.5
+  tempVariance: 25
+  percentUnderWater: 0
   globalTemp: 0
   globalHumidity: 0
   isHemisphere: 0
-  equator: 0
+  elevationRange: 8000
   tileTypes:
   - {fileID: 2368399602029540936, guid: 5030e63fa9ecad843886bb5b71ccbe25, type: 3}
   - {fileID: 6821989227695789434, guid: d4599aa13219d5c48a7533f9772b3cef, type: 3}

@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 16857794732596037}
-  - component: {fileID: 16857794732596036}
+  - component: {fileID: 8231676161071347811}
+  - component: {fileID: 6368373193232253809}
   m_Layer: 0
   m_Name: BoardGenerator
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &16857794732596036
+--- !u!114 &8231676161071347811
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,9 +42,50 @@ MonoBehaviour:
   m_GameObject: {fileID: 16857794732596091}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1306ebbfd82924acf9740198dd024ff2, type: 3}
+  m_Script: {fileID: 11500000, guid: 52ccf995411bf664a85209718ad73738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startPosition: {x: 0, y: 0}
-  scale: 0
-  randomCoords: 0
+  octaves: 3
+  persistance: 0.5
+  lacunarity: 2
+  scale: 20
+  seed: 0
+  heightModifier:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &6368373193232253809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16857794732596091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76d3e805cb2d20d4d87c17e949010fdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EmptyTile: {fileID: 2394264196207273235, guid: f1f23fe5e71224d48812a5e386bf80bf, type: 3}
+  humidityDropoff: 0.1
+  elevationModifier: 0.05
