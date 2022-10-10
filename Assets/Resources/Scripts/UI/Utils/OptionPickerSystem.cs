@@ -10,7 +10,8 @@ public class OptionPickerSystem : MonoBehaviour
 
     public GameObject[] Options;
 
-    int curOption = 0;
+    [System.NonSerialized]
+    public int curOption = 0;
     public string pickerID;
 
     private void Start()
