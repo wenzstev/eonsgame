@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GenerateNewMapFromOptions : MonoBehaviour
 {
@@ -35,5 +36,15 @@ public class GenerateNewMapFromOptions : MonoBehaviour
 
         boardObj.GetComponent<BoardInputReader>().bg = boardCreator.GetComponent<BoardGenAlgorithm>();
         boardObj.GetComponent<Board>().CreateBoard();
+
+        CreateSaveAndLoadMap(boardObj.GetComponent<Board>());
+    }
+
+    void CreateSaveAndLoadMap(Board b)
+    {
+        Save save = new Save(b);
+        Save.SerializeSave(save, "untitled");
+        Save.CreatePersistantSave(save);
+        SceneManager.LoadScene("PlayScene");
     }
 }
