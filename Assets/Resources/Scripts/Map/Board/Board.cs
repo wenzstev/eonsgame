@@ -23,7 +23,7 @@ public class Board : MonoBehaviour
 
     BoardStats boardStats;
 
-    private void Start()
+    private void Awake()
     {
         boardStats = GetComponent<BoardStats>();
         if(DEBUG_TEST_GEN)
