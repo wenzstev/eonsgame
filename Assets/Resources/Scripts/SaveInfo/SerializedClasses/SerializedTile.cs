@@ -13,9 +13,6 @@ public class SerializedTile
 
     public List<SerializedCulture> cultures;
 
-
-
-
     public SerializedTile(GameObject tile, int x, int y)
     {
         this.x = x;
@@ -24,9 +21,7 @@ public class SerializedTile
         cultures = new List<SerializedCulture>();
 
         TileInfo ti = tile.GetComponent<TileInfo>();
-        //Debug.Log(ti.tileType);
         type = (int)ti.tileType;
-        //Debug.Log(type);
         tileGroundId = ti.GetComponent<TileSpriteLoader>().spriteGroundId;
         tileTopId = ti.GetComponent<TileSpriteLoader>().spriteTopId;
 
