@@ -16,7 +16,7 @@ public class LoadList : MonoBehaviour
         {
             GameObject curLoad = Instantiate(LoadPrefab);
             curLoad.transform.SetParent(transform);
-            curLoad.GetComponent<LoadInfo>().Init(name);
+            curLoad.GetComponent<LoadMapButton>().Init(name);
         }
     }
 

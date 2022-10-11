@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using System.Text.RegularExpressions;
 
-public class LoadInfo : MonoBehaviour
+public class LoadMapButton : MonoBehaviour
 {
     TMP_Text saveName;
     string filePath;
