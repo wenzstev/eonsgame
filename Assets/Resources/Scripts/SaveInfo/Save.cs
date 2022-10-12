@@ -9,6 +9,14 @@ public class Save
 
     public SerializedBoard sboard;
 
+    public List<SerializedTile> Tiles
+    {
+        get
+        {
+            return sboard.tiles;
+        }
+    }
+
     public Save(Board b)
     {
         sboard = new SerializedBoard(b);

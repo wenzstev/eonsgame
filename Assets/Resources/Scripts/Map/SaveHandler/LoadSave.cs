@@ -19,8 +19,8 @@ public class LoadSave : MonoBehaviour
 
         Board b = boardObject.GetComponent<Board>();
 
-        b.CreateTilesFromSerializedData(save.tiles, b.Width, b.Height);
-        cl.CreateCultures(save.tiles);
+        b.CreateTilesFromSerializedData(save.Tiles, b.Width, b.Height);
+        cl.CreateCultures(save.Tiles);
     }
 
     private void OnDestroy()
