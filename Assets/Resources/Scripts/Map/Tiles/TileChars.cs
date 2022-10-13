@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class TileChars : MonoBehaviour
 {
     public int x;
@@ -40,34 +41,4 @@ public class TileChars : MonoBehaviour
 
     [System.NonSerialized]
     public BoardStats boardStats;
-
-
-    public int GetTileType()
-    {
-        if (temperature < 0f)
-        {
-            return 4; // 4 is tundra
-        }
-
-        if (isUnderwater)
-        {
-            return 0; // 0 is ocean
-        }
-
-
-
-        if (temperature > 15f)
-        {
-            return 3; // 3 is desert
-        }
-
-
-
-        if (elevation > 6000f)
-        {
-            return 5; // 5 is mountain peak
-        }
-
-        return 1; // 1 is grassland, "default" right now
-    }
 }

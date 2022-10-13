@@ -47,7 +47,7 @@ public class BoardInputReader : MonoBehaviour
         foreach(SerializedTile t in tiles)
         {
             //Debug.Log($"Deserizalizing {i}, {j} into {t.type}");
-            GameObject curTile = createTile(i, j, t.type, t.tileGroundId, t.tileTopId); // TODO: break the ground and top IDs off into their own struct (maybe type too?) 
+            GameObject curTile = createTile(i, j, t.type); // TODO: break the ground and top IDs off into their own struct (maybe type too?) 
             boardTiles[i, j] = curTile;
             tileLookup.Add(curTile, (i, j));
             curTile.GetComponent<Tile>().id = j * width + 1;
