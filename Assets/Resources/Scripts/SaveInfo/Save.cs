@@ -7,35 +7,47 @@ using UnityEngine;
 public class Save
 {
 
-    public SerializedBoard sboard;
+    public SerializedBoard sBoard;
+    public SerializedTiles sTiles;
+    public SerializedCultures sCultures;
+
 
     public List<SerializedTile> Tiles
     {
         get
         {
-            return sboard.tiles;
+            return sTiles.tiles;
         }
     }
 
     public Save(Board b)
     {
-        sboard = new SerializedBoard(b);
+        sBoard = new SerializedBoard(b);
+        sTiles = new SerializedTiles(b);
+        sCultures = new SerializedCultures(b);
     }
 
     public static void SerializeSave(Save saveData, string saveName)
     {
-        string saveFileLocation = $"{Application.persistentDataPath}/{saveName}.json";
+        string saveFileLocation = $"{Application.persistentDataPath}/{saveName}";
         Debug.Log(saveFileLocation);
 
-        string saveFileJson = JsonUtility.ToJson(saveData);
-        Debug.Log(saveFileJson);
-        File.WriteAllText(saveFileLocation, saveFileJson);
+        string saveFileBoard = JsonUtility.ToJson(saveData.sBoard);
+        string saveFileTiles = JsonUtility.ToJson(saveData.sTiles);
+        string saveFileCultures = JsonUtility.ToJson(saveData.sCultures);
 
+        File.WriteAllText($"{saveFileLocation}/board.json", saveFileBoard);
+        File.WriteAllText($"{saveFileLocation}/tiles.json", saveFileTiles);
+        File.WriteAllText($"{saveFileLocation}/cultures.json", saveFileCultures);
     }
 
     public static Save UnserializeSave(string savePath)
     {
-        string saveJson = File.ReadAllText(savePath);
+        string saveBoard = File.ReadAllText($"{savePath}/board.json");
+        string saveTiles = File.ReadAllText($"{savePath}/tiles.json");
+        string saveCultures = File.ReadAllText($"{savePath}/cultures.json");
+
+        string saveJson = saveBoard + saveTiles + saveCultures;
         return JsonUtility.FromJson<Save>(saveJson);
     }
 
