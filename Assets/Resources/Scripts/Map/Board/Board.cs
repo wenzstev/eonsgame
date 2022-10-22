@@ -75,12 +75,6 @@ public class Board : MonoBehaviour
         return tiles.GetTile(xpos, ypos);
     }
 
-    public void CreateTilesFromSerializedData(List<SerializedTile> tiles, int h, int w)
-    {
-        boardStats.height = h;
-        boardStats.width = w;
-        this.tiles = GetComponent<BoardInputReader>().GetBoardFromSerializedTiles(tiles, Height, Width);
-    }
 
     public GameObject GetTile(int x, int y)
     {

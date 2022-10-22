@@ -29,39 +29,11 @@ public class BoardInputReader : MonoBehaviour
     }
 
   
-
     public BoardTileRelationship GetBoardFromInput(int[,] rawTileValues)
     {
         return MakeTiles(rawTileValues);
     }
 
-    public BoardTileRelationship GetBoardFromSerializedTiles(List<SerializedTile> tiles, int height, int width)
-    {
-
-        GameObject[,] boardTiles = new GameObject[width, height];
-        Dictionary<GameObject, (int, int)> tileLookup = new Dictionary<GameObject, (int, int)>();
-
-        int i = 0;
-        int j = 0;
-
-        foreach(SerializedTile t in tiles)
-        {
-            //Debug.Log($"Deserizalizing {i}, {j} into {t.type}");
-            GameObject curTile = createTile(i, j, t.type, t.tileGroundId, t.tileTopId); // TODO: break the ground and top IDs off into their own struct (maybe type too?) 
-            boardTiles[i, j] = curTile;
-            tileLookup.Add(curTile, (i, j));
-            curTile.GetComponent<Tile>().id = j * width + 1;
-
-            i++;
-            if(i >= width)
-            {
-                i = 0;
-                j++;
-            }
-        }
-
-        return new BoardTileRelationship(boardTiles, tileLookup);
-    }
 
     public GameObject createTile(int i, int j, int type, int spriteGroundId = -1, int spriteTopId = -1)
     {

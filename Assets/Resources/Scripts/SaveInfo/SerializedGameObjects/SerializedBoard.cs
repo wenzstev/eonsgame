@@ -13,6 +13,5 @@ public class SerializedBoard
     {
         width = b.Width;
         height = b.Height;
-
     }
 }

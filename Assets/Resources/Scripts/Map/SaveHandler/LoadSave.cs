@@ -7,6 +7,8 @@ public class LoadSave : MonoBehaviour
 {
     public GameObject boardObject;
     public CultureLoader cl;
+    public BoardLoader bl;
+    public TileLoader tl;
 
     public bool DEBUG_LOAD_DEFAULT;
 
@@ -17,10 +19,8 @@ public class LoadSave : MonoBehaviour
     {
         save = DEBUG_LOAD_DEFAULT ? LoadDefault() : LoadFromScene();
 
-        Board b = boardObject.GetComponent<Board>();
-
-        b.CreateTilesFromSerializedData(save.Tiles, b.Width, b.Height);
-        cl.CreateCultures(save.Tiles);
+        GameObject board = bl.LoadBoardFromSerialized(save.sBoard);
+        tl.LoadTilesFromSerialized(board, save.sTiles);
     }
 
     private void OnDestroy()
