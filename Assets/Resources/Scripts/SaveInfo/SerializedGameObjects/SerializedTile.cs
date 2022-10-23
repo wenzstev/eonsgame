@@ -22,8 +22,6 @@ public class SerializedTile
 
         TileInfo ti = tile.GetComponent<TileInfo>();
         type = (int)ti.tileType;
-        tileGroundId = ti.GetComponent<TileSpriteLoader>().spriteGroundId;
-        tileTopId = ti.GetComponent<TileSpriteLoader>().spriteTopId;
 
         foreach (Culture c in ti.cultures.Values)
         {

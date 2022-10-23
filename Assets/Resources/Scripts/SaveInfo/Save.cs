@@ -12,14 +12,6 @@ public class Save
     public SerializedCultures sCultures;
 
 
-    public List<SerializedTile> Tiles
-    {
-        get
-        {
-            return sTiles.tiles;
-        }
-    }
-
     public Save(Board b)
     {
         sBoard = new SerializedBoard(b);
