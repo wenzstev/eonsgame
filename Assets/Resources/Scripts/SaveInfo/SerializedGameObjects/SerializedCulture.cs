@@ -4,6 +4,9 @@ using UnityEngine;
 [System.Serializable]
 public class SerializedCulture
 {
+    public int x;
+    public int y;
+
     public string name;
 
     public SerializedColor color;

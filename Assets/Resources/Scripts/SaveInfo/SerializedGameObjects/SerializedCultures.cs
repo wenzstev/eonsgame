@@ -2,9 +2,10 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+[System.Serializable]
 public class SerializedCultures
 {
-    public List<SerializedCultures> cultures;
+    public List<SerializedCulture> cultures;
 
     public SerializedCultures(Board b)
     {

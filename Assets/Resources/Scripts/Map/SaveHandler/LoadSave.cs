@@ -18,7 +18,6 @@ public class LoadSave : MonoBehaviour
     void Start()
     {
         save = DEBUG_LOAD_DEFAULT ? LoadDefault() : LoadFromScene();
-
         GameObject board = bl.LoadBoardFromSerialized(save.sBoard);
         tl.LoadTilesFromSerialized(board, save.sTiles);
     }

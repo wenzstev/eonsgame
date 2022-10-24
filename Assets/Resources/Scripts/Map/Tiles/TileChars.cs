@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class TileChars : MonoBehaviour
 {
     public int x;
@@ -38,8 +39,18 @@ public class TileChars : MonoBehaviour
     public float humidity;
     public float temperature;
 
-    [System.NonSerialized]
-    public BoardStats boardStats;
+    BoardStats _boardStats;
+    public BoardStats boardStats
+    {
+        get
+        {
+            if(_boardStats == null)
+            {
+                _boardStats = GetComponent<Tile>().board.GetComponent<BoardStats>();
+            }
+            return _boardStats;
+        }
+    }
 
 
     public int GetTileType()
