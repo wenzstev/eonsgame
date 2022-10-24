@@ -49,7 +49,6 @@ public abstract class BoardGenAlgorithm : MonoBehaviour
     public void AddElevationAndStats(GameObject tile, BoardStats boardStats, float perlinHeight)
     {
         TileChars tileChars = tile.GetComponent<TileChars>();
-        tileChars.boardStats = boardStats;
         tileChars.absoluteHeight = perlinHeight * boardStats.elevationRange;
     }
 

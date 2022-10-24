@@ -732,9 +732,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boardObject: {fileID: 1092644767}
   cl: {fileID: 124106956}
-  bl: {fileID: 0}
-  tl: {fileID: 0}
+  bl: {fileID: 1079782344}
+  tl: {fileID: 1327944292}
   DEBUG_LOAD_DEFAULT: 1
+--- !u!1 &1757354114 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6808386953562068672, guid: 316133daf28a625488513a2fcf18f45a, type: 3}
+  m_PrefabInstance: {fileID: 120444036}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1757354116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757354114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dae2b33ae1ecd4d7abd9047e96da28ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1915567428
 PrefabInstance:
   m_ObjectHideFlags: 0
