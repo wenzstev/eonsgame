@@ -29,7 +29,7 @@ public class OverpopulationActionTestSuite
 
         yield return null; // CreateBoard() is run in Board's Start() command
 
-        GameObject testTileObj = testBoard.tiles.GetTile(1, 1);
+        GameObject testTileObj = testBoard.GetTile(1, 1);
         GameObject testCultureAObj = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/CultureLayer"));
         //GameObject testCultureBObj = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/CultureLayer"));
 

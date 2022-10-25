@@ -14,7 +14,7 @@ public class SerializedTiles
         {
             for (int x = 0; x < b.Width; x++)
             {
-                tiles.Add(new SerializedTile(b.tiles.GetTile(x, y)));
+                tiles.Add(new SerializedTile(b.GetTile(x, y)));
             }
         }
     }

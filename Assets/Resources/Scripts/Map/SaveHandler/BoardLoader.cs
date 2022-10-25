@@ -11,9 +11,7 @@ public class BoardLoader : MonoBehaviour
     public GameObject LoadBoardFromSerialized(SerializedBoard sb)
     {
         BoardObj = Instantiate(BoardTemplate);
-        BoardStats bs = BoardObj.GetComponent<BoardStats>();
-        bs.height = sb.height;
-        bs.width = sb.width;
+        JsonUtility.FromJsonOverwrite(sb.serializedComponents[0], BoardObj.GetComponent<BoardStats>());
         return BoardObj;
     }
 

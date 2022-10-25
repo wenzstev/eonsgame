@@ -104,19 +104,6 @@ public class Culture : MonoBehaviour
         //SetTileWithoutInformingTileInfo(t);
     }
 
-    public void LoadFromSave(SerializedCulture s, Tile t)
-    {
-        SetColor(s.color.UnserializeColor());
-        name = s.name;
-        gameObject.name = s.name;
-        currentState = (State) s.currentState;
-        population = s.population;
-        affinity = (TileDrawer.BiomeType) s.affinity;
-        SetTile(t);
-        GetComponent<CultureMemory>().LoadFromSave(s.cultureMemory, t);
-        cultureMemory = GetComponent<CultureMemory>();
-        
-    }
 
     void ExecuteTurn()
     {
