@@ -32,8 +32,8 @@ public class MoveActionTestSuite
 
         yield return null;
 
-        homeTile = testBoard.tiles.GetTile(0, 0);
-        projectedTile = testBoard.tiles.GetTile(1, 0);
+        homeTile = testBoard.GetTile(0, 0);
+        projectedTile = testBoard.GetTile(1, 0);
 
         testCultureObj = Object.Instantiate(Resources.Load<GameObject>("Prefabs/CultureLayer"));
         testCulture = testCultureObj.GetComponent<Culture>();

@@ -4,17 +4,11 @@ using System.Linq;
 using UnityEngine;
 
 [System.Serializable]
-public class SerializedBoard 
+public class SerializedBoard : SerializedGameObject
 {
-    public int width;
-    public int height;
-
-    
-
-
     public SerializedBoard(Board b)
     {
-        width = b.Width;
-        height = b.Height;
+        GameObject boardObj = b.gameObject;
+        serializedComponents.Add(JsonUtility.ToJson(boardObj.GetComponent<BoardStats>()));
     }
 }

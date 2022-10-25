@@ -2,29 +2,18 @@
 using UnityEngine;
 
 [System.Serializable]
-public class SerializedCulture
+public class SerializedCulture : SerializedGameObject
 {
     public int x;
     public int y;
 
-    public string name;
 
-    public SerializedColor color;
-    public SerializedCultureMemory cultureMemory;
-
-    public int population;
-
-    public int affinity;
-
-    public int currentState;
-
-    public SerializedCulture(Culture culture)
+    public SerializedCulture(Culture culture, int x, int y)
     {
-        name = culture.name;
-        color = new SerializedColor(culture.color);
-        population = culture.population;
-        affinity = (int)culture.affinity;
-        currentState = (int)culture.currentState;
+        this.x = x;
+        this.y = y;
+        serializedComponents.Add(JsonUtility.ToJson(culture));
+        serializedComponents.Add(JsonUtility.ToJson(culture.GetComponent<CultureMemory>()));
     }
 
 }

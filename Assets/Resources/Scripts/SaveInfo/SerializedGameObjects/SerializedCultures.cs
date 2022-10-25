@@ -9,6 +9,15 @@ public class SerializedCultures
 
     public SerializedCultures(Board b)
     {
-
+        for(int j = 0; j < b.Height; j++)
+        {
+            for(int i = 0; i < b.Width; i++)
+            {
+                foreach(KeyValuePair<string, Culture> kvp in b.Tiles[i,j].GetComponent<TileInfo>().cultures)
+                {
+                    cultures.Add(new SerializedCulture(kvp.Value, i, j));
+                }
+            }
+        }
     }
 }

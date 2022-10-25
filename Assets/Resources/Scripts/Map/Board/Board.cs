@@ -4,7 +4,15 @@ using UnityEngine;
 
 public class Board : MonoBehaviour
 {
-    public BoardTileRelationship tiles;
+    public BoardTileRelationship boardTileRelationship;
+
+    public GameObject[,] Tiles
+    {
+        get
+        {
+            return boardTileRelationship.tiles;
+        }
+    }
 
     public int Width { 
         get
@@ -32,16 +40,17 @@ public class Board : MonoBehaviour
         }
     }
 
+
     public void SetBoardTiles(Dictionary<string, object> boardDict)
     {
-        tiles = (BoardTileRelationship) boardDict["tiles"];
+        boardTileRelationship = (BoardTileRelationship) boardDict["tiles"];
         EventManager.StopListening("BoardCreated", SetBoardTiles);
 
     }
 
     public void CreateBoard()
     {
-        tiles = GetComponent<BoardInputReader>().GenerateBoard();
+        boardTileRelationship = GetComponent<BoardInputReader>().GenerateBoard();
     }
 
     public void CreateBoardFromValues(int[,] values, int w, int h)
@@ -49,12 +58,12 @@ public class Board : MonoBehaviour
         boardStats.width = w;
         boardStats.height = h;
 
-        tiles = GetComponent<BoardInputReader>().GetBoardFromInput(values);
+        boardTileRelationship = GetComponent<BoardInputReader>().GetBoardFromInput(values);
     }
 
     public GameObject getNeighbor(GameObject tile, Direction d)
     {
-        return tiles.getNeighbor(tile, d);
+        return boardTileRelationship.getNeighbor(tile, d);
     }
 
     public GameObject GetTileByID(int id)
@@ -72,13 +81,13 @@ public class Board : MonoBehaviour
             ypos += 1;
         }
 
-        return tiles.GetTile(xpos, ypos);
+        return boardTileRelationship.GetTile(xpos, ypos);
     }
 
 
     public GameObject GetTile(int x, int y)
     {
-        return tiles.GetTile(x, y);
+        return boardTileRelationship.GetTile(x, y);
     }
 
 }
