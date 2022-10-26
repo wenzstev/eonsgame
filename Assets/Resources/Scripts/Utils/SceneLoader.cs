@@ -12,6 +12,7 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadMainMenuScene()
     {
+        EventManager.TriggerEvent("LoadingMainMenu", null);
         SceneManager.LoadScene("Title Screen");
     }
 

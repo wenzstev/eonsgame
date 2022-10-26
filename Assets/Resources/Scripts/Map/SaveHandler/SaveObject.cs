@@ -4,12 +4,32 @@ using UnityEngine;
 
 public class SaveObject : MonoBehaviour
 {
-    public Save save { get; private set; }
+    public string saveName;
 
-    public void InitializeSave(Save s)
+    private void Start()
     {
-        save = s;
+        EventManager.StartListening("SaveGame", SaveGame);
+    }
+
+    public void InitializeSave(string s)
+    {
+        saveName = s;
         DontDestroyOnLoad(gameObject);
     }
+
+    public Save LoadPersistantSave()
+    {
+        return Save.UnserializeSave(saveName);
+    }
+
+    void SaveGame(Dictionary<string, object> payLoad)
+    {
+        GameObject boardToSave = (GameObject)payLoad["board"];
+
+        Save newSave = new Save(boardToSave.GetComponent<Board>());
+        Save.SerializeSave(newSave, saveName);
+    }
+
+   
 
 }

@@ -17,7 +17,7 @@ public class LoadSave : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        save = DEBUG_LOAD_DEFAULT ? LoadDefault() : LoadFromScene();
+        save = LoadFromScene();
         GameObject board = bl.LoadBoardFromSerialized(save.sBoard);
         tl.LoadTilesFromSerialized(board, save.sTiles);
     }
@@ -38,13 +38,7 @@ public class LoadSave : MonoBehaviour
             throw new ArgumentException("Must have one save instance in scene!");
         }
 
-       return saveObj[0].save;
-    }
-
-    Save LoadDefault()
-    {
-        string loadSave = $"{Application.persistentDataPath}/untitled.json";
-        return Save.UnserializeSave(loadSave);
+        return saveObj[0].LoadPersistantSave();
     }
 
 }

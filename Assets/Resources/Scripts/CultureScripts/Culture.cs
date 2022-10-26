@@ -5,13 +5,21 @@ using UnityEngine;
 [System.Serializable]
 public class Culture : MonoBehaviour
 {
-    new public string name { get; private set; }
 
-    public Color color { get; private set; }
+    [SerializeField]
+    new string name;
+    public string Name { get { return name; } }
+
+    [SerializeField]
+    Color color;
+    public Color Color { get { return color; } }
+
     public Tile tile { get; private set; }
     public TileInfo tileInfo { get; private set; }
 
-    public CultureMemory cultureMemory { get; private set; }
+    [SerializeField]
+    CultureMemory cultureMemory;
+    public CultureMemory CultureMemory { get { return cultureMemory; } }
 
     DecisionMaker decisionMaker;
 

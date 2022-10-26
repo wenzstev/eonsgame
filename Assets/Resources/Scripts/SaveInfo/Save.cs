@@ -6,7 +6,6 @@ using UnityEngine;
 [System.Serializable]
 public class Save
 {
-
     public SerializedBoard sBoard;
     public SerializedTiles sTiles;
     public SerializedCultures sCultures;
@@ -39,22 +38,24 @@ public class Save
         //File.WriteAllText($"{saveFileLocation}/cultures.json", saveFileCultures);
     }
 
-    public static Save UnserializeSave(string savePath)
+    public static Save UnserializeSave(string saveName)
     {
         //string saveBoard = File.ReadAllText($"{savePath}/board.json");
         //string saveTiles = File.ReadAllText($"{savePath}/tiles.json");
         //string saveCultures = File.ReadAllText($"{savePath}/cultures.json");
+
+        string savePath = $"{Application.persistentDataPath}/{saveName}.json";
 
         string saveJson = File.ReadAllText(savePath);
 
         return JsonUtility.FromJson<Save>(saveJson);
     }
 
-    public static GameObject CreatePersistantSave(Save save)
+    public static GameObject CreatePersistantSave(Save save, string saveName)
     {
         GameObject saveObj = new GameObject("SaveFile");
         SaveObject so = saveObj.AddComponent<SaveObject>();
-        so.InitializeSave(save);
+        so.InitializeSave(saveName);
         return saveObj;
     }
 }
