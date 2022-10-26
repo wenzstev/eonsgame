@@ -37,8 +37,8 @@ public class InfluenceActionTestSuite
 
         CultureTurnUpdate neighborUpdate = turn.turnUpdates[neighbor];
 
-        Assert.That(CultureHelperMethods.GetColorDistance(testCulture.color, neighborUpdate.newColor) 
-                    < CultureHelperMethods.GetColorDistance(testCulture.color, neighbor.color),
+        Assert.That(CultureHelperMethods.GetColorDistance(testCulture.Color, neighborUpdate.newColor) 
+                    < CultureHelperMethods.GetColorDistance(testCulture.Color, neighbor.Color),
                     "Cultures are not closer together!");
 
         

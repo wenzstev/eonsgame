@@ -16,7 +16,7 @@ public class LoadList : MonoBehaviour
         {
             GameObject curLoad = Instantiate(LoadPrefab);
             curLoad.transform.SetParent(transform);
-            curLoad.GetComponent<LoadMapButton>().Init(name);
+            curLoad.GetComponent<LoadMapButton>().Init(name); // does this store just the file name or the full path?
         }
     }
 

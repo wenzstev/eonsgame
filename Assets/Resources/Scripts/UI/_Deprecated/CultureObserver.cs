@@ -66,7 +66,7 @@ public class CultureAggregation
     {
         cultures = new HashSet<Culture>();
         cultures.Add(culture);
-        avgColor = culture.color;
+        avgColor = culture.Color;
         name = culture.name;
         totalPopulation = culture.population;
 
@@ -108,9 +108,9 @@ public class CultureAggregation
         {
             //Debug.Log(c.name + "(" + c.GetHashCode() + ") has pop of " + c.population);
             totalPopulation += c.population;
-            r += c.color.r;
-            g += c.color.g;
-            b += c.color.b;
+            r += c.Color.r;
+            g += c.Color.g;
+            b += c.Color.b;
         }
 
         int numCultures = cultures.Count;

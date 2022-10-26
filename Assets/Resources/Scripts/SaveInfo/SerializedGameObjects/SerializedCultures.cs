@@ -9,6 +9,7 @@ public class SerializedCultures
 
     public SerializedCultures(Board b)
     {
+        cultures = new List<SerializedCulture>();
         for(int j = 0; j < b.Height; j++)
         {
             for(int i = 0; i < b.Width; i++)

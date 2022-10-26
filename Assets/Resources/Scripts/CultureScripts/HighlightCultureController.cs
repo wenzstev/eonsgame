@@ -38,7 +38,7 @@ public class HighlightCultureController : MonoBehaviour
         {
             return; // temporary way to prevent destroyed objects from messing up the invoke
         }
-        sr.color = culture.color;
+        sr.color = culture.Color;
         sr.sortingOrder = 5;
 
         //EventManager.StartListening("HoverOff", RemoveHighlight);

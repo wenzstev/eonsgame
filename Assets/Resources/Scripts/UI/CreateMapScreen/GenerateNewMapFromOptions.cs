@@ -44,7 +44,7 @@ public class GenerateNewMapFromOptions : MonoBehaviour
     {
         Save save = new Save(b);
         Save.SerializeSave(save, "untitled");
-        Save.CreatePersistantSave(save);
+        Save.CreatePersistantSave(save, "untitled");
         SceneManager.LoadScene("PlayScene");
     }
 }
