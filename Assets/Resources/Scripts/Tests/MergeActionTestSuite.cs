@@ -49,8 +49,8 @@ public class MergeActionTestSuite
         Debug.Log(testTile.GetComponent<TileInfo>().cultures["test"]);
 
 
-        Color a = testCulture.color;
-        Color b = testCultureMerge.color;
+        Color a = testCulture.Color;
+        Color b = testCultureMerge.Color;
 
         Color c = Color.Lerp(a, b, .5f); // new color will be halfway between
 
@@ -63,7 +63,7 @@ public class MergeActionTestSuite
         Assert.That(newInfoTestCulture.popChange == 1, "Merged Culture didn't have it's population changed!");
         Assert.That(newInfoTestCulture.newColor == c, "Merged Culture didn't have it's color changed!");
         Assert.That(newInfoMergedCulture.newState == Culture.State.PendingRemoval, "Merging culture isn't slated for removal!");
-        Assert.That(newInfoMergedCulture.popChange == -testCultureMerge.population, "Merging culture doesn't have pop set to zero!");
+        Assert.That(newInfoMergedCulture.popChange == -testCultureMerge.Population, "Merging culture doesn't have pop set to zero!");
     }
 
     [Test]
@@ -99,7 +99,7 @@ public class MergeActionTestSuite
         testCulture.tileInfo.UpdateCultureName(oldCultureName, "test");
 
 
-        Color c = Color.Lerp(testCulture.color, testCultureMerge.color, .5f); // new color will be halfway between
+        Color c = Color.Lerp(testCulture.Color, testCultureMerge.Color, .5f); // new color will be halfway between
 
 
         MergeAction testMergeAction = new MergeAction(testCultureMerge);
@@ -112,7 +112,7 @@ public class MergeActionTestSuite
         Assert.That(newInfoMergeCulture.popChange == 1, "Merged Culture didn't have it's population changed!");
         Assert.That(newInfoMergeCulture.newColor == c, "Merged Culture didn't have it's color changed!");
         Assert.That(newInfoTestCulture.newState == Culture.State.PendingRemoval, "Merging culture isn't slated for removal!");
-        Assert.That(newInfoTestCulture.popChange == -testCulture.population, "Merging culture doesn't have pop set to zero!");
+        Assert.That(newInfoTestCulture.popChange == -testCulture.Population, "Merging culture doesn't have pop set to zero!");
         Assert.That(newInfoMergeCulture.newTile == testTile, "Merged culture isn't moving to tile!");
 
     }

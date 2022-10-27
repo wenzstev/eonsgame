@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class CultureMemory : MonoBehaviour
 {
-
+    [SerializeField]
     Tile _previousTile;
     public Tile previousTile { 
         get => _previousTile;
@@ -19,6 +20,7 @@ public class CultureMemory : MonoBehaviour
 
     public string cultureParentName;
 
+    [SerializeField]
     Culture.State _previousState;
 
     public Culture.State previousState
@@ -36,13 +38,7 @@ public class CultureMemory : MonoBehaviour
 
     public bool wasRepelled;
 
-    public void LoadFromSave(SerializedCultureMemory scm, Tile currentTile)
-    {
-        previousTile = currentTile.board.GetComponent<Board>().GetTileByID(scm.previousTile).GetComponent<Tile>(); // whoof
-        cultureParentName = scm.cultureParentName;
-        _previousState = (Culture.State)scm.previousState;
-        wasRepelled = scm.wasRepelled;
-    }
+
 
 
 }

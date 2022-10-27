@@ -29,7 +29,7 @@ public class OverpopulationActionTestSuite
 
         yield return null; // CreateBoard() is run in Board's Start() command
 
-        GameObject testTileObj = testBoard.tiles.GetTile(1, 1);
+        GameObject testTileObj = testBoard.GetTile(1, 1);
         GameObject testCultureAObj = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/CultureLayer"));
         //GameObject testCultureBObj = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/CultureLayer"));
 
@@ -78,7 +78,7 @@ public class OverpopulationActionTestSuite
 
         CultureTurnUpdate cta = turn.turnUpdates[testCultureA];
         Assert.That(turn.turnUpdates.Count == 2, "Culture did not split!");
-        Assert.That(testCultureA.population == 10, "Culture did not lose size!");
+        Assert.That(testCultureA.Population == 10, "Culture did not lose size!");
     }
     
 

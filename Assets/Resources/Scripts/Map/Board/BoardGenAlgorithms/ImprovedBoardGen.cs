@@ -19,7 +19,7 @@ public class ImprovedBoardGen : BoardGenAlgorithm
         boardObj = bs.gameObject;
         // step 1: heightmap
         BoardTileRelationship perlinBoard = CreateRawBoard(boardObj, bs.width, bs.height, heightmapGenerator);
-        bs.GetComponent<Board>().tiles = perlinBoard;
+        bs.GetComponent<Board>().boardTileRelationship = perlinBoard;
 
         // step 2: temperature
         CalculateTemperatures(perlinBoard.tiles);

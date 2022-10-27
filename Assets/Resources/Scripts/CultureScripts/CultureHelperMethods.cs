@@ -6,8 +6,8 @@ public static class CultureHelperMethods
 {
     public static float GetCultureDistance(Culture firstCulture, Culture secondCulture)
     {
-        Color first = firstCulture.color;
-        Color second = secondCulture.color;
+        Color first = firstCulture.Color;
+        Color second = secondCulture.Color;
 
         float colorDistanceSquared = GetColorDistance(first, second);
         float colorDistanceNormalized = Mathf.Lerp(0, 3, colorDistanceSquared);

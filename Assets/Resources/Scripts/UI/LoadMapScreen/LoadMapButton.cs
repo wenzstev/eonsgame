@@ -9,16 +9,17 @@ public class LoadMapButton : MonoBehaviour
 {
     TMP_Text saveName;
     string filePath;
+    string fileName;
 
 
     public void Init(string filePath)
     {
         this.filePath = filePath;
         saveName = GetComponentInChildren<TMP_Text>();
-        string potentialFileName = GetFilenameFromPath(filePath);
-        if(potentialFileName != "")
+        fileName = GetFilenameFromPath(filePath);
+        if(fileName != "")
         {
-            saveName.text = potentialFileName;
+            saveName.text = fileName;
         }
         else
         {
@@ -32,7 +33,7 @@ public class LoadMapButton : MonoBehaviour
     public void LoadMap()
     {
         Save save = Save.UnserializeSave(filePath);
-        Save.CreatePersistantSave(save);
+        Save.CreatePersistantSave(save, fileName);
         SceneManager.LoadScene("PlayScene");
     }
 
