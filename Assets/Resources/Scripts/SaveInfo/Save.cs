@@ -6,29 +6,16 @@ using UnityEngine;
 [System.Serializable]
 public class Save
 {
-    public List<SerializedTile> tiles;
-    public int width;
-    public int height;
+    public SerializedBoard sBoard;
+    public SerializedTiles sTiles;
+    public SerializedCultures sCultures;
+
 
     public Save(Board b)
     {
-        width = b.Width;
-        height = b.Height;
-        tiles = new List<SerializedTile>();
-
-        for (int y = 0; y < height; y++)
-        {
-            for (int x = 0; x < width; x++)
-            {
-                Debug.Log(b.tiles.GetTile(x, y));
-                tiles.Add(new SerializedTile(b.tiles.GetTile(x, y), x, y));
-            }
-        }
-    }
-
-    public Board getBoard()
-    {
-        return null;
+        sBoard = new SerializedBoard(b);
+        sTiles = new SerializedTiles(b);
+        sCultures = new SerializedCultures(b);
     }
 
     public static void SerializeSave(Save saveData, string saveName)
@@ -36,23 +23,39 @@ public class Save
         string saveFileLocation = $"{Application.persistentDataPath}/{saveName}.json";
         Debug.Log(saveFileLocation);
 
-        string saveFileJson = JsonUtility.ToJson(saveData);
-        Debug.Log(saveFileJson);
-        File.WriteAllText(saveFileLocation, saveFileJson);
+        //Directory.CreateDirectory(saveFileLocation);
 
+        string saveFileBoard = JsonUtility.ToJson(saveData.sBoard);
+        string saveFileTiles = JsonUtility.ToJson(saveData.sTiles);
+        string saveFileCultures = JsonUtility.ToJson(saveData.sCultures);
+
+        string saveFileJson = JsonUtility.ToJson(saveData);
+
+        File.WriteAllText($"{saveFileLocation}", saveFileJson);   
+
+        //File.WriteAllText($"{saveFileLocation}/board.json", saveFileBoard);
+        //File.WriteAllText($"{saveFileLocation}/tiles.json", saveFileTiles);
+        //File.WriteAllText($"{saveFileLocation}/cultures.json", saveFileCultures);
     }
 
-    public static Save UnserializeSave(string savePath)
+    public static Save UnserializeSave(string saveName)
     {
+        //string saveBoard = File.ReadAllText($"{savePath}/board.json");
+        //string saveTiles = File.ReadAllText($"{savePath}/tiles.json");
+        //string saveCultures = File.ReadAllText($"{savePath}/cultures.json");
+
+        string savePath = $"{Application.persistentDataPath}/{saveName}.json";
+
         string saveJson = File.ReadAllText(savePath);
+
         return JsonUtility.FromJson<Save>(saveJson);
     }
 
-    public static GameObject CreatePersistantSave(Save save)
+    public static GameObject CreatePersistantSave(Save save, string saveName)
     {
         GameObject saveObj = new GameObject("SaveFile");
         SaveObject so = saveObj.AddComponent<SaveObject>();
-        so.InitializeSave(save);
+        so.InitializeSave(saveName);
         return saveObj;
     }
 }

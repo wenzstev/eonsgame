@@ -32,8 +32,8 @@ public class MoveActionTestSuite
 
         yield return null;
 
-        homeTile = testBoard.tiles.GetTile(0, 0);
-        projectedTile = testBoard.tiles.GetTile(1, 0);
+        homeTile = testBoard.GetTile(0, 0);
+        projectedTile = testBoard.GetTile(1, 0);
 
         testCultureObj = Object.Instantiate(Resources.Load<GameObject>("Prefabs/CultureLayer"));
         testCulture = testCultureObj.GetComponent<Culture>();
@@ -93,7 +93,7 @@ public class MoveActionTestSuite
         Turn.HookTurn().UpdateCulture(testCulture).popChange = 5;
         Turn.HookTurn().UpdateAllCultures();
 
-        Assert.That(testCulture.population == 6, "test culture's population is not 6!");
+        Assert.That(testCulture.Population == 6, "test culture's population is not 6!");
 
         MoveTileAction mta = new MoveTileAction(testCulture);
         mta.moveChance = 1;
@@ -115,7 +115,7 @@ public class MoveActionTestSuite
         Turn.HookTurn().UpdateAllCultures();
 
         Assert.That(counter < 50, "Test ran too many times without ever moving the tile!");
-        Assert.That(testCulture.population == 5, "testCulture did not lose population!");
+        Assert.That(testCulture.Population == 5, "testCulture did not lose population!");
 
         yield return new WaitForSeconds(.1f);
 
@@ -129,7 +129,7 @@ public class MoveActionTestSuite
 
         Assert.That(childCulture != null, "Tile child is not a culture object!");
 
-        Assert.That(childCulture.population == 1, "Child culture's population is not 1!");
+        Assert.That(childCulture.Population == 1, "Child culture's population is not 1!");
         Assert.That(childCulture.currentState == Culture.State.NewOnTile, "Child's state is not NewOnTile!");
 
 

@@ -27,7 +27,7 @@ public class PopulationView : MonoBehaviour
 
     private void OnTick(Dictionary<string, object> empty)
     {
-        int curPop = culture.population;
+        int curPop = culture.Population;
         if (curPop < midPopulationValue)
         {
             float position = Mathf.InverseLerp(0, (float)midPopulationValue, curPop);

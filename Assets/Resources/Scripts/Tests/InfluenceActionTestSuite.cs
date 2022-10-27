@@ -37,8 +37,8 @@ public class InfluenceActionTestSuite
 
         CultureTurnUpdate neighborUpdate = turn.turnUpdates[neighbor];
 
-        Assert.That(CultureHelperMethods.GetColorDistance(testCulture.color, neighborUpdate.newColor) 
-                    < CultureHelperMethods.GetColorDistance(testCulture.color, neighbor.color),
+        Assert.That(CultureHelperMethods.GetColorDistance(testCulture.Color, neighborUpdate.newColor) 
+                    < CultureHelperMethods.GetColorDistance(testCulture.Color, neighbor.Color),
                     "Cultures are not closer together!");
 
         
@@ -62,7 +62,7 @@ public class InfluenceActionTestSuite
 
         Assert.That(neighborUpdate.newState == Culture.State.PendingRemoval, "Neighbor not slated for removal!");
         Assert.That(testCultureUpdate.newName != "", "Culture not getting new name!");
-        Assert.That(testCultureUpdate.popChange == neighbor.population, "Culture not gaining members of neighbor culture!");
+        Assert.That(testCultureUpdate.popChange == neighbor.Population, "Culture not gaining members of neighbor culture!");
     }
 
 

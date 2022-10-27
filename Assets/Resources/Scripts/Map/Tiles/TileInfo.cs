@@ -29,7 +29,7 @@ public class TileInfo : MonoBehaviour
             int pop = 0;
             foreach(Culture c in cultures.Values)
             {
-                pop += c.population;
+                pop += c.Population;
             }
             return pop;
         } 

@@ -89,7 +89,7 @@ public class CultureTurnUpdate
     {
         culture = c;
         newState = c.currentState;
-        newColor = c.mutateColor(c.color); // mutate color slightly every turn
+        newColor = c.mutateColor(c.Color); // mutate color slightly every turn
     }
 
     public void MergeUpdates(CultureTurnUpdate other) 

@@ -73,10 +73,10 @@ public class MergeAction : CultureAction
     public Turn MergeCultures(Culture remain, Culture merged)
     {
         //Debug.Log("merging cultures");
-        float percentThisPopulation = (float)remain.population / (remain.population + merged.maxPopTransfer);
-        turn.UpdateCulture(remain).newColor = Color.Lerp(remain.color, merged.color, percentThisPopulation);
-        turn.UpdateCulture(remain).popChange += merged.population;
-        turn.UpdateCulture(merged).popChange -= merged.population;
+        float percentThisPopulation = (float)remain.Population / (remain.Population + merged.maxPopTransfer);
+        turn.UpdateCulture(remain).newColor = Color.Lerp(remain.Color, merged.Color, percentThisPopulation);
+        turn.UpdateCulture(remain).popChange += merged.Population;
+        turn.UpdateCulture(merged).popChange -= merged.Population;
         turn.UpdateCulture(merged).newState = Culture.State.PendingRemoval;
         return turn;
     }
