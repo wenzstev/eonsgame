@@ -14,21 +14,33 @@ public class Culture : MonoBehaviour
     Color color;
     public Color Color { get { return color; } }
 
-    public Tile tile { get; private set; }
+    public Tile Tile { get; private set; }
     public TileInfo tileInfo { get; private set; }
 
-    [SerializeField]
+
     CultureMemory cultureMemory;
-    public CultureMemory CultureMemory { get { return cultureMemory; } }
+    public CultureMemory CultureMemory
+    {
+        get
+        {
+            if(cultureMemory == null)
+            {
+                cultureMemory = GetComponent<CultureMemory>();
+            }
+            return cultureMemory;
+        }
+    }
 
     DecisionMaker decisionMaker;
 
-    public GameObject cultureTemplate;
+    public GameObject CultureTemplate;
 
     SpriteRenderer layerMode;
     SpriteRenderer circleMode;
 
-    public int population { get; private set; }
+    [SerializeField]
+    int population;
+    public int Population { get { return population; } }
 
     public float spreadChance = 1f;
 
@@ -83,6 +95,14 @@ public class Culture : MonoBehaviour
         decisionMaker = new DecisionMaker(this);
     }
 
+    public void LoadFromSerialized(GameObject t, GameObject cultureTemplate)
+    {
+        Tile = t.GetComponent<Tile>();
+        SetColor(color);
+        CultureTemplate = cultureTemplate;
+        gameObject.name = name;
+    }
+
     public void Init(Tile t)
     {
         currentState = State.Default;
@@ -94,9 +114,6 @@ public class Culture : MonoBehaviour
 
         SetColor(color);
         gameObject.name = name;
-
-        cultureMemory = GetComponent<CultureMemory>();
-
     }
 
     public void Init(Tile t, Color parent, int pop, string n)
@@ -107,8 +124,6 @@ public class Culture : MonoBehaviour
         name = n;
         gameObject.name = name;
         transform.SetParent(t.gameObject.transform);
-        cultureMemory = GetComponent<CultureMemory>();
-
         //SetTileWithoutInformingTileInfo(t);
     }
 
@@ -166,15 +181,15 @@ public class Culture : MonoBehaviour
 
     private void ChangeState(State newState)
     {
-        Debug.Log(cultureMemory);
-        Debug.Log(cultureMemory.previousState);
-        if(cultureMemory.previousState != newState)
+        Debug.Log(CultureMemory);
+        Debug.Log(CultureMemory.previousState);
+        if(CultureMemory.previousState != newState)
         {
-            cultureMemory.previousState = currentState;
+            CultureMemory.previousState = currentState;
         }
         if(newState == State.Default)
         {
-            cultureMemory.wasRepelled = false;
+            CultureMemory.wasRepelled = false;
         }
         currentState = newState;
     }
@@ -190,11 +205,11 @@ public class Culture : MonoBehaviour
 
     public GameObject SplitCultureFromParent() // creates new culture group from parent
     {
-        GameObject newCultureObj = Instantiate(cultureTemplate, transform.position, Quaternion.identity);
+        GameObject newCultureObj = Instantiate(CultureTemplate, transform.position, Quaternion.identity);
         Culture newCulture = newCultureObj.GetComponent<Culture>();
-        newCulture.Init(tile, color, maxPopTransfer, name);
+        newCulture.Init(Tile, color, maxPopTransfer, name);
         AddPopulation(-maxPopTransfer);
-        newCulture.cultureMemory.previousTile = tile;
+        newCulture.CultureMemory.previousTile = Tile;
 
         
         return newCultureObj;
@@ -244,7 +259,7 @@ public class Culture : MonoBehaviour
 
     void SetTileWithoutInformingTileInfo(Tile newTile)
     {
-        tile = newTile;
+        Tile = newTile;
         tileInfo = newTile.GetComponent<TileInfo>();
         maxOnTile = tileInfo.tileType == affinity ? tileInfo.popBase + 2 : tileInfo.popBase;
     }
@@ -264,7 +279,7 @@ public class Culture : MonoBehaviour
 
         CultureMemory cm = GetComponent<CultureMemory>();
 
-        cm.previousTile = tile;
+        cm.previousTile = Tile;
 
 
         SetTileWithoutInformingTileInfo(newTile);
@@ -275,7 +290,7 @@ public class Culture : MonoBehaviour
     void RenameCulture(string newName)
     {
         EventManager.TriggerEvent("CultureRemoved" + name, new Dictionary<string, object> { { "culture", this } });
-       cultureMemory.cultureParentName = name;
+        CultureMemory.cultureParentName = name;
         name = newName;
         gameObject.name = newName;
         EventManager.TriggerEvent("CultureUpdated" + newName, new Dictionary<string, object> { { "culture", this } });

@@ -14,4 +14,9 @@ public class BoardSaveHandler : MonoBehaviour
     {
         EventManager.TriggerEvent("SaveGame", new Dictionary<string, object> { { "board", gameObject } });
     }
+
+    private void OnDestroy()
+    {
+        EventManager.StopListening("LoadingMainMenu", SendBoardToSave);
+    }
 }

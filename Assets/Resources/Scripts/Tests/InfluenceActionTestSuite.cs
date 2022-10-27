@@ -62,7 +62,7 @@ public class InfluenceActionTestSuite
 
         Assert.That(neighborUpdate.newState == Culture.State.PendingRemoval, "Neighbor not slated for removal!");
         Assert.That(testCultureUpdate.newName != "", "Culture not getting new name!");
-        Assert.That(testCultureUpdate.popChange == neighbor.population, "Culture not gaining members of neighbor culture!");
+        Assert.That(testCultureUpdate.popChange == neighbor.Population, "Culture not gaining members of neighbor culture!");
     }
 
 

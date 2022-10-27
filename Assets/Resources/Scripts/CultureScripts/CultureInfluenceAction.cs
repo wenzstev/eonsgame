@@ -28,10 +28,10 @@ public class CultureInfluenceAction : CultureAction
     void MergeCulture(Culture other)
     {
         // duplicated code x1. if happens again, pull out into static helper method
-        float percentThisPopulation = (float)culture.population / (culture.population + other.maxPopTransfer);
+        float percentThisPopulation = (float)culture.Population / (culture.Population + other.maxPopTransfer);
         turn.UpdateCulture(culture).newColor = Color.Lerp(culture.Color, other.Color, percentThisPopulation);
-        turn.UpdateCulture(culture).popChange += other.population;
-        turn.UpdateCulture(other).popChange -= other.population;
+        turn.UpdateCulture(culture).popChange += other.Population;
+        turn.UpdateCulture(other).popChange -= other.Population;
         turn.UpdateCulture(other).newState = Culture.State.PendingRemoval;
     }
 

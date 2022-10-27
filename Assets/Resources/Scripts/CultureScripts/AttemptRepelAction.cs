@@ -19,7 +19,7 @@ public class AttemptRepelAction : CultureAction
             {
                 // ability to repel is function of population and affinity (and later tech)
                 float hasAffinityAdvantage = c.affinity == culture.affinity ? 0 : .2f;
-                float popAdvantage = ((float)culture.population - c.population) / 10f;
+                float popAdvantage = ((float)culture.Population - c.Population) / 10f;
                 float repelThreshold = .6f + hasAffinityAdvantage + popAdvantage;
                 //Debug.Log("repel threshold = .6 + " + hasAffinityAdvantage + " + " + popAdvantage);
                 if (Random.value < repelThreshold)
@@ -31,7 +31,7 @@ public class AttemptRepelAction : CultureAction
                 {
                     turn.UpdateCulture(c).newState = Culture.State.Default;
 
-                    Debug.Log(c.tile.name);
+                    Debug.Log(c.Tile.name);
                     //EventManager.TriggerEvent("PauseSpeed", null);
                 }
                 if(Random.value < .01f)

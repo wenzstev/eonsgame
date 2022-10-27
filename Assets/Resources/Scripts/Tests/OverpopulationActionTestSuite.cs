@@ -78,7 +78,7 @@ public class OverpopulationActionTestSuite
 
         CultureTurnUpdate cta = turn.turnUpdates[testCultureA];
         Assert.That(turn.turnUpdates.Count == 2, "Culture did not split!");
-        Assert.That(testCultureA.population == 10, "Culture did not lose size!");
+        Assert.That(testCultureA.Population == 10, "Culture did not lose size!");
     }
     
 

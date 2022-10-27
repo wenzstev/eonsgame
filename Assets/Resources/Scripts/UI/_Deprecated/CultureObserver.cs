@@ -68,7 +68,7 @@ public class CultureAggregation
         cultures.Add(culture);
         avgColor = culture.Color;
         name = culture.name;
-        totalPopulation = culture.population;
+        totalPopulation = culture.Population;
 
         EventManager.StartListening("CultureUpdated" + name, UpdateCultureStats);
         EventManager.StartListening("CultureRemoved" + name, RemoveCulture);
@@ -89,7 +89,7 @@ public class CultureAggregation
         Culture updatedCulture = (Culture)updatedCultureDict["culture"];
 
         AddCulture(updatedCulture);
-        if(updatedCulture.population == 0)
+        if(updatedCulture.Population == 0)
         {
             cultures.Remove(updatedCulture);
         }
@@ -107,7 +107,7 @@ public class CultureAggregation
         foreach (Culture c in cultures)
         {
             //Debug.Log(c.name + "(" + c.GetHashCode() + ") has pop of " + c.population);
-            totalPopulation += c.population;
+            totalPopulation += c.Population;
             r += c.Color.r;
             g += c.Color.g;
             b += c.Color.b;
