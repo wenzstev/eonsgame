@@ -43,6 +43,6 @@ public class CultureHighlightPanel : MonoBehaviour
         GameObject cultureName = transform.GetChild(1).gameObject;
         cultureName.GetComponent<TextMeshProUGUI>().text = c.name;
         GameObject popText = transform.GetChild(2).gameObject;
-        popText.GetComponent<TextMeshProUGUI>().text = c.population.ToString();
+        popText.GetComponent<TextMeshProUGUI>().text = c.Population.ToString();
     }
 }

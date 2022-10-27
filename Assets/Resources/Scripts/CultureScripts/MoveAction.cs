@@ -12,7 +12,7 @@ public abstract class CultureMoveAction : CultureAction
 
     protected CultureMoveAction(Culture c) : base(c)
     {
-        prospectiveTile = c.tile.GetRandomNeighbor();
+        prospectiveTile = c.Tile.GetRandomNeighbor();
     }
 
     public IEnumerator MoveTile(GameObject cultureObj, GameObject newTile)

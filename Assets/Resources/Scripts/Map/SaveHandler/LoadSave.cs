@@ -20,6 +20,7 @@ public class LoadSave : MonoBehaviour
         save = LoadFromScene();
         GameObject board = bl.LoadBoardFromSerialized(save.sBoard);
         tl.LoadTilesFromSerialized(board, save.sTiles);
+        cl.LoadCulturesFromSerialized(save.sCultures, board);
     }
 
     private void OnDestroy()

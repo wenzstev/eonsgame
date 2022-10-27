@@ -63,7 +63,7 @@ public class MergeActionTestSuite
         Assert.That(newInfoTestCulture.popChange == 1, "Merged Culture didn't have it's population changed!");
         Assert.That(newInfoTestCulture.newColor == c, "Merged Culture didn't have it's color changed!");
         Assert.That(newInfoMergedCulture.newState == Culture.State.PendingRemoval, "Merging culture isn't slated for removal!");
-        Assert.That(newInfoMergedCulture.popChange == -testCultureMerge.population, "Merging culture doesn't have pop set to zero!");
+        Assert.That(newInfoMergedCulture.popChange == -testCultureMerge.Population, "Merging culture doesn't have pop set to zero!");
     }
 
     [Test]
@@ -112,7 +112,7 @@ public class MergeActionTestSuite
         Assert.That(newInfoMergeCulture.popChange == 1, "Merged Culture didn't have it's population changed!");
         Assert.That(newInfoMergeCulture.newColor == c, "Merged Culture didn't have it's color changed!");
         Assert.That(newInfoTestCulture.newState == Culture.State.PendingRemoval, "Merging culture isn't slated for removal!");
-        Assert.That(newInfoTestCulture.popChange == -testCulture.population, "Merging culture doesn't have pop set to zero!");
+        Assert.That(newInfoTestCulture.popChange == -testCulture.Population, "Merging culture doesn't have pop set to zero!");
         Assert.That(newInfoMergeCulture.newTile == testTile, "Merged culture isn't moving to tile!");
 
     }

@@ -24,7 +24,7 @@ public class MoveTileAction : CultureMoveAction
             return turn;
         }
 
-        if (culture.population > culture.maxPopTransfer)
+        if (culture.Population > culture.maxPopTransfer)
         {
             return MoveSplitCulture(); ;
         }

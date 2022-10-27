@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class CultureLoader : MonoBehaviour
 {
-    public Board b;
     public GameObject CultureTile;
-    public void CreateCultures(SerializedCultures scs)
-    { 
+    public void LoadCulturesFromSerialized(SerializedCultures scs, GameObject boardObj)
+    {
+        Board b = boardObj.GetComponent<Board>();
         foreach (SerializedCulture sc in scs.cultures)
         {
             // assuming that the tile has been created
@@ -18,6 +18,7 @@ public class CultureLoader : MonoBehaviour
 
 
             Culture curCulture = curCultureObj.GetComponent<Culture>();
+            curCulture.LoadFromSerialized(curTile, CultureTile);
             EventManager.TriggerEvent("CultureCreated", new Dictionary<string, object> { { "culture", curCulture.name } });
             EventManager.TriggerEvent("CultureUpdated" + curCulture.name, new Dictionary<string, object> { { "culture", curCulture } });
         }

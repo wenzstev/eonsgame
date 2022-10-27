@@ -27,16 +27,16 @@ public class CultureTestSuite
     {
         
         testCulture.AddPopulation(4);
-        int oldPopulation = testCulture.population;
+        int oldPopulation = testCulture.Population;
 
         GameObject splitCultureObj = testCulture.SplitCultureFromParent();
         Culture splitCulture = splitCultureObj.GetComponent<Culture>();
 
         Assert.That(splitCulture.name == testCulture.name, "Split culture's name doesn't match!");
-        Assert.That(splitCulture.population == testCulture.maxPopTransfer, "Split culture's size doesn't match split amount!");
-        Assert.That(testCulture.population == oldPopulation - testCulture.maxPopTransfer, "Parent culture's population wasn't lowered!");
+        Assert.That(splitCulture.Population == testCulture.maxPopTransfer, "Split culture's size doesn't match split amount!");
+        Assert.That(testCulture.Population == oldPopulation - testCulture.maxPopTransfer, "Parent culture's population wasn't lowered!");
         Assert.That(splitCulture.GetComponent<CultureMemory>().cultureParentName == testCulture.GetComponent<CultureMemory>().cultureParentName, "Split culture doesn't have the same parent!");
-        Assert.That(testCulture.tile == splitCulture.transform.parent.GetComponent<Tile>(), "Split culture wasn't set as parent of tile!");
+        Assert.That(testCulture.Tile == splitCulture.transform.parent.GetComponent<Tile>(), "Split culture wasn't set as parent of tile!");
     }
 
     [Test]
