@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.TestTools;
 using NUnit.Framework;
-public class MergeActionTestSuite 
+public class MergeActionTestSuite : CultureActionTest
 {
     Culture testCulture;
     Culture testCultureMerge;
