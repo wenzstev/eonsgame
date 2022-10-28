@@ -110,10 +110,11 @@ public class Culture : MonoBehaviour
         population = 1;
         color = new Color(Random.value, Random.value, Random.value);
         transform.SetParent(t.gameObject.transform);
+        gameObject.name = name;
+
         SetTile(t);
 
         SetColor(color);
-        gameObject.name = name;
     }
 
     public void Init(Tile t, Color parent, int pop, string n)
@@ -210,8 +211,6 @@ public class Culture : MonoBehaviour
         newCulture.Init(Tile, color, maxPopTransfer, name);
         AddPopulation(-maxPopTransfer);
         newCulture.CultureMemory.previousTile = Tile;
-
-        
         return newCultureObj;
     }
 
