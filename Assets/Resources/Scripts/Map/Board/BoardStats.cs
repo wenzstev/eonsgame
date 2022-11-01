@@ -16,7 +16,7 @@ public class BoardStats : MonoBehaviour
     {
         get
         {
-            return isHemisphere ? height : Mathf.FloorToInt(height / 2);
+            return isHemisphere ? height : Mathf.CeilToInt(height / 2f);
         }
     }
     public float seaLevel

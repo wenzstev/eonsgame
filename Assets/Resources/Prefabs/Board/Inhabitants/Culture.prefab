@@ -186,7 +186,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f819dac6b9cd8946b1d59b038c4200d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cultureTemplate: {fileID: 829645622402238992}
+  name: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  CultureTemplate: {fileID: 829645622402238992}
+  population: 0
   spreadChance: 1
   shareCultureChance: 0.05
   baseMutationMax: 0.01
@@ -209,7 +212,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f14d02641015ec49949b1ccef59f257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _previousTile: {fileID: 0}
   cultureParentName: 
+  _previousState: 0
   wasRepelled: 0
 --- !u!70 &2254175048405440385
 CapsuleCollider2D:
