@@ -4,80 +4,46 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using NUnit.Framework;
 
-public class InfluenceActionTestSuite 
+public class InfluenceActionTestSuite : CultureInteractionTest
 {
-    Culture testCulture;
-    Culture neighbor;
-    Tile testTile;
-
     [SetUp]
-    public void Setup()
+    public void SetUp()
     {
-        MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Controllers/EventManager"));
-        GameObject testTileObj = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Board/Tile"));
-        testTile = testTileObj.GetComponent<Tile>();
-
-        GameObject testCultureObj = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/CultureLayer"));
-        testCulture = testCultureObj.GetComponent<Culture>();
-
-        GameObject neighborObj = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/CultureLayer"));
-        neighbor = neighborObj.GetComponent<Culture>();
-
-        testCulture.Init(testTile);
-        neighbor.Init(testTile);
+        Neighbor.Init(TestTile);
     }
 
     [Test]
     public void CanInfluenceNeighborCulture()
     {
-        CultureInfluenceAction cia = new CultureInfluenceAction(testCulture);
+        CultureInfluenceAction cia = new CultureInfluenceAction(TestCulture);
         Turn turn = cia.ExecuteTurn();
 
-        Assert.That(turn.turnUpdates.ContainsKey(neighbor), "Neighbor experiencing no changes!");
+        Assert.That(turn.turnUpdates.ContainsKey(Neighbor), "Neighbor experiencing no changes!");
 
-        CultureTurnUpdate neighborUpdate = turn.turnUpdates[neighbor];
-
-        Assert.That(CultureHelperMethods.GetColorDistance(testCulture.Color, neighborUpdate.newColor) 
-                    < CultureHelperMethods.GetColorDistance(testCulture.Color, neighbor.Color),
-                    "Cultures are not closer together!");
-
-        
+        CultureTurnUpdate NeighborUpdate = turn.turnUpdates[Neighbor];
+        Assert.That(CultureHelperMethods.GetColorDistance(TestCulture.Color, NeighborUpdate.newColor) 
+                    < CultureHelperMethods.GetColorDistance(TestCulture.Color, Neighbor.Color),
+                    "Cultures are not closer together!"); 
     }
 
     [Test]
     public void CanMergeIntoNewCultureIfClose()
     {
-        Turn.HookTurn().UpdateCulture(testCulture).newColor = Color.blue;
-        Turn.HookTurn().UpdateCulture(neighbor).newColor = Color.blue;
+        Turn.HookTurn().UpdateCulture(TestCulture).newColor = Color.blue;
+        Turn.HookTurn().UpdateCulture(Neighbor).newColor = Color.blue;
         Turn.HookTurn().UpdateAllCultures();
 
-        CultureInfluenceAction cia = new CultureInfluenceAction(testCulture);
+        CultureInfluenceAction cia = new CultureInfluenceAction(TestCulture);
         Turn turn = cia.ExecuteTurn();
 
-        Assert.That(turn.turnUpdates.ContainsKey(testCulture), "Test culture experiencing no changes!");
-        Assert.That(turn.turnUpdates.ContainsKey(neighbor), "Neighbor experiencing no changes!");
+        Assert.That(turn.turnUpdates.ContainsKey(TestCulture), "Test culture experiencing no changes!");
+        Assert.That(turn.turnUpdates.ContainsKey(Neighbor), "Neighbor experiencing no changes!");
 
-        CultureTurnUpdate testCultureUpdate = turn.turnUpdates[testCulture];
-        CultureTurnUpdate neighborUpdate = turn.turnUpdates[neighbor];
+        CultureTurnUpdate TestCultureUpdate = turn.turnUpdates[TestCulture];
+        CultureTurnUpdate neighborUpdate = turn.turnUpdates[Neighbor];
 
         Assert.That(neighborUpdate.newState == Culture.State.PendingRemoval, "Neighbor not slated for removal!");
-        Assert.That(testCultureUpdate.newName != "", "Culture not getting new name!");
-        Assert.That(testCultureUpdate.popChange == neighbor.Population, "Culture not gaining members of neighbor culture!");
+        Assert.That(TestCultureUpdate.newName != "", "Culture not getting new name!");
+        Assert.That(TestCultureUpdate.popChange == Neighbor.Population, "Culture not gaining members of neighbor culture!");
     }
-
-
-
-
-    [TearDown]
-    public void TearDown()
-    {
-        Turn.HookTurn().UpdateAllCultures();
-
-        foreach (GameObject o in Object.FindObjectsOfType<GameObject>())
-        {
-            Object.Destroy(o);
-        }
-    }
-
-
 }

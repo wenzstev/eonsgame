@@ -15,9 +15,10 @@ public class Tile : MonoBehaviour
     {
         get
         {
+            Debug.Log("getting move tile");
             if(_moveTile == null)
             {
-                _moveTile = Instantiate(Resources.Load<GameObject>("Prefabs/Board/Tile"));
+                _moveTile = Instantiate(Resources.Load<GameObject>("Prefabs/Board/EmptyTile"));
                 _moveTile.name = "Move Tile";
                 return _moveTile;
             }

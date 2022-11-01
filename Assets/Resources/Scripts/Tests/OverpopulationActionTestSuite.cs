@@ -4,60 +4,35 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using NUnit.Framework;
 
-public class OverpopulationActionTestSuite 
+public class OverpopulationActionTestSuite : CultureActionTest
 {
-    Tile testTile;
-    Culture testCultureA;
-    //Culture testCultureB;
 
     [UnitySetUp]
     public IEnumerator SetUp()
     {
-        MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Controllers/EventManager"));
-        MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Controllers/Controllers"));
-        
-        // set up board
-        GameObject testBoardObj = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Board/Board"));
-        GameObject testBoardGeneratorObj = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Board/BoardGenerator"));
-
-        Board testBoard = testBoardObj.GetComponent<Board>();
-        testBoard.GetComponent<BoardInputReader>().bg = testBoardGeneratorObj.GetComponent<BoardGenAlgorithm>();
-        BoardStats boardStats = testBoard.GetComponent<BoardStats>();
-
-        boardStats.height = 3;
-        boardStats.width = 3;
-
-        yield return null; // CreateBoard() is run in Board's Start() command
-
-        GameObject testTileObj = testBoard.GetTile(1, 1);
-        GameObject testCultureAObj = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/CultureLayer"));
-        //GameObject testCultureBObj = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/CultureLayer"));
-
-        testTile = testTileObj.GetComponent<Tile>();
-        testCultureA = testCultureAObj.GetComponent<Culture>();
-
-        testCultureA.Init(testTile);
-        Turn.HookTurn().UpdateCulture(testCultureA).popChange = 10;
+        Turn.HookTurn().UpdateCulture(TestCulture).popChange = 100;
         Turn.HookTurn().UpdateAllCultures();
+        yield return null;
     }
 
     [Test]
     public void CanBecomeOverPopulated()
     {
-        DefaultAction da = new DefaultAction(testCultureA);
+        TestCulture.spreadChance = 0;
+        DefaultAction da = new DefaultAction(TestCulture);
         Turn turn = da.ExecuteTurn();
-        CultureTurnUpdate cta = turn.turnUpdates[testCultureA];
+        CultureTurnUpdate cta = turn.turnUpdates[TestCulture];
         Assert.That(cta.newState == Culture.State.Overpopulated, "Culture not in overpopulated state!");
     }
 
     [Test]
     public void TestPopulationDrop()
     {
-        OverpopulationAction opa = new OverpopulationAction(testCultureA);
+        OverpopulationAction opa = new OverpopulationAction(TestCulture);
         opa.popLossChance = 1f;
         Turn turn = opa.ExecuteTurn();
 
-        CultureTurnUpdate cta = turn.turnUpdates[testCultureA];
+        CultureTurnUpdate cta = turn.turnUpdates[TestCulture];
         Assert.That(cta.popChange == -1, "Culture did not lose size!");
 
 
@@ -72,25 +47,13 @@ public class OverpopulationActionTestSuite
 
 
 
-        OverpopulationAction opa = new OverpopulationAction(testCultureA);
+        OverpopulationAction opa = new OverpopulationAction(TestCulture);
         opa.popLossChance = 0f;
         Turn turn = opa.ExecuteTurn();
 
-        CultureTurnUpdate cta = turn.turnUpdates[testCultureA];
+        CultureTurnUpdate cta = turn.turnUpdates[TestCulture];
         Assert.That(turn.turnUpdates.Count == 2, "Culture did not split!");
-        Assert.That(testCultureA.Population == 10, "Culture did not lose size!");
+        Assert.That(TestCulture.Population == 10, "Culture did not lose size!");
     }
-    
-
-
-    [TearDown]
-    public void TearDown()
-    {
-        Turn.HookTurn().UpdateAllCultures();
-
-        foreach (GameObject o in Object.FindObjectsOfType<GameObject>())
-        {
-            Object.Destroy(o);
-        }
-    }
+   
 }
