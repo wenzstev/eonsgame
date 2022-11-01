@@ -4,77 +4,31 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using NUnit.Framework;
 
-public class MoveActionTestSuite 
+public class MoveActionTestSuite : CultureActionTest
 {
-    GameObject testCultureObj;
-    GameObject homeTile;
-    GameObject projectedTile;
-    Culture testCulture;
-
-
-
     [UnitySetUp]
     public IEnumerator SetUp()
     {
-        Object.Instantiate(Resources.Load<GameObject>("Prefabs/Controllers/EventManager"));
-        Object.Instantiate(Resources.Load<GameObject>("Prefabs/Controllers/Controllers"));
-
-        GameObject testBoardObj = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Board/Board"));
-        GameObject testBoardGeneratorObj = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Board/BoardGenerator"));
-        
-        Board testBoard = testBoardObj.GetComponent<Board>();
-        testBoard.GetComponent<BoardInputReader>().bg = testBoardGeneratorObj.GetComponent<BoardGenAlgorithm>();
-
-        BoardStats boardStats = testBoard.GetComponent<BoardStats>();
-
-        boardStats.height = 1;
-        boardStats.width = 2;
-
+        NeighborTile.GetComponent<TileDrawer>().tileType = TileDrawer.BiomeType.Grassland; // otherwise the minimum height will always be underwater
         yield return null;
-
-        homeTile = testBoard.GetTile(0, 0);
-        projectedTile = testBoard.GetTile(1, 0);
-
-        testCultureObj = Object.Instantiate(Resources.Load<GameObject>("Prefabs/CultureLayer"));
-        testCulture = testCultureObj.GetComponent<Culture>();
-
-        testCulture.Init(homeTile.GetComponent<Tile>());
-
-        yield return null;
-
-
     }
 
 
     [UnityTest]
     public IEnumerator MoveTileActionTest()
     {
-        MoveTileAction mta = new MoveTileAction(testCulture);
-        mta.moveChance = 1;
 
-        Turn testTurn = mta.ExecuteTurn();
-
-        int counter = 0;
-        while(testTurn.turnUpdates[testCulture].newState == Culture.State.Default && counter < 50)
-        {
-            mta = new MoveTileAction(testCulture);
-            mta.moveChance = 1;
-            testTurn = mta.ExecuteTurn();
-            counter++;
-        }
+        Turn TestTurn = TestMoveAbility();
 
         yield return null;
 
-        testTurn.UpdateAllCultures();
+        TestTurn.UpdateAllCultures();
 
-
-        Assert.That(counter < 50, "Test ran too many times without ever moving the tile!");
-        Assert.That(testCulture.currentState == Culture.State.Moving, "Culture is not moving!");
-
+        Assert.That(TestCulture.currentState == Culture.State.Moving, "Culture is not moving!");
 
         yield return new WaitForSeconds(.03f);
 
-        Assert.That(testCultureObj.transform.position != homeTile.transform.position);
+        Assert.That(TestCultureObj.transform.position != TestTile.transform.position);
 
         yield return new WaitForSeconds(.1f);
 
@@ -82,20 +36,21 @@ public class MoveActionTestSuite
 
       
 
-        Assert.That(testCulture.currentState == Culture.State.NewOnTile, "Culture has not returned to default state!");
-        Assert.That(testCulture.transform.parent == projectedTile.transform, "Culture has not changed tiles!");
-        Assert.That(!homeTile.GetComponent<TileInfo>().cultures.ContainsKey(testCulture.name), "Previous culture is still in old tileinfo!");   
+        Assert.That(TestCulture.currentState == Culture.State.NewOnTile, "Culture has not returned to default state!");
+        Assert.That(TestCulture.transform.parent == NeighborTile.transform, "Culture has not changed tiles!");
+        Assert.That(!TestTile.GetComponent<TileInfo>().cultures.ContainsKey(TestCulture.name), "Previous culture is still in old tileinfo!");   
     }
 
     [UnityTest]
     public IEnumerator MoveTileActionWhenLargeTest()
     {
-        Turn.HookTurn().UpdateCulture(testCulture).popChange = 5;
+        Turn.HookTurn().UpdateCulture(TestCulture).popChange = 5;
         Turn.HookTurn().UpdateAllCultures();
 
-        Assert.That(testCulture.Population == 6, "test culture's population is not 6!");
+        Assert.That(TestCulture.Population == 6, "test culture's population is not 6!");
 
-        MoveTileAction mta = new MoveTileAction(testCulture);
+        
+        MoveTileAction mta = new MoveTileAction(TestCulture);
         mta.moveChance = 1;
 
         Turn testTurn = mta.ExecuteTurn();
@@ -103,25 +58,25 @@ public class MoveActionTestSuite
         int counter = 0;
         while (testTurn.turnUpdates.Count == 1 && counter < 50)
         {
-            Debug.Log("Counter at " + counter);
-            mta = new MoveTileAction(testCulture);
+            mta = new MoveTileAction(TestCulture);
             mta.moveChance = 1;
             testTurn = mta.ExecuteTurn();
             counter++;
         }
+        
 
         yield return null;
 
         Turn.HookTurn().UpdateAllCultures();
 
         Assert.That(counter < 50, "Test ran too many times without ever moving the tile!");
-        Assert.That(testCulture.Population == 5, "testCulture did not lose population!");
+        Assert.That(TestCulture.Population == 5, "TestCulture did not lose population!");
 
         yield return new WaitForSeconds(.1f);
 
         Turn.HookTurn().UpdateAllCultures();
 
-        GameObject childCultureObj = projectedTile.transform.GetChild(1).gameObject;
+        GameObject childCultureObj = NeighborTile.transform.GetChild(1).gameObject;
 
         Assert.That(childCultureObj != null, "child culture is not child of new tile!");
 
@@ -140,36 +95,40 @@ public class MoveActionTestSuite
     [UnityTest]
     public IEnumerator RepelledActionTest()
     {
-        testCulture.GetComponent<CultureMemory>().previousTile = projectedTile.GetComponent<Tile>();
+        TestCulture.GetComponent<CultureMemory>().previousTile = NeighborTile.GetComponent<Tile>();
 
-        RepelledAction tra = new RepelledAction(testCulture);
+        RepelledAction tra = new RepelledAction(TestCulture);
         Turn testTurn = tra.ExecuteTurn();
         testTurn.UpdateAllCultures();
 
         yield return null;
 
-        Assert.That(testCulture.currentState == Culture.State.Moving, "Culture did not change to moving!");
+        Assert.That(TestCulture.currentState == Culture.State.Moving, "Culture did not change to moving!");
 
         yield return new WaitForSeconds(.1f);
 
         Turn.HookTurn().UpdateAllCultures();
 
-        Assert.That(testCulture.currentState == Culture.State.NewOnTile, "Culture is not in NewOnTile State!");
-
-
-
+        Assert.That(TestCulture.currentState == Culture.State.NewOnTile, "Culture is not in NewOnTile State!");
     }
 
-    [TearDown]
-    public void TearDown()
+    // TODO: refactor this so that it works for more tests?
+    Turn TestMoveAbility()
     {
-        Turn.HookTurn().UpdateAllCultures();
+        MoveTileAction mta = new MoveTileAction(TestCulture);
+        mta.moveChance = 1;
+        Turn testTurn = mta.ExecuteTurn();
 
-        foreach(GameObject o in Object.FindObjectsOfType<GameObject>())
+        int counter = 0;
+        while (testTurn.turnUpdates[TestCulture].newState == Culture.State.Default && counter < 50)
         {
-            Object.Destroy(o);
+            mta = new MoveTileAction(TestCulture);
+            mta.moveChance = 1;
+            testTurn = mta.ExecuteTurn();
+            counter++;
         }
+
+        Assert.That(counter < 50, "Test ran too many times without ever moving the tile!");
+        return testTurn;
     }
-
-
 }
