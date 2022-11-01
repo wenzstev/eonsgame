@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 19
+  controlID: 56
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -94,14 +94,14 @@ MonoBehaviour:
     y: 0
     width: 1214.6666
     height: 790.6667
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 17}
   - {fileID: 14}
   m_Selected: 1
-  m_LastSelected: 1
+  m_LastSelected: 0
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -121,16 +121,16 @@ MonoBehaviour:
     y: 790.6667
     width: 2078.6667
     height: 508.6667
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 15}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 15}
   - {fileID: 20}
   - {fileID: 13}
   - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 24
+  controlID: 57
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 25
+  controlID: 58
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -471,15 +471,15 @@ MonoBehaviour:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 8073
-    splitterInitialOffset: 477.66666
+    ID: 115
+    splitterInitialOffset: 533.6667
     currentActiveSplitter: -1
     realSizes:
-    - 480.66666
-    - 218.00003
+    - 462.66666
+    - 236.00003
     relativeSizes:
-    - 0.68770945
-    - 0.31229055
+    - 0.66221374
+    - 0.33778626
     minSizes:
     - 32
     - 32
@@ -503,7 +503,7 @@ MonoBehaviour:
       name: My project
       fullName: My project
       resultStatus: 2
-      duration: 0.3287233
+      duration: 0.2511895
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -519,7 +519,7 @@ MonoBehaviour:
       name: Tests.dll
       fullName: C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll
       resultStatus: 2
-      duration: 0.1826767
+      duration: 0.1043427
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -534,9 +534,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][CultureTestSuite][suite]
       name: CultureTestSuite
       fullName: CultureTestSuite
-      resultStatus: 2
-      duration: 0.0455903
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.1068405
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -550,33 +550,29 @@ MonoBehaviour:
       uniqueId: Tests.dll/CultureTestSuite/[Tests][CultureTestSuite.TestCanMerge]
       name: TestCanMerge
       fullName: CultureTestSuite.TestCanMerge
-      resultStatus: 2
-      duration: 0.0282929
-      messages: 'SetUp : System.NullReferenceException : Object reference not set
-        to an instance of an object
+      resultStatus: 1
+      duration: 0.0660506
+      messages: 
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
-        SetUp : Unhandled log message: ''[Error]
-        There needs to be one active EventManager script on a GameObject in your
-        scene.''. Use UnityEngine.TestTools.LogAssert.Expect'
-      output: 'The referenced script (Unknown) on this Behaviour is missing!
-
-        The
-        referenced script on this Behaviour (Game Object ''PopulationView'') is missing!
-
-        The
-        referenced script (Unknown) on this Behaviour is missing!
-
-        The referenced
-        script on this Behaviour (Game Object ''PopulationView'') is missing!
-
-        The
-        referenced script on this Behaviour (Game Object ''PopulationView'') is missing!
-
-        There
-        needs to be one active EventManager script on a GameObject in your scene.
-
-        NullReferenceException:
-        Object reference not set to an instance of an object
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][CultureTestSuite][suite]
+    - id: 1003
+      uniqueId: Tests.dll/CultureTestSuite/[Tests][CultureTestSuite.TestCannotMerge]
+      name: TestCannotMerge
+      fullName: CultureTestSuite.TestCannotMerge
+      resultStatus: 1
+      duration: 0.0124118
+      messages: 
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
 '
       stacktrace: 
@@ -592,27 +588,10 @@ MonoBehaviour:
       uniqueId: Tests.dll/CultureTestSuite/[Tests][CultureTestSuite.TestSplitCulture]
       name: TestSplitCulture
       fullName: CultureTestSuite.TestSplitCulture
-      resultStatus: 2
-      duration: 0.0026252
-      messages: 'SetUp : System.NullReferenceException : Object reference not set
-        to an instance of an object
-
-        SetUp : Unhandled log message: ''[Error]
-        There needs to be one active EventManager script on a GameObject in your
-        scene.''. Use UnityEngine.TestTools.LogAssert.Expect'
-      output: 'The referenced script (Unknown) on this Behaviour is missing!
-
-        The
-        referenced script on this Behaviour (Game Object ''PopulationView'') is missing!
-
-        The
-        referenced script on this Behaviour (Game Object ''PopulationView'') is missing!
-
-        There
-        needs to be one active EventManager script on a GameObject in your scene.
-
-        NullReferenceException:
-        Object reference not set to an instance of an object
+      resultStatus: 1
+      duration: 0.0144626
+      messages: 
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
 '
       stacktrace: 
@@ -628,9 +607,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][InfluenceActionTestSuite][suite]
       name: InfluenceActionTestSuite
       fullName: InfluenceActionTestSuite
-      resultStatus: 2
-      duration: 0.0122629
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.0415847
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -644,42 +623,15 @@ MonoBehaviour:
       uniqueId: Tests.dll/InfluenceActionTestSuite/[Tests][InfluenceActionTestSuite.CanInfluenceNeighborCulture]
       name: CanInfluenceNeighborCulture
       fullName: InfluenceActionTestSuite.CanInfluenceNeighborCulture
-      resultStatus: 2
-      duration: 0.0047481
-      messages: 'SetUp : System.NullReferenceException : Object reference not set
-        to an instance of an object
+      resultStatus: 1
+      duration: 0.016802
+      messages: 
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
-        SetUp : Unhandled log message: ''[Error]
-        There needs to be one active EventManager script on a GameObject in your
-        scene.''. Use UnityEngine.TestTools.LogAssert.Expect'
-      output: 'The referenced script (Unknown) on this Behaviour is missing!
+        qstsil
+        (CultureMemory)
 
-        The
-        referenced script on this Behaviour (Game Object ''PopulationView'') is missing!
-
-        The
-        referenced script on this Behaviour (Game Object ''PopulationView'') is missing!
-
-        There
-        needs to be one active EventManager script on a GameObject in your scene.
-
-        NullReferenceException:
-        Object reference not set to an instance of an object
-
-        The referenced
-        script (Unknown) on this Behaviour is missing!
-
-        The referenced script
-        on this Behaviour (Game Object ''PopulationView'') is missing!
-
-        The
-        referenced script on this Behaviour (Game Object ''PopulationView'') is missing!
-
-        There
-        needs to be one active EventManager script on a GameObject in your scene.
-
-        NullReferenceException:
-        Object reference not set to an instance of an object
+        Default
 
 '
       stacktrace: 
@@ -695,42 +647,24 @@ MonoBehaviour:
       uniqueId: Tests.dll/InfluenceActionTestSuite/[Tests][InfluenceActionTestSuite.CanMergeIntoNewCultureIfClose]
       name: CanMergeIntoNewCultureIfClose
       fullName: InfluenceActionTestSuite.CanMergeIntoNewCultureIfClose
-      resultStatus: 2
-      duration: 0.0037803
-      messages: 'SetUp : System.NullReferenceException : Object reference not set
-        to an instance of an object
+      resultStatus: 1
+      duration: 0.0210761
+      messages: 
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
-        SetUp : Unhandled log message: ''[Error]
-        There needs to be one active EventManager script on a GameObject in your
-        scene.''. Use UnityEngine.TestTools.LogAssert.Expect'
-      output: 'The referenced script (Unknown) on this Behaviour is missing!
+        rthqqn
+        (CultureMemory)
 
-        The
-        referenced script on this Behaviour (Game Object ''PopulationView'') is missing!
+        Default
 
-        The
-        referenced script on this Behaviour (Game Object ''PopulationView'') is missing!
+        qstsil (CultureMemory)
 
-        There
-        needs to be one active EventManager script on a GameObject in your scene.
+        Default
 
-        NullReferenceException:
-        Object reference not set to an instance of an object
+        rthqqn
+        (CultureMemory)
 
-        The referenced
-        script (Unknown) on this Behaviour is missing!
-
-        The referenced script
-        on this Behaviour (Game Object ''PopulationView'') is missing!
-
-        The
-        referenced script on this Behaviour (Game Object ''PopulationView'') is missing!
-
-        There
-        needs to be one active EventManager script on a GameObject in your scene.
-
-        NullReferenceException:
-        Object reference not set to an instance of an object
+        Default
 
 '
       stacktrace: 
@@ -746,9 +680,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][MergeActionTestSuite][suite]
       name: MergeActionTestSuite
       fullName: MergeActionTestSuite
-      resultStatus: 2
-      duration: 0.0161053
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.0551983
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -762,27 +696,19 @@ MonoBehaviour:
       uniqueId: Tests.dll/MergeActionTestSuite/[Tests][MergeActionTestSuite.CanAddNewCultureToTile]
       name: CanAddNewCultureToTile
       fullName: MergeActionTestSuite.CanAddNewCultureToTile
-      resultStatus: 2
-      duration: 0.0034295
-      messages: 'SetUp : System.NullReferenceException : Object reference not set
-        to an instance of an object
+      resultStatus: 1
+      duration: 0.0104066
+      messages: 
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
-        SetUp : Unhandled log message: ''[Error]
-        There needs to be one active EventManager script on a GameObject in your
-        scene.''. Use UnityEngine.TestTools.LogAssert.Expect'
-      output: 'The referenced script (Unknown) on this Behaviour is missing!
+        qstsil
+        (CultureMemory)
 
-        The
-        referenced script on this Behaviour (Game Object ''PopulationView'') is missing!
+        Default
 
-        The
-        referenced script on this Behaviour (Game Object ''PopulationView'') is missing!
+        rthqqn (CultureMemory)
 
-        There
-        needs to be one active EventManager script on a GameObject in your scene.
-
-        NullReferenceException:
-        Object reference not set to an instance of an object
+        Default
 
 '
       stacktrace: 
@@ -798,27 +724,34 @@ MonoBehaviour:
       uniqueId: Tests.dll/MergeActionTestSuite/[Tests][MergeActionTestSuite.CanCreateAsNewCulture]
       name: CanCreateAsNewCulture
       fullName: MergeActionTestSuite.CanCreateAsNewCulture
-      resultStatus: 2
-      duration: 0.0026516
-      messages: 'SetUp : System.NullReferenceException : Object reference not set
-        to an instance of an object
+      resultStatus: 1
+      duration: 0.0115411
+      messages: 
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
-        SetUp : Unhandled log message: ''[Error]
-        There needs to be one active EventManager script on a GameObject in your
-        scene.''. Use UnityEngine.TestTools.LogAssert.Expect'
-      output: 'The referenced script (Unknown) on this Behaviour is missing!
+        Culture
+        has tileInfo, not changing. Unless this is a test it may be a bug.
 
-        The
-        referenced script on this Behaviour (Game Object ''PopulationView'') is missing!
+        test
+        (CultureMemory)
 
-        The
-        referenced script on this Behaviour (Game Object ''PopulationView'') is missing!
+        Default
 
-        There
-        needs to be one active EventManager script on a GameObject in your scene.
+        Culture has tileInfo, not changing.
+        Unless this is a test it may be a bug.
 
-        NullReferenceException:
-        Object reference not set to an instance of an object
+        test (CultureMemory)
+
+        Default
+
+        test
+        (CultureMemory)
+
+        Default
+
+        test (CultureMemory)
+
+        Default
 
 '
       stacktrace: 
@@ -834,27 +767,30 @@ MonoBehaviour:
       uniqueId: Tests.dll/MergeActionTestSuite/[Tests][MergeActionTestSuite.CanMergeCultures]
       name: CanMergeCultures
       fullName: MergeActionTestSuite.CanMergeCultures
-      resultStatus: 2
-      duration: 0.0021348
-      messages: 'SetUp : System.NullReferenceException : Object reference not set
-        to an instance of an object
+      resultStatus: 1
+      duration: 0.0117793
+      messages: 
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
-        SetUp : Unhandled log message: ''[Error]
-        There needs to be one active EventManager script on a GameObject in your
-        scene.''. Use UnityEngine.TestTools.LogAssert.Expect'
-      output: 'The referenced script (Unknown) on this Behaviour is missing!
+        Culture
+        has tileInfo, not changing. Unless this is a test it may be a bug.
 
-        The
-        referenced script on this Behaviour (Game Object ''PopulationView'') is missing!
+        test
+        (CultureMemory)
 
-        The
-        referenced script on this Behaviour (Game Object ''PopulationView'') is missing!
+        Default
 
-        There
-        needs to be one active EventManager script on a GameObject in your scene.
+        Culture has tileInfo, not changing.
+        Unless this is a test it may be a bug.
 
-        NullReferenceException:
-        Object reference not set to an instance of an object
+        test (CultureMemory)
+
+        Default
+
+        test
+        (CultureMemory)
+
+        Default
 
 '
       stacktrace: 
@@ -870,27 +806,37 @@ MonoBehaviour:
       uniqueId: Tests.dll/MergeActionTestSuite/[Tests][MergeActionTestSuite.CanMergeWithParentCulture]
       name: CanMergeWithParentCulture
       fullName: MergeActionTestSuite.CanMergeWithParentCulture
-      resultStatus: 2
-      duration: 0.0020913
-      messages: 'SetUp : System.NullReferenceException : Object reference not set
-        to an instance of an object
+      resultStatus: 1
+      duration: 0.0147863
+      messages: 
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
-        SetUp : Unhandled log message: ''[Error]
-        There needs to be one active EventManager script on a GameObject in your
-        scene.''. Use UnityEngine.TestTools.LogAssert.Expect'
-      output: 'The referenced script (Unknown) on this Behaviour is missing!
+        Culture
+        has tileInfo, not changing. Unless this is a test it may be a bug.
 
-        The
-        referenced script on this Behaviour (Game Object ''PopulationView'') is missing!
+        test
+        (CultureMemory)
 
-        The
-        referenced script on this Behaviour (Game Object ''PopulationView'') is missing!
+        Default
 
-        There
-        needs to be one active EventManager script on a GameObject in your scene.
+        Culture has tileInfo, not changing.
+        Unless this is a test it may be a bug.
 
-        NullReferenceException:
-        Object reference not set to an instance of an object
+        test (CultureMemory)
+
+        Default
+
+        Culture
+        has tileInfo, not changing. Unless this is a test it may be a bug.
+
+        test2
+        (CultureMemory)
+
+        Default
+
+        test2 (CultureMemory)
+
+        Default
 
 '
       stacktrace: 
@@ -906,68 +852,10 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][MoveActionTestSuite][suite]
       name: MoveActionTestSuite
       fullName: MoveActionTestSuite
-      resultStatus: 2
-      duration: 0.0613084
-      messages: One or more child tests had errors
-      output: 'UnassignedReferenceException: The variable groundAtlas of TileSpriteLoader
-        has not been assigned.
-
-        You probably need to assign the groundAtlas
-        variable of the TileSpriteLoader script in the inspector.
-
-        There
-        needs to be one active EventManager script on a GameObject in your scene.
-
-        NullReferenceException:
-        Object reference not set to an instance of an object
-
-        UnassignedReferenceException:
-        The variable groundAtlas of TileSpriteLoader has not been assigned.
-
-        You
-        probably need to assign the groundAtlas variable of the TileSpriteLoader
-        script in the inspector.
-
-        UnassignedReferenceException: The variable
-        groundAtlas of TileSpriteLoader has not been assigned.
-
-        You probably
-        need to assign the groundAtlas variable of the TileSpriteLoader script in
-        the inspector.
-
-        There needs to be one active EventManager script
-        on a GameObject in your scene.
-
-        NullReferenceException: Object reference
-        not set to an instance of an object
-
-        UnassignedReferenceException:
-        The variable groundAtlas of TileSpriteLoader has not been assigned.
-
-        You
-        probably need to assign the groundAtlas variable of the TileSpriteLoader
-        script in the inspector.
-
-        There needs to be one active EventManager
-        script on a GameObject in your scene.
-
-        NullReferenceException: Object
-        reference not set to an instance of an object
-
-        UnassignedReferenceException:
-        The variable groundAtlas of TileSpriteLoader has not been assigned.
-
-        You
-        probably need to assign the groundAtlas variable of the TileSpriteLoader
-        script in the inspector.
-
-        There needs to be one active EventManager
-        script on a GameObject in your scene.
-
-        NullReferenceException: Object
-        reference not set to an instance of an object
-
-'
+      resultStatus: 1
+      duration: 4.5201607
+      messages: 
+      output: 
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -980,37 +868,19 @@ MonoBehaviour:
       uniqueId: Tests.dll/MoveActionTestSuite/[Tests][MoveActionTestSuite.MoveTileActionTest]
       name: MoveTileActionTest
       fullName: MoveActionTestSuite.MoveTileActionTest
-      resultStatus: 2
-      duration: 0.0432699
-      messages: 'SetUp : System.NullReferenceException : Object reference not set
-        to an instance of an object
+      resultStatus: 1
+      duration: 0.2210333
+      messages: 
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
-        SetUp : Unhandled log message: ''[Error]
-        There needs to be one active EventManager script on a GameObject in your
-        scene.''. Use UnityEngine.TestTools.LogAssert.Expect'
-      output: 'There needs to be one active EventManager script on a GameObject in
-        your scene.
+        rthqqn
+        (CultureMemory)
 
-        NullReferenceException: Object reference not set to
-        an instance of an object
+        Default
 
-        There needs to be one active EventManager
-        script on a GameObject in your scene.
+        rthqqn (CultureMemory)
 
-        NullReferenceException: Object
-        reference not set to an instance of an object
-
-        There needs to be
-        one active EventManager script on a GameObject in your scene.
-
-        NullReferenceException:
-        Object reference not set to an instance of an object
-
-        There needs
-        to be one active EventManager script on a GameObject in your scene.
-
-        NullReferenceException:
-        Object reference not set to an instance of an object
+        Default
 
 '
       stacktrace: 
@@ -1026,37 +896,28 @@ MonoBehaviour:
       uniqueId: Tests.dll/MoveActionTestSuite/[Tests][MoveActionTestSuite.MoveTileActionWhenLargeTest]
       name: MoveTileActionWhenLargeTest
       fullName: MoveActionTestSuite.MoveTileActionWhenLargeTest
-      resultStatus: 2
-      duration: 0.0074974
-      messages: 'SetUp : System.NullReferenceException : Object reference not set
-        to an instance of an object
+      resultStatus: 1
+      duration: 0.1182718
+      messages: 
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
-        SetUp : Unhandled log message: ''[Error]
-        There needs to be one active EventManager script on a GameObject in your
-        scene.''. Use UnityEngine.TestTools.LogAssert.Expect'
-      output: 'There needs to be one active EventManager script on a GameObject in
-        your scene.
+        rthqqn
+        (CultureMemory)
 
-        NullReferenceException: Object reference not set to
-        an instance of an object
+        Default
 
-        There needs to be one active EventManager
-        script on a GameObject in your scene.
+        rthqqn (CultureMemory)
 
-        NullReferenceException: Object
-        reference not set to an instance of an object
+        Default
 
-        There needs to be
-        one active EventManager script on a GameObject in your scene.
+        rthqqn
+        (CultureMemory)
 
-        NullReferenceException:
-        Object reference not set to an instance of an object
+        Default
 
-        There needs
-        to be one active EventManager script on a GameObject in your scene.
+        rthqqn (CultureMemory)
 
-        NullReferenceException:
-        Object reference not set to an instance of an object
+        Default
 
 '
       stacktrace: 
@@ -1072,37 +933,33 @@ MonoBehaviour:
       uniqueId: Tests.dll/MoveActionTestSuite/[Tests][MoveActionTestSuite.RepelledActionTest]
       name: RepelledActionTest
       fullName: MoveActionTestSuite.RepelledActionTest
-      resultStatus: 2
-      duration: 0.0037601
-      messages: 'SetUp : System.NullReferenceException : Object reference not set
-        to an instance of an object
+      resultStatus: 1
+      duration: 4.5001774
+      messages: 
+      output: '0, 0
 
-        SetUp : Unhandled log message: ''[Error]
-        There needs to be one active EventManager script on a GameObject in your
-        scene.''. Use UnityEngine.TestTools.LogAssert.Expect'
-      output: 'There needs to be one active EventManager script on a GameObject in
-        your scene.
+        Board(Clone) (Board)
 
-        NullReferenceException: Object reference not set to
-        an instance of an object
+        1, 0
 
-        There needs to be one active EventManager
-        script on a GameObject in your scene.
+        Board(Clone)
+        (Board)
 
-        NullReferenceException: Object
-        reference not set to an instance of an object
+        Move Tile
 
-        There needs to be
-        one active EventManager script on a GameObject in your scene.
+        Board(Clone) (Board)
 
-        NullReferenceException:
-        Object reference not set to an instance of an object
+        Setup
+        Complete. Culture name is rthqqn (Culture)
 
-        There needs
-        to be one active EventManager script on a GameObject in your scene.
+        rthqqn (CultureMemory)
 
-        NullReferenceException:
-        Object reference not set to an instance of an object
+        Default
+
+        rthqqn
+        (CultureMemory)
+
+        Default
 
 '
       stacktrace: 
@@ -1119,7 +976,7 @@ MonoBehaviour:
       name: OverpopulationActionTestSuite
       fullName: OverpopulationActionTestSuite
       resultStatus: 2
-      duration: 0.0349303
+      duration: 0.0977707
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -1134,37 +991,49 @@ MonoBehaviour:
       uniqueId: Tests.dll/OverpopulationActionTestSuite/[Tests][OverpopulationActionTestSuite.CanBecomeOverPopulated]
       name: CanBecomeOverPopulated
       fullName: OverpopulationActionTestSuite.CanBecomeOverPopulated
-      resultStatus: 2
-      duration: 0.011764
-      messages: 'SetUp : System.NullReferenceException : Object reference not set
-        to an instance of an object
+      resultStatus: 1
+      duration: 0.1379979
+      messages: 
+      output: '0, 0
 
-        SetUp : Unhandled log message: ''[Error]
-        There needs to be one active EventManager script on a GameObject in your
-        scene.''. Use UnityEngine.TestTools.LogAssert.Expect'
-      output: 'There needs to be one active EventManager script on a GameObject in
-        your scene.
+        Board(Clone) (Board)
 
-        NullReferenceException: Object reference not set to
-        an instance of an object
+        1, 0
 
-        There needs to be one active EventManager
-        script on a GameObject in your scene.
+        Board(Clone)
+        (Board)
 
-        NullReferenceException: Object
-        reference not set to an instance of an object
+        getting move tile
 
-        There needs to be
-        one active EventManager script on a GameObject in your scene.
+        setting test board: Board(Clone)
+        (Board)
 
-        NullReferenceException:
-        Object reference not set to an instance of an object
+        getting move tile
 
-        There needs
-        to be one active EventManager script on a GameObject in your scene.
+        getting move tile
 
-        NullReferenceException:
-        Object reference not set to an instance of an object
+        Board(Clone)
+        (Board)
+
+        Move Tile
+
+        Board(Clone) (Board)
+
+        getting
+        move tile
+
+        Setup Complete. Culture name is rthqqn (Culture)
+
+        rthqqn
+        (CultureMemory)
+
+        Default
+
+        rthqqn (CultureMemory)
+
+        Default
+
+        clearing
 
 '
       stacktrace: 
@@ -1180,37 +1049,49 @@ MonoBehaviour:
       uniqueId: Tests.dll/OverpopulationActionTestSuite/[Tests][OverpopulationActionTestSuite.TestPopulationDrop]
       name: TestPopulationDrop
       fullName: OverpopulationActionTestSuite.TestPopulationDrop
-      resultStatus: 2
-      duration: 0.0095844
-      messages: 'SetUp : System.NullReferenceException : Object reference not set
-        to an instance of an object
+      resultStatus: 1
+      duration: 0.0682438
+      messages: 
+      output: '0, 0
 
-        SetUp : Unhandled log message: ''[Error]
-        There needs to be one active EventManager script on a GameObject in your
-        scene.''. Use UnityEngine.TestTools.LogAssert.Expect'
-      output: 'There needs to be one active EventManager script on a GameObject in
-        your scene.
+        Board(Clone) (Board)
 
-        NullReferenceException: Object reference not set to
-        an instance of an object
+        1, 0
 
-        There needs to be one active EventManager
-        script on a GameObject in your scene.
+        Board(Clone)
+        (Board)
 
-        NullReferenceException: Object
-        reference not set to an instance of an object
+        getting move tile
 
-        There needs to be
-        one active EventManager script on a GameObject in your scene.
+        setting test board: Board(Clone)
+        (Board)
 
-        NullReferenceException:
-        Object reference not set to an instance of an object
+        getting move tile
 
-        There needs
-        to be one active EventManager script on a GameObject in your scene.
+        getting move tile
 
-        NullReferenceException:
-        Object reference not set to an instance of an object
+        Board(Clone)
+        (Board)
+
+        Move Tile
+
+        Board(Clone) (Board)
+
+        getting
+        move tile
+
+        Setup Complete. Culture name is rthqqn (Culture)
+
+        rthqqn
+        (CultureMemory)
+
+        Default
+
+        rthqqn (CultureMemory)
+
+        Default
+
+        clearing
 
 '
       stacktrace: 
@@ -1227,39 +1108,54 @@ MonoBehaviour:
       name: TestPopulationMoveAndDrop
       fullName: OverpopulationActionTestSuite.TestPopulationMoveAndDrop
       resultStatus: 2
-      duration: 0.0098422
-      messages: 'SetUp : System.NullReferenceException : Object reference not set
-        to an instance of an object
+      duration: 0.0789131
+      messages: "  Culture did not split!\r\n  Expected: True\r\n  But was:  False\r\n"
+      output: '0, 0
 
-        SetUp : Unhandled log message: ''[Error]
-        There needs to be one active EventManager script on a GameObject in your
-        scene.''. Use UnityEngine.TestTools.LogAssert.Expect'
-      output: 'There needs to be one active EventManager script on a GameObject in
-        your scene.
+        Board(Clone) (Board)
 
-        NullReferenceException: Object reference not set to
-        an instance of an object
+        1, 0
 
-        There needs to be one active EventManager
-        script on a GameObject in your scene.
+        Board(Clone)
+        (Board)
 
-        NullReferenceException: Object
-        reference not set to an instance of an object
+        getting move tile
 
-        There needs to be
-        one active EventManager script on a GameObject in your scene.
+        setting test board: Board(Clone)
+        (Board)
 
-        NullReferenceException:
-        Object reference not set to an instance of an object
+        getting move tile
 
-        There needs
-        to be one active EventManager script on a GameObject in your scene.
+        getting move tile
 
-        NullReferenceException:
-        Object reference not set to an instance of an object
+        Board(Clone)
+        (Board)
+
+        Move Tile
+
+        Board(Clone) (Board)
+
+        getting
+        move tile
+
+        Setup Complete. Culture name is rthqqn (Culture)
+
+        rthqqn
+        (CultureMemory)
+
+        Default
+
+        rthqqn (CultureMemory)
+
+        Default
+
+        clearing
 
 '
-      stacktrace: 
+      stacktrace: 'at OverpopulationActionTestSuite.TestPopulationMoveAndDrop ()
+        [0x00031] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\OverpopulationActionTestSuite.cs:55
+
+'
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1268,47 +1164,26 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1016
       parentUniqueId: Tests.dll/[Tests][OverpopulationActionTestSuite][suite]
-    m_ResultText: 'RepelledActionTest (0.004s)
+    m_ResultText: 'CanAddNewCultureToTile (0.010s)
 
       ---
 
-      SetUp : System.NullReferenceException
-      : Object reference not set to an instance of an object
+      Setup Complete.
+      Culture name is rthqqn (Culture)
 
-      SetUp : Unhandled
-      log message: ''[Error] There needs to be one active EventManager script on
-      a GameObject in your scene.''. Use UnityEngine.TestTools.LogAssert.Expect
+      qstsil (CultureMemory)
 
-      ---
+      Default
 
-      There
-      needs to be one active EventManager script on a GameObject in your scene.
+      rthqqn
+      (CultureMemory)
 
-      NullReferenceException:
-      Object reference not set to an instance of an object
-
-      There needs to
-      be one active EventManager script on a GameObject in your scene.
-
-      NullReferenceException:
-      Object reference not set to an instance of an object
-
-      There needs to
-      be one active EventManager script on a GameObject in your scene.
-
-      NullReferenceException:
-      Object reference not set to an instance of an object
-
-      There needs to
-      be one active EventManager script on a GameObject in your scene.
-
-      NullReferenceException:
-      Object reference not set to an instance of an object'
+      Default'
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: b759e543
-      m_LastClickedID: 1139104183
+      m_SelectedIDs: 24e68d5c
+      m_LastClickedID: 1552803364
       m_ExpandedIDs: c2778cab18e194b54580fecc6eca7a0803fe443357683e3426ecfc37b71a1147eb0848557c3b3c71ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -1428,22 +1303,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Scripts
+    - Assets/Resources/Scripts/Tests
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Scripts
+  - Assets/Resources/Scripts/Tests
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\wenze\Documents\Unity\Eons
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 120}
-    m_SelectedIDs: 905e0000
-    m_LastClickedID: 24208
-    m_ExpandedIDs: 000000008e5e0000905e0000925e0000945e0000965e0000985e00009a5e00009c5e00009e5e0000a05e0000a25e0000a45e0000a65e0000a85e0000aa5e0000ac5e0000765f000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 268.3333}
+    m_SelectedIDs: b85e0000
+    m_LastClickedID: 24248
+    m_ExpandedIDs: 00000000965e0000985e00009a5e00009c5e00009e5e0000a05e0000a25e0000a45e0000a65e0000a85e0000aa5e0000ac5e0000ae5e0000b05e0000b25e0000b45e0000b65e0000b85e000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1471,7 +1346,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008e5e0000905e0000925e0000945e0000965e0000985e00009a5e00009c5e00009e5e0000a05e0000a25e0000a45e0000a65e0000a85e0000aa5e0000ac5e0000
+    m_ExpandedIDs: 00000000965e0000985e00009a5e00009c5e00009e5e0000a05e0000a25e0000a45e0000a65e0000a85e0000aa5e0000ac5e0000ae5e0000b05e0000b25e0000b45e0000b65e0000b85e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1498,7 +1373,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300009e5f0000946c0000ca590000e65b0000a8700000345d00003e5a000080720000565a0000e693ffffc47100004484000038840000b45c0000cc5c000000000000d45b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1590,7 +1465,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 72.66667
-    width: 463.66666
+    width: 1213.6666
     height: 769.6667
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1601,7 +1476,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 5a6bd6ffa26bd6ff7471d6ff2e3cd9ff56eae2ffaa99ecff120dedff46f9edfffe6deeff325aefff1294f2ff4680f3ff9848f6ff00bcf6ff34a8f7ffdc1df8ff100af9ffe081f9ff146efafff2e4faff26d1fbfff4d2fbff5c46fcff9032fdff34fbffff38fbfffff4ffffff705a0000
+      m_ExpandedIDs: 76c3feffbec3feff94c5feff82c6feffcac6feffa0c8feffa4c9feffecc9feffaaccfeff5acefeffa2cefeff60d1feff0ed3feff56d3feff14d6fefff8d7feff40d8fefffedafeffd8dcfeff20ddfeffdedffeffcce0feff14e1feffeae2feffe4e3feff2ce4feffeae6feff92e8feffdae8feff98ebfeff42edfeff8aedfeff2ef0feff32f1feff7af1feff38f4feff26f5feff6ef5feff2cf8feff1af9feff62f9feff38fbfeff38fcfeff80fcfeff3efffeff3c00ffff8400ffff4203ffff3604ffff7e04ffff3c07ffff2a08ffff7208ffff480affff440bffff8c0bffff4a0effff380fffff800fffff5611ffff4c12ffff9412ffff6a14ffff5815ffffa015ffff5e18ffff4a19ffff9219ffff681bffff561cffff9e1cffff741effff621fffffaa1fffff6822ffff5a23ffffa223ffff7825ffff2027ffff6827ffff3e29ffff302affff782affff4e2cfffff82dffff402efffffe30ffffb635fffffe35ffffee38ffff943affffdc3affffcc3dffffbe3effff063ffffff240ffff9642ffffde42ffff2245ffffaa47fffff247ffffde49ffffcc4affff144bffff044effffa84ffffff04fffff3452ffffdc53ffff2454ffff6856ffffc658ffff0e59ffff525bfffff85cffff405dffff8860ffff5864ffffa064ffff9a6dffff406fffff886fffff7872ffffb274fffff874ffff7475ffff1e78ffff6678ffff2281ffffde84ffff2685ffffce8dffffbc8effff048ffffff090ffffac94fffff494ffffc696ffffb497fffffc97ffffc89affff329dffff7a9dffff589fffff04a1ffff4ca1ffffb6a8ffff5eaaffffa6aaffff22b0ffffeab1ffff32b2fffff0b3ffffdeb4ffff26b5ffff7cbcffff6abdffffb2bdffffa4bfffff92c0ffffdac0ffffcac2ffff28c5ffff70c5ffff60c7ffff08c9ffff50c9ffff8accffff32ceffff7aceffff6ad0ffff14d2ffff5cd2ffff48d4ffffc0d6ffff08d7fffff2d8ffff06dcffff4edcffff38defffffcdfffff44e0ffff32e2ffff24e3ffff6ce3ffff5ae5ffff04e7ffff4ce7ffff3ae9ffffeeeaffff36ebffff24edffffd2eeffff1aefffff08f1ffffb0f2fffff8f2ffffe6f4ffff96f6ffffdef6ffffd0f8ffff38fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1658,8 +1533,8 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: -98.66669, y: -26}
+      snapOffset: {x: -101, y: -26}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -1950,9 +1825,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 362.6667
+    x: 1214.6667
     y: 72.66667
-    width: 1714.0001
+    width: 862.0001
     height: 769.6667
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -2000,23 +1875,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1714.0001
+      width: 862.0001
       height: 748.6667
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 857.00006, y: 374.33334}
+    m_Scale: {x: 0.6734376, y: 0.6734376}
+    m_Translation: {x: 431.00006, y: 374.33334}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -857.00006
-      y: -374.33334
-      width: 1714.0001
-      height: 748.6667
+      x: -640
+      y: -555.85455
+      width: 1280
+      height: 1111.7091
     m_MinimalGUI: 1
-  m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 2571.0002, y: 1154.5}
+  m_defaultScale: 0.6734376
+  m_LastWindowPixelSize: {x: 1293.0002, y: 1154.5}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000

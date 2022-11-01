@@ -11,6 +11,7 @@ public class TestUtils
 
     public static void TearDownTest()
     {
+        Debug.Log("clearing");
         foreach (GameObject o in Object.FindObjectsOfType<GameObject>())
         {
             Object.Destroy(o);

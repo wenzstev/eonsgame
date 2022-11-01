@@ -39,11 +39,11 @@ public class InfluenceActionTestSuite : CultureInteractionTest
         Assert.That(turn.turnUpdates.ContainsKey(TestCulture), "Test culture experiencing no changes!");
         Assert.That(turn.turnUpdates.ContainsKey(Neighbor), "Neighbor experiencing no changes!");
 
-        CultureTurnUpdate testCultureUpdate = turn.turnUpdates[TestCulture];
+        CultureTurnUpdate TestCultureUpdate = turn.turnUpdates[TestCulture];
         CultureTurnUpdate neighborUpdate = turn.turnUpdates[Neighbor];
 
         Assert.That(neighborUpdate.newState == Culture.State.PendingRemoval, "Neighbor not slated for removal!");
-        Assert.That(testCultureUpdate.newName != "", "Culture not getting new name!");
-        Assert.That(testCultureUpdate.popChange == Neighbor.Population, "Culture not gaining members of neighbor culture!");
+        Assert.That(TestCultureUpdate.newName != "", "Culture not getting new name!");
+        Assert.That(TestCultureUpdate.popChange == Neighbor.Population, "Culture not gaining members of neighbor culture!");
     }
 }

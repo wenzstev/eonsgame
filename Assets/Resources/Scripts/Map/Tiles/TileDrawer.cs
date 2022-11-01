@@ -82,6 +82,7 @@ public class TileDrawer : MonoBehaviour
         int humidityInt = Mathf.FloorToInt(Mathf.InverseLerp(precipitationMinValue, precipitationMaxValue, humidity) * (BiomeTable.GetLength(1)-1));
 
 
+
         tileType = tileChars.isUnderwater ? BiomeType.Water : BiomeTable[humidityInt, temperatureInt];
         
         switch(tileType)
