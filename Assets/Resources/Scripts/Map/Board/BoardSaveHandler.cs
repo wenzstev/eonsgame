@@ -19,4 +19,5 @@ public class BoardSaveHandler : MonoBehaviour
     {
         EventManager.StopListening("LoadingMainMenu", SendBoardToSave);
     }
+
 }
