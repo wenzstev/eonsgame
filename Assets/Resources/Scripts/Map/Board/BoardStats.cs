@@ -27,7 +27,7 @@ public class BoardStats : MonoBehaviour
         }
     }
 
-
+    public int Age; // age in days since the start of the board
 
     public int height;
     public int width;
