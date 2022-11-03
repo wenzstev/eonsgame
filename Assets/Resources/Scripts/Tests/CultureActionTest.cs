@@ -3,9 +3,8 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using NUnit.Framework;
 
-public abstract class CultureActionTest
+public abstract class CultureActionTest : BasicTest
 {
-    protected EventManager eventManager;
     protected GameObject TestCultureObj;
     protected Culture TestCulture;
     protected GameObject TestTileObj;
@@ -18,7 +17,6 @@ public abstract class CultureActionTest
     [UnitySetUp]
     public IEnumerator SetupCultureActionTest()
     {
-        eventManager = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Controllers/EventManager")).GetComponent<EventManager>();
 
         SetupBoard();
         // create the mock board
@@ -73,6 +71,5 @@ public abstract class CultureActionTest
     public void TearDownCultureTest()
     {
         Turn.HookTurn().UpdateAllCultures();
-        TestUtils.TearDownTest();
     }
 }
