@@ -35,12 +35,12 @@ public class DisplayBoardAge : MonoBehaviour
 
     string convertAgeToTime(int age)
     {
-        int years = age / 365;
-        int daysLeft = age % 365;
-        int months = daysLeft / 30;
-        daysLeft = daysLeft % 30;
+        int years = age / 360;
+        int daysLeftInYear = age % 360;
+        int months = daysLeftInYear / 30;
+        int daysLeftInMonth = daysLeftInYear % 30;
 
-        return $"{years} / {months} / {daysLeft}";
+        return $"{years} / {months} / {daysLeftInMonth}";
     }
 
     private void OnDestroy()
