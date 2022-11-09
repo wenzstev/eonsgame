@@ -18,4 +18,9 @@ public class TestUtils
         }
     }
 
+    public static float ThreeDecimals(float val)
+    {
+        return Mathf.Round(val * 1000f) / 1000f;
+    }
+
 }

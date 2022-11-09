@@ -182,8 +182,6 @@ public class Culture : MonoBehaviour
 
     private void ChangeState(State newState)
     {
-        Debug.Log(CultureMemory);
-        Debug.Log(CultureMemory.previousState);
         if(CultureMemory.previousState != newState)
         {
             CultureMemory.previousState = currentState;
