@@ -1,0 +1,93 @@
+using UnityEngine;
+using UnityEngine.TestTools;
+using System.Collections;
+using NUnit.Framework;
+
+public class TileFoodTestSuite : BasicBoardTest
+{
+
+    GameObject TestTileObj;
+    Tile TestTile;
+    TileChars TestTileChars;
+    TileFood TestTileFood;
+
+    [UnitySetUp]
+    public IEnumerator Setup()
+    {
+        TestTileObj = TestBoard.GetTile(0, 0);
+        TestTile = TestTileObj.GetComponent<Tile>();
+        TestTileChars = TestTileObj.GetComponent<TileChars>();
+        TestTileFood = TestTileObj.GetComponent<TileFood>();
+        TestTileFood.FoodModifier = 1f;
+
+
+        yield return null;
+    }
+
+    [Test]
+    public void CanCalculateProperFoodRateDesert()
+    {
+        TestTileChars.humidity = 25f; // expect contribution of .046f
+        TestTileChars.temperature = 24f; // expect contribution of .4f
+
+        TestTileFood.CalculateFoodRate();
+        Assert.AreEqual(.448f, TestUtils.ThreeDecimals(TestTileFood.NewFoodPerTick), "Did not calculate the right new food!");
+    }
+
+    [Test]
+    public void CanCalculateProperFoodRateTundra()
+    {
+        TestTileChars.humidity = 40f; // expect contribution of .083f
+        TestTileChars.temperature = 5f; // expect contribution of -.018f
+        TestTileFood.CalculateFoodRate();
+
+        Assert.AreEqual(0.065f, TestUtils.ThreeDecimals(TestTileFood.NewFoodPerTick), "Did not calculate right new food!");
+    }
+
+    [Test]
+    public void CanCalculateProperFoodRateRainforest()
+    {
+        TestTileChars.humidity = 200f; // expect contribution of .982f
+        TestTileChars.temperature = 30f; // expect contribution of .318f
+        TestTileFood.CalculateFoodRate();
+
+        Assert.AreEqual(1.3f, TestUtils.ThreeDecimals(TestTileFood.NewFoodPerTick), "Did not calculate right new food!");
+    }
+
+    [UnityTest]
+    public IEnumerator CanIncreaseFoodPerTick()
+    {
+        TestTileFood.NewFoodPerTick = 1.4f;
+        TestTileFood.CurFood = 0;
+
+        EventManager.TriggerEvent("Tick", null);
+        yield return null;
+
+        Assert.AreEqual(1.4f, TestTileFood.CurFood, "Food did not increase by expected amount!");
+    }
+
+    [UnityTest]
+    public IEnumerator CanSetFoodToMaxAtStart()
+    {
+        TestTileChars.humidity = 40f; // expect contribution of .083f
+        TestTileChars.temperature = 5f; // expect contribution of -.018f
+        TestTileFood.CalculateFoodRate();
+        TestTileFood.SetMaxFood();
+        yield return null;
+        Assert.AreEqual(Mathf.FloorToInt(TestTileFood.NewFoodPerTick * 1000f), TestTileFood.CurFood, "Curfood was set to the wrong amount!");
+    }
+
+    [UnityTest]
+    public IEnumerator CanPreventAdditionalFood()
+    {
+        TestTileChars.humidity = 40f; // expect contribution of .083f
+        TestTileChars.temperature = 5f; // expect contribution of -.018f
+        TestTileFood.CalculateFoodRate();
+        TestTileFood.SetMaxFood();
+        yield return null;
+        EventManager.TriggerEvent("Tick", null);
+        Assert.That(TestTileFood.MaxFood >= TestTileFood.CurFood, $"Max was {TestTileFood.MaxFood} but CurFood was {TestTileFood.CurFood}");
+
+
+    }
+}

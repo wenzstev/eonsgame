@@ -190,7 +190,7 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   CultureTemplate: {fileID: 829645622402238992}
   population: 0
-  spreadChance: 1
+  spreadChance: 0.1
   shareCultureChance: 0.05
   baseMutationMax: 0.01
   sameCultureCutoff: 0.1

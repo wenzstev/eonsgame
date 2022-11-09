@@ -15,15 +15,15 @@ MonoBehaviour:
   m_PixelRect:
     serializedVersion: 2
     x: 0
-    y: 42.666668
-    width: 2560
-    height: 1349.3334
+    y: 0
+    width: 1440
+    height: 900
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Test Runner
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 875, y: 350}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 1
+  m_Maximized: 0
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -43,12 +43,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 2560
-    height: 1299.3334
+    width: 1440
+    height: 850
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 58
+  controlID: 23
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -64,12 +64,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 2070
+    x: 1054.5
     y: 0
-    width: 490
-    height: 1299.3334
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+    width: 385.5
+    height: 850
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -85,23 +85,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneHierarchyWindow
+  m_Name: TestRunnerWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 676.6667
-    height: 790.6667
-  m_MinSize: {x: 201, y: 221}
+    width: 624.5
+    height: 656
+  m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 17}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 17}
   - {fileID: 14}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -112,25 +112,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 790.6667
-    width: 2070
-    height: 508.6667
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 15}
+    y: 656
+    width: 1054.5
+    height: 194
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 15}
   - {fileID: 20}
-  - {fileID: 13}
   - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 1
+  - {fileID: 13}
+  m_Selected: 1
+  m_LastSelected: 3
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -151,8 +151,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2560
-    height: 1349.3334
+    width: 1440
+    height: 900
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -176,7 +176,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2560
+    width: 1440
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -197,8 +197,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 1329.3334
-    width: 2560
+    y: 880
+    width: 1440
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -221,12 +221,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2070
-    height: 1299.3334
+    width: 1054.5
+    height: 850
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 94
+  controlID: 24
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -246,12 +246,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2070
-    height: 790.6667
+    width: 1054.5
+    height: 656
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 95
+  controlID: 25
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -267,10 +267,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 676.6667
+    x: 624.5
     y: 0
-    width: 1393.3333
-    height: 790.6667
+    width: 430
+    height: 656
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 18}
@@ -300,16 +300,16 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 863.3334
-    width: 2077.6667
-    height: 487.6667
+    y: 688.6667
+    width: 1873.6666
+    height: 662.3334
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -1326
+  m_LastSelectedObjectID: 33862
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -331,9 +331,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 863.3334
-    width: 2077.6667
-    height: 487.6667
+    y: 604
+    width: 1053.5
+    height: 255
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -344,7 +344,6 @@ MonoBehaviour:
     - {fileID: -2208600786771584181, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
     - {fileID: -3373428290895615280, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
     - {fileID: 8030200332961901116, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
-    - {fileID: 7932117235907219867, guid: 6e1ea7ce95362bd43b6e9e2020a2a019, type: 2}
     m_ValueSerializationHelper:
     - e00: 0.89244986
       e01: 0
@@ -410,26 +409,12 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 6e1ea7ce95362bd43b6e9e2020a2a019, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 7932117235907219867, guid: 6e1ea7ce95362bd43b6e9e2020a2a019, type: 2}
+  - m_Target: {fileID: -2208600786771584181, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
+    m_ScrollPosition: {x: 0, y: 0}
+  - m_Target: {fileID: -3373428290895615280, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -463,30 +448,30 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 72.66667
-    width: 1213.6666
-    height: 769.6667
+    y: 30
+    width: 623.5
+    height: 635
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 115
-    splitterInitialOffset: 533.6667
+    ID: 105
+    splitterInitialOffset: 399
     currentActiveSplitter: -1
     realSizes:
-    - 462.66666
-    - 236.00003
+    - 331.5
+    - 233.5
     relativeSizes:
-    - 0.66221374
-    - 0.33778626
+    - 0.58672565
+    - 0.41327435
     minSizes:
     - 32
     - 32
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 698.6667
+    lastTotalSize: 565
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -502,9 +487,9 @@ MonoBehaviour:
       uniqueId: '[My project][suite]'
       name: My project
       fullName: My project
-      resultStatus: 2
-      duration: 0.2511895
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.6070428
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -514,13 +499,13 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    - id: 1016
-      uniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1024
+      uniqueId: '[Tests][/Users/steven.wenzel/Documents/unity/eonsgame/Library/ScriptAssemblies/Tests.dll][suite]'
       name: Tests.dll
-      fullName: C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll
-      resultStatus: 2
-      duration: 0.1043427
-      messages: One or more child tests had errors
+      fullName: /Users/steven.wenzel/Documents/unity/eonsgame/Library/ScriptAssemblies/Tests.dll
+      resultStatus: 1
+      duration: 0.1798399
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -531,11 +516,65 @@ MonoBehaviour:
       parentId: 1000
       parentUniqueId: '[My project][suite]'
     - id: 1001
+      uniqueId: Tests.dll/[Tests][BoardAgeTestSuite][suite]
+      name: BoardAgeTestSuite
+      fullName: BoardAgeTestSuite
+      resultStatus: 1
+      duration: 0.4079486
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1024
+      parentUniqueId: '[Tests][/Users/steven.wenzel/Documents/unity/eonsgame/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1002
+      uniqueId: Tests.dll/BoardAgeTestSuite/[Tests][BoardAgeTestSuite.CanGetBoardAgeAtStartup]
+      name: CanGetBoardAgeAtStartup
+      fullName: BoardAgeTestSuite.CanGetBoardAgeAtStartup
+      resultStatus: 1
+      duration: 0.2827495
+      messages: 
+      output: 'clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][BoardAgeTestSuite][suite]
+    - id: 1003
+      uniqueId: Tests.dll/BoardAgeTestSuite/[Tests][BoardAgeTestSuite.CanUpdateBoardAge]
+      name: CanUpdateBoardAge
+      fullName: BoardAgeTestSuite.CanUpdateBoardAge
+      resultStatus: 1
+      duration: 0.0815287
+      messages: 
+      output: 'clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][BoardAgeTestSuite][suite]
+    - id: 1001
       uniqueId: Tests.dll/[Tests][CultureTestSuite][suite]
       name: CultureTestSuite
       fullName: CultureTestSuite
       resultStatus: 1
-      duration: 0.1068405
+      duration: 0.129213
       messages: 
       output: 
       stacktrace: 
@@ -551,9 +590,16 @@ MonoBehaviour:
       name: TestCanMerge
       fullName: CultureTestSuite.TestCanMerge
       resultStatus: 1
-      duration: 0.0660506
+      duration: 0.0676991
       messages: 
-      output: 'Setup Complete. Culture name is rthqqn (Culture)
+      output: 'setting test board: Board(Clone) (Board)
+
+        Board(Clone) (Board)
+
+        Setup
+        Complete. Culture name is rthqqn (Culture)
+
+        clearing
 
 '
       stacktrace: 
@@ -565,14 +611,21 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1001
       parentUniqueId: Tests.dll/[Tests][CultureTestSuite][suite]
-    - id: 1003
+    - id: 1006
       uniqueId: Tests.dll/CultureTestSuite/[Tests][CultureTestSuite.TestCannotMerge]
       name: TestCannotMerge
       fullName: CultureTestSuite.TestCannotMerge
       resultStatus: 1
-      duration: 0.0124118
+      duration: 0.0231022
       messages: 
-      output: 'Setup Complete. Culture name is rthqqn (Culture)
+      output: 'setting test board: Board(Clone) (Board)
+
+        Board(Clone) (Board)
+
+        Setup
+        Complete. Culture name is rthqqn (Culture)
+
+        clearing
 
 '
       stacktrace: 
@@ -582,16 +635,23 @@ MonoBehaviour:
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1001
+      parentId: 1004
       parentUniqueId: Tests.dll/[Tests][CultureTestSuite][suite]
     - id: 1002
       uniqueId: Tests.dll/CultureTestSuite/[Tests][CultureTestSuite.TestSplitCulture]
       name: TestSplitCulture
       fullName: CultureTestSuite.TestSplitCulture
       resultStatus: 1
-      duration: 0.0144626
+      duration: 0.0254391
       messages: 
-      output: 'Setup Complete. Culture name is rthqqn (Culture)
+      output: 'setting test board: Board(Clone) (Board)
+
+        Board(Clone) (Board)
+
+        Setup
+        Complete. Culture name is rthqqn (Culture)
+
+        clearing
 
 '
       stacktrace: 
@@ -603,12 +663,108 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1001
       parentUniqueId: Tests.dll/[Tests][CultureTestSuite][suite]
+    - id: 1008
+      uniqueId: Tests.dll/[Tests][CurveTestSuite][suite]
+      name: CurveTestSuite
+      fullName: CurveTestSuite
+      resultStatus: 1
+      duration: 0.0301592
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1031
+      parentUniqueId: '[Tests][/Users/steven.wenzel/Documents/unity/eonsgame/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1012
+      uniqueId: Tests.dll/CurveTestSuite/[Tests][CurveTestSuite.TestCompoundCurve]
+      name: TestCompoundCurve
+      fullName: CurveTestSuite.TestCompoundCurve
+      resultStatus: 1
+      duration: 0.009623
+      messages: 
+      output: '0.7506222
+
+        -1.164153E-10
+
+        2
+
+        -1.907349E-06
+
+        0.1778432
+
+        -8
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: Tests.dll/[Tests][CurveTestSuite][suite]
+    - id: 1009
+      uniqueId: Tests.dll/CurveTestSuite/[Tests][CurveTestSuite.TestGaussianCurve]
+      name: TestGaussianCurve
+      fullName: CurveTestSuite.TestGaussianCurve
+      resultStatus: 1
+      duration: 0.0009396
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: Tests.dll/[Tests][CurveTestSuite][suite]
+    - id: 1011
+      uniqueId: Tests.dll/CurveTestSuite/[Tests][CurveTestSuite.TestPowerCurve]
+      name: TestPowerCurve
+      fullName: CurveTestSuite.TestPowerCurve
+      resultStatus: 1
+      duration: 0.0004385
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: Tests.dll/[Tests][CurveTestSuite][suite]
+    - id: 1010
+      uniqueId: Tests.dll/CurveTestSuite/[Tests][CurveTestSuite.TestSigmoidCurve]
+      name: TestSigmoidCurve
+      fullName: CurveTestSuite.TestSigmoidCurve
+      resultStatus: 1
+      duration: 0.000734
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: Tests.dll/[Tests][CurveTestSuite][suite]
     - id: 1004
       uniqueId: Tests.dll/[Tests][InfluenceActionTestSuite][suite]
       name: InfluenceActionTestSuite
       fullName: InfluenceActionTestSuite
       resultStatus: 1
-      duration: 0.0415847
+      duration: 0.0575012
       messages: 
       output: 
       stacktrace: 
@@ -624,13 +780,16 @@ MonoBehaviour:
       name: CanInfluenceNeighborCulture
       fullName: InfluenceActionTestSuite.CanInfluenceNeighborCulture
       resultStatus: 1
-      duration: 0.016802
+      duration: 0.0245067
       messages: 
-      output: 'Setup Complete. Culture name is rthqqn (Culture)
+      output: 'setting test board: Board(Clone) (Board)
 
-        qstsil (CultureMemory)
+        Board(Clone) (Board)
 
-        Default
+        Setup
+        Complete. Culture name is rthqqn (Culture)
+
+        clearing
 
 '
       stacktrace: 
@@ -647,22 +806,16 @@ MonoBehaviour:
       name: CanMergeIntoNewCultureIfClose
       fullName: InfluenceActionTestSuite.CanMergeIntoNewCultureIfClose
       resultStatus: 1
-      duration: 0.0210761
+      duration: 0.0242545
       messages: 
-      output: 'Setup Complete. Culture name is rthqqn (Culture)
+      output: 'setting test board: Board(Clone) (Board)
 
-        rthqqn (CultureMemory)
+        Board(Clone) (Board)
 
-        Default
+        Setup
+        Complete. Culture name is rthqqn (Culture)
 
-        qstsil
-        (CultureMemory)
-
-        Default
-
-        rthqqn (CultureMemory)
-
-        Default
+        clearing
 
 '
       stacktrace: 
@@ -679,7 +832,7 @@ MonoBehaviour:
       name: MergeActionTestSuite
       fullName: MergeActionTestSuite
       resultStatus: 1
-      duration: 0.0551983
+      duration: 0.1354467
       messages: 
       output: 
       stacktrace: 
@@ -695,18 +848,16 @@ MonoBehaviour:
       name: CanAddNewCultureToTile
       fullName: MergeActionTestSuite.CanAddNewCultureToTile
       resultStatus: 1
-      duration: 0.0104066
+      duration: 0.0231677
       messages: 
-      output: 'Setup Complete. Culture name is rthqqn (Culture)
+      output: 'setting test board: Board(Clone) (Board)
 
-        qstsil (CultureMemory)
+        Board(Clone) (Board)
 
-        Default
+        Setup
+        Complete. Culture name is rthqqn (Culture)
 
-        rthqqn
-        (CultureMemory)
-
-        Default
+        clearing
 
 '
       stacktrace: 
@@ -723,33 +874,22 @@ MonoBehaviour:
       name: CanCreateAsNewCulture
       fullName: MergeActionTestSuite.CanCreateAsNewCulture
       resultStatus: 1
-      duration: 0.0115411
+      duration: 0.0299362
       messages: 
-      output: 'Setup Complete. Culture name is rthqqn (Culture)
+      output: 'setting test board: Board(Clone) (Board)
 
-        Culture
-        has tileInfo, not changing. Unless this is a test it may be a bug.
+        Board(Clone) (Board)
 
-        test
-        (CultureMemory)
+        Setup
+        Complete. Culture name is rthqqn (Culture)
 
-        Default
+        Culture has tileInfo,
+        not changing. Unless this is a test it may be a bug.
 
-        Culture has tileInfo, not changing.
-        Unless this is a test it may be a bug.
+        Culture has
+        tileInfo, not changing. Unless this is a test it may be a bug.
 
-        test (CultureMemory)
-
-        Default
-
-        test
-        (CultureMemory)
-
-        Default
-
-        test (CultureMemory)
-
-        Default
+        clearing
 
 '
       stacktrace: 
@@ -766,29 +906,22 @@ MonoBehaviour:
       name: CanMergeCultures
       fullName: MergeActionTestSuite.CanMergeCultures
       resultStatus: 1
-      duration: 0.0117793
+      duration: 0.0343221
       messages: 
-      output: 'Setup Complete. Culture name is rthqqn (Culture)
+      output: 'setting test board: Board(Clone) (Board)
 
-        Culture
-        has tileInfo, not changing. Unless this is a test it may be a bug.
+        Board(Clone) (Board)
 
-        test
-        (CultureMemory)
+        Setup
+        Complete. Culture name is rthqqn (Culture)
 
-        Default
+        Culture has tileInfo,
+        not changing. Unless this is a test it may be a bug.
 
-        Culture has tileInfo, not changing.
-        Unless this is a test it may be a bug.
+        Culture has
+        tileInfo, not changing. Unless this is a test it may be a bug.
 
-        test (CultureMemory)
-
-        Default
-
-        test
-        (CultureMemory)
-
-        Default
+        clearing
 
 '
       stacktrace: 
@@ -805,36 +938,25 @@ MonoBehaviour:
       name: CanMergeWithParentCulture
       fullName: MergeActionTestSuite.CanMergeWithParentCulture
       resultStatus: 1
-      duration: 0.0147863
+      duration: 0.0348598
       messages: 
-      output: 'Setup Complete. Culture name is rthqqn (Culture)
+      output: 'setting test board: Board(Clone) (Board)
+
+        Board(Clone) (Board)
+
+        Setup
+        Complete. Culture name is rthqqn (Culture)
+
+        Culture has tileInfo,
+        not changing. Unless this is a test it may be a bug.
+
+        Culture has
+        tileInfo, not changing. Unless this is a test it may be a bug.
 
         Culture
         has tileInfo, not changing. Unless this is a test it may be a bug.
 
-        test
-        (CultureMemory)
-
-        Default
-
-        Culture has tileInfo, not changing.
-        Unless this is a test it may be a bug.
-
-        test (CultureMemory)
-
-        Default
-
-        Culture
-        has tileInfo, not changing. Unless this is a test it may be a bug.
-
-        test2
-        (CultureMemory)
-
-        Default
-
-        test2 (CultureMemory)
-
-        Default
+        clearing
 
 '
       stacktrace: 
@@ -851,7 +973,7 @@ MonoBehaviour:
       name: MoveActionTestSuite
       fullName: MoveActionTestSuite
       resultStatus: 1
-      duration: 4.5201607
+      duration: 0.873687
       messages: 
       output: 
       stacktrace: 
@@ -867,18 +989,16 @@ MonoBehaviour:
       name: MoveTileActionTest
       fullName: MoveActionTestSuite.MoveTileActionTest
       resultStatus: 1
-      duration: 0.2210333
+      duration: 0.1852594
       messages: 
-      output: 'Setup Complete. Culture name is rthqqn (Culture)
+      output: 'setting test board: Board(Clone) (Board)
 
-        rthqqn (CultureMemory)
+        Board(Clone) (Board)
 
-        Default
+        Setup
+        Complete. Culture name is rthqqn (Culture)
 
-        rthqqn
-        (CultureMemory)
-
-        Default
+        clearing
 
 '
       stacktrace: 
@@ -895,27 +1015,16 @@ MonoBehaviour:
       name: MoveTileActionWhenLargeTest
       fullName: MoveActionTestSuite.MoveTileActionWhenLargeTest
       resultStatus: 1
-      duration: 0.1182718
+      duration: 0.5080348
       messages: 
-      output: 'Setup Complete. Culture name is rthqqn (Culture)
+      output: 'setting test board: Board(Clone) (Board)
 
-        rthqqn (CultureMemory)
+        Board(Clone) (Board)
 
-        Default
+        Setup
+        Complete. Culture name is rthqqn (Culture)
 
-        rthqqn
-        (CultureMemory)
-
-        Default
-
-        rthqqn (CultureMemory)
-
-        Default
-
-        rthqqn
-        (CultureMemory)
-
-        Default
+        clearing
 
 '
       stacktrace: 
@@ -932,32 +1041,16 @@ MonoBehaviour:
       name: RepelledActionTest
       fullName: MoveActionTestSuite.RepelledActionTest
       resultStatus: 1
-      duration: 4.5001774
+      duration: 0.166036
       messages: 
-      output: '0, 0
+      output: 'setting test board: Board(Clone) (Board)
 
         Board(Clone) (Board)
 
-        1, 0
+        Setup
+        Complete. Culture name is rthqqn (Culture)
 
-        Board(Clone)
-        (Board)
-
-        Move Tile
-
-        Board(Clone) (Board)
-
-        Setup Complete.
-        Culture name is rthqqn (Culture)
-
-        rthqqn (CultureMemory)
-
-        Default
-
-        rthqqn
-        (CultureMemory)
-
-        Default
+        clearing
 
 '
       stacktrace: 
@@ -974,7 +1067,7 @@ MonoBehaviour:
       name: OverpopulationActionTestSuite
       fullName: OverpopulationActionTestSuite
       resultStatus: 2
-      duration: 0.0977707
+      duration: 0.1140445
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -990,46 +1083,14 @@ MonoBehaviour:
       name: CanBecomeOverPopulated
       fullName: OverpopulationActionTestSuite.CanBecomeOverPopulated
       resultStatus: 1
-      duration: 0.1379979
+      duration: 0.0274531
       messages: 
-      output: '0, 0
+      output: 'setting test board: Board(Clone) (Board)
 
         Board(Clone) (Board)
 
-        1, 0
-
-        Board(Clone)
-        (Board)
-
-        getting move tile
-
-        setting test board: Board(Clone)
-        (Board)
-
-        getting move tile
-
-        getting move tile
-
-        Board(Clone)
-        (Board)
-
-        Move Tile
-
-        Board(Clone) (Board)
-
-        getting
-        move tile
-
-        Setup Complete. Culture name is rthqqn (Culture)
-
-        rthqqn
-        (CultureMemory)
-
-        Default
-
-        rthqqn (CultureMemory)
-
-        Default
+        Setup
+        Complete. Culture name is rthqqn (Culture)
 
         clearing
 
@@ -1048,46 +1109,14 @@ MonoBehaviour:
       name: TestPopulationDrop
       fullName: OverpopulationActionTestSuite.TestPopulationDrop
       resultStatus: 1
-      duration: 0.0682438
+      duration: 0.0317945
       messages: 
-      output: '0, 0
+      output: 'setting test board: Board(Clone) (Board)
 
         Board(Clone) (Board)
 
-        1, 0
-
-        Board(Clone)
-        (Board)
-
-        getting move tile
-
-        setting test board: Board(Clone)
-        (Board)
-
-        getting move tile
-
-        getting move tile
-
-        Board(Clone)
-        (Board)
-
-        Move Tile
-
-        Board(Clone) (Board)
-
-        getting
-        move tile
-
-        Setup Complete. Culture name is rthqqn (Culture)
-
-        rthqqn
-        (CultureMemory)
-
-        Default
-
-        rthqqn (CultureMemory)
-
-        Default
+        Setup
+        Complete. Culture name is rthqqn (Culture)
 
         clearing
 
@@ -1106,52 +1135,20 @@ MonoBehaviour:
       name: TestPopulationMoveAndDrop
       fullName: OverpopulationActionTestSuite.TestPopulationMoveAndDrop
       resultStatus: 2
-      duration: 0.0789131
-      messages: "  Culture did not split!\r\n  Expected: True\r\n  But was:  False\r\n"
-      output: '0, 0
+      duration: 0.0431521
+      messages: "  Culture did not split!\n  Expected: True\n  But was:  False\n"
+      output: 'setting test board: Board(Clone) (Board)
 
         Board(Clone) (Board)
 
-        1, 0
-
-        Board(Clone)
-        (Board)
-
-        getting move tile
-
-        setting test board: Board(Clone)
-        (Board)
-
-        getting move tile
-
-        getting move tile
-
-        Board(Clone)
-        (Board)
-
-        Move Tile
-
-        Board(Clone) (Board)
-
-        getting
-        move tile
-
-        Setup Complete. Culture name is rthqqn (Culture)
-
-        rthqqn
-        (CultureMemory)
-
-        Default
-
-        rthqqn (CultureMemory)
-
-        Default
+        Setup
+        Complete. Culture name is rthqqn (Culture)
 
         clearing
 
 '
       stacktrace: 'at OverpopulationActionTestSuite.TestPopulationMoveAndDrop ()
-        [0x00031] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\OverpopulationActionTestSuite.cs:55
+        [0x00031] in /Users/steven.wenzel/Documents/unity/eonsgame/Assets/Resources/Scripts/Tests/OverpopulationActionTestSuite.cs:55
 
 '
       notRunnable: 0
@@ -1162,56 +1159,271 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1016
       parentUniqueId: Tests.dll/[Tests][OverpopulationActionTestSuite][suite]
-    m_ResultText: 'TestPopulationDrop (0.068s)
+    - id: 1024
+      uniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
+      name: TileFoodTestSuite
+      fullName: TileFoodTestSuite
+      resultStatus: 1
+      duration: 0.167018
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1027
+      parentUniqueId: '[Tests][/Users/steven.wenzel/Documents/unity/eonsgame/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1025
+      uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanCalculateProperFoodRateDesert]
+      name: CanCalculateProperFoodRateDesert
+      fullName: TileFoodTestSuite.CanCalculateProperFoodRateDesert
+      resultStatus: 1
+      duration: 0.0227996
+      messages: 
+      output: 'setting test board: Board(Clone) (Board)
+
+        Board(Clone) (Board)
+
+        0.5
+
+        -1.907349E-06
+
+        0.04742587
+
+        0.0009765625
+
+        Temp:
+        0.3999981 Humidity: 0.04840244
+
+        0.5
+
+        -1.907349E-06
+
+        0.04742587
+
+        0.0009765625
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
+    - id: 1032
+      uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanCalculateProperFoodRateRainforest]
+      name: CanCalculateProperFoodRateRainforest
+      fullName: TileFoodTestSuite.CanCalculateProperFoodRateRainforest
+      resultStatus: 1
+      duration: 0.0326966
+      messages: 
+      output: 'setting test board: Board(Clone) (Board)
+
+        Board(Clone) (Board)
+
+        0.4176351
+
+        -0.0001220703
+
+        0.9820138
+
+        0
+
+        Temp:
+        0.317513 Humidity: 0.9820138
+
+        0.4176351
+
+        -0.0001220703
+
+        0.9820138
+
+        0
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
+    - id: 1026
+      uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanCalculateProperFoodRateTundra]
+      name: CanCalculateProperFoodRateTundra
+      fullName: TileFoodTestSuite.CanCalculateProperFoodRateTundra
+      resultStatus: 1
+      duration: 0.0285094
+      messages: 
+      output: 'setting test board: Board(Clone) (Board)
+
+        Board(Clone) (Board)
+
+        0.08223724
+
+        3.637979E-12
+
+        0.0831727
+
+        -2.980232E-08
+
+        Temp:
+        -0.01776277 Humidity: 0.08317267
+
+        0.08223724
+
+        3.637979E-12
+
+        0.0831727
+
+        -2.980232E-08
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
+    - id: 1033
+      uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanIncreaseFoodPerTick]
+      name: CanIncreaseFoodPerTick
+      fullName: TileFoodTestSuite.CanIncreaseFoodPerTick
+      resultStatus: 1
+      duration: 0.0457754
+      messages: 
+      output: 'setting test board: Board(Clone) (Board)
+
+        Board(Clone) (Board)
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
+    - id: 1035
+      uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanPreventAdditionalFood]
+      name: CanPreventAdditionalFood
+      fullName: TileFoodTestSuite.CanPreventAdditionalFood
+      resultStatus: 1
+      duration: 0.0583016
+      messages: 
+      output: 'setting test board: Board(Clone) (Board)
+
+        Board(Clone) (Board)
+
+        0.08223724
+
+        3.637979E-12
+
+        0.0831727
+
+        -2.980232E-08
+
+        Temp:
+        -0.01776277 Humidity: 0.08317267
+
+        0.08223724
+
+        3.637979E-12
+
+        0.0831727
+
+        -2.980232E-08
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
+    - id: 1034
+      uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanSetFoodToMaxAtStart]
+      name: CanSetFoodToMaxAtStart
+      fullName: TileFoodTestSuite.CanSetFoodToMaxAtStart
+      resultStatus: 1
+      duration: 0.1335331
+      messages: 
+      output: 'setting test board: Board(Clone) (Board)
+
+        Board(Clone) (Board)
+
+        0.08223724
+
+        3.637979E-12
+
+        0.0831727
+
+        -2.980232E-08
+
+        Temp:
+        -0.01776277 Humidity: 0.08317267
+
+        0.08223724
+
+        3.637979E-12
+
+        0.0831727
+
+        -2.980232E-08
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
+    m_ResultText: 'CanIncreaseFoodPerTick (0.046s)
 
       ---
 
-      0, 0
-
-      Board(Clone)
-      (Board)
-
-      1, 0
+      setting test
+      board: Board(Clone) (Board)
 
       Board(Clone) (Board)
-
-      getting move tile
-
-      setting
-      test board: Board(Clone) (Board)
-
-      getting move tile
-
-      getting move
-      tile
-
-      Board(Clone) (Board)
-
-      Move Tile
-
-      Board(Clone) (Board)
-
-      getting
-      move tile
-
-      Setup Complete. Culture name is rthqqn (Culture)
-
-      rthqqn
-      (CultureMemory)
-
-      Default
-
-      rthqqn (CultureMemory)
-
-      Default
 
       clearing'
     m_ResultStacktrace: 
     m_TestListState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 401b0f43
-      m_LastClickedID: 1125063488
-      m_ExpandedIDs: c2778cab18e194b54580fecc6eca7a0803fe443357683e3426ecfc37b71a1147eb0848557c3b3c71ffffff7f
+      scrollPos: {x: 0, y: 31.002197}
+      m_SelectedIDs: 6eb8289d
+      m_LastClickedID: -1658275730
+      m_ExpandedIDs: 18e194b5af90fae76eca7a0803fe443357683e3426ecfc371a04ba42eb084855ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1310,9 +1522,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 863.3334
-    width: 2069
-    height: 487.6667
+    y: 593
+    width: 1053.5
+    height: 255
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1330,22 +1542,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Prefabs/Board
+    - Assets/Resources/Scripts/Map/Tiles
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Prefabs/Board
+  - Assets/Resources/Scripts/Map/Tiles
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\wenze\Documents\Unity\Eons
+  m_LastProjectPath: /Users/steven.wenzel/Documents/unity/eonsgame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 28.333313}
-    m_SelectedIDs: d85e0000
-    m_LastClickedID: 24280
-    m_ExpandedIDs: 00000000c65e0000c85e0000ca5e0000cc5e0000ce5e0000d05e0000d25e0000d45e0000d65e0000d85e0000da5e0000dc5e0000de5e0000e05e0000e25e0000e45e0000e65e0000e85e000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 300}
+    m_SelectedIDs: 9e660000
+    m_LastClickedID: 26270
+    m_ExpandedIDs: 00000000586600005a6600005c6600005e66000060660000626600006466000066660000686600006a6600006c66000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1373,7 +1585,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c65e0000c85e0000ca5e0000cc5e0000ce5e0000d05e0000d25e0000d45e0000d65e0000d85e0000da5e0000dc5e0000de5e0000e05e0000e25e0000e45e0000e65e0000e85e0000
+    m_ExpandedIDs: 00000000586600005a6600005c6600005e66000060660000626600006466000066660000686600006a6600006c660000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1400,7 +1612,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300009e5f0000946c0000ca590000e65b0000a8700000345d00003e5a000080720000565a0000e693ffffc47100004484000038840000b45c0000cc5c000000000000d45b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1417,7 +1629,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 5}
+      m_ClientGUIView: {fileID: 0}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -1449,10 +1661,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2070
-    y: 72.66667
-    width: 489
-    height: 1278.3334
+    x: 1054.5
+    y: 30
+    width: 384.5
+    height: 829
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1491,9 +1703,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 72.66667
-    width: 675.6667
-    height: 769.6667
+    y: 30
+    width: 242.5
+    height: 382
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1501,9 +1713,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d2faffff
-      m_LastClickedID: -1326
-      m_ExpandedIDs: dac8fbff42ecfdff7696feff7afaffffc4faffffc8faffffd2faffff08fbffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 3c67ffff8467ffff5069ffffe06affff286bffffd279ffffd47affff1c7bffffe87cffff787effffc07effff8c80ffff1c82ffff6482ffff3084ffffc085ffff0886ffffd487ffffd888ffff2089ffffec8affff7a8cffffc28cffff8e8effff1a90ffff6290ffff7294ffff0496ffff4c96ffff1898ffffc299ffff0a9affffbe9cffff4e9effff969effff4aa1ffff4ea2ffff96a2ffff62a4fffff2a5ffff3aa6ffff06a8ffffa2a9ffffeaa9ffffb6abffff46adffff8eadffff5aafffffeeb0ffff36b1ffff02b3ffffb2b4fffffab4ffffaeb7ffffb2b8fffffab8ffff72baffff08bcffff50bcffff1cbeffffbebfffff06c0ffffd2c1ffff60c3ffffa8c3ffff74c5ffff04c7ffff4cc7ffff18c9ffffc2caffff0acbffffbecdffff4ecfffff96cfffff4ad2fffff2d3ffff3ad4ffffeed6ffff7cd8ffffc4d8ffff10e5ffffa0e6ffffe8e6ffff34f3fffffaf4ffff46f5ffffcef5ffff44f7ffff8cf7ffff46f9ffff2efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1519,7 +1731,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 4}
+        m_ClientGUIView: {fileID: 0}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -1547,10 +1759,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 676.6667
-    y: 72.66667
-    width: 1391.3333
-    height: 769.6667
+    x: 624.5
+    y: 30
+    width: 428
+    height: 635
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1560,8 +1772,8 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: -98.666626, y: -26}
+      snapOffset: {x: -101, y: -26}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -1571,9 +1783,9 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -141, y: 149}
+      snapOffset: {x: -141, y: -172}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 1
+      snapCorner: 3
       id: unity-grid-and-snap-toolbar
       index: 1
       layout: 1
@@ -1599,12 +1811,34 @@ MonoBehaviour:
       id: unity-search-toolbar
       index: 1
       layout: 1
+    - dockPosition: 1
+      containerId: overlay-toolbar__top
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Open Tile Palette
+      index: 2
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-toolbar__top
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Tilemap Focus
+      index: 3
+      layout: 4
     - dockPosition: 0
       containerId: overlay-container--left
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 25.333334}
+      snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -1637,7 +1871,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 0
-      snapOffset: {x: 0, y: 24.666666}
+      snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Camera
@@ -1752,9 +1986,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 756.874, y: 364.66125, z: -9.067663}
+    m_Target: {x: 23.483643, y: 16.583805, z: 11.890631}
     speed: 2
-    m_Value: {x: 778.4854, y: 379.94, z: -8.694075}
+    m_Value: {x: 23.483643, y: 16.583805, z: 11.890631}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1805,9 +2039,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 867.5654
+    m_Target: 8.668534
     speed: 2
-    m_Value: 830.2062
+    m_Value: 8.668534
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1852,10 +2086,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 676.6667
-    y: 72.66667
-    width: 1391.3333
-    height: 769.6667
+    x: 624.5
+    y: 30
+    width: 428
+    height: 635
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1881,10 +2115,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -640
-    m_HBaseRangeMax: 640
-    m_VBaseRangeMin: -360
-    m_VBaseRangeMax: 360
+    m_HBaseRangeMin: -480
+    m_HBaseRangeMax: 480
+    m_VBaseRangeMin: -270
+    m_VBaseRangeMax: 270
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1902,23 +2136,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1391.3333
-      height: 748.6667
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 695.6666, y: 374.33334}
+      width: 428
+      height: 614
+    m_Scale: {x: 0.44583333, y: 0.44583333}
+    m_Translation: {x: 214, y: 307}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -695.6666
-      y: -374.33334
-      width: 1391.3333
-      height: 748.6667
+      x: -480
+      y: -688.59814
+      width: 960
+      height: 1377.1963
     m_MinimalGUI: 1
-  m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 2087, y: 1154.5}
+  m_defaultScale: 0.44583333
+  m_LastWindowPixelSize: {x: 856, y: 1270}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -1945,9 +2179,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 863.3334
-    width: 2069
-    height: 487.6667
+    y: 686
+    width: 1053.5
+    height: 173
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
