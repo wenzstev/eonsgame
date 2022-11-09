@@ -26,13 +26,15 @@ public class TileFood : MonoBehaviour
         tileChars = GetComponent<TileChars>();
         TempCurve = CreateTempCurve();
         HumidityCurve = CreateHumidityCurve();
+        CalculateFoodRate();
         SetMaxFood();
         EventManager.StartListening("Tick", OnTick);
     }
 
+
     public float CalculateFoodRate()
     {
-        Debug.Log($"Temp: {TempCurve.GetPointOnCurve(tileChars.temperature) - .1f} Humidity: {HumidityCurve.GetPointOnCurve(tileChars.humidity)}");
+ //       Debug.Log($"Temp: {TempCurve.GetPointOnCurve(tileChars.temperature) - .1f} Humidity: {HumidityCurve.GetPointOnCurve(tileChars.humidity)}");
         float climateModifier = TempCurve.GetPointOnCurve(tileChars.temperature) - .1f + HumidityCurve.GetPointOnCurve(tileChars.humidity);
         NewFoodPerTick = climateModifier * FoodModifier;
         return NewFoodPerTick;
