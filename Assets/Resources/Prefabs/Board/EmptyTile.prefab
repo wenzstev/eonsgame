@@ -311,5 +311,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurFood: 0
   NewFoodPerTick: 0
-  HumidityMultiplier: 0
-  TemperatureMultiplier: 0
+  FoodModifier: 1

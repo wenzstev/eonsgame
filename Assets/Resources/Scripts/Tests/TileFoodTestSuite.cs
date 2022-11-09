@@ -31,7 +31,7 @@ public class TileFoodTestSuite : BasicBoardTest
         TestTileChars.temperature = 24f; // expect contribution of .4f
 
         TestTileFood.CalculateFoodRate();
-        Assert.AreEqual(.448f, TestUtils.ThreeDecimals(TestTileFood.NewFoodPerTick), "Did not calculate the right new food!");
+        Assert.AreEqual(.446f, TestUtils.ThreeDecimals(TestTileFood.NewFoodPerTick), "Did not calculate the right new food!");
     }
 
     [Test]
@@ -47,11 +47,13 @@ public class TileFoodTestSuite : BasicBoardTest
     [Test]
     public void CanCalculateProperFoodRateRainforest()
     {
-        TestTileChars.humidity = 200f; // expect contribution of .982f
-        TestTileChars.temperature = 30f; // expect contribution of .318f
+        TestTileChars.humidity = 318.3406f; // expect contribution of 1f
+        TestTileChars.temperature = 24.58829f; // expect contribution of .399f
         TestTileFood.CalculateFoodRate();
 
-        Assert.AreEqual(1.3f, TestUtils.ThreeDecimals(TestTileFood.NewFoodPerTick), "Did not calculate right new food!");
+        Assert.AreEqual(1.399f, TestUtils.ThreeDecimals(TestTileFood.NewFoodPerTick), "Did not calculate right new food!");
+
+
     }
 
     [UnityTest]

@@ -16,7 +16,6 @@ public class CompoundCurve : ICurve
         float val = 0;
         foreach(ICurve curve in Curves)
         {
-            Debug.Log(curve.GetPointOnCurve(x));
             val += curve.GetPointOnCurve(x);
 
         }

@@ -15,6 +15,8 @@ public class GaussianCurve : ICurve
 
     public float GetPointOnCurve(float x)
     {
+        //Debug.Log($"MaxHeight: {MaxHeight} Center: {Center} StandardDeviation: {StandardDeviation}");
+        //Debug.Log($"value at {x}: {MaxHeight * Mathf.Exp(-Mathf.Pow(x - Center, 2) / (2 * Mathf.Pow(StandardDeviation, 2)))}");
         return MaxHeight * Mathf.Exp(-Mathf.Pow(x - Center, 2) / (2 * Mathf.Pow(StandardDeviation, 2)));
     }
 }
