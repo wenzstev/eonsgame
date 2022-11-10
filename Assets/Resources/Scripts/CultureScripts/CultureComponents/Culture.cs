@@ -16,7 +16,18 @@ public class Culture : MonoBehaviour
 
     public Tile Tile { get; private set; }
     public TileInfo tileInfo { get; private set; }
-
+    CultureFoodStore cultureFoodStore;
+    public CultureFoodStore CultureFoodStore
+    {
+        get
+        {
+            if(cultureFoodStore == null)
+            {
+                cultureFoodStore = GetComponent<CultureFoodStore>();
+            }
+            return cultureFoodStore;
+        }
+    }
 
     CultureMemory cultureMemory;
     public CultureMemory CultureMemory
@@ -64,6 +75,8 @@ public class Culture : MonoBehaviour
 
     [Range(0, .05f)]
     public float influenceRate = .05f;
+
+    public float FoodGatherRate = 1f;
 
 
     public TileDrawer.BiomeType affinity { get; private set; }
@@ -147,29 +160,20 @@ public class Culture : MonoBehaviour
 
         AddPopulation(t.popChange);
 
-
-
         if (t.newName != null)
         {
             RenameCulture(t.newName);
         }
-
-
 
         SetColor(t.newColor);
         //Debug.Log("setting state for " + GetHashCode() + " to " + t.newState);
 
         ChangeState(t.newState);
 
-        if (t.newAffinity > 0)
-        {
-            GainAffinity(t.newAffinity);
-        }
-        if (t.newTile != null)
-        {
-            SetTile(t.newTile); // maybe give them some offscreen placeholder tile?
-        }
-
+        if (t.newAffinity > 0) GainAffinity(t.newAffinity);
+        if (t.newTile != null) SetTile(t.newTile); // maybe give them some offscreen placeholder tile?
+        
+        CultureFoodStore.CurrentFoodStore += t.FoodChange;
 
         EventManager.TriggerEvent("CultureUpdated" + name, new Dictionary<string, object> { { "culture", this } });
     }
@@ -312,6 +316,7 @@ public class Culture : MonoBehaviour
         EventManager.StopListening("Tick", OnTick);
 
     }
+
 
     public static Color influenceColor(Culture parent, Culture influencer)
     {

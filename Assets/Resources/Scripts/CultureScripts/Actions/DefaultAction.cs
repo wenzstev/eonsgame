@@ -23,6 +23,12 @@ public class DefaultAction : CultureAction
 
         turn.UpdateCulture(culture).newState = culture.currentState;
 
+        if(culture.CultureFoodStore.CurrentFoodStore < culture.Population) // stored food will all be consumed this turn
+        {
+            GatherFoodAction gatherFoodAction = new GatherFoodAction(culture);
+            return gatherFoodAction.ExecuteTurn();
+        }
+
 
         if (culture.tileInfo.currentMaxPopulation < culture.tileInfo.tilePopulation)
         {

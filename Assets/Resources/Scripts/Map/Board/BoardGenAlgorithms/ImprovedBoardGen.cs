@@ -95,7 +95,7 @@ public class ImprovedBoardGen : BoardGenAlgorithm
 
         float elevationDistance = Mathf.Max(0, curTileChars.elevation - adjacentTileChars.elevation);
 
-        contributedHumidity -= elevationDistance * elevationModifier;
+        contributedHumidity -= elevationDistance * elevationModifier; // TODO: should never return negative humidity. also rewrite with my new curve functions?
 
         return contributedHumidity;
     }
