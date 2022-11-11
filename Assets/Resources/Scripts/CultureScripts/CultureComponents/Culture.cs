@@ -97,7 +97,9 @@ public class Culture : MonoBehaviour
         Moving,
         NewOnTile,
         PendingRemoval,
-        Overpopulated
+        Overpopulated,
+        SeekingFood,
+        Starving
     }
 
     private void Awake()
