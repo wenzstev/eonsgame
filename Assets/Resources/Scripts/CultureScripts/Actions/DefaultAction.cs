@@ -8,7 +8,6 @@ public class DefaultAction : CultureAction
 
     public override Turn ExecuteTurn()
     {
-
         if (Random.value < culture.spreadChance)
         {
             CultureAction moveTile = new MoveTileAction(culture);
@@ -30,7 +29,6 @@ public class DefaultAction : CultureAction
             turn.UpdateCulture(culture).newState = Culture.State.Overpopulated;
             return turn;
         }
-
 
         if (Random.value < culture.growPopulationChance)
         {
