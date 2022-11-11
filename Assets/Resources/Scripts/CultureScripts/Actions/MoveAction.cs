@@ -6,6 +6,7 @@ public abstract class CultureMoveAction : CultureAction
 {
     static float moveTime = .1f;
 
+    float ActionCost = 2;
 
     protected GameObject prospectiveTile;
 

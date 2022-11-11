@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 2254175048405440385}
   - component: {fileID: 2844702702715120133}
   - component: {fileID: -8479225915283109699}
+  - component: {fileID: -5036476844479646280}
   m_Layer: 0
   m_Name: Culture
   m_TagString: Untagged
@@ -258,3 +259,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CultureHighlightPanelPefab: {fileID: 5405400365266782984, guid: 87e4b57308ccbeb4f865808eb7cbe030, type: 3}
+--- !u!114 &-5036476844479646280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829645622402238992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4756c9252d3b4228b1cb492dda9ae5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentFoodStore: 0
