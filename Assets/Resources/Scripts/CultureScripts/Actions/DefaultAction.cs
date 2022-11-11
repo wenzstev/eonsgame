@@ -47,7 +47,5 @@ public class DefaultAction : CultureAction
         }
 
         return turn;
-
-
     }
 }

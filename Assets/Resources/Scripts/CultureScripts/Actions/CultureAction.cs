@@ -14,7 +14,9 @@ public abstract class CultureAction
         //Debug.Log("starting turn for " + c.GetHashCode());
         culture = c;
         turn = Turn.HookTurn();
-        turn.UpdateCulture(culture).FoodChange = -ActionCost;
+        Debug.Log($"{culture.Population}, {ActionCost}");
+        turn.UpdateCulture(culture).FoodChange = -ActionCost * culture.Population;
+        Debug.Log(turn.UpdateCulture(culture).FoodChange);
     }
 
     public abstract Turn ExecuteTurn();
