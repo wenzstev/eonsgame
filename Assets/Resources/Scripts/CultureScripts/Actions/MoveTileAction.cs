@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveTileAction : CultureMoveAction
 {
-    public float moveChance = .01f;
+    public float moveChance = .01f; // no more need for a movechance either
 
     public MoveTileAction(Culture c) : base(c) { }
 

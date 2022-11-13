@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [System.Serializable]
@@ -15,46 +16,64 @@ public class Tile : MonoBehaviour
     {
         get
         {
-            if(_moveTile == null)
+            if (_moveTile == null)
             {
                 _moveTile = Instantiate(Resources.Load<GameObject>("Prefabs/Board/EmptyTile"));
                 _moveTile.name = "Move Tile";
-                return _moveTile;
+                Destroy(_moveTile.GetComponent<TileChars>());
+                Destroy(_moveTile.GetComponent<TileDrawer>());
+                 return _moveTile;
             }
             return _moveTile;
         }
     }
 
     Dictionary<Direction, GameObject> neighbors;
+    List<Direction> neighborDirections;
 
-    void Awake()
+    void Start()
     {
         neighbors = new Dictionary<Direction, GameObject>();
+        neighborDirections = new List<Direction>();
+        DetermineNeighbors();
+    }
+
+    void DetermineNeighbors()
+    {
+        Enumerable.Range(0, 8).Select((i) => GetNeighbor((Direction)i)).Count(); // count forces execution
     }
 
 
     public GameObject GetNeighbor(Direction d)
     {
         GameObject neighbor = null;
-        if(neighbors.TryGetValue(d, out neighbor))
+        if (neighbors.TryGetValue(d, out neighbor))
         {
             return neighbor;
         }
         else
         {
-            neighbors[d] = board.getNeighbor(gameObject, d);
+            neighbor = board.getNeighbor(gameObject, d);
+            if (neighbor != null) AddNeighborTile(neighbor, d);
 
-            return neighbors[d];
+            return neighbor;
         }
+    }
+
+    void AddNeighborTile(GameObject neighbor, Direction d)
+    {
+        neighbors.Add(d, neighbor);
+        neighborDirections.Add(d);
     }
 
     public GameObject GetRandomNeighbor()
     {
-        Direction randDir = (Direction) Mathf.FloorToInt(Random.value * 8);
-        return GetNeighbor(randDir);
+        int randDir = Mathf.FloorToInt(Random.value * neighborDirections.Count);
+        Debug.Log($"Accessing list of count {neighborDirections.Count} at index {randDir}");
+        return neighbors[neighborDirections[randDir]];
+
     }
-    
-}
+}   
 
 public enum Direction
 {
