@@ -27,16 +27,20 @@ public class CultureFoodStoreTestSuite : CultureActionTest
     [UnityTest]
     public IEnumerator CanConsumeFoodInTurn()
     {
+        TestTile.GetComponent<TileFood>().CurFood = 0;
         TestCultureFoodStore.CurrentFoodStore = 1000;
         DefaultAction TestDefaultAction = new DefaultAction(TestCulture);
         Turn turn = TestDefaultAction.ExecuteTurn();
         Assert.That(turn.turnUpdates[TestCulture].FoodChange == -1, $"Culture should be reducing food but FoodChange is {turn.turnUpdates[TestCulture].FoodChange}!");
+        Assert.AreEqual(Culture.State.SeekingFood, turn.turnUpdates[TestCulture].newState, "Culture did not switch to seeking food!");
         yield return null;
     }
+
 
     [UnityTest]
     public IEnumerator CanConsumeFoodMultiplePopulation()
     {
+        TestTile.GetComponent<TileFood>().CurFood = 0;
         Turn.HookTurn().UpdateCulture(TestCulture).popChange = 5;
         Turn.HookTurn().UpdateCulture(TestCulture).FoodChange = 1000;
         Turn.HookTurn().UpdateAllCultures();
@@ -45,6 +49,8 @@ public class CultureFoodStoreTestSuite : CultureActionTest
         DefaultAction TestDefaultAction = new DefaultAction(TestCulture);
         Turn turn = TestDefaultAction.ExecuteTurn();
         Assert.That(turn.turnUpdates[TestCulture].FoodChange == -6, $"Culture should be reducing food but FoodChange is {turn.turnUpdates[TestCulture].FoodChange}!");
+        Assert.AreEqual(Culture.State.SeekingFood, turn.turnUpdates[TestCulture].newState, "Culture did not switch to seeking food!");
+
         yield return null;
     }
 
