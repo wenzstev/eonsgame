@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [System.Serializable]
@@ -19,7 +20,9 @@ public class Tile : MonoBehaviour
             {
                 _moveTile = Instantiate(Resources.Load<GameObject>("Prefabs/Board/EmptyTile"));
                 _moveTile.name = "Move Tile";
-                return _moveTile;
+                Destroy(_moveTile.GetComponent<TileChars>());
+                Destroy(_moveTile.GetComponent<TileDrawer>());
+                 return _moveTile;
             }
             return _moveTile;
         }
@@ -28,10 +31,16 @@ public class Tile : MonoBehaviour
     Dictionary<Direction, GameObject> neighbors;
     List<Direction> neighborDirections;
 
-    void Awake()
+    void Start()
     {
         neighbors = new Dictionary<Direction, GameObject>();
         neighborDirections = new List<Direction>();
+        DetermineNeighbors();
+    }
+
+    void DetermineNeighbors()
+    {
+        Enumerable.Range(0, 8).Select((i) => GetNeighbor((Direction)i)).Count(); // count forces execution
     }
 
 
@@ -60,6 +69,7 @@ public class Tile : MonoBehaviour
     public GameObject GetRandomNeighbor()
     {
         int randDir = Mathf.FloorToInt(Random.value * neighborDirections.Count);
+        Debug.Log($"Accessing list of count {neighborDirections.Count} at index {randDir}");
         return neighbors[neighborDirections[randDir]];
 
     }
