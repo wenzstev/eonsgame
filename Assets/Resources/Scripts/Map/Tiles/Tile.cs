@@ -15,7 +15,7 @@ public class Tile : MonoBehaviour
     {
         get
         {
-            if(_moveTile == null)
+            if (_moveTile == null)
             {
                 _moveTile = Instantiate(Resources.Load<GameObject>("Prefabs/Board/EmptyTile"));
                 _moveTile.name = "Move Tile";
@@ -26,35 +26,44 @@ public class Tile : MonoBehaviour
     }
 
     Dictionary<Direction, GameObject> neighbors;
+    List<Direction> neighborDirections;
 
     void Awake()
     {
         neighbors = new Dictionary<Direction, GameObject>();
+        neighborDirections = new List<Direction>();
     }
 
 
     public GameObject GetNeighbor(Direction d)
     {
         GameObject neighbor = null;
-        if(neighbors.TryGetValue(d, out neighbor))
+        if (neighbors.TryGetValue(d, out neighbor))
         {
             return neighbor;
         }
         else
         {
-            neighbors[d] = board.getNeighbor(gameObject, d);
+            neighbor = board.getNeighbor(gameObject, d);
+            if (neighbor != null) AddNeighborTile(neighbor, d);
 
-            return neighbors[d];
+            return neighbor;
         }
+    }
+
+    void AddNeighborTile(GameObject neighbor, Direction d)
+    {
+        neighbors.Add(d, neighbor);
+        neighborDirections.Add(d);
     }
 
     public GameObject GetRandomNeighbor()
     {
-        Direction randDir = (Direction) Mathf.FloorToInt(Random.value * 8);
-        return GetNeighbor(randDir);
+        int randDir = Mathf.FloorToInt(Random.value * neighborDirections.Count);
+        return neighbors[neighborDirections[randDir]];
+
     }
-    
-}
+}   
 
 public enum Direction
 {

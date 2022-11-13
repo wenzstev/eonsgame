@@ -18,8 +18,9 @@ public class MoveActionTestSuite : CultureActionTest
     public IEnumerator MoveTileActionTest()
     {
 
-        Turn TestTurn = TestMoveAbility();
-
+        MoveTileAction mta = new MoveTileAction(TestCulture);
+        mta.moveChance = 1;
+        Turn TestTurn = mta.ExecuteTurn();
         yield return null;
 
         TestTurn.UpdateAllCultures();
@@ -34,11 +35,11 @@ public class MoveActionTestSuite : CultureActionTest
 
         Turn.HookTurn().UpdateAllCultures();
 
-      
+
 
         Assert.That(TestCulture.currentState == Culture.State.NewOnTile, "Culture has not returned to default state!");
         Assert.That(TestCulture.transform.parent == NeighborTile.transform, "Culture has not changed tiles!");
-        Assert.That(!TestTile.GetComponent<TileInfo>().cultures.ContainsKey(TestCulture.name), "Previous culture is still in old tileinfo!");   
+        Assert.That(!TestTile.GetComponent<TileInfo>().cultures.ContainsKey(TestCulture.name), "Previous culture is still in old tileinfo!");
     }
 
     [UnityTest]
@@ -49,27 +50,15 @@ public class MoveActionTestSuite : CultureActionTest
 
         Assert.That(TestCulture.Population == 6, "test culture's population is not 6!");
 
-        
+
         MoveTileAction mta = new MoveTileAction(TestCulture);
         mta.moveChance = 1;
-
         Turn testTurn = mta.ExecuteTurn();
-
-        int counter = 0;
-        while (testTurn.turnUpdates.Count == 1 && counter < 50)
-        {
-            mta = new MoveTileAction(TestCulture);
-            mta.moveChance = 1;
-            testTurn = mta.ExecuteTurn();
-            counter++;
-        }
-        
 
         yield return null;
 
         Turn.HookTurn().UpdateAllCultures();
 
-        Assert.That(counter < 50, "Test ran too many times without ever moving the tile!");
         Assert.That(TestCulture.Population == 5, "TestCulture did not lose population!");
 
         yield return new WaitForSeconds(.1f);
@@ -110,25 +99,5 @@ public class MoveActionTestSuite : CultureActionTest
         Turn.HookTurn().UpdateAllCultures();
 
         Assert.That(TestCulture.currentState == Culture.State.NewOnTile, "Culture is not in NewOnTile State!");
-    }
-
-    // TODO: refactor this so that it works for more tests?
-    Turn TestMoveAbility()
-    {
-        MoveTileAction mta = new MoveTileAction(TestCulture);
-        mta.moveChance = 1;
-        Turn testTurn = mta.ExecuteTurn();
-
-        int counter = 0;
-        while (testTurn.turnUpdates[TestCulture].newState == Culture.State.Default && counter < 50)
-        {
-            mta = new MoveTileAction(TestCulture);
-            mta.moveChance = 1;
-            testTurn = mta.ExecuteTurn();
-            counter++;
-        }
-
-        Assert.That(counter < 50, "Test ran too many times without ever moving the tile!");
-        return testTurn;
     }
 }
