@@ -45,7 +45,7 @@ public class OverpopulationActionTestSuite : CultureActionTest
         // culture can attempt to flee and split off
         // if that fails, some population is killed
 
-
+        NeighborTile.GetComponent<TileDrawer>().tileType = TileDrawer.BiomeType.Grassland;
 
         OverpopulationAction opa = new OverpopulationAction(TestCulture);
         opa.popLossChance = 0f;
@@ -53,7 +53,7 @@ public class OverpopulationActionTestSuite : CultureActionTest
 
         CultureTurnUpdate cta = turn.turnUpdates[TestCulture];
         Assert.That(turn.turnUpdates.Count == 2, "Culture did not split!");
-        Assert.That(TestCulture.Population == 10, "Culture did not lose size!");
+        Assert.AreEqual(100, TestCulture.Population, "Culture did not lose size!");
     }
    
 }

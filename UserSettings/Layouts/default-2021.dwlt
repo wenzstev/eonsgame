@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 28
+  controlID: 81
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -92,7 +92,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 638.6667
+    width: 834.6667
     height: 701.3333
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -121,16 +121,16 @@ MonoBehaviour:
     y: 701.3333
     width: 1874.6666
     height: 598.00006
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 15}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 15}
   - {fileID: 20}
   - {fileID: 12}
   - {fileID: 13}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 18
+  controlID: 82
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 19
+  controlID: 83
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -267,9 +267,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 638.6667
+    x: 834.6667
     y: 0
-    width: 1236
+    width: 1040
     height: 701.3333
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
@@ -449,14 +449,14 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 72.66667
-    width: 637.6667
+    width: 833.6667
     height: 680.3333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 116
+    ID: 120
     splitterInitialOffset: 399
     currentActiveSplitter: -1
     realSizes:
@@ -488,7 +488,7 @@ MonoBehaviour:
       name: My project
       fullName: My project
       resultStatus: 2
-      duration: 79.14342
+      duration: 0.2750392
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -504,7 +504,7 @@ MonoBehaviour:
       name: Tests.dll
       fullName: C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll
       resultStatus: 2
-      duration: 79.00548
+      duration: 0.1394914
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -520,7 +520,7 @@ MonoBehaviour:
       name: BoardAgeTestSuite
       fullName: BoardAgeTestSuite
       resultStatus: 1
-      duration: 0.2477225
+      duration: 0.1908224
       messages: 
       output: 
       stacktrace: 
@@ -536,7 +536,7 @@ MonoBehaviour:
       name: CanGetBoardAgeAtStartup
       fullName: BoardAgeTestSuite.CanGetBoardAgeAtStartup
       resultStatus: 1
-      duration: 0.1909667
+      duration: 0.1380226
       messages: 
       output: 'clearing
 
@@ -555,7 +555,7 @@ MonoBehaviour:
       name: CanUpdateBoardAge
       fullName: BoardAgeTestSuite.CanUpdateBoardAge
       resultStatus: 1
-      duration: 0.0438196
+      duration: 0.040038
       messages: 
       output: 'clearing
 
@@ -573,9 +573,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][CultureFoodStoreTestSuite][suite]
       name: CultureFoodStoreTestSuite
       fullName: CultureFoodStoreTestSuite
-      resultStatus: 2
-      duration: 78.99998
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.1004303
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -590,7 +590,7 @@ MonoBehaviour:
       name: CanCollectFoodFromTile
       fullName: CultureFoodStoreTestSuite.CanCollectFoodFromTile
       resultStatus: 1
-      duration: 0.0691666
+      duration: 0.0383841
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -619,10 +619,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/CultureFoodStoreTestSuite/[Tests][CultureFoodStoreTestSuite.CanConsumeFoodInTurn]
       name: CanConsumeFoodInTurn
       fullName: CultureFoodStoreTestSuite.CanConsumeFoodInTurn
-      resultStatus: 2
-      duration: 78.986534
-      messages: "  Culture should be reducing food but FoodChange is -2.147484E+07!\r\n 
-        Expected: True\r\n  But was:  False\r\n"
+      resultStatus: 1
+      duration: 0.0216883
+      messages: 
       output: 'setting test board: Board(Clone) (Board)
 
         Board(Clone) (Board)
@@ -642,14 +641,7 @@ MonoBehaviour:
         clearing
 
 '
-      stacktrace: 'at CultureFoodStoreTestSuite+<CanConsumeFoodInTurn>d__3.MoveNext
-        () [0x0005f] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\CultureFoodStoreTestSuite.cs:33
-
-        at
-        UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e]
-        in C:\Users\wenze\Documents\Unity\Eons\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
-
-'
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -662,10 +654,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/CultureFoodStoreTestSuite/[Tests][CultureFoodStoreTestSuite.CanConsumeFoodMultiplePopulation]
       name: CanConsumeFoodMultiplePopulation
       fullName: CultureFoodStoreTestSuite.CanConsumeFoodMultiplePopulation
-      resultStatus: 2
-      duration: 0.0164022
-      messages: "  Culture should be reducing food but FoodChange is -2.147484E+07!\r\n 
-        Expected: True\r\n  But was:  False\r\n"
+      resultStatus: 1
+      duration: 0.0167904
+      messages: 
       output: 'setting test board: Board(Clone) (Board)
 
         Board(Clone) (Board)
@@ -685,14 +676,7 @@ MonoBehaviour:
         clearing
 
 '
-      stacktrace: 'at CultureFoodStoreTestSuite+<CanConsumeFoodMultiplePopulation>d__4.MoveNext
-        () [0x0008f] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\CultureFoodStoreTestSuite.cs:47
-
-        at
-        UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e]
-        in C:\Users\wenze\Documents\Unity\Eons\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
-
-'
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -706,7 +690,7 @@ MonoBehaviour:
       name: CanReduceFoodOnTile
       fullName: CultureFoodStoreTestSuite.CanReduceFoodOnTile
       resultStatus: 1
-      duration: 0.0167238
+      duration: 0.0176702
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -736,7 +720,7 @@ MonoBehaviour:
       name: CultureTestSuite
       fullName: CultureTestSuite
       resultStatus: 1
-      duration: 0.0432073
+      duration: 0.0499339
       messages: 
       output: 
       stacktrace: 
@@ -752,7 +736,7 @@ MonoBehaviour:
       name: TestCanMerge
       fullName: CultureTestSuite.TestCanMerge
       resultStatus: 1
-      duration: 0.0113598
+      duration: 0.0154169
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -778,7 +762,7 @@ MonoBehaviour:
       name: TestCannotMerge
       fullName: CultureTestSuite.TestCannotMerge
       resultStatus: 1
-      duration: 0.0125534
+      duration: 0.0134521
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -804,7 +788,7 @@ MonoBehaviour:
       name: TestSplitCulture
       fullName: CultureTestSuite.TestSplitCulture
       resultStatus: 1
-      duration: 0.0130808
+      duration: 0.0142713
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -830,7 +814,7 @@ MonoBehaviour:
       name: CurveTestSuite
       fullName: CurveTestSuite
       resultStatus: 1
-      duration: 0.0083696
+      duration: 0.0088722
       messages: 
       output: 
       stacktrace: 
@@ -846,7 +830,7 @@ MonoBehaviour:
       name: TestCompoundCurve
       fullName: CurveTestSuite.TestCompoundCurve
       resultStatus: 1
-      duration: 0.0021608
+      duration: 0.0015074
       messages: 
       output: 
       stacktrace: 
@@ -863,7 +847,7 @@ MonoBehaviour:
       name: TestGaussianCurve
       fullName: CurveTestSuite.TestGaussianCurve
       resultStatus: 1
-      duration: 0.0003262
+      duration: 0.0002866
       messages: 
       output: 
       stacktrace: 
@@ -880,7 +864,7 @@ MonoBehaviour:
       name: TestPowerCurve
       fullName: CurveTestSuite.TestPowerCurve
       resultStatus: 1
-      duration: 0.0002317
+      duration: 0.0002559
       messages: 
       output: 
       stacktrace: 
@@ -897,7 +881,7 @@ MonoBehaviour:
       name: TestSigmoidCurve
       fullName: CurveTestSuite.TestSigmoidCurve
       resultStatus: 1
-      duration: 0.0001738
+      duration: 0.0002109
       messages: 
       output: 
       stacktrace: 
@@ -914,7 +898,7 @@ MonoBehaviour:
       name: InfluenceActionTestSuite
       fullName: InfluenceActionTestSuite
       resultStatus: 1
-      duration: 0.0295629
+      duration: 0.0286528
       messages: 
       output: 
       stacktrace: 
@@ -930,7 +914,7 @@ MonoBehaviour:
       name: CanInfluenceNeighborCulture
       fullName: InfluenceActionTestSuite.CanInfluenceNeighborCulture
       resultStatus: 1
-      duration: 0.0117542
+      duration: 0.0106209
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -960,7 +944,7 @@ MonoBehaviour:
       name: CanMergeIntoNewCultureIfClose
       fullName: InfluenceActionTestSuite.CanMergeIntoNewCultureIfClose
       resultStatus: 1
-      duration: 0.0124404
+      duration: 0.0128746
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -990,7 +974,7 @@ MonoBehaviour:
       name: MergeActionTestSuite
       fullName: MergeActionTestSuite
       resultStatus: 1
-      duration: 0.0589677
+      duration: 0.0634382
       messages: 
       output: 
       stacktrace: 
@@ -1006,7 +990,7 @@ MonoBehaviour:
       name: CanAddNewCultureToTile
       fullName: MergeActionTestSuite.CanAddNewCultureToTile
       resultStatus: 1
-      duration: 0.0109948
+      duration: 0.0098639
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1036,7 +1020,7 @@ MonoBehaviour:
       name: CanCreateAsNewCulture
       fullName: MergeActionTestSuite.CanCreateAsNewCulture
       resultStatus: 1
-      duration: 0.0134583
+      duration: 0.0192865
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1073,7 +1057,7 @@ MonoBehaviour:
       name: CanMergeCultures
       fullName: MergeActionTestSuite.CanMergeCultures
       resultStatus: 1
-      duration: 0.013643
+      duration: 0.0131095
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1110,7 +1094,7 @@ MonoBehaviour:
       name: CanMergeWithParentCulture
       fullName: MergeActionTestSuite.CanMergeWithParentCulture
       resultStatus: 1
-      duration: 0.0141835
+      duration: 0.0132325
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1150,7 +1134,7 @@ MonoBehaviour:
       name: MoveActionTestSuite
       fullName: MoveActionTestSuite
       resultStatus: 1
-      duration: 0.3966765
+      duration: 0.4651964
       messages: 
       output: 
       stacktrace: 
@@ -1166,7 +1150,7 @@ MonoBehaviour:
       name: MoveTileActionTest
       fullName: MoveActionTestSuite.MoveTileActionTest
       resultStatus: 1
-      duration: 0.1564108
+      duration: 0.2144535
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1176,11 +1160,6 @@ MonoBehaviour:
         Complete. Culture name is rthqqn (Culture)
 
         1, 1
-
-        -1
-
-        1,
-        1
 
         -1
 
@@ -1201,7 +1180,7 @@ MonoBehaviour:
       name: MoveTileActionWhenLargeTest
       fullName: MoveActionTestSuite.MoveTileActionWhenLargeTest
       resultStatus: 1
-      duration: 0.1170339
+      duration: 0.1198382
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1231,7 +1210,7 @@ MonoBehaviour:
       name: RepelledActionTest
       fullName: MoveActionTestSuite.RepelledActionTest
       resultStatus: 1
-      duration: 0.1172341
+      duration: 0.1171557
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1261,7 +1240,7 @@ MonoBehaviour:
       name: OverpopulationActionTestSuite
       fullName: OverpopulationActionTestSuite
       resultStatus: 2
-      duration: 0.0388156
+      duration: 0.1302531
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -1277,7 +1256,7 @@ MonoBehaviour:
       name: CanBecomeOverPopulated
       fullName: OverpopulationActionTestSuite.CanBecomeOverPopulated
       resultStatus: 1
-      duration: 0.0092026
+      duration: 0.0646727
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1312,7 +1291,7 @@ MonoBehaviour:
       name: TestPopulationDrop
       fullName: OverpopulationActionTestSuite.TestPopulationDrop
       resultStatus: 1
-      duration: 0.0112747
+      duration: 0.0178217
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1342,7 +1321,7 @@ MonoBehaviour:
       name: TestPopulationMoveAndDrop
       fullName: OverpopulationActionTestSuite.TestPopulationMoveAndDrop
       resultStatus: 2
-      duration: 0.0116504
+      duration: 0.0340039
       messages: "  Culture did not split!\r\n  Expected: True\r\n  But was:  False\r\n"
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1380,7 +1359,7 @@ MonoBehaviour:
       name: TileFoodTestSuite
       fullName: TileFoodTestSuite
       resultStatus: 1
-      duration: 0.0645803
+      duration: 0.064869
       messages: 
       output: 
       stacktrace: 
@@ -1396,7 +1375,7 @@ MonoBehaviour:
       name: CanCalculateProperFoodRateDesert
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateDesert
       resultStatus: 1
-      duration: 0.0063886
+      duration: 0.0064785
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1419,7 +1398,7 @@ MonoBehaviour:
       name: CanCalculateProperFoodRateRainforest
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateRainforest
       resultStatus: 1
-      duration: 0.0083298
+      duration: 0.0075962
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1442,7 +1421,7 @@ MonoBehaviour:
       name: CanCalculateProperFoodRateTundra
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateTundra
       resultStatus: 1
-      duration: 0.0080983
+      duration: 0.0087079
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1465,7 +1444,7 @@ MonoBehaviour:
       name: CanIncreaseFoodPerTick
       fullName: TileFoodTestSuite.CanIncreaseFoodPerTick
       resultStatus: 1
-      duration: 0.011884
+      duration: 0.012191
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1488,7 +1467,7 @@ MonoBehaviour:
       name: CanPreventAdditionalFood
       fullName: TileFoodTestSuite.CanPreventAdditionalFood
       resultStatus: 1
-      duration: 0.0119532
+      duration: 0.01173
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1511,7 +1490,7 @@ MonoBehaviour:
       name: CanSetFoodToMaxAtStart
       fullName: TileFoodTestSuite.CanSetFoodToMaxAtStart
       resultStatus: 1
-      duration: 0.0111953
+      duration: 0.011627
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1529,27 +1508,18 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1029
       parentUniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
-    m_ResultText: "CanConsumeFoodInTurn (78.987s)\n---\nCulture should be reducing
-      food but FoodChange is -2.147484E+07!\r\n  Expected: True\r\n  But was:  False\n---\nat
-      CultureFoodStoreTestSuite+<CanConsumeFoodInTurn>d__3.MoveNext () [0x0005f]
-      in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\CultureFoodStoreTestSuite.cs:33\r\nat
-      UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in
-      C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46\n---\nsetting
-      test board: Board(Clone) (Board)\r\nBoard(Clone) (Board)\r\nSetup Complete.
-      Culture name is rthqqn (Culture)\r\n1, 1\r\n-1\r\n1, 1\r\n-1\r\nclearing"
-    m_ResultStacktrace: 'at CultureFoodStoreTestSuite+<CanConsumeFoodInTurn>d__3.MoveNext
-      () [0x0005f] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\CultureFoodStoreTestSuite.cs:33
+    m_ResultText: 'OverpopulationActionTestSuite (0.130s)
 
-      at
-      UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in
-      C:\Users\wenze\Documents\Unity\Eons\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
+      ---
 
-'
+      One or
+      more child tests had errors'
+    m_ResultStacktrace: 
     m_TestListState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 52289f54
-      m_LastClickedID: 1419716690
-      m_ExpandedIDs: c6ec6ba118e194b5af90fae76eca7a0803fe443357683e3426ecfc371a04ba42eb084855ffffff7f
+      scrollPos: {x: 0, y: 142}
+      m_SelectedIDs: 6eca7a08
+      m_LastClickedID: 142264942
+      m_ExpandedIDs: c6ec6ba1c2778cab18e194b5af90fae76eca7a0803fe443357683e3426ecfc371a04ba42eb084855ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1841,7 +1811,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 2896fcff7096fcff5098fcff5a99fcffa299fcff829bfcffac9cfcfff49cfcffd49efcffd69ffcff1ea0fcff14b1fcff5c3dfeffa43dfeff843ffeff4c41feff9441feff1845feffae4bfeff964cfeffd003ffffea03ffff08cbffff86ccffffceccffffaeceffff6ad0ffffb2d0ffff92d2ffffa2d3ffffead3ffffcad5ffffdcd6ffff24d7ffff04d9ffffc6daffff0edbffffeedcffffbadeffff02dfffffe2e0ffff24e3ffff6ce3ffff4ce5ffff0ae7ffff52e7ffff32e9ffffcaeaffff12ebfffff2ecffffbeeeffff06efffffe6f0ffff12f4ffff5af4ffff40f6ffff38fbffff
+      m_ExpandedIDs: ac86fffff486ffffec89ffffa88bfffff08bffff008fffffca90ffff1291ffff2294ffff5a97ffffa297ffff8299ffff909affffd89affffceabffff94adffffdaadffff56aeffffe6b0ffff2eb1ffff0eb3ffff16b4ffff5eb4ffff3cc5ffffa8c8fffff0c8ffffd0caffffdacbffff22ccffff18ddffff1cdeffff64deffff44e0ffff1ee4ffff66e4ffff46e6ffff00e8ffff48e8ffff28eaffff30ebffff78ebffff58edffff5aeeffffa2eeffff82f0ffff88f1ffffd0f1ffffb0f3ffffaef5fffff6f5ffff82f9ffff38fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1885,9 +1855,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 638.6667
+    x: 834.6667
     y: 72.66667
-    width: 1234
+    width: 1038
     height: 680.3333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1898,8 +1868,8 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -101, y: -26}
-      snapOffsetDelta: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: -98.66669, y: -26}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -2190,9 +2160,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 638.6667
+    x: 834.6667
     y: 72.66667
-    width: 1234
+    width: 1038
     height: 680.3333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -2240,23 +2210,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1234
+      width: 1038
       height: 659.3333
-    m_Scale: {x: 0.9157407, y: 0.9157407}
-    m_Translation: {x: 617, y: 329.66666}
+    m_Scale: {x: 0.8109375, y: 0.8109376}
+    m_Translation: {x: 519, y: 329.66666}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -673.7715
-      y: -360
-      width: 1347.543
-      height: 720
+      x: -640
+      y: -406.52533
+      width: 1280
+      height: 813.05066
     m_MinimalGUI: 1
-  m_defaultScale: 0.9157407
-  m_LastWindowPixelSize: {x: 1851, y: 1020.5}
+  m_defaultScale: 0.8109375
+  m_LastWindowPixelSize: {x: 1557, y: 1020.5}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -2283,9 +2253,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 1075.3334
+    y: 774
     width: 1873.6666
-    height: 275.6667
+    height: 577.00006
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
