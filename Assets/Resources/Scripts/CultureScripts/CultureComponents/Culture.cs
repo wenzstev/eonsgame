@@ -175,7 +175,7 @@ public class Culture : MonoBehaviour
         if (t.newAffinity > 0) GainAffinity(t.newAffinity);
         if (t.newTile != null) SetTile(t.newTile); // maybe give them some offscreen placeholder tile?
         
-        CultureFoodStore.CurrentFoodStore += t.FoodChange;
+        CultureFoodStore.AlterFoodStore(t.FoodChange);
 
         EventManager.TriggerEvent("CultureUpdated" + name, new Dictionary<string, object> { { "culture", this } });
     }
