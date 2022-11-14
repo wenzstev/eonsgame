@@ -19,8 +19,8 @@ MonoBehaviour:
     width: 2560
     height: 1349.3334
   m_ShowMode: 4
-  m_Title: Scene
-  m_RootView: {fileID: 6}
+  m_Title: Game
+  m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
@@ -33,120 +33,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 9}
-  - {fileID: 3}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 30
-    width: 2560
-    height: 1299.3334
-  m_MinSize: {x: 300, y: 200}
-  m_MaxSize: {x: 24288, y: 16192}
-  vertical: 0
-  controlID: 81
---- !u!114 &3
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 1874.6666
-    y: 0
-    width: 685.3334
-    height: 1299.3334
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 16}
-  m_Panes:
-  - {fileID: 16}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &4
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 834.6667
-    height: 701.3333
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 14}
-  m_Panes:
-  - {fileID: 17}
-  - {fileID: 14}
-  m_Selected: 1
-  m_LastSelected: 0
---- !u!114 &5
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 701.3333
-    width: 1874.6666
-    height: 598.00006
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 20}
-  m_Panes:
-  - {fileID: 15}
-  - {fileID: 20}
-  - {fileID: 12}
-  - {fileID: 13}
-  m_Selected: 1
-  m_LastSelected: 0
---- !u!114 &6
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
   m_Script: {fileID: 12008, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 7}
-  - {fileID: 2}
-  - {fileID: 8}
+  - {fileID: 3}
+  - {fileID: 5}
+  - {fileID: 4}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -159,7 +52,7 @@ MonoBehaviour:
   m_TopViewHeight: 30
   m_UseBottomView: 1
   m_BottomViewHeight: 20
---- !u!114 &7
+--- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -181,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
---- !u!114 &8
+--- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -202,7 +95,7 @@ MonoBehaviour:
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &9
+--- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,8 +108,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
+  - {fileID: 6}
+  - {fileID: 11}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 30
+    width: 2560
+    height: 1299.3334
+  m_MinSize: {x: 300, y: 200}
+  m_MaxSize: {x: 24288, y: 16192}
+  vertical: 0
+  controlID: 93
+--- !u!114 &6
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 7}
   - {fileID: 10}
-  - {fileID: 5}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -226,8 +144,8 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 82
---- !u!114 &10
+  controlID: 94
+--- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -240,18 +158,101 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 4}
-  - {fileID: 11}
+  - {fileID: 8}
+  - {fileID: 9}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
     width: 1874.6666
-    height: 701.3333
+    height: 698
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 83
+  controlID: 95
+--- !u!114 &8
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: TestRunnerWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 925.3333
+    height: 698
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 12}
+  m_Panes:
+  - {fileID: 13}
+  - {fileID: 12}
+  m_Selected: 1
+  m_LastSelected: 0
+--- !u!114 &9
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: GameView
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 925.3333
+    y: 0
+    width: 949.3333
+    height: 698
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 15}
+  m_Panes:
+  - {fileID: 14}
+  - {fileID: 15}
+  m_Selected: 1
+  m_LastSelected: 0
+--- !u!114 &10
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: ConsoleWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 698
+    width: 1874.6666
+    height: 601.3334
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 17}
+  m_Panes:
+  - {fileID: 16}
+  - {fileID: 17}
+  - {fileID: 18}
+  - {fileID: 19}
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -262,172 +263,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: 
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 834.6667
+    x: 1874.6666
     y: 0
-    width: 1040
-    height: 701.3333
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 18}
+    width: 685.3334
+    height: 1299.3334
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 20}
   m_Panes:
-  - {fileID: 18}
-  - {fileID: 19}
+  - {fileID: 20}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 0
 --- !u!114 &12
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12071, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Animation
-    m_Image: {fileID: -3237396543322336831, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 688.6667
-    width: 1873.6666
-    height: 662.3334
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_LockTracker:
-    m_IsLocked: 0
-  m_LastSelectedObjectID: -13232
---- !u!114 &13
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12914, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Animator
-    m_Image: {fileID: 1711060831702674872, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 604
-    width: 1053.5
-    height: 255
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_ViewTransforms:
-    m_KeySerializationHelper:
-    - {fileID: -5183453786790052467, guid: ddb7da4d02db4694b8a60a64ad0c9bce, type: 2}
-    - {fileID: -2208600786771584181, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
-    - {fileID: -3373428290895615280, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
-    - {fileID: 8030200332961901116, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
-    m_ValueSerializationHelper:
-    - e00: 0.89244986
-      e01: 0
-      e02: 0
-      e03: 81.92392
-      e10: 0
-      e11: 0.89244986
-      e12: 0
-      e13: 244.61092
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    - e00: 0.9490526
-      e01: 0
-      e02: 0
-      e03: 313.54736
-      e10: 0
-      e11: 0.9490526
-      e12: 0
-      e13: 84.47331
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    - e00: 0.8252713
-      e01: 0
-      e02: 0
-      e03: 191.60516
-      e10: 0
-      e11: 0.8252713
-      e12: 0
-      e13: 59.215363
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    - e00: 1.0032251
-      e01: 0
-      e02: 0
-      e03: 61.791077
-      e10: 0
-      e11: 1.0032251
-      e12: 0
-      e13: 116.017975
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-  m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
-  m_BreadCrumbs:
-  - m_Target: {fileID: -2208600786771584181, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
-    m_ScrollPosition: {x: 0, y: 0}
-  - m_Target: {fileID: -3373428290895615280, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
-    m_ScrollPosition: {x: 0, y: 0}
-  stateMachineGraph: {fileID: 0}
-  stateMachineGraphGUI: {fileID: 0}
-  blendTreeGraph: {fileID: 0}
-  blendTreeGraphGUI: {fileID: 0}
-  m_AutoLiveLink: 1
-  m_MiniTool: 0
-  m_LockTracker:
-    m_IsLocked: 0
-  m_CurrentEditor: 1
-  m_LayerEditor:
-    m_SelectedLayerIndex: 0
---- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -449,19 +301,19 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 72.66667
-    width: 833.6667
-    height: 680.3333
+    width: 924.3333
+    height: 677
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 120
+    ID: 103
     splitterInitialOffset: 399
     currentActiveSplitter: -1
     realSizes:
-    - 358
-    - 252
+    - 356
+    - 250.66669
     relativeSizes:
     - 0.58672565
     - 0.41327435
@@ -471,7 +323,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 610
+    lastTotalSize: 606.6667
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -481,14 +333,14 @@ MonoBehaviour:
     oldSplitSize: 0
   m_TestTypeToolbarIndex: 0
   m_PlayModeTestListGUI:
-    m_Window: {fileID: 14}
+    m_Window: {fileID: 12}
     m_NewResultList:
     - id: 1004
       uniqueId: '[My project][suite]'
       name: My project
       fullName: My project
       resultStatus: 2
-      duration: 0.2750392
+      duration: 0.6103179
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -504,7 +356,7 @@ MonoBehaviour:
       name: Tests.dll
       fullName: C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll
       resultStatus: 2
-      duration: 0.1394914
+      duration: 0.4715356
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -520,7 +372,7 @@ MonoBehaviour:
       name: BoardAgeTestSuite
       fullName: BoardAgeTestSuite
       resultStatus: 1
-      duration: 0.1908224
+      duration: 0.1806079
       messages: 
       output: 
       stacktrace: 
@@ -536,7 +388,7 @@ MonoBehaviour:
       name: CanGetBoardAgeAtStartup
       fullName: BoardAgeTestSuite.CanGetBoardAgeAtStartup
       resultStatus: 1
-      duration: 0.1380226
+      duration: 0.1275647
       messages: 
       output: 'clearing
 
@@ -555,7 +407,7 @@ MonoBehaviour:
       name: CanUpdateBoardAge
       fullName: BoardAgeTestSuite.CanUpdateBoardAge
       resultStatus: 1
-      duration: 0.040038
+      duration: 0.0395925
       messages: 
       output: 'clearing
 
@@ -573,9 +425,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][CultureFoodStoreTestSuite][suite]
       name: CultureFoodStoreTestSuite
       fullName: CultureFoodStoreTestSuite
-      resultStatus: 1
-      duration: 0.1004303
-      messages: 
+      resultStatus: 2
+      duration: 0.0666037
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -589,24 +441,35 @@ MonoBehaviour:
       uniqueId: Tests.dll/CultureFoodStoreTestSuite/[Tests][CultureFoodStoreTestSuite.CanCollectFoodFromTile]
       name: CanCollectFoodFromTile
       fullName: CultureFoodStoreTestSuite.CanCollectFoodFromTile
-      resultStatus: 1
-      duration: 0.0383841
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        1, 1
-
-        -1
-
-        clearing
+      resultStatus: 2
+      duration: 0.0304048
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object'
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
 '
-      stacktrace: 
+      stacktrace: "--SetUp\r\n  at Tile.GetNeighbor (Direction d) [0x00017] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\Tile.cs:49
+        \r\n  at ImprovedBoardGen+<>c__DisplayClass4_1.<CalculateHumidity>b__0 (System.Int32
+        i) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:59
+        \r\n  at System.Linq.Enumerable+SelectIPartitionIterator`2[TSource,TResult].MoveNext
+        () [0x00048] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable+WhereEnumerableIterator`1[TSource].MoveNext
+        () [0x0004e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Collections.Generic.HashSet`1[T].UnionWith
+        (System.Collections.Generic.IEnumerable`1[T] other) [0x00026] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at System.Collections.Generic.HashSet`1[T]..ctor (System.Collections.Generic.IEnumerable`1[T]
+        collection, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0004c]
+        in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source, System.Collections.Generic.IEqualityComparer`1[T]
+        comparer) [0x0000e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at ImprovedBoardGen.CalculateHumidity (UnityEngine.GameObject[,] tiles)
+        [0x000bf] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:60
+        \r\n  at ImprovedBoardGen.CreateBoard (BoardStats bs) [0x00047] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:28
+        \r\n  at BoardInputReader.GenerateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardInputReader.cs:28
+        \r\n  at Board.CreateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\Board.cs:53
+        \r\n  at BasicBoardTest.SetupBoard () [0x00072] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:32
+        \r\n  at BasicBoardTest+<SetupBasicBoard>d__2.MoveNext () [0x00020] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:13
+        \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__15[T].MoveNext
+        () [0x00185] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:129 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -619,29 +482,35 @@ MonoBehaviour:
       uniqueId: Tests.dll/CultureFoodStoreTestSuite/[Tests][CultureFoodStoreTestSuite.CanConsumeFoodInTurn]
       name: CanConsumeFoodInTurn
       fullName: CultureFoodStoreTestSuite.CanConsumeFoodInTurn
-      resultStatus: 1
-      duration: 0.0216883
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        1, 1
-
-        -1
-
-        1,
-        1
-
-        -1
-
-        clearing
+      resultStatus: 2
+      duration: 0.0089515
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object'
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
 '
-      stacktrace: 
+      stacktrace: "--SetUp\r\n  at Tile.GetNeighbor (Direction d) [0x00017] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\Tile.cs:49
+        \r\n  at ImprovedBoardGen+<>c__DisplayClass4_1.<CalculateHumidity>b__0 (System.Int32
+        i) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:59
+        \r\n  at System.Linq.Enumerable+SelectIPartitionIterator`2[TSource,TResult].MoveNext
+        () [0x00048] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable+WhereEnumerableIterator`1[TSource].MoveNext
+        () [0x0004e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Collections.Generic.HashSet`1[T].UnionWith
+        (System.Collections.Generic.IEnumerable`1[T] other) [0x00026] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at System.Collections.Generic.HashSet`1[T]..ctor (System.Collections.Generic.IEnumerable`1[T]
+        collection, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0004c]
+        in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source, System.Collections.Generic.IEqualityComparer`1[T]
+        comparer) [0x0000e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at ImprovedBoardGen.CalculateHumidity (UnityEngine.GameObject[,] tiles)
+        [0x000bf] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:60
+        \r\n  at ImprovedBoardGen.CreateBoard (BoardStats bs) [0x00047] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:28
+        \r\n  at BoardInputReader.GenerateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardInputReader.cs:28
+        \r\n  at Board.CreateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\Board.cs:53
+        \r\n  at BasicBoardTest.SetupBoard () [0x00072] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:32
+        \r\n  at BasicBoardTest+<SetupBasicBoard>d__2.MoveNext () [0x00020] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:13
+        \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__15[T].MoveNext
+        () [0x00185] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:129 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -654,29 +523,35 @@ MonoBehaviour:
       uniqueId: Tests.dll/CultureFoodStoreTestSuite/[Tests][CultureFoodStoreTestSuite.CanConsumeFoodMultiplePopulation]
       name: CanConsumeFoodMultiplePopulation
       fullName: CultureFoodStoreTestSuite.CanConsumeFoodMultiplePopulation
-      resultStatus: 1
-      duration: 0.0167904
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        6, 1
-
-        -6
-
-        6,
-        1
-
-        -6
-
-        clearing
+      resultStatus: 2
+      duration: 0.0124361
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object'
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
 '
-      stacktrace: 
+      stacktrace: "--SetUp\r\n  at Tile.GetNeighbor (Direction d) [0x00017] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\Tile.cs:49
+        \r\n  at ImprovedBoardGen+<>c__DisplayClass4_1.<CalculateHumidity>b__0 (System.Int32
+        i) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:59
+        \r\n  at System.Linq.Enumerable+SelectIPartitionIterator`2[TSource,TResult].MoveNext
+        () [0x00048] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable+WhereEnumerableIterator`1[TSource].MoveNext
+        () [0x0004e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Collections.Generic.HashSet`1[T].UnionWith
+        (System.Collections.Generic.IEnumerable`1[T] other) [0x00026] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at System.Collections.Generic.HashSet`1[T]..ctor (System.Collections.Generic.IEnumerable`1[T]
+        collection, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0004c]
+        in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source, System.Collections.Generic.IEqualityComparer`1[T]
+        comparer) [0x0000e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at ImprovedBoardGen.CalculateHumidity (UnityEngine.GameObject[,] tiles)
+        [0x000bf] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:60
+        \r\n  at ImprovedBoardGen.CreateBoard (BoardStats bs) [0x00047] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:28
+        \r\n  at BoardInputReader.GenerateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardInputReader.cs:28
+        \r\n  at Board.CreateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\Board.cs:53
+        \r\n  at BasicBoardTest.SetupBoard () [0x00072] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:32
+        \r\n  at BasicBoardTest+<SetupBasicBoard>d__2.MoveNext () [0x00020] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:13
+        \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__15[T].MoveNext
+        () [0x00185] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:129 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -689,24 +564,35 @@ MonoBehaviour:
       uniqueId: Tests.dll/CultureFoodStoreTestSuite/[Tests][CultureFoodStoreTestSuite.CanReduceFoodOnTile]
       name: CanReduceFoodOnTile
       fullName: CultureFoodStoreTestSuite.CanReduceFoodOnTile
-      resultStatus: 1
-      duration: 0.0176702
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        1, 1
-
-        -1
-
-        clearing
+      resultStatus: 2
+      duration: 0.008467
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object'
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
 '
-      stacktrace: 
+      stacktrace: "--SetUp\r\n  at Tile.GetNeighbor (Direction d) [0x00017] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\Tile.cs:49
+        \r\n  at ImprovedBoardGen+<>c__DisplayClass4_1.<CalculateHumidity>b__0 (System.Int32
+        i) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:59
+        \r\n  at System.Linq.Enumerable+SelectIPartitionIterator`2[TSource,TResult].MoveNext
+        () [0x00048] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable+WhereEnumerableIterator`1[TSource].MoveNext
+        () [0x0004e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Collections.Generic.HashSet`1[T].UnionWith
+        (System.Collections.Generic.IEnumerable`1[T] other) [0x00026] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at System.Collections.Generic.HashSet`1[T]..ctor (System.Collections.Generic.IEnumerable`1[T]
+        collection, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0004c]
+        in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source, System.Collections.Generic.IEqualityComparer`1[T]
+        comparer) [0x0000e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at ImprovedBoardGen.CalculateHumidity (UnityEngine.GameObject[,] tiles)
+        [0x000bf] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:60
+        \r\n  at ImprovedBoardGen.CreateBoard (BoardStats bs) [0x00047] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:28
+        \r\n  at BoardInputReader.GenerateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardInputReader.cs:28
+        \r\n  at Board.CreateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\Board.cs:53
+        \r\n  at BasicBoardTest.SetupBoard () [0x00072] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:32
+        \r\n  at BasicBoardTest+<SetupBasicBoard>d__2.MoveNext () [0x00020] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:13
+        \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__15[T].MoveNext
+        () [0x00185] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:129 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -719,9 +605,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][CultureTestSuite][suite]
       name: CultureTestSuite
       fullName: CultureTestSuite
-      resultStatus: 1
-      duration: 0.0499339
-      messages: 
+      resultStatus: 2
+      duration: 0.0330109
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -735,20 +621,35 @@ MonoBehaviour:
       uniqueId: Tests.dll/CultureTestSuite/[Tests][CultureTestSuite.TestCanMerge]
       name: TestCanMerge
       fullName: CultureTestSuite.TestCanMerge
-      resultStatus: 1
-      duration: 0.0154169
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        clearing
+      resultStatus: 2
+      duration: 0.0081299
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object'
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
 '
-      stacktrace: 
+      stacktrace: "--SetUp\r\n  at Tile.GetNeighbor (Direction d) [0x00017] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\Tile.cs:49
+        \r\n  at ImprovedBoardGen+<>c__DisplayClass4_1.<CalculateHumidity>b__0 (System.Int32
+        i) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:59
+        \r\n  at System.Linq.Enumerable+SelectIPartitionIterator`2[TSource,TResult].MoveNext
+        () [0x00048] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable+WhereEnumerableIterator`1[TSource].MoveNext
+        () [0x0004e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Collections.Generic.HashSet`1[T].UnionWith
+        (System.Collections.Generic.IEnumerable`1[T] other) [0x00026] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at System.Collections.Generic.HashSet`1[T]..ctor (System.Collections.Generic.IEnumerable`1[T]
+        collection, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0004c]
+        in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source, System.Collections.Generic.IEqualityComparer`1[T]
+        comparer) [0x0000e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at ImprovedBoardGen.CalculateHumidity (UnityEngine.GameObject[,] tiles)
+        [0x000bf] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:60
+        \r\n  at ImprovedBoardGen.CreateBoard (BoardStats bs) [0x00047] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:28
+        \r\n  at BoardInputReader.GenerateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardInputReader.cs:28
+        \r\n  at Board.CreateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\Board.cs:53
+        \r\n  at BasicBoardTest.SetupBoard () [0x00072] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:32
+        \r\n  at BasicBoardTest+<SetupBasicBoard>d__2.MoveNext () [0x00020] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:13
+        \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__15[T].MoveNext
+        () [0x00185] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:129 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -761,20 +662,35 @@ MonoBehaviour:
       uniqueId: Tests.dll/CultureTestSuite/[Tests][CultureTestSuite.TestCannotMerge]
       name: TestCannotMerge
       fullName: CultureTestSuite.TestCannotMerge
-      resultStatus: 1
-      duration: 0.0134521
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        clearing
+      resultStatus: 2
+      duration: 0.0089429
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object'
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
 '
-      stacktrace: 
+      stacktrace: "--SetUp\r\n  at Tile.GetNeighbor (Direction d) [0x00017] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\Tile.cs:49
+        \r\n  at ImprovedBoardGen+<>c__DisplayClass4_1.<CalculateHumidity>b__0 (System.Int32
+        i) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:59
+        \r\n  at System.Linq.Enumerable+SelectIPartitionIterator`2[TSource,TResult].MoveNext
+        () [0x00048] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable+WhereEnumerableIterator`1[TSource].MoveNext
+        () [0x0004e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Collections.Generic.HashSet`1[T].UnionWith
+        (System.Collections.Generic.IEnumerable`1[T] other) [0x00026] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at System.Collections.Generic.HashSet`1[T]..ctor (System.Collections.Generic.IEnumerable`1[T]
+        collection, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0004c]
+        in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source, System.Collections.Generic.IEqualityComparer`1[T]
+        comparer) [0x0000e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at ImprovedBoardGen.CalculateHumidity (UnityEngine.GameObject[,] tiles)
+        [0x000bf] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:60
+        \r\n  at ImprovedBoardGen.CreateBoard (BoardStats bs) [0x00047] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:28
+        \r\n  at BoardInputReader.GenerateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardInputReader.cs:28
+        \r\n  at Board.CreateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\Board.cs:53
+        \r\n  at BasicBoardTest.SetupBoard () [0x00072] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:32
+        \r\n  at BasicBoardTest+<SetupBasicBoard>d__2.MoveNext () [0x00020] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:13
+        \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__15[T].MoveNext
+        () [0x00185] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:129 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -787,20 +703,35 @@ MonoBehaviour:
       uniqueId: Tests.dll/CultureTestSuite/[Tests][CultureTestSuite.TestSplitCulture]
       name: TestSplitCulture
       fullName: CultureTestSuite.TestSplitCulture
-      resultStatus: 1
-      duration: 0.0142713
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        clearing
+      resultStatus: 2
+      duration: 0.0102412
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object'
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
 '
-      stacktrace: 
+      stacktrace: "--SetUp\r\n  at Tile.GetNeighbor (Direction d) [0x00017] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\Tile.cs:49
+        \r\n  at ImprovedBoardGen+<>c__DisplayClass4_1.<CalculateHumidity>b__0 (System.Int32
+        i) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:59
+        \r\n  at System.Linq.Enumerable+SelectIPartitionIterator`2[TSource,TResult].MoveNext
+        () [0x00048] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable+WhereEnumerableIterator`1[TSource].MoveNext
+        () [0x0004e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Collections.Generic.HashSet`1[T].UnionWith
+        (System.Collections.Generic.IEnumerable`1[T] other) [0x00026] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at System.Collections.Generic.HashSet`1[T]..ctor (System.Collections.Generic.IEnumerable`1[T]
+        collection, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0004c]
+        in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source, System.Collections.Generic.IEqualityComparer`1[T]
+        comparer) [0x0000e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at ImprovedBoardGen.CalculateHumidity (UnityEngine.GameObject[,] tiles)
+        [0x000bf] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:60
+        \r\n  at ImprovedBoardGen.CreateBoard (BoardStats bs) [0x00047] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:28
+        \r\n  at BoardInputReader.GenerateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardInputReader.cs:28
+        \r\n  at Board.CreateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\Board.cs:53
+        \r\n  at BasicBoardTest.SetupBoard () [0x00072] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:32
+        \r\n  at BasicBoardTest+<SetupBasicBoard>d__2.MoveNext () [0x00020] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:13
+        \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__15[T].MoveNext
+        () [0x00185] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:129 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -814,7 +745,7 @@ MonoBehaviour:
       name: CurveTestSuite
       fullName: CurveTestSuite
       resultStatus: 1
-      duration: 0.0088722
+      duration: 0.0082367
       messages: 
       output: 
       stacktrace: 
@@ -830,7 +761,7 @@ MonoBehaviour:
       name: TestCompoundCurve
       fullName: CurveTestSuite.TestCompoundCurve
       resultStatus: 1
-      duration: 0.0015074
+      duration: 0.0022068
       messages: 
       output: 
       stacktrace: 
@@ -847,7 +778,7 @@ MonoBehaviour:
       name: TestGaussianCurve
       fullName: CurveTestSuite.TestGaussianCurve
       resultStatus: 1
-      duration: 0.0002866
+      duration: 0.0002743
       messages: 
       output: 
       stacktrace: 
@@ -864,7 +795,7 @@ MonoBehaviour:
       name: TestPowerCurve
       fullName: CurveTestSuite.TestPowerCurve
       resultStatus: 1
-      duration: 0.0002559
+      duration: 0.0001671
       messages: 
       output: 
       stacktrace: 
@@ -881,7 +812,7 @@ MonoBehaviour:
       name: TestSigmoidCurve
       fullName: CurveTestSuite.TestSigmoidCurve
       resultStatus: 1
-      duration: 0.0002109
+      duration: 0.0001545
       messages: 
       output: 
       stacktrace: 
@@ -897,9 +828,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][InfluenceActionTestSuite][suite]
       name: InfluenceActionTestSuite
       fullName: InfluenceActionTestSuite
-      resultStatus: 1
-      duration: 0.0286528
-      messages: 
+      resultStatus: 2
+      duration: 0.0223733
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -913,24 +844,35 @@ MonoBehaviour:
       uniqueId: Tests.dll/InfluenceActionTestSuite/[Tests][InfluenceActionTestSuite.CanInfluenceNeighborCulture]
       name: CanInfluenceNeighborCulture
       fullName: InfluenceActionTestSuite.CanInfluenceNeighborCulture
-      resultStatus: 1
-      duration: 0.0106209
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        1, 1
-
-        -1
-
-        clearing
+      resultStatus: 2
+      duration: 0.0063325
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object'
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
 '
-      stacktrace: 
+      stacktrace: "--SetUp\r\n  at Tile.GetNeighbor (Direction d) [0x00017] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\Tile.cs:49
+        \r\n  at ImprovedBoardGen+<>c__DisplayClass4_1.<CalculateHumidity>b__0 (System.Int32
+        i) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:59
+        \r\n  at System.Linq.Enumerable+SelectIPartitionIterator`2[TSource,TResult].MoveNext
+        () [0x00048] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable+WhereEnumerableIterator`1[TSource].MoveNext
+        () [0x0004e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Collections.Generic.HashSet`1[T].UnionWith
+        (System.Collections.Generic.IEnumerable`1[T] other) [0x00026] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at System.Collections.Generic.HashSet`1[T]..ctor (System.Collections.Generic.IEnumerable`1[T]
+        collection, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0004c]
+        in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source, System.Collections.Generic.IEqualityComparer`1[T]
+        comparer) [0x0000e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at ImprovedBoardGen.CalculateHumidity (UnityEngine.GameObject[,] tiles)
+        [0x000bf] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:60
+        \r\n  at ImprovedBoardGen.CreateBoard (BoardStats bs) [0x00047] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:28
+        \r\n  at BoardInputReader.GenerateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardInputReader.cs:28
+        \r\n  at Board.CreateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\Board.cs:53
+        \r\n  at BasicBoardTest.SetupBoard () [0x00072] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:32
+        \r\n  at BasicBoardTest+<SetupBasicBoard>d__2.MoveNext () [0x00020] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:13
+        \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__15[T].MoveNext
+        () [0x00185] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:129 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -943,24 +885,35 @@ MonoBehaviour:
       uniqueId: Tests.dll/InfluenceActionTestSuite/[Tests][InfluenceActionTestSuite.CanMergeIntoNewCultureIfClose]
       name: CanMergeIntoNewCultureIfClose
       fullName: InfluenceActionTestSuite.CanMergeIntoNewCultureIfClose
-      resultStatus: 1
-      duration: 0.0128746
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        1, 1
-
-        -1
-
-        clearing
+      resultStatus: 2
+      duration: 0.0102386
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object'
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
 '
-      stacktrace: 
+      stacktrace: "--SetUp\r\n  at Tile.GetNeighbor (Direction d) [0x00017] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\Tile.cs:49
+        \r\n  at ImprovedBoardGen+<>c__DisplayClass4_1.<CalculateHumidity>b__0 (System.Int32
+        i) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:59
+        \r\n  at System.Linq.Enumerable+SelectIPartitionIterator`2[TSource,TResult].MoveNext
+        () [0x00048] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable+WhereEnumerableIterator`1[TSource].MoveNext
+        () [0x0004e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Collections.Generic.HashSet`1[T].UnionWith
+        (System.Collections.Generic.IEnumerable`1[T] other) [0x00026] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at System.Collections.Generic.HashSet`1[T]..ctor (System.Collections.Generic.IEnumerable`1[T]
+        collection, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0004c]
+        in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source, System.Collections.Generic.IEqualityComparer`1[T]
+        comparer) [0x0000e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at ImprovedBoardGen.CalculateHumidity (UnityEngine.GameObject[,] tiles)
+        [0x000bf] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:60
+        \r\n  at ImprovedBoardGen.CreateBoard (BoardStats bs) [0x00047] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:28
+        \r\n  at BoardInputReader.GenerateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardInputReader.cs:28
+        \r\n  at Board.CreateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\Board.cs:53
+        \r\n  at BasicBoardTest.SetupBoard () [0x00072] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:32
+        \r\n  at BasicBoardTest+<SetupBasicBoard>d__2.MoveNext () [0x00020] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:13
+        \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__15[T].MoveNext
+        () [0x00185] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:129 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -973,9 +926,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][MergeActionTestSuite][suite]
       name: MergeActionTestSuite
       fullName: MergeActionTestSuite
-      resultStatus: 1
-      duration: 0.0634382
-      messages: 
+      resultStatus: 2
+      duration: 0.0430808
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -989,24 +942,35 @@ MonoBehaviour:
       uniqueId: Tests.dll/MergeActionTestSuite/[Tests][MergeActionTestSuite.CanAddNewCultureToTile]
       name: CanAddNewCultureToTile
       fullName: MergeActionTestSuite.CanAddNewCultureToTile
-      resultStatus: 1
-      duration: 0.0098639
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        1, 1
-
-        -1
-
-        clearing
+      resultStatus: 2
+      duration: 0.0077601
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object'
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
 '
-      stacktrace: 
+      stacktrace: "--SetUp\r\n  at Tile.GetNeighbor (Direction d) [0x00017] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\Tile.cs:49
+        \r\n  at ImprovedBoardGen+<>c__DisplayClass4_1.<CalculateHumidity>b__0 (System.Int32
+        i) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:59
+        \r\n  at System.Linq.Enumerable+SelectIPartitionIterator`2[TSource,TResult].MoveNext
+        () [0x00048] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable+WhereEnumerableIterator`1[TSource].MoveNext
+        () [0x0004e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Collections.Generic.HashSet`1[T].UnionWith
+        (System.Collections.Generic.IEnumerable`1[T] other) [0x00026] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at System.Collections.Generic.HashSet`1[T]..ctor (System.Collections.Generic.IEnumerable`1[T]
+        collection, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0004c]
+        in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source, System.Collections.Generic.IEqualityComparer`1[T]
+        comparer) [0x0000e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at ImprovedBoardGen.CalculateHumidity (UnityEngine.GameObject[,] tiles)
+        [0x000bf] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:60
+        \r\n  at ImprovedBoardGen.CreateBoard (BoardStats bs) [0x00047] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:28
+        \r\n  at BoardInputReader.GenerateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardInputReader.cs:28
+        \r\n  at Board.CreateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\Board.cs:53
+        \r\n  at BasicBoardTest.SetupBoard () [0x00072] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:32
+        \r\n  at BasicBoardTest+<SetupBasicBoard>d__2.MoveNext () [0x00020] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:13
+        \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__15[T].MoveNext
+        () [0x00185] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:129 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1019,31 +983,35 @@ MonoBehaviour:
       uniqueId: Tests.dll/MergeActionTestSuite/[Tests][MergeActionTestSuite.CanCreateAsNewCulture]
       name: CanCreateAsNewCulture
       fullName: MergeActionTestSuite.CanCreateAsNewCulture
-      resultStatus: 1
-      duration: 0.0192865
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        Culture has tileInfo,
-        not changing. Unless this is a test it may be a bug.
-
-        Culture has
-        tileInfo, not changing. Unless this is a test it may be a bug.
-
-        1,
-        1
-
-        -1
-
-        clearing
+      resultStatus: 2
+      duration: 0.0102314
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object'
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
 '
-      stacktrace: 
+      stacktrace: "--SetUp\r\n  at Tile.GetNeighbor (Direction d) [0x00017] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\Tile.cs:49
+        \r\n  at ImprovedBoardGen+<>c__DisplayClass4_1.<CalculateHumidity>b__0 (System.Int32
+        i) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:59
+        \r\n  at System.Linq.Enumerable+SelectIPartitionIterator`2[TSource,TResult].MoveNext
+        () [0x00048] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable+WhereEnumerableIterator`1[TSource].MoveNext
+        () [0x0004e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Collections.Generic.HashSet`1[T].UnionWith
+        (System.Collections.Generic.IEnumerable`1[T] other) [0x00026] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at System.Collections.Generic.HashSet`1[T]..ctor (System.Collections.Generic.IEnumerable`1[T]
+        collection, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0004c]
+        in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source, System.Collections.Generic.IEqualityComparer`1[T]
+        comparer) [0x0000e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at ImprovedBoardGen.CalculateHumidity (UnityEngine.GameObject[,] tiles)
+        [0x000bf] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:60
+        \r\n  at ImprovedBoardGen.CreateBoard (BoardStats bs) [0x00047] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:28
+        \r\n  at BoardInputReader.GenerateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardInputReader.cs:28
+        \r\n  at Board.CreateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\Board.cs:53
+        \r\n  at BasicBoardTest.SetupBoard () [0x00072] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:32
+        \r\n  at BasicBoardTest+<SetupBasicBoard>d__2.MoveNext () [0x00020] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:13
+        \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__15[T].MoveNext
+        () [0x00185] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:129 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1056,31 +1024,35 @@ MonoBehaviour:
       uniqueId: Tests.dll/MergeActionTestSuite/[Tests][MergeActionTestSuite.CanMergeCultures]
       name: CanMergeCultures
       fullName: MergeActionTestSuite.CanMergeCultures
-      resultStatus: 1
-      duration: 0.0131095
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        Culture has tileInfo,
-        not changing. Unless this is a test it may be a bug.
-
-        Culture has
-        tileInfo, not changing. Unless this is a test it may be a bug.
-
-        1,
-        1
-
-        -1
-
-        clearing
+      resultStatus: 2
+      duration: 0.0088443
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object'
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
 '
-      stacktrace: 
+      stacktrace: "--SetUp\r\n  at Tile.GetNeighbor (Direction d) [0x00017] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\Tile.cs:49
+        \r\n  at ImprovedBoardGen+<>c__DisplayClass4_1.<CalculateHumidity>b__0 (System.Int32
+        i) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:59
+        \r\n  at System.Linq.Enumerable+SelectIPartitionIterator`2[TSource,TResult].MoveNext
+        () [0x00048] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable+WhereEnumerableIterator`1[TSource].MoveNext
+        () [0x0004e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Collections.Generic.HashSet`1[T].UnionWith
+        (System.Collections.Generic.IEnumerable`1[T] other) [0x00026] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at System.Collections.Generic.HashSet`1[T]..ctor (System.Collections.Generic.IEnumerable`1[T]
+        collection, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0004c]
+        in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source, System.Collections.Generic.IEqualityComparer`1[T]
+        comparer) [0x0000e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at ImprovedBoardGen.CalculateHumidity (UnityEngine.GameObject[,] tiles)
+        [0x000bf] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:60
+        \r\n  at ImprovedBoardGen.CreateBoard (BoardStats bs) [0x00047] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:28
+        \r\n  at BoardInputReader.GenerateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardInputReader.cs:28
+        \r\n  at Board.CreateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\Board.cs:53
+        \r\n  at BasicBoardTest.SetupBoard () [0x00072] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:32
+        \r\n  at BasicBoardTest+<SetupBasicBoard>d__2.MoveNext () [0x00020] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:13
+        \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__15[T].MoveNext
+        () [0x00185] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:129 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1093,34 +1065,35 @@ MonoBehaviour:
       uniqueId: Tests.dll/MergeActionTestSuite/[Tests][MergeActionTestSuite.CanMergeWithParentCulture]
       name: CanMergeWithParentCulture
       fullName: MergeActionTestSuite.CanMergeWithParentCulture
-      resultStatus: 1
-      duration: 0.0132325
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        Culture has tileInfo,
-        not changing. Unless this is a test it may be a bug.
-
-        Culture has
-        tileInfo, not changing. Unless this is a test it may be a bug.
-
-        Culture
-        has tileInfo, not changing. Unless this is a test it may be a bug.
-
-        1,
-        1
-
-        -1
-
-        clearing
+      resultStatus: 2
+      duration: 0.0080936
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object'
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
 '
-      stacktrace: 
+      stacktrace: "--SetUp\r\n  at Tile.GetNeighbor (Direction d) [0x00017] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\Tile.cs:49
+        \r\n  at ImprovedBoardGen+<>c__DisplayClass4_1.<CalculateHumidity>b__0 (System.Int32
+        i) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:59
+        \r\n  at System.Linq.Enumerable+SelectIPartitionIterator`2[TSource,TResult].MoveNext
+        () [0x00048] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable+WhereEnumerableIterator`1[TSource].MoveNext
+        () [0x0004e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Collections.Generic.HashSet`1[T].UnionWith
+        (System.Collections.Generic.IEnumerable`1[T] other) [0x00026] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at System.Collections.Generic.HashSet`1[T]..ctor (System.Collections.Generic.IEnumerable`1[T]
+        collection, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0004c]
+        in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source, System.Collections.Generic.IEqualityComparer`1[T]
+        comparer) [0x0000e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at ImprovedBoardGen.CalculateHumidity (UnityEngine.GameObject[,] tiles)
+        [0x000bf] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:60
+        \r\n  at ImprovedBoardGen.CreateBoard (BoardStats bs) [0x00047] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:28
+        \r\n  at BoardInputReader.GenerateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardInputReader.cs:28
+        \r\n  at Board.CreateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\Board.cs:53
+        \r\n  at BasicBoardTest.SetupBoard () [0x00072] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:32
+        \r\n  at BasicBoardTest+<SetupBasicBoard>d__2.MoveNext () [0x00020] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:13
+        \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__15[T].MoveNext
+        () [0x00185] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:129 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1133,9 +1106,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][MoveActionTestSuite][suite]
       name: MoveActionTestSuite
       fullName: MoveActionTestSuite
-      resultStatus: 1
-      duration: 0.4651964
-      messages: 
+      resultStatus: 2
+      duration: 0.0277644
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1149,24 +1122,35 @@ MonoBehaviour:
       uniqueId: Tests.dll/MoveActionTestSuite/[Tests][MoveActionTestSuite.MoveTileActionTest]
       name: MoveTileActionTest
       fullName: MoveActionTestSuite.MoveTileActionTest
-      resultStatus: 1
-      duration: 0.2144535
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        1, 1
-
-        -1
-
-        clearing
+      resultStatus: 2
+      duration: 0.0061233
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object'
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
 '
-      stacktrace: 
+      stacktrace: "--SetUp\r\n  at Tile.GetNeighbor (Direction d) [0x00017] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\Tile.cs:49
+        \r\n  at ImprovedBoardGen+<>c__DisplayClass4_1.<CalculateHumidity>b__0 (System.Int32
+        i) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:59
+        \r\n  at System.Linq.Enumerable+SelectIPartitionIterator`2[TSource,TResult].MoveNext
+        () [0x00048] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable+WhereEnumerableIterator`1[TSource].MoveNext
+        () [0x0004e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Collections.Generic.HashSet`1[T].UnionWith
+        (System.Collections.Generic.IEnumerable`1[T] other) [0x00026] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at System.Collections.Generic.HashSet`1[T]..ctor (System.Collections.Generic.IEnumerable`1[T]
+        collection, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0004c]
+        in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source, System.Collections.Generic.IEqualityComparer`1[T]
+        comparer) [0x0000e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at ImprovedBoardGen.CalculateHumidity (UnityEngine.GameObject[,] tiles)
+        [0x000bf] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:60
+        \r\n  at ImprovedBoardGen.CreateBoard (BoardStats bs) [0x00047] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:28
+        \r\n  at BoardInputReader.GenerateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardInputReader.cs:28
+        \r\n  at Board.CreateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\Board.cs:53
+        \r\n  at BasicBoardTest.SetupBoard () [0x00072] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:32
+        \r\n  at BasicBoardTest+<SetupBasicBoard>d__2.MoveNext () [0x00020] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:13
+        \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__15[T].MoveNext
+        () [0x00185] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:129 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1179,24 +1163,35 @@ MonoBehaviour:
       uniqueId: Tests.dll/MoveActionTestSuite/[Tests][MoveActionTestSuite.MoveTileActionWhenLargeTest]
       name: MoveTileActionWhenLargeTest
       fullName: MoveActionTestSuite.MoveTileActionWhenLargeTest
-      resultStatus: 1
-      duration: 0.1198382
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        6, 1
-
-        -6
-
-        clearing
+      resultStatus: 2
+      duration: 0.0079726
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object'
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
 '
-      stacktrace: 
+      stacktrace: "--SetUp\r\n  at Tile.GetNeighbor (Direction d) [0x00017] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\Tile.cs:49
+        \r\n  at ImprovedBoardGen+<>c__DisplayClass4_1.<CalculateHumidity>b__0 (System.Int32
+        i) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:59
+        \r\n  at System.Linq.Enumerable+SelectIPartitionIterator`2[TSource,TResult].MoveNext
+        () [0x00048] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable+WhereEnumerableIterator`1[TSource].MoveNext
+        () [0x0004e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Collections.Generic.HashSet`1[T].UnionWith
+        (System.Collections.Generic.IEnumerable`1[T] other) [0x00026] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at System.Collections.Generic.HashSet`1[T]..ctor (System.Collections.Generic.IEnumerable`1[T]
+        collection, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0004c]
+        in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source, System.Collections.Generic.IEqualityComparer`1[T]
+        comparer) [0x0000e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at ImprovedBoardGen.CalculateHumidity (UnityEngine.GameObject[,] tiles)
+        [0x000bf] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:60
+        \r\n  at ImprovedBoardGen.CreateBoard (BoardStats bs) [0x00047] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:28
+        \r\n  at BoardInputReader.GenerateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardInputReader.cs:28
+        \r\n  at Board.CreateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\Board.cs:53
+        \r\n  at BasicBoardTest.SetupBoard () [0x00072] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:32
+        \r\n  at BasicBoardTest+<SetupBasicBoard>d__2.MoveNext () [0x00020] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:13
+        \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__15[T].MoveNext
+        () [0x00185] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:129 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1209,24 +1204,35 @@ MonoBehaviour:
       uniqueId: Tests.dll/MoveActionTestSuite/[Tests][MoveActionTestSuite.RepelledActionTest]
       name: RepelledActionTest
       fullName: MoveActionTestSuite.RepelledActionTest
-      resultStatus: 1
-      duration: 0.1171557
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        1, 1
-
-        -1
-
-        clearing
+      resultStatus: 2
+      duration: 0.0083397
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object'
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
 '
-      stacktrace: 
+      stacktrace: "--SetUp\r\n  at Tile.GetNeighbor (Direction d) [0x00017] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\Tile.cs:49
+        \r\n  at ImprovedBoardGen+<>c__DisplayClass4_1.<CalculateHumidity>b__0 (System.Int32
+        i) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:59
+        \r\n  at System.Linq.Enumerable+SelectIPartitionIterator`2[TSource,TResult].MoveNext
+        () [0x00048] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable+WhereEnumerableIterator`1[TSource].MoveNext
+        () [0x0004e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Collections.Generic.HashSet`1[T].UnionWith
+        (System.Collections.Generic.IEnumerable`1[T] other) [0x00026] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at System.Collections.Generic.HashSet`1[T]..ctor (System.Collections.Generic.IEnumerable`1[T]
+        collection, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0004c]
+        in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source, System.Collections.Generic.IEqualityComparer`1[T]
+        comparer) [0x0000e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at ImprovedBoardGen.CalculateHumidity (UnityEngine.GameObject[,] tiles)
+        [0x000bf] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:60
+        \r\n  at ImprovedBoardGen.CreateBoard (BoardStats bs) [0x00047] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:28
+        \r\n  at BoardInputReader.GenerateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardInputReader.cs:28
+        \r\n  at Board.CreateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\Board.cs:53
+        \r\n  at BasicBoardTest.SetupBoard () [0x00072] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:32
+        \r\n  at BasicBoardTest+<SetupBasicBoard>d__2.MoveNext () [0x00020] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:13
+        \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__15[T].MoveNext
+        () [0x00185] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:129 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1240,7 +1246,7 @@ MonoBehaviour:
       name: OverpopulationActionTestSuite
       fullName: OverpopulationActionTestSuite
       resultStatus: 2
-      duration: 0.1302531
+      duration: 0.0320729
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -1255,29 +1261,35 @@ MonoBehaviour:
       uniqueId: Tests.dll/OverpopulationActionTestSuite/[Tests][OverpopulationActionTestSuite.CanBecomeOverPopulated]
       name: CanBecomeOverPopulated
       fullName: OverpopulationActionTestSuite.CanBecomeOverPopulated
-      resultStatus: 1
-      duration: 0.0646727
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        101, 1
-
-        -101
-
-        101,
-        1
-
-        -101
-
-        clearing
+      resultStatus: 2
+      duration: 0.0080711
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object'
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
 '
-      stacktrace: 
+      stacktrace: "--SetUp\r\n  at Tile.GetNeighbor (Direction d) [0x00017] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\Tile.cs:49
+        \r\n  at ImprovedBoardGen+<>c__DisplayClass4_1.<CalculateHumidity>b__0 (System.Int32
+        i) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:59
+        \r\n  at System.Linq.Enumerable+SelectIPartitionIterator`2[TSource,TResult].MoveNext
+        () [0x00048] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable+WhereEnumerableIterator`1[TSource].MoveNext
+        () [0x0004e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Collections.Generic.HashSet`1[T].UnionWith
+        (System.Collections.Generic.IEnumerable`1[T] other) [0x00026] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at System.Collections.Generic.HashSet`1[T]..ctor (System.Collections.Generic.IEnumerable`1[T]
+        collection, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0004c]
+        in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source, System.Collections.Generic.IEqualityComparer`1[T]
+        comparer) [0x0000e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at ImprovedBoardGen.CalculateHumidity (UnityEngine.GameObject[,] tiles)
+        [0x000bf] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:60
+        \r\n  at ImprovedBoardGen.CreateBoard (BoardStats bs) [0x00047] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:28
+        \r\n  at BoardInputReader.GenerateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardInputReader.cs:28
+        \r\n  at Board.CreateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\Board.cs:53
+        \r\n  at BasicBoardTest.SetupBoard () [0x00072] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:32
+        \r\n  at BasicBoardTest+<SetupBasicBoard>d__2.MoveNext () [0x00020] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:13
+        \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__15[T].MoveNext
+        () [0x00185] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:129 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1290,24 +1302,35 @@ MonoBehaviour:
       uniqueId: Tests.dll/OverpopulationActionTestSuite/[Tests][OverpopulationActionTestSuite.TestPopulationDrop]
       name: TestPopulationDrop
       fullName: OverpopulationActionTestSuite.TestPopulationDrop
-      resultStatus: 1
-      duration: 0.0178217
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        101, 1
-
-        -101
-
-        clearing
+      resultStatus: 2
+      duration: 0.0086574
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object'
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
 '
-      stacktrace: 
+      stacktrace: "--SetUp\r\n  at Tile.GetNeighbor (Direction d) [0x00017] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\Tile.cs:49
+        \r\n  at ImprovedBoardGen+<>c__DisplayClass4_1.<CalculateHumidity>b__0 (System.Int32
+        i) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:59
+        \r\n  at System.Linq.Enumerable+SelectIPartitionIterator`2[TSource,TResult].MoveNext
+        () [0x00048] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable+WhereEnumerableIterator`1[TSource].MoveNext
+        () [0x0004e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Collections.Generic.HashSet`1[T].UnionWith
+        (System.Collections.Generic.IEnumerable`1[T] other) [0x00026] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at System.Collections.Generic.HashSet`1[T]..ctor (System.Collections.Generic.IEnumerable`1[T]
+        collection, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0004c]
+        in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source, System.Collections.Generic.IEqualityComparer`1[T]
+        comparer) [0x0000e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at ImprovedBoardGen.CalculateHumidity (UnityEngine.GameObject[,] tiles)
+        [0x000bf] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:60
+        \r\n  at ImprovedBoardGen.CreateBoard (BoardStats bs) [0x00047] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:28
+        \r\n  at BoardInputReader.GenerateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardInputReader.cs:28
+        \r\n  at Board.CreateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\Board.cs:53
+        \r\n  at BasicBoardTest.SetupBoard () [0x00072] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:32
+        \r\n  at BasicBoardTest+<SetupBasicBoard>d__2.MoveNext () [0x00020] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:13
+        \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__15[T].MoveNext
+        () [0x00185] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:129 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1321,31 +1344,34 @@ MonoBehaviour:
       name: TestPopulationMoveAndDrop
       fullName: OverpopulationActionTestSuite.TestPopulationMoveAndDrop
       resultStatus: 2
-      duration: 0.0340039
-      messages: "  Culture did not split!\r\n  Expected: True\r\n  But was:  False\r\n"
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        101, 1
-
-        -101
-
-        101,
-        1
-
-        -101
-
-        clearing
+      duration: 0.0096389
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object'
+      output: 'Setup Complete. Culture name is rthqqn (Culture)
 
 '
-      stacktrace: 'at OverpopulationActionTestSuite.TestPopulationMoveAndDrop ()
-        [0x00031] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\OverpopulationActionTestSuite.cs:55
-
-'
+      stacktrace: "--SetUp\r\n  at Tile.GetNeighbor (Direction d) [0x00017] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\Tile.cs:49
+        \r\n  at ImprovedBoardGen+<>c__DisplayClass4_1.<CalculateHumidity>b__0 (System.Int32
+        i) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:59
+        \r\n  at System.Linq.Enumerable+SelectIPartitionIterator`2[TSource,TResult].MoveNext
+        () [0x00048] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable+WhereEnumerableIterator`1[TSource].MoveNext
+        () [0x0004e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Collections.Generic.HashSet`1[T].UnionWith
+        (System.Collections.Generic.IEnumerable`1[T] other) [0x00026] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at System.Collections.Generic.HashSet`1[T]..ctor (System.Collections.Generic.IEnumerable`1[T]
+        collection, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0004c]
+        in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source, System.Collections.Generic.IEqualityComparer`1[T]
+        comparer) [0x0000e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at ImprovedBoardGen.CalculateHumidity (UnityEngine.GameObject[,] tiles)
+        [0x000bf] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:60
+        \r\n  at ImprovedBoardGen.CreateBoard (BoardStats bs) [0x00047] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:28
+        \r\n  at BoardInputReader.GenerateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardInputReader.cs:28
+        \r\n  at Board.CreateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\Board.cs:53
+        \r\n  at BasicBoardTest.SetupBoard () [0x00072] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:32
+        \r\n  at BasicBoardTest+<SetupBasicBoard>d__2.MoveNext () [0x00020] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:13
+        \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__15[T].MoveNext
+        () [0x00185] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:129 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1358,9 +1384,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
       name: TileFoodTestSuite
       fullName: TileFoodTestSuite
-      resultStatus: 1
-      duration: 0.064869
-      messages: 
+      resultStatus: 2
+      duration: 0.0461847
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1374,17 +1400,33 @@ MonoBehaviour:
       uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanCalculateProperFoodRateDesert]
       name: CanCalculateProperFoodRateDesert
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateDesert
-      resultStatus: 1
-      duration: 0.0064785
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        clearing
-
-'
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.0043138
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object'
+      output: 
+      stacktrace: "--SetUp\r\n  at Tile.GetNeighbor (Direction d) [0x00017] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\Tile.cs:49
+        \r\n  at ImprovedBoardGen+<>c__DisplayClass4_1.<CalculateHumidity>b__0 (System.Int32
+        i) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:59
+        \r\n  at System.Linq.Enumerable+SelectIPartitionIterator`2[TSource,TResult].MoveNext
+        () [0x00048] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable+WhereEnumerableIterator`1[TSource].MoveNext
+        () [0x0004e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Collections.Generic.HashSet`1[T].UnionWith
+        (System.Collections.Generic.IEnumerable`1[T] other) [0x00026] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at System.Collections.Generic.HashSet`1[T]..ctor (System.Collections.Generic.IEnumerable`1[T]
+        collection, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0004c]
+        in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source, System.Collections.Generic.IEqualityComparer`1[T]
+        comparer) [0x0000e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at ImprovedBoardGen.CalculateHumidity (UnityEngine.GameObject[,] tiles)
+        [0x000bf] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:60
+        \r\n  at ImprovedBoardGen.CreateBoard (BoardStats bs) [0x00047] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:28
+        \r\n  at BoardInputReader.GenerateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardInputReader.cs:28
+        \r\n  at Board.CreateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\Board.cs:53
+        \r\n  at BasicBoardTest.SetupBoard () [0x00072] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:32
+        \r\n  at BasicBoardTest+<SetupBasicBoard>d__2.MoveNext () [0x00020] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:13
+        \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__15[T].MoveNext
+        () [0x00185] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:129 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1397,17 +1439,33 @@ MonoBehaviour:
       uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanCalculateProperFoodRateRainforest]
       name: CanCalculateProperFoodRateRainforest
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateRainforest
-      resultStatus: 1
-      duration: 0.0075962
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        clearing
-
-'
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.0061994
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object'
+      output: 
+      stacktrace: "--SetUp\r\n  at Tile.GetNeighbor (Direction d) [0x00017] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\Tile.cs:49
+        \r\n  at ImprovedBoardGen+<>c__DisplayClass4_1.<CalculateHumidity>b__0 (System.Int32
+        i) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:59
+        \r\n  at System.Linq.Enumerable+SelectIPartitionIterator`2[TSource,TResult].MoveNext
+        () [0x00048] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable+WhereEnumerableIterator`1[TSource].MoveNext
+        () [0x0004e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Collections.Generic.HashSet`1[T].UnionWith
+        (System.Collections.Generic.IEnumerable`1[T] other) [0x00026] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at System.Collections.Generic.HashSet`1[T]..ctor (System.Collections.Generic.IEnumerable`1[T]
+        collection, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0004c]
+        in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source, System.Collections.Generic.IEqualityComparer`1[T]
+        comparer) [0x0000e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at ImprovedBoardGen.CalculateHumidity (UnityEngine.GameObject[,] tiles)
+        [0x000bf] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:60
+        \r\n  at ImprovedBoardGen.CreateBoard (BoardStats bs) [0x00047] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:28
+        \r\n  at BoardInputReader.GenerateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardInputReader.cs:28
+        \r\n  at Board.CreateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\Board.cs:53
+        \r\n  at BasicBoardTest.SetupBoard () [0x00072] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:32
+        \r\n  at BasicBoardTest+<SetupBasicBoard>d__2.MoveNext () [0x00020] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:13
+        \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__15[T].MoveNext
+        () [0x00185] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:129 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1420,17 +1478,33 @@ MonoBehaviour:
       uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanCalculateProperFoodRateTundra]
       name: CanCalculateProperFoodRateTundra
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateTundra
-      resultStatus: 1
-      duration: 0.0087079
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        clearing
-
-'
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.0061545
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object'
+      output: 
+      stacktrace: "--SetUp\r\n  at Tile.GetNeighbor (Direction d) [0x00017] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\Tile.cs:49
+        \r\n  at ImprovedBoardGen+<>c__DisplayClass4_1.<CalculateHumidity>b__0 (System.Int32
+        i) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:59
+        \r\n  at System.Linq.Enumerable+SelectIPartitionIterator`2[TSource,TResult].MoveNext
+        () [0x00048] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable+WhereEnumerableIterator`1[TSource].MoveNext
+        () [0x0004e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Collections.Generic.HashSet`1[T].UnionWith
+        (System.Collections.Generic.IEnumerable`1[T] other) [0x00026] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at System.Collections.Generic.HashSet`1[T]..ctor (System.Collections.Generic.IEnumerable`1[T]
+        collection, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0004c]
+        in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source, System.Collections.Generic.IEqualityComparer`1[T]
+        comparer) [0x0000e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at ImprovedBoardGen.CalculateHumidity (UnityEngine.GameObject[,] tiles)
+        [0x000bf] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:60
+        \r\n  at ImprovedBoardGen.CreateBoard (BoardStats bs) [0x00047] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:28
+        \r\n  at BoardInputReader.GenerateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardInputReader.cs:28
+        \r\n  at Board.CreateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\Board.cs:53
+        \r\n  at BasicBoardTest.SetupBoard () [0x00072] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:32
+        \r\n  at BasicBoardTest+<SetupBasicBoard>d__2.MoveNext () [0x00020] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:13
+        \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__15[T].MoveNext
+        () [0x00185] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:129 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1443,17 +1517,33 @@ MonoBehaviour:
       uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanIncreaseFoodPerTick]
       name: CanIncreaseFoodPerTick
       fullName: TileFoodTestSuite.CanIncreaseFoodPerTick
-      resultStatus: 1
-      duration: 0.012191
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        clearing
-
-'
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.0063212
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object'
+      output: 
+      stacktrace: "--SetUp\r\n  at Tile.GetNeighbor (Direction d) [0x00017] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\Tile.cs:49
+        \r\n  at ImprovedBoardGen+<>c__DisplayClass4_1.<CalculateHumidity>b__0 (System.Int32
+        i) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:59
+        \r\n  at System.Linq.Enumerable+SelectIPartitionIterator`2[TSource,TResult].MoveNext
+        () [0x00048] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable+WhereEnumerableIterator`1[TSource].MoveNext
+        () [0x0004e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Collections.Generic.HashSet`1[T].UnionWith
+        (System.Collections.Generic.IEnumerable`1[T] other) [0x00026] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at System.Collections.Generic.HashSet`1[T]..ctor (System.Collections.Generic.IEnumerable`1[T]
+        collection, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0004c]
+        in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source, System.Collections.Generic.IEqualityComparer`1[T]
+        comparer) [0x0000e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at ImprovedBoardGen.CalculateHumidity (UnityEngine.GameObject[,] tiles)
+        [0x000bf] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:60
+        \r\n  at ImprovedBoardGen.CreateBoard (BoardStats bs) [0x00047] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:28
+        \r\n  at BoardInputReader.GenerateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardInputReader.cs:28
+        \r\n  at Board.CreateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\Board.cs:53
+        \r\n  at BasicBoardTest.SetupBoard () [0x00072] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:32
+        \r\n  at BasicBoardTest+<SetupBasicBoard>d__2.MoveNext () [0x00020] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:13
+        \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__15[T].MoveNext
+        () [0x00185] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:129 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1466,17 +1556,33 @@ MonoBehaviour:
       uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanPreventAdditionalFood]
       name: CanPreventAdditionalFood
       fullName: TileFoodTestSuite.CanPreventAdditionalFood
-      resultStatus: 1
-      duration: 0.01173
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        clearing
-
-'
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.0100634
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object'
+      output: 
+      stacktrace: "--SetUp\r\n  at Tile.GetNeighbor (Direction d) [0x00017] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\Tile.cs:49
+        \r\n  at ImprovedBoardGen+<>c__DisplayClass4_1.<CalculateHumidity>b__0 (System.Int32
+        i) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:59
+        \r\n  at System.Linq.Enumerable+SelectIPartitionIterator`2[TSource,TResult].MoveNext
+        () [0x00048] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable+WhereEnumerableIterator`1[TSource].MoveNext
+        () [0x0004e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Collections.Generic.HashSet`1[T].UnionWith
+        (System.Collections.Generic.IEnumerable`1[T] other) [0x00026] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at System.Collections.Generic.HashSet`1[T]..ctor (System.Collections.Generic.IEnumerable`1[T]
+        collection, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0004c]
+        in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source, System.Collections.Generic.IEqualityComparer`1[T]
+        comparer) [0x0000e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at ImprovedBoardGen.CalculateHumidity (UnityEngine.GameObject[,] tiles)
+        [0x000bf] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:60
+        \r\n  at ImprovedBoardGen.CreateBoard (BoardStats bs) [0x00047] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:28
+        \r\n  at BoardInputReader.GenerateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardInputReader.cs:28
+        \r\n  at Board.CreateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\Board.cs:53
+        \r\n  at BasicBoardTest.SetupBoard () [0x00072] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:32
+        \r\n  at BasicBoardTest+<SetupBasicBoard>d__2.MoveNext () [0x00020] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:13
+        \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__15[T].MoveNext
+        () [0x00185] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:129 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1489,17 +1595,33 @@ MonoBehaviour:
       uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanSetFoodToMaxAtStart]
       name: CanSetFoodToMaxAtStart
       fullName: TileFoodTestSuite.CanSetFoodToMaxAtStart
-      resultStatus: 1
-      duration: 0.011627
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        clearing
-
-'
-      stacktrace: 
+      resultStatus: 2
+      duration: 0.0065976
+      messages: 'SetUp : System.NullReferenceException : Object reference not set
+        to an instance of an object'
+      output: 
+      stacktrace: "--SetUp\r\n  at Tile.GetNeighbor (Direction d) [0x00017] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\Tile.cs:49
+        \r\n  at ImprovedBoardGen+<>c__DisplayClass4_1.<CalculateHumidity>b__0 (System.Int32
+        i) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:59
+        \r\n  at System.Linq.Enumerable+SelectIPartitionIterator`2[TSource,TResult].MoveNext
+        () [0x00048] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable+WhereEnumerableIterator`1[TSource].MoveNext
+        () [0x0004e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Collections.Generic.HashSet`1[T].UnionWith
+        (System.Collections.Generic.IEnumerable`1[T] other) [0x00026] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at System.Collections.Generic.HashSet`1[T]..ctor (System.Collections.Generic.IEnumerable`1[T]
+        collection, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0004c]
+        in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source, System.Collections.Generic.IEqualityComparer`1[T]
+        comparer) [0x0000e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+        (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+        \r\n  at ImprovedBoardGen.CalculateHumidity (UnityEngine.GameObject[,] tiles)
+        [0x000bf] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:60
+        \r\n  at ImprovedBoardGen.CreateBoard (BoardStats bs) [0x00047] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:28
+        \r\n  at BoardInputReader.GenerateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardInputReader.cs:28
+        \r\n  at Board.CreateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\Board.cs:53
+        \r\n  at BasicBoardTest.SetupBoard () [0x00072] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:32
+        \r\n  at BasicBoardTest+<SetupBasicBoard>d__2.MoveNext () [0x00020] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:13
+        \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__15[T].MoveNext
+        () [0x00185] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:129 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1508,17 +1630,58 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1029
       parentUniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
-    m_ResultText: 'OverpopulationActionTestSuite (0.130s)
-
-      ---
-
-      One or
-      more child tests had errors'
-    m_ResultStacktrace: 
+    m_ResultText: "CanCollectFoodFromTile (0.030s)\n---\nSetUp : System.NullReferenceException
+      : Object reference not set to an instance of an object\n---\n--SetUp\r\n  at
+      Tile.GetNeighbor (Direction d) [0x00017] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\Tile.cs:49
+      \r\n  at ImprovedBoardGen+<>c__DisplayClass4_1.<CalculateHumidity>b__0 (System.Int32
+      i) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:59
+      \r\n  at System.Linq.Enumerable+SelectIPartitionIterator`2[TSource,TResult].MoveNext
+      () [0x00048] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable+WhereEnumerableIterator`1[TSource].MoveNext
+      () [0x0004e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Collections.Generic.HashSet`1[T].UnionWith
+      (System.Collections.Generic.IEnumerable`1[T] other) [0x00026] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+      \r\n  at System.Collections.Generic.HashSet`1[T]..ctor (System.Collections.Generic.IEnumerable`1[T]
+      collection, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0004c]
+      in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+      (System.Collections.Generic.IEnumerable`1[T] source, System.Collections.Generic.IEqualityComparer`1[T]
+      comparer) [0x0000e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+      (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+      \r\n  at ImprovedBoardGen.CalculateHumidity (UnityEngine.GameObject[,] tiles)
+      [0x000bf] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:60
+      \r\n  at ImprovedBoardGen.CreateBoard (BoardStats bs) [0x00047] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:28
+      \r\n  at BoardInputReader.GenerateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardInputReader.cs:28
+      \r\n  at Board.CreateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\Board.cs:53
+      \r\n  at BasicBoardTest.SetupBoard () [0x00072] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:32
+      \r\n  at BasicBoardTest+<SetupBasicBoard>d__2.MoveNext () [0x00020] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:13
+      \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__15[T].MoveNext
+      () [0x00185] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:129\n---\nSetup
+      Complete. Culture name is rthqqn (Culture)"
+    m_ResultStacktrace: "--SetUp\r\n  at Tile.GetNeighbor (Direction d) [0x00017]
+      in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\Tile.cs:49
+      \r\n  at ImprovedBoardGen+<>c__DisplayClass4_1.<CalculateHumidity>b__0 (System.Int32
+      i) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:59
+      \r\n  at System.Linq.Enumerable+SelectIPartitionIterator`2[TSource,TResult].MoveNext
+      () [0x00048] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable+WhereEnumerableIterator`1[TSource].MoveNext
+      () [0x0004e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Collections.Generic.HashSet`1[T].UnionWith
+      (System.Collections.Generic.IEnumerable`1[T] other) [0x00026] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+      \r\n  at System.Collections.Generic.HashSet`1[T]..ctor (System.Collections.Generic.IEnumerable`1[T]
+      collection, System.Collections.Generic.IEqualityComparer`1[T] comparer) [0x0004c]
+      in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+      (System.Collections.Generic.IEnumerable`1[T] source, System.Collections.Generic.IEqualityComparer`1[T]
+      comparer) [0x0000e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at System.Linq.Enumerable.ToHashSet[TSource]
+      (System.Collections.Generic.IEnumerable`1[T] source) [0x00000] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
+      \r\n  at ImprovedBoardGen.CalculateHumidity (UnityEngine.GameObject[,] tiles)
+      [0x000bf] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:60
+      \r\n  at ImprovedBoardGen.CreateBoard (BoardStats bs) [0x00047] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardGenAlgorithms\\ImprovedBoardGen.cs:28
+      \r\n  at BoardInputReader.GenerateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\BoardInputReader.cs:28
+      \r\n  at Board.CreateBoard () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Board\\Board.cs:53
+      \r\n  at BasicBoardTest.SetupBoard () [0x00072] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:32
+      \r\n  at BasicBoardTest+<SetupBasicBoard>d__2.MoveNext () [0x00020] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\BasicBoardTest.cs:13
+      \r\n  at UnityEngine.TestTools.BeforeAfterTestCommandBase`1+<ExecuteEnumerable>d__15[T].MoveNext
+      () [0x00185] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Commands\\BeforeAfterTestCommandBase.cs:129 "
     m_TestListState:
-      scrollPos: {x: 0, y: 142}
-      m_SelectedIDs: 6eca7a08
-      m_LastClickedID: 142264942
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 362097e8
+      m_LastClickedID: -392749002
       m_ExpandedIDs: c6ec6ba1c2778cab18e194b5af90fae76eca7a0803fe443357683e3426ecfc371a04ba42eb084855ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -1547,7 +1710,7 @@ MonoBehaviour:
       - Uncategorized
     m_SelectedOption: 0
   m_EditModeTestListGUI:
-    m_Window: {fileID: 14}
+    m_Window: {fileID: 12}
     m_NewResultList:
     - id: 1000
       uniqueId: '[My project][suite]'
@@ -1597,188 +1760,7 @@ MonoBehaviour:
       selectedCategoryMask: 0
       availableCategories:
       - Uncategorized
---- !u!114 &15
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
-  m_TitleContent:
-    m_Text: Project
-    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 774
-    width: 1873.6666
-    height: 577.00006
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_SearchFilter:
-    m_NameFilter: 
-    m_ClassNames: []
-    m_AssetLabels: []
-    m_AssetBundleNames: []
-    m_VersionControlStates: []
-    m_SoftLockControlStates: []
-    m_ReferencingInstanceIDs: 
-    m_SceneHandles: 
-    m_ShowAllHits: 0
-    m_SkipHidden: 0
-    m_SearchArea: 1
-    m_Folders:
-    - Assets/Resources/Scripts/Tests
-    m_Globs: []
-    m_OriginalText: 
-  m_ViewMode: 1
-  m_StartGridSize: 64
-  m_LastFolders:
-  - Assets/Resources/Scripts/Tests
-  m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\wenze\Documents\Unity\Eons
-  m_LockTracker:
-    m_IsLocked: 0
-  m_FolderTreeState:
-    scrollPos: {x: 0, y: 259}
-    m_SelectedIDs: 845f0000
-    m_LastClickedID: 24452
-    m_ExpandedIDs: 00000000625f0000645f0000665f0000685f00006a5f00006c5f00006e5f0000705f0000725f0000745f0000765f0000785f00007a5f00007c5f00007e5f0000805f0000825f0000845f000000ca9a3bffffff7f
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 5}
-    m_SearchString: 
-    m_CreateAssetUtility:
-      m_EndAction: {fileID: 0}
-      m_InstanceID: 0
-      m_Path: 
-      m_Icon: {fileID: 0}
-      m_ResourceFile: 
-  m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 00000000625f0000645f0000665f0000685f00006a5f00006c5f00006e5f0000705f0000725f0000745f0000765f0000785f00007a5f00007c5f00007e5f0000805f0000825f0000845f0000
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
-    m_SearchString: 
-    m_CreateAssetUtility:
-      m_EndAction: {fileID: 0}
-      m_InstanceID: 0
-      m_Path: 
-      m_Icon: {fileID: 0}
-      m_ResourceFile: 
-  m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300009e5f0000946c0000ca590000e65b0000a8700000345d00003e5a000080720000565a0000e693ffffc47100004484000038840000b45c0000cc5c000000000000d45b0000
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
-    m_CreateAssetUtility:
-      m_EndAction: {fileID: 0}
-      m_InstanceID: 0
-      m_Path: 
-      m_Icon: {fileID: 0}
-      m_ResourceFile: 
-    m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 64
-  m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 341
---- !u!114 &16
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Inspector
-    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 1874.6667
-    y: 72.66667
-    width: 684.3334
-    height: 1278.3334
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_ObjectsLockedBeforeSerialization: []
-  m_InstanceIDsLockedBeforeSerialization: 
-  m_PreviewResizer:
-    m_CachedPref: -160
-    m_ControlHash: -371814159
-    m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
-  m_GlobalObjectId: 
-  m_InspectorMode: 0
-  m_LockTracker:
-    m_IsLocked: 0
-  m_PreviewWindow: {fileID: 0}
---- !u!114 &17
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1799,9 +1781,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 30
-    width: 242.5
-    height: 382
+    y: 72.66667
+    width: 833.6667
+    height: 677
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1811,7 +1793,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: ac86fffff486ffffec89ffffa88bfffff08bffff008fffffca90ffff1291ffff2294ffff5a97ffffa297ffff8299ffff909affffd89affffceabffff94adffffdaadffff56aeffffe6b0ffff2eb1ffff0eb3ffff16b4ffff5eb4ffff3cc5ffffa8c8fffff0c8ffffd0caffffdacbffff22ccffff18ddffff1cdeffff64deffff44e0ffff1ee4ffff66e4ffff46e6ffff00e8ffff48e8ffff28eaffff30ebffff78ebffff58edffff5aeeffffa2eeffff82f0ffff88f1ffffd0f1ffffb0f3ffffaef5fffff6f5ffff82f9ffff38fbffff
+      m_ExpandedIDs: 9611fbffde11fbff4620fbff40a1fcff88a1fcff50b3fcff10b5fcff58b5fcffc0c3fcff72c2ffffbac2ffff82d4ffff86d5ffffced5ffff6ad9ffff24dbffff6cdbffff4cddffff0adfffff52dfffff32e1ffff0ae3ffff52e3ffff32e5ffff42e6ffff8ae6ffff6ae8ffff6ce9ffffb4e9ffff20f8ffff38fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1827,7 +1809,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 8}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -1835,7 +1817,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &18
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1855,10 +1837,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 834.6667
+    x: 925.3334
     y: 72.66667
-    width: 1038
-    height: 680.3333
+    width: 947.3333
+    height: 677
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2060,9 +2042,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 37.106705, y: 35.57893, z: -0.8354417}
+    m_Target: {x: 2.3540015, y: 10.295025, z: -0.7171087}
     speed: 2
-    m_Value: {x: 37.106705, y: 35.57893, z: -0.8354417}
+    m_Value: {x: 2.3540015, y: 10.295025, z: -0.7171087}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -2113,9 +2095,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.341634
+    m_Target: 21.210135
     speed: 2
-    m_Value: 4.341634
+    m_Value: 21.210135
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -2140,7 +2122,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &19
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2160,10 +2142,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 834.6667
+    x: 925.3334
     y: 72.66667
-    width: 1038
-    height: 680.3333
+    width: 947.3333
+    height: 677
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2210,10 +2192,10 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1038
-      height: 659.3333
-    m_Scale: {x: 0.8109375, y: 0.8109376}
-    m_Translation: {x: 519, y: 329.66666}
+      width: 947.3333
+      height: 656
+    m_Scale: {x: 0.74010414, y: 0.74010414}
+    m_Translation: {x: 473.66666, y: 328}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -2221,18 +2203,158 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -640
-      y: -406.52533
+      y: -443.18088
       width: 1280
-      height: 813.05066
+      height: 886.36176
     m_MinimalGUI: 1
-  m_defaultScale: 0.8109375
-  m_LastWindowPixelSize: {x: 1557, y: 1020.5}
+  m_defaultScale: 0.74010414
+  m_LastWindowPixelSize: {x: 1421, y: 1015.5}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &20
+--- !u!114 &16
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_TitleContent:
+    m_Text: Project
+    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 770.6667
+    width: 1873.6666
+    height: 580.3334
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_SearchFilter:
+    m_NameFilter: 
+    m_ClassNames: []
+    m_AssetLabels: []
+    m_AssetBundleNames: []
+    m_VersionControlStates: []
+    m_SoftLockControlStates: []
+    m_ReferencingInstanceIDs: 
+    m_SceneHandles: 
+    m_ShowAllHits: 0
+    m_SkipHidden: 0
+    m_SearchArea: 1
+    m_Folders:
+    - Assets/Resources/Scripts/Map/Tiles
+    m_Globs: []
+    m_OriginalText: 
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Resources/Scripts/Map/Tiles
+  m_LastFoldersGridSize: -1
+  m_LastProjectPath: C:\Users\wenze\Documents\Unity\Eons
+  m_LockTracker:
+    m_IsLocked: 0
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 120}
+    m_SelectedIDs: 12600000
+    m_LastClickedID: 24594
+    m_ExpandedIDs: 00000000725f0000745f0000765f0000785f00007a5f00007c5f00007e5f0000805f0000825f0000845f0000865f0000885f00008a5f00008c5f00008e5f0000905f0000b25f0000b45f000000ca9a3bffffff7f
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 10}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_AssetTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 00000000725f0000745f0000765f0000785f00007a5f00007c5f00007e5f0000805f0000825f0000845f0000865f0000885f00008a5f00008c5f00008e5f0000905f0000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_ListAreaState:
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c62300009e5f0000946c0000ca590000e65b0000a8700000345d00003e5a000080720000565a0000e693ffffc47100004484000038840000b45c0000cc5c000000000000d45b0000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 10}
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+    m_NewAssetIndexInList: -1
+    m_ScrollPosition: {x: 0, y: 0}
+    m_GridSize: 64
+  m_SkipHiddenPackages: 0
+  m_DirectoriesAreaWidth: 341
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2253,10 +2375,199 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 774
+    y: 770.6667
     width: 1873.6666
-    height: 577.00006
+    height: 580.3334
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
+--- !u!114 &18
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12071, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Animation
+    m_Image: {fileID: -3237396543322336831, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 688.6667
+    width: 1873.6666
+    height: 662.3334
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_LockTracker:
+    m_IsLocked: 0
+  m_LastSelectedObjectID: -1874460
+--- !u!114 &19
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12914, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Animator
+    m_Image: {fileID: 1711060831702674872, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 604
+    width: 1053.5
+    height: 255
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_ViewTransforms:
+    m_KeySerializationHelper:
+    - {fileID: -5183453786790052467, guid: ddb7da4d02db4694b8a60a64ad0c9bce, type: 2}
+    - {fileID: -2208600786771584181, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
+    - {fileID: -3373428290895615280, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
+    - {fileID: 8030200332961901116, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
+    m_ValueSerializationHelper:
+    - e00: 0.89244986
+      e01: 0
+      e02: 0
+      e03: 81.92392
+      e10: 0
+      e11: 0.89244986
+      e12: 0
+      e13: 244.61092
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.9490526
+      e01: 0
+      e02: 0
+      e03: 313.54736
+      e10: 0
+      e11: 0.9490526
+      e12: 0
+      e13: 84.47331
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.8252713
+      e01: 0
+      e02: 0
+      e03: 191.60516
+      e10: 0
+      e11: 0.8252713
+      e12: 0
+      e13: 59.215363
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 1.0032251
+      e01: 0
+      e02: 0
+      e03: 61.791077
+      e10: 0
+      e11: 1.0032251
+      e12: 0
+      e13: 116.017975
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  m_PreviewAnimator: {fileID: 0}
+  m_AnimatorController: {fileID: 9100000, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
+  m_BreadCrumbs:
+  - m_Target: {fileID: -2208600786771584181, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
+    m_ScrollPosition: {x: 0, y: 0}
+  - m_Target: {fileID: -3373428290895615280, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
+    m_ScrollPosition: {x: 0, y: 0}
+  stateMachineGraph: {fileID: 0}
+  stateMachineGraphGUI: {fileID: 0}
+  blendTreeGraph: {fileID: 0}
+  blendTreeGraphGUI: {fileID: 0}
+  m_AutoLiveLink: 1
+  m_MiniTool: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_CurrentEditor: 1
+  m_LayerEditor:
+    m_SelectedLayerIndex: 0
+--- !u!114 &20
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Inspector
+    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1874.6667
+    y: 72.66667
+    width: 684.3334
+    height: 1278.3334
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_ObjectsLockedBeforeSerialization: []
+  m_InstanceIDsLockedBeforeSerialization: 
+  m_PreviewResizer:
+    m_CachedPref: -160
+    m_ControlHash: -371814159
+    m_PrefName: Preview_InspectorPreview
+  m_LastInspectedObjectInstanceID: -1
+  m_LastVerticalScrollValue: 0
+  m_GlobalObjectId: 
+  m_InspectorMode: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_PreviewWindow: {fileID: 0}

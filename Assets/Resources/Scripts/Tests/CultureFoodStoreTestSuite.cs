@@ -28,7 +28,7 @@ public class CultureFoodStoreTestSuite : CultureActionTest
     public IEnumerator CanConsumeFoodInTurn()
     {
         TestTile.GetComponent<TileFood>().CurFood = 0;
-        TestCultureFoodStore.CurrentFoodStore = 1000;
+        TestCultureFoodStore.AlterFoodStore(1000);
         DefaultAction TestDefaultAction = new DefaultAction(TestCulture);
         Turn turn = TestDefaultAction.ExecuteTurn();
         Assert.That(turn.turnUpdates[TestCulture].FoodChange == -1, $"Culture should be reducing food but FoodChange is {turn.turnUpdates[TestCulture].FoodChange}!");

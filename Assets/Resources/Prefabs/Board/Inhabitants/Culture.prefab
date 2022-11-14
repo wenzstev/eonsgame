@@ -120,6 +120,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1159597443944284595}
+  - {fileID: 1796939370013158607}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -199,6 +200,7 @@ MonoBehaviour:
   gainAffinityChance: 0.003
   maxPopTransfer: 1
   influenceRate: 0.05
+  FoodGatherRate: 1
   maxOnTile: 0
   currentState: 0
 --- !u!114 &1772662126385334965
@@ -271,4 +273,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4756c9252d3b4228b1cb492dda9ae5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentFoodStore: 0
+  currentFoodStore: 0
+--- !u!1 &4746160324585285361
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1796939370013158607}
+  - component: {fileID: 8979528551454491597}
+  m_Layer: 0
+  m_Name: IndicatorGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1796939370013158607
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4746160324585285361}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3154417322975475752}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8979528551454491597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4746160324585285361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 085c4d11bb0597c4c96f3a44d9746dc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FoodAmountIndicatorTemplate: {fileID: 7818443324861133336, guid: 6c4f43eb58d335940bc1f71bd6349ecd, type: 3}
+  TicksBetweenIndicators: 7
