@@ -34,5 +34,10 @@ public class FoodAmountIndicatorGenerator : MonoBehaviour
         _amountFoodChange = 0;
     }
 
-  
+    private void OnDestroy()
+    {
+        EventManager.StopListening("Tick", OnTick);
+    }
+
+
 }
