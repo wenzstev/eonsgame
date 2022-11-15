@@ -22,56 +22,90 @@ public class Tile : MonoBehaviour
                 _moveTile.name = "Move Tile";
                 Destroy(_moveTile.GetComponent<TileChars>());
                 Destroy(_moveTile.GetComponent<TileDrawer>());
-                 return _moveTile;
+                return _moveTile;
             }
             return _moveTile;
         }
     }
 
-    Dictionary<Direction, GameObject> neighbors;
-    List<Direction> neighborDirections;
 
-    void Start()
+
+    TileNeighbors _tileNeighbors;
+    TileNeighbors NeighborTileGetter
     {
-        neighbors = new Dictionary<Direction, GameObject>();
-        neighborDirections = new List<Direction>();
-        DetermineNeighbors();
+        get
+        {
+            if(_tileNeighbors == null)
+            {
+                _tileNeighbors = new TileNeighbors(this);
+            }
+            return _tileNeighbors;
+        }
     }
-
-    void DetermineNeighbors()
-    {
-        Enumerable.Range(0, 8).Select((i) => GetNeighbor((Direction)i)).Count(); // count forces execution
-    }
-
 
     public GameObject GetNeighbor(Direction d)
     {
-        GameObject neighbor = null;
-        if (neighbors.TryGetValue(d, out neighbor))
-        {
-            return neighbor;
-        }
-        else
-        {
-            neighbor = board.getNeighbor(gameObject, d);
-            if (neighbor != null) AddNeighborTile(neighbor, d);
-
-            return neighbor;
-        }
-    }
-
-    void AddNeighborTile(GameObject neighbor, Direction d)
-    {
-        neighbors.Add(d, neighbor);
-        neighborDirections.Add(d);
+        return NeighborTileGetter.GetNeighbor(d);
     }
 
     public GameObject GetRandomNeighbor()
     {
-        int randDir = Mathf.FloorToInt(Random.value * neighborDirections.Count);
-        Debug.Log($"Accessing list of count {neighborDirections.Count} at index {randDir}");
-        return neighbors[neighborDirections[randDir]];
+        return NeighborTileGetter.GetRandomNeighbor();
+    }
 
+
+    class TileNeighbors
+    {
+        // the problem is that the DetermineNeighbors function needs to be called before the GetRandomNeighbor call,
+        // but after the creation of the tile (because at that point the BoardTileRelationship that the function needs
+        // to work). Maybe call this conditionally? It's not set up unless it needs to be set up, with some kind of 
+        // getter/setter
+        Dictionary<Direction, GameObject> neighbors;
+        List<Direction> neighborDirections;
+        Tile _tile;
+
+        public TileNeighbors(Tile tile)
+        {
+            _tile = tile;
+            DetermineNeighbors();
+        }
+
+        void DetermineNeighbors()
+        {
+            neighbors = new Dictionary<Direction, GameObject>();
+            neighborDirections = new List<Direction>();
+            Enumerable.Range(0, 8).Select((i) => GetNeighbor((Direction)i)).Count(); // count forces execution
+        }
+
+        public GameObject GetRandomNeighbor()
+        {
+            int randDir = Mathf.FloorToInt(Random.value * neighborDirections.Count);
+            //Debug.Log($"Accessing list of count {neighborDirections.Count} at index {randDir}");
+            return neighbors[neighborDirections[randDir]];
+        }
+
+        public GameObject GetNeighbor(Direction d)
+        {
+            if (_tile.board == null) return null; // for the movetile; it's kind of overstaying it's welcome
+
+            GameObject neighbor = null;
+            if (neighbors.TryGetValue(d, out neighbor))
+            {
+                return neighbor;
+            }
+            else
+            {
+                neighbor = _tile.board.getNeighbor(_tile.gameObject, d);
+                if (neighbor != null) AddNeighborTile(neighbor, d);
+
+                return neighbor;
+            }
+        }
+        void AddNeighborTile(GameObject neighbor, Direction d)
+        {
+            neighbors.Add(d, neighbor);
+            neighborDirections.Add(d);
+        }
     }
 }   
 

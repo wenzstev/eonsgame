@@ -28,7 +28,7 @@ public class DefaultAction : CultureAction
     {
         float FoodChange = turn.turnUpdates[culture].FoodChange;
         float FoodStore = culture.GetComponent<CultureFoodStore>().CurrentFoodStore;
-        turn.UpdateCulture(culture).newState = FoodStore < culture.Population ? Culture.State.Overpopulated : FoodChange < culture.Population ? Culture.State.SeekingFood : Culture.State.Default;
+        turn.UpdateCulture(culture).newState = FoodStore + FoodChange < culture.Population ? Culture.State.Overpopulated : FoodChange < culture.Population ? Culture.State.SeekingFood : Culture.State.Default;
     }
 
 

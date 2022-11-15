@@ -44,7 +44,13 @@ public class Culture : MonoBehaviour
 
     DecisionMaker decisionMaker;
 
-    public GameObject CultureTemplate;
+    public GameObject CultureTemplate
+    {
+        get
+        {
+            return Resources.Load<GameObject>("Prefabs/Board/Inhabitants/Culture");
+        }
+    }
 
     SpriteRenderer layerMode;
     SpriteRenderer circleMode;
@@ -114,7 +120,6 @@ public class Culture : MonoBehaviour
     {
         Tile = t.GetComponent<Tile>();
         SetColor(color);
-        CultureTemplate = cultureTemplate;
         gameObject.name = name;
     }
 
@@ -175,7 +180,7 @@ public class Culture : MonoBehaviour
         if (t.newAffinity > 0) GainAffinity(t.newAffinity);
         if (t.newTile != null) SetTile(t.newTile); // maybe give them some offscreen placeholder tile?
         
-        CultureFoodStore.CurrentFoodStore += t.FoodChange;
+        CultureFoodStore.AlterFoodStore(t.FoodChange);
 
         EventManager.TriggerEvent("CultureUpdated" + name, new Dictionary<string, object> { { "culture", this } });
     }
