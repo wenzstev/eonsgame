@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class TimeController : MonoBehaviour
 {
-    public int[] speeds;
+    public float[] speeds;
 
-    float timeBetweenTicks;
+    float curSpeed;
     float timer = 0;
 
     bool isPaused = true;
+
+    /*
+     Level 1: 1 tick per second => 1
+     Level 2: 2 ticks per second => .5f
+     Level 3: 4 ticks per second => .25f
+     Level 4: 8 ticks per second => .125f
+     */
 
 
     private void Start()
@@ -17,7 +24,7 @@ public class TimeController : MonoBehaviour
         EventManager.StartListening("PauseSpeed", TogglePause);
         EventManager.StartListening("SpeedChange", ChangeSpeed);
 
-        timeBetweenTicks = 1 / (float) speeds[0];
+        curSpeed = speeds[0];
     }
 
 
@@ -32,7 +39,7 @@ public class TimeController : MonoBehaviour
     void CalculateTimeToTick()
     {
         timer += Time.deltaTime;
-        if (timer >= timeBetweenTicks)
+        if (timer >= curSpeed)
         {
             EventManager.TriggerEvent("Tick", null);
             timer = 0;
@@ -48,9 +55,7 @@ public class TimeController : MonoBehaviour
             return;
         }
 
-        int newSpeed = speeds[newSpeedLevel];
-
-        timeBetweenTicks = 1 / (float) newSpeed;
+        curSpeed = speeds[newSpeedLevel];
     }
 
 
