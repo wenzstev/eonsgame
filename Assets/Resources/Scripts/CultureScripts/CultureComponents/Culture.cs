@@ -269,7 +269,6 @@ public class Culture : MonoBehaviour
     {
         Tile = newTile;
         tileInfo = newTile.GetComponent<TileInfo>();
-        maxOnTile = tileInfo.tileType == affinity ? tileInfo.popBase + 2 : tileInfo.popBase;
     }
 
     void SetTile(Tile newTile)
