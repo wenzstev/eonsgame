@@ -6,7 +6,7 @@ using TMPro;
 public class FoodAmountIndicator : MonoBehaviour
 {
     TextMeshPro _amountText;
-    float _amount;
+    public float Amount;
     public Color PositiveColor;
     public Color NegativeColor;
 
@@ -16,9 +16,9 @@ public class FoodAmountIndicator : MonoBehaviour
     public void Initialize(float amount)
     {
         _amountText = GetComponent<TextMeshPro>();
-        _amount = amount;
-        _amountText.color = _amount < 0 ? NegativeColor : PositiveColor;
-        _amountText.text = Mathf.FloorToInt(_amount).ToString();
+        Amount = amount;
+        _amountText.color = Amount < 0 ? NegativeColor : PositiveColor;
+        _amountText.text = Mathf.FloorToInt(Amount).ToString();
         StartCoroutine(PlayAnimation());
     }
 
