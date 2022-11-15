@@ -26,7 +26,19 @@ public class CultureHighlightPanel : MonoBehaviour
 
     void Update()
     {
-        rectTransform.anchoredPosition = Camera.main.WorldToScreenPoint(cultureObj.transform.position);
+        MoveOrDestroyPanel();
+    }
+
+    void MoveOrDestroyPanel()
+    {
+        if (cultureObj == null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            rectTransform.anchoredPosition = Camera.main.WorldToScreenPoint(cultureObj.transform.position);
+        }
     }
 
     void OnInteractiveMouseUp(Dictionary<string, object> mouseButton)
