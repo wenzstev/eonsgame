@@ -20,7 +20,7 @@ MonoBehaviour:
     height: 1349.3334
   m_ShowMode: 4
   m_Title: Scene
-  m_RootView: {fileID: 6}
+  m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
@@ -33,120 +33,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 9}
-  - {fileID: 3}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 30
-    width: 2560
-    height: 1299.3334
-  m_MinSize: {x: 300, y: 200}
-  m_MaxSize: {x: 24288, y: 16192}
-  vertical: 0
-  controlID: 81
---- !u!114 &3
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 1874.6666
-    y: 0
-    width: 685.3334
-    height: 1299.3334
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 16}
-  m_Panes:
-  - {fileID: 16}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &4
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 834.6667
-    height: 701.3333
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 14}
-  m_Panes:
-  - {fileID: 17}
-  - {fileID: 14}
-  m_Selected: 1
-  m_LastSelected: 0
---- !u!114 &5
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 701.3333
-    width: 1874.6666
-    height: 598.00006
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 20}
-  m_Panes:
-  - {fileID: 15}
-  - {fileID: 20}
-  - {fileID: 12}
-  - {fileID: 13}
-  m_Selected: 1
-  m_LastSelected: 0
---- !u!114 &6
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
   m_Script: {fileID: 12008, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 7}
-  - {fileID: 2}
-  - {fileID: 8}
+  - {fileID: 3}
+  - {fileID: 5}
+  - {fileID: 4}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -159,7 +52,7 @@ MonoBehaviour:
   m_TopViewHeight: 30
   m_UseBottomView: 1
   m_BottomViewHeight: 20
---- !u!114 &7
+--- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -181,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
---- !u!114 &8
+--- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -202,7 +95,7 @@ MonoBehaviour:
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &9
+--- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,8 +108,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
+  - {fileID: 6}
+  - {fileID: 11}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 30
+    width: 2560
+    height: 1299.3334
+  m_MinSize: {x: 300, y: 200}
+  m_MaxSize: {x: 24288, y: 16192}
+  vertical: 0
+  controlID: 58
+--- !u!114 &6
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 7}
   - {fileID: 10}
-  - {fileID: 5}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -226,8 +144,8 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 82
---- !u!114 &10
+  controlID: 94
+--- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -240,19 +158,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 4}
-  - {fileID: 11}
+  - {fileID: 8}
+  - {fileID: 9}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
     width: 1874.6666
-    height: 701.3333
+    height: 865.3333
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 83
---- !u!114 &11
+  controlID: 95
+--- !u!114 &8
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: TestRunnerWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 650
+    height: 865.3333
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 12}
+  m_Panes:
+  - {fileID: 13}
+  - {fileID: 12}
+  m_Selected: 1
+  m_LastSelected: 0
+--- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -267,167 +212,74 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 834.6667
+    x: 650
     y: 0
-    width: 1040
-    height: 701.3333
+    width: 1224.6666
+    height: 865.3333
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 18}
+  m_ActualView: {fileID: 14}
   m_Panes:
+  - {fileID: 14}
+  - {fileID: 15}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &10
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: ProjectBrowser
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 865.3333
+    width: 1874.6666
+    height: 434.00006
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 16}
+  m_Panes:
+  - {fileID: 16}
+  - {fileID: 17}
   - {fileID: 18}
   - {fileID: 19}
   m_Selected: 0
   m_LastSelected: 1
+--- !u!114 &11
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 1874.6666
+    y: 0
+    width: 685.3334
+    height: 1299.3334
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 20}
+  m_Panes:
+  - {fileID: 20}
+  m_Selected: 0
+  m_LastSelected: 0
 --- !u!114 &12
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12071, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Animation
-    m_Image: {fileID: -3237396543322336831, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 688.6667
-    width: 1873.6666
-    height: 662.3334
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_LockTracker:
-    m_IsLocked: 0
-  m_LastSelectedObjectID: -13232
---- !u!114 &13
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12914, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Animator
-    m_Image: {fileID: 1711060831702674872, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 604
-    width: 1053.5
-    height: 255
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_ViewTransforms:
-    m_KeySerializationHelper:
-    - {fileID: -5183453786790052467, guid: ddb7da4d02db4694b8a60a64ad0c9bce, type: 2}
-    - {fileID: -2208600786771584181, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
-    - {fileID: -3373428290895615280, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
-    - {fileID: 8030200332961901116, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
-    m_ValueSerializationHelper:
-    - e00: 0.89244986
-      e01: 0
-      e02: 0
-      e03: 81.92392
-      e10: 0
-      e11: 0.89244986
-      e12: 0
-      e13: 244.61092
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    - e00: 0.9490526
-      e01: 0
-      e02: 0
-      e03: 313.54736
-      e10: 0
-      e11: 0.9490526
-      e12: 0
-      e13: 84.47331
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    - e00: 0.8252713
-      e01: 0
-      e02: 0
-      e03: 191.60516
-      e10: 0
-      e11: 0.8252713
-      e12: 0
-      e13: 59.215363
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    - e00: 1.0032251
-      e01: 0
-      e02: 0
-      e03: 61.791077
-      e10: 0
-      e11: 1.0032251
-      e12: 0
-      e13: 116.017975
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-  m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
-  m_BreadCrumbs:
-  - m_Target: {fileID: -2208600786771584181, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
-    m_ScrollPosition: {x: 0, y: 0}
-  - m_Target: {fileID: -3373428290895615280, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
-    m_ScrollPosition: {x: 0, y: 0}
-  stateMachineGraph: {fileID: 0}
-  stateMachineGraphGUI: {fileID: 0}
-  blendTreeGraph: {fileID: 0}
-  blendTreeGraphGUI: {fileID: 0}
-  m_AutoLiveLink: 1
-  m_MiniTool: 0
-  m_LockTracker:
-    m_IsLocked: 0
-  m_CurrentEditor: 1
-  m_LayerEditor:
-    m_SelectedLayerIndex: 0
---- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -449,19 +301,19 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 72.66667
-    width: 833.6667
-    height: 680.3333
+    width: 649
+    height: 844.3333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 120
+    ID: 116
     splitterInitialOffset: 399
     currentActiveSplitter: -1
     realSizes:
-    - 358
-    - 252
+    - 454
+    - 320
     relativeSizes:
     - 0.58672565
     - 0.41327435
@@ -471,7 +323,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 610
+    lastTotalSize: 774
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -481,14 +333,14 @@ MonoBehaviour:
     oldSplitSize: 0
   m_TestTypeToolbarIndex: 0
   m_PlayModeTestListGUI:
-    m_Window: {fileID: 14}
+    m_Window: {fileID: 12}
     m_NewResultList:
     - id: 1004
       uniqueId: '[My project][suite]'
       name: My project
       fullName: My project
       resultStatus: 2
-      duration: 0.2750392
+      duration: 139.16106
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -504,7 +356,7 @@ MonoBehaviour:
       name: Tests.dll
       fullName: C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll
       resultStatus: 2
-      duration: 0.1394914
+      duration: 138.97945
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -520,7 +372,7 @@ MonoBehaviour:
       name: BoardAgeTestSuite
       fullName: BoardAgeTestSuite
       resultStatus: 1
-      duration: 0.1908224
+      duration: 0.1690392
       messages: 
       output: 
       stacktrace: 
@@ -536,7 +388,7 @@ MonoBehaviour:
       name: CanGetBoardAgeAtStartup
       fullName: BoardAgeTestSuite.CanGetBoardAgeAtStartup
       resultStatus: 1
-      duration: 0.1380226
+      duration: 0.1259006
       messages: 
       output: 'clearing
 
@@ -555,7 +407,7 @@ MonoBehaviour:
       name: CanUpdateBoardAge
       fullName: BoardAgeTestSuite.CanUpdateBoardAge
       resultStatus: 1
-      duration: 0.040038
+      duration: 0.0325898
       messages: 
       output: 'clearing
 
@@ -574,7 +426,7 @@ MonoBehaviour:
       name: CultureFoodStoreTestSuite
       fullName: CultureFoodStoreTestSuite
       resultStatus: 1
-      duration: 0.1004303
+      duration: 0.0743867
       messages: 
       output: 
       stacktrace: 
@@ -590,7 +442,7 @@ MonoBehaviour:
       name: CanCollectFoodFromTile
       fullName: CultureFoodStoreTestSuite.CanCollectFoodFromTile
       resultStatus: 1
-      duration: 0.0383841
+      duration: 0.0284869
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -620,7 +472,7 @@ MonoBehaviour:
       name: CanConsumeFoodInTurn
       fullName: CultureFoodStoreTestSuite.CanConsumeFoodInTurn
       resultStatus: 1
-      duration: 0.0216883
+      duration: 0.0142527
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -655,7 +507,7 @@ MonoBehaviour:
       name: CanConsumeFoodMultiplePopulation
       fullName: CultureFoodStoreTestSuite.CanConsumeFoodMultiplePopulation
       resultStatus: 1
-      duration: 0.0167904
+      duration: 0.0137164
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -690,7 +542,7 @@ MonoBehaviour:
       name: CanReduceFoodOnTile
       fullName: CultureFoodStoreTestSuite.CanReduceFoodOnTile
       resultStatus: 1
-      duration: 0.0176702
+      duration: 0.0139304
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -720,7 +572,7 @@ MonoBehaviour:
       name: CultureTestSuite
       fullName: CultureTestSuite
       resultStatus: 1
-      duration: 0.0499339
+      duration: 0.0284856
       messages: 
       output: 
       stacktrace: 
@@ -736,7 +588,7 @@ MonoBehaviour:
       name: TestCanMerge
       fullName: CultureTestSuite.TestCanMerge
       resultStatus: 1
-      duration: 0.0154169
+      duration: 0.007722
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -762,7 +614,7 @@ MonoBehaviour:
       name: TestCannotMerge
       fullName: CultureTestSuite.TestCannotMerge
       resultStatus: 1
-      duration: 0.0134521
+      duration: 0.0093782
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -788,7 +640,7 @@ MonoBehaviour:
       name: TestSplitCulture
       fullName: CultureTestSuite.TestSplitCulture
       resultStatus: 1
-      duration: 0.0142713
+      duration: 0.0078948
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -814,7 +666,7 @@ MonoBehaviour:
       name: CurveTestSuite
       fullName: CurveTestSuite
       resultStatus: 1
-      duration: 0.0088722
+      duration: 0.0061867
       messages: 
       output: 
       stacktrace: 
@@ -830,7 +682,7 @@ MonoBehaviour:
       name: TestCompoundCurve
       fullName: CurveTestSuite.TestCompoundCurve
       resultStatus: 1
-      duration: 0.0015074
+      duration: 0.0012408
       messages: 
       output: 
       stacktrace: 
@@ -847,7 +699,7 @@ MonoBehaviour:
       name: TestGaussianCurve
       fullName: CurveTestSuite.TestGaussianCurve
       resultStatus: 1
-      duration: 0.0002866
+      duration: 0.0002038
       messages: 
       output: 
       stacktrace: 
@@ -864,7 +716,7 @@ MonoBehaviour:
       name: TestPowerCurve
       fullName: CurveTestSuite.TestPowerCurve
       resultStatus: 1
-      duration: 0.0002559
+      duration: 0.0001444
       messages: 
       output: 
       stacktrace: 
@@ -881,7 +733,7 @@ MonoBehaviour:
       name: TestSigmoidCurve
       fullName: CurveTestSuite.TestSigmoidCurve
       resultStatus: 1
-      duration: 0.0002109
+      duration: 0.0001393
       messages: 
       output: 
       stacktrace: 
@@ -893,12 +745,118 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1008
       parentUniqueId: Tests.dll/[Tests][CurveTestSuite][suite]
+    - id: 1018
+      uniqueId: Tests.dll/[Tests][FoodAmountIndicatorTestSuite][suite]
+      name: FoodAmountIndicatorTestSuite
+      fullName: FoodAmountIndicatorTestSuite
+      resultStatus: 2
+      duration: 138.96901
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1045
+      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1020
+      uniqueId: Tests.dll/FoodAmountIndicatorTestSuite/[Tests][FoodAmountIndicatorTestSuite.CanDisplayAccurateFoodCount]
+      name: CanDisplayAccurateFoodCount
+      fullName: FoodAmountIndicatorTestSuite.CanDisplayAccurateFoodCount
+      resultStatus: 2
+      duration: 138.93251
+      messages: "  Indicator is not displaying the correct food!\r\n  Expected: 29.7010002f\r\n 
+        But was:  25.1099491f\r\n"
+      output: 'setting test board: Board(Clone) (Board)
+
+        Board(Clone) (Board)
+
+        Setup
+        Complete. Culture name is rthqqn (Culture)
+
+        clearing
+
+'
+      stacktrace: 'at FoodAmountIndicatorTestSuite+<CanDisplayAccurateFoodCount>d__3.MoveNext
+        () [0x00063] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\FoodAmountIndicatorTestSuite.cs:32
+
+        at
+        UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e]
+        in C:\Users\wenze\Documents\Unity\Eons\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: Tests.dll/[Tests][FoodAmountIndicatorTestSuite][suite]
+    - id: 1019
+      uniqueId: Tests.dll/FoodAmountIndicatorTestSuite/[Tests][FoodAmountIndicatorTestSuite.CanGenerateFoodIndicatorAtExpectedInterval]
+      name: CanGenerateFoodIndicatorAtExpectedInterval
+      fullName: FoodAmountIndicatorTestSuite.CanGenerateFoodIndicatorAtExpectedInterval
+      resultStatus: 1
+      duration: 0.1548475
+      messages: 
+      output: 'setting test board: Board(Clone) (Board)
+
+        Board(Clone) (Board)
+
+        Setup
+        Complete. Culture name is rthqqn (Culture)
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: Tests.dll/[Tests][FoodAmountIndicatorTestSuite][suite]
+    - id: 1021
+      uniqueId: Tests.dll/FoodAmountIndicatorTestSuite/[Tests][FoodAmountIndicatorTestSuite.CanNotDuplicateIndicatorWhenSplitting]
+      name: CanNotDuplicateIndicatorWhenSplitting
+      fullName: FoodAmountIndicatorTestSuite.CanNotDuplicateIndicatorWhenSplitting
+      resultStatus: 2
+      duration: 0.0375924
+      messages: 'System.IndexOutOfRangeException : Index was outside the bounds of
+        the array.'
+      output: 'setting test board: Board(Clone) (Board)
+
+        Board(Clone) (Board)
+
+        Setup
+        Complete. Culture name is rthqqn (Culture)
+
+        clearing
+
+'
+      stacktrace: "  at FoodAmountIndicatorTestSuite+<CanNotDuplicateIndicatorWhenSplitting>d__4.MoveNext
+        () [0x000f0] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\FoodAmountIndicatorTestSuite.cs:49
+        \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e]
+        in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: Tests.dll/[Tests][FoodAmountIndicatorTestSuite][suite]
     - id: 1004
       uniqueId: Tests.dll/[Tests][InfluenceActionTestSuite][suite]
       name: InfluenceActionTestSuite
       fullName: InfluenceActionTestSuite
       resultStatus: 1
-      duration: 0.0286528
+      duration: 0.0215431
       messages: 
       output: 
       stacktrace: 
@@ -914,7 +872,7 @@ MonoBehaviour:
       name: CanInfluenceNeighborCulture
       fullName: InfluenceActionTestSuite.CanInfluenceNeighborCulture
       resultStatus: 1
-      duration: 0.0106209
+      duration: 0.0104081
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -944,7 +902,7 @@ MonoBehaviour:
       name: CanMergeIntoNewCultureIfClose
       fullName: InfluenceActionTestSuite.CanMergeIntoNewCultureIfClose
       resultStatus: 1
-      duration: 0.0128746
+      duration: 0.0085209
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -974,7 +932,7 @@ MonoBehaviour:
       name: MergeActionTestSuite
       fullName: MergeActionTestSuite
       resultStatus: 1
-      duration: 0.0634382
+      duration: 0.0476063
       messages: 
       output: 
       stacktrace: 
@@ -990,7 +948,7 @@ MonoBehaviour:
       name: CanAddNewCultureToTile
       fullName: MergeActionTestSuite.CanAddNewCultureToTile
       resultStatus: 1
-      duration: 0.0098639
+      duration: 0.011845
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1020,7 +978,7 @@ MonoBehaviour:
       name: CanCreateAsNewCulture
       fullName: MergeActionTestSuite.CanCreateAsNewCulture
       resultStatus: 1
-      duration: 0.0192865
+      duration: 0.0107762
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1057,7 +1015,7 @@ MonoBehaviour:
       name: CanMergeCultures
       fullName: MergeActionTestSuite.CanMergeCultures
       resultStatus: 1
-      duration: 0.0131095
+      duration: 0.0095131
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1094,7 +1052,7 @@ MonoBehaviour:
       name: CanMergeWithParentCulture
       fullName: MergeActionTestSuite.CanMergeWithParentCulture
       resultStatus: 1
-      duration: 0.0132325
+      duration: 0.0122683
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1134,7 +1092,7 @@ MonoBehaviour:
       name: MoveActionTestSuite
       fullName: MoveActionTestSuite
       resultStatus: 1
-      duration: 0.4651964
+      duration: 0.3726941
       messages: 
       output: 
       stacktrace: 
@@ -1150,7 +1108,7 @@ MonoBehaviour:
       name: MoveTileActionTest
       fullName: MoveActionTestSuite.MoveTileActionTest
       resultStatus: 1
-      duration: 0.2144535
+      duration: 0.146078
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1162,6 +1120,9 @@ MonoBehaviour:
         1, 1
 
         -1
+
+        Accessing
+        list of count 1 at index 0
 
         clearing
 
@@ -1180,7 +1141,7 @@ MonoBehaviour:
       name: MoveTileActionWhenLargeTest
       fullName: MoveActionTestSuite.MoveTileActionWhenLargeTest
       resultStatus: 1
-      duration: 0.1198382
+      duration: 0.1116313
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1192,6 +1153,9 @@ MonoBehaviour:
         6, 1
 
         -6
+
+        Accessing
+        list of count 1 at index 0
 
         clearing
 
@@ -1210,7 +1174,7 @@ MonoBehaviour:
       name: RepelledActionTest
       fullName: MoveActionTestSuite.RepelledActionTest
       resultStatus: 1
-      duration: 0.1171557
+      duration: 0.1111564
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1222,6 +1186,9 @@ MonoBehaviour:
         1, 1
 
         -1
+
+        Accessing
+        list of count 1 at index 0
 
         clearing
 
@@ -1239,9 +1206,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][OverpopulationActionTestSuite][suite]
       name: OverpopulationActionTestSuite
       fullName: OverpopulationActionTestSuite
-      resultStatus: 2
-      duration: 0.1302531
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.0333302
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1256,7 +1223,7 @@ MonoBehaviour:
       name: CanBecomeOverPopulated
       fullName: OverpopulationActionTestSuite.CanBecomeOverPopulated
       resultStatus: 1
-      duration: 0.0646727
+      duration: 0.0073651
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1291,7 +1258,7 @@ MonoBehaviour:
       name: TestPopulationDrop
       fullName: OverpopulationActionTestSuite.TestPopulationDrop
       resultStatus: 1
-      duration: 0.0178217
+      duration: 0.0100288
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1320,9 +1287,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/OverpopulationActionTestSuite/[Tests][OverpopulationActionTestSuite.TestPopulationMoveAndDrop]
       name: TestPopulationMoveAndDrop
       fullName: OverpopulationActionTestSuite.TestPopulationMoveAndDrop
-      resultStatus: 2
-      duration: 0.0340039
-      messages: "  Culture did not split!\r\n  Expected: True\r\n  But was:  False\r\n"
+      resultStatus: 1
+      duration: 0.0115206
+      messages: 
       output: 'setting test board: Board(Clone) (Board)
 
         Board(Clone) (Board)
@@ -1339,13 +1306,12 @@ MonoBehaviour:
 
         -101
 
+        Accessing list of count 1 at index 0
+
         clearing
 
 '
-      stacktrace: 'at OverpopulationActionTestSuite.TestPopulationMoveAndDrop ()
-        [0x00031] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\OverpopulationActionTestSuite.cs:55
-
-'
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1359,7 +1325,7 @@ MonoBehaviour:
       name: TileFoodTestSuite
       fullName: TileFoodTestSuite
       resultStatus: 1
-      duration: 0.064869
+      duration: 0.0639122
       messages: 
       output: 
       stacktrace: 
@@ -1375,7 +1341,7 @@ MonoBehaviour:
       name: CanCalculateProperFoodRateDesert
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateDesert
       resultStatus: 1
-      duration: 0.0064785
+      duration: 0.0063364
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1398,7 +1364,7 @@ MonoBehaviour:
       name: CanCalculateProperFoodRateRainforest
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateRainforest
       resultStatus: 1
-      duration: 0.0075962
+      duration: 0.0073936
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1421,7 +1387,7 @@ MonoBehaviour:
       name: CanCalculateProperFoodRateTundra
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateTundra
       resultStatus: 1
-      duration: 0.0087079
+      duration: 0.0104681
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1444,7 +1410,7 @@ MonoBehaviour:
       name: CanIncreaseFoodPerTick
       fullName: TileFoodTestSuite.CanIncreaseFoodPerTick
       resultStatus: 1
-      duration: 0.012191
+      duration: 0.0107803
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1467,7 +1433,7 @@ MonoBehaviour:
       name: CanPreventAdditionalFood
       fullName: TileFoodTestSuite.CanPreventAdditionalFood
       resultStatus: 1
-      duration: 0.01173
+      duration: 0.0127863
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1490,7 +1456,7 @@ MonoBehaviour:
       name: CanSetFoodToMaxAtStart
       fullName: TileFoodTestSuite.CanSetFoodToMaxAtStart
       resultStatus: 1
-      duration: 0.011627
+      duration: 0.0099082
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1508,18 +1474,25 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1029
       parentUniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
-    m_ResultText: 'OverpopulationActionTestSuite (0.130s)
+    m_ResultText: 'CanGenerateFoodIndicatorAtExpectedInterval (0.155s)
 
       ---
 
-      One or
-      more child tests had errors'
+      setting
+      test board: Board(Clone) (Board)
+
+      Board(Clone) (Board)
+
+      Setup
+      Complete. Culture name is rthqqn (Culture)
+
+      clearing'
     m_ResultStacktrace: 
     m_TestListState:
-      scrollPos: {x: 0, y: 142}
-      m_SelectedIDs: 6eca7a08
-      m_LastClickedID: 142264942
-      m_ExpandedIDs: c6ec6ba1c2778cab18e194b5af90fae76eca7a0803fe443357683e3426ecfc371a04ba42eb084855ffffff7f
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 547c9c3b
+      m_LastClickedID: 1000111188
+      m_ExpandedIDs: c6ec6ba1c2778cab18e194b5af90fae76eca7a0803fe443357683e3426ecfc371a04ba42eb084855a0eedc6effffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1547,7 +1520,7 @@ MonoBehaviour:
       - Uncategorized
     m_SelectedOption: 0
   m_EditModeTestListGUI:
-    m_Window: {fileID: 14}
+    m_Window: {fileID: 12}
     m_NewResultList:
     - id: 1000
       uniqueId: '[My project][suite]'
@@ -1597,188 +1570,7 @@ MonoBehaviour:
       selectedCategoryMask: 0
       availableCategories:
       - Uncategorized
---- !u!114 &15
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
-  m_TitleContent:
-    m_Text: Project
-    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 774
-    width: 1873.6666
-    height: 577.00006
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_SearchFilter:
-    m_NameFilter: 
-    m_ClassNames: []
-    m_AssetLabels: []
-    m_AssetBundleNames: []
-    m_VersionControlStates: []
-    m_SoftLockControlStates: []
-    m_ReferencingInstanceIDs: 
-    m_SceneHandles: 
-    m_ShowAllHits: 0
-    m_SkipHidden: 0
-    m_SearchArea: 1
-    m_Folders:
-    - Assets/Resources/Scripts/Tests
-    m_Globs: []
-    m_OriginalText: 
-  m_ViewMode: 1
-  m_StartGridSize: 64
-  m_LastFolders:
-  - Assets/Resources/Scripts/Tests
-  m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\wenze\Documents\Unity\Eons
-  m_LockTracker:
-    m_IsLocked: 0
-  m_FolderTreeState:
-    scrollPos: {x: 0, y: 259}
-    m_SelectedIDs: 845f0000
-    m_LastClickedID: 24452
-    m_ExpandedIDs: 00000000625f0000645f0000665f0000685f00006a5f00006c5f00006e5f0000705f0000725f0000745f0000765f0000785f00007a5f00007c5f00007e5f0000805f0000825f0000845f000000ca9a3bffffff7f
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 5}
-    m_SearchString: 
-    m_CreateAssetUtility:
-      m_EndAction: {fileID: 0}
-      m_InstanceID: 0
-      m_Path: 
-      m_Icon: {fileID: 0}
-      m_ResourceFile: 
-  m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 00000000625f0000645f0000665f0000685f00006a5f00006c5f00006e5f0000705f0000725f0000745f0000765f0000785f00007a5f00007c5f00007e5f0000805f0000825f0000845f0000
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
-    m_SearchString: 
-    m_CreateAssetUtility:
-      m_EndAction: {fileID: 0}
-      m_InstanceID: 0
-      m_Path: 
-      m_Icon: {fileID: 0}
-      m_ResourceFile: 
-  m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300009e5f0000946c0000ca590000e65b0000a8700000345d00003e5a000080720000565a0000e693ffffc47100004484000038840000b45c0000cc5c000000000000d45b0000
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
-    m_CreateAssetUtility:
-      m_EndAction: {fileID: 0}
-      m_InstanceID: 0
-      m_Path: 
-      m_Icon: {fileID: 0}
-      m_ResourceFile: 
-    m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 64
-  m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 341
---- !u!114 &16
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Inspector
-    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 1874.6667
-    y: 72.66667
-    width: 684.3334
-    height: 1278.3334
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_ObjectsLockedBeforeSerialization: []
-  m_InstanceIDsLockedBeforeSerialization: 
-  m_PreviewResizer:
-    m_CachedPref: -160
-    m_ControlHash: -371814159
-    m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
-  m_GlobalObjectId: 
-  m_InspectorMode: 0
-  m_LockTracker:
-    m_IsLocked: 0
-  m_PreviewWindow: {fileID: 0}
---- !u!114 &17
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1799,9 +1591,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 30
-    width: 242.5
-    height: 382
+    y: 72.66667
+    width: 649
+    height: 844.3333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1811,7 +1603,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: ac86fffff486ffffec89ffffa88bfffff08bffff008fffffca90ffff1291ffff2294ffff5a97ffffa297ffff8299ffff909affffd89affffceabffff94adffffdaadffff56aeffffe6b0ffff2eb1ffff0eb3ffff16b4ffff5eb4ffff3cc5ffffa8c8fffff0c8ffffd0caffffdacbffff22ccffff18ddffff1cdeffff64deffff44e0ffff1ee4ffff66e4ffff46e6ffff00e8ffff48e8ffff28eaffff30ebffff78ebffff58edffff5aeeffffa2eeffff82f0ffff88f1ffffd0f1ffffb0f3ffffaef5fffff6f5ffff82f9ffff38fbffff
+      m_ExpandedIDs: 2038e5ff6a38e5ff6e3ae5ff803be5ffca3be5ffbe3de5ff823fe5ffcc3fe5ff1e43e5ff7653eeffe808efffa80cefffc00cefff0249f0ffdc89f0ff280df2ff400df2ffe828f3ff5c8af3ff4290f3ff5a90f3ff9eb3f4ff740df5ffd411f5ffec11f5ff086bf6ffa69cf6ffe6abf9ffd03afbff4cd2ffff52d2ffff8ad2ffff1ce4ffff0ce5ffff44e5fffff4e6ffff76e8ffffb0e8ffffe6f6ffff38fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1827,7 +1619,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 8}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -1835,7 +1627,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &18
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1855,10 +1647,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 834.6667
+    x: 650
     y: 72.66667
-    width: 1038
-    height: 680.3333
+    width: 1222.6666
+    height: 844.3333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1869,7 +1661,7 @@ MonoBehaviour:
       collapsed: 0
       displayed: 1
       snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: -98.66669, y: -26}
+      snapOffsetDelta: {x: -98.666626, y: -26}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -1912,7 +1704,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 25.333334}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -2060,9 +1852,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 37.106705, y: 35.57893, z: -0.8354417}
+    m_Target: {x: 3.815321, y: 2.4792778, z: 10.815184}
     speed: 2
-    m_Value: {x: 37.106705, y: 35.57893, z: -0.8354417}
+    m_Value: {x: 3.815321, y: 2.4792778, z: 10.815184}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -2113,9 +1905,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.341634
+    m_Target: 19.93511
     speed: 2
-    m_Value: 4.341634
+    m_Value: 19.93511
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -2140,7 +1932,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &19
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2160,10 +1952,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 834.6667
+    x: 650
     y: 72.66667
-    width: 1038
-    height: 680.3333
+    width: 1222.6666
+    height: 844.3333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2210,10 +2002,10 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1038
-      height: 659.3333
-    m_Scale: {x: 0.8109375, y: 0.8109376}
-    m_Translation: {x: 519, y: 329.66666}
+      width: 1222.6666
+      height: 823.3333
+    m_Scale: {x: 0.9552083, y: 0.9552083}
+    m_Translation: {x: 611.3333, y: 411.66666}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -2221,18 +2013,158 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -640
-      y: -406.52533
+      y: -430.97055
       width: 1280
-      height: 813.05066
+      height: 861.9411
     m_MinimalGUI: 1
-  m_defaultScale: 0.8109375
-  m_LastWindowPixelSize: {x: 1557, y: 1020.5}
+  m_defaultScale: 0.9552083
+  m_LastWindowPixelSize: {x: 1834, y: 1266.5}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &20
+--- !u!114 &16
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_TitleContent:
+    m_Text: Project
+    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 938
+    width: 1873.6666
+    height: 413.00006
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_SearchFilter:
+    m_NameFilter: 
+    m_ClassNames: []
+    m_AssetLabels: []
+    m_AssetBundleNames: []
+    m_VersionControlStates: []
+    m_SoftLockControlStates: []
+    m_ReferencingInstanceIDs: 
+    m_SceneHandles: 
+    m_ShowAllHits: 0
+    m_SkipHidden: 0
+    m_SearchArea: 1
+    m_Folders:
+    - Assets/Resources/Prefabs/Board/Inhabitants
+    m_Globs: []
+    m_OriginalText: 
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Resources/Prefabs/Board/Inhabitants
+  m_LastFoldersGridSize: -1
+  m_LastProjectPath: C:\Users\wenze\Documents\Unity\Eons
+  m_LockTracker:
+    m_IsLocked: 0
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 70.99994}
+    m_SelectedIDs: 9a5f0000
+    m_LastClickedID: 24474
+    m_ExpandedIDs: 00000000705f0000725f0000745f0000765f0000785f00007a5f00007c5f00007e5f0000805f0000825f0000845f0000865f0000885f00008a5f00008c5f00008e5f0000b05f0000b25f000000ca9a3bffffff7f
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 10}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_AssetTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 00000000705f0000725f0000745f0000765f0000785f00007a5f00007c5f00007e5f0000805f0000825f0000845f0000865f0000885f00008a5f00008c5f00008e5f0000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_ListAreaState:
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c62300009e5f0000946c0000ca590000e65b0000a8700000345d00003e5a000080720000565a0000e693ffffc47100004484000038840000b45c0000cc5c000000000000d45b0000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 10}
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+    m_NewAssetIndexInList: -1
+    m_ScrollPosition: {x: 0, y: 0}
+    m_GridSize: 64
+  m_SkipHiddenPackages: 0
+  m_DirectoriesAreaWidth: 341
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2253,10 +2185,199 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 774
+    y: 938
     width: 1873.6666
-    height: 577.00006
+    height: 413.00006
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
+--- !u!114 &18
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12071, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Animation
+    m_Image: {fileID: -3237396543322336831, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 688.6667
+    width: 1873.6666
+    height: 662.3334
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_LockTracker:
+    m_IsLocked: 0
+  m_LastSelectedObjectID: -716338
+--- !u!114 &19
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12914, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Animator
+    m_Image: {fileID: 1711060831702674872, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 604
+    width: 1053.5
+    height: 255
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_ViewTransforms:
+    m_KeySerializationHelper:
+    - {fileID: -5183453786790052467, guid: ddb7da4d02db4694b8a60a64ad0c9bce, type: 2}
+    - {fileID: -2208600786771584181, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
+    - {fileID: -3373428290895615280, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
+    - {fileID: 8030200332961901116, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
+    m_ValueSerializationHelper:
+    - e00: 0.89244986
+      e01: 0
+      e02: 0
+      e03: 81.92392
+      e10: 0
+      e11: 0.89244986
+      e12: 0
+      e13: 244.61092
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.9490526
+      e01: 0
+      e02: 0
+      e03: 313.54736
+      e10: 0
+      e11: 0.9490526
+      e12: 0
+      e13: 84.47331
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.8252713
+      e01: 0
+      e02: 0
+      e03: 191.60516
+      e10: 0
+      e11: 0.8252713
+      e12: 0
+      e13: 59.215363
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 1.0032251
+      e01: 0
+      e02: 0
+      e03: 61.791077
+      e10: 0
+      e11: 1.0032251
+      e12: 0
+      e13: 116.017975
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  m_PreviewAnimator: {fileID: 0}
+  m_AnimatorController: {fileID: 9100000, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
+  m_BreadCrumbs:
+  - m_Target: {fileID: -2208600786771584181, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
+    m_ScrollPosition: {x: 0, y: 0}
+  - m_Target: {fileID: -3373428290895615280, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
+    m_ScrollPosition: {x: 0, y: 0}
+  stateMachineGraph: {fileID: 0}
+  stateMachineGraphGUI: {fileID: 0}
+  blendTreeGraph: {fileID: 0}
+  blendTreeGraphGUI: {fileID: 0}
+  m_AutoLiveLink: 1
+  m_MiniTool: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_CurrentEditor: 1
+  m_LayerEditor:
+    m_SelectedLayerIndex: 0
+--- !u!114 &20
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Inspector
+    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1874.6667
+    y: 72.66667
+    width: 684.3334
+    height: 1278.3334
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_ObjectsLockedBeforeSerialization: []
+  m_InstanceIDsLockedBeforeSerialization: 
+  m_PreviewResizer:
+    m_CachedPref: -160
+    m_ControlHash: -371814159
+    m_PrefName: Preview_InspectorPreview
+  m_LastInspectedObjectInstanceID: -1
+  m_LastVerticalScrollValue: 0
+  m_GlobalObjectId: 
+  m_InspectorMode: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_PreviewWindow: {fileID: 0}
