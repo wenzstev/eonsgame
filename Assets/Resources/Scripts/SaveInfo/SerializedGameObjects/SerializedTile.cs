@@ -19,7 +19,7 @@ public struct SerializedTileChars
     public int y;
     public bool isCoast;
     public float absoluteHeight;
-    public float humidity;
+    public float precipitation;
     public float temperature;
 
     public SerializedTileChars(TileChars tc)
@@ -28,7 +28,7 @@ public struct SerializedTileChars
         y = tc.y;
         absoluteHeight = tc.absoluteHeight;
         isCoast = tc.isCoast;
-        humidity = tc.humidity;
+        precipitation = tc.precipitation;
         temperature = tc.temperature;
     }
 }

@@ -23,7 +23,7 @@ public class BoardStats : MonoBehaviour
     {
         get
         {
-            return percentUnderWater * elevationRange;
+            return NormalizedSeaLevel * elevationRange;
         }
     }
 
@@ -34,9 +34,10 @@ public class BoardStats : MonoBehaviour
 
     public float tempVariance = 25f;
 
-    public float percentUnderWater;
+    public float LandRisePoint;
+    public float NormalizedSeaLevel;
     public float globalTemp;
-    public float globalHumidity;
+    public float globalPrecipitation;
     public bool isHemisphere = false;
  
 

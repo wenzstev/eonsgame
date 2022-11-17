@@ -204,7 +204,7 @@ MonoBehaviour:
   y: 0
   isCoast: 0
   absoluteHeight: 0
-  humidity: 0
+  precipitation: 0
   temperature: 0
 --- !u!114 &-1921199301808142677
 MonoBehaviour:
@@ -221,8 +221,8 @@ MonoBehaviour:
   tileType: 0
   tempMin: {r: 0.34591186, g: 1, b: 0.7699876, a: 1}
   tempMax: {r: 1, g: 0.5539104, b: 0.12893075, a: 1}
-  humidityMin: {r: 1, g: 0.7696314, b: 0, a: 1}
-  humidityMax: {r: 0.03166628, g: 1, b: 0, a: 1}
+  precipitationMin: {r: 0, g: 0, b: 0, a: 0}
+  precipitationMax: {r: 0, g: 0, b: 0, a: 0}
   waterColor: {r: 0, g: 0.12593818, b: 1, a: 1}
   frozenColor: {r: 0, g: 0.68605995, b: 1, a: 1}
   tempMinValue: 0
@@ -240,6 +240,7 @@ MonoBehaviour:
   TundraColor: {r: 0.32935798, g: 0.5754717, b: 0.40612617, a: 1}
   IceColor: {r: 1, g: 1, b: 1, a: 1}
   WaterColor: {r: 0.32704395, g: 0.46702567, b: 1, a: 1}
+  BarrenColor: {r: 0.3773585, g: 0.3154992, b: 0.28717217, a: 1}
 --- !u!114 &-9027881737880411949
 MonoBehaviour:
   m_ObjectHideFlags: 0
