@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
@@ -9,7 +9,34 @@ public class PerlinHeightmapGenerator : HeightmapGenerator
     public float lacunarity;
     public float scale;
     public int seed;
-    public AnimationCurve heightModifier;
+
+    public float WaterLevel = .1f;
+    public float AvgAboveWaterElevation = .1f;
+    public float MountainSteepness = 30;
+    public float SeaLevelRiseSteepness = 15;
+
+    public override float LandRisePoint{ get; set; }
+    public override float NormalizedSeaLevel { get { return WaterLevel; } }
+
+
+    CompoundCurve heightModifier;
+    public CompoundCurve HeightModifier
+    {
+        get
+        {
+            if(heightModifier == null)
+            {
+                SigmoidCurve firstComponent = new SigmoidCurve(AvgAboveWaterElevation + WaterLevel, LandRisePoint, -SeaLevelRiseSteepness);
+                ExponentialCurve secondComponent = new ExponentialCurve(30);
+                heightModifier = new CompoundCurve(new List<ICurve>() { firstComponent, secondComponent });
+            }
+            return heightModifier;
+        }
+    }
+
+
+
+    //public AnimationCurve heightModifier;
 
 
     public override float[,] CreateHeightmap(int width, int height)
@@ -53,7 +80,7 @@ public class PerlinHeightmapGenerator : HeightmapGenerator
         {
             for (int x = 0; x < width; x++)
             {
-                points[x, y] = heightModifier.Evaluate(Mathf.InverseLerp(minNoiseValue, maxNoiseValue, points[x, y]));
+                points[x, y] = HeightModifier.GetPointOnCurve(Mathf.InverseLerp(minNoiseValue, maxNoiseValue, points[x, y]));
             }
         }
 

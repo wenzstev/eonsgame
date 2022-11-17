@@ -9,7 +9,7 @@ public class GenerateNewMapFromOptions : MonoBehaviour
 
     public OptionPickerSystem sizePicker;
     public Slider tempSlider;
-    public Slider humiditySlider;
+    public Slider precipitationSlider;
     public Slider waterlevelSlider;
 
     public GameObject BoardTemplate;
@@ -21,7 +21,7 @@ public class GenerateNewMapFromOptions : MonoBehaviour
     {
         var mapSize = sizes[sizePicker.curOption];
         float temperature = tempSlider.value;
-        float humidity = humiditySlider.value;
+        float precipitation = precipitationSlider.value;
         float waterlevel = waterlevelSlider.value;
 
         GameObject boardObj = Instantiate(BoardTemplate);
@@ -30,8 +30,8 @@ public class GenerateNewMapFromOptions : MonoBehaviour
         BoardStats bs = boardObj.GetComponent<BoardStats>();
         bs.height = mapSize.Item2;
         bs.width = mapSize.Item1;
-        bs.percentUnderWater = waterlevel;
-        bs.globalHumidity = humidity;
+        bs.LandRisePoint = waterlevel;
+        bs.globalPrecipitation = precipitation;
         bs.globalTemp = temperature;
 
         boardObj.GetComponent<BoardInputReader>().bg = boardCreator.GetComponent<BoardGenAlgorithm>();

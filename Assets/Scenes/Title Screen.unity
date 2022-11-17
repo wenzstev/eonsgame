@@ -1204,6 +1204,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1152821309358134530, guid: 7ade4593fe5346944aa136430dc16211, type: 3}
+      propertyPath: m_text
+      value: Precipitation
+      objectReference: {fileID: 0}
     - target: {fileID: 1310703004475366009, guid: 7ade4593fe5346944aa136430dc16211, type: 3}
       propertyPath: m_Padding.m_Left
       value: 0
@@ -1716,6 +1720,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9083852209245810916, guid: 7ade4593fe5346944aa136430dc16211, type: 3}
+      propertyPath: m_Name
+      value: PrecipitationText
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ade4593fe5346944aa136430dc16211, type: 3}
 --- !u!1 &1721407022 stripped
@@ -1781,7 +1789,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sizePicker: {fileID: 1721407026}
   tempSlider: {fileID: 1721407025}
-  humiditySlider: {fileID: 1721407024}
+  precipitationSlider: {fileID: 1721407024}
   waterlevelSlider: {fileID: 1721407023}
   BoardTemplate: {fileID: 734804678373380931, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
   MapGeneratorTemplate: {fileID: 16857794732596091, guid: 2a28ac8093d445f40ab20b07479d98c0, type: 3}

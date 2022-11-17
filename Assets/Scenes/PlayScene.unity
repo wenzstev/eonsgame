@@ -198,6 +198,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 592987362054767612, guid: 3e6a8b09f8354c04eb25225f2f2f8761, type: 3}
+      propertyPath: speeds.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 592987362054767612, guid: 3e6a8b09f8354c04eb25225f2f2f8761, type: 3}
+      propertyPath: speeds.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 592987362054767612, guid: 3e6a8b09f8354c04eb25225f2f2f8761, type: 3}
+      propertyPath: speeds.Array.data[1]
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 592987362054767612, guid: 3e6a8b09f8354c04eb25225f2f2f8761, type: 3}
+      propertyPath: speeds.Array.data[2]
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 592987362054767612, guid: 3e6a8b09f8354c04eb25225f2f2f8761, type: 3}
+      propertyPath: speeds.Array.data[3]
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 592987362289591203, guid: 3e6a8b09f8354c04eb25225f2f2f8761, type: 3}
       propertyPath: m_RootOrder
       value: 4

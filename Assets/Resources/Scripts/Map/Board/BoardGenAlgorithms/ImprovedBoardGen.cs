@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ImprovedBoardGen : BoardGenAlgorithm
 {
-    public float humidityDropoff = .1f;
+    public float precipitationDropoff = .1f;
     public float elevationModifier = .05f;
 
     GameObject boardObj;
@@ -15,6 +15,8 @@ public class ImprovedBoardGen : BoardGenAlgorithm
     public override BoardTileRelationship CreateBoard(BoardStats bs)
     {
         HeightmapGenerator heightmapGenerator = GetComponent<HeightmapGenerator>();
+        heightmapGenerator.LandRisePoint = bs.LandRisePoint;
+        bs.NormalizedSeaLevel = heightmapGenerator.NormalizedSeaLevel;
 
         boardObj = bs.gameObject;
         // step 1: heightmap
@@ -24,8 +26,8 @@ public class ImprovedBoardGen : BoardGenAlgorithm
         // step 2: temperature
         CalculateTemperatures(perlinBoard.tiles);
 
-        // step 3: humidity
-        CalculateHumidity(perlinBoard.tiles);
+        // step 3: precipitation
+        CalculatePrecipitation(perlinBoard.tiles);
 
         // step 4: determine tile types (with sprites)
         //DetermineTileTypes(perlinBoard.tiles);
@@ -34,7 +36,7 @@ public class ImprovedBoardGen : BoardGenAlgorithm
     }
 
 
-    void CalculateHumidity(GameObject [,] tiles)
+    void CalculatePrecipitation(GameObject [,] tiles)
     {
         HashSet<GameObject> passedTiles = new HashSet<GameObject>();
         HashSet<GameObject> firstPass = new HashSet<GameObject>();
@@ -59,7 +61,7 @@ public class ImprovedBoardGen : BoardGenAlgorithm
                 var neighbors = Enumerable.Range(0, 8).Select((i) => curTile.GetNeighbor((Direction)i)).Where(e => e != null);
                 HashSet<GameObject> coastNeighbors = neighbors.Where(neighbor => neighbor.GetComponent<TileChars>().isUnderwater == false).ToHashSet();
                 firstPass.UnionWith(coastNeighbors);
-                curTileChars.humidity = boardObj.GetComponent<BoardStats>().globalHumidity;
+                curTileChars.precipitation = boardObj.GetComponent<BoardStats>().globalPrecipitation;
                 passedTiles.Add(curTile.gameObject);
             }
         }
@@ -73,7 +75,7 @@ public class ImprovedBoardGen : BoardGenAlgorithm
                 var neighbors = Enumerable.Range(0, 8).Select(i => curTile.GetNeighbor((Direction)i)).Where(e => e != null);
 
                 var passedNeighbors = neighbors.Where(e => passedTiles.Contains(e));
-                curTile.GetComponent<TileChars>().humidity = passedNeighbors.Average(e => calculateHumidity(curTile.gameObject, e)); // actual humidity calculation is here
+                curTile.GetComponent<TileChars>().precipitation = passedNeighbors.Average(e => calculatePrecipitation(curTile.gameObject, e)); // actual precipitation calculation is here
 
                 secondPass.UnionWith(neighbors.Where(e => !passedNeighbors.Contains(e)));
             }
@@ -85,19 +87,27 @@ public class ImprovedBoardGen : BoardGenAlgorithm
         }
     }
 
-    float calculateHumidity(GameObject curTile, GameObject adjacentTile)
+    float calculatePrecipitation(GameObject curTile, GameObject adjacentTile)
     {
-        float contributedHumidity;
+        float contributedPrecipitation;
         TileChars curTileChars = curTile.GetComponent<TileChars>();
         TileChars adjacentTileChars = adjacentTile.GetComponent<TileChars>();
 
-        contributedHumidity = adjacentTileChars.humidity * (1-humidityDropoff) * Mathf.Clamp(.033f * curTileChars.temperature, 0.01f, 1);
+        SigmoidCurve tempModifierCurve = new SigmoidCurve(1, -25, -.08f);
+        float tempModifier = tempModifierCurve.GetPointOnCurve(curTileChars.temperature);
+        contributedPrecipitation = adjacentTileChars.precipitation * (1 - precipitationDropoff) * tempModifier;
+
+        
+
+        //contributedPrecipitation = adjacentTileChars.precipitation * (1-precipitationDropoff) * Mathf.Clamp(.033f * curTileChars.temperature, 0.01f, 1); // mystery function; rewrite with curves
+
 
         float elevationDistance = Mathf.Max(0, curTileChars.elevation - adjacentTileChars.elevation);
 
-        contributedHumidity -= elevationDistance * elevationModifier; // TODO: should never return negative humidity. also rewrite with my new curve functions?
+        contributedPrecipitation -= elevationDistance * elevationModifier; 
+        contributedPrecipitation = Mathf.Max(0, contributedPrecipitation); // can't have negative precipitation
 
-        return contributedHumidity;
+        return contributedPrecipitation;
     }
 
 

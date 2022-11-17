@@ -27,7 +27,7 @@ public class TileFoodTestSuite : BasicBoardTest
     [Test]
     public void CanCalculateProperFoodRateDesert()
     {
-        TestTileChars.humidity = 25f; // expect contribution of .046f
+        TestTileChars.precipitation = 25f; // expect contribution of .046f
         TestTileChars.temperature = 24f; // expect contribution of .4f
 
         TestTileFood.CalculateFoodRate();
@@ -37,7 +37,7 @@ public class TileFoodTestSuite : BasicBoardTest
     [Test]
     public void CanCalculateProperFoodRateTundra()
     {
-        TestTileChars.humidity = 40f; // expect contribution of .083f
+        TestTileChars.precipitation = 40f; // expect contribution of .083f
         TestTileChars.temperature = 5f; // expect contribution of -.018f
         TestTileFood.CalculateFoodRate();
 
@@ -47,7 +47,7 @@ public class TileFoodTestSuite : BasicBoardTest
     [Test]
     public void CanCalculateProperFoodRateRainforest()
     {
-        TestTileChars.humidity = 318.3406f; // expect contribution of 1f
+        TestTileChars.precipitation = 318.3406f; // expect contribution of 1f
         TestTileChars.temperature = 24.58829f; // expect contribution of .399f
         TestTileFood.CalculateFoodRate();
 
@@ -71,7 +71,7 @@ public class TileFoodTestSuite : BasicBoardTest
     [UnityTest]
     public IEnumerator CanSetFoodToMaxAtStart()
     {
-        TestTileChars.humidity = 40f; // expect contribution of .083f
+        TestTileChars.precipitation = 40f; // expect contribution of .083f
         TestTileChars.temperature = 5f; // expect contribution of -.018f
         TestTileFood.CalculateFoodRate();
         TestTileFood.SetMaxFood();
@@ -82,7 +82,7 @@ public class TileFoodTestSuite : BasicBoardTest
     [UnityTest]
     public IEnumerator CanPreventAdditionalFood()
     {
-        TestTileChars.humidity = 40f; // expect contribution of .083f
+        TestTileChars.precipitation = 40f; // expect contribution of .083f
         TestTileChars.temperature = 5f; // expect contribution of -.018f
         TestTileFood.CalculateFoodRate();
         TestTileFood.SetMaxFood();
