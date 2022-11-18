@@ -27,7 +27,7 @@ public class BasicBoardTest : BasicTest
 
         TestBoardStats.height = 1;
         TestBoardStats.width = 2;
-        TestBoardStats.percentUnderWater = 0;
+        TestBoardStats.LandRisePoint = 0;
 
         TestBoard.CreateBoard();
         PrepMoveTileForBoard();

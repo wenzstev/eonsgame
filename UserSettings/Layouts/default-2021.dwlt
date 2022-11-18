@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1349.3334
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 58
+  controlID: 19
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,12 +139,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1874.6666
+    width: 2112.6667
     height: 1299.3334
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 94
+  controlID: 24
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,12 +164,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1874.6666
+    width: 2112.6667
     height: 865.3333
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 95
+  controlID: 25
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -180,23 +180,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
+  m_Name: SceneHierarchyWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 650
+    width: 576
     height: 865.3333
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 12}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
   - {fileID: 12}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -212,9 +212,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 650
+    x: 576
     y: 0
-    width: 1224.6666
+    width: 1536.6667
     height: 865.3333
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
@@ -234,25 +234,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
     y: 865.3333
-    width: 1874.6666
+    width: 2112.6667
     height: 434.00006
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 16}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
   - {fileID: 18}
   - {fileID: 19}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -268,9 +268,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1874.6666
+    x: 2112.6667
     y: 0
-    width: 685.3334
+    width: 447.33325
     height: 1299.3334
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
@@ -301,14 +301,14 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 72.66667
-    width: 649
+    width: 575
     height: 844.3333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 116
+    ID: 42807
     splitterInitialOffset: 399
     currentActiveSplitter: -1
     realSizes:
@@ -339,9 +339,9 @@ MonoBehaviour:
       uniqueId: '[My project][suite]'
       name: My project
       fullName: My project
-      resultStatus: 2
-      duration: 139.16106
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.1863599
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -355,9 +355,9 @@ MonoBehaviour:
       uniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
       name: Tests.dll
       fullName: C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll
-      resultStatus: 2
-      duration: 138.97945
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.0435608
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -372,7 +372,7 @@ MonoBehaviour:
       name: BoardAgeTestSuite
       fullName: BoardAgeTestSuite
       resultStatus: 1
-      duration: 0.1690392
+      duration: 0.1841984
       messages: 
       output: 
       stacktrace: 
@@ -388,7 +388,7 @@ MonoBehaviour:
       name: CanGetBoardAgeAtStartup
       fullName: BoardAgeTestSuite.CanGetBoardAgeAtStartup
       resultStatus: 1
-      duration: 0.1259006
+      duration: 0.127073
       messages: 
       output: 'clearing
 
@@ -407,7 +407,7 @@ MonoBehaviour:
       name: CanUpdateBoardAge
       fullName: BoardAgeTestSuite.CanUpdateBoardAge
       resultStatus: 1
-      duration: 0.0325898
+      duration: 0.0444443
       messages: 
       output: 'clearing
 
@@ -426,7 +426,7 @@ MonoBehaviour:
       name: CultureFoodStoreTestSuite
       fullName: CultureFoodStoreTestSuite
       resultStatus: 1
-      duration: 0.0743867
+      duration: 0.1180477
       messages: 
       output: 
       stacktrace: 
@@ -442,7 +442,7 @@ MonoBehaviour:
       name: CanCollectFoodFromTile
       fullName: CultureFoodStoreTestSuite.CanCollectFoodFromTile
       resultStatus: 1
-      duration: 0.0284869
+      duration: 0.0535085
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -450,10 +450,6 @@ MonoBehaviour:
 
         Setup
         Complete. Culture name is rthqqn (Culture)
-
-        1, 1
-
-        -1
 
         clearing
 
@@ -472,7 +468,7 @@ MonoBehaviour:
       name: CanConsumeFoodInTurn
       fullName: CultureFoodStoreTestSuite.CanConsumeFoodInTurn
       resultStatus: 1
-      duration: 0.0142527
+      duration: 0.0179754
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -480,15 +476,6 @@ MonoBehaviour:
 
         Setup
         Complete. Culture name is rthqqn (Culture)
-
-        1, 1
-
-        -1
-
-        1,
-        1
-
-        -1
 
         clearing
 
@@ -507,7 +494,7 @@ MonoBehaviour:
       name: CanConsumeFoodMultiplePopulation
       fullName: CultureFoodStoreTestSuite.CanConsumeFoodMultiplePopulation
       resultStatus: 1
-      duration: 0.0137164
+      duration: 0.0226177
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -515,15 +502,6 @@ MonoBehaviour:
 
         Setup
         Complete. Culture name is rthqqn (Culture)
-
-        6, 1
-
-        -6
-
-        6,
-        1
-
-        -6
 
         clearing
 
@@ -542,7 +520,7 @@ MonoBehaviour:
       name: CanReduceFoodOnTile
       fullName: CultureFoodStoreTestSuite.CanReduceFoodOnTile
       resultStatus: 1
-      duration: 0.0139304
+      duration: 0.0175817
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -550,10 +528,6 @@ MonoBehaviour:
 
         Setup
         Complete. Culture name is rthqqn (Culture)
-
-        1, 1
-
-        -1
 
         clearing
 
@@ -572,7 +546,7 @@ MonoBehaviour:
       name: CultureTestSuite
       fullName: CultureTestSuite
       resultStatus: 1
-      duration: 0.0284856
+      duration: 0.0465374
       messages: 
       output: 
       stacktrace: 
@@ -588,7 +562,7 @@ MonoBehaviour:
       name: TestCanMerge
       fullName: CultureTestSuite.TestCanMerge
       resultStatus: 1
-      duration: 0.007722
+      duration: 0.0123865
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -614,7 +588,7 @@ MonoBehaviour:
       name: TestCannotMerge
       fullName: CultureTestSuite.TestCannotMerge
       resultStatus: 1
-      duration: 0.0093782
+      duration: 0.0114833
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -640,7 +614,7 @@ MonoBehaviour:
       name: TestSplitCulture
       fullName: CultureTestSuite.TestSplitCulture
       resultStatus: 1
-      duration: 0.0078948
+      duration: 0.0164797
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -666,7 +640,7 @@ MonoBehaviour:
       name: CurveTestSuite
       fullName: CurveTestSuite
       resultStatus: 1
-      duration: 0.0061867
+      duration: 0.007569
       messages: 
       output: 
       stacktrace: 
@@ -682,7 +656,7 @@ MonoBehaviour:
       name: TestCompoundCurve
       fullName: CurveTestSuite.TestCompoundCurve
       resultStatus: 1
-      duration: 0.0012408
+      duration: 0.0013769
       messages: 
       output: 
       stacktrace: 
@@ -699,7 +673,7 @@ MonoBehaviour:
       name: TestGaussianCurve
       fullName: CurveTestSuite.TestGaussianCurve
       resultStatus: 1
-      duration: 0.0002038
+      duration: 0.0002081
       messages: 
       output: 
       stacktrace: 
@@ -716,7 +690,7 @@ MonoBehaviour:
       name: TestPowerCurve
       fullName: CurveTestSuite.TestPowerCurve
       resultStatus: 1
-      duration: 0.0001444
+      duration: 0.0001613
       messages: 
       output: 
       stacktrace: 
@@ -733,7 +707,7 @@ MonoBehaviour:
       name: TestSigmoidCurve
       fullName: CurveTestSuite.TestSigmoidCurve
       resultStatus: 1
-      duration: 0.0001393
+      duration: 0.0001584
       messages: 
       output: 
       stacktrace: 
@@ -749,9 +723,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][FoodAmountIndicatorTestSuite][suite]
       name: FoodAmountIndicatorTestSuite
       fullName: FoodAmountIndicatorTestSuite
-      resultStatus: 2
-      duration: 138.96901
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.0952397
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -765,10 +739,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/FoodAmountIndicatorTestSuite/[Tests][FoodAmountIndicatorTestSuite.CanDisplayAccurateFoodCount]
       name: CanDisplayAccurateFoodCount
       fullName: FoodAmountIndicatorTestSuite.CanDisplayAccurateFoodCount
-      resultStatus: 2
-      duration: 138.93251
-      messages: "  Indicator is not displaying the correct food!\r\n  Expected: 29.7010002f\r\n 
-        But was:  25.1099491f\r\n"
+      resultStatus: 1
+      duration: 0.0330054
+      messages: 
       output: 'setting test board: Board(Clone) (Board)
 
         Board(Clone) (Board)
@@ -779,14 +752,7 @@ MonoBehaviour:
         clearing
 
 '
-      stacktrace: 'at FoodAmountIndicatorTestSuite+<CanDisplayAccurateFoodCount>d__3.MoveNext
-        () [0x00063] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\FoodAmountIndicatorTestSuite.cs:32
-
-        at
-        UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e]
-        in C:\Users\wenze\Documents\Unity\Eons\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
-
-'
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -800,7 +766,7 @@ MonoBehaviour:
       name: CanGenerateFoodIndicatorAtExpectedInterval
       fullName: FoodAmountIndicatorTestSuite.CanGenerateFoodIndicatorAtExpectedInterval
       resultStatus: 1
-      duration: 0.1548475
+      duration: 0.0321495
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -825,10 +791,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/FoodAmountIndicatorTestSuite/[Tests][FoodAmountIndicatorTestSuite.CanNotDuplicateIndicatorWhenSplitting]
       name: CanNotDuplicateIndicatorWhenSplitting
       fullName: FoodAmountIndicatorTestSuite.CanNotDuplicateIndicatorWhenSplitting
-      resultStatus: 2
-      duration: 0.0375924
-      messages: 'System.IndexOutOfRangeException : Index was outside the bounds of
-        the array.'
+      resultStatus: 1
+      duration: 0.0244858
+      messages: 
       output: 'setting test board: Board(Clone) (Board)
 
         Board(Clone) (Board)
@@ -839,10 +804,7 @@ MonoBehaviour:
         clearing
 
 '
-      stacktrace: "  at FoodAmountIndicatorTestSuite+<CanNotDuplicateIndicatorWhenSplitting>d__4.MoveNext
-        () [0x000f0] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\FoodAmountIndicatorTestSuite.cs:49
-        \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e]
-        in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46 "
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -856,7 +818,7 @@ MonoBehaviour:
       name: InfluenceActionTestSuite
       fullName: InfluenceActionTestSuite
       resultStatus: 1
-      duration: 0.0215431
+      duration: 0.0276379
       messages: 
       output: 
       stacktrace: 
@@ -872,7 +834,7 @@ MonoBehaviour:
       name: CanInfluenceNeighborCulture
       fullName: InfluenceActionTestSuite.CanInfluenceNeighborCulture
       resultStatus: 1
-      duration: 0.0104081
+      duration: 0.0095238
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -880,10 +842,6 @@ MonoBehaviour:
 
         Setup
         Complete. Culture name is rthqqn (Culture)
-
-        1, 1
-
-        -1
 
         clearing
 
@@ -902,7 +860,7 @@ MonoBehaviour:
       name: CanMergeIntoNewCultureIfClose
       fullName: InfluenceActionTestSuite.CanMergeIntoNewCultureIfClose
       resultStatus: 1
-      duration: 0.0085209
+      duration: 0.0130066
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -910,10 +868,6 @@ MonoBehaviour:
 
         Setup
         Complete. Culture name is rthqqn (Culture)
-
-        1, 1
-
-        -1
 
         clearing
 
@@ -932,7 +886,7 @@ MonoBehaviour:
       name: MergeActionTestSuite
       fullName: MergeActionTestSuite
       resultStatus: 1
-      duration: 0.0476063
+      duration: 0.0542349
       messages: 
       output: 
       stacktrace: 
@@ -948,7 +902,7 @@ MonoBehaviour:
       name: CanAddNewCultureToTile
       fullName: MergeActionTestSuite.CanAddNewCultureToTile
       resultStatus: 1
-      duration: 0.011845
+      duration: 0.0096025
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -956,10 +910,6 @@ MonoBehaviour:
 
         Setup
         Complete. Culture name is rthqqn (Culture)
-
-        1, 1
-
-        -1
 
         clearing
 
@@ -978,7 +928,7 @@ MonoBehaviour:
       name: CanCreateAsNewCulture
       fullName: MergeActionTestSuite.CanCreateAsNewCulture
       resultStatus: 1
-      duration: 0.0107762
+      duration: 0.0118987
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -992,11 +942,6 @@ MonoBehaviour:
 
         Culture has
         tileInfo, not changing. Unless this is a test it may be a bug.
-
-        1,
-        1
-
-        -1
 
         clearing
 
@@ -1015,7 +960,7 @@ MonoBehaviour:
       name: CanMergeCultures
       fullName: MergeActionTestSuite.CanMergeCultures
       resultStatus: 1
-      duration: 0.0095131
+      duration: 0.0128906
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1029,11 +974,6 @@ MonoBehaviour:
 
         Culture has
         tileInfo, not changing. Unless this is a test it may be a bug.
-
-        1,
-        1
-
-        -1
 
         clearing
 
@@ -1052,7 +992,7 @@ MonoBehaviour:
       name: CanMergeWithParentCulture
       fullName: MergeActionTestSuite.CanMergeWithParentCulture
       resultStatus: 1
-      duration: 0.0122683
+      duration: 0.0134771
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1069,11 +1009,6 @@ MonoBehaviour:
 
         Culture
         has tileInfo, not changing. Unless this is a test it may be a bug.
-
-        1,
-        1
-
-        -1
 
         clearing
 
@@ -1092,7 +1027,7 @@ MonoBehaviour:
       name: MoveActionTestSuite
       fullName: MoveActionTestSuite
       resultStatus: 1
-      duration: 0.3726941
+      duration: 0.3879023
       messages: 
       output: 
       stacktrace: 
@@ -1108,7 +1043,7 @@ MonoBehaviour:
       name: MoveTileActionTest
       fullName: MoveActionTestSuite.MoveTileActionTest
       resultStatus: 1
-      duration: 0.146078
+      duration: 0.1467356
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1116,13 +1051,6 @@ MonoBehaviour:
 
         Setup
         Complete. Culture name is rthqqn (Culture)
-
-        1, 1
-
-        -1
-
-        Accessing
-        list of count 1 at index 0
 
         clearing
 
@@ -1141,7 +1069,7 @@ MonoBehaviour:
       name: MoveTileActionWhenLargeTest
       fullName: MoveActionTestSuite.MoveTileActionWhenLargeTest
       resultStatus: 1
-      duration: 0.1116313
+      duration: 0.1200077
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1149,13 +1077,6 @@ MonoBehaviour:
 
         Setup
         Complete. Culture name is rthqqn (Culture)
-
-        6, 1
-
-        -6
-
-        Accessing
-        list of count 1 at index 0
 
         clearing
 
@@ -1174,7 +1095,7 @@ MonoBehaviour:
       name: RepelledActionTest
       fullName: MoveActionTestSuite.RepelledActionTest
       resultStatus: 1
-      duration: 0.1111564
+      duration: 0.1152565
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1182,13 +1103,6 @@ MonoBehaviour:
 
         Setup
         Complete. Culture name is rthqqn (Culture)
-
-        1, 1
-
-        -1
-
-        Accessing
-        list of count 1 at index 0
 
         clearing
 
@@ -1207,7 +1121,7 @@ MonoBehaviour:
       name: OverpopulationActionTestSuite
       fullName: OverpopulationActionTestSuite
       resultStatus: 1
-      duration: 0.0333302
+      duration: 0.0326959
       messages: 
       output: 
       stacktrace: 
@@ -1223,7 +1137,7 @@ MonoBehaviour:
       name: CanBecomeOverPopulated
       fullName: OverpopulationActionTestSuite.CanBecomeOverPopulated
       resultStatus: 1
-      duration: 0.0073651
+      duration: 0.00743
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1231,15 +1145,6 @@ MonoBehaviour:
 
         Setup
         Complete. Culture name is rthqqn (Culture)
-
-        101, 1
-
-        -101
-
-        101,
-        1
-
-        -101
 
         clearing
 
@@ -1258,7 +1163,7 @@ MonoBehaviour:
       name: TestPopulationDrop
       fullName: OverpopulationActionTestSuite.TestPopulationDrop
       resultStatus: 1
-      duration: 0.0100288
+      duration: 0.0097917
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1266,10 +1171,6 @@ MonoBehaviour:
 
         Setup
         Complete. Culture name is rthqqn (Culture)
-
-        101, 1
-
-        -101
 
         clearing
 
@@ -1288,7 +1189,7 @@ MonoBehaviour:
       name: TestPopulationMoveAndDrop
       fullName: OverpopulationActionTestSuite.TestPopulationMoveAndDrop
       resultStatus: 1
-      duration: 0.0115206
+      duration: 0.0100788
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1296,17 +1197,6 @@ MonoBehaviour:
 
         Setup
         Complete. Culture name is rthqqn (Culture)
-
-        101, 1
-
-        -101
-
-        101,
-        1
-
-        -101
-
-        Accessing list of count 1 at index 0
 
         clearing
 
@@ -1320,12 +1210,80 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1016
       parentUniqueId: Tests.dll/[Tests][OverpopulationActionTestSuite][suite]
+    - id: 1038
+      uniqueId: Tests.dll/[Tests][PerlinHeightmapGeneratorTestSuite][suite]
+      name: PerlinHeightmapGeneratorTestSuite
+      fullName: PerlinHeightmapGeneratorTestSuite
+      resultStatus: 1
+      duration: 0.0369204
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1047
+      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1039
+      uniqueId: Tests.dll/PerlinHeightmapGeneratorTestSuite/[Tests][PerlinHeightmapGeneratorTestSuite.CanAssignExpectedValues]
+      name: CanAssignExpectedValues
+      fullName: PerlinHeightmapGeneratorTestSuite.CanAssignExpectedValues
+      resultStatus: 1
+      duration: 0.0246437
+      messages: 
+      output: 'val for SigmoidCurve is 0.009485175
+
+        val for ExponentialCurve
+        is 0
+
+        val for SigmoidCurve is 0.03648511
+
+        val for ExponentialCurve
+        is 1E-30
+
+        val for SigmoidCurve is 0.1
+
+        val for ExponentialCurve
+        is 1.073742E-21
+
+        val for SigmoidCurve is 0.1635149
+
+        val
+        for ExponentialCurve is 2.058914E-16
+
+        val for SigmoidCurve is 0.1978026
+
+        val
+        for ExponentialCurve is 9.313226E-10
+
+        val for SigmoidCurve is 0.1999753
+
+        val
+        for ExponentialCurve is 0.001237941
+
+        val for SigmoidCurve is 0.1999974
+
+        val
+        for ExponentialCurve is 0.2146387
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1038
+      parentUniqueId: Tests.dll/[Tests][PerlinHeightmapGeneratorTestSuite][suite]
     - id: 1024
       uniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
       name: TileFoodTestSuite
       fullName: TileFoodTestSuite
       resultStatus: 1
-      duration: 0.0639122
+      duration: 0.0693311
       messages: 
       output: 
       stacktrace: 
@@ -1341,7 +1299,7 @@ MonoBehaviour:
       name: CanCalculateProperFoodRateDesert
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateDesert
       resultStatus: 1
-      duration: 0.0063364
+      duration: 0.0058737
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1364,7 +1322,7 @@ MonoBehaviour:
       name: CanCalculateProperFoodRateRainforest
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateRainforest
       resultStatus: 1
-      duration: 0.0073936
+      duration: 0.0078946
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1387,7 +1345,7 @@ MonoBehaviour:
       name: CanCalculateProperFoodRateTundra
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateTundra
       resultStatus: 1
-      duration: 0.0104681
+      duration: 0.0075963
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1410,7 +1368,7 @@ MonoBehaviour:
       name: CanIncreaseFoodPerTick
       fullName: TileFoodTestSuite.CanIncreaseFoodPerTick
       resultStatus: 1
-      duration: 0.0107803
+      duration: 0.0122481
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1433,7 +1391,7 @@ MonoBehaviour:
       name: CanPreventAdditionalFood
       fullName: TileFoodTestSuite.CanPreventAdditionalFood
       resultStatus: 1
-      duration: 0.0127863
+      duration: 0.0132211
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1456,7 +1414,7 @@ MonoBehaviour:
       name: CanSetFoodToMaxAtStart
       fullName: TileFoodTestSuite.CanSetFoodToMaxAtStart
       resultStatus: 1
-      duration: 0.0099082
+      duration: 0.0156097
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1474,25 +1432,50 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1029
       parentUniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
-    m_ResultText: 'CanGenerateFoodIndicatorAtExpectedInterval (0.155s)
+    m_ResultText: 'CanAssignExpectedValues (0.025s)
 
       ---
 
-      setting
-      test board: Board(Clone) (Board)
+      val for SigmoidCurve
+      is 0.009485175
 
-      Board(Clone) (Board)
+      val for ExponentialCurve is 0
 
-      Setup
-      Complete. Culture name is rthqqn (Culture)
+      val for SigmoidCurve
+      is 0.03648511
 
-      clearing'
+      val for ExponentialCurve is 1E-30
+
+      val for SigmoidCurve
+      is 0.1
+
+      val for ExponentialCurve is 1.073742E-21
+
+      val for SigmoidCurve
+      is 0.1635149
+
+      val for ExponentialCurve is 2.058914E-16
+
+      val for
+      SigmoidCurve is 0.1978026
+
+      val for ExponentialCurve is 9.313226E-10
+
+      val
+      for SigmoidCurve is 0.1999753
+
+      val for ExponentialCurve is 0.001237941
+
+      val
+      for SigmoidCurve is 0.1999974
+
+      val for ExponentialCurve is 0.2146387'
     m_ResultStacktrace: 
     m_TestListState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 547c9c3b
-      m_LastClickedID: 1000111188
-      m_ExpandedIDs: c6ec6ba1c2778cab18e194b5af90fae76eca7a0803fe443357683e3426ecfc371a04ba42eb084855a0eedc6effffff7f
+      scrollPos: {x: 0, y: 129}
+      m_SelectedIDs: 177769fb
+      m_LastClickedID: -76974313
+      m_ExpandedIDs: c6ec6ba1c2778cab18e194b5af90fae76eca7a08ad6ec22103fe443357683e3426ecfc371a04ba42eb084855a0eedc6effffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1592,7 +1575,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 72.66667
-    width: 649
+    width: 575
     height: 844.3333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1601,9 +1584,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 08d8a8ff
       m_LastClickedID: 0
-      m_ExpandedIDs: 2038e5ff6a38e5ff6e3ae5ff803be5ffca3be5ffbe3de5ff823fe5ffcc3fe5ff1e43e5ff7653eeffe808efffa80cefffc00cefff0249f0ffdc89f0ff280df2ff400df2ffe828f3ff5c8af3ff4290f3ff5a90f3ff9eb3f4ff740df5ffd411f5ffec11f5ff086bf6ffa69cf6ffe6abf9ffd03afbff4cd2ffff52d2ffff8ad2ffff1ce4ffff0ce5ffff44e5fffff4e6ffff76e8ffffb0e8ffffe6f6ffff38fbffff
+      m_ExpandedIDs: dcd6a8ff02d8a8ff5257aafffe46bfff0c47bfffecc5c0ff50c7c0ffc247c2ff9444c5ff0647c5ffc0c8c6ffccc8c6ffd4c8c6ffdcc8c6ff6c44cbffb63eddffc43eddff0c3fddff7040ddff3242ddff7a42ddffde43ddffec44ddff3445ddff9846ddff0849ddff5049ddffb44addffb04dddfff84dddff5c4fddff9a50ddffe250ddff4652ddff5a53ddffa253ddff0655ddff2256ddff6a56ddffce57ddffdc58ddff2459ddff7c5addff2afbffff38fbfffff4ffffffa07f0000b47f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1647,9 +1630,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 650
+    x: 576
     y: 72.66667
-    width: 1222.6666
+    width: 1534.6667
     height: 844.3333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1704,7 +1687,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 25.333334}
+      snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -1852,9 +1835,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 3.815321, y: 2.4792778, z: 10.815184}
+    m_Target: {x: 37.613773, y: 23.628735, z: 13.170217}
     speed: 2
-    m_Value: {x: 3.815321, y: 2.4792778, z: 10.815184}
+    m_Value: {x: 37.613773, y: 23.628735, z: 13.170217}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1905,9 +1888,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 19.93511
+    m_Target: 20.728592
     speed: 2
-    m_Value: 19.93511
+    m_Value: 20.728592
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1952,9 +1935,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 650
+    x: 576
     y: 72.66667
-    width: 1222.6666
+    width: 1534.6667
     height: 844.3333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -2002,23 +1985,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1222.6666
+      width: 1534.6667
       height: 823.3333
-    m_Scale: {x: 0.9552083, y: 0.9552083}
-    m_Translation: {x: 611.3333, y: 411.66666}
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 767.3334, y: 411.66666}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -640
-      y: -430.97055
-      width: 1280
-      height: 861.9411
+      x: -767.3334
+      y: -411.66666
+      width: 1534.6667
+      height: 823.3333
     m_MinimalGUI: 1
-  m_defaultScale: 0.9552083
-  m_LastWindowPixelSize: {x: 1834, y: 1266.5}
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 2302, y: 1266.5}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -2046,7 +2029,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 938
-    width: 1873.6666
+    width: 2111.6667
     height: 413.00006
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -2065,36 +2048,36 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Prefabs/Board/Inhabitants
+    - Assets/Resources/Prefabs/Board
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Prefabs/Board/Inhabitants
+  - Assets/Resources/Prefabs/Board
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\wenze\Documents\Unity\Eons
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 70.99994}
-    m_SelectedIDs: 9a5f0000
-    m_LastClickedID: 24474
-    m_ExpandedIDs: 00000000705f0000725f0000745f0000765f0000785f00007a5f00007c5f00007e5f0000805f0000825f0000845f0000865f0000885f00008a5f00008c5f00008e5f0000b05f0000b25f000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: c25c0000
+    m_LastClickedID: 23746
+    m_ExpandedIDs: 00000000b05c0000b25c0000b45c0000b65c0000b85c0000ba5c0000bc5c0000be5c0000c05c0000c25c0000c45c0000c65c0000c85c0000ca5c0000cc5c0000ce5c000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Inhabitants
+      m_OriginalName: Inhabitants
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 24082
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
@@ -2108,7 +2091,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000705f0000725f0000745f0000765f0000785f00007a5f00007c5f00007e5f0000805f0000825f0000845f0000865f0000885f00008a5f00008c5f00008e5f0000
+    m_ExpandedIDs: 00000000b05c0000b25c0000b45c0000b65c0000b85c0000ba5c0000bc5c0000be5c0000c05c0000c25c0000c45c0000c65c0000c85c0000ca5c0000cc5c0000ce5c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2133,8 +2116,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: c23eddff
+    m_LastClickedInstanceID: -2277694
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300009e5f0000946c0000ca590000e65b0000a8700000345d00003e5a000080720000565a0000e693ffffc47100004484000038840000b45c0000cc5c000000000000d45b0000
     m_RenameOverlay:
@@ -2186,7 +2169,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 938
-    width: 1873.6666
+    width: 2111.6667
     height: 413.00006
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -2222,7 +2205,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -716338
+  m_LastSelectedObjectID: -4241666
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -2360,9 +2343,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1874.6667
+    x: 2112.6667
     y: 72.66667
-    width: 684.3334
+    width: 446.33325
     height: 1278.3334
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:

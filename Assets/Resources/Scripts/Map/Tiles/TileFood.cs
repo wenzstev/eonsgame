@@ -17,7 +17,7 @@ public class TileFood : MonoBehaviour
     public float FoodModifier;
 
     CompoundCurve TempCurve;
-    CompoundCurve HumidityCurve;
+    CompoundCurve PrecipitationCurve;
 
 
     // Start is called before the first frame update
@@ -25,7 +25,7 @@ public class TileFood : MonoBehaviour
     {
         tileChars = GetComponent<TileChars>();
         TempCurve = CreateTempCurve();
-        HumidityCurve = CreateHumidityCurve();
+        PrecipitationCurve = CreatePrecipitationCurve();
         CalculateFoodRate();
         SetMaxFood();
         EventManager.StartListening("Tick", OnTick);
@@ -34,9 +34,9 @@ public class TileFood : MonoBehaviour
 
     public float CalculateFoodRate()
     {
- //       Debug.Log($"Temp: {TempCurve.GetPointOnCurve(tileChars.temperature) - .1f} Humidity: {HumidityCurve.GetPointOnCurve(tileChars.humidity)}");
-        float climateModifier = TempCurve.GetPointOnCurve(tileChars.temperature) - .1f + HumidityCurve.GetPointOnCurve(tileChars.humidity);
-        NewFoodPerTick = climateModifier * FoodModifier;
+ //       Debug.Log($"Temp: {TempCurve.GetPointOnCurve(tileChars.temperature) - .1f} Precipitation: {PrecipitationCurve.GetPointOnCurve(tileChars.precipitation)}");
+        float climateModifier = TempCurve.GetPointOnCurve(tileChars.temperature) - .1f + PrecipitationCurve.GetPointOnCurve(tileChars.precipitation);
+        NewFoodPerTick = Mathf.Max(0, climateModifier * FoodModifier);
         return NewFoodPerTick;
     }
 
@@ -47,7 +47,7 @@ public class TileFood : MonoBehaviour
         return new CompoundCurve(new List<ICurve> { gaussComponent, powComponent });
     }
 
-    CompoundCurve CreateHumidityCurve()
+    CompoundCurve CreatePrecipitationCurve()
     {
         SigmoidCurve sigmoidComponent = new SigmoidCurve(1, 100, -.04f);
         PowerCurve powComponent = new PowerCurve(-.5f, 15);

@@ -12,8 +12,8 @@ public class TileDrawer : MonoBehaviour
 
     public Color tempMin;
     public Color tempMax;
-    public Color humidityMin;
-    public Color humidityMax;
+    public Color precipitationMin;
+    public Color precipitationMax;
     public Color waterColor;
     public Color frozenColor;
 
@@ -35,7 +35,8 @@ public class TileDrawer : MonoBehaviour
         BorealForest,
         Tundra,
         Ice,
-        Water
+        Water,
+        Barren
     }
 
     public Color DesertColor;
@@ -49,6 +50,7 @@ public class TileDrawer : MonoBehaviour
     public Color TundraColor;
     public Color IceColor;
     public Color WaterColor;
+    public Color BarrenColor;
 
     BiomeType[,] BiomeTable = new BiomeType[6, 6]
     {
@@ -75,15 +77,15 @@ public class TileDrawer : MonoBehaviour
 
     void DetermineBiomeAndColor()
     {
-        float humidity = tileChars.humidity;
+        float precipitation = tileChars.precipitation;
         float temperature = tileChars.temperature;
 
         int temperatureInt = Mathf.FloorToInt(Mathf.InverseLerp(tempMinValue, tempMaxValue, temperature) * (BiomeTable.GetLength(0)-1));
-        int humidityInt = Mathf.FloorToInt(Mathf.InverseLerp(precipitationMinValue, precipitationMaxValue, humidity) * (BiomeTable.GetLength(1)-1));
+        int precipitationInt = Mathf.FloorToInt(Mathf.InverseLerp(precipitationMinValue, precipitationMaxValue, precipitation) * (BiomeTable.GetLength(1)-1));
 
 
 
-        tileType = tileChars.isUnderwater ? BiomeType.Water : BiomeTable[humidityInt, temperatureInt];
+        tileType = tileChars.precipitation <= 10 ? BiomeType.Barren : tileChars.isUnderwater ? BiomeType.Water : BiomeTable[precipitationInt, temperatureInt];
         
         switch(tileType)
         {
@@ -120,30 +122,10 @@ public class TileDrawer : MonoBehaviour
             case BiomeType.Water:
                 sr.color = WaterColor;
                 break;
+            case BiomeType.Barren:
+                sr.color = BarrenColor;
+                break;
         }
-
-    }
-
-    void SetColorBasedOnChars()
-    {
-        if (tileChars.isFrozenOver)
-        {
-            sr.color = frozenColor;
-            return;
-        }
-        if (tileChars.isUnderwater)
-        {
-            sr.color = waterColor;
-            return;
-        }
-
-        float lerpedTempValue = Mathf.InverseLerp(tempMinValue, tempMaxValue, tileChars.temperature);
-        Color tempColor = Color.Lerp(tempMin, tempMax, lerpedTempValue);
-
-        float lerpedPrecipitationValue = Mathf.InverseLerp(precipitationMinValue, precipitationMaxValue, tileChars.humidity);
-        Color precipitationColor = Color.Lerp(humidityMin, humidityMax, lerpedPrecipitationValue);
-
-        sr.color = Color.Lerp(tempColor, precipitationColor, .9f);
 
     }
 }
