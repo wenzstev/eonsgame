@@ -13,7 +13,8 @@ public class MergeActionTestSuite : CultureInteractionTest
     public void SetUp()
     {
         MonoBehaviour.Destroy(Tile.moveTile.GetComponent<TileDrawer>());
-        Neighbor.Init(Tile.moveTile.GetComponent<Tile>());
+        TestCulture.Init(TestTile, 1);
+        Neighbor.Init(Tile.moveTile.GetComponent<Tile>(), 1);
         Neighbor.transform.parent = TestTile.transform;
     }
 
@@ -33,7 +34,7 @@ public class MergeActionTestSuite : CultureInteractionTest
         ExecuteTurnAndSetCultureTurnUpdates();
 
         Assert.That(TestCultureUpdate.popChange == 1, "Merged Culture didn't have it's population changed!");
-        Assert.That(TestCultureUpdate.newColor == c, "Merged Culture didn't have it's color changed!");
+        Assert.AreEqual(c, TestCultureUpdate.newColor, "Merged Culture didn't have it's color changed!");
         Assert.That(NeighborUpdate.newState == Culture.State.PendingRemoval, "Merging culture isn't slated for removal!");
         Assert.That(NeighborUpdate.popChange == -Neighbor.Population, "Merging culture doesn't have pop set to zero!");
     }

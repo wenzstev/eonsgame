@@ -13,8 +13,7 @@ public class DefaultAction : CultureAction
         // gather food most likely. everything else is kind of a side effect
         // try to gather food. if no food, move? 
 
-        GatherFoodAction AttemptToGatherFood = new GatherFoodAction(culture);
-        AttemptToGatherFood.ExecuteTurn();
+        AttemptToGatherFood();
 
         // tried to gather food, now perform logic
 
@@ -24,21 +23,31 @@ public class DefaultAction : CultureAction
         return turn;
     }
 
+    void AttemptToGatherFood()
+    {
+        if(culture.CultureFoodStore.CurrentFoodStore < culture.CultureFoodStore.MaxFoodStore)
+        {
+            GatherFoodAction gather = new GatherFoodAction(culture);
+            gather.ExecuteTurn();
+        }
+    }
+
     void CheckIfHasSufficientFood()
     {
         float FoodChange = turn.turnUpdates[culture].FoodChange;
         float FoodStore = culture.GetComponent<CultureFoodStore>().CurrentFoodStore;
-        turn.UpdateCulture(culture).newState = FoodStore + FoodChange < culture.Population ? Culture.State.Overpopulated : FoodChange < culture.Population ? Culture.State.SeekingFood : Culture.State.Default;
+        float MaxFoodStore = culture.GetComponent<CultureFoodStore>().MaxFoodStore;
+        turn.UpdateCulture(culture).newState = FoodStore + FoodChange < culture.Population 
+            ? Culture.State.Overpopulated : 
+            FoodStore < MaxFoodStore / 2f && FoodChange < 0 ? 
+            Culture.State.SeekingFood : Culture.State.Default;
     }
 
 
 
     void AddSideEffects()
     {
-        if (Random.value < culture.growPopulationChance)
-        {
-            turn.UpdateCulture(culture).popChange++;
-        }
+        turn.UpdateCulture(culture).popChange += GrowPopulation();
 
         if (Random.value < culture.gainAffinityChance)
         {
@@ -53,6 +62,13 @@ public class DefaultAction : CultureAction
             influenceNeighbors.ExecuteTurn();
         }
 
+    }
+
+    int GrowPopulation()
+    {
+        if (culture.Population == 1) return 0; // can't reproduce if only one person
+        float combinedFertilityRate = culture.FertilityRate * culture.Population;
+        return Random.value < combinedFertilityRate ? 1 : 0;
     }
 
 }

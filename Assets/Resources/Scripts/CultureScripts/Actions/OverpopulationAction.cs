@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OverpopulationAction : CultureAction
 {
-    public float popLossChance = .01f;
+    public float popLossChance = .033f;
     public OverpopulationAction(Culture c) : base(c) { }
 
     public override Turn ExecuteTurn()

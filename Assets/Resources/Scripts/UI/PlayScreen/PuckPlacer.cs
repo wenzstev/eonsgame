@@ -5,6 +5,7 @@ using UnityEngine;
 public class PuckPlacer : MonoBehaviour
 {
     public GameObject culturePuck;
+    public int initialPopulation;
 
 
     private void Start()
@@ -19,7 +20,7 @@ public class PuckPlacer : MonoBehaviour
         {
             GameObject tileClicked = (GameObject)message["tile"];
             GameObject puck = Instantiate(culturePuck, tileClicked.transform.position, Quaternion.identity);
-            puck.GetComponent<Culture>().Init(tileClicked.GetComponent<Tile>());
+            puck.GetComponent<Culture>().Init(tileClicked.GetComponent<Tile>(), initialPopulation);
             EventManager.TriggerEvent("CultureCreated", new Dictionary<string, object> { { "culture", puck.GetComponent<Culture>().name } });
             EventManager.TriggerEvent("CultureUpdated" + puck.GetComponent<Culture>().name, new Dictionary<string, object> { { "culture", puck.GetComponent<Culture>() } });
         }

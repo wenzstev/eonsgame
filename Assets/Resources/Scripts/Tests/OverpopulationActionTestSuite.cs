@@ -53,7 +53,7 @@ public class OverpopulationActionTestSuite : CultureActionTest
 
         CultureTurnUpdate cta = turn.turnUpdates[TestCulture];
         Assert.That(turn.turnUpdates.Count == 2, "Culture did not split!");
-        Assert.AreEqual(100, TestCulture.Population, "Culture did not lose size!");
+        Assert.That(TestCulture.Population <= 101 - TestCulture.minPopTransfer, $"Culture should have lost at least {TestCulture.minPopTransfer} but population is {TestCulture.Population}!");
     }
    
 }
