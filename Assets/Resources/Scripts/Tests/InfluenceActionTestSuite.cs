@@ -9,7 +9,7 @@ public class InfluenceActionTestSuite : CultureInteractionTest
     [SetUp]
     public void SetUp()
     {
-        Neighbor.Init(TestTile);
+        Neighbor.Init(TestTile, 1);
     }
 
     [Test]

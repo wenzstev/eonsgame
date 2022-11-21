@@ -24,7 +24,7 @@ public abstract class CultureActionTest : BasicBoardTest
         NeighborTileObj = TestBoard.GetTile(1, 0);
         NeighborTile = NeighborTileObj.GetComponent<Tile>();
 
-        TestCulture.Init(TestTile);
+        TestCulture.Init(TestTile, 1);
         Debug.Log($"Setup Complete. Culture name is {TestCulture}");
         yield return null;
     }

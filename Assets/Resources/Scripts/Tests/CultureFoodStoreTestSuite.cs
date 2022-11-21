@@ -32,7 +32,6 @@ public class CultureFoodStoreTestSuite : CultureActionTest
         DefaultAction TestDefaultAction = new DefaultAction(TestCulture);
         Turn turn = TestDefaultAction.ExecuteTurn();
         Assert.That(turn.turnUpdates[TestCulture].FoodChange == -1, $"Culture should be reducing food but FoodChange is {turn.turnUpdates[TestCulture].FoodChange}!");
-        Assert.AreEqual(Culture.State.SeekingFood, turn.turnUpdates[TestCulture].newState, "Culture did not switch to seeking food!");
         yield return null;
     }
 
@@ -49,7 +48,6 @@ public class CultureFoodStoreTestSuite : CultureActionTest
         DefaultAction TestDefaultAction = new DefaultAction(TestCulture);
         Turn turn = TestDefaultAction.ExecuteTurn();
         Assert.That(turn.turnUpdates[TestCulture].FoodChange == -6, $"Culture should be reducing food but FoodChange is {turn.turnUpdates[TestCulture].FoodChange}!");
-        Assert.AreEqual(Culture.State.SeekingFood, turn.turnUpdates[TestCulture].newState, "Culture did not switch to seeking food!");
 
         yield return null;
     }

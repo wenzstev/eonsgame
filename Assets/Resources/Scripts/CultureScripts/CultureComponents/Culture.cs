@@ -70,14 +70,14 @@ public class Culture : MonoBehaviour
     [Range(0, .1f)]
     public float sameCultureCutoff = .1f;
 
-    [Range(0, .01f)]
-    public float growPopulationChance = .01f;
+    public float FertilityRate = .00007f;
 
 
     [Range(0, 1)]
     public float gainAffinityChance = .003f;
 
-    public int maxPopTransfer = 1;
+    public int maxPopTransfer = 20;
+    public int minPopTransfer = 5;
 
     [Range(0, .05f)]
     public float influenceRate = .05f;
@@ -111,7 +111,7 @@ public class Culture : MonoBehaviour
     private void Awake()
     {
         EventManager.StartListening("Tick", OnTick);
-        layerMode = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        layerMode = GetComponent<SpriteRenderer>();
         //circleMode = transform.GetChild(1).GetComponent<SpriteRenderer>();
         decisionMaker = new DecisionMaker(this);
     }
@@ -123,11 +123,11 @@ public class Culture : MonoBehaviour
         gameObject.name = name;
     }
 
-    public void Init(Tile t)
+    public void Init(Tile t, int InitialPopulation)
     {
         currentState = State.Default;
         name = getRandomString(5);
-        population = 1;
+        population = InitialPopulation;
         color = new Color(Random.value, Random.value, Random.value);
         transform.SetParent(t.gameObject.transform);
         gameObject.name = name;
@@ -217,8 +217,9 @@ public class Culture : MonoBehaviour
     {
         GameObject newCultureObj = Instantiate(CultureTemplate, transform.position, Quaternion.identity);
         Culture newCulture = newCultureObj.GetComponent<Culture>();
-        newCulture.Init(Tile, color, maxPopTransfer, name);
-        AddPopulation(-maxPopTransfer);
+        int numInNewCulture = Random.Range(minPopTransfer, maxPopTransfer);
+        newCulture.Init(Tile, color, numInNewCulture, name);
+        AddPopulation(-numInNewCulture);
         newCulture.CultureMemory.previousTile = Tile;
         return newCultureObj;
     }
@@ -263,6 +264,8 @@ public class Culture : MonoBehaviour
         {
             DestroyCulture();
         }
+
+        if(num != 0) GetComponentInChildren<PopulationChangeIndicatorGenerator>().CreateIndicator(num);
     }
 
     void SetTileWithoutInformingTileInfo(Tile newTile)

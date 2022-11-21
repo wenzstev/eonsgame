@@ -45,10 +45,10 @@ public class MoveActionTestSuite : CultureActionTest
     [UnityTest]
     public IEnumerator MoveTileActionWhenLargeTest()
     {
-        Turn.HookTurn().UpdateCulture(TestCulture).popChange = 5;
+        Turn.HookTurn().UpdateCulture(TestCulture).popChange = 20;
         Turn.HookTurn().UpdateAllCultures();
 
-        Assert.That(TestCulture.Population == 6, "test culture's population is not 6!");
+        Assert.That(TestCulture.Population == 21, "test culture's population is not 6!");
 
 
         MoveTileAction mta = new MoveTileAction(TestCulture);
@@ -59,7 +59,7 @@ public class MoveActionTestSuite : CultureActionTest
 
         Turn.HookTurn().UpdateAllCultures();
 
-        Assert.That(TestCulture.Population == 5, "TestCulture did not lose population!");
+        Assert.That(TestCulture.Population < TestCulture.maxPopTransfer && TestCulture.Population > TestCulture.minPopTransfer, $"Expected pop to be in range {TestCulture.minPopTransfer}, {TestCulture.maxPopTransfer} but pop is actually {TestCulture.Population}!");
 
         yield return new WaitForSeconds(.1f);
 
@@ -73,7 +73,7 @@ public class MoveActionTestSuite : CultureActionTest
 
         Assert.That(childCulture != null, "Tile child is not a culture object!");
 
-        Assert.That(childCulture.Population == 1, "Child culture's population is not 1!");
+        Assert.That(childCulture.Population < childCulture.maxPopTransfer && childCulture.Population > childCulture.minPopTransfer, $"Expected pop to be in range {childCulture.minPopTransfer}, {childCulture.maxPopTransfer} but pop is actually {childCulture.Population}!");
         Assert.That(childCulture.currentState == Culture.State.NewOnTile, "Child's state is not NewOnTile!");
 
 

@@ -37,7 +37,7 @@ public class FoodAmountIndicatorTestSuite : CultureActionTest
     {
         yield return SetFoodAndPassTime(3);
         GameObject TestFoodAmountIndicator = TestFoodAmountIndicatorGenerator.transform.GetChild(0).gameObject;
-        Turn.HookTurn().UpdateCulture(TestCulture).popChange = 10;
+        Turn.HookTurn().UpdateCulture(TestCulture).popChange = 30;
         Turn.HookTurn().UpdateAllCultures();
         NeighborTile.GetComponent<TileDrawer>().tileType = TileDrawer.BiomeType.Grassland;
         yield return null;
@@ -48,10 +48,11 @@ public class FoodAmountIndicatorTestSuite : CultureActionTest
 
         yield return null;
 
-        Culture TestCultureOffspring = Object.FindObjectsOfType<Culture>().Where(c => c.Population == 1).ToArray()[0];
-
-        Assert.AreEqual(1, TestCulture.GetComponentInChildren<FoodAmountIndicatorGenerator>().transform.childCount, "Culture has wrong number of indicators!");
-        Assert.AreEqual(0, TestCultureOffspring.GetComponentInChildren<FoodAmountIndicatorGenerator>().transform.childCount, "Culture offspring also has indicator!");
+        Culture[] CultureArray = Object.FindObjectsOfType<Culture>();
+        var TestCultureTest = CultureArray.Where(c => c.GetComponentInChildren<FoodAmountIndicatorGenerator>().transform.childCount == 0);
+        Culture[] TestCultureOffspring = TestCultureTest.ToArray();
+        Assert.AreEqual(1, TestCultureOffspring.Length, "There is not a new culture with no indicator!");
+        Assert.AreEqual(1, TestCulture.GetComponentInChildren<FoodAmountIndicatorGenerator>().transform.childCount, "Original Culture has wrong number of indicators!");
     }
 
 
@@ -62,7 +63,7 @@ public class FoodAmountIndicatorTestSuite : CultureActionTest
         
         TestFoodAmountIndicatorGenerator.TicksBetweenIndicators = ticksBetween;
 
-        foreach (var _ in Enumerable.Range(0, ticksBetween)) // simulate a week
+        foreach (var _ in Enumerable.Range(0, ticksBetween)) 
         {
             EventManager.TriggerEvent("Tick", null);
             yield return null;
