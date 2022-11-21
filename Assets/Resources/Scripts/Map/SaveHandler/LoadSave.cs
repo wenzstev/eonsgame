@@ -26,7 +26,7 @@ public class LoadSave : MonoBehaviour
     private void OnDestroy()
     {
         foreach(SaveObject saveObj in FindObjectsOfType<SaveObject>())
-        {
+        {   
             Destroy(saveObj);
         }
     }

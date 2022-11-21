@@ -6,11 +6,15 @@ public class GatherFoodAction : CultureAction
 
     public override Turn ExecuteTurn()
     {
-        TileFood CurrentTileFood = culture.Tile.GetComponent<TileFood>();
-        float GatheredFood = CurrentTileFood.CurFood * culture.FoodGatherRate * .01f;
-        CurrentTileFood.CurFood -= GatheredFood;
-        turn.UpdateCulture(culture).FoodChange += GatheredFood;
+        GatherFood();
         return turn;
     }
 
+    void GatherFood()
+    {
+        TileFood CurrentTileFood = culture.Tile.GetComponent<TileFood>();
+        float GatheredFood = CurrentTileFood.CurFood * culture.FoodGatherRate * culture.Population * .01f;
+        CurrentTileFood.CurFood -= GatheredFood;
+        turn.UpdateCulture(culture).FoodChange += GatheredFood;
+    }
 }

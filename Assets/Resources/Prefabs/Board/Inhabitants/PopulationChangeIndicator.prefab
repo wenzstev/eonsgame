@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7818443324861133336
+--- !u!1 &6291689609695282156
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,25 +8,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7818443324861133339}
-  - component: {fileID: 7818443324861133338}
-  - component: {fileID: 7818443324861133337}
-  - component: {fileID: 7818443324861133340}
-  - component: {fileID: -2465153177165490833}
+  - component: {fileID: 1679417395857063628}
+  - component: {fileID: 1007077206731670203}
+  - component: {fileID: 2621473366634045437}
+  - component: {fileID: -7153268078932469706}
   m_Layer: 0
-  m_Name: FoodAmountIndicator
+  m_Name: PopulationChangeIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &7818443324861133339
+--- !u!224 &1679417395857063628
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7818443324861133336}
+  m_GameObject: {fileID: 6291689609695282156}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -38,15 +37,15 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 5.3123, y: 2.2648}
+  m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!23 &7818443324861133338
+--- !u!23 &1007077206731670203
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7818443324861133336}
+  m_GameObject: {fileID: 6291689609695282156}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -82,13 +81,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7818443324861133337
+--- !u!114 &2621473366634045437
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7818443324861133336}
+  m_GameObject: {fileID: 6291689609695282156}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
@@ -102,7 +101,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 5
+  m_text: +1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5d0e17ac187b34a45aa7692a36e4751d, type: 2}
   m_sharedMaterial: {fileID: -5158354054604493025, guid: 5d0e17ac187b34a45aa7692a36e4751d, type: 2}
@@ -111,8 +110,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278239999
+  m_fontColor: {r: 1, g: 0.78240025, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -172,34 +171,19 @@ MonoBehaviour:
   _SortingLayerID: 0
   _SortingOrder: 0
   m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 7818443324861133338}
+  m_renderer: {fileID: 1007077206731670203}
   m_maskType: 0
---- !u!114 &7818443324861133340
+--- !u!114 &-7153268078932469706
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7818443324861133336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2b955bbaa2e593468c07727d99255a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Amount: 0
-  PositiveColor: {r: 0, g: 1, b: 0.15575981, a: 1}
-  NegativeColor: {r: 1, g: 0, b: 0, a: 1}
---- !u!114 &-2465153177165490833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7818443324861133336}
+  m_GameObject: {fileID: 6291689609695282156}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 30e6318806a0d674099be0d86b73fb17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AnimationTime: 2
-  YMoveAmount: 5
+  AnimationTime: 3
+  YMoveAmount: 3

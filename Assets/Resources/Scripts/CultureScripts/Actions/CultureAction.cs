@@ -15,7 +15,7 @@ public abstract class CultureAction
         culture = c;
         turn = Turn.HookTurn();
         //Debug.Log($"{culture.Population}, {ActionCost}");
-        turn.UpdateCulture(culture).FoodChange = -ActionCost * culture.Population;
+        turn.UpdateCulture(culture).FoodChange = -ActionCost * culture.Population; // doing it here means you lose additional food per turn if you call more than one action per turn
         //Debug.Log(turn.UpdateCulture(culture).FoodChange);
     }
 

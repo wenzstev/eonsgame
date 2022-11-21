@@ -212,11 +212,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 592987362054767612, guid: 3e6a8b09f8354c04eb25225f2f2f8761, type: 3}
       propertyPath: speeds.Array.data[2]
-      value: 0.1
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 592987362054767612, guid: 3e6a8b09f8354c04eb25225f2f2f8761, type: 3}
       propertyPath: speeds.Array.data[3]
-      value: 0.05
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 592987362289591203, guid: 3e6a8b09f8354c04eb25225f2f2f8761, type: 3}
       propertyPath: m_RootOrder
@@ -609,7 +609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5695180184468728085, guid: 3681249039e02d34ebfe54f4c812318a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3681249039e02d34ebfe54f4c812318a, type: 3}
@@ -741,6 +741,10 @@ PrefabInstance:
       propertyPath: culturePuck
       value: 
       objectReference: {fileID: 829645622402238992, guid: 91bd2b84f71ef374188cda7ba741b0a6, type: 3}
+    - target: {fileID: 5217356476487281931, guid: 375657675557a8e45a07bee945f4df02, type: 3}
+      propertyPath: initialPopulation
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 375657675557a8e45a07bee945f4df02, type: 3}
 --- !u!1001 &1389126394050262255
