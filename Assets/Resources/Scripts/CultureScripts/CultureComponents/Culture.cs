@@ -84,6 +84,8 @@ public class Culture : MonoBehaviour
 
     public float FoodGatherRate = 1f;
 
+    public float AffinityGainRate = .01f;
+
 
     public TileDrawer.BiomeType affinity { get; private set; }
 

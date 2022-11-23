@@ -2,7 +2,13 @@
 
 public class GatherFoodAction : CultureAction
 {
-    public GatherFoodAction(Culture c) : base(c) {}
+    AffinityManager affinityManager;
+    TileFood CurrentTileFood;
+    public GatherFoodAction(Culture c) : base(c) 
+    {
+        affinityManager = c.GetComponent<AffinityManager>();
+        CurrentTileFood = culture.Tile.GetComponent<TileFood>();
+    }
 
     public override Turn ExecuteTurn()
     {
@@ -12,9 +18,14 @@ public class GatherFoodAction : CultureAction
 
     void GatherFood()
     {
-        TileFood CurrentTileFood = culture.Tile.GetComponent<TileFood>();
-        float GatheredFood = CurrentTileFood.CurFood * culture.FoodGatherRate * culture.Population * .01f;
+        float GatheredFood = CurrentTileFood.CurFood * culture.FoodGatherRate * culture.Population * .01f * getAffinityModifier();
         CurrentTileFood.CurFood -= GatheredFood;
         turn.UpdateCulture(culture).FoodChange += GatheredFood;
+    }
+
+    float getAffinityModifier()
+    {
+        if(affinityManager != null) return affinityManager.GetAffinity(CurrentTileFood.GetComponent<TileInfo>().tileType);
+        return 1;
     }
 }
