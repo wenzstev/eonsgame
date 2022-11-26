@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: -8479225915283109699}
   - component: {fileID: -5036476844479646280}
   - component: {fileID: 4313577059489789669}
+  - component: {fileID: 3803302301534434715}
   m_Layer: 0
   m_Name: Culture
   m_TagString: Untagged
@@ -201,6 +202,7 @@ MonoBehaviour:
   minPopTransfer: 5
   influenceRate: 0.05
   FoodGatherRate: 1
+  AffinityGainRate: 0.01
   maxOnTile: 0
   currentState: 0
 --- !u!114 &1772662126385334965
@@ -261,6 +263,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.97
+--- !u!114 &3803302301534434715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829645622402238992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9cb92b94a7b987458bb80f6cffdc6d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Asymptote: -1
+  XDisplacement: 2
+  GrowthRate: 0.5
+  YDisplacement: 1
 --- !u!1 &4746160324585285361
 GameObject:
   m_ObjectHideFlags: 0

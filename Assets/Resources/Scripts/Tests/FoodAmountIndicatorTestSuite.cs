@@ -12,6 +12,9 @@ public class FoodAmountIndicatorTestSuite : CultureActionTest
     public IEnumerator SetUpFoodIndicatorTest()
     {
         TestFoodAmountIndicatorGenerator = TestCulture.GetComponentInChildren<FoodAmountIndicatorGenerator>();
+        TestCulture.FoodGatherRate = .01f;
+        TestCulture.GetComponent<CultureFoodStore>().StorePerPopulation = 100;
+        MonoBehaviour.Destroy(TestCulture.GetComponent<AffinityManager>()); // TODO: need a better way to isolate than just randomly destorying components in the setup
         yield return null;
     }
 
@@ -52,7 +55,12 @@ public class FoodAmountIndicatorTestSuite : CultureActionTest
         var TestCultureTest = CultureArray.Where(c => c.GetComponentInChildren<FoodAmountIndicatorGenerator>().transform.childCount == 0);
         Culture[] TestCultureOffspring = TestCultureTest.ToArray();
         Assert.AreEqual(1, TestCultureOffspring.Length, "There is not a new culture with no indicator!");
-        Assert.AreEqual(1, TestCulture.GetComponentInChildren<FoodAmountIndicatorGenerator>().transform.childCount, "Original Culture has wrong number of indicators!");
+        int numFoodIndicators = 0;
+        foreach(Transform child in TestCulture.GetComponentInChildren<FoodAmountIndicatorGenerator>().transform)
+        {
+            if(child.GetComponent<FoodAmountIndicator>() != null) numFoodIndicators++;
+        }
+        Assert.AreEqual(1, numFoodIndicators, "Original Culture has wrong number of indicators!");
     }
 
 
@@ -60,12 +68,14 @@ public class FoodAmountIndicatorTestSuite : CultureActionTest
     {
         TestTile.GetComponent<TileFood>().CurFood = 1000;
         TestTile.GetComponent<TileFood>().NewFoodPerTick = 0;
+
         
         TestFoodAmountIndicatorGenerator.TicksBetweenIndicators = ticksBetween;
 
         foreach (var _ in Enumerable.Range(0, ticksBetween)) 
         {
             EventManager.TriggerEvent("Tick", null);
+            Debug.Log($"Amount is {TestCulture.GetComponent<CultureFoodStore>().CurrentFoodStore}");
             yield return null;
         }
     }

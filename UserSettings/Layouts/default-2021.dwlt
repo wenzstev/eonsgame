@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 0
-    y: 42.666668
-    width: 2560
-    height: 1349.3334
+    x: 1109.3334
+    y: 50
+    width: 1449.3334
+    height: 1340.6667
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
-  m_Maximized: 1
+  m_Maximized: 0
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -44,8 +44,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2560
-    height: 1349.3334
+    width: 1449.3334
+    height: 1340.6667
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
@@ -69,7 +69,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2560
+    width: 1449.3334
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 1329.3334
-    width: 2560
+    y: 1320.6667
+    width: 1449.3334
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -114,12 +114,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 2560
-    height: 1299.3334
+    width: 1449.3334
+    height: 1290.6667
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 119
+  controlID: 49
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,12 +139,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2112.6667
-    height: 1299.3334
+    width: 1196
+    height: 1290.6667
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 18
+  controlID: 60
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,12 +164,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2112.6667
-    height: 782
+    width: 1196
+    height: 748.6667
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 19
+  controlID: 61
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -180,23 +180,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneHierarchyWindow
+  m_Name: TestRunnerWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 586
-    height: 782
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 13}
+    width: 372
+    height: 748.6667
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 13}
   - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -207,23 +207,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: GameView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 586
+    x: 372
     y: 0
-    width: 1526.6667
-    height: 782
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 14}
+    width: 824
+    height: 748.6667
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 14}
   - {fileID: 15}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -240,9 +240,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 782
-    width: 2112.6667
-    height: 517.3334
+    y: 748.6667
+    width: 1196
+    height: 542.00006
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 16}
@@ -268,10 +268,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 2112.6667
+    x: 1196
     y: 0
-    width: 447.33325
-    height: 1299.3334
+    width: 253.33337
+    height: 1290.6667
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
@@ -299,21 +299,21 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 72.66667
-    width: 575
-    height: 844.3333
+    x: 1109.3334
+    y: 80
+    width: 371
+    height: 727.6667
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 42807
+    ID: 898
     splitterInitialOffset: 399
     currentActiveSplitter: -1
     realSizes:
-    - 454
-    - 320
+    - 385.33334
+    - 271.33334
     relativeSizes:
     - 0.58672565
     - 0.41327435
@@ -323,7 +323,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 774
+    lastTotalSize: 656.6667
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -339,9 +339,9 @@ MonoBehaviour:
       uniqueId: '[My project][suite]'
       name: My project
       fullName: My project
-      resultStatus: 1
-      duration: 0.1863599
-      messages: 
+      resultStatus: 2
+      duration: 0.2319437
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -355,9 +355,9 @@ MonoBehaviour:
       uniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
       name: Tests.dll
       fullName: C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll
-      resultStatus: 1
-      duration: 0.0435608
-      messages: 
+      resultStatus: 2
+      duration: 0.0809878
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -372,7 +372,7 @@ MonoBehaviour:
       name: BoardAgeTestSuite
       fullName: BoardAgeTestSuite
       resultStatus: 1
-      duration: 0.1841984
+      duration: 0.1703032
       messages: 
       output: 
       stacktrace: 
@@ -388,7 +388,7 @@ MonoBehaviour:
       name: CanGetBoardAgeAtStartup
       fullName: BoardAgeTestSuite.CanGetBoardAgeAtStartup
       resultStatus: 1
-      duration: 0.127073
+      duration: 0.1255077
       messages: 
       output: 'clearing
 
@@ -407,7 +407,7 @@ MonoBehaviour:
       name: CanUpdateBoardAge
       fullName: BoardAgeTestSuite.CanUpdateBoardAge
       resultStatus: 1
-      duration: 0.0444443
+      duration: 0.0307004
       messages: 
       output: 'clearing
 
@@ -422,11 +422,319 @@ MonoBehaviour:
       parentId: 1001
       parentUniqueId: Tests.dll/[Tests][BoardAgeTestSuite][suite]
     - id: 1004
+      uniqueId: Tests.dll/[Tests][CultureAffinityTestSuite][suite]
+      name: CultureAffinityTestSuite
+      fullName: CultureAffinityTestSuite
+      resultStatus: 2
+      duration: 0.0724399
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1055
+      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1006
+      uniqueId: Tests.dll/CultureAffinityTestSuite/[Tests][CultureAffinityTestSuite.CanDecayAffinityOnBiome]
+      name: CanDecayAffinityOnBiome
+      fullName: CultureAffinityTestSuite.CanDecayAffinityOnBiome
+      resultStatus: 2
+      duration: 0.058227
+      messages: "  Affinity did not gain at expected rate!\r\n  Expected: 0\r\n 
+        But was:  1.02364767f\r\n"
+      output: 'Decaying. Affinity is now 13.81153
+
+        Decaying. Affinity is
+        now 13.51129
+
+        Decaying. Affinity is now 13.2139
+
+        Decaying.
+        Affinity is now 12.9194
+
+        Decaying. Affinity is now 12.62781
+
+        Decaying.
+        Affinity is now 12.33916
+
+        Decaying. Affinity is now 12.0535
+
+        Decaying.
+        Affinity is now 11.77084
+
+        Decaying. Affinity is now 11.49122
+
+        Decaying.
+        Affinity is now 11.21467
+
+        Decaying. Affinity is now 10.94123
+
+        Decaying.
+        Affinity is now 10.67093
+
+        Decaying. Affinity is now 10.4038
+
+        Decaying.
+        Affinity is now 10.13988
+
+        Decaying. Affinity is now 9.87921
+
+        Decaying.
+        Affinity is now 9.621813
+
+        Decaying. Affinity is now 9.367731
+
+        Decaying.
+        Affinity is now 9.117002
+
+        Decaying. Affinity is now 8.86966
+
+        Decaying.
+        Affinity is now 8.625746
+
+        Decaying. Affinity is now 8.385295
+
+        Decaying.
+        Affinity is now 8.148346
+
+        Decaying. Affinity is now 7.914937
+
+        Decaying.
+        Affinity is now 7.685108
+
+        Decaying. Affinity is now 7.458898
+
+        Decaying.
+        Affinity is now 7.236345
+
+        Decaying. Affinity is now 7.01749
+
+        Decaying.
+        Affinity is now 6.802373
+
+        Decaying. Affinity is now 6.591033
+
+        Decaying.
+        Affinity is now 6.38351
+
+        Decaying. Affinity is now 6.179844
+
+        Decaying.
+        Affinity is now 5.980075
+
+        Decaying. Affinity is now 5.784242
+
+        Decaying.
+        Affinity is now 5.592383
+
+        Decaying. Affinity is now 5.404539
+
+        Decaying.
+        Affinity is now 5.220745
+
+        Decaying. Affinity is now 5.04104
+
+        Decaying.
+        Affinity is now 4.865461
+
+        Decaying. Affinity is now 4.694041
+
+        Decaying.
+        Affinity is now 4.526816
+
+        Decaying. Affinity is now 4.363817
+
+        Decaying.
+        Affinity is now 4.205075
+
+        Decaying. Affinity is now 4.050619
+
+        Decaying.
+        Affinity is now 3.900476
+
+        Decaying. Affinity is now 3.754668
+
+        Decaying.
+        Affinity is now 3.613217
+
+        Decaying. Affinity is now 3.476141
+
+        Decaying.
+        Affinity is now 3.343455
+
+        Decaying. Affinity is now 3.215168
+
+        Decaying.
+        Affinity is now 3.091287
+
+        Decaying. Affinity is now 2.971813
+
+        Decaying.
+        Affinity is now 2.856743
+
+        Decaying. Affinity is now 2.746068
+
+        Decaying.
+        Affinity is now 2.639772
+
+        Decaying. Affinity is now 2.537836
+
+        Decaying.
+        Affinity is now 2.44023
+
+        Decaying. Affinity is now 2.34692
+
+        Decaying.
+        Affinity is now 2.257865
+
+        Decaying. Affinity is now 2.173015
+
+        Decaying.
+        Affinity is now 2.092312
+
+        Decaying. Affinity is now 2.015692
+
+        Decaying.
+        Affinity is now 1.94308
+
+        Decaying. Affinity is now 1.874397
+
+        Decaying.
+        Affinity is now 1.809553
+
+        Decaying. Affinity is now 1.748451
+
+        Decaying.
+        Affinity is now 1.690987
+
+        Decaying. Affinity is now 1.637052
+
+        Decaying.
+        Affinity is now 1.586527
+
+        Decaying. Affinity is now 1.539291
+
+        Decaying.
+        Affinity is now 1.495215
+
+        Decaying. Affinity is now 1.454168
+
+        Decaying.
+        Affinity is now 1.416015
+
+        Decaying. Affinity is now 1.380618
+
+        Decaying.
+        Affinity is now 1.347839
+
+        Decaying. Affinity is now 1.317539
+
+        Decaying.
+        Affinity is now 1.289578
+
+        Decaying. Affinity is now 1.263821
+
+        Decaying.
+        Affinity is now 1.240131
+
+        Decaying. Affinity is now 1.218376
+
+        Decaying.
+        Affinity is now 1.198427
+
+        Decaying. Affinity is now 1.180161
+
+        Decaying.
+        Affinity is now 1.163458
+
+        Decaying. Affinity is now 1.148203
+
+        Decaying.
+        Affinity is now 1.134288
+
+        Decaying. Affinity is now 1.121608
+
+        Decaying.
+        Affinity is now 1.110065
+
+        Decaying. Affinity is now 1.099568
+
+        Decaying.
+        Affinity is now 1.090032
+
+        Decaying. Affinity is now 1.081374
+
+        Decaying.
+        Affinity is now 1.07352
+
+        Decaying. Affinity is now 1.0664
+
+        Decaying.
+        Affinity is now 1.059951
+
+        Decaying. Affinity is now 1.054111
+
+        Decaying.
+        Affinity is now 1.048828
+
+        Decaying. Affinity is now 1.044049
+
+        Decaying.
+        Affinity is now 1.039729
+
+        Decaying. Affinity is now 1.035825
+
+        Decaying.
+        Affinity is now 1.032299
+
+        Decaying. Affinity is now 1.029115
+
+        Decaying.
+        Affinity is now 1.026241
+
+'
+      stacktrace: 'at CultureAffinityTestSuite.CanDecayAffinityOnBiome () [0x00016]
+        in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\CultureAffinityTestSuite.cs:45
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Tests.dll/[Tests][CultureAffinityTestSuite][suite]
+    - id: 1005
+      uniqueId: Tests.dll/CultureAffinityTestSuite/[Tests][CultureAffinityTestSuite.CanGainAffinityOnBiome]
+      name: CanGainAffinityOnBiome
+      fullName: CultureAffinityTestSuite.CanGainAffinityOnBiome
+      resultStatus: 2
+      duration: 0.0416218
+      messages: "  Affinity did not gain at expected rate!\r\n  Expected: 4.67643595f\r\n 
+        But was:  23.0264587f\r\n"
+      output: 
+      stacktrace: 'at CultureAffinityTestSuite.CanGainAffinityOnBiome () [0x0000d]
+        in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\CultureAffinityTestSuite.cs:33
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Tests.dll/[Tests][CultureAffinityTestSuite][suite]
+    - id: 1004
       uniqueId: Tests.dll/[Tests][CultureFoodStoreTestSuite][suite]
       name: CultureFoodStoreTestSuite
       fullName: CultureFoodStoreTestSuite
       resultStatus: 1
-      duration: 0.1180477
+      duration: 0.0971836
       messages: 
       output: 
       stacktrace: 
@@ -442,7 +750,7 @@ MonoBehaviour:
       name: CanCollectFoodFromTile
       fullName: CultureFoodStoreTestSuite.CanCollectFoodFromTile
       resultStatus: 1
-      duration: 0.0535085
+      duration: 0.0395088
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -468,7 +776,7 @@ MonoBehaviour:
       name: CanConsumeFoodInTurn
       fullName: CultureFoodStoreTestSuite.CanConsumeFoodInTurn
       resultStatus: 1
-      duration: 0.0179754
+      duration: 0.0156427
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -494,7 +802,7 @@ MonoBehaviour:
       name: CanConsumeFoodMultiplePopulation
       fullName: CultureFoodStoreTestSuite.CanConsumeFoodMultiplePopulation
       resultStatus: 1
-      duration: 0.0226177
+      duration: 0.0185262
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -520,7 +828,7 @@ MonoBehaviour:
       name: CanReduceFoodOnTile
       fullName: CultureFoodStoreTestSuite.CanReduceFoodOnTile
       resultStatus: 1
-      duration: 0.0175817
+      duration: 0.0151666
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -546,7 +854,7 @@ MonoBehaviour:
       name: CultureTestSuite
       fullName: CultureTestSuite
       resultStatus: 1
-      duration: 0.0465374
+      duration: 0.0409108
       messages: 
       output: 
       stacktrace: 
@@ -562,7 +870,7 @@ MonoBehaviour:
       name: TestCanMerge
       fullName: CultureTestSuite.TestCanMerge
       resultStatus: 1
-      duration: 0.0123865
+      duration: 0.0103515
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -588,7 +896,7 @@ MonoBehaviour:
       name: TestCannotMerge
       fullName: CultureTestSuite.TestCannotMerge
       resultStatus: 1
-      duration: 0.0114833
+      duration: 0.0111699
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -614,7 +922,7 @@ MonoBehaviour:
       name: TestSplitCulture
       fullName: CultureTestSuite.TestSplitCulture
       resultStatus: 1
-      duration: 0.0164797
+      duration: 0.0137113
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -640,7 +948,7 @@ MonoBehaviour:
       name: CurveTestSuite
       fullName: CurveTestSuite
       resultStatus: 1
-      duration: 0.007569
+      duration: 0.0090696
       messages: 
       output: 
       stacktrace: 
@@ -656,7 +964,7 @@ MonoBehaviour:
       name: TestCompoundCurve
       fullName: CurveTestSuite.TestCompoundCurve
       resultStatus: 1
-      duration: 0.0013769
+      duration: 0.0016975
       messages: 
       output: 
       stacktrace: 
@@ -673,7 +981,7 @@ MonoBehaviour:
       name: TestGaussianCurve
       fullName: CurveTestSuite.TestGaussianCurve
       resultStatus: 1
-      duration: 0.0002081
+      duration: 0.0002416
       messages: 
       output: 
       stacktrace: 
@@ -690,7 +998,7 @@ MonoBehaviour:
       name: TestPowerCurve
       fullName: CurveTestSuite.TestPowerCurve
       resultStatus: 1
-      duration: 0.0001613
+      duration: 0.0001703
       messages: 
       output: 
       stacktrace: 
@@ -707,7 +1015,7 @@ MonoBehaviour:
       name: TestSigmoidCurve
       fullName: CurveTestSuite.TestSigmoidCurve
       resultStatus: 1
-      duration: 0.0001584
+      duration: 0.000159
       messages: 
       output: 
       stacktrace: 
@@ -724,7 +1032,7 @@ MonoBehaviour:
       name: FoodAmountIndicatorTestSuite
       fullName: FoodAmountIndicatorTestSuite
       resultStatus: 1
-      duration: 0.0952397
+      duration: 0.0937207
       messages: 
       output: 
       stacktrace: 
@@ -740,7 +1048,7 @@ MonoBehaviour:
       name: CanDisplayAccurateFoodCount
       fullName: FoodAmountIndicatorTestSuite.CanDisplayAccurateFoodCount
       resultStatus: 1
-      duration: 0.0330054
+      duration: 0.0356986
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -766,7 +1074,7 @@ MonoBehaviour:
       name: CanGenerateFoodIndicatorAtExpectedInterval
       fullName: FoodAmountIndicatorTestSuite.CanGenerateFoodIndicatorAtExpectedInterval
       resultStatus: 1
-      duration: 0.0321495
+      duration: 0.0247244
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -792,7 +1100,7 @@ MonoBehaviour:
       name: CanNotDuplicateIndicatorWhenSplitting
       fullName: FoodAmountIndicatorTestSuite.CanNotDuplicateIndicatorWhenSplitting
       resultStatus: 1
-      duration: 0.0244858
+      duration: 0.0277581
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -818,7 +1126,7 @@ MonoBehaviour:
       name: InfluenceActionTestSuite
       fullName: InfluenceActionTestSuite
       resultStatus: 1
-      duration: 0.0276379
+      duration: 0.0287446
       messages: 
       output: 
       stacktrace: 
@@ -834,7 +1142,7 @@ MonoBehaviour:
       name: CanInfluenceNeighborCulture
       fullName: InfluenceActionTestSuite.CanInfluenceNeighborCulture
       resultStatus: 1
-      duration: 0.0095238
+      duration: 0.0099045
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -860,7 +1168,7 @@ MonoBehaviour:
       name: CanMergeIntoNewCultureIfClose
       fullName: InfluenceActionTestSuite.CanMergeIntoNewCultureIfClose
       resultStatus: 1
-      duration: 0.0130066
+      duration: 0.0132357
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -886,7 +1194,7 @@ MonoBehaviour:
       name: MergeActionTestSuite
       fullName: MergeActionTestSuite
       resultStatus: 1
-      duration: 0.0542349
+      duration: 0.0531379
       messages: 
       output: 
       stacktrace: 
@@ -902,7 +1210,7 @@ MonoBehaviour:
       name: CanAddNewCultureToTile
       fullName: MergeActionTestSuite.CanAddNewCultureToTile
       resultStatus: 1
-      duration: 0.0096025
+      duration: 0.0090036
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -928,7 +1236,7 @@ MonoBehaviour:
       name: CanCreateAsNewCulture
       fullName: MergeActionTestSuite.CanCreateAsNewCulture
       resultStatus: 1
-      duration: 0.0118987
+      duration: 0.0116506
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -960,7 +1268,7 @@ MonoBehaviour:
       name: CanMergeCultures
       fullName: MergeActionTestSuite.CanMergeCultures
       resultStatus: 1
-      duration: 0.0128906
+      duration: 0.0131667
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -992,7 +1300,7 @@ MonoBehaviour:
       name: CanMergeWithParentCulture
       fullName: MergeActionTestSuite.CanMergeWithParentCulture
       resultStatus: 1
-      duration: 0.0134771
+      duration: 0.0130935
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1027,7 +1335,7 @@ MonoBehaviour:
       name: MoveActionTestSuite
       fullName: MoveActionTestSuite
       resultStatus: 1
-      duration: 0.3879023
+      duration: 0.3863286
       messages: 
       output: 
       stacktrace: 
@@ -1043,7 +1351,7 @@ MonoBehaviour:
       name: MoveTileActionTest
       fullName: MoveActionTestSuite.MoveTileActionTest
       resultStatus: 1
-      duration: 0.1467356
+      duration: 0.1457987
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1069,7 +1377,7 @@ MonoBehaviour:
       name: MoveTileActionWhenLargeTest
       fullName: MoveActionTestSuite.MoveTileActionWhenLargeTest
       resultStatus: 1
-      duration: 0.1200077
+      duration: 0.1193818
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1095,7 +1403,7 @@ MonoBehaviour:
       name: RepelledActionTest
       fullName: MoveActionTestSuite.RepelledActionTest
       resultStatus: 1
-      duration: 0.1152565
+      duration: 0.1154767
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1121,7 +1429,7 @@ MonoBehaviour:
       name: OverpopulationActionTestSuite
       fullName: OverpopulationActionTestSuite
       resultStatus: 1
-      duration: 0.0326959
+      duration: 0.0322419
       messages: 
       output: 
       stacktrace: 
@@ -1137,7 +1445,7 @@ MonoBehaviour:
       name: CanBecomeOverPopulated
       fullName: OverpopulationActionTestSuite.CanBecomeOverPopulated
       resultStatus: 1
-      duration: 0.00743
+      duration: 0.0079595
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1163,7 +1471,7 @@ MonoBehaviour:
       name: TestPopulationDrop
       fullName: OverpopulationActionTestSuite.TestPopulationDrop
       resultStatus: 1
-      duration: 0.0097917
+      duration: 0.0096409
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1189,7 +1497,7 @@ MonoBehaviour:
       name: TestPopulationMoveAndDrop
       fullName: OverpopulationActionTestSuite.TestPopulationMoveAndDrop
       resultStatus: 1
-      duration: 0.0100788
+      duration: 0.0094802
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1215,7 +1523,7 @@ MonoBehaviour:
       name: PerlinHeightmapGeneratorTestSuite
       fullName: PerlinHeightmapGeneratorTestSuite
       resultStatus: 1
-      duration: 0.0369204
+      duration: 0.0062653
       messages: 
       output: 
       stacktrace: 
@@ -1231,44 +1539,9 @@ MonoBehaviour:
       name: CanAssignExpectedValues
       fullName: PerlinHeightmapGeneratorTestSuite.CanAssignExpectedValues
       resultStatus: 1
-      duration: 0.0246437
+      duration: 0.0018537
       messages: 
-      output: 'val for SigmoidCurve is 0.009485175
-
-        val for ExponentialCurve
-        is 0
-
-        val for SigmoidCurve is 0.03648511
-
-        val for ExponentialCurve
-        is 1E-30
-
-        val for SigmoidCurve is 0.1
-
-        val for ExponentialCurve
-        is 1.073742E-21
-
-        val for SigmoidCurve is 0.1635149
-
-        val for
-        ExponentialCurve is 2.058914E-16
-
-        val for SigmoidCurve is 0.1978026
-
-        val
-        for ExponentialCurve is 9.313226E-10
-
-        val for SigmoidCurve is 0.1999753
-
-        val
-        for ExponentialCurve is 0.001237941
-
-        val for SigmoidCurve is 0.1999974
-
-        val
-        for ExponentialCurve is 0.2146387
-
-'
+      output: 
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -1278,12 +1551,122 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1038
       parentUniqueId: Tests.dll/[Tests][PerlinHeightmapGeneratorTestSuite][suite]
+    - id: 1040
+      uniqueId: Tests.dll/[Tests][PopulationChangeIndicatorTestSuite][suite]
+      name: PopulationChangeIndicatorTestSuite
+      fullName: PopulationChangeIndicatorTestSuite
+      resultStatus: 1
+      duration: 0.10975
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1052
+      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1041
+      uniqueId: Tests.dll/PopulationChangeIndicatorTestSuite/[Tests][PopulationChangeIndicatorTestSuite.CanGenerateIndicator]
+      name: CanGenerateIndicator
+      fullName: PopulationChangeIndicatorTestSuite.CanGenerateIndicator
+      resultStatus: 1
+      duration: 0.0961951
+      messages: 
+      output: 'setting test board: Board(Clone) (Board)
+
+        Board(Clone) (Board)
+
+        Setup
+        Complete. Culture name is rthqqn (Culture)
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1040
+      parentUniqueId: Tests.dll/[Tests][PopulationChangeIndicatorTestSuite][suite]
+    - id: 1040
+      uniqueId: Tests.dll/[Tests][PopulationPipMakerTestSuite][suite]
+      name: PopulationPipMakerTestSuite
+      fullName: PopulationPipMakerTestSuite
+      resultStatus: 1
+      duration: 0.0299816
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1050
+      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1041
+      uniqueId: Tests.dll/PopulationPipMakerTestSuite/[Tests][PopulationPipMakerTestSuite.CanAddPip]
+      name: CanAddPip
+      fullName: PopulationPipMakerTestSuite.CanAddPip
+      resultStatus: 1
+      duration: 0.010941
+      messages: 
+      output: 'setting test board: Board(Clone) (Board)
+
+        Board(Clone) (Board)
+
+        Setup
+        Complete. Culture name is rthqqn (Culture)
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1040
+      parentUniqueId: Tests.dll/[Tests][PopulationPipMakerTestSuite][suite]
+    - id: 1042
+      uniqueId: Tests.dll/PopulationPipMakerTestSuite/[Tests][PopulationPipMakerTestSuite.CanRemovePip]
+      name: CanRemovePip
+      fullName: PopulationPipMakerTestSuite.CanRemovePip
+      resultStatus: 1
+      duration: 0.0146324
+      messages: 
+      output: 'setting test board: Board(Clone) (Board)
+
+        Board(Clone) (Board)
+
+        Setup
+        Complete. Culture name is rthqqn (Culture)
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1040
+      parentUniqueId: Tests.dll/[Tests][PopulationPipMakerTestSuite][suite]
     - id: 1024
       uniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
       name: TileFoodTestSuite
       fullName: TileFoodTestSuite
       resultStatus: 1
-      duration: 0.0693311
+      duration: 0.0610096
       messages: 
       output: 
       stacktrace: 
@@ -1299,7 +1682,7 @@ MonoBehaviour:
       name: CanCalculateProperFoodRateDesert
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateDesert
       resultStatus: 1
-      duration: 0.0058737
+      duration: 0.0058137
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1322,7 +1705,7 @@ MonoBehaviour:
       name: CanCalculateProperFoodRateRainforest
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateRainforest
       resultStatus: 1
-      duration: 0.0078946
+      duration: 0.0078569
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1345,7 +1728,7 @@ MonoBehaviour:
       name: CanCalculateProperFoodRateTundra
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateTundra
       resultStatus: 1
-      duration: 0.0075963
+      duration: 0.0073834
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1368,7 +1751,7 @@ MonoBehaviour:
       name: CanIncreaseFoodPerTick
       fullName: TileFoodTestSuite.CanIncreaseFoodPerTick
       resultStatus: 1
-      duration: 0.0122481
+      duration: 0.0112326
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1391,7 +1774,7 @@ MonoBehaviour:
       name: CanPreventAdditionalFood
       fullName: TileFoodTestSuite.CanPreventAdditionalFood
       resultStatus: 1
-      duration: 0.0132211
+      duration: 0.0118801
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1414,7 +1797,7 @@ MonoBehaviour:
       name: CanSetFoodToMaxAtStart
       fullName: TileFoodTestSuite.CanSetFoodToMaxAtStart
       resultStatus: 1
-      duration: 0.0156097
+      duration: 0.0108697
       messages: 
       output: 'setting test board: Board(Clone) (Board)
 
@@ -1432,50 +1815,68 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1029
       parentUniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
-    m_ResultText: 'CanAssignExpectedValues (0.025s)
+    m_ResultText: "CanDecayAffinityOnBiome (0.058s)\n---\nAffinity did not gain at
+      expected rate!\r\n  Expected: 0\r\n  But was:  1.02364767f\n---\nat CultureAffinityTestSuite.CanDecayAffinityOnBiome
+      () [0x00016] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\CultureAffinityTestSuite.cs:45\n---\nDecaying.
+      Affinity is now 13.81153\r\nDecaying. Affinity is now 13.51129\r\nDecaying.
+      Affinity is now 13.2139\r\nDecaying. Affinity is now 12.9194\r\nDecaying. Affinity
+      is now 12.62781\r\nDecaying. Affinity is now 12.33916\r\nDecaying. Affinity
+      is now 12.0535\r\nDecaying. Affinity is now 11.77084\r\nDecaying. Affinity
+      is now 11.49122\r\nDecaying. Affinity is now 11.21467\r\nDecaying. Affinity
+      is now 10.94123\r\nDecaying. Affinity is now 10.67093\r\nDecaying. Affinity
+      is now 10.4038\r\nDecaying. Affinity is now 10.13988\r\nDecaying. Affinity
+      is now 9.87921\r\nDecaying. Affinity is now 9.621813\r\nDecaying. Affinity
+      is now 9.367731\r\nDecaying. Affinity is now 9.117002\r\nDecaying. Affinity
+      is now 8.86966\r\nDecaying. Affinity is now 8.625746\r\nDecaying. Affinity
+      is now 8.385295\r\nDecaying. Affinity is now 8.148346\r\nDecaying. Affinity
+      is now 7.914937\r\nDecaying. Affinity is now 7.685108\r\nDecaying. Affinity
+      is now 7.458898\r\nDecaying. Affinity is now 7.236345\r\nDecaying. Affinity
+      is now 7.01749\r\nDecaying. Affinity is now 6.802373\r\nDecaying. Affinity
+      is now 6.591033\r\nDecaying. Affinity is now 6.38351\r\nDecaying. Affinity
+      is now 6.179844\r\nDecaying. Affinity is now 5.980075\r\nDecaying. Affinity
+      is now 5.784242\r\nDecaying. Affinity is now 5.592383\r\nDecaying. Affinity
+      is now 5.404539\r\nDecaying. Affinity is now 5.220745\r\nDecaying. Affinity
+      is now 5.04104\r\nDecaying. Affinity is now 4.865461\r\nDecaying. Affinity
+      is now 4.694041\r\nDecaying. Affinity is now 4.526816\r\nDecaying. Affinity
+      is now 4.363817\r\nDecaying. Affinity is now 4.205075\r\nDecaying. Affinity
+      is now 4.050619\r\nDecaying. Affinity is now 3.900476\r\nDecaying. Affinity
+      is now 3.754668\r\nDecaying. Affinity is now 3.613217\r\nDecaying. Affinity
+      is now 3.476141\r\nDecaying. Affinity is now 3.343455\r\nDecaying. Affinity
+      is now 3.215168\r\nDecaying. Affinity is now 3.091287\r\nDecaying. Affinity
+      is now 2.971813\r\nDecaying. Affinity is now 2.856743\r\nDecaying. Affinity
+      is now 2.746068\r\nDecaying. Affinity is now 2.639772\r\nDecaying. Affinity
+      is now 2.537836\r\nDecaying. Affinity is now 2.44023\r\nDecaying. Affinity
+      is now 2.34692\r\nDecaying. Affinity is now 2.257865\r\nDecaying. Affinity
+      is now 2.173015\r\nDecaying. Affinity is now 2.092312\r\nDecaying. Affinity
+      is now 2.015692\r\nDecaying. Affinity is now 1.94308\r\nDecaying. Affinity
+      is now 1.874397\r\nDecaying. Affinity is now 1.809553\r\nDecaying. Affinity
+      is now 1.748451\r\nDecaying. Affinity is now 1.690987\r\nDecaying. Affinity
+      is now 1.637052\r\nDecaying. Affinity is now 1.586527\r\nDecaying. Affinity
+      is now 1.539291\r\nDecaying. Affinity is now 1.495215\r\nDecaying. Affinity
+      is now 1.454168\r\nDecaying. Affinity is now 1.416015\r\nDecaying. Affinity
+      is now 1.380618\r\nDecaying. Affinity is now 1.347839\r\nDecaying. Affinity
+      is now 1.317539\r\nDecaying. Affinity is now 1.289578\r\nDecaying. Affinity
+      is now 1.263821\r\nDecaying. Affinity is now 1.240131\r\nDecaying. Affinity
+      is now 1.218376\r\nDecaying. Affinity is now 1.198427\r\nDecaying. Affinity
+      is now 1.180161\r\nDecaying. Affinity is now 1.163458\r\nDecaying. Affinity
+      is now 1.148203\r\nDecaying. Affinity is now 1.134288\r\nDecaying. Affinity
+      is now 1.121608\r\nDecaying. Affinity is now 1.110065\r\nDecaying. Affinity
+      is now 1.099568\r\nDecaying. Affinity is now 1.090032\r\nDecaying. Affinity
+      is now 1.081374\r\nDecaying. Affinity is now 1.07352\r\nDecaying. Affinity
+      is now 1.0664\r\nDecaying. Affinity is now 1.059951\r\nDecaying. Affinity is
+      now 1.054111\r\nDecaying. Affinity is now 1.048828\r\nDecaying. Affinity is
+      now 1.044049\r\nDecaying. Affinity is now 1.039729\r\nDecaying. Affinity is
+      now 1.035825\r\nDecaying. Affinity is now 1.032299\r\nDecaying. Affinity is
+      now 1.029115\r\nDecaying. Affinity is now 1.026241"
+    m_ResultStacktrace: 'at CultureAffinityTestSuite.CanDecayAffinityOnBiome () [0x00016]
+      in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\CultureAffinityTestSuite.cs:45
 
-      ---
-
-      val for SigmoidCurve
-      is 0.009485175
-
-      val for ExponentialCurve is 0
-
-      val for SigmoidCurve
-      is 0.03648511
-
-      val for ExponentialCurve is 1E-30
-
-      val for SigmoidCurve
-      is 0.1
-
-      val for ExponentialCurve is 1.073742E-21
-
-      val for SigmoidCurve
-      is 0.1635149
-
-      val for ExponentialCurve is 2.058914E-16
-
-      val for
-      SigmoidCurve is 0.1978026
-
-      val for ExponentialCurve is 9.313226E-10
-
-      val
-      for SigmoidCurve is 0.1999753
-
-      val for ExponentialCurve is 0.001237941
-
-      val
-      for SigmoidCurve is 0.1999974
-
-      val for ExponentialCurve is 0.2146387'
-    m_ResultStacktrace: 
+'
     m_TestListState:
-      scrollPos: {x: 0, y: 129}
-      m_SelectedIDs: 177769fb
-      m_LastClickedID: -76974313
-      m_ExpandedIDs: c6ec6ba1c2778cab18e194b5af90fae76eca7a08ad6ec22103fe443357683e3426ecfc371a04ba42eb084855a0eedc6effffff7f
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 419d3504
+      m_LastClickedID: 70622529
+      m_ExpandedIDs: bbb6ef82c6ec6ba1c2778cab18e194b54580feccaf90fae781f0ffed5fdcc4f86eca7a08ad6ec22103fe443357683e3426ecfc371a04ba42b71a1147eb084855a0eedc6effffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1573,10 +1974,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 72.66667
-    width: 585
-    height: 761
+    x: 1109.3334
+    y: 80
+    width: 371
+    height: 727.6667
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1584,9 +1985,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 0c5d0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 74d2f5ff4c9efaff529efaff689efaffce34fbff1253fbff821bfcff3225fcffc653fcffcc53fcffe253fcff2eeafcffe6f1fcffee00fdff8c08fdffdc0ffdff1010fdfffcd0fdff066ffeff0c6ffeff226ffeffc2c7ffff24f7ffff32fbffff38fbffff
+      m_ExpandedIDs: e49cffff1c9dffff489effffce9fffff06a0ffff32a1ffffb8a2fffff0a2ffff1ca4ffff0ca5ffff44a5ffff70a6ffffa8a8ffffe0a8ffff0caaffff92abffffcaabfffff6acffffe6adffff1eaeffff4aafffffceb0ffff06b1ffff32b2ffffb6b3ffffeeb3ffff1ab5ffff2eb7ffff66b7ffff92b8ffff16baffff4ebaffff7abbfffffebcffff36bdffff62beffff52bfffff8abfffffc4c0ffff48c2ffff80c2ffffacc3ffff9cc4ffffd4c4ffff00c6ffff82c7ffffbac7ffffe6c8ffff6ccaffffa4caffffd0cbffffc0ccfffff8ccffff24ceffffa8cfffffe0cfffff1ad1ffff2cd3ffff64d3ffff90d4ffff80d5ffffb8d5ffffe4d6fffff8d8ffff30d9ffff5cdaffff4cdbffff84dbffffb0dcffff32deffff6adeffff96dfffff86e0ffffbee0ffffeae1fffffee3ffff36e4ffff62e5ffff78e8ffffb2e8fffff0e9ffff38fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1630,10 +2031,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 586
+    x: 657.3334
     y: 72.66667
-    width: 1524.6667
-    height: 761
+    width: 1453.3335
+    height: 733
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1687,7 +2088,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 25.333334}
+      snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -1835,9 +2236,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 24.797245, y: 26.077448, z: -0.009730969}
+    m_Target: {x: 14.060638, y: 28.650267, z: -0.042920914}
     speed: 2
-    m_Value: {x: 24.797245, y: 26.077448, z: -0.009730969}
+    m_Value: {x: 14.060638, y: 28.650267, z: -0.042920914}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1888,9 +2289,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1.8402128
+    m_Target: 3.2102458
     speed: 2
-    m_Value: 1.8402128
+    m_Value: 3.2102458
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1935,10 +2336,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 586
-    y: 72.66667
-    width: 1524.6667
-    height: 761
+    x: 1481.3334
+    y: 80
+    width: 822
+    height: 727.6667
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1976,7 +2377,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -1985,23 +2386,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1524.6667
-      height: 740
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 762.3334, y: 370}
+      width: 822
+      height: 706.6667
+    m_Scale: {x: 0.6421875, y: 0.6421874}
+    m_Translation: {x: 411, y: 353.3333}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -762.3334
-      y: -370
-      width: 1524.6667
-      height: 740
+      x: -640
+      y: -550.2028
+      width: 1280
+      height: 1100.4056
     m_MinimalGUI: 1
-  m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 2287, y: 1141.5}
+  m_defaultScale: 0.6421875
+  m_LastWindowPixelSize: {x: 1233, y: 1091.5}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -2027,10 +2428,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 854.6667
-    width: 2111.6667
-    height: 496.33337
+    x: 1109.3334
+    y: 828.6667
+    width: 1195
+    height: 521.00006
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2048,22 +2449,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Prefabs/Board/Inhabitants
+    - Assets/Resources/Scripts/CultureScripts/CultureComponents
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Prefabs/Board/Inhabitants
+  - Assets/Resources/Scripts/CultureScripts/CultureComponents
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\wenze\Documents\Unity\Eons
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: fe5f0000
-    m_LastClickedID: 24574
-    m_ExpandedIDs: 00000000c85f0000ca5f0000cc5f0000ce5f0000d05f0000d25f0000d45f0000d65f0000d85f0000da5f0000dc5f0000de5f0000e05f0000e25f0000e45f0000e65f00001460000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 15.666626}
+    m_SelectedIDs: 88600000
+    m_LastClickedID: 24712
+    m_ExpandedIDs: 00000000e85f0000ea5f0000ec5f0000ee5f0000f05f0000f25f0000f45f0000f65f0000f85f0000fa5f0000fc5f0000fe5f0000006000000260000004600000066000003460000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2091,7 +2492,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c85f0000ca5f0000cc5f0000ce5f0000d05f0000d25f0000d45f0000d65f0000d85f0000da5f0000dc5f0000de5f0000e05f0000e25f0000e45f0000e65f0000
+    m_ExpandedIDs: 00000000e85f0000ea5f0000ec5f0000ee5f0000f05f0000f25f0000f45f0000f65f0000f85f0000fa5f0000fc5f0000fe5f000000600000026000000460000006600000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2168,9 +2569,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 854.6667
+    y: 826.6667
     width: 2111.6667
-    height: 496.33337
+    height: 524.3334
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2196,16 +2597,16 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 854.6667
+    y: 826.6667
     width: 2111.6667
-    height: 496.33337
+    height: 524.3334
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -352664
+  m_LastSelectedObjectID: 24750
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -2343,10 +2744,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2112.6667
-    y: 72.66667
-    width: 446.33325
-    height: 1278.3334
+    x: 2305.3335
+    y: 80
+    width: 252.33337
+    height: 1269.6667
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default

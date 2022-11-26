@@ -43,14 +43,14 @@ public class TileFood : MonoBehaviour
     CompoundCurve CreateTempCurve()
     {
         GaussianCurve gaussComponent = new GaussianCurve(.5f, 24, 10);
-        PowerCurve powComponent = new PowerCurve(-2f, 43);
+        PowerCurve powComponent = new PowerCurve(2f, 43, -1, 1);
         return new CompoundCurve(new List<ICurve> { gaussComponent, powComponent });
     }
 
     CompoundCurve CreatePrecipitationCurve()
     {
         SigmoidCurve sigmoidComponent = new SigmoidCurve(1, 100, -.04f);
-        PowerCurve powComponent = new PowerCurve(-.5f, 15);
+        PowerCurve powComponent = new PowerCurve(.5f, 15, -1, 1);
         return new CompoundCurve(new List<ICurve> { sigmoidComponent, powComponent });
     }
 
