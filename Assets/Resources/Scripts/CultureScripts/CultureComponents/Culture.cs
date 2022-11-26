@@ -137,6 +137,7 @@ public class Culture : MonoBehaviour
         SetTile(t);
 
         SetColor(color);
+        GetComponent<AffinityManager>().Initialize();
     }
 
     public void Init(Tile t, Color parent, int pop, string n)
@@ -147,6 +148,7 @@ public class Culture : MonoBehaviour
         name = n;
         gameObject.name = name;
         transform.SetParent(t.gameObject.transform);
+        GetComponent<AffinityManager>().Initialize();
         //SetTileWithoutInformingTileInfo(t);
     }
 

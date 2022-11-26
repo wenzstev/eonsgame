@@ -11,6 +11,10 @@ public class CultureFoodStoreTestSuite : CultureActionTest
     public IEnumerator GetCultureFood()
     {
         TestCultureFoodStore = TestCulture.GetComponent<CultureFoodStore>();
+        TestCultureFoodStore.StorePerPopulation = 100;
+        MonoBehaviour.Destroy(TestCulture.GetComponent<AffinityManager>()); // remove the affinitymanager to prevent cross-pollination of tests 
+        TestCulture.FoodGatherRate = .01f;
+
         yield return null;
     }
 
@@ -62,7 +66,7 @@ public class CultureFoodStoreTestSuite : CultureActionTest
 
     Turn SetFoodAndExecuteTurn()
     {
-        TestTile.GetComponent<TileFood>().CurFood = 1000; // set high to make sure that the culture gathers enough
+        TestTile.GetComponent<TileFood>().CurFood = 1000; 
         GatherFoodAction TestGatherFoodAction = new GatherFoodAction(TestCulture);
         return TestGatherFoodAction.ExecuteTurn();
     }

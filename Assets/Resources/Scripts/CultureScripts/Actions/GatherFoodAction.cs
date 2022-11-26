@@ -1,4 +1,4 @@
-
+using UnityEngine;
 
 public class GatherFoodAction : CultureAction
 {
@@ -18,14 +18,19 @@ public class GatherFoodAction : CultureAction
 
     void GatherFood()
     {
-        float GatheredFood = CurrentTileFood.CurFood * culture.FoodGatherRate * culture.Population * .01f * getAffinityModifier();
+        float GatheredFood = CurrentTileFood.CurFood * culture.FoodGatherRate * culture.Population * GetAndInformAffinity();
         CurrentTileFood.CurFood -= GatheredFood;
         turn.UpdateCulture(culture).FoodChange += GatheredFood;
+        Debug.Log("Affinity rate was " + GetAndInformAffinity());
     }
 
-    float getAffinityModifier()
+    float GetAndInformAffinity()
     {
-        if(affinityManager != null) return affinityManager.GetAffinity(CurrentTileFood.GetComponent<TileInfo>().tileType);
+        if (affinityManager != null)
+        {
+            affinityManager.HarvestedOnBiome(CurrentTileFood.GetComponent<TileInfo>().tileType);
+            return affinityManager.GetAffinity(CurrentTileFood.GetComponent<TileInfo>().tileType);
+        }
         return 1;
     }
 }

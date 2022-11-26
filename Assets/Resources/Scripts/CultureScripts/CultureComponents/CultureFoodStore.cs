@@ -5,6 +5,9 @@ public class CultureFoodStore : MonoBehaviour
 {
     [SerializeField]
     float currentFoodStore;
+
+    public float StorePerPopulation = 10;
+
     public float CurrentFoodStore
     {
         get
@@ -17,7 +20,7 @@ public class CultureFoodStore : MonoBehaviour
     {
         get
         {
-            return GetComponent<Culture>().Population * 100;
+            return GetComponent<Culture>().Population * StorePerPopulation;
         }
     }
 

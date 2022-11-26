@@ -3,19 +3,23 @@ public class PowerCurve : ICurve
 {
     public float Steepness { get; private set; }
     public float XOffset { get; private set; }
-    int isNegative;
 
-    public PowerCurve(float steepness, float xOffset)
+    public float InitialValue = 1;
+    public float PowerMultiplier = 1;
+
+    public PowerCurve(float steepness, float xOffset, float initialValue, float powerMultiplier)
     {
-        isNegative = steepness < 0 ? -1 : 1;
-        Steepness = Mathf.Abs(steepness);
+        if(steepness < 0) Debug.LogError("Cannot create curve of negative exponent raised to a power! Consider making the InitialValue negative instead.");
+        Steepness = steepness;
         XOffset = xOffset;
+        InitialValue = initialValue;
+        PowerMultiplier = powerMultiplier;
     }
+
 
     public float GetPointOnCurve(float x)
     {
         //Debug.Log($"Steepness: {Steepness} XOffset: {XOffset}");
-        //Debug.Log("calculating power point at " + x + ": " + Mathf.Pow(Steepness, x - XOffset));
-        return Mathf.Pow(Steepness, x - XOffset) * isNegative;
+        return InitialValue * Mathf.Pow(Steepness, (x * PowerMultiplier) - XOffset);
     }
 }
