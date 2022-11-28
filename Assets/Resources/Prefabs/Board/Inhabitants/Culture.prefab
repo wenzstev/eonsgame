@@ -201,7 +201,7 @@ MonoBehaviour:
   maxPopTransfer: 20
   minPopTransfer: 5
   influenceRate: 0.05
-  FoodGatherRate: 1
+  FoodGatherRate: 0.00001
   AffinityGainRate: 0.01
   maxOnTile: 0
   currentState: 0
@@ -247,6 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentFoodStore: 0
+  StorePerPopulation: 10
 --- !u!58 &4313577059489789669
 CircleCollider2D:
   m_ObjectHideFlags: 0
