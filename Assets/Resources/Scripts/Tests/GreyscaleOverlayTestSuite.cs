@@ -14,6 +14,7 @@ public class GreyscaleOverlayTestSuite
     {
         TestGreyscaleOverlayObj = new GameObject();
         TestGreyscaleOverlay = TestGreyscaleOverlayObj.AddComponent<GreyscaleOverlay>();
+        TestGreyscaleOverlayObj.AddComponent<SpriteRenderer>();
         GameObject TestSpriteRendererObj = new GameObject();
         TestSpriteRenderer = TestSpriteRendererObj.AddComponent<SpriteRenderer>();
 
@@ -24,7 +25,7 @@ public class GreyscaleOverlayTestSuite
     [Test]
     public void CanMakeImageGreyscale()
     {
-        Assert.AreEqual(new Color(.3f, .5428f, .00176f, 0), TestGreyscaleOverlay.GreyscaleValue, "Color is not expected shade!");
+        Assert.AreEqual(new Color(Color.yellow.grayscale, Color.yellow.grayscale, Color.yellow.grayscale), TestGreyscaleOverlay.GreyscaleColor, "Color is not expected shade!");
     }
 
     [Test]
@@ -40,7 +41,7 @@ public class GreyscaleOverlayTestSuite
         foreach((float, float) testValues in values)
         {
             TestGreyscaleOverlay.SetGreyscalePercentage(testValues.Item1);
-            Assert.AreEqual(testValues.Item2, TestGreyscaleOverlay.PercentCovered, "Greyscale Alpha is not at expected value!");
+            Assert.AreEqual(testValues.Item2, TestGreyscaleOverlay.PercentTransparent, "Greyscale Alpha is not at expected value!");
         }
     }
 

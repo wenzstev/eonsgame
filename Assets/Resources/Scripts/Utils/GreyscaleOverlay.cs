@@ -6,21 +6,19 @@ using System;
 public class GreyscaleOverlay : MonoBehaviour
 {
     SpriteRenderer _greyscaleSprite;
-
-    const float RED_CONSTANT = .3f;
-    const float GREEN_CONSTANT = .59f;
-    const float BLUE_CONSTANT = .11f;
+    Color _greyscaleColor;
+    float currentTransparency;
 
 
     /// <summary>
     /// Returns the greyscale value of the overlay sprite. Based on the color of the initialized sprite.
     /// </summary>
-    public Color GreyscaleValue{
+    public Color GreyscaleColor{
         get 
         {
             try
             {
-                return new Color(_greyscaleSprite.color.r, _greyscaleSprite.color.g, _greyscaleSprite.color.b, 1);
+                return _greyscaleColor;
             }
             catch (NullReferenceException)
             {
@@ -33,11 +31,11 @@ public class GreyscaleOverlay : MonoBehaviour
     /// <summary>
     /// Returns the percentage that the greyscale value has covered the original value. 
     /// </summary>
-    public float PercentCovered 
+    public float PercentTransparent 
     {
         get 
         {
-            return 1f;
+            return currentTransparency;
         }
     }
 
@@ -48,9 +46,8 @@ public class GreyscaleOverlay : MonoBehaviour
     public void Initialize(SpriteRenderer target)
     {
         _greyscaleSprite = GetComponent<SpriteRenderer>();
-        Color targetColor = target.color;
-        Color greyscaleColor = GetGreyscaleColor(targetColor);
-        _greyscaleSprite.color = greyscaleColor;
+        _greyscaleColor = GetGreyscaleColor(target.color);
+        _greyscaleSprite.color = GetGreyscaleColorTransparent(_greyscaleColor, 0);
 
     }
 
@@ -60,12 +57,20 @@ public class GreyscaleOverlay : MonoBehaviour
     /// <param name="percent">Value (between 0 and 1) to determine how grey the overlay is.</param>
     public void SetGreyscalePercentage(float percent)
     {
+        if (percent < 0 || percent > 1) throw new ArgumentException("Percent must be between 0 and 1!");
+        _greyscaleSprite.color = GetGreyscaleColorTransparent(_greyscaleColor, percent);
+        currentTransparency = percent;
 
     }
-    
+
     Color GetGreyscaleColor(Color c)
     {
-        return new Color(c.r * RED_CONSTANT, c.g * GREEN_CONSTANT, c.b * BLUE_CONSTANT);
+        return new Color(c.grayscale, c.grayscale, c.grayscale, 1f);
+    }
+
+    Color GetGreyscaleColorTransparent(Color c, float alpha)
+    {
+        return new Color(c.grayscale, c.grayscale, c.grayscale, alpha);
     }
     
 }
