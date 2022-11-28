@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public delegate void Notify();
+
 public class TileFood : MonoBehaviour
 {
     public float CurFood;
@@ -19,6 +21,10 @@ public class TileFood : MonoBehaviour
     CompoundCurve TempCurve;
     CompoundCurve PrecipitationCurve;
 
+    float percentLowIndicator = .2f;
+
+    public event Notify OnFoodLow;
+
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +40,6 @@ public class TileFood : MonoBehaviour
 
     public float CalculateFoodRate()
     {
- //       Debug.Log($"Temp: {TempCurve.GetPointOnCurve(tileChars.temperature) - .1f} Precipitation: {PrecipitationCurve.GetPointOnCurve(tileChars.precipitation)}");
         float climateModifier = TempCurve.GetPointOnCurve(tileChars.temperature) - .1f + PrecipitationCurve.GetPointOnCurve(tileChars.precipitation);
         NewFoodPerTick = Mathf.Max(0, climateModifier * FoodModifier);
         return NewFoodPerTick;
@@ -63,5 +68,13 @@ public class TileFood : MonoBehaviour
     {
         float newFood = CurFood + NewFoodPerTick;
         CurFood = newFood > MaxFood ? CurFood : newFood;
+    }
+
+    public void FireActionIfLowFood()
+    {
+        if(CurFood < MaxFood * percentLowIndicator)
+        {
+            OnFoodLow?.Invoke();
+        }
     }
 }
