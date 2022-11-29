@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+
 
 public class TileFood : MonoBehaviour
 {
     public float CurFood;
+    public float MAX_FOOD_MODIFIER = 1f;
     public int MaxFood {
         get {
-            return Mathf.FloorToInt(FoodModifier * NewFoodPerTick * 1000f);
+            return Mathf.FloorToInt(FoodModifier * NewFoodPerTick * MAX_FOOD_MODIFIER);
         }
     }
     public float NewFoodPerTick;
@@ -20,8 +23,15 @@ public class TileFood : MonoBehaviour
     CompoundCurve PrecipitationCurve;
 
 
+    public event EventHandler<OnLowFoodEventArgs> OnLowFood;
+
     // Start is called before the first frame update
     void Start()
+    {
+        Initialize();
+    }
+
+    public void Initialize()
     {
         tileChars = GetComponent<TileChars>();
         TempCurve = CreateTempCurve();
@@ -31,10 +41,13 @@ public class TileFood : MonoBehaviour
         EventManager.StartListening("Tick", OnTick);
     }
 
+    public void InitializeEvents()
+    {
+       
+    }
 
     public float CalculateFoodRate()
     {
- //       Debug.Log($"Temp: {TempCurve.GetPointOnCurve(tileChars.temperature) - .1f} Precipitation: {PrecipitationCurve.GetPointOnCurve(tileChars.precipitation)}");
         float climateModifier = TempCurve.GetPointOnCurve(tileChars.temperature) - .1f + PrecipitationCurve.GetPointOnCurve(tileChars.precipitation);
         NewFoodPerTick = Mathf.Max(0, climateModifier * FoodModifier);
         return NewFoodPerTick;
@@ -63,5 +76,17 @@ public class TileFood : MonoBehaviour
     {
         float newFood = CurFood + NewFoodPerTick;
         CurFood = newFood > MaxFood ? CurFood : newFood;
+        FireFoodAction();
+    }
+
+    public void FireFoodAction()
+    {
+        OnLowFood?.Invoke(this, new OnLowFoodEventArgs {MaxFood = this.MaxFood, CurFood = this.CurFood });
+    }
+
+    public class OnLowFoodEventArgs : EventArgs
+    {
+        public float MaxFood;
+        public float CurFood;
     }
 }
