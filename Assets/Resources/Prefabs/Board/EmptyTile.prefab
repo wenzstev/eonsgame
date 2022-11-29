@@ -227,6 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurFood: 0
+  MAX_FOOD_MODIFIER: 1000
   NewFoodPerTick: 0
   FoodModifier: 10
 --- !u!1 &4154498010608124306
@@ -239,6 +240,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4545041132236378882}
   - component: {fileID: 180919951021582499}
+  - component: {fileID: 2843967485867596233}
+  - component: {fileID: 918090353334417201}
   m_Layer: 0
   m_Name: LowFoodIndicator
   m_TagString: Untagged
@@ -313,3 +316,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2843967485867596233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4154498010608124306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a5aa1acdd622445aa4eed94fe0fd8c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &918090353334417201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4154498010608124306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e36786260481ad4b94be7ce3324dba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetSprite: {fileID: 1960078481896472822}
+  _tileFood: {fileID: -4231853352628952675}
