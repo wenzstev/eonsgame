@@ -38,7 +38,7 @@ public class MoveActionTestSuite : CultureActionTest
 
 
         Assert.That(TestCulture.currentState == Culture.State.NewOnTile, "Culture has not returned to default state!");
-        Assert.That(TestCulture.transform.parent == NeighborTile.transform, "Culture has not changed tiles!");
+        Assert.That(TestCulture.transform.parent == NeighborTile.GetComponentInChildren<CultureContainer>().transform, "Culture has not changed tiles!");
         Assert.That(!TestTile.GetComponent<TileInfo>().cultures.ContainsKey(TestCulture.name), "Previous culture is still in old tileinfo!");
     }
 
@@ -65,7 +65,7 @@ public class MoveActionTestSuite : CultureActionTest
 
         Turn.HookTurn().UpdateAllCultures();
 
-        GameObject childCultureObj = NeighborTile.transform.GetChild(1).gameObject;
+        GameObject childCultureObj = NeighborTile.GetComponentInChildren<CultureContainer>().transform.GetChild(0).gameObject;
 
         Assert.That(childCultureObj != null, "child culture is not child of new tile!");
 

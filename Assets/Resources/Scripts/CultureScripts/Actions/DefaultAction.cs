@@ -49,11 +49,6 @@ public class DefaultAction : CultureAction
     {
         turn.UpdateCulture(culture).popChange += GrowPopulation();
 
-        if (Random.value < culture.gainAffinityChance)
-        {
-            turn.UpdateCulture(culture).newAffinity = (int)culture.tileInfo.tileType;
-        }
-
         // need to change influence into a side effect?
         if (culture.tileInfo.cultures.Count > 1 && Random.value < .1f)
         {

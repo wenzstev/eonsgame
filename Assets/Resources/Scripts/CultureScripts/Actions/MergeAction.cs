@@ -4,56 +4,45 @@ using UnityEngine;
 
 public class MergeAction : CultureAction
 {
-    public MergeAction(Culture c) : base(c) { }
+    CultureContainer cultureContainer;
+    GameObject NewTileObj;
+
+    public MergeAction(Culture c) : base(c) 
+    {
+        cultureContainer = culture.GetComponentInParent<CultureContainer>();
+        NewTileObj = culture.GetComponentInParent<Tile>().gameObject;
+    }
 
     public override Turn ExecuteTurn()
     {
         return CombineCultureWithNewTile();
     }
 
-
-
     Turn CombineCultureWithNewTile()
     {
-        GameObject newTileObj = culture.transform.parent.gameObject;
-        TileInfo newTileInfo = newTileObj.GetComponent<TileInfo>();
-        
-        turn.UpdateCulture(culture).newTile = newTileObj.GetComponent<Tile>();
-        turn.UpdateCulture(culture).newState = Culture.State.Default;
+        if (cultureContainer.HasCultureByName(culture)) return AttemptToCombineCultures();
+        return AddForeignCulture();
+    }
 
-        Culture potentialSameCulture = null;
-        if (newTileInfo.cultures.TryGetValue(culture.name, out potentialSameCulture))
+    Turn AttemptToCombineCultures()
+    {
+        if(culture.CanMerge(cultureContainer.GetCultureByName(culture)))
         {
-            //Debug.Log("culture with same name " + culture.name + " found on tile. attempting to merge");
-            if(culture.CanMerge(potentialSameCulture))
-            {
-                //Debug.Log("close enough to merge. merging.");
-                return MergeCultures(potentialSameCulture, culture);
-            }
+            return MergeCultures(cultureContainer.GetCultureByName(culture), culture);
+        }
+        return CreateAsNewCulture();
+    }
 
-            //Debug.Log("too different. generating new culture");
-            SetExistingCulturesToInvaded(newTileInfo);
-            return CreateAsNewCulture();
-            
-        }
-        else if (newTileInfo.cultures.TryGetValue(culture.GetComponent<CultureMemory>().cultureParentName, out potentialSameCulture))
-        {
-            if(culture.CanMerge(potentialSameCulture))
-            {
-                return MergeCultures(culture, potentialSameCulture);
-            }       
-        }
-        
-        if(newTileInfo.cultures.Count > 0)
-        {
-            SetExistingCulturesToInvaded(newTileInfo);
-        }
+    Turn AddForeignCulture()
+    {
+        SetExistingCulturesToInvaded();
+        turn.UpdateCulture(culture).newTile = NewTileObj.GetComponent<Tile>();
         return turn;
     }
 
-    void SetExistingCulturesToInvaded(TileInfo newTileInfo)
+    void SetExistingCulturesToInvaded()
     {
-        foreach (Culture c in newTileInfo.orderToRemoveCulturesIn)
+        foreach (Culture c in cultureContainer.GetAllCultures())
         {
             turn.UpdateCulture(c).newState = Culture.State.Invaded;
         }
@@ -65,8 +54,9 @@ public class MergeAction : CultureAction
 
         string newName = Culture.getRandomString(5);
         turn.UpdateCulture(culture).newName = newName;
-        Debug.Log("changing culture name (" + culture.GetHashCode() + ") but memory is " + culture.GetComponent<CultureMemory>().previousTile);
+        //Debug.Log("changing culture name (" + culture.GetHashCode() + ") but memory is " + culture.GetComponent<CultureMemory>().previousTile);
         EventManager.TriggerEvent("CultureCreated", new Dictionary<string, object> { { "culture", newName } });
+        SetExistingCulturesToInvaded();
         return turn;
     }
 
