@@ -16,7 +16,7 @@ public class MoveTileAction : CultureMoveAction
 
     Turn AttemptMove()
     {
-        if (prospectiveTile == null || prospectiveTile.GetComponent<TileInfo>().tileType == TileDrawer.BiomeType.Water) // this is doing way too much work
+        if (prospectiveTile == null || prospectiveTile.GetComponent<TileChars>().Biome == TileDrawer.BiomeType.Water) // this is doing way too much work
         {
             turn.UpdateCulture(culture).newState = Culture.State.Default;
 

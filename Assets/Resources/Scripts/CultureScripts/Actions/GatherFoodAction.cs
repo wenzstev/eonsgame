@@ -21,15 +21,15 @@ public class GatherFoodAction : CultureAction
         float GatheredFood = CurrentTileFood.CurFood * culture.FoodGatherRate * culture.Population * GetAndInformAffinity();
         CurrentTileFood.CurFood -= GatheredFood;
         turn.UpdateCulture(culture).FoodChange += GatheredFood;
-        Debug.Log("Affinity rate was " + GetAndInformAffinity());
+        //Debug.Log("Affinity rate was " + GetAndInformAffinity());
     }
 
     float GetAndInformAffinity()
     {
         if (affinityManager != null)
         {
-            affinityManager.HarvestedOnBiome(CurrentTileFood.GetComponent<TileInfo>().tileType);
-            return affinityManager.GetAffinity(CurrentTileFood.GetComponent<TileInfo>().tileType);
+            affinityManager.HarvestedOnBiome(CurrentTileFood.GetComponent<TileChars>().Biome);
+            return affinityManager.GetAffinity(CurrentTileFood.GetComponent<TileChars>().Biome);
         }
         return 1;
     }

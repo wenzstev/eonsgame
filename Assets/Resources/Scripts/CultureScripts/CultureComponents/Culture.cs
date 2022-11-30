@@ -73,9 +73,6 @@ public class Culture : MonoBehaviour
     public float FertilityRate = .00007f;
 
 
-    [Range(0, 1)]
-    public float gainAffinityChance = .003f;
-
     public int maxPopTransfer = 20;
     public int minPopTransfer = 5;
 
@@ -86,10 +83,6 @@ public class Culture : MonoBehaviour
 
     public float AffinityGainRate = .01f;
 
-
-    public TileDrawer.BiomeType affinity { get; private set; }
-
-    public int maxOnTile;
 
 
 
@@ -181,7 +174,6 @@ public class Culture : MonoBehaviour
 
         ChangeState(t.newState);
 
-        if (t.newAffinity > 0) GainAffinity(t.newAffinity);
         if (t.newTile != null) SetTile(t.newTile); // maybe give them some offscreen placeholder tile?
         
         CultureFoodStore.AlterFoodStore(t.FoodChange);
@@ -207,15 +199,6 @@ public class Culture : MonoBehaviour
         }
         currentState = newState;
     }
-
-    private void GainAffinity(int newAffinity)
-    {
-        affinity = (TileDrawer.BiomeType) newAffinity;
-        maxOnTile = tileInfo.tileType == affinity ? tileInfo.popBase + 2 : tileInfo.popBase;
-        tileInfo.UpdateCultureSurvivability();
-        tileInfo.UpdateMaxOnTile(this);
-    }
-
 
     public GameObject SplitCultureFromParent() // creates new culture group from parent
     {
@@ -285,6 +268,8 @@ public class Culture : MonoBehaviour
         {
             tileInfo.RemoveCulture(this);
         }
+
+
 
         if (newTile.gameObject != Tile.moveTile) // move tile is a special tile that holds all moving cultures, can't add it to tileinfo because there will be more than one of the same culture
         {

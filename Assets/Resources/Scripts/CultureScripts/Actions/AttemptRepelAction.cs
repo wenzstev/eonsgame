@@ -18,7 +18,8 @@ public class AttemptRepelAction : CultureAction
             if (c.currentState == Culture.State.Invader)
             {
                 // ability to repel is function of population and affinity (and later tech)
-                float hasAffinityAdvantage = c.affinity == culture.affinity ? 0 : .2f;
+                //TODO: re-add affinity information so that repel ability is function of new affinity
+                float hasAffinityAdvantage = 0;
                 float popAdvantage = ((float)culture.Population - c.Population) / 10f;
                 float repelThreshold = .6f + hasAffinityAdvantage + popAdvantage;
                 //Debug.Log("repel threshold = .6 + " + hasAffinityAdvantage + " + " + popAdvantage);

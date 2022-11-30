@@ -5,13 +5,7 @@ using UnityEngine;
 
 public class TileInfo : MonoBehaviour
 {
-    public TileDrawer.BiomeType tileType
-    {
-        get
-        {
-            return GetComponent<TileDrawer>().tileType;
-        }
-    }
+
     public Dictionary<string, Culture> cultures;
     public int popBase;
     public int currentMaxPopulation;
@@ -44,16 +38,6 @@ public class TileInfo : MonoBehaviour
         orderToRemoveCulturesIn = new List<Culture>();
     }
 
-    public void UpdateMaxOnTile(Culture c)
-    {
-        if(!cultures.ContainsKey(c.name))
-        {
-            Debug.LogError("Attempting to update max without culture being on tile!");
-            return;
-        }
-        currentMaxPopulation = Mathf.Max(c.maxOnTile, currentMaxPopulation);
-
-    }
  
 
     public void Init(int ttype, int popBase)
@@ -74,8 +58,6 @@ public class TileInfo : MonoBehaviour
     {
         cultures.Add(culture.name, culture);    
         orderToRemoveCulturesIn.Add(culture);
-        UpdateCultureSurvivability();
-        currentMaxPopulation = Mathf.Max(culture.maxOnTile, currentMaxPopulation);
     }
 
     public void RemoveCulture(Culture culture)
@@ -91,22 +73,9 @@ public class TileInfo : MonoBehaviour
         }
 
         currentMaxPopulation = popBase;
-        foreach(Culture c in cultures.Values)
-        {
-            currentMaxPopulation = Mathf.Max(c.maxOnTile, currentMaxPopulation);
-        }
 
     }
 
-    public void UpdateCultureSurvivability()
-    {
-        orderToRemoveCulturesIn.Sort((x, y) => x.maxOnTile.CompareTo(y.maxOnTile));
-    }
-
-    public Culture GetRandomCulture()
-    {
-        return orderToRemoveCulturesIn[orderToRemoveCulturesIn.Count - 1];
-    }
 
     
 
