@@ -4,6 +4,99 @@ using UnityEngine;
 
 public class CulturePlacementHandler : MonoBehaviour
 {
+
+    public float AnimationTransferTime = .1f;
+    public float Radius = 1f;
+    public int NumDisplayedCultures = 3;
+    public float[] AngleOffset = new float[]{0, Mathf.PI, Mathf.PI / 2f};
+    public CultureContainer CultureContainer;
+
+    Culture[] currentList;
+
+    Vector3[][] Positions;
+
+    private void Start()
+    {
+        currentList = new Culture[0];
+        CalculateCulturePositionList();
+        CultureContainer.OnListChanged += CulturePlacementHandler_OnListChanged;
+    }
+
+    void CalculateCulturePositionList()
+    {
+        Positions = new Vector3[NumDisplayedCultures][];
+        Positions[0] = new Vector3[] { Vector3.zero };
+
+        
+
+        for (int i = 1; i < NumDisplayedCultures; i++)
+        {
+            int curNumOfCulturesShown = i + 1;
+            float theta = (Mathf.PI * 2) / curNumOfCulturesShown;
+
+            Positions[i] = new Vector3[curNumOfCulturesShown];
+            for(int j = 0; j < curNumOfCulturesShown; j++)
+            {
+                int curAngleAmount = j + 1;
+                Positions[i][j] = TrigUtils.GetLocationOnCircleRadians(Radius, (theta * j) + AngleOffset[i]);
+            }
+        }
+    }
+
+    public void CulturePlacementHandler_OnListChanged(object sender, CultureContainer.OnListChangedEventArgs e)
+    {
+        Vector3[] ExpectedPositions = CalculateExpectedLocations(e.CultureList);
+        for(int i = 0; i < ExpectedPositions.Length; i++)
+        {
+            Culture newCultureAtPosition = e.CultureList[i];
+            Culture oldCultureAtPosition = i < currentList.Length ? currentList[i] : null;
+ 
+            if(     oldCultureAtPosition == null
+                ||  oldCultureAtPosition != newCultureAtPosition 
+                ||  oldCultureAtPosition.transform.position != ExpectedPositions[i])
+            {
+                StartCoroutine(MoveCulture(newCultureAtPosition, ExpectedPositions[i]));
+            }
+        }
+        currentList = e.CultureList;
+    }
+
+    Vector3[] CalculateExpectedLocations(Culture[] cultureList)
+    {
+        int CurPositionIndex = cultureList.Length < NumDisplayedCultures ? cultureList.Length - 1: NumDisplayedCultures - 1;
+        Vector3[] CurPositions = Positions[CurPositionIndex];
+        Vector3[] ExpectedLocations = new Vector3[cultureList.Length];
+
+        for (int i = 0; i < cultureList.Length; i++)
+        {
+            if (i >= CurPositions.Length) break;
+            ExpectedLocations[i] = CurPositions[i];
+        }
+
+        for (int i = CurPositions.Length; i < cultureList.Length; i++)
+        {
+            ExpectedLocations[i] = CurPositions[CurPositions.Length - 1];
+        }
+
+        return ExpectedLocations;
+    }
+
+    IEnumerator MoveCulture(Culture culture, Vector3 endPosition)
+    {
+        float curTime = 0;
+        Vector3 startPosition = culture.transform.position;
+        yield return null;
+
+        while(curTime <= AnimationTransferTime)
+        {
+            curTime += Time.deltaTime;
+            float curDistance = Mathf.InverseLerp(0, AnimationTransferTime, curTime);
+            culture.transform.localPosition = Vector3.Lerp(startPosition, endPosition, curDistance);
+            yield return null;
+        }
+    }
+
+
     public Vector3 GetIncomingTilePlacement()
     {
         return transform.position;

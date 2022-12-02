@@ -400,3 +400,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fb0c0833eb33364fac6040270344844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AnimationTransferTime: 0.1
+  Radius: 0.25
+  NumDisplayedCultures: 3
+  AngleOffset:
+  - 0
+  - 3.1415927
+  - 1.5707964
+  CultureContainer: {fileID: 7736277637089455420}
