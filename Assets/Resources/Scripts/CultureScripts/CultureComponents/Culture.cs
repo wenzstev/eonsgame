@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 [System.Serializable]
@@ -16,6 +17,12 @@ public class Culture : MonoBehaviour
 
     public Tile Tile { get; private set; }
     public TileInfo tileInfo { get; private set; }
+
+    CultureContainer cultureContainer;
+
+
+    public event EventHandler<OnPopulationChangedEventArgs> OnPopulationChanged;
+
     CultureFoodStore cultureFoodStore;
     public CultureFoodStore CultureFoodStore
     {
@@ -123,7 +130,7 @@ public class Culture : MonoBehaviour
         currentState = State.Default;
         name = getRandomString(5);
         population = InitialPopulation;
-        color = new Color(Random.value, Random.value, Random.value);
+        color = new Color(UnityEngine.Random.value, UnityEngine.Random.value, UnityEngine.Random.value);
         transform.SetParent(t.gameObject.transform);
         gameObject.name = name;
 
@@ -133,7 +140,7 @@ public class Culture : MonoBehaviour
         GetComponent<AffinityManager>().Initialize();
     }
 
-    public void Init(Tile t, Color parent, int pop, string n)
+    public void InitFromParent(Tile t, Color parent, int pop, string n)
     {
         currentState = State.Default;
         population = pop;
@@ -142,6 +149,7 @@ public class Culture : MonoBehaviour
         gameObject.name = name;
         transform.SetParent(t.gameObject.transform);
         GetComponent<AffinityManager>().Initialize();
+        //SetTile(t);
         //SetTileWithoutInformingTileInfo(t);
     }
 
@@ -174,8 +182,13 @@ public class Culture : MonoBehaviour
 
         ChangeState(t.newState);
 
-        if (t.newTile != null) SetTile(t.newTile); // maybe give them some offscreen placeholder tile?
-        
+        if (t.newTile != null)
+        {
+            // check if tile is null (would indicate moving or about to move)
+            if (Tile != null) SwapTile(t.newTile); else SetTile(t.newTile);
+        }
+
+
         CultureFoodStore.AlterFoodStore(t.FoodChange);
 
         EventManager.TriggerEvent("CultureUpdated" + name, new Dictionary<string, object> { { "culture", this } });
@@ -204,8 +217,8 @@ public class Culture : MonoBehaviour
     {
         GameObject newCultureObj = Instantiate(CultureTemplate, transform.position, Quaternion.identity);
         Culture newCulture = newCultureObj.GetComponent<Culture>();
-        int numInNewCulture = Random.Range(minPopTransfer, maxPopTransfer);
-        newCulture.Init(Tile, color, numInNewCulture, name);
+        int numInNewCulture = UnityEngine.Random.Range(minPopTransfer, maxPopTransfer);
+        newCulture.InitFromParent(Tile, color, numInNewCulture, name);
         AddPopulation(-numInNewCulture);
         newCulture.CultureMemory.previousTile = Tile;
         return newCultureObj;
@@ -252,38 +265,28 @@ public class Culture : MonoBehaviour
             DestroyCulture();
         }
 
-        if(num != 0) GetComponentInChildren<PopulationChangeIndicatorGenerator>().CreateIndicator(num);
+        if (num != 0) OnPopulationChanged?.Invoke(this, new OnPopulationChangedEventArgs() { PopChange = num});
     }
 
-    void SetTileWithoutInformingTileInfo(Tile newTile)
+    void SwapTile(Tile newTile)
     {
-        Tile = newTile;
-        tileInfo = newTile.GetComponent<TileInfo>();
+        RemoveFromTile();
+        SetTile(newTile);
+    }
+
+    void RemoveFromTile()
+    {
+        cultureContainer.RemoveCulture(this);
+        CultureMemory.previousTile = Tile;
     }
 
     void SetTile(Tile newTile)
     {
-        //Debug.Log("setting culture " + name + "("+GetHashCode()+") to tile " + newTile);
-        if(tileInfo != null)
-        {
-            tileInfo.RemoveCulture(this);
-        }
-
-
-
-        if (newTile.gameObject != Tile.moveTile) // move tile is a special tile that holds all moving cultures, can't add it to tileinfo because there will be more than one of the same culture
-        {
-            newTile.GetComponent<TileInfo>().AddCulture(this);
-        }
-
-        CultureMemory cm = GetComponent<CultureMemory>();
-
-        cm.previousTile = Tile;
-
-
-        SetTileWithoutInformingTileInfo(newTile);
-
-
+        CultureContainer newCultureContainer = newTile.GetComponentInChildren<CultureContainer>();
+        newCultureContainer.AddCulture(this);
+        cultureContainer = newCultureContainer;
+        Tile = newTile;
+        tileInfo = newTile.GetComponent<TileInfo>();
     }
 
     void RenameCulture(string newName)
@@ -304,7 +307,7 @@ public class Culture : MonoBehaviour
     {
         float getMutationRate()
         {
-            return (Random.value * baseMutationMax) - (baseMutationMax / 2);
+            return (UnityEngine.Random.value * baseMutationMax) - (baseMutationMax / 2);
         }
         return new Color(getMutationRate() + parentColor.r, getMutationRate() + parentColor.g, getMutationRate() + parentColor.b);
     }
@@ -318,7 +321,7 @@ public class Culture : MonoBehaviour
 
     public static Color influenceColor(Culture parent, Culture influencer)
     {
-        float rate = Random.value * influencer.influenceRate;
+        float rate = UnityEngine.Random.value * influencer.influenceRate;
         return Color.Lerp(parent.color, influencer.color, rate);
     }
 
@@ -329,10 +332,14 @@ public class Culture : MonoBehaviour
         string rand = "";
         while(rand.Length <= length)
         {
-            rand += characters[Mathf.FloorToInt(Random.value * characters.Length)];
+            rand += characters[Mathf.FloorToInt(UnityEngine.Random.value * characters.Length)];
         }
         return rand;
     }
 
+    public class OnPopulationChangedEventArgs : EventArgs
+    {
+        public int PopChange;
+    }
 
 }
