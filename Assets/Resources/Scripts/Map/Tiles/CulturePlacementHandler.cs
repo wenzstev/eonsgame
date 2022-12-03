@@ -45,20 +45,25 @@ public class CulturePlacementHandler : MonoBehaviour
 
     public void CulturePlacementHandler_OnListChanged(object sender, CultureContainer.OnListChangedEventArgs e)
     {
-        Vector3[] ExpectedPositions = CalculateExpectedLocations(e.CultureList);
-        for(int i = 0; i < ExpectedPositions.Length; i++)
+        if (e.CultureList.Length > 0) CompareOldPositionsToNew(e.CultureList);
+        currentList = e.CultureList;
+    }
+
+    void CompareOldPositionsToNew(Culture[] newCulturelist)
+    {
+        Vector3[] ExpectedPositions = CalculateExpectedLocations(newCulturelist);
+        for (int i = 0; i < ExpectedPositions.Length; i++)
         {
-            Culture newCultureAtPosition = e.CultureList[i];
+            Culture newCultureAtPosition = newCulturelist[i];
             Culture oldCultureAtPosition = i < currentList.Length ? currentList[i] : null;
- 
-            if(     oldCultureAtPosition == null
-                ||  oldCultureAtPosition != newCultureAtPosition 
-                ||  oldCultureAtPosition.transform.position != ExpectedPositions[i])
+
+            if (oldCultureAtPosition == null
+                || oldCultureAtPosition != newCultureAtPosition
+                || oldCultureAtPosition.transform.position != ExpectedPositions[i])
             {
                 StartCoroutine(MoveCulture(newCultureAtPosition, ExpectedPositions[i]));
             }
         }
-        currentList = e.CultureList;
     }
 
     Vector3[] CalculateExpectedLocations(Culture[] cultureList)
@@ -84,7 +89,7 @@ public class CulturePlacementHandler : MonoBehaviour
     IEnumerator MoveCulture(Culture culture, Vector3 endPosition)
     {
         float curTime = 0;
-        Vector3 startPosition = culture.transform.position;
+        Vector3 startPosition = culture.transform.localPosition;
         yield return null;
 
         while(curTime <= AnimationTransferTime)

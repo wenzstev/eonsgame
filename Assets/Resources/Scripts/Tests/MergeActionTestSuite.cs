@@ -12,9 +12,7 @@ public class MergeActionTestSuite : CultureInteractionTest
     [SetUp]
     public void SetUp()
     {
-        MonoBehaviour.Destroy(Tile.moveTile.GetComponent<TileDrawer>());
         TestCulture.Init(TestTile, 1);
-        Neighbor.Init(Tile.moveTile.GetComponent<Tile>(), 1);
         Neighbor.transform.parent = TestTile.transform;
     }
 
