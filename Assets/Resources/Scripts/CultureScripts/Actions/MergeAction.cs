@@ -9,8 +9,8 @@ public class MergeAction : CultureAction
 
     public MergeAction(Culture c) : base(c) 
     {
-        cultureContainer = culture.GetComponentInParent<CultureContainer>();
-        NewTileObj = culture.GetComponentInParent<Tile>().gameObject;
+        cultureContainer = culture.Tile.GetComponentInChildren<CultureContainer>();
+        NewTileObj = culture.Tile.gameObject;
     }
 
     public override Turn ExecuteTurn()
@@ -20,7 +20,8 @@ public class MergeAction : CultureAction
 
     Turn CombineCultureWithNewTile()
     {
-        if (cultureContainer.HasCultureByName(culture)) return AttemptToCombineCultures();
+        Debug.Log($"merging culture {culture}({culture.GetHashCode()}) with tile {NewTileObj}");
+        if (cultureContainer.HasCultureByName(culture) && cultureContainer.GetCultureByName(culture).currentState != Culture.State.NewOnTile) return AttemptToCombineCultures();
         return AddForeignCulture();
     }
 
@@ -35,10 +36,12 @@ public class MergeAction : CultureAction
 
     Turn AddForeignCulture()
     {
-        SetExistingCulturesToInvaded();
         turn.UpdateCulture(culture).newTile = NewTileObj.GetComponent<Tile>();
+        turn.UpdateCulture(culture).newState = Culture.State.Default;
         return turn;
     }
+
+    
 
     void SetExistingCulturesToInvaded()
     {

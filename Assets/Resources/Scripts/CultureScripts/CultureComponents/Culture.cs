@@ -180,7 +180,7 @@ public class Culture : MonoBehaviour
         SetColor(t.newColor);
         //Debug.Log("setting state for " + GetHashCode() + " to " + t.newState);
 
-        ChangeState(t.newState);
+        if(t.newState != currentState) ChangeState(t.newState);
 
         if (t.newTile != null)
         {
@@ -210,6 +210,10 @@ public class Culture : MonoBehaviour
         {
             CultureMemory.wasRepelled = false;
         }
+        if(newState == State.Moving)
+        {
+            RemoveFromTile();
+        }
         currentState = newState;
     }
 
@@ -221,6 +225,7 @@ public class Culture : MonoBehaviour
         newCulture.InitFromParent(Tile, color, numInNewCulture, name);
         AddPopulation(-numInNewCulture);
         newCulture.CultureMemory.previousTile = Tile;
+        Debug.Log($"Split {newCulture} from {this} on tile {this.Tile}");
         return newCultureObj;
     }
 
@@ -276,17 +281,28 @@ public class Culture : MonoBehaviour
 
     void RemoveFromTile()
     {
+        Debug.Log($"removing culture {this} ({this.GetHashCode()}) from {Tile}");
+        if(Tile == null)
+        {
+            Debug.LogWarning("Tried to remove from nonexistant tile!");
+            return;
+        }
         cultureContainer.RemoveCulture(this);
         CultureMemory.previousTile = Tile;
+        Tile = null;
+        tileInfo = null;
+        cultureContainer = null;
     }
 
     void SetTile(Tile newTile)
     {
+        Debug.Log($"Setting tile for culture {this}({this.GetHashCode()}) to tile {newTile}");
         CultureContainer newCultureContainer = newTile.GetComponentInChildren<CultureContainer>();
         newCultureContainer.AddCulture(this);
         cultureContainer = newCultureContainer;
         Tile = newTile;
         tileInfo = newTile.GetComponent<TileInfo>();
+        transform.parent = newTile.transform;
     }
 
     void RenameCulture(string newName)
@@ -316,6 +332,11 @@ public class Culture : MonoBehaviour
     {
         EventManager.StopListening("Tick", OnTick);
 
+    }
+
+    public override string ToString()
+    {
+        return $"{name}({GetHashCode()})";
     }
 
 

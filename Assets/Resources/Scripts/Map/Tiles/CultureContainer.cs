@@ -12,7 +12,7 @@ public class CultureContainer : MonoBehaviour
     public event EventHandler<OnListChangedEventArgs> OnListChanged;
 
 
-    private void Start()
+    private void Awake()
     {
         Initialize();
     }
@@ -25,6 +25,9 @@ public class CultureContainer : MonoBehaviour
 
     public void AddCulture(Culture culture)
     {
+        Debug.Log($"Adding culture {culture} to tile {gameObject.transform.parent}");
+        Debug.Log(String.Join(", ", CultureList));
+
         if (!HasCultureByName(culture))
         {
             InsertCultureInList(culture);
@@ -34,13 +37,25 @@ public class CultureContainer : MonoBehaviour
 
         culture.OnPopulationChanged += CultureContainer_OnPopulationChanged;
         SortListByPopulation();
+        Debug.Log(String.Join(", ", CultureList));
+
     }
 
     public void RemoveCulture(Culture culture)
     {
+        Debug.Log($"Removing culture {culture} from tile {gameObject.transform.parent}");
+        Debug.Log(String.Join(", ", CultureList));
+
         bool wasRemoved = CultureList.Remove(culture);
+        if (!wasRemoved)
+        {
+            throw new NullReferenceException($"Tried to remove culture {culture} from tile that wasn't in the CultureContainer list!");
+            return;
+        }
+        Debug.Log(String.Join(", ", CultureList));
+        CultureDictionary.Remove(culture.name);
+        SortListByPopulation();
         culture.OnPopulationChanged -= CultureContainer_OnPopulationChanged;
-        if (!wasRemoved) Debug.LogError("Tried to remove culture from tile that wasn't in the CulturePlacementHandler list!");
     }
 
     public Culture[] GetAllCultures()
@@ -50,7 +65,7 @@ public class CultureContainer : MonoBehaviour
 
     public bool HasCultureByName(Culture culture)
     {
-        return CultureDictionary.ContainsKey(culture.name);
+         return CultureDictionary.ContainsKey(culture.name);
     }
 
     public Culture GetCultureByName(Culture culture)

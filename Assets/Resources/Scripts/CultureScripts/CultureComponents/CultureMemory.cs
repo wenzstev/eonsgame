@@ -11,7 +11,7 @@ public class CultureMemory : MonoBehaviour
         get => _previousTile;
         set 
         {
-            if(value != null && value.gameObject != Tile.moveTile)
+            if(value != null)
             {
                 _previousTile = value;
             }

@@ -11,24 +11,6 @@ public class Tile : MonoBehaviour
 
     public int id;
 
-    static GameObject _moveTile;
-    public static GameObject moveTile
-    {
-        get
-        {
-            if (_moveTile == null)
-            {
-                _moveTile = Instantiate(Resources.Load<GameObject>("Prefabs/Board/EmptyTile"));
-                _moveTile.name = "Move Tile";
-                Destroy(_moveTile.GetComponent<TileChars>());
-                Destroy(_moveTile.GetComponent<TileDrawer>());
-                return _moveTile;
-            }
-            return _moveTile;
-        }
-    }
-
-
 
     TileNeighbors _tileNeighbors;
     TileNeighbors NeighborTileGetter
