@@ -8,12 +8,12 @@ public class CultureInfluenceAction : CultureAction
 
     public override Turn ExecuteTurn()
     {
-        TileInfo ti = culture.tileInfo;
+        TileInfo ti = Culture.tileInfo;
 
         foreach(Culture c in ti.cultures.Values)
         {
-            if (c == culture) continue;
-            if(culture.CanMerge(c))
+            if (c == Culture) continue;
+            if(Culture.CanMerge(c))
             {
                 MergeCulture(c);
             }
@@ -28,9 +28,9 @@ public class CultureInfluenceAction : CultureAction
     void MergeCulture(Culture other)
     {
         // duplicated code x1. if happens again, pull out into static helper method
-        float percentThisPopulation = (float)culture.Population / (culture.Population + other.maxPopTransfer);
-        turn.UpdateCulture(culture).newColor = Color.Lerp(culture.Color, other.Color, percentThisPopulation);
-        turn.UpdateCulture(culture).popChange += other.Population;
+        float percentThisPopulation = (float)Culture.Population / (Culture.Population + other.maxPopTransfer);
+        turn.UpdateCulture(Culture).newColor = Color.Lerp(Culture.Color, other.Color, percentThisPopulation);
+        turn.UpdateCulture(Culture).popChange += other.Population;
         turn.UpdateCulture(other).popChange -= other.Population;
         turn.UpdateCulture(other).newState = Culture.State.PendingRemoval;
     }
@@ -38,8 +38,8 @@ public class CultureInfluenceAction : CultureAction
     void InfluenceCulture(Culture other)
     {
         //Debug.Log("in influenceculture");
-        float influenceValue = Random.value * culture.influenceRate;
-        turn.UpdateCulture(other).newColor = Color.Lerp(other.Color, culture.Color, influenceValue);
+        float influenceValue = Random.value * Culture.influenceRate;
+        turn.UpdateCulture(other).newColor = Color.Lerp(other.Color, Culture.Color, influenceValue);
         //EventManager.TriggerEvent("PauseSpeed", null);
     }
 

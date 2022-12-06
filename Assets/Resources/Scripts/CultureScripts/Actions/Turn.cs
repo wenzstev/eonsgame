@@ -16,6 +16,18 @@ public class Turn
         turnUpdates = new Dictionary<Culture, CultureTurnUpdate>();
     }
 
+    List<INonGenericCultureUpdate> UpdateList;
+
+    void ph()
+    {
+        UpdateList = new List<INonGenericCultureUpdate>();
+        UpdateList.Add(new PopulationUpdate(null, 3));
+        UpdateList.Add(new StateUpdate(null, Culture.State.Default));
+
+        UpdateList[0].GetCultureChange();
+        string s = UpdateList[1].UPDATE_TYPE;
+    }
+
     public static Turn HookTurn()
     {
         if (currentTurn == null || currentTurn.hasBeenPushed)
@@ -36,6 +48,11 @@ public class Turn
         }
         turnUpdates.Add(c, new CultureTurnUpdate(c));
         return turnUpdates[c];
+    }
+
+    public void UpdateCulture(Culture c, CultureUpdate update)
+    {
+ 
     }
 
     public void UpdateAllCultures()
@@ -70,6 +87,10 @@ public class CultureTurnUpdate
 {
     public Culture culture;
     Culture.State _newState;
+
+    public List<INonGenericCultureUpdate> updates;
+
+
     public Culture.State newState
     {
         get { return _newState; }
@@ -78,19 +99,28 @@ public class CultureTurnUpdate
             _newState = value;
         }
     }
-    public int popChange = 0;
-    public int techChange = 0;
-    public float FoodChange = 0;
-    public int newAffinity = -1;
-    public Color newColor;
-    public Tile newTile;
-    public string newName;
+    int popChange = 0;
+    float FoodChange = 0;
+    int newAffinity = -1;
+    Color newColor;
+    Tile newTile;
+    string newName;
 
     public CultureTurnUpdate(Culture c)
     {
         culture = c;
         newState = c.currentState;
         newColor = c.mutateColor(c.Color); // mutate color slightly every turn
+    }
+
+    public void AddPopChange(int addition)
+    {
+        popChange += addition;
+    }
+
+    public int GetPopChange()
+    {
+        return popChange;
     }
 
     public void MergeUpdates(CultureTurnUpdate other) 
@@ -102,10 +132,66 @@ public class CultureTurnUpdate
         // values are combined, other takes precedence
         newState = other.newState;
         popChange += other.popChange;
-        techChange += other.techChange;
         newAffinity = other.newAffinity;
         newColor = other.newColor;
         newTile = other.newTile;
         newName = other.newName;
     }
+}
+
+
+public abstract class MustInitialize<T>
+{
+    public MustInitialize(T parameter) { }
+}
+
+public interface INonGenericCultureUpdate
+{
+    object GetCultureChange();
+    string UPDATE_TYPE { get; }
+    void ExecuteChange();
+}
+
+public abstract class CultureUpdate<G> : MustInitialize<CultureAction>, INonGenericCultureUpdate
+{
+    G cultureChangeValue;
+
+    object INonGenericCultureUpdate.GetCultureChange()
+    {
+        return GetCultureChange();
+    }
+
+    protected G GetCultureChange()
+    {
+        return cultureChangeValue;
+    }
+
+    public abstract void ExecuteChange();
+
+    public abstract string UPDATE_TYPE { get; }
+    public CultureAction Originator { get; }
+
+    public Culture Target { get { return Originator.Culture; } }
+    public CultureUpdate(CultureAction originator, G value) : base(originator)
+    {
+        Originator = originator;
+        cultureChangeValue = value;
+    }
+}
+
+public class PopulationUpdate : CultureUpdate<int>
+{
+    public override string UPDATE_TYPE {get { return "POPULATION";}}
+    public PopulationUpdate(CultureAction originator, int val) : base (originator, val) { }
+
+    public override void ExecuteChange()
+    {
+        Target.AddPopulation(GetCultureChange());
+    }
+}
+
+public class StateUpdate : CultureUpdate<Culture.State>
+{
+    public override string UPDATE_TYPE { get { return "STATE"; } }
+    public StateUpdate(CultureAction originator, Culture.State val) : base(originator, val) { }
 }

@@ -7,7 +7,7 @@ public class GatherFoodAction : CultureAction
     public GatherFoodAction(Culture c) : base(c) 
     {
         affinityManager = c.GetComponent<AffinityManager>();
-        CurrentTileFood = culture.Tile.GetComponent<TileFood>();
+        CurrentTileFood = Culture.Tile.GetComponent<TileFood>();
     }
 
     public override Turn ExecuteTurn()
@@ -18,9 +18,9 @@ public class GatherFoodAction : CultureAction
 
     void GatherFood()
     {
-        float GatheredFood = CurrentTileFood.CurFood * culture.FoodGatherRate * culture.Population * GetAndInformAffinity();
+        float GatheredFood = CurrentTileFood.CurFood * Culture.FoodGatherRate * Culture.Population * GetAndInformAffinity();
         CurrentTileFood.CurFood -= GatheredFood;
-        turn.UpdateCulture(culture).FoodChange += GatheredFood;
+        turn.UpdateCulture(Culture).FoodChange += GatheredFood;
         //Debug.Log("Affinity rate was " + GetAndInformAffinity());
     }
 

@@ -162,6 +162,11 @@ public class Culture : MonoBehaviour
 
     public void UpdateForTurn(CultureTurnUpdate t)
     {
+        foreach(INonGenericCultureUpdate update in t.updates)
+        {
+            update.ExecuteChange();
+        }
+
 
         if (t.newState == State.PendingRemoval)
         {

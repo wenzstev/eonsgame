@@ -11,11 +11,11 @@ public class OverpopulationAction : CultureAction
     {
         if (Random.value < popLossChance)
         {
-            turn.UpdateCulture(culture).popChange -= 1;
+            turn.UpdateCulture(Culture).popChange -= 1;
             return turn;
         }
 
-        MoveTileAction moveTile = new MoveTileAction(culture);
+        MoveTileAction moveTile = new MoveTileAction(Culture);
         moveTile.moveChance = 1;
         return moveTile.ExecuteTurn();
     }
