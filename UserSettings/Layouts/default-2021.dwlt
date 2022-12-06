@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1349.3334
   m_ShowMode: 4
-  m_Title: Test Runner
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 110
+  controlID: 125
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,12 +139,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2107.3333
+    width: 2086.6667
     height: 1299.3334
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 111
+  controlID: 126
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,12 +164,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2107.3333
-    height: 750
+    width: 2086.6667
+    height: 656
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 112
+  controlID: 60
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -187,10 +187,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 656
-    height: 750
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 650
+    height: 656
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 13}
@@ -212,10 +212,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 656
+    x: 650
     y: 0
-    width: 1451.3333
-    height: 750
+    width: 1436.6667
+    height: 656
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
@@ -240,9 +240,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 750
-    width: 2107.3333
-    height: 549.3334
+    y: 656
+    width: 2086.6667
+    height: 643.3334
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
   m_ActualView: {fileID: 16}
@@ -268,9 +268,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 2107.3333
+    x: 2086.6667
     y: 0
-    width: 452.66675
+    width: 473.33325
     height: 1299.3334
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
@@ -301,19 +301,19 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 72.66667
-    width: 655
-    height: 729
+    width: 649
+    height: 635
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 132
+    ID: 103
     splitterInitialOffset: 399
     currentActiveSplitter: -1
     realSizes:
-    - 386.66666
-    - 272.00003
+    - 331.33334
+    - 233.33334
     relativeSizes:
     - 0.58672565
     - 0.41327435
@@ -323,7 +323,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 658.6667
+    lastTotalSize: 564.6667
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -339,9 +339,9 @@ MonoBehaviour:
       uniqueId: '[My project][suite]'
       name: My project
       fullName: My project
-      resultStatus: 2
-      duration: 0.4992456
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 2.2982955
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -351,1683 +351,18 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    - id: 1038
-      uniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-      name: Tests.dll
-      fullName: C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll
-      resultStatus: 2
-      duration: 0.3548871
-      messages: One or more child tests had errors
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1000
-      parentUniqueId: '[My project][suite]'
-    - id: 1001
-      uniqueId: Tests.dll/[Tests][BoardAgeTestSuite][suite]
-      name: BoardAgeTestSuite
-      fullName: BoardAgeTestSuite
-      resultStatus: 1
-      duration: 0.179461
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1024
-      parentUniqueId: '[Tests][/Users/steven.wenzel/Documents/unity/eonsgame/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1002
-      uniqueId: Tests.dll/BoardAgeTestSuite/[Tests][BoardAgeTestSuite.CanGetBoardAgeAtStartup]
-      name: CanGetBoardAgeAtStartup
-      fullName: BoardAgeTestSuite.CanGetBoardAgeAtStartup
-      resultStatus: 1
-      duration: 0.1194486
-      messages: 
-      output: 'clearing
+    m_ResultText: 'CanReduceFromThreeToTwoCulturesOnTile (2.086s)
 
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: Tests.dll/[Tests][BoardAgeTestSuite][suite]
-    - id: 1003
-      uniqueId: Tests.dll/BoardAgeTestSuite/[Tests][BoardAgeTestSuite.CanUpdateBoardAge]
-      name: CanUpdateBoardAge
-      fullName: BoardAgeTestSuite.CanUpdateBoardAge
-      resultStatus: 1
-      duration: 0.0458129
-      messages: 
-      output: 'clearing
+      ---
 
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: Tests.dll/[Tests][BoardAgeTestSuite][suite]
-    - id: 1004
-      uniqueId: Tests.dll/[Tests][CultureAffinityTestSuite][suite]
-      name: CultureAffinityTestSuite
-      fullName: CultureAffinityTestSuite
-      resultStatus: 1
-      duration: 0.0423527
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1055
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1006
-      uniqueId: Tests.dll/CultureAffinityTestSuite/[Tests][CultureAffinityTestSuite.CanDecayAffinityOnBiome]
-      name: CanDecayAffinityOnBiome
-      fullName: CultureAffinityTestSuite.CanDecayAffinityOnBiome
-      resultStatus: 1
-      duration: 0.0132109
-      messages: 
-      output: 'Final affinity for Grassland is 6.70962
+      clearing
 
-        Final affinity for
-        Savannah is 0.8646647
-
-        Final affinity for Grassland is 7.017535
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/[Tests][CultureAffinityTestSuite][suite]
-    - id: 1005
-      uniqueId: Tests.dll/CultureAffinityTestSuite/[Tests][CultureAffinityTestSuite.CanGainAffinityOnBiome]
-      name: CanGainAffinityOnBiome
-      fullName: CultureAffinityTestSuite.CanGainAffinityOnBiome
-      resultStatus: 1
-      duration: 0.0276263
-      messages: 
-      output: 'Final affinity for Grassland is 3.083034
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/[Tests][CultureAffinityTestSuite][suite]
-    - id: 1007
-      uniqueId: Tests.dll/[Tests][CultureContainerTestSuite][suite]
-      name: CultureContainerTestSuite
-      fullName: CultureContainerTestSuite
-      resultStatus: 1
-      duration: 0.0352587
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1062
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1008
-      uniqueId: Tests.dll/CultureContainerTestSuite/[Tests][CultureContainerTestSuite.CanAddCultureToContainer]
-      name: CanAddCultureToContainer
-      fullName: CultureContainerTestSuite.CanAddCultureToContainer
-      resultStatus: 1
-      duration: 0.0218736
-      messages: 
-      output: 'clearing
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1007
-      parentUniqueId: Tests.dll/[Tests][CultureContainerTestSuite][suite]
-    - id: 1010
-      uniqueId: Tests.dll/CultureContainerTestSuite/[Tests][CultureContainerTestSuite.CanResortWhenPopulationAdded]
-      name: CanResortWhenPopulationAdded
-      fullName: CultureContainerTestSuite.CanResortWhenPopulationAdded
-      resultStatus: 1
-      duration: 0.0217654
-      messages: 
-      output: 'clearing
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1007
-      parentUniqueId: Tests.dll/[Tests][CultureContainerTestSuite][suite]
-    - id: 1009
-      uniqueId: Tests.dll/CultureContainerTestSuite/[Tests][CultureContainerTestSuite.CanSortCultures]
-      name: CanSortCultures
-      fullName: CultureContainerTestSuite.CanSortCultures
-      resultStatus: 1
-      duration: 0.0220077
-      messages: 
-      output: 'clearing
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1007
-      parentUniqueId: Tests.dll/[Tests][CultureContainerTestSuite][suite]
-    - id: 1004
-      uniqueId: Tests.dll/[Tests][CultureFoodStoreTestSuite][suite]
-      name: CultureFoodStoreTestSuite
-      fullName: CultureFoodStoreTestSuite
-      resultStatus: 1
-      duration: 0.1146987
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1038
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1005
-      uniqueId: Tests.dll/CultureFoodStoreTestSuite/[Tests][CultureFoodStoreTestSuite.CanCollectFoodFromTile]
-      name: CanCollectFoodFromTile
-      fullName: CultureFoodStoreTestSuite.CanCollectFoodFromTile
-      resultStatus: 1
-      duration: 0.0397294
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/[Tests][CultureFoodStoreTestSuite][suite]
-    - id: 1006
-      uniqueId: Tests.dll/CultureFoodStoreTestSuite/[Tests][CultureFoodStoreTestSuite.CanConsumeFoodInTurn]
-      name: CanConsumeFoodInTurn
-      fullName: CultureFoodStoreTestSuite.CanConsumeFoodInTurn
-      resultStatus: 1
-      duration: 0.0171578
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/[Tests][CultureFoodStoreTestSuite][suite]
-    - id: 1007
-      uniqueId: Tests.dll/CultureFoodStoreTestSuite/[Tests][CultureFoodStoreTestSuite.CanConsumeFoodMultiplePopulation]
-      name: CanConsumeFoodMultiplePopulation
-      fullName: CultureFoodStoreTestSuite.CanConsumeFoodMultiplePopulation
-      resultStatus: 1
-      duration: 0.0346151
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/[Tests][CultureFoodStoreTestSuite][suite]
-    - id: 1008
-      uniqueId: Tests.dll/CultureFoodStoreTestSuite/[Tests][CultureFoodStoreTestSuite.CanReduceFoodOnTile]
-      name: CanReduceFoodOnTile
-      fullName: CultureFoodStoreTestSuite.CanReduceFoodOnTile
-      resultStatus: 1
-      duration: 0.0164562
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/[Tests][CultureFoodStoreTestSuite][suite]
-    - id: 1044
-      uniqueId: Tests.dll/[Tests][CulturePlacementHandlerTestSuite][suite]
-      name: CulturePlacementHandlerTestSuite
-      fullName: CulturePlacementHandlerTestSuite
-      resultStatus: 2
-      duration: 0.3475292
-      messages: One or more child tests had errors
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1070
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1049
-      uniqueId: Tests.dll/CulturePlacementHandlerTestSuite/[Tests][CulturePlacementHandlerTestSuite.CanNotShowAdditionalCulturesAfterThree]
-      name: CanNotShowAdditionalCulturesAfterThree
-      fullName: CulturePlacementHandlerTestSuite.CanNotShowAdditionalCulturesAfterThree
-      resultStatus: 2
-      duration: 0.0354715
-      messages: 'System.IndexOutOfRangeException : Index was outside the bounds of
-        the array.'
-      output: 'clearing
-
-        clearing
-
-'
-      stacktrace: "  at CulturePlacementHandler.CalculateExpectedLocations (Culture[]
-        cultureList) [0x0001a] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\CulturePlacementHandler.cs:64
-        \r\n  at CulturePlacementHandler.CulturePlacementHandler_OnListChanged (System.Object
-        sender, CultureContainer+OnListChangedEventArgs e) [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\CulturePlacementHandler.cs:45
-        \r\n  at CultureContainer.SortListByPopulation () [0x00036] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\CultureContainer.cs:69
-        \r\n  at CultureContainer.AddCulture (Culture culture) [0x00046] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\CultureContainer.cs:36
-        \r\n  at CulturePlacementHandlerTestSuite+<CanNotShowAdditionalCulturesAfterThree>d__11.MoveNext
-        () [0x0007c] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\CulturePlacementHandlerTestSuite.cs:96
-        \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e]
-        in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46 "
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1044
-      parentUniqueId: Tests.dll/[Tests][CulturePlacementHandlerTestSuite][suite]
-    - id: 1050
-      uniqueId: Tests.dll/CulturePlacementHandlerTestSuite/[Tests][CulturePlacementHandlerTestSuite.CanRearrangeWhenPopChanges]
-      name: CanRearrangeWhenPopChanges
-      fullName: CulturePlacementHandlerTestSuite.CanRearrangeWhenPopChanges
-      resultStatus: 2
-      duration: 0.0220317
-      messages: 'System.IndexOutOfRangeException : Index was outside the bounds of
-        the array.'
-      output: 'clearing
-
-        clearing
-
-'
-      stacktrace: "  at CulturePlacementHandler.CalculateExpectedLocations (Culture[]
-        cultureList) [0x0001a] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\CulturePlacementHandler.cs:64
-        \r\n  at CulturePlacementHandler.CulturePlacementHandler_OnListChanged (System.Object
-        sender, CultureContainer+OnListChangedEventArgs e) [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\CulturePlacementHandler.cs:45
-        \r\n  at CultureContainer.SortListByPopulation () [0x00036] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\CultureContainer.cs:69
-        \r\n  at CultureContainer.AddCulture (Culture culture) [0x00046] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\CultureContainer.cs:36
-        \r\n  at CulturePlacementHandlerTestSuite+<CanRearrangeWhenPopChanges>d__12.MoveNext
-        () [0x00069] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\CulturePlacementHandlerTestSuite.cs:109
-        \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e]
-        in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46 "
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1044
-      parentUniqueId: Tests.dll/[Tests][CulturePlacementHandlerTestSuite][suite]
-    - id: 1048
-      uniqueId: Tests.dll/CulturePlacementHandlerTestSuite/[Tests][CulturePlacementHandlerTestSuite.CanReduceFromThreeToTwoCulturesOnTile]
-      name: CanReduceFromThreeToTwoCulturesOnTile
-      fullName: CulturePlacementHandlerTestSuite.CanReduceFromThreeToTwoCulturesOnTile
-      resultStatus: 2
-      duration: 0.0188382
-      messages: 'System.IndexOutOfRangeException : Index was outside the bounds of
-        the array.'
-      output: 'clearing
-
-        clearing
-
-'
-      stacktrace: "  at CulturePlacementHandler.CalculateExpectedLocations (Culture[]
-        cultureList) [0x0001a] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\CulturePlacementHandler.cs:64
-        \r\n  at CulturePlacementHandler.CulturePlacementHandler_OnListChanged (System.Object
-        sender, CultureContainer+OnListChangedEventArgs e) [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\CulturePlacementHandler.cs:45
-        \r\n  at CultureContainer.SortListByPopulation () [0x00036] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\CultureContainer.cs:69
-        \r\n  at CultureContainer.AddCulture (Culture culture) [0x00046] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\CultureContainer.cs:36
-        \r\n  at CulturePlacementHandlerTestSuite+<CanReduceFromThreeToTwoCulturesOnTile>d__10.MoveNext
-        () [0x00069] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\CulturePlacementHandlerTestSuite.cs:76
-        \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e]
-        in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46 "
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1044
-      parentUniqueId: Tests.dll/[Tests][CulturePlacementHandlerTestSuite][suite]
-    - id: 1045
-      uniqueId: Tests.dll/CulturePlacementHandlerTestSuite/[Tests][CulturePlacementHandlerTestSuite.CanShowOneCultureOnTile]
-      name: CanShowOneCultureOnTile
-      fullName: CulturePlacementHandlerTestSuite.CanShowOneCultureOnTile
-      resultStatus: 1
-      duration: 0.1262073
-      messages: 
-      output: 'clearing
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1044
-      parentUniqueId: Tests.dll/[Tests][CulturePlacementHandlerTestSuite][suite]
-    - id: 1047
-      uniqueId: Tests.dll/CulturePlacementHandlerTestSuite/[Tests][CulturePlacementHandlerTestSuite.CanShowThreeCulturesOnTile]
-      name: CanShowThreeCulturesOnTile
-      fullName: CulturePlacementHandlerTestSuite.CanShowThreeCulturesOnTile
-      resultStatus: 2
-      duration: 0.0082304
-      messages: 'System.IndexOutOfRangeException : Index was outside the bounds of
-        the array.'
-      output: 'clearing
-
-        clearing
-
-'
-      stacktrace: "  at CulturePlacementHandler.CalculateExpectedLocations (Culture[]
-        cultureList) [0x0001a] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\CulturePlacementHandler.cs:64
-        \r\n  at CulturePlacementHandler.CulturePlacementHandler_OnListChanged (System.Object
-        sender, CultureContainer+OnListChangedEventArgs e) [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\CulturePlacementHandler.cs:45
-        \r\n  at CultureContainer.SortListByPopulation () [0x00036] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\CultureContainer.cs:69
-        \r\n  at CultureContainer.AddCulture (Culture culture) [0x00046] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\CultureContainer.cs:36
-        \r\n  at CulturePlacementHandlerTestSuite+<CanShowThreeCulturesOnTile>d__9.MoveNext
-        () [0x0005b] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\CulturePlacementHandlerTestSuite.cs:61
-        \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e]
-        in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46 "
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1044
-      parentUniqueId: Tests.dll/[Tests][CulturePlacementHandlerTestSuite][suite]
-    - id: 1046
-      uniqueId: Tests.dll/CulturePlacementHandlerTestSuite/[Tests][CulturePlacementHandlerTestSuite.CanShowTwoCulturesOnTile]
-      name: CanShowTwoCulturesOnTile
-      fullName: CulturePlacementHandlerTestSuite.CanShowTwoCulturesOnTile
-      resultStatus: 2
-      duration: 0.1151318
-      messages: "  Expected: (49.00, 50.00, 0.00)\r\n  But was:  (49.13, 49.50, 0.00)\r\n"
-      output: 'clearing
-
-        clearing
-
-'
-      stacktrace: 'at CulturePlacementHandlerTestSuite+<CanShowTwoCulturesOnTile>d__8.MoveNext
-        () [0x00083] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\CulturePlacementHandlerTestSuite.cs:52
-
-        at
-        UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e]
-        in C:\Users\wenze\Documents\Unity\Eons\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
-
-'
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1044
-      parentUniqueId: Tests.dll/[Tests][CulturePlacementHandlerTestSuite][suite]
-    - id: 1001
-      uniqueId: Tests.dll/[Tests][CultureTestSuite][suite]
-      name: CultureTestSuite
-      fullName: CultureTestSuite
-      resultStatus: 1
-      duration: 0.0389252
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1011
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1003
-      uniqueId: Tests.dll/CultureTestSuite/[Tests][CultureTestSuite.TestCanMerge]
-      name: TestCanMerge
-      fullName: CultureTestSuite.TestCanMerge
-      resultStatus: 1
-      duration: 0.0092181
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: Tests.dll/[Tests][CultureTestSuite][suite]
-    - id: 1006
-      uniqueId: Tests.dll/CultureTestSuite/[Tests][CultureTestSuite.TestCannotMerge]
-      name: TestCannotMerge
-      fullName: CultureTestSuite.TestCannotMerge
-      resultStatus: 1
-      duration: 0.0109103
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/[Tests][CultureTestSuite][suite]
-    - id: 1002
-      uniqueId: Tests.dll/CultureTestSuite/[Tests][CultureTestSuite.TestSplitCulture]
-      name: TestSplitCulture
-      fullName: CultureTestSuite.TestSplitCulture
-      resultStatus: 1
-      duration: 0.012994
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: Tests.dll/[Tests][CultureTestSuite][suite]
-    - id: 1008
-      uniqueId: Tests.dll/[Tests][CurveTestSuite][suite]
-      name: CurveTestSuite
-      fullName: CurveTestSuite
-      resultStatus: 1
-      duration: 0.0064163
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1031
-      parentUniqueId: '[Tests][/Users/steven.wenzel/Documents/unity/eonsgame/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1012
-      uniqueId: Tests.dll/CurveTestSuite/[Tests][CurveTestSuite.TestCompoundCurve]
-      name: TestCompoundCurve
-      fullName: CurveTestSuite.TestCompoundCurve
-      resultStatus: 1
-      duration: 0.0007905
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1008
-      parentUniqueId: Tests.dll/[Tests][CurveTestSuite][suite]
-    - id: 1009
-      uniqueId: Tests.dll/CurveTestSuite/[Tests][CurveTestSuite.TestGaussianCurve]
-      name: TestGaussianCurve
-      fullName: CurveTestSuite.TestGaussianCurve
-      resultStatus: 1
-      duration: 0.0001959
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1008
-      parentUniqueId: Tests.dll/[Tests][CurveTestSuite][suite]
-    - id: 1011
-      uniqueId: Tests.dll/CurveTestSuite/[Tests][CurveTestSuite.TestPowerCurve]
-      name: TestPowerCurve
-      fullName: CurveTestSuite.TestPowerCurve
-      resultStatus: 1
-      duration: 0.0001612
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1008
-      parentUniqueId: Tests.dll/[Tests][CurveTestSuite][suite]
-    - id: 1010
-      uniqueId: Tests.dll/CurveTestSuite/[Tests][CurveTestSuite.TestSigmoidCurve]
-      name: TestSigmoidCurve
-      fullName: CurveTestSuite.TestSigmoidCurve
-      resultStatus: 1
-      duration: 0.0001484
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1008
-      parentUniqueId: Tests.dll/[Tests][CurveTestSuite][suite]
-    - id: 1018
-      uniqueId: Tests.dll/[Tests][FoodAmountIndicatorTestSuite][suite]
-      name: FoodAmountIndicatorTestSuite
-      fullName: FoodAmountIndicatorTestSuite
-      resultStatus: 1
-      duration: 0.0850887
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1045
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1020
-      uniqueId: Tests.dll/FoodAmountIndicatorTestSuite/[Tests][FoodAmountIndicatorTestSuite.CanDisplayAccurateFoodCount]
-      name: CanDisplayAccurateFoodCount
-      fullName: FoodAmountIndicatorTestSuite.CanDisplayAccurateFoodCount
-      resultStatus: 1
-      duration: 0.0184496
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        Amount is 9
-
-        Amount
-        is 17.9
-
-        Amount is 26.701
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1018
-      parentUniqueId: Tests.dll/[Tests][FoodAmountIndicatorTestSuite][suite]
-    - id: 1019
-      uniqueId: Tests.dll/FoodAmountIndicatorTestSuite/[Tests][FoodAmountIndicatorTestSuite.CanGenerateFoodIndicatorAtExpectedInterval]
-      name: CanGenerateFoodIndicatorAtExpectedInterval
-      fullName: FoodAmountIndicatorTestSuite.CanGenerateFoodIndicatorAtExpectedInterval
-      resultStatus: 1
-      duration: 0.0313563
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        Amount is 9
-
-        Amount
-        is 17.9
-
-        Amount is 26.701
-
-        Amount is 35.40399
-
-        Amount
-        is 44.00995
-
-        Amount is 52.51985
-
-        Amount is 60.93465
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1018
-      parentUniqueId: Tests.dll/[Tests][FoodAmountIndicatorTestSuite][suite]
-    - id: 1021
-      uniqueId: Tests.dll/FoodAmountIndicatorTestSuite/[Tests][FoodAmountIndicatorTestSuite.CanNotDuplicateIndicatorWhenSplitting]
-      name: CanNotDuplicateIndicatorWhenSplitting
-      fullName: FoodAmountIndicatorTestSuite.CanNotDuplicateIndicatorWhenSplitting
-      resultStatus: 1
-      duration: 0.0298812
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        Amount is 9
-
-        Amount
-        is 17.9
-
-        Amount is 26.701
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1018
-      parentUniqueId: Tests.dll/[Tests][FoodAmountIndicatorTestSuite][suite]
-    - id: 1025
-      uniqueId: Tests.dll/[Tests][GreyscaleOverlayTestSuite][suite]
-      name: GreyscaleOverlayTestSuite
-      fullName: GreyscaleOverlayTestSuite
-      resultStatus: 1
-      duration: 0.0114903
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1058
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1026
-      uniqueId: Tests.dll/GreyscaleOverlayTestSuite/[Tests][GreyscaleOverlayTestSuite.CanMakeImageGreyscale]
-      name: CanMakeImageGreyscale
-      fullName: GreyscaleOverlayTestSuite.CanMakeImageGreyscale
-      resultStatus: 1
-      duration: 0.0041693
-      messages: 
-      output: 'clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1025
-      parentUniqueId: Tests.dll/[Tests][GreyscaleOverlayTestSuite][suite]
-    - id: 1027
-      uniqueId: Tests.dll/GreyscaleOverlayTestSuite/[Tests][GreyscaleOverlayTestSuite.CanSetToVariousTransparencies]
-      name: CanSetToVariousTransparencies
-      fullName: GreyscaleOverlayTestSuite.CanSetToVariousTransparencies
-      resultStatus: 1
-      duration: 0.0011273
-      messages: 
-      output: 'clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1025
-      parentUniqueId: Tests.dll/[Tests][GreyscaleOverlayTestSuite][suite]
-    - id: 1004
-      uniqueId: Tests.dll/[Tests][InfluenceActionTestSuite][suite]
-      name: InfluenceActionTestSuite
-      fullName: InfluenceActionTestSuite
-      resultStatus: 2
-      duration: 0.1344695
-      messages: One or more child tests had errors
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1016
-      parentUniqueId: '[Tests][/Users/steven.wenzel/Documents/unity/eonsgame/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1005
-      uniqueId: Tests.dll/InfluenceActionTestSuite/[Tests][InfluenceActionTestSuite.CanInfluenceNeighborCulture]
-      name: CanInfluenceNeighborCulture
-      fullName: InfluenceActionTestSuite.CanInfluenceNeighborCulture
-      resultStatus: 2
-      duration: 0.0781344
-      messages: "  Neighbor experiencing no changes!\r\n  Expected: True\r\n  But
-        was:  False\r\n"
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        clearing
-
-'
-      stacktrace: 'at InfluenceActionTestSuite.CanInfluenceNeighborCulture () [0x00014]
-        in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\InfluenceActionTestSuite.cs:21
-
-'
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/[Tests][InfluenceActionTestSuite][suite]
-    - id: 1006
-      uniqueId: Tests.dll/InfluenceActionTestSuite/[Tests][InfluenceActionTestSuite.CanMergeIntoNewCultureIfClose]
-      name: CanMergeIntoNewCultureIfClose
-      fullName: InfluenceActionTestSuite.CanMergeIntoNewCultureIfClose
-      resultStatus: 2
-      duration: 0.0497868
-      messages: "  Neighbor experiencing no changes!\r\n  Expected: True\r\n  But
-        was:  False\r\n"
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        clearing
-
-'
-      stacktrace: 'at InfluenceActionTestSuite.CanMergeIntoNewCultureIfClose () [0x00074]
-        in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\InfluenceActionTestSuite.cs:40
-
-'
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/[Tests][InfluenceActionTestSuite][suite]
-    - id: 1001
-      uniqueId: Tests.dll/[Tests][MergeActionTestSuite][suite]
-      name: MergeActionTestSuite
-      fullName: MergeActionTestSuite
-      resultStatus: 2
-      duration: 0.2008128
-      messages: One or more child tests had errors
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1009
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1006
-      uniqueId: Tests.dll/MergeActionTestSuite/[Tests][MergeActionTestSuite.CanAddNewCultureToTile]
-      name: CanAddNewCultureToTile
-      fullName: MergeActionTestSuite.CanAddNewCultureToTile
-      resultStatus: 2
-      duration: 0.0322359
-      messages: 'System.NullReferenceException : Object reference not set to an instance
-        of an object'
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        clearing
-
-'
-      stacktrace: "  at MergeAction.CombineCultureWithNewTile () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\CultureScripts\\Actions\\MergeAction.cs:23
-        \r\n  at MergeAction.ExecuteTurn () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\CultureScripts\\Actions\\MergeAction.cs:18
-        \r\n  at MergeActionTestSuite.ExecuteTurnAndSetCultureTurnUpdates () [0x0000d]
-        in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\MergeActionTestSuite.cs:101
-        \r\n  at MergeActionTestSuite.CanAddNewCultureToTile () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\MergeActionTestSuite.cs:45
-        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
-        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
-        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
-        System.Globalization.CultureInfo culture) [0x0006a] in <6073cf49ed704e958b8a66d540dea948>:0 "
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/[Tests][MergeActionTestSuite][suite]
-    - id: 1008
-      uniqueId: Tests.dll/MergeActionTestSuite/[Tests][MergeActionTestSuite.CanCreateAsNewCulture]
-      name: CanCreateAsNewCulture
-      fullName: MergeActionTestSuite.CanCreateAsNewCulture
-      resultStatus: 2
-      duration: 0.0343302
-      messages: 'System.NullReferenceException : Object reference not set to an instance
-        of an object'
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        Culture has tileInfo,
-        not changing. Unless this is a test it may be a bug.
-
-        Culture has
-        tileInfo, not changing. Unless this is a test it may be a bug.
-
-        clearing
-
-'
-      stacktrace: "  at MergeAction.CombineCultureWithNewTile () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\CultureScripts\\Actions\\MergeAction.cs:23
-        \r\n  at MergeAction.ExecuteTurn () [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\CultureScripts\\Actions\\MergeAction.cs:18
-        \r\n  at MergeActionTestSuite.ExecuteTurnAndSetCultureTurnUpdates () [0x0000d]
-        in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\MergeActionTestSuite.cs:101
-        \r\n  at MergeActionTestSuite.CanCreateAsNewCulture () [0x0001c] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\MergeActionTestSuite.cs:81
-        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
-        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
-        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
-        System.Globalization.CultureInfo culture) [0x0006a] in <6073cf49ed704e958b8a66d540dea948>:0 "
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/[Tests][MergeActionTestSuite][suite]
-    - id: 1005
-      uniqueId: Tests.dll/MergeActionTestSuite/[Tests][MergeActionTestSuite.CanMergeCultures]
-      name: CanMergeCultures
-      fullName: MergeActionTestSuite.CanMergeCultures
-      resultStatus: 2
-      duration: 0.0910666
-      messages: 'System.Collections.Generic.KeyNotFoundException : The given key
-        ''qstsil'' was not present in the dictionary.'
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        Culture has tileInfo,
-        not changing. Unless this is a test it may be a bug.
-
-        Culture has
-        tileInfo, not changing. Unless this is a test it may be a bug.
-
-        clearing
-
-'
-      stacktrace: "  at System.Collections.Generic.Dictionary`2[TKey,TValue].get_Item
-        (TKey key) [0x0001e] in <6073cf49ed704e958b8a66d540dea948>:0 \r\n  at TileInfo.UpdateCultureName
-        (System.String oldname, System.String newname) [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\TileInfo.cs:51
-        \r\n  at MergeActionTestSuite.CanMergeCultures () [0x0003c] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\MergeActionTestSuite.cs:28
-        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
-        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
-        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
-        System.Globalization.CultureInfo culture) [0x0006a] in <6073cf49ed704e958b8a66d540dea948>:0 "
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/[Tests][MergeActionTestSuite][suite]
-    - id: 1007
-      uniqueId: Tests.dll/MergeActionTestSuite/[Tests][MergeActionTestSuite.CanMergeWithParentCulture]
-      name: CanMergeWithParentCulture
-      fullName: MergeActionTestSuite.CanMergeWithParentCulture
-      resultStatus: 2
-      duration: 0.0337705
-      messages: 'System.Collections.Generic.KeyNotFoundException : The given key
-        ''qstsil'' was not present in the dictionary.'
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        Culture has tileInfo,
-        not changing. Unless this is a test it may be a bug.
-
-        Culture has
-        tileInfo, not changing. Unless this is a test it may be a bug.
-
-        Culture
-        has tileInfo, not changing. Unless this is a test it may be a bug.
-
-        clearing
-
-'
-      stacktrace: "  at System.Collections.Generic.Dictionary`2[TKey,TValue].get_Item
-        (TKey key) [0x0001e] in <6073cf49ed704e958b8a66d540dea948>:0 \r\n  at TileInfo.UpdateCultureName
-        (System.String oldname, System.String newname) [0x00001] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\TileInfo.cs:51
-        \r\n  at MergeActionTestSuite.CanMergeWithParentCulture () [0x00061] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\MergeActionTestSuite.cs:62
-        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
-        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
-        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
-        System.Globalization.CultureInfo culture) [0x0006a] in <6073cf49ed704e958b8a66d540dea948>:0 "
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/[Tests][MergeActionTestSuite][suite]
-    - id: 1001
-      uniqueId: Tests.dll/[Tests][MoveActionTestSuite][suite]
-      name: MoveActionTestSuite
-      fullName: MoveActionTestSuite
-      resultStatus: 2
-      duration: 0.4219256
-      messages: One or more child tests had errors
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1004
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1002
-      uniqueId: Tests.dll/MoveActionTestSuite/[Tests][MoveActionTestSuite.MoveTileActionTest]
-      name: MoveTileActionTest
-      fullName: MoveActionTestSuite.MoveTileActionTest
-      resultStatus: 2
-      duration: 0.1658156
-      messages: "  Culture has not changed tiles!\r\n  Expected: True\r\n  But was: 
-        False\r\n"
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        clearing
-
-'
-      stacktrace: 'at MoveActionTestSuite+<MoveTileActionTest>d__1.MoveNext () [0x00157]
-        in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\MoveActionTestSuite.cs:41
-
-        at
-        UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e]
-        in C:\Users\wenze\Documents\Unity\Eons\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
-
-'
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: Tests.dll/[Tests][MoveActionTestSuite][suite]
-    - id: 1002
-      uniqueId: Tests.dll/MoveActionTestSuite/[Tests][MoveActionTestSuite.MoveTileActionWhenLargeTest]
-      name: MoveTileActionWhenLargeTest
-      fullName: MoveActionTestSuite.MoveTileActionWhenLargeTest
-      resultStatus: 2
-      duration: 0.1331371
-      messages: 'UnityEngine.UnityException : Transform child out of bounds'
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        clearing
-
-'
-      stacktrace: "  at (wrapper managed-to-native) UnityEngine.Transform.GetChild(UnityEngine.Transform,int)\r\n 
-        at MoveActionTestSuite+<MoveTileActionWhenLargeTest>d__2.MoveNext () [0x0019b]
-        in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\MoveActionTestSuite.cs:68
-        \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e]
-        in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46 "
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: Tests.dll/[Tests][MoveActionTestSuite][suite]
-    - id: 1003
-      uniqueId: Tests.dll/MoveActionTestSuite/[Tests][MoveActionTestSuite.RepelledActionTest]
-      name: RepelledActionTest
-      fullName: MoveActionTestSuite.RepelledActionTest
-      resultStatus: 1
-      duration: 0.1162278
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: Tests.dll/[Tests][MoveActionTestSuite][suite]
-    - id: 1016
-      uniqueId: Tests.dll/[Tests][OverpopulationActionTestSuite][suite]
-      name: OverpopulationActionTestSuite
-      fullName: OverpopulationActionTestSuite
-      resultStatus: 1
-      duration: 0.0358629
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1019
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1017
-      uniqueId: Tests.dll/OverpopulationActionTestSuite/[Tests][OverpopulationActionTestSuite.CanBecomeOverPopulated]
-      name: CanBecomeOverPopulated
-      fullName: OverpopulationActionTestSuite.CanBecomeOverPopulated
-      resultStatus: 1
-      duration: 0.0080816
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1016
-      parentUniqueId: Tests.dll/[Tests][OverpopulationActionTestSuite][suite]
-    - id: 1018
-      uniqueId: Tests.dll/OverpopulationActionTestSuite/[Tests][OverpopulationActionTestSuite.TestPopulationDrop]
-      name: TestPopulationDrop
-      fullName: OverpopulationActionTestSuite.TestPopulationDrop
-      resultStatus: 1
-      duration: 0.0112238
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1016
-      parentUniqueId: Tests.dll/[Tests][OverpopulationActionTestSuite][suite]
-    - id: 1018
-      uniqueId: Tests.dll/OverpopulationActionTestSuite/[Tests][OverpopulationActionTestSuite.TestPopulationMoveAndDrop]
-      name: TestPopulationMoveAndDrop
-      fullName: OverpopulationActionTestSuite.TestPopulationMoveAndDrop
-      resultStatus: 1
-      duration: 0.0110153
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1016
-      parentUniqueId: Tests.dll/[Tests][OverpopulationActionTestSuite][suite]
-    - id: 1038
-      uniqueId: Tests.dll/[Tests][PerlinHeightmapGeneratorTestSuite][suite]
-      name: PerlinHeightmapGeneratorTestSuite
-      fullName: PerlinHeightmapGeneratorTestSuite
-      resultStatus: 1
-      duration: 0.0061227
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1047
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1039
-      uniqueId: Tests.dll/PerlinHeightmapGeneratorTestSuite/[Tests][PerlinHeightmapGeneratorTestSuite.CanAssignExpectedValues]
-      name: CanAssignExpectedValues
-      fullName: PerlinHeightmapGeneratorTestSuite.CanAssignExpectedValues
-      resultStatus: 1
-      duration: 0.0018542
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1038
-      parentUniqueId: Tests.dll/[Tests][PerlinHeightmapGeneratorTestSuite][suite]
-    - id: 1040
-      uniqueId: Tests.dll/[Tests][PopulationChangeIndicatorTestSuite][suite]
-      name: PopulationChangeIndicatorTestSuite
-      fullName: PopulationChangeIndicatorTestSuite
-      resultStatus: 1
-      duration: 0.0169526
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1052
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1041
-      uniqueId: Tests.dll/PopulationChangeIndicatorTestSuite/[Tests][PopulationChangeIndicatorTestSuite.CanGenerateIndicator]
-      name: CanGenerateIndicator
-      fullName: PopulationChangeIndicatorTestSuite.CanGenerateIndicator
-      resultStatus: 1
-      duration: 0.0126763
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1040
-      parentUniqueId: Tests.dll/[Tests][PopulationChangeIndicatorTestSuite][suite]
-    - id: 1040
-      uniqueId: Tests.dll/[Tests][PopulationPipMakerTestSuite][suite]
-      name: PopulationPipMakerTestSuite
-      fullName: PopulationPipMakerTestSuite
-      resultStatus: 1
-      duration: 0.032402
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1050
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1041
-      uniqueId: Tests.dll/PopulationPipMakerTestSuite/[Tests][PopulationPipMakerTestSuite.CanAddPip]
-      name: CanAddPip
-      fullName: PopulationPipMakerTestSuite.CanAddPip
-      resultStatus: 1
-      duration: 0.0120101
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1040
-      parentUniqueId: Tests.dll/[Tests][PopulationPipMakerTestSuite][suite]
-    - id: 1042
-      uniqueId: Tests.dll/PopulationPipMakerTestSuite/[Tests][PopulationPipMakerTestSuite.CanRemovePip]
-      name: CanRemovePip
-      fullName: PopulationPipMakerTestSuite.CanRemovePip
-      resultStatus: 1
-      duration: 0.0159552
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        Setup
-        Complete. Culture name is rthqqn (Culture)
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1040
-      parentUniqueId: Tests.dll/[Tests][PopulationPipMakerTestSuite][suite]
-    - id: 1024
-      uniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
-      name: TileFoodTestSuite
-      fullName: TileFoodTestSuite
-      resultStatus: 1
-      duration: 0.0666418
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1027
-      parentUniqueId: '[Tests][/Users/steven.wenzel/Documents/unity/eonsgame/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1025
-      uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanCalculateProperFoodRateDesert]
-      name: CanCalculateProperFoodRateDesert
-      fullName: TileFoodTestSuite.CanCalculateProperFoodRateDesert
-      resultStatus: 1
-      duration: 0.0061438
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1024
-      parentUniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
-    - id: 1032
-      uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanCalculateProperFoodRateRainforest]
-      name: CanCalculateProperFoodRateRainforest
-      fullName: TileFoodTestSuite.CanCalculateProperFoodRateRainforest
-      resultStatus: 1
-      duration: 0.0077472
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1029
-      parentUniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
-    - id: 1026
-      uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanCalculateProperFoodRateTundra]
-      name: CanCalculateProperFoodRateTundra
-      fullName: TileFoodTestSuite.CanCalculateProperFoodRateTundra
-      resultStatus: 1
-      duration: 0.0075128
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1024
-      parentUniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
-    - id: 1033
-      uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanIncreaseFoodPerTick]
-      name: CanIncreaseFoodPerTick
-      fullName: TileFoodTestSuite.CanIncreaseFoodPerTick
-      resultStatus: 1
-      duration: 0.011309
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1029
-      parentUniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
-    - id: 1035
-      uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanPreventAdditionalFood]
-      name: CanPreventAdditionalFood
-      fullName: TileFoodTestSuite.CanPreventAdditionalFood
-      resultStatus: 1
-      duration: 0.0123462
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1029
-      parentUniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
-    - id: 1034
-      uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanSetFoodToMaxAtStart]
-      name: CanSetFoodToMaxAtStart
-      fullName: TileFoodTestSuite.CanSetFoodToMaxAtStart
-      resultStatus: 1
-      duration: 0.0158153
-      messages: 
-      output: 'setting test board: Board(Clone) (Board)
-
-        Board(Clone) (Board)
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1029
-      parentUniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
-    - id: 1058
-      uniqueId: Tests.dll/[Tests][TileGreyscaleOverlayLinkTestSuite][suite]
-      name: TileGreyscaleOverlayLinkTestSuite
-      fullName: TileGreyscaleOverlayLinkTestSuite
-      resultStatus: 1
-      duration: 0.0090164
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1060
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1059
-      uniqueId: Tests.dll/TileGreyscaleOverlayLinkTestSuite/[Tests][TileGreyscaleOverlayLinkTestSuite.CanSetToGreyIfLow]
-      name: CanSetToGreyIfLow
-      fullName: TileGreyscaleOverlayLinkTestSuite.CanSetToGreyIfLow
-      resultStatus: 1
-      duration: 0.0048723
-      messages: 
-      output: 'clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1058
-      parentUniqueId: Tests.dll/[Tests][TileGreyscaleOverlayLinkTestSuite][suite]
-    m_ResultText: "CanShowTwoCulturesOnTile (0.115s)\n---\nExpected: (49.00, 50.00,
-      0.00)\r\n  But was:  (49.13, 49.50, 0.00)\n---\nat CulturePlacementHandlerTestSuite+<CanShowTwoCulturesOnTile>d__8.MoveNext
-      () [0x00083] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\CulturePlacementHandlerTestSuite.cs:52\r\nat
-      UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in
-      C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46\n---\nclearing\r\nclearing"
-    m_ResultStacktrace: 'at CulturePlacementHandlerTestSuite+<CanShowTwoCulturesOnTile>d__8.MoveNext
-      () [0x00083] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\CulturePlacementHandlerTestSuite.cs:52
-
-      at
-      UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in
-      C:\Users\wenze\Documents\Unity\Eons\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
-
-'
+      clearing'
+    m_ResultStacktrace: 
     m_TestListState:
-      scrollPos: {x: 0, y: 60}
-      m_SelectedIDs: d130de56
-      m_LastClickedID: 1457402065
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: e9d47a80
+      m_LastClickedID: -2139433751
       m_ExpandedIDs: bbb6ef82c6ec6ba11cb03da8c2778cab18e194b54580feccfcd5f1d3af90fae781f0ffed5fdcc4f86eca7a08ad6ec22132b4d12703fe443357683e3426ecfc371a04ba42b71a114750a8734eeb084855a0eedc6e7c3b3c71ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -2128,8 +463,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 72.66667
-    width: 655
-    height: 730.3333
+    width: 649
+    height: 635
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2139,7 +474,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 6a67fcffb267fcfffc69fcff006bfcff486bfcffc46cfcff7e6efcffc66efcff4270fcff6673fcffae73fcff2a75fcff9677fcffde77fcff5a79fcfffc7bfcff447cfcffc07dfcffd27efcff1a7ffcff6481fcff1a83fcff6283fcffe484fcff0286fcff4a86fcff9488fcff668afcffae8afcfff88cfcffba8efcff028ffcff4691fcff66b6fcffaeb6fcfff8b8fcffb4bafcfffcbafcff10bdfcffb8dcfcff00ddfcff74defcffc0e5fcff08e6fcff7ce7fcff04eafcff4ceafcffc0ebfcff2eeefcff76eefcffeaeffcffa6f1fcffeef1fcff62f3fcff1cf5fcff64f5fcffd8f6fcff92f8fcffd8f8fcff54f9fcff0afefcff52fefcffc6fffcffca00fdff1201fdff7a02fdffaa07fdfff207fdff6609fdff220bfdff6a0bfdffde0cfdffa20efdffea0efdff5c1cfdffa41cfdff4839fdff4c3afdff943afdff083dfdff3a43fdff8243fdffe645fdffa447fdffec47fdff504afdff724bfdffba4bfdff1e4efdffe84ffdff3050fdff9452fdff6a56fdffb256fdff1659fdff1e5afdff665afdffca5cfdff885efdffd05efdff3461fdff3e62fdff8662fdffea64fdffbe66fdff0667fdff6a69fdff3699ffff7e99ffff12b6ffff7abbffffc2bbffff66d8ffff6ad9ffffb2d9ffffc6dbffff84ddffffccddffffdcdfffffdee0ffff26e1ffff38fbffff
+      m_ExpandedIDs: 8efaffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2183,10 +518,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 656
+    x: 650
     y: 72.66667
-    width: 1449.3333
-    height: 729
+    width: 1434.6667
+    height: 635
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2240,7 +575,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 25.333334}
+      snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -2388,9 +723,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 14.368277, y: 30.912548, z: -0.4028125}
+    m_Target: {x: 28.460833, y: 25.377705, z: -0.41903386}
     speed: 2
-    m_Value: {x: 14.368277, y: 30.912548, z: -0.4028125}
+    m_Value: {x: 28.460833, y: 25.377705, z: -0.41903386}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -2441,9 +776,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.158392
+    m_Target: 3.8280492
     speed: 2
-    m_Value: 5.158392
+    m_Value: 3.8280492
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -2488,10 +823,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 656
+    x: 650
     y: 72.66667
-    width: 1449.3333
-    height: 729
+    width: 1434.6667
+    height: 635
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2538,23 +873,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1449.3333
-      height: 708
-    m_Scale: {x: 0.98333335, y: 0.98333335}
-    m_Translation: {x: 724.6666, y: 354}
+      width: 1434.6667
+      height: 614
+    m_Scale: {x: 0.8527778, y: 0.8527778}
+    m_Translation: {x: 717.3334, y: 307}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -736.9491
+      x: -841.17267
       y: -360
-      width: 1473.8982
+      width: 1682.3453
       height: 720
     m_MinimalGUI: 1
-  m_defaultScale: 0.98333335
-  m_LastWindowPixelSize: {x: 2174, y: 1093.5}
+  m_defaultScale: 0.8527778
+  m_LastWindowPixelSize: {x: 2152, y: 952.5}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -2581,9 +916,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 822.6667
-    width: 2106.3333
-    height: 528.3334
+    y: 728.6667
+    width: 2085.6667
+    height: 622.3334
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2601,22 +936,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Prefabs
+    - Assets/Resources/Scripts/CultureScripts/Actions
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Prefabs
+  - Assets/Resources/Scripts/CultureScripts/Actions
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\wenze\Documents\Unity\Eons
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 12600000
-    m_LastClickedID: 24594
-    m_ExpandedIDs: 000000000c6000000e60000010600000126000001460000016600000186000001a6000001c6000001e60000020600000226000002460000026600000286000002a6000002c6000002e60000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 300}
+    m_SelectedIDs: 285f0000
+    m_LastClickedID: 24360
+    m_ExpandedIDs: 00000000e45e0000e65e0000e85e0000ea5e0000ec5e0000ee5e0000f05e0000f25e0000f45e0000f65e0000f85e0000fa5e0000fc5e0000fe5e0000005f0000025f0000045f0000065f000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2644,7 +979,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000c6000000e60000010600000126000001460000016600000186000001a6000001c6000001e60000020600000226000002460000026600000286000002a6000002c6000002e600000
+    m_ExpandedIDs: 00000000e45e0000e65e0000e85e0000ea5e0000ec5e0000ee5e0000f05e0000f25e0000f45e0000f65e0000f85e0000fa5e0000fc5e0000fe5e0000005f0000025f0000045f0000065f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2671,7 +1006,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300009e5f0000946c0000ca590000e65b0000a8700000345d00003e5a000080720000565a0000e693ffffc47100004484000038840000b45c0000cc5c000000000000d45b00007c5d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -2721,9 +1056,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 822.6667
-    width: 2106.3333
-    height: 528.3334
+    y: 728.6667
+    width: 2085.6667
+    height: 622.3334
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2758,7 +1093,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 30508
+  m_LastSelectedObjectID: -311746
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -2896,9 +1231,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2107.3335
+    x: 2086.6667
     y: 72.66667
-    width: 451.66675
+    width: 472.33325
     height: 1278.3334
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:

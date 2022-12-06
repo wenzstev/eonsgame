@@ -9,8 +9,8 @@ public class MergeAction : CultureAction
 
     public MergeAction(Culture c) : base(c) 
     {
-        cultureContainer = culture.Tile.GetComponentInChildren<CultureContainer>();
-        NewTileObj = culture.Tile.gameObject;
+        cultureContainer = Culture.Tile.GetComponentInChildren<CultureContainer>();
+        NewTileObj = Culture.Tile.gameObject;
     }
 
     public override Turn ExecuteTurn()
@@ -20,24 +20,24 @@ public class MergeAction : CultureAction
 
     Turn CombineCultureWithNewTile()
     {
-        Debug.Log($"merging culture {culture}({culture.GetHashCode()}) with tile {NewTileObj}");
-        if (cultureContainer.HasCultureByName(culture) && cultureContainer.GetCultureByName(culture).currentState != Culture.State.NewOnTile) return AttemptToCombineCultures();
+        Debug.Log($"merging culture {Culture}({Culture.GetHashCode()}) with tile {NewTileObj}");
+        if (cultureContainer.HasCultureByName(Culture) && cultureContainer.GetCultureByName(Culture).currentState != Culture.State.NewOnTile) return AttemptToCombineCultures();
         return AddForeignCulture();
     }
 
     Turn AttemptToCombineCultures()
     {
-        if(culture.CanMerge(cultureContainer.GetCultureByName(culture)))
+        if(Culture.CanMerge(cultureContainer.GetCultureByName(Culture)))
         {
-            return MergeCultures(cultureContainer.GetCultureByName(culture), culture);
+            return MergeCultures(cultureContainer.GetCultureByName(Culture), Culture);
         }
         return CreateAsNewCulture();
     }
 
     Turn AddForeignCulture()
     {
-        turn.UpdateCulture(culture).newTile = NewTileObj.GetComponent<Tile>();
-        turn.UpdateCulture(culture).newState = Culture.State.Default;
+        turn.UpdateCulture(Culture).newTile = NewTileObj.GetComponent<Tile>();
+        turn.UpdateCulture(Culture).newState = Culture.State.Default;
         return turn;
     }
 
@@ -49,14 +49,14 @@ public class MergeAction : CultureAction
         {
             turn.UpdateCulture(c).newState = Culture.State.Invaded;
         }
-        turn.UpdateCulture(culture).newState = Culture.State.Invader;
+        turn.UpdateCulture(Culture).newState = Culture.State.Invader;
     }
 
     public Turn CreateAsNewCulture()
     {
 
         string newName = Culture.getRandomString(5);
-        turn.UpdateCulture(culture).newName = newName;
+        turn.UpdateCulture(Culture).newName = newName;
         //Debug.Log("changing culture name (" + culture.GetHashCode() + ") but memory is " + culture.GetComponent<CultureMemory>().previousTile);
         EventManager.TriggerEvent("CultureCreated", new Dictionary<string, object> { { "culture", newName } });
         SetExistingCulturesToInvaded();
