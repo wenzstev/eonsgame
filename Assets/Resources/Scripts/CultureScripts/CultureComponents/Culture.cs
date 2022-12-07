@@ -205,8 +205,14 @@ public class Culture : MonoBehaviour
     }
 
 
-    private void ChangeState(State newState)
+
+    public void ChangeState(State newState)
     {
+        if(newState == State.PendingRemoval)
+        {
+            DestroyCulture();
+            return;
+        }
         if(CultureMemory.previousState != newState)
         {
             CultureMemory.previousState = currentState;
@@ -219,6 +225,7 @@ public class Culture : MonoBehaviour
         {
             RemoveFromTile();
         }
+        
         currentState = newState;
     }
 
@@ -310,7 +317,7 @@ public class Culture : MonoBehaviour
         transform.parent = newTile.transform;
     }
 
-    void RenameCulture(string newName)
+    public void RenameCulture(string newName)
     {
         EventManager.TriggerEvent("CultureRemoved" + name, new Dictionary<string, object> { { "culture", this } });
         CultureMemory.cultureParentName = name;
