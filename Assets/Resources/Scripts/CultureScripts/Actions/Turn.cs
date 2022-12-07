@@ -25,7 +25,6 @@ public class Turn
         UpdateList.Add(new StateUpdate(null, Culture.State.Default));
 
         UpdateList[0].GetCultureChange();
-        string s = UpdateList[1].UPDATE_TYPE;
     }
 
     public static Turn HookTurn()
@@ -148,13 +147,12 @@ public abstract class MustInitialize<T>
 public interface INonGenericCultureUpdate
 {
     object GetCultureChange();
-    string UPDATE_TYPE { get; }
     void ExecuteChange();
 }
 
 public abstract class CultureUpdate<G> : MustInitialize<CultureAction>, INonGenericCultureUpdate
 {
-    G cultureChangeValue;
+    protected G cultureChangeValue;
 
     object INonGenericCultureUpdate.GetCultureChange()
     {
@@ -168,7 +166,6 @@ public abstract class CultureUpdate<G> : MustInitialize<CultureAction>, INonGene
 
     public abstract void ExecuteChange();
 
-    public abstract string UPDATE_TYPE { get; }
     public CultureAction Originator { get; }
 
     public Culture Target { get { return Originator.Culture; } }
@@ -181,7 +178,6 @@ public abstract class CultureUpdate<G> : MustInitialize<CultureAction>, INonGene
 
 public class PopulationUpdate : CultureUpdate<int>
 {
-    public override string UPDATE_TYPE {get { return "POPULATION";}}
     public PopulationUpdate(CultureAction originator, int val) : base (originator, val) { }
 
     public override void ExecuteChange()
@@ -192,6 +188,45 @@ public class PopulationUpdate : CultureUpdate<int>
 
 public class StateUpdate : CultureUpdate<Culture.State>
 {
-    public override string UPDATE_TYPE { get { return "STATE"; } }
     public StateUpdate(CultureAction originator, Culture.State val) : base(originator, val) { }
+    public override void ExecuteChange()
+    {
+        Target.ChangeState(GetCultureChange());
+    }
+}
+
+public class NameUpdate : CultureUpdate<string>
+{
+    public NameUpdate(CultureAction originator, string val) : base(originator, val) { }
+    public override void ExecuteChange()
+    {
+        Target.RenameCulture(GetCultureChange());
+    }
+}
+
+public class ColorUpdate : CultureUpdate<Color>
+{
+    public ColorUpdate(CultureAction originator, Color val) : base(originator, val) { }
+    public override void ExecuteChange()
+    {
+        Target.SetColor(GetCultureChange());
+    }
+}
+
+public class TileUpdate : CultureUpdate<Tile>
+{
+    public TileUpdate(CultureAction originator, Tile val) : base(originator, val) { }
+    public override void ExecuteChange()
+    {
+        throw new System.NotImplementedException();
+    }
+}
+
+public class FoodUpdate : CultureUpdate<float>
+{
+    public FoodUpdate(CultureAction originator, float val) : base(originator, val) { }
+    public override void ExecuteChange()
+    {
+        Target.GetComponent<CultureFoodStore>().AlterFoodStore(GetCultureChange());
+    }
 }
