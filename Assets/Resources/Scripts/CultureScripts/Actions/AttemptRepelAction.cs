@@ -25,12 +25,12 @@ public class AttemptRepelAction : CultureAction
                 //Debug.Log("repel threshold = .6 + " + hasAffinityAdvantage + " + " + popAdvantage);
                 if (Random.value < repelThreshold)
                 {
-                    turn.UpdateCulture(c).newState = Culture.State.Repelled;
+                    Turn.AddUpdate(new StateUpdate(this, c, Culture.State.Repelled));
                     Debug.Log(c.name + " is repelled by " + Culture.name);
                 }
                 else
                 {
-                    turn.UpdateCulture(c).newState = Culture.State.Default;
+                    Turn.AddUpdate(new StateUpdate(this, c, Culture.State.Default));
 
                     Debug.Log(c.Tile.name);
                     //EventManager.TriggerEvent("PauseSpeed", null);

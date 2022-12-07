@@ -112,7 +112,6 @@ public class Culture : MonoBehaviour
 
     private void Awake()
     {
-        EventManager.StartListening("Tick", OnTick);
         layerMode = GetComponent<SpriteRenderer>();
         //circleMode = transform.GetChild(1).GetComponent<SpriteRenderer>();
         decisionMaker = new DecisionMaker(this);
@@ -149,62 +148,7 @@ public class Culture : MonoBehaviour
         gameObject.name = name;
         transform.SetParent(t.gameObject.transform);
         GetComponent<AffinityManager>().Initialize();
-        //SetTile(t);
-        //SetTileWithoutInformingTileInfo(t);
     }
-
-
-    void ExecuteTurn()
-    {
-        Turn turn = decisionMaker.ExecuteTurn();
-        turn.UpdateAllCultures();
-    }
-
-    public void UpdateForTurn(CultureTurnUpdate t)
-    {
-        foreach(INonGenericCultureUpdate update in t.updates)
-        {
-            update.ExecuteChange();
-        }
-
-
-        if (t.newState == State.PendingRemoval)
-        {
-            //Debug.Log("state is pending removal");
-            DestroyCulture();
-            return;
-        }
-
-        AddPopulation(t.popChange);
-
-        if (t.newName != null)
-        {
-            RenameCulture(t.newName);
-        }
-
-        SetColor(t.newColor);
-        //Debug.Log("setting state for " + GetHashCode() + " to " + t.newState);
-
-        if(t.newState != currentState) ChangeState(t.newState);
-
-        if (t.newTile != null)
-        {
-            // check if tile is null (would indicate moving or about to move)
-            if (Tile != null) SwapTile(t.newTile); else SetTile(t.newTile);
-        }
-
-
-        CultureFoodStore.AlterFoodStore(t.FoodChange);
-
-        EventManager.TriggerEvent("CultureUpdated" + name, new Dictionary<string, object> { { "culture", this } });
-    }
-
-    private void OnTick(Dictionary<string, object> empty)
-    {
-        ExecuteTurn();
-    }
-
-
 
     public void ChangeState(State newState)
     {
@@ -264,7 +208,6 @@ public class Culture : MonoBehaviour
     void DestroyCulture()
     {
         //Debug.Log("Destroying " + name + "(" + GetHashCode() + ")");
-        EventManager.StopListening("Tick", OnTick);
         EventManager.TriggerEvent("CultureRemoved" + name, new Dictionary<string, object>() { { "culture", this } });
         if(tileInfo != null)
         {
@@ -306,8 +249,13 @@ public class Culture : MonoBehaviour
         cultureContainer = null;
     }
 
-    void SetTile(Tile newTile)
+    public void SetTile(Tile newTile)
     {
+        if (newTile == null)
+        {
+            RemoveFromTile();
+            return;
+        }
         Debug.Log($"Setting tile for culture {this}({this.GetHashCode()}) to tile {newTile}");
         CultureContainer newCultureContainer = newTile.GetComponentInChildren<CultureContainer>();
         newCultureContainer.AddCulture(this);
@@ -339,13 +287,7 @@ public class Culture : MonoBehaviour
         }
         return new Color(getMutationRate() + parentColor.r, getMutationRate() + parentColor.g, getMutationRate() + parentColor.b);
     }
-
-    private void OnDestroy()
-    {
-        EventManager.StopListening("Tick", OnTick);
-
-    }
-
+    
     public override string ToString()
     {
         return $"{name}({GetHashCode()})";
