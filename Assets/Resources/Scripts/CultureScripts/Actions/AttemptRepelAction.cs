@@ -37,13 +37,13 @@ public class AttemptRepelAction : CultureAction
                 }
                 if(Random.value < .01f)
                 {
-                    turn.UpdateCulture(Culture).popChange -= 1; // killed in repelling effort
-                    Debug.Log("some of " + Culture.name + " killed in repel");
+                    Turn.AddUpdate(new PopulationUpdate(this, Culture, -1)); // killed in repelling effort
+                    //Debug.Log("some of " + Culture.name + " killed in repel");
                 }
                 break;
             }
         }
-        turn.UpdateCulture(Culture).newState = Culture.State.Default;
+        Turn.AddUpdate(new StateUpdate(this, Culture, Culture.State.Default));
         return turn;
     }
 }

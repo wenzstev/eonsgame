@@ -40,14 +40,13 @@ public class FoodAmountIndicatorTestSuite : CultureActionTest
     {
         yield return SetFoodAndPassTime(3);
         GameObject TestFoodAmountIndicator = TestFoodAmountIndicatorGenerator.transform.GetChild(0).gameObject;
-        Turn.HookTurn().UpdateCulture(TestCulture).popChange = 30;
-        Turn.HookTurn().UpdateAllCultures();
+        TestCulture.AddPopulation(30);
         NeighborTile.GetComponent<TileDrawer>().tileType = TileDrawer.BiomeType.Grassland;
         yield return null;
 
         MoveTileAction mta = new MoveTileAction(TestCulture);
         mta.ExecuteTurn();
-        Turn.HookTurn().UpdateAllCultures();
+        Turn.UpdateAllCultures();
 
         yield return null;
 

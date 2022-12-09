@@ -18,8 +18,7 @@ public class PopulationChangeIndicatorTestSuite : CultureActionTest
     [UnityTest]
     public IEnumerator CanGenerateIndicator()
     {
-        Turn.HookTurn().UpdateCulture(TestCulture).popChange = 1;
-        Turn.HookTurn().UpdateAllCultures();
+        TestCulture.AddPopulation(1);
         yield return null;
 
         // get the Populationchangeindicator and then check if it has a child

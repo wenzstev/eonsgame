@@ -35,8 +35,8 @@ public abstract class CultureMoveAction : CultureAction
         //newTile.GetComponentInChildren<CulturePlacementHandler>().AddCulture(culture);
 
         //Debug.Log("hooking current turn from move");
-        Turn.HookTurn().UpdateCulture(cultureToMove).newState = Culture.State.NewOnTile; // NewOnTile is called before the culture is "officially" added to the tile
-        Turn.HookTurn().UpdateCulture(cultureToMove).newTile = newTile.GetComponent<Tile>();
+        Turn.AddUpdate(new StateUpdate(this, cultureToMove, Culture.State.NewOnTile));
+        Turn.AddUpdate(new TileUpdate(this, cultureToMove, newTile.GetComponent<Tile>()));
 
     }
 

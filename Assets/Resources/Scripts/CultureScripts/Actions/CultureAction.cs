@@ -13,10 +13,15 @@ public abstract class CultureAction
     {
         //Debug.Log("starting turn for " + c.GetHashCode());
         Culture = c;
-        turn = Turn.HookTurn();
+        turn = Turn.CurrentTurn;
         //Debug.Log($"{culture.Population}, {ActionCost}");
-        turn.UpdateCulture(Culture).FoodChange = -ActionCost * Culture.Population; // doing it here means you lose additional food per turn if you call more than one action per turn
+        Turn.AddUpdate(new FoodUpdate(this, Culture, -ActionCost * Culture.Population)); // doing it here means you lose additional food per turn if you call more than one action per turn
         //Debug.Log(turn.UpdateCulture(culture).FoodChange);
+    }
+
+    protected float GetActionCost()
+    {
+        return -ActionCost * Culture.Population;
     }
 
     public abstract Turn ExecuteTurn();
