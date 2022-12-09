@@ -28,6 +28,7 @@ public class Turn
     /// <param name="update">The INonGenericCultureUpdate to add.</param>
     public static void AddUpdate(INonGenericCultureUpdate update)
     {
+        Debug.Log($"Adding {update}");
         CurrentTurn.UpdateList.Add(update);
     }
 
@@ -93,6 +94,11 @@ public abstract class CultureUpdate<G> : MustInitialize<CultureAction>, INonGene
         Originator = originator;
         cultureChangeValue = value;
         _target = target;
+    }
+
+    public override string ToString()
+    {
+        return $"{this.GetType()}, Creator: {Originator}, Target: {Target}, Value:{cultureChangeValue}";
     }
 
 }

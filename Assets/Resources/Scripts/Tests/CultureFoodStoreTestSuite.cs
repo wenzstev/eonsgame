@@ -73,7 +73,6 @@ public class CultureFoodStoreTestSuite : CultureActionTest
     void AssertFoodChange(float expected)
     {
         INonGenericCultureUpdate[] TestCultureUpdateList = Turn.GetPendingUpdatesFor(TestCulture);
-
         Assert.AreEqual(expected, TestUtils.GetCombinedFoodChangeInUpdateList(TestCultureUpdateList), "FoodChange is incorrect!");
     }
 

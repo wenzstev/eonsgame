@@ -32,7 +32,7 @@ public class TestUtils
 
     public static float GetCombinedFoodChangeInUpdateList(INonGenericCultureUpdate[] UpdateList)
     {
-        return UpdateList.Where(u => u.GetType() == typeof(FoodUpdate)).Sum(u => (int)u.GetCultureChange());
+        return UpdateList.Where(u => u.GetType() == typeof(FoodUpdate)).Sum(u => (float) u.GetCultureChange());
     }
 
     public static Color GetLastColorInUpdateList(INonGenericCultureUpdate[] UpdateList)
