@@ -29,17 +29,21 @@ public class CultureInfluenceAction : CultureAction
     {
         // duplicated code x1. if happens again, pull out into static helper method
         float percentThisPopulation = (float)Culture.Population / (Culture.Population + other.maxPopTransfer);
-        turn.UpdateCulture(Culture).newColor = Color.Lerp(Culture.Color, other.Color, percentThisPopulation);
-        turn.UpdateCulture(Culture).popChange += other.Population;
-        turn.UpdateCulture(other).popChange -= other.Population;
-        turn.UpdateCulture(other).newState = Culture.State.PendingRemoval;
+        Color lerpedColor = Color.Lerp(Culture.Color, other.Color, percentThisPopulation);
+
+        Turn.AddUpdate(new ColorUpdate(this, Culture, lerpedColor));
+        Turn.AddUpdate(new PopulationUpdate(this, Culture, other.Population));
+        Turn.AddUpdate(new PopulationUpdate(this, other, -other.Population));
+        Turn.AddUpdate(new StateUpdate(this, other, Culture.State.PendingRemoval));
+
     }
 
     void InfluenceCulture(Culture other)
     {
         //Debug.Log("in influenceculture");
         float influenceValue = Random.value * Culture.influenceRate;
-        turn.UpdateCulture(other).newColor = Color.Lerp(other.Color, Culture.Color, influenceValue);
+        Color lerpedColor = Color.Lerp(other.Color, Culture.Color, influenceValue);
+        Turn.AddUpdate(new ColorUpdate(this, other, lerpedColor));
         //EventManager.TriggerEvent("PauseSpeed", null);
     }
 

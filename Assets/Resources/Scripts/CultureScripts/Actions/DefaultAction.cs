@@ -25,29 +25,31 @@ public class DefaultAction : CultureAction
 
     void AttemptToGatherFood()
     {
-        if(Culture.CultureFoodStore.CurrentFoodStore < Culture.CultureFoodStore.MaxFoodStore)
-        {
-            GatherFoodAction gather = new GatherFoodAction(Culture);
-            gather.ExecuteTurn();
-        }
+        GatherFoodAction gather = new GatherFoodAction(Culture);
+        gather.ExecuteTurn();
     }
 
     void CheckIfHasSufficientFood()
     {
-        float FoodChange = turn.turnUpdates[Culture].FoodChange;
+        float overpopulationThreshold = .05f;
+        float seekingFoodThreshold = .2f;
         float FoodStore = Culture.GetComponent<CultureFoodStore>().CurrentFoodStore;
         float MaxFoodStore = Culture.GetComponent<CultureFoodStore>().MaxFoodStore;
-        turn.UpdateCulture(Culture).newState = FoodStore + FoodChange < Culture.Population 
-            ? Culture.State.Overpopulated : 
-            FoodStore < MaxFoodStore / 2f && FoodChange < 0 ? 
-            Culture.State.SeekingFood : Culture.State.Default;
-    }
 
+        Culture.State newState = FoodStore == overpopulationThreshold * MaxFoodStore ? 
+            Culture.State.Overpopulated : 
+            FoodStore < seekingFoodThreshold * MaxFoodStore ?
+            Culture.State.SeekingFood : Culture.State.Default;
+
+        Turn.AddUpdate(new StateUpdate(this, Culture, newState));
+
+
+    }
 
 
     void AddSideEffects()
     {
-        turn.UpdateCulture<PopulationUpdate, int>(Culture, GrowPopulation());
+        Turn.AddUpdate(new PopulationUpdate(this, Culture, GrowPopulation()));
 
         // need to change influence into a side effect?
         if (Culture.tileInfo.cultures.Count > 1 && Random.value < .1f)

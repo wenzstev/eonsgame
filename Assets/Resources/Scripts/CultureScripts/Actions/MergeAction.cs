@@ -36,27 +36,25 @@ public class MergeAction : CultureAction
 
     Turn AddForeignCulture()
     {
-        turn.UpdateCulture(Culture).newTile = NewTileObj.GetComponent<Tile>();
-        turn.UpdateCulture(Culture).newState = Culture.State.Default;
+        Turn.AddUpdate(new TileUpdate(this, Culture, NewTileObj.GetComponent<Tile>()));
+        Turn.AddUpdate(new StateUpdate(this, Culture, Culture.State.Default));
         return turn;
     }
-
-    
 
     void SetExistingCulturesToInvaded()
     {
         foreach (Culture c in cultureContainer.GetAllCultures())
         {
-            turn.UpdateCulture(c).newState = Culture.State.Invaded;
+            Turn.AddUpdate(new StateUpdate(this, c, Culture.State.Invaded));
         }
-        turn.UpdateCulture(Culture).newState = Culture.State.Invader;
+        Turn.AddUpdate(new StateUpdate(this, Culture, Culture.State.Invader));
     }
 
     public Turn CreateAsNewCulture()
     {
 
         string newName = Culture.getRandomString(5);
-        turn.UpdateCulture(Culture).newName = newName;
+        Turn.AddUpdate(new NameUpdate(this, Culture, newName));
         //Debug.Log("changing culture name (" + culture.GetHashCode() + ") but memory is " + culture.GetComponent<CultureMemory>().previousTile);
         EventManager.TriggerEvent("CultureCreated", new Dictionary<string, object> { { "culture", newName } });
         SetExistingCulturesToInvaded();
@@ -67,10 +65,14 @@ public class MergeAction : CultureAction
     {
         //Debug.Log("merging cultures");
         float percentThisPopulation = (float)remain.Population / (remain.Population + merged.Population);
-        turn.UpdateCulture(remain).newColor = Color.Lerp(remain.Color, merged.Color, percentThisPopulation);
-        turn.UpdateCulture(remain).popChange += merged.Population;
-        turn.UpdateCulture(merged).popChange -= merged.Population;
-        turn.UpdateCulture(merged).newState = Culture.State.PendingRemoval;
+        Color lerpedColor = Color.Lerp(remain.Color, merged.Color, percentThisPopulation);
+
+        Turn.AddUpdate(new ColorUpdate(this, remain, lerpedColor));
+        Turn.AddUpdate(new PopulationUpdate(this, remain, merged.Population));
+        Turn.AddUpdate(new PopulationUpdate(this, merged, -merged.Population));
+        Turn.AddUpdate(new StateUpdate(this, merged, Culture.State.PendingRemoval)); ;
+
+
         return turn;
     }
 }

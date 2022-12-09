@@ -23,9 +23,9 @@ public class MoveActionTestSuite : CultureActionTest
         Turn TestTurn = mta.ExecuteTurn();
         yield return null;
 
-        TestTurn.UpdateAllCultures();
+        Turn.UpdateAllCultures();
 
-        Assert.That(TestCulture.currentState == Culture.State.Moving, "Culture is not moving!");
+        Assert.AreEqual(Culture.State.Moving, TestCulture.currentState, "Culture is not moving!");
 
         yield return new WaitForSeconds(.03f);
 
@@ -33,9 +33,7 @@ public class MoveActionTestSuite : CultureActionTest
 
         yield return new WaitForSeconds(.1f);
 
-        Turn.HookTurn().UpdateAllCultures();
-
-
+        Turn.UpdateAllCultures();
 
         Assert.That(TestCulture.currentState == Culture.State.NewOnTile, "Culture has not returned to default state!");
         Assert.That(TestCulture.transform.parent == NeighborTile.GetComponentInChildren<CultureContainer>().transform, "Culture has not changed tiles!");
@@ -45,11 +43,7 @@ public class MoveActionTestSuite : CultureActionTest
     [UnityTest]
     public IEnumerator MoveTileActionWhenLargeTest()
     {
-        Turn.HookTurn().UpdateCulture(TestCulture).popChange = 20;
-        Turn.HookTurn().UpdateAllCultures();
-
-        Assert.That(TestCulture.Population == 21, "test culture's population is not 6!");
-
+        TestCulture.AddPopulation(20);
 
         MoveTileAction mta = new MoveTileAction(TestCulture);
         mta.moveChance = 1;
@@ -57,13 +51,13 @@ public class MoveActionTestSuite : CultureActionTest
 
         yield return null;
 
-        Turn.HookTurn().UpdateAllCultures();
+        Turn.UpdateAllCultures();
 
         Assert.That(TestCulture.Population < TestCulture.maxPopTransfer && TestCulture.Population > TestCulture.minPopTransfer, $"Expected pop to be in range {TestCulture.minPopTransfer}, {TestCulture.maxPopTransfer} but pop is actually {TestCulture.Population}!");
 
         yield return new WaitForSeconds(.1f);
 
-        Turn.HookTurn().UpdateAllCultures();
+        Turn.UpdateAllCultures();
 
         GameObject childCultureObj = NeighborTile.GetComponentInChildren<CultureContainer>().transform.GetChild(0).gameObject;
 
@@ -87,8 +81,8 @@ public class MoveActionTestSuite : CultureActionTest
         TestCulture.GetComponent<CultureMemory>().previousTile = NeighborTile.GetComponent<Tile>();
 
         RepelledAction tra = new RepelledAction(TestCulture);
-        Turn testTurn = tra.ExecuteTurn();
-        testTurn.UpdateAllCultures();
+        tra.ExecuteTurn();
+        Turn.UpdateAllCultures();
 
         yield return null;
 
@@ -96,7 +90,7 @@ public class MoveActionTestSuite : CultureActionTest
 
         yield return new WaitForSeconds(.1f);
 
-        Turn.HookTurn().UpdateAllCultures();
+        Turn.UpdateAllCultures();
 
         Assert.That(TestCulture.currentState == Culture.State.NewOnTile, "Culture is not in NewOnTile State!");
     }

@@ -21,7 +21,7 @@ public class RepelledAction : CultureMoveAction
         //Debug.Log(culture.GetComponent<CultureMemory>().previousTile);
 
         Culture.StartCoroutine(MoveTile(Culture.gameObject, Culture.GetComponent<CultureMemory>().previousTile.gameObject));
-        turn.UpdateCulture(Culture).newState = Culture.State.Moving;
+        Turn.AddUpdate(new StateUpdate(this, Culture, Culture.State.Moving));
         return turn;
     }
 

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Turn
 {
@@ -39,6 +40,11 @@ public class Turn
         CurrentTurn.hasBeenPushed = true;
     }
 
+    public static INonGenericCultureUpdate[] GetPendingUpdatesFor(Culture c)
+    {
+        return CurrentTurn.UpdateList.Where(u => u.Target == c).ToArray();
+    }
+
 
     Turn()
     {
@@ -56,6 +62,9 @@ public interface INonGenericCultureUpdate
 {
     object GetCultureChange();
     void ExecuteChange();
+    public CultureAction Originator { get; }
+    public Culture Target { get; }
+
 }
 
 public abstract class CultureUpdate<G> : MustInitialize<CultureAction>, INonGenericCultureUpdate
@@ -73,11 +82,10 @@ public abstract class CultureUpdate<G> : MustInitialize<CultureAction>, INonGene
     }
 
     public abstract void ExecuteChange();
+    public CultureAction Originator { get; private set; }
 
-    public CultureAction Originator { get; }
 
     Culture _target;
-
     public Culture Target { get { return _target; } }
 
     public CultureUpdate(CultureAction originator, Culture target, G value) : base(originator)
@@ -86,6 +94,7 @@ public abstract class CultureUpdate<G> : MustInitialize<CultureAction>, INonGene
         cultureChangeValue = value;
         _target = target;
     }
+
 }
 
 public class PopulationUpdate : CultureUpdate<int>
