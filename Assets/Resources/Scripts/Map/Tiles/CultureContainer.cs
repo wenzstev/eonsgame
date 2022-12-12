@@ -28,7 +28,7 @@ public class CultureContainer : MonoBehaviour
         Debug.Log($"Adding culture {culture} to tile {gameObject.transform.parent}");
         Debug.Log(String.Join(", ", CultureList));
 
-        if (!HasCultureByName(culture))
+        if (!HasCultureByName(culture.Name))
         {
             InsertCultureInList(culture);
             culture.transform.SetParent(transform);
@@ -37,25 +37,23 @@ public class CultureContainer : MonoBehaviour
 
         culture.OnPopulationChanged += CultureContainer_OnPopulationChanged;
         SortListByPopulation();
+        culture.transform.parent = transform;
         Debug.Log(String.Join(", ", CultureList));
 
     }
 
-    public void RemoveCulture(Culture culture)
+    public bool RemoveCulture(Culture culture)
     {
         Debug.Log($"Removing culture {culture} from tile {gameObject.transform.parent}");
         Debug.Log(String.Join(", ", CultureList));
 
         bool wasRemoved = CultureList.Remove(culture);
-        if (!wasRemoved)
-        {
-            throw new NullReferenceException($"Tried to remove culture {culture} from tile that wasn't in the CultureContainer list!");
-            return;
-        }
+        if (!wasRemoved) return false;
         Debug.Log(String.Join(", ", CultureList));
         CultureDictionary.Remove(culture.name);
         SortListByPopulation();
         culture.OnPopulationChanged -= CultureContainer_OnPopulationChanged;
+        return true;
     }
 
     public Culture[] GetAllCultures()
@@ -63,14 +61,27 @@ public class CultureContainer : MonoBehaviour
         return CultureList.ToArray();
     }
 
-    public bool HasCultureByName(Culture culture)
+    public bool HasCultureByName(string cultureName)
     {
-         return CultureDictionary.ContainsKey(culture.name);
+         return CultureDictionary.ContainsKey(cultureName);
     }
 
-    public Culture GetCultureByName(Culture culture)
+    public Culture GetCultureByName(string cultureName)
     {
-        return CultureDictionary[culture.name];
+        return CultureDictionary[cultureName];
+    }
+
+    public bool ContainsCulture(Culture c)
+    {
+        return CultureList.Contains(c);
+    }
+
+    public void ChangeCultureName(Culture culture, string oldName)
+    {
+        Culture c = GetCultureByName(oldName);
+        if (c != culture) { Debug.LogError("trying to change culture name that doesn't exist on tile."); return; }
+        CultureDictionary.Remove(oldName);
+        CultureDictionary.Add(culture.name, culture);
     }
 
     void InsertCultureInList(Culture culture) 

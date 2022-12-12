@@ -18,12 +18,12 @@ public class MoveTileAction : CultureMoveAction
     {
         if (prospectiveTile == null || prospectiveTile.GetComponent<TileChars>().Biome == TileDrawer.BiomeType.Water) // this is doing way too much work
         {
-            turn.UpdateCulture(culture).newState = Culture.State.Default;
+            Turn.AddUpdate(new StateUpdate(this, Culture, Culture.State.Default));
 
             return turn;
         }
 
-        if (culture.Population > culture.maxPopTransfer)
+        if (Culture.Population > Culture.maxPopTransfer)
         {
             return MoveSplitCulture(); ;
         }
@@ -32,18 +32,18 @@ public class MoveTileAction : CultureMoveAction
 
     Turn MoveSplitCulture()
     {
-        GameObject splitCultureObj = culture.SplitCultureFromParent();
+        GameObject splitCultureObj = Culture.SplitCultureFromParent();
         Culture splitCulture = splitCultureObj.GetComponent<Culture>();
         splitCulture.StartCoroutine(MoveTile(splitCulture.gameObject, prospectiveTile));
-        turn.UpdateCulture(splitCulture).newState = Culture.State.Moving;
-        turn.UpdateCulture(culture).newState = Culture.State.Default;
+        Turn.AddUpdate(new StateUpdate(this, splitCulture, Culture.State.Moving));
+        Turn.AddUpdate(new StateUpdate(this, Culture, Culture.State.Default));
         return turn;
     }
 
     Turn MoveWholeCulture()
     {
-        culture.StartCoroutine(MoveTile(culture.gameObject, prospectiveTile));
-        turn.UpdateCulture(culture).newState = Culture.State.Moving;
+        Culture.StartCoroutine(MoveTile(Culture.gameObject, prospectiveTile));
+        Turn.AddUpdate(new StateUpdate(this, Culture, Culture.State.Moving));
         return turn;
     }
 }
