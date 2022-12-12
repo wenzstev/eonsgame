@@ -28,7 +28,7 @@ public class Turn
     /// <param name="update">The INonGenericCultureUpdate to add.</param>
     public static void AddUpdate(INonGenericCultureUpdate update)
     {
-        Debug.Log($"Adding {update}");
+        //Debug.Log($"Adding {update}");
         CurrentTurn.UpdateList.Add(update);
     }
 
@@ -87,7 +87,12 @@ public abstract class CultureUpdate<G> : MustInitialize<CultureAction>, INonGene
 
 
     Culture _target;
-    public Culture Target { get { return _target; } }
+    public Culture Target { 
+        get { 
+            if(_target != null && !_target.Equals(null)) return _target; // destroyed objects don't immediately equal null
+            return null;
+        }
+    }
 
     public CultureUpdate(CultureAction originator, Culture target, G value) : base(originator)
     {
@@ -109,7 +114,7 @@ public class PopulationUpdate : CultureUpdate<int>
 
     public override void ExecuteChange()
     {
-        Target.AddPopulation(GetCultureChange());
+        Target?.AddPopulation(GetCultureChange());
     }
 }
 
@@ -118,7 +123,7 @@ public class StateUpdate : CultureUpdate<Culture.State>
     public StateUpdate(CultureAction originator, Culture target, Culture.State val) : base(originator, target, val) { }
     public override void ExecuteChange()
     {
-        Target.ChangeState(GetCultureChange());
+        Target?.ChangeState(GetCultureChange());
     }
 }
 
@@ -127,7 +132,7 @@ public class NameUpdate : CultureUpdate<string>
     public NameUpdate(CultureAction originator, Culture target, string val) : base(originator, target, val) { }
     public override void ExecuteChange()
     {
-        Target.RenameCulture(GetCultureChange());
+        Target?.RenameCulture(GetCultureChange());
     }
 }
 
@@ -136,7 +141,7 @@ public class ColorUpdate : CultureUpdate<Color>
     public ColorUpdate(CultureAction originator, Culture target, Color val) : base(originator, target, val) { }
     public override void ExecuteChange()
     {
-        Target.SetColor(GetCultureChange());
+        Target?.SetColor(GetCultureChange());
     }
 }
 
@@ -145,7 +150,7 @@ public class TileUpdate : CultureUpdate<Tile>
     public TileUpdate(CultureAction originator, Culture target, Tile val) : base(originator, target, val) { }
     public override void ExecuteChange()
     {
-        Target.SetTile(GetCultureChange(), false);
+        Target?.SetTile(GetCultureChange(), false);
     }
 }
 
@@ -154,6 +159,6 @@ public class FoodUpdate : CultureUpdate<float>
     public FoodUpdate(CultureAction originator, Culture target, float val) : base(originator, target, val) { }
     public override void ExecuteChange()
     {
-        Target.GetComponent<CultureFoodStore>().AlterFoodStore(GetCultureChange());
+        Target?.GetComponent<CultureFoodStore>().AlterFoodStore(GetCultureChange());
     }
 }

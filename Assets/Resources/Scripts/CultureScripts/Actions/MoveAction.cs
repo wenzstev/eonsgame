@@ -18,7 +18,7 @@ public abstract class CultureMoveAction : CultureAction
 
     public IEnumerator MoveTile(GameObject cultureObj, GameObject newTile)
     {
-        Debug.Log($"moving to {newTile}");
+        //Debug.Log($"moving to {newTile}");
         Culture cultureToMove = RemoveCultureFromOldTile(cultureObj);
 
         Vector3 startPosition = cultureObj.transform.position;

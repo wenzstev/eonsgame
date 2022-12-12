@@ -25,8 +25,8 @@ public class CultureContainer : MonoBehaviour
 
     public void AddCulture(Culture culture)
     {
-        Debug.Log($"Adding culture {culture} to tile {gameObject.transform.parent}");
-        Debug.Log(String.Join(", ", CultureList));
+        //Debug.Log($"Adding culture {culture} to tile {gameObject.transform.parent}");
+        //Debug.Log(String.Join(", ", CultureList));
 
         if (!HasCultureByName(culture.Name))
         {
@@ -36,23 +36,26 @@ public class CultureContainer : MonoBehaviour
         }
 
         culture.OnPopulationChanged += CultureContainer_OnPopulationChanged;
+        culture.OnCultureDestroyed += CultureContainer_OnCultureDestroyed;
         SortListByPopulation();
         culture.transform.parent = transform;
-        Debug.Log(String.Join(", ", CultureList));
+        //Debug.Log(String.Join(", ", CultureList));
 
     }
 
     public bool RemoveCulture(Culture culture)
     {
-        Debug.Log($"Removing culture {culture} from tile {gameObject.transform.parent}");
-        Debug.Log(String.Join(", ", CultureList));
+        //Debug.Log($"Removing culture {culture} from tile {gameObject.transform.parent}");
+        //Debug.Log(String.Join(", ", CultureList));
 
         bool wasRemoved = CultureList.Remove(culture);
         if (!wasRemoved) return false;
-        Debug.Log(String.Join(", ", CultureList));
+        //Debug.Log(String.Join(", ", CultureList));
         CultureDictionary.Remove(culture.name);
         SortListByPopulation();
         culture.OnPopulationChanged -= CultureContainer_OnPopulationChanged;
+        culture.OnCultureDestroyed -= CultureContainer_OnCultureDestroyed;
+
         return true;
     }
 
@@ -109,6 +112,12 @@ public class CultureContainer : MonoBehaviour
 
     private void CultureContainer_OnPopulationChanged(object sender, Culture.OnPopulationChangedEventArgs e)
     {
+        SortListByPopulation();
+    }
+
+    private void CultureContainer_OnCultureDestroyed(object sender, Culture.OnCultureDestroyedEventArgs e)
+    {
+        RemoveCulture(e.DestroyedCulture);
         SortListByPopulation();
     }
 }

@@ -59,7 +59,8 @@ public class CulturePlacementHandler : MonoBehaviour
 
             if (oldCultureAtPosition == null
                 || oldCultureAtPosition != newCultureAtPosition
-                || oldCultureAtPosition.transform.position != ExpectedPositions[i])
+                || oldCultureAtPosition.transform.position != ExpectedPositions[i]
+                || !newCultureAtPosition.Equals(null)) // culture can be destroyed
             {
                 StartCoroutine(MoveCulture(newCultureAtPosition, ExpectedPositions[i]));
             }
@@ -88,12 +89,14 @@ public class CulturePlacementHandler : MonoBehaviour
 
     IEnumerator MoveCulture(Culture culture, Vector3 endPosition)
     {
+        if (culture.Equals(null)) yield break;
         float curTime = 0;
         Vector3 startPosition = culture.transform.localPosition;
         yield return null;
 
         while(curTime <= AnimationTransferTime)
         {
+            if (culture.Equals(null)) yield break; // culture was destroyed in the middle of transferring position
             curTime += Time.deltaTime;
             float curDistance = Mathf.InverseLerp(0, AnimationTransferTime, curTime);
             culture.transform.localPosition = Vector3.Lerp(startPosition, endPosition, curDistance);
