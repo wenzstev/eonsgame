@@ -8,6 +8,14 @@ public class TileChars : MonoBehaviour
     public int x;
     public int y;
 
+    public TileDrawer.BiomeType Biome
+    {
+        get
+        {
+            return GetComponent<TileDrawer>().tileType; // should change, this is too tightly coupled to tiledrawer
+        }
+    }
+
     public float elevation
     {
         get

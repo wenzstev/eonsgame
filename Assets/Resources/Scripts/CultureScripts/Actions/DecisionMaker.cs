@@ -19,6 +19,7 @@ public class DecisionMaker
         switch (culture.currentState)
         {
             case Culture.State.Default:
+            case Culture.State.Invader:
                 action = new DefaultAction(culture);
                 break;
             case Culture.State.Invaded:
@@ -28,7 +29,7 @@ public class DecisionMaker
                 action = new RepelledAction(culture);
                 break;
             case Culture.State.NewOnTile:
-                action = new MergeAction(culture);
+                action = new MergeWithTileAction(culture);
                 break;
             case Culture.State.Overpopulated:
                 action = new OverpopulationAction(culture);

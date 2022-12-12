@@ -33,6 +33,6 @@ public abstract class CultureActionTest : BasicBoardTest
     [TearDown]
     public void TearDownCultureTest()
     {
-        Turn.HookTurn().UpdateAllCultures();
+        Turn.UpdateAllCultures();
     }
 }

@@ -18,47 +18,36 @@ public abstract class CultureMoveAction : CultureAction
 
     public IEnumerator MoveTile(GameObject cultureObj, GameObject newTile)
     {
-        if(newTile == Tile.moveTile)
-        {
-            Debug.LogError("About to physically move to move tile!");
-        }
+        //Debug.Log($"moving to {newTile}");
         Culture cultureToMove = RemoveCultureFromOldTile(cultureObj);
 
         Vector3 startPosition = cultureObj.transform.position;
+        Vector3 endPosition = prospectiveTile.GetComponentInChildren<CulturePlacementHandler>().GetIncomingTilePlacement();
 
         for (float t = 0; t < moveTime; t += Time.deltaTime)
         {
             float curDistance = Mathf.InverseLerp(0, moveTime, t);
-            cultureObj.transform.position = Vector3.Lerp(startPosition, newTile.transform.position, curDistance);
+            cultureObj.transform.position = Vector3.Lerp(startPosition, endPosition, curDistance);
             yield return null;
         }
 
-        cultureObj.transform.position = newTile.transform.position;
-        cultureObj.transform.SetParent(newTile.transform);
+        cultureObj.transform.position = endPosition;
+        //newTile.GetComponentInChildren<CulturePlacementHandler>().AddCulture(culture);
 
         //Debug.Log("hooking current turn from move");
-        Turn.HookTurn().UpdateCulture(cultureToMove).newState = Culture.State.NewOnTile; // hook turn because the old one was already used
+        Turn.AddUpdate(new StateUpdate(this, cultureToMove, Culture.State.NewOnTile));
+        Turn.AddUpdate(new TileUpdate(this, cultureToMove, newTile.GetComponent<Tile>()));
 
     }
 
     Culture RemoveCultureFromOldTile(GameObject cultureObj)
     {
         Culture cultureToMove = cultureObj.GetComponent<Culture>();
+        
 
-        turn.UpdateCulture(cultureToMove).newTile = Tile.moveTile.GetComponent<Tile>();
+        //turn.UpdateCulture(cultureToMove).newTile = Tile.moveTile.GetComponent<Tile>();
 
         return cultureToMove;
     }
-
-    public bool canMove()
-    {
-        return prospectiveTile != null;
-    }
-
-
-
-
-
-
 }
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class FoodAmountIndicatorGenerator : MonoBehaviour
 {
     public GameObject FoodAmountIndicatorTemplate;
-    CultureFoodStore FoodStore;
+    public CultureFoodStore FoodStore;
     public int TicksBetweenIndicators = 1;
 
     float _amountFoodChange = 0;
@@ -14,16 +14,8 @@ public class FoodAmountIndicatorGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        EventManager.StartListening("Tick", OnTick);
-        FoodStore = transform.parent.GetComponent<CultureFoodStore>();
+        FoodStore.OnFoodStoreChanged += FoodAmountIndicatorGenerator_OnFoodStoreChanged;
         _numTicksSinceIndicator = 0;
-    }
-
-    void OnTick(Dictionary<string, object> empty)
-    {
-        _amountFoodChange += FoodStore.LastTickChange;
-        _numTicksSinceIndicator++;
-        if (_numTicksSinceIndicator == TicksBetweenIndicators) CreateIndicator();
     }
 
     void CreateIndicator()
@@ -34,10 +26,11 @@ public class FoodAmountIndicatorGenerator : MonoBehaviour
         _amountFoodChange = 0;
     }
 
-    private void OnDestroy()
+    void FoodAmountIndicatorGenerator_OnFoodStoreChanged(object sender, CultureFoodStore.OnFoodStoreChangedEventArgs e)
     {
-        EventManager.StopListening("Tick", OnTick);
+        _amountFoodChange += e.FoodChangeAmount;
+        _numTicksSinceIndicator++;
+        if (_numTicksSinceIndicator == TicksBetweenIndicators) CreateIndicator();
     }
-
 
 }

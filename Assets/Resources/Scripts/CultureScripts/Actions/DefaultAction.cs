@@ -25,40 +25,37 @@ public class DefaultAction : CultureAction
 
     void AttemptToGatherFood()
     {
-        if(culture.CultureFoodStore.CurrentFoodStore < culture.CultureFoodStore.MaxFoodStore)
-        {
-            GatherFoodAction gather = new GatherFoodAction(culture);
-            gather.ExecuteTurn();
-        }
+        GatherFoodAction gather = new GatherFoodAction(Culture);
+        gather.ExecuteTurn();
     }
 
     void CheckIfHasSufficientFood()
     {
-        float FoodChange = turn.turnUpdates[culture].FoodChange;
-        float FoodStore = culture.GetComponent<CultureFoodStore>().CurrentFoodStore;
-        float MaxFoodStore = culture.GetComponent<CultureFoodStore>().MaxFoodStore;
-        turn.UpdateCulture(culture).newState = FoodStore + FoodChange < culture.Population 
-            ? Culture.State.Overpopulated : 
-            FoodStore < MaxFoodStore / 2f && FoodChange < 0 ? 
-            Culture.State.SeekingFood : Culture.State.Default;
-    }
+        float overpopulationThreshold = .05f;
+        float seekingFoodThreshold = .2f;
+        float FoodStore = Culture.GetComponent<CultureFoodStore>().CurrentFoodStore;
+        float MaxFoodStore = Culture.GetComponent<CultureFoodStore>().MaxFoodStore;
 
+        Culture.State newState = FoodStore < overpopulationThreshold * MaxFoodStore ? 
+            Culture.State.Overpopulated : 
+            FoodStore < seekingFoodThreshold * MaxFoodStore ?
+            Culture.State.SeekingFood : Culture.State.Default;
+
+        Turn.AddUpdate(new StateUpdate(this, Culture, newState));
+
+
+    }
 
 
     void AddSideEffects()
     {
-        turn.UpdateCulture(culture).popChange += GrowPopulation();
-
-        if (Random.value < culture.gainAffinityChance)
-        {
-            turn.UpdateCulture(culture).newAffinity = (int)culture.tileInfo.tileType;
-        }
+        Turn.AddUpdate(new PopulationUpdate(this, Culture, GrowPopulation()));
 
         // need to change influence into a side effect?
-        if (culture.tileInfo.cultures.Count > 1 && Random.value < .1f)
+        if (Culture.CultureHandler.GetAllSettledCultures().Length > 1 && Random.value < .1f)
         {
             //Debug.Log("influencing neighbors");
-            CultureInfluenceAction influenceNeighbors = new CultureInfluenceAction(culture);
+            CultureInfluenceAction influenceNeighbors = new CultureInfluenceAction(Culture);
             influenceNeighbors.ExecuteTurn();
         }
 
@@ -66,8 +63,8 @@ public class DefaultAction : CultureAction
 
     int GrowPopulation()
     {
-        if (culture.Population == 1) return 0; // can't reproduce if only one person
-        float combinedFertilityRate = culture.FertilityRate * culture.Population;
+        if (Culture.Population == 1) return 0; // can't reproduce if only one person
+        float combinedFertilityRate = Culture.FertilityRate * Culture.Population;
         return Random.value < combinedFertilityRate ? 1 : 0;
     }
 
