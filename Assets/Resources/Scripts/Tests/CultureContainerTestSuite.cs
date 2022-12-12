@@ -61,7 +61,21 @@ public class CultureContainerTestSuite : BasicTest
         Assert.AreEqual(TestCultureB, TestCultureContainer.GetAllCultures()[0], "CultureB should be first!");
     }
 
-    
+    [Test]
+    public void CanResortWhenCultureDestroyed()
+    {
+        TestCultureA.AddPopulation(5);
+        TestCultureB.AddPopulation(2);
+
+
+        TestCultureContainer.AddCulture(TestCultureA);
+        TestCultureContainer.AddCulture(TestCultureB);
+
+        TestCultureA.DestroyCulture();
+
+        Assert.AreEqual(TestCultureB, TestCultureContainer.GetAllCultures()[0]);
+        Assert.AreEqual(1, TestCultureContainer.GetAllCultures().Length);
+    }
 
     [TearDown]
     public void TearDownCultureCOntainerTest()

@@ -25,6 +25,7 @@ public class Culture : MonoBehaviour
 
     public event EventHandler<OnPopulationChangedEventArgs> OnPopulationChanged;
     public event EventHandler<OnCultureNameChangedEventArgs> OnNameChanged;
+    public event EventHandler<OnCultureDestroyedEventArgs> OnCultureDestroyed;
 
     CultureFoodStore cultureFoodStore;
     public CultureFoodStore CultureFoodStore
@@ -190,7 +191,7 @@ public class Culture : MonoBehaviour
         newCulture.InitFromParent(Tile, color, numInNewCulture, name);
         AddPopulation(-numInNewCulture);
         newCulture.CultureMemory.previousTile = Tile;
-        Debug.Log($"Split {newCulture} from {this} on tile {this.Tile}");
+       // Debug.Log($"Split {newCulture} from {this} on tile {this.Tile}");
         return newCultureObj;
     }
 
@@ -214,10 +215,11 @@ public class Culture : MonoBehaviour
 
     }
 
-    void DestroyCulture()
+    public void DestroyCulture()
     {
-        //Debug.Log("Destroying " + name + "(" + GetHashCode() + ")");
+        //Debug.Log($"Destroying {this}");
         EventManager.TriggerEvent("CultureDestroyed", new Dictionary<string, object> { { "culture", this } });
+        OnCultureDestroyed?.Invoke(this, new OnCultureDestroyedEventArgs() { DestroyedCulture = this });
         Destroy(gameObject);
     }
 
@@ -241,7 +243,7 @@ public class Culture : MonoBehaviour
 
     void RemoveFromTile()
     {
-        Debug.Log($"removing culture {this} ({this.GetHashCode()}) from {Tile}");
+        //Debug.Log($"removing culture {this} ({this.GetHashCode()}) from {Tile}");
         if(Tile == null)
         {
             Debug.LogWarning("Tried to remove from nonexistant tile!");
@@ -261,7 +263,7 @@ public class Culture : MonoBehaviour
             RemoveFromTile();
             return;
         }
-        Debug.Log($"Setting tile for culture {this}({this.GetHashCode()}) to tile {newTile}");
+        //Debug.Log($"Setting tile for culture {this}({this.GetHashCode()}) to tile {newTile}");
         CultureHandler newCultureHandler = newTile.GetComponentInChildren<CultureHandler>();
 
         if (bypassArrival) newCultureHandler.BypassArrival(this); else newCultureHandler.AddNewArrival(this);
@@ -274,7 +276,7 @@ public class Culture : MonoBehaviour
 
     public void RenameCulture(string newName)
     {
-        Debug.Log($"Renaming culture {this} to have a name of {newName}");
+        //Debug.Log($"Renaming culture {this} to have a name of {newName}");
         string oldName = Name;
         name = newName;
         gameObject.name = newName;
@@ -324,6 +326,11 @@ public class Culture : MonoBehaviour
     {
         public string NewName;
         public string OldName;
+    }
+
+    public class OnCultureDestroyedEventArgs : EventArgs
+    {
+        public Culture DestroyedCulture;
     }
 
 }

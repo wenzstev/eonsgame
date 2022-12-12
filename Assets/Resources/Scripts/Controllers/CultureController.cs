@@ -29,6 +29,8 @@ public class CultureController : MonoBehaviour
     void OnCultureDestroyed(Dictionary<string, object> destroyedCulture)
     {
         Culture c = (Culture) destroyedCulture["culture"];
+        Debug.Log($"Removing {c} from CultureList");
+
         AllCultures.Remove(c);
     }
 

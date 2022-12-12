@@ -20,7 +20,7 @@ public class MergeWithTileAction : CultureAction
 
     Turn CombineCultureWithNewTile()
     {
-        Debug.Log($"merging culture {Culture}({Culture.GetHashCode()}) with tile {NewTile}");
+        //Debug.Log($"merging culture {Culture}({Culture.GetHashCode()}) with tile {NewTile}");
         if (cultureHandler.HasCultureByName(Culture.name)) return AttemptToCombineCultures();
         return AddForeignCulture();
     }
