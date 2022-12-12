@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 [System.Serializable]
@@ -7,7 +8,7 @@ public class Culture : MonoBehaviour
 {
 
     [SerializeField]
-    new string name;
+    new string name = "culture";
     public string Name { get { return name; } }
 
     [SerializeField]
@@ -16,6 +17,16 @@ public class Culture : MonoBehaviour
 
     public Tile Tile { get; private set; }
     public TileInfo tileInfo { get; private set; }
+
+    CultureHandler cultureHandler;
+
+    public CultureHandler CultureHandler { get { return cultureHandler; } }
+
+
+    public event EventHandler<OnPopulationChangedEventArgs> OnPopulationChanged;
+    public event EventHandler<OnCultureNameChangedEventArgs> OnNameChanged;
+    public event EventHandler<OnCultureDestroyedEventArgs> OnCultureDestroyed;
+
     CultureFoodStore cultureFoodStore;
     public CultureFoodStore CultureFoodStore
     {
@@ -43,6 +54,7 @@ public class Culture : MonoBehaviour
     }
 
     DecisionMaker decisionMaker;
+    public DecisionMaker DecisionMaker { get { return decisionMaker; } }
 
     public GameObject CultureTemplate
     {
@@ -73,9 +85,6 @@ public class Culture : MonoBehaviour
     public float FertilityRate = .00007f;
 
 
-    [Range(0, 1)]
-    public float gainAffinityChance = .003f;
-
     public int maxPopTransfer = 20;
     public int minPopTransfer = 5;
 
@@ -86,10 +95,6 @@ public class Culture : MonoBehaviour
 
     public float AffinityGainRate = .01f;
 
-
-    public TileDrawer.BiomeType affinity { get; private set; }
-
-    public int maxOnTile;
 
 
 
@@ -110,9 +115,11 @@ public class Culture : MonoBehaviour
         Starving
     }
 
+
+
+
     private void Awake()
     {
-        EventManager.StartListening("Tick", OnTick);
         layerMode = GetComponent<SpriteRenderer>();
         //circleMode = transform.GetChild(1).GetComponent<SpriteRenderer>();
         decisionMaker = new DecisionMaker(this);
@@ -130,73 +137,36 @@ public class Culture : MonoBehaviour
         currentState = State.Default;
         name = getRandomString(5);
         population = InitialPopulation;
-        color = new Color(Random.value, Random.value, Random.value);
-        transform.SetParent(t.gameObject.transform);
+        color = new Color(UnityEngine.Random.value, UnityEngine.Random.value, UnityEngine.Random.value);
         gameObject.name = name;
 
-        SetTile(t);
+        SetTile(t, true);
 
         SetColor(color);
         GetComponent<AffinityManager>().Initialize();
+        EventManager.TriggerEvent("CultureCreated", new Dictionary<string, object> { { "culture", this } });
     }
 
-    public void Init(Tile t, Color parent, int pop, string n)
+    public void InitFromParent(Tile t, Color parent, int pop, string n)
     {
         currentState = State.Default;
         population = pop;
-        color = parent;
         name = n;
         gameObject.name = name;
         transform.SetParent(t.gameObject.transform);
+        SetColor(parent);
         GetComponent<AffinityManager>().Initialize();
-        //SetTileWithoutInformingTileInfo(t);
+        EventManager.TriggerEvent("CultureCreated", new Dictionary<string, object> { { "culture", this } });
+
     }
 
-
-    void ExecuteTurn()
+    public void ChangeState(State newState)
     {
-        Turn turn = decisionMaker.ExecuteTurn();
-        turn.UpdateAllCultures();
-    }
-
-    public void UpdateForTurn(CultureTurnUpdate t)
-    {
-
-        if (t.newState == State.PendingRemoval)
+        if(newState == State.PendingRemoval)
         {
-            //Debug.Log("state is pending removal");
             DestroyCulture();
             return;
         }
-
-        AddPopulation(t.popChange);
-
-        if (t.newName != null)
-        {
-            RenameCulture(t.newName);
-        }
-
-        SetColor(t.newColor);
-        //Debug.Log("setting state for " + GetHashCode() + " to " + t.newState);
-
-        ChangeState(t.newState);
-
-        if (t.newAffinity > 0) GainAffinity(t.newAffinity);
-        if (t.newTile != null) SetTile(t.newTile); // maybe give them some offscreen placeholder tile?
-        
-        CultureFoodStore.AlterFoodStore(t.FoodChange);
-
-        EventManager.TriggerEvent("CultureUpdated" + name, new Dictionary<string, object> { { "culture", this } });
-    }
-
-    private void OnTick(Dictionary<string, object> empty)
-    {
-        ExecuteTurn();
-    }
-
-
-    private void ChangeState(State newState)
-    {
         if(CultureMemory.previousState != newState)
         {
             CultureMemory.previousState = currentState;
@@ -205,26 +175,23 @@ public class Culture : MonoBehaviour
         {
             CultureMemory.wasRepelled = false;
         }
+        if(newState == State.Moving)
+        {
+            RemoveFromTile();
+        }
+        
         currentState = newState;
     }
-
-    private void GainAffinity(int newAffinity)
-    {
-        affinity = (TileDrawer.BiomeType) newAffinity;
-        maxOnTile = tileInfo.tileType == affinity ? tileInfo.popBase + 2 : tileInfo.popBase;
-        tileInfo.UpdateCultureSurvivability();
-        tileInfo.UpdateMaxOnTile(this);
-    }
-
 
     public GameObject SplitCultureFromParent() // creates new culture group from parent
     {
         GameObject newCultureObj = Instantiate(CultureTemplate, transform.position, Quaternion.identity);
         Culture newCulture = newCultureObj.GetComponent<Culture>();
-        int numInNewCulture = Random.Range(minPopTransfer, maxPopTransfer);
-        newCulture.Init(Tile, color, numInNewCulture, name);
+        int numInNewCulture = UnityEngine.Random.Range(minPopTransfer, maxPopTransfer);
+        newCulture.InitFromParent(Tile, color, numInNewCulture, name);
         AddPopulation(-numInNewCulture);
         newCulture.CultureMemory.previousTile = Tile;
+       // Debug.Log($"Split {newCulture} from {this} on tile {this.Tile}");
         return newCultureObj;
     }
 
@@ -248,15 +215,11 @@ public class Culture : MonoBehaviour
 
     }
 
-    void DestroyCulture()
+    public void DestroyCulture()
     {
-        //Debug.Log("Destroying " + name + "(" + GetHashCode() + ")");
-        EventManager.StopListening("Tick", OnTick);
-        EventManager.TriggerEvent("CultureRemoved" + name, new Dictionary<string, object>() { { "culture", this } });
-        if(tileInfo != null)
-        {
-            tileInfo.RemoveCulture(this);
-        }
+        //Debug.Log($"Destroying {this}");
+        EventManager.TriggerEvent("CultureDestroyed", new Dictionary<string, object> { { "culture", this } });
+        OnCultureDestroyed?.Invoke(this, new OnCultureDestroyedEventArgs() { DestroyedCulture = this });
         Destroy(gameObject);
     }
 
@@ -269,71 +232,76 @@ public class Culture : MonoBehaviour
             DestroyCulture();
         }
 
-        if(num != 0) GetComponentInChildren<PopulationChangeIndicatorGenerator>().CreateIndicator(num);
+        if (num != 0) OnPopulationChanged?.Invoke(this, new OnPopulationChangedEventArgs() { PopChange = num});
     }
 
-    void SetTileWithoutInformingTileInfo(Tile newTile)
+    void SwapTile(Tile newTile)
     {
+        RemoveFromTile();
+        SetTile(newTile, false);
+    }
+
+    void RemoveFromTile()
+    {
+        //Debug.Log($"removing culture {this} ({this.GetHashCode()}) from {Tile}");
+        if(Tile == null)
+        {
+            Debug.LogWarning("Tried to remove from nonexistant tile!");
+            return;
+        }
+        cultureHandler.RemoveCulture(this);
+        CultureMemory.previousTile = Tile;
+        Tile = null;
+        tileInfo = null;
+        cultureHandler = null;
+    }
+
+    public void SetTile(Tile newTile, bool bypassArrival)
+    {
+        if (newTile == null)
+        {
+            RemoveFromTile();
+            return;
+        }
+        //Debug.Log($"Setting tile for culture {this}({this.GetHashCode()}) to tile {newTile}");
+        CultureHandler newCultureHandler = newTile.GetComponentInChildren<CultureHandler>();
+
+        if (bypassArrival) newCultureHandler.BypassArrival(this); else newCultureHandler.AddNewArrival(this);
+
+        cultureHandler = newCultureHandler;
         Tile = newTile;
         tileInfo = newTile.GetComponent<TileInfo>();
     }
 
-    void SetTile(Tile newTile)
+
+    public void RenameCulture(string newName)
     {
-        //Debug.Log("setting culture " + name + "("+GetHashCode()+") to tile " + newTile);
-        if(tileInfo != null)
-        {
-            tileInfo.RemoveCulture(this);
-        }
-
-        if (newTile.gameObject != Tile.moveTile) // move tile is a special tile that holds all moving cultures, can't add it to tileinfo because there will be more than one of the same culture
-        {
-            newTile.GetComponent<TileInfo>().AddCulture(this);
-        }
-
-        CultureMemory cm = GetComponent<CultureMemory>();
-
-        cm.previousTile = Tile;
-
-
-        SetTileWithoutInformingTileInfo(newTile);
-
-
-    }
-
-    void RenameCulture(string newName)
-    {
-        EventManager.TriggerEvent("CultureRemoved" + name, new Dictionary<string, object> { { "culture", this } });
-        CultureMemory.cultureParentName = name;
+        //Debug.Log($"Renaming culture {this} to have a name of {newName}");
+        string oldName = Name;
         name = newName;
         gameObject.name = newName;
-        EventManager.TriggerEvent("CultureUpdated" + newName, new Dictionary<string, object> { { "culture", this } });
-        if(tileInfo != null)
-        {
-            Debug.LogWarning("Culture has tileInfo, not changing. Unless this is a test it may be a bug.");
-        }
-    
+        CultureHandler?.RenameCulture(this, oldName);
+        OnNameChanged?.Invoke(this, new OnCultureNameChangedEventArgs() {NewName = newName, OldName = oldName});
     }
 
     public Color mutateColor(Color parentColor)
     {
         float getMutationRate()
         {
-            return (Random.value * baseMutationMax) - (baseMutationMax / 2);
+            return (UnityEngine.Random.value * baseMutationMax) - (baseMutationMax / 2);
         }
         return new Color(getMutationRate() + parentColor.r, getMutationRate() + parentColor.g, getMutationRate() + parentColor.b);
     }
-
-    private void OnDestroy()
+    
+    public override string ToString()
     {
-        EventManager.StopListening("Tick", OnTick);
-
+        return $"{name}({GetHashCode()})";
     }
 
 
     public static Color influenceColor(Culture parent, Culture influencer)
     {
-        float rate = Random.value * influencer.influenceRate;
+        float rate = UnityEngine.Random.value * influencer.influenceRate;
         return Color.Lerp(parent.color, influencer.color, rate);
     }
 
@@ -344,10 +312,25 @@ public class Culture : MonoBehaviour
         string rand = "";
         while(rand.Length <= length)
         {
-            rand += characters[Mathf.FloorToInt(Random.value * characters.Length)];
+            rand += characters[Mathf.FloorToInt(UnityEngine.Random.value * characters.Length)];
         }
         return rand;
     }
 
+    public class OnPopulationChangedEventArgs : EventArgs
+    {
+        public int PopChange;
+    }
+
+    public class OnCultureNameChangedEventArgs : EventArgs
+    {
+        public string NewName;
+        public string OldName;
+    }
+
+    public class OnCultureDestroyedEventArgs : EventArgs
+    {
+        public Culture DestroyedCulture;
+    }
 
 }

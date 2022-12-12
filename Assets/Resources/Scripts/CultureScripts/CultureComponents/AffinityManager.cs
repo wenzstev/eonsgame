@@ -69,7 +69,7 @@ public class AffinityManager : MonoBehaviour
             if(decayRates.ContainsKey(biome))
             {
                 float decayPercent = decayRates[biome].GetDecayRate();
-                Debug.Log($"decay rate for {biome} is {decayPercent}");
+                //Debug.Log($"decay rate for {biome} is {decayPercent}");
                 ChangeAffinity(biome, affinities[biome] * decayPercent);
                 decayRates.Remove(biome);
             }
@@ -90,6 +90,7 @@ public class AffinityManager : MonoBehaviour
         }
     }
 
+
     class DecayTracker
     {
         public TileDrawer.BiomeType Biome { get; private set; }
@@ -102,7 +103,7 @@ public class AffinityManager : MonoBehaviour
             DaysSinceHarvested = 0;
             CurrentDecayRate = -.5f; 
             _forgettingCurve = new PowerCurve(2, 0, 100, -1/NumDaysHarvested);
-            Debug.Log($"forgetting curve for {biome} is {_forgettingCurve.PowerMultiplier}");
+            //Debug.Log($"forgetting curve for {biome} is {_forgettingCurve.PowerMultiplier}");
         }
 
         public float GetDecayRate()

@@ -4,10 +4,12 @@ public class GatherFoodAction : CultureAction
 {
     AffinityManager affinityManager;
     TileFood CurrentTileFood;
+    CultureFoodStore CultureFood;
     public GatherFoodAction(Culture c) : base(c) 
     {
         affinityManager = c.GetComponent<AffinityManager>();
-        CurrentTileFood = culture.Tile.GetComponent<TileFood>();
+        CurrentTileFood = Culture.Tile.GetComponent<TileFood>();
+        CultureFood = Culture.GetComponent<CultureFoodStore>();
     }
 
     public override Turn ExecuteTurn()
@@ -16,20 +18,41 @@ public class GatherFoodAction : CultureAction
         return turn;
     }
 
+    float GetMaxThatCouldBeGathered()
+    {
+        return CurrentTileFood.CurFood * Culture.FoodGatherRate * Culture.Population * GetAndInformAffinity();
+    }
+
+    float GetMaxFoodStore()
+    {
+        return CultureFood.MaxFoodStore;
+    }
+
+    float GetAmountAfterActionCost()
+    {
+        return Mathf.Max(0, CultureFood.CurrentFoodStore - GetActionCost()); // can't be less than zero
+    }
+
     void GatherFood()
     {
-        float GatheredFood = CurrentTileFood.CurFood * culture.FoodGatherRate * culture.Population * GetAndInformAffinity();
-        CurrentTileFood.CurFood -= GatheredFood;
-        turn.UpdateCulture(culture).FoodChange += GatheredFood;
-        Debug.Log("Affinity rate was " + GetAndInformAffinity());
+        float differenceBetweenMaxFoodAndCurFood = GetMaxFoodStore() - GetAmountAfterActionCost();
+        float maxThatCouldBeGathered = GetMaxThatCouldBeGathered();
+
+        if (maxThatCouldBeGathered == 0 || differenceBetweenMaxFoodAndCurFood < 0) return; // no food can be gathered; either no food on tile or pop has too much already
+
+        float ActualAmountToGather = differenceBetweenMaxFoodAndCurFood < maxThatCouldBeGathered ? differenceBetweenMaxFoodAndCurFood : maxThatCouldBeGathered;
+
+        CurrentTileFood.CurFood -= ActualAmountToGather; // TODO: update tile food to be it's own turn system
+        Turn.AddUpdate(new FoodUpdate(this, Culture, ActualAmountToGather));
+        //Debug.Log("Affinity rate was " + GetAndInformAffinity());
     }
 
     float GetAndInformAffinity()
     {
         if (affinityManager != null)
         {
-            affinityManager.HarvestedOnBiome(CurrentTileFood.GetComponent<TileInfo>().tileType);
-            return affinityManager.GetAffinity(CurrentTileFood.GetComponent<TileInfo>().tileType);
+            affinityManager.HarvestedOnBiome(CurrentTileFood.GetComponent<TileChars>().Biome);
+            return affinityManager.GetAffinity(CurrentTileFood.GetComponent<TileChars>().Biome);
         }
         return 1;
     }

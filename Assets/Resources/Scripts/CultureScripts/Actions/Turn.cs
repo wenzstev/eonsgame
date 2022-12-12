@@ -1,111 +1,164 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Turn
 {
-    public Dictionary<Culture, CultureTurnUpdate> turnUpdates { get; private set; }
-
     static Turn currentTurn;
+    public static Turn CurrentTurn
+    {
+        get {
+            if (currentTurn == null || currentTurn.hasBeenPushed)
+            {
+                //Debug.Log("getting new turn");
+                currentTurn = new Turn();
+            }
+            //Debug.Log("hooking current turn");
+            return currentTurn;
+        }
+    }
+
+    List<INonGenericCultureUpdate> UpdateList;
     bool hasBeenPushed = false;
 
-    static int turnNumber;
+    /// <summary>
+    /// Add a Culture Update to the current turn. Generally advised to create the update when adding.
+    /// </summary>
+    /// <param name="update">The INonGenericCultureUpdate to add.</param>
+    public static void AddUpdate(INonGenericCultureUpdate update)
+    {
+        //Debug.Log($"Adding {update}");
+        CurrentTurn.UpdateList.Add(update);
+    }
+
+    public static void UpdateAllCultures()
+    {
+        foreach(INonGenericCultureUpdate update in CurrentTurn.UpdateList)
+        {
+            update.ExecuteChange();
+        }
+        CurrentTurn.hasBeenPushed = true;
+    }
+
+    public static INonGenericCultureUpdate[] GetPendingUpdatesFor(Culture c)
+    {
+        return CurrentTurn.UpdateList.Where(u => u.Target == c).ToArray();
+    }
+
 
     Turn()
     {
-        turnUpdates = new Dictionary<Culture, CultureTurnUpdate>();
-    }
-
-    public static Turn HookTurn()
-    {
-        if (currentTurn == null || currentTurn.hasBeenPushed)
-        {
-            //Debug.Log("getting new turn");
-            currentTurn = new Turn();
-        }
-        //Debug.Log("hooking current turn");
-        return currentTurn;
-    }
-
-    public CultureTurnUpdate UpdateCulture(Culture c)
-    {
-        CultureTurnUpdate potentialUpdate;
-        if (turnUpdates.TryGetValue(c, out potentialUpdate))
-        {
-            return potentialUpdate;
-        }
-        turnUpdates.Add(c, new CultureTurnUpdate(c));
-        return turnUpdates[c];
-    }
-
-    public void UpdateAllCultures()
-    {
-        turnNumber++;
-        hasBeenPushed = true;
-        foreach (KeyValuePair<Culture, CultureTurnUpdate> c in turnUpdates)
-        {
-            c.Key.UpdateForTurn(c.Value);
-        }
-    }
-
-    public void CombineTurns(Turn other)
-    {
-        foreach (CultureTurnUpdate update in other.turnUpdates.Values)
-        {
-            CultureTurnUpdate potentialUpdate;
-            if(turnUpdates.TryGetValue(update.culture, out potentialUpdate))
-            {
-                potentialUpdate.MergeUpdates(update);
-            }
-            else 
-            {
-                turnUpdates.Add(update.culture, update);
-            }
-        }
+        UpdateList = new List<INonGenericCultureUpdate>();
     }
 }
 
 
-public class CultureTurnUpdate
+public abstract class MustInitialize<T>
 {
-    public Culture culture;
-    Culture.State _newState;
-    public Culture.State newState
-    {
-        get { return _newState; }
-        set {
-            //Debug.Log("setting newstate to " + value);
-            _newState = value;
-        }
-    }
-    public int popChange = 0;
-    public int techChange = 0;
-    public float FoodChange = 0;
-    public int newAffinity = -1;
-    public Color newColor;
-    public Tile newTile;
-    public string newName;
+    public MustInitialize(T parameter) { }
+}
 
-    public CultureTurnUpdate(Culture c)
+public interface INonGenericCultureUpdate
+{
+    object GetCultureChange();
+    void ExecuteChange();
+    public CultureAction Originator { get; }
+    public Culture Target { get; }
+
+}
+
+public abstract class CultureUpdate<G> : MustInitialize<CultureAction>, INonGenericCultureUpdate
+{
+    protected G cultureChangeValue;
+
+    object INonGenericCultureUpdate.GetCultureChange()
     {
-        culture = c;
-        newState = c.currentState;
-        newColor = c.mutateColor(c.Color); // mutate color slightly every turn
+        return GetCultureChange();
     }
 
-    public void MergeUpdates(CultureTurnUpdate other) 
+    protected G GetCultureChange()
     {
-        if(culture != other.culture)
-        {
-            Debug.LogError("trying to merge unrelated updates!");
+        return cultureChangeValue;
+    }
+
+    public abstract void ExecuteChange();
+    public CultureAction Originator { get; private set; }
+
+
+    Culture _target;
+    public Culture Target { 
+        get { 
+            if(_target != null && !_target.Equals(null)) return _target; // destroyed objects don't immediately equal null
+            return null;
         }
-        // values are combined, other takes precedence
-        newState = other.newState;
-        popChange += other.popChange;
-        techChange += other.techChange;
-        newAffinity = other.newAffinity;
-        newColor = other.newColor;
-        newTile = other.newTile;
-        newName = other.newName;
+    }
+
+    public CultureUpdate(CultureAction originator, Culture target, G value) : base(originator)
+    {
+        Originator = originator;
+        cultureChangeValue = value;
+        _target = target;
+    }
+
+    public override string ToString()
+    {
+        return $"{this.GetType()}({this.GetHashCode()}), Creator: {Originator}, Target: {Target}, Value:{cultureChangeValue}";
+    }
+
+}
+
+public class PopulationUpdate : CultureUpdate<int>
+{
+    public PopulationUpdate(CultureAction originator, Culture target, int val) : base (originator, target, val) { }
+
+    public override void ExecuteChange()
+    {
+        Target?.AddPopulation(GetCultureChange());
+    }
+}
+
+public class StateUpdate : CultureUpdate<Culture.State>
+{
+    public StateUpdate(CultureAction originator, Culture target, Culture.State val) : base(originator, target, val) { }
+    public override void ExecuteChange()
+    {
+        Target?.ChangeState(GetCultureChange());
+    }
+}
+
+public class NameUpdate : CultureUpdate<string>
+{
+    public NameUpdate(CultureAction originator, Culture target, string val) : base(originator, target, val) { }
+    public override void ExecuteChange()
+    {
+        Target?.RenameCulture(GetCultureChange());
+    }
+}
+
+public class ColorUpdate : CultureUpdate<Color>
+{
+    public ColorUpdate(CultureAction originator, Culture target, Color val) : base(originator, target, val) { }
+    public override void ExecuteChange()
+    {
+        Target?.SetColor(GetCultureChange());
+    }
+}
+
+public class TileUpdate : CultureUpdate<Tile>
+{
+    public TileUpdate(CultureAction originator, Culture target, Tile val) : base(originator, target, val) { }
+    public override void ExecuteChange()
+    {
+        Target?.SetTile(GetCultureChange(), false);
+    }
+}
+
+public class FoodUpdate : CultureUpdate<float>
+{
+    public FoodUpdate(CultureAction originator, Culture target, float val) : base(originator, target, val) { }
+    public override void ExecuteChange()
+    {
+        Target?.GetComponent<CultureFoodStore>().AlterFoodStore(GetCultureChange());
     }
 }

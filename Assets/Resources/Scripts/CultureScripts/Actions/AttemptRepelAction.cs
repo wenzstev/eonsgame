@@ -13,36 +13,37 @@ public class AttemptRepelAction : CultureAction
 
     Turn AttemptRepel()
     {
-        foreach (Culture c in culture.tileInfo.orderToRemoveCulturesIn)
+        foreach (Culture c in Culture.tileInfo.orderToRemoveCulturesIn)
         {
             if (c.currentState == Culture.State.Invader)
             {
                 // ability to repel is function of population and affinity (and later tech)
-                float hasAffinityAdvantage = c.affinity == culture.affinity ? 0 : .2f;
-                float popAdvantage = ((float)culture.Population - c.Population) / 10f;
+                //TODO: re-add affinity information so that repel ability is function of new affinity
+                float hasAffinityAdvantage = 0;
+                float popAdvantage = ((float)Culture.Population - c.Population) / 10f;
                 float repelThreshold = .6f + hasAffinityAdvantage + popAdvantage;
                 //Debug.Log("repel threshold = .6 + " + hasAffinityAdvantage + " + " + popAdvantage);
                 if (Random.value < repelThreshold)
                 {
-                    turn.UpdateCulture(c).newState = Culture.State.Repelled;
-                    Debug.Log(c.name + " is repelled by " + culture.name);
+                    Turn.AddUpdate(new StateUpdate(this, c, Culture.State.Repelled));
+                    Debug.Log(c.name + " is repelled by " + Culture.name);
                 }
                 else
                 {
-                    turn.UpdateCulture(c).newState = Culture.State.Default;
+                    Turn.AddUpdate(new StateUpdate(this, c, Culture.State.Default));
 
                     Debug.Log(c.Tile.name);
                     //EventManager.TriggerEvent("PauseSpeed", null);
                 }
                 if(Random.value < .01f)
                 {
-                    turn.UpdateCulture(culture).popChange -= 1; // killed in repelling effort
-                    Debug.Log("some of " + culture.name + " killed in repel");
+                    Turn.AddUpdate(new PopulationUpdate(this, Culture, -1)); // killed in repelling effort
+                    //Debug.Log("some of " + Culture.name + " killed in repel");
                 }
                 break;
             }
         }
-        turn.UpdateCulture(culture).newState = Culture.State.Default;
+        Turn.AddUpdate(new StateUpdate(this, Culture, Culture.State.Default));
         return turn;
     }
 }

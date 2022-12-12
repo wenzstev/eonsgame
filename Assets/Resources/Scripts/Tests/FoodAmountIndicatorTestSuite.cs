@@ -1,20 +1,23 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.TestTools;
 using System.Linq;
 using NUnit.Framework;
 
-public class FoodAmountIndicatorTestSuite : CultureActionTest
+public class FoodAmountIndicatorTestSuite 
 {
     FoodAmountIndicatorGenerator TestFoodAmountIndicatorGenerator;
+    CultureFoodStore TestCultureFoodStore;
 
     [UnitySetUp]
     public IEnumerator SetUpFoodIndicatorTest()
     {
-        TestFoodAmountIndicatorGenerator = TestCulture.GetComponentInChildren<FoodAmountIndicatorGenerator>();
-        TestCulture.FoodGatherRate = .01f;
-        TestCulture.GetComponent<CultureFoodStore>().StorePerPopulation = 100;
-        MonoBehaviour.Destroy(TestCulture.GetComponent<AffinityManager>()); // TODO: need a better way to isolate than just randomly destorying components in the setup
+        GameObject TestObject = new GameObject("TestStoreObj");
+        TestCultureFoodStore = TestObject.AddComponent<CultureFoodStore>();
+        TestFoodAmountIndicatorGenerator = TestObject.AddComponent<FoodAmountIndicatorGenerator>();
+        TestFoodAmountIndicatorGenerator.FoodStore = TestCultureFoodStore;
+        TestFoodAmountIndicatorGenerator.FoodAmountIndicatorTemplate = Resources.Load<GameObject>("Prefabs/Board/Inhabitants/FoodAmountIndicator");
         yield return null;
     }
 
@@ -32,50 +35,16 @@ public class FoodAmountIndicatorTestSuite : CultureActionTest
         yield return SetFoodAndPassTime(3);
         GameObject TestFoodAmountIndicator = TestFoodAmountIndicatorGenerator.transform.GetChild(0).gameObject;
 
-        Assert.AreEqual(9f + 8.9f + 8.801f, TestFoodAmountIndicator.GetComponent<FoodAmountIndicator>().Amount, "Indicator is not displaying the correct food!");       
+        Assert.AreEqual(30f, TestFoodAmountIndicator.GetComponent<FoodAmountIndicator>().Amount, "Indicator is not displaying the correct food!");       
     }
-
-    [UnityTest]
-    public IEnumerator CanNotDuplicateIndicatorWhenSplitting()
-    {
-        yield return SetFoodAndPassTime(3);
-        GameObject TestFoodAmountIndicator = TestFoodAmountIndicatorGenerator.transform.GetChild(0).gameObject;
-        Turn.HookTurn().UpdateCulture(TestCulture).popChange = 30;
-        Turn.HookTurn().UpdateAllCultures();
-        NeighborTile.GetComponent<TileDrawer>().tileType = TileDrawer.BiomeType.Grassland;
-        yield return null;
-
-        MoveTileAction mta = new MoveTileAction(TestCulture);
-        mta.ExecuteTurn();
-        Turn.HookTurn().UpdateAllCultures();
-
-        yield return null;
-
-        Culture[] CultureArray = Object.FindObjectsOfType<Culture>();
-        var TestCultureTest = CultureArray.Where(c => c.GetComponentInChildren<FoodAmountIndicatorGenerator>().transform.childCount == 0);
-        Culture[] TestCultureOffspring = TestCultureTest.ToArray();
-        Assert.AreEqual(1, TestCultureOffspring.Length, "There is not a new culture with no indicator!");
-        int numFoodIndicators = 0;
-        foreach(Transform child in TestCulture.GetComponentInChildren<FoodAmountIndicatorGenerator>().transform)
-        {
-            if(child.GetComponent<FoodAmountIndicator>() != null) numFoodIndicators++;
-        }
-        Assert.AreEqual(1, numFoodIndicators, "Original Culture has wrong number of indicators!");
-    }
-
 
     IEnumerator SetFoodAndPassTime(int ticksBetween)
     {
-        TestTile.GetComponent<TileFood>().CurFood = 1000;
-        TestTile.GetComponent<TileFood>().NewFoodPerTick = 0;
-
-        
         TestFoodAmountIndicatorGenerator.TicksBetweenIndicators = ticksBetween;
 
         foreach (var _ in Enumerable.Range(0, ticksBetween)) 
         {
-            EventManager.TriggerEvent("Tick", null);
-            Debug.Log($"Amount is {TestCulture.GetComponent<CultureFoodStore>().CurrentFoodStore}");
+            TestCultureFoodStore.AlterFoodStore(10);
             yield return null;
         }
     }

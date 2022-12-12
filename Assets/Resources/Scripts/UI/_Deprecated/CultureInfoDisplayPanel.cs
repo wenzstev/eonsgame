@@ -20,7 +20,7 @@ public class CultureInfoDisplayPanel : MonoBehaviour
         TileInfo info = (TileInfo)cultureInfo["TileInfo"];
         foreach(Culture c in info.cultures.Values)
         {
-            text.text += c.name + "\nPopulation: " + c.Population + "\n" + "Affinity: " + c.affinity + "\n\n";
+            text.text += c.name + "\nPopulation: " + c.Population + "\n\n";
         }
     }
 

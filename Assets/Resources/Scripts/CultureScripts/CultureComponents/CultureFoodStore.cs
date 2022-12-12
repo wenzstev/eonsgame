@@ -7,6 +7,7 @@ public class CultureFoodStore : MonoBehaviour
     float currentFoodStore;
 
     public float StorePerPopulation = 10;
+    public event EventHandler<OnFoodStoreChangedEventArgs> OnFoodStoreChanged;
 
     public float CurrentFoodStore
     {
@@ -29,5 +30,11 @@ public class CultureFoodStore : MonoBehaviour
         LastTickChange = lastTickChange;
         currentFoodStore += LastTickChange;
         currentFoodStore = Mathf.Max(0, currentFoodStore);
+        OnFoodStoreChanged?.Invoke(this, new OnFoodStoreChangedEventArgs() { FoodChangeAmount = lastTickChange });
+    }
+
+    public class OnFoodStoreChangedEventArgs : EventArgs
+    {
+        public float FoodChangeAmount;
     }
 }

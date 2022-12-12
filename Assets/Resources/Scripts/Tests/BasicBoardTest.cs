@@ -30,16 +30,5 @@ public class BasicBoardTest : BasicTest
         TestBoardStats.LandRisePoint = 0;
 
         TestBoard.CreateBoard();
-        PrepMoveTileForBoard();
-    }
-
-    void PrepMoveTileForBoard()
-    {
-        // have to add a tiledrawer and set the type and board for the move action
-        TileDrawer MoveTileDrawer = Tile.moveTile.AddComponent<TileDrawer>();
-        MoveTileDrawer.tileType = TileDrawer.BiomeType.Grassland;
-        Debug.Log($"setting test board: {TestBoard}");
-        Tile.moveTile.GetComponent<Tile>().board = TestBoard;
-        Debug.Log(Tile.moveTile.GetComponent<Tile>().board);
     }
 }

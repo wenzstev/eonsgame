@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class CultureAction
 {
-    protected Culture culture;
+    public Culture Culture { get; private set; }
     public Turn turn;
 
     protected float ActionCost = 1; // cost per pop for this culture to perform this action
@@ -12,11 +12,16 @@ public abstract class CultureAction
     protected CultureAction(Culture c)
     {
         //Debug.Log("starting turn for " + c.GetHashCode());
-        culture = c;
-        turn = Turn.HookTurn();
+        Culture = c;
+        turn = Turn.CurrentTurn;
         //Debug.Log($"{culture.Population}, {ActionCost}");
-        turn.UpdateCulture(culture).FoodChange = -ActionCost * culture.Population; // doing it here means you lose additional food per turn if you call more than one action per turn
+        Turn.AddUpdate(new FoodUpdate(this, Culture, -ActionCost * Culture.Population)); // doing it here means you lose additional food per turn if you call more than one action per turn
         //Debug.Log(turn.UpdateCulture(culture).FoodChange);
+    }
+
+    protected float GetActionCost()
+    {
+        return -ActionCost * Culture.Population;
     }
 
     public abstract Turn ExecuteTurn();

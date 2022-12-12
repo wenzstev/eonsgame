@@ -41,11 +41,6 @@ public class TileFood : MonoBehaviour
         EventManager.StartListening("Tick", OnTick);
     }
 
-    public void InitializeEvents()
-    {
-       
-    }
-
     public float CalculateFoodRate()
     {
         float climateModifier = TempCurve.GetPointOnCurve(tileChars.temperature) - .1f + PrecipitationCurve.GetPointOnCurve(tileChars.precipitation);
