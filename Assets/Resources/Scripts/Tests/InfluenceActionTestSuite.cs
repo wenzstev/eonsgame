@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.TestTools;
 using NUnit.Framework;
+using System.Linq;
 
 public class InfluenceActionTestSuite : CultureInteractionTest
 {
@@ -16,12 +17,15 @@ public class InfluenceActionTestSuite : CultureInteractionTest
     public void CanInfluenceNeighborCulture()
     {
         CultureInfluenceAction cia = new CultureInfluenceAction(TestCulture);
-        Turn turn = cia.ExecuteTurn();
+        cia.ExecuteTurn();
 
-        Assert.That(turn.turnUpdates.ContainsKey(Neighbor), "Neighbor experiencing no changes!");
+        INonGenericCultureUpdate[] NeighborList = Turn.GetPendingUpdatesFor(Neighbor);
+        
+        Assert.That(NeighborList.Length > 0, "Neighbor experiencing no changes!");
 
-        CultureTurnUpdate NeighborUpdate = turn.turnUpdates[Neighbor];
-        Assert.That(CultureHelperMethods.GetColorDistance(TestCulture.Color, NeighborUpdate.newColor) 
+        Color newColor = TestUtils.GetLastColorInUpdateList(NeighborList);
+
+        Assert.That(CultureHelperMethods.GetColorDistance(TestCulture.Color, newColor) 
                     < CultureHelperMethods.GetColorDistance(TestCulture.Color, Neighbor.Color),
                     "Cultures are not closer together!"); 
     }
@@ -29,21 +33,22 @@ public class InfluenceActionTestSuite : CultureInteractionTest
     [Test]
     public void CanMergeIntoNewCultureIfClose()
     {
-        Turn.HookTurn().UpdateCulture(TestCulture).newColor = Color.blue;
-        Turn.HookTurn().UpdateCulture(Neighbor).newColor = Color.blue;
-        Turn.HookTurn().UpdateAllCultures();
+        TestCulture.SetColor(Color.blue);
+        Neighbor.SetColor(Color.blue);
+
 
         CultureInfluenceAction cia = new CultureInfluenceAction(TestCulture);
-        Turn turn = cia.ExecuteTurn();
+        cia.ExecuteTurn();
 
-        Assert.That(turn.turnUpdates.ContainsKey(TestCulture), "Test culture experiencing no changes!");
-        Assert.That(turn.turnUpdates.ContainsKey(Neighbor), "Neighbor experiencing no changes!");
+        INonGenericCultureUpdate[] NeighborList = Turn.GetPendingUpdatesFor(Neighbor);
+        INonGenericCultureUpdate[] TestCultureList = Turn.GetPendingUpdatesFor(TestCulture);
 
-        CultureTurnUpdate TestCultureUpdate = turn.turnUpdates[TestCulture];
-        CultureTurnUpdate neighborUpdate = turn.turnUpdates[Neighbor];
 
-        Assert.That(neighborUpdate.newState == Culture.State.PendingRemoval, "Neighbor not slated for removal!");
-        Assert.That(TestCultureUpdate.newName != "", "Culture not getting new name!");
-        Assert.That(TestCultureUpdate.popChange == Neighbor.Population, "Culture not gaining members of neighbor culture!");
+        Assert.That(NeighborList.Length > 0, "Neighbor experiencing no changes!");
+        Assert.That(TestCultureList.Length > 0, "Neighbor experiencing no changes!");
+
+        Assert.AreEqual(Culture.State.PendingRemoval, TestUtils.GetLastStateInUpdateList(NeighborList), "Neighbor not slated for removal!");
+        Assert.AreEqual(1, TestCultureList.Where(u => u.GetType() == typeof(NameUpdate)).ToArray().Length, "Culture not getting new name!");
+        Assert.AreEqual(Neighbor.Population, TestUtils.GetCombinedPopulationInUpdateList(TestCultureList), "Culture not gaining members of neighbor culture!");
     }
 }

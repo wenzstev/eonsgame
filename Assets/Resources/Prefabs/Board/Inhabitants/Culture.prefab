@@ -197,13 +197,11 @@ MonoBehaviour:
   baseMutationMax: 0.0023
   sameCultureCutoff: 0.0193
   FertilityRate: 0.000416
-  gainAffinityChance: 0.133
   maxPopTransfer: 20
   minPopTransfer: 5
   influenceRate: 0.05
   FoodGatherRate: 0.00001
   AffinityGainRate: 0.01
-  maxOnTile: 0
   currentState: 0
 --- !u!114 &1772662126385334965
 MonoBehaviour:
@@ -217,6 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f14d02641015ec49949b1ccef59f257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Culture: {fileID: 5402215717768767427}
   _previousTile: {fileID: 0}
   cultureParentName: 
   _previousState: 0

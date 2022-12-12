@@ -10,8 +10,7 @@ public class OverpopulationActionTestSuite : CultureActionTest
     [UnitySetUp]
     public IEnumerator SetUp()
     {
-        Turn.HookTurn().UpdateCulture(TestCulture).popChange = 100;
-        Turn.HookTurn().UpdateAllCultures();
+        TestCulture.AddPopulation(100);
         yield return null;
     }
 
@@ -20,9 +19,9 @@ public class OverpopulationActionTestSuite : CultureActionTest
     {
         TestCulture.spreadChance = 0;
         DefaultAction da = new DefaultAction(TestCulture);
-        Turn turn = da.ExecuteTurn();
-        CultureTurnUpdate cta = turn.turnUpdates[TestCulture];
-        Assert.That(cta.newState == Culture.State.Overpopulated, "Culture not in overpopulated state!");
+        da.ExecuteTurn();
+        INonGenericCultureUpdate[] TestCultureUpdates = Turn.GetPendingUpdatesFor(TestCulture);
+        Assert.AreEqual(Culture.State.Overpopulated, TestUtils.GetLastStateInUpdateList(TestCultureUpdates), "Culture not in overpopulated state!");
     }
 
     [Test]
@@ -30,30 +29,9 @@ public class OverpopulationActionTestSuite : CultureActionTest
     {
         OverpopulationAction opa = new OverpopulationAction(TestCulture);
         opa.popLossChance = 1f;
-        Turn turn = opa.ExecuteTurn();
+        opa.ExecuteTurn();
 
-        CultureTurnUpdate cta = turn.turnUpdates[TestCulture];
-        Assert.That(cta.popChange == -1, "Culture did not lose size!");
-
-
+        INonGenericCultureUpdate[] TestCultureUpdates = Turn.GetPendingUpdatesFor(TestCulture);
+        Assert.AreEqual(-1, TestUtils.GetCombinedPopulationInUpdateList(TestCultureUpdates), "Culture did not lose size!");
     }
-
-    [Test]
-    public void TestPopulationMoveAndDrop()
-    {
-        // if population is too high,
-        // culture can attempt to flee and split off
-        // if that fails, some population is killed
-
-        NeighborTile.GetComponent<TileDrawer>().tileType = TileDrawer.BiomeType.Grassland;
-
-        OverpopulationAction opa = new OverpopulationAction(TestCulture);
-        opa.popLossChance = 0f;
-        Turn turn = opa.ExecuteTurn();
-
-        CultureTurnUpdate cta = turn.turnUpdates[TestCulture];
-        Assert.That(turn.turnUpdates.Count == 2, "Culture did not split!");
-        Assert.That(TestCulture.Population <= 101 - TestCulture.minPopTransfer, $"Culture should have lost at least {TestCulture.minPopTransfer} but population is {TestCulture.Population}!");
-    }
-   
 }
