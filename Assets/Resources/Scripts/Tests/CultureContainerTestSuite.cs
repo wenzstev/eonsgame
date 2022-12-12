@@ -18,6 +18,9 @@ public class CultureContainerTestSuite : BasicTest
         TestCultureA = TestCultureAObj.AddComponent<Culture>();
         TestCultureB = TestCultureBObj.AddComponent<Culture>();
 
+        TestCultureA.RenameCulture("CultureA");
+        TestCultureB.RenameCulture("CultureB");
+
         GameObject TestCultureContainerObj = new GameObject("TestCultureContainer");
         TestCultureContainer = TestCultureContainerObj.AddComponent<CultureContainer>();
         TestCultureContainer.Initialize();
@@ -59,8 +62,6 @@ public class CultureContainerTestSuite : BasicTest
     }
 
     
-
-
 
     [TearDown]
     public void TearDownCultureCOntainerTest()

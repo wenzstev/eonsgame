@@ -38,6 +38,8 @@ public class GatherFoodAction : CultureAction
         float differenceBetweenMaxFoodAndCurFood = GetMaxFoodStore() - GetAmountAfterActionCost();
         float maxThatCouldBeGathered = GetMaxThatCouldBeGathered();
 
+        if (maxThatCouldBeGathered == 0 || differenceBetweenMaxFoodAndCurFood < 0) return; // no food can be gathered; either no food on tile or pop has too much already
+
         float ActualAmountToGather = differenceBetweenMaxFoodAndCurFood < maxThatCouldBeGathered ? differenceBetweenMaxFoodAndCurFood : maxThatCouldBeGathered;
 
         Debug.Log($"{differenceBetweenMaxFoodAndCurFood}, {maxThatCouldBeGathered}, {ActualAmountToGather}");

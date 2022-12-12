@@ -34,7 +34,7 @@ public class InfluenceActionTestSuite : CultureInteractionTest
     public void CanMergeIntoNewCultureIfClose()
     {
         TestCulture.SetColor(Color.blue);
-        TestCulture.SetColor(Color.blue);
+        Neighbor.SetColor(Color.blue);
 
 
         CultureInfluenceAction cia = new CultureInfluenceAction(TestCulture);

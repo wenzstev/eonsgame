@@ -30,11 +30,11 @@ public class CultureFoodStoreTestSuite : CultureActionTest
     public IEnumerator CanConsumeFoodInTurn()
     {
         TestTile.GetComponent<TileFood>().CurFood = 0;
-        TestCultureFoodStore.AlterFoodStore(1000);
+        TestCultureFoodStore.AlterFoodStore(TestCultureFoodStore.MaxFoodStore);
         DefaultAction TestDefaultAction = new DefaultAction(TestCulture);
         TestDefaultAction.ExecuteTurn();
 
-        AssertFoodChange(-1);
+        AssertFoodChange(-2);
         yield return null;
     }
 
@@ -50,7 +50,7 @@ public class CultureFoodStoreTestSuite : CultureActionTest
         DefaultAction TestDefaultAction = new DefaultAction(TestCulture);
         Turn turn = TestDefaultAction.ExecuteTurn();
 
-        AssertFoodChange(-6);
+        AssertFoodChange(-12);
 
         yield return null;
     }

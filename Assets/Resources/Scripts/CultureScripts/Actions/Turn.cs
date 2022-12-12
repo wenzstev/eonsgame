@@ -98,7 +98,7 @@ public abstract class CultureUpdate<G> : MustInitialize<CultureAction>, INonGene
 
     public override string ToString()
     {
-        return $"{this.GetType()}, Creator: {Originator}, Target: {Target}, Value:{cultureChangeValue}";
+        return $"{this.GetType()}({this.GetHashCode()}), Creator: {Originator}, Target: {Target}, Value:{cultureChangeValue}";
     }
 
 }
@@ -145,7 +145,7 @@ public class TileUpdate : CultureUpdate<Tile>
     public TileUpdate(CultureAction originator, Culture target, Tile val) : base(originator, target, val) { }
     public override void ExecuteChange()
     {
-        Target.SetTile(GetCultureChange());
+        Target.SetTile(GetCultureChange(), false);
     }
 }
 

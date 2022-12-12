@@ -35,9 +35,9 @@ public class MoveActionTestSuite : CultureActionTest
 
         Turn.UpdateAllCultures();
 
-        Assert.That(TestCulture.currentState == Culture.State.NewOnTile, "Culture has not returned to default state!");
-        Assert.That(TestCulture.transform.parent == NeighborTile.GetComponentInChildren<CultureContainer>().transform, "Culture has not changed tiles!");
-        Assert.That(!TestTile.GetComponent<TileInfo>().cultures.ContainsKey(TestCulture.name), "Previous culture is still in old tileinfo!");
+        Assert.AreEqual(Culture.State.NewOnTile, TestCulture.currentState);
+        Assert.AreEqual(TestCulture, NeighborTile.GetComponentInChildren<CultureHandler>().GetAllStagedCultures()[0]);
+        Assert.That(!TestTile.GetComponentInChildren<CultureHandler>().HasCultureByName(TestCulture.Name), "Previous tile still has the culture!");
     }
 
     [UnityTest]
@@ -53,15 +53,15 @@ public class MoveActionTestSuite : CultureActionTest
 
         Turn.UpdateAllCultures();
 
-        Assert.That(TestCulture.Population < TestCulture.maxPopTransfer && TestCulture.Population > TestCulture.minPopTransfer, $"Expected pop to be in range {TestCulture.minPopTransfer}, {TestCulture.maxPopTransfer} but pop is actually {TestCulture.Population}!");
+        Assert.That(TestCulture.Population <= TestCulture.maxPopTransfer && TestCulture.Population >= TestCulture.minPopTransfer, $"Expected pop to be in range {TestCulture.minPopTransfer}, {TestCulture.maxPopTransfer} but pop is actually {TestCulture.Population}!");
 
         yield return new WaitForSeconds(.1f);
 
         Turn.UpdateAllCultures();
 
-        GameObject childCultureObj = NeighborTile.GetComponentInChildren<CultureContainer>().transform.GetChild(0).gameObject;
+        Assert.That(NeighborTile.GetComponentInChildren<CultureStaging>().transform.childCount > 0, "Culture staging does not have children!");
 
-        Assert.That(childCultureObj != null, "child culture is not child of new tile!");
+        GameObject childCultureObj = NeighborTile.GetComponentInChildren<CultureStaging>().transform.GetChild(0).gameObject;
 
         Culture childCulture = childCultureObj.GetComponent<Culture>();
 
