@@ -36,7 +36,7 @@ public class DefaultAction : CultureAction
         float FoodStore = Culture.GetComponent<CultureFoodStore>().CurrentFoodStore;
         float MaxFoodStore = Culture.GetComponent<CultureFoodStore>().MaxFoodStore;
 
-        Culture.State newState = FoodStore == overpopulationThreshold * MaxFoodStore ? 
+        Culture.State newState = FoodStore < overpopulationThreshold * MaxFoodStore ? 
             Culture.State.Overpopulated : 
             FoodStore < seekingFoodThreshold * MaxFoodStore ?
             Culture.State.SeekingFood : Culture.State.Default;
@@ -52,7 +52,7 @@ public class DefaultAction : CultureAction
         Turn.AddUpdate(new PopulationUpdate(this, Culture, GrowPopulation()));
 
         // need to change influence into a side effect?
-        if (Culture.tileInfo.cultures.Count > 1 && Random.value < .1f)
+        if (Culture.CultureHandler.GetAllSettledCultures().Length > 1 && Random.value < .1f)
         {
             //Debug.Log("influencing neighbors");
             CultureInfluenceAction influenceNeighbors = new CultureInfluenceAction(Culture);

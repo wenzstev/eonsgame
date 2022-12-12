@@ -8,9 +8,9 @@ public class CultureInfluenceAction : CultureAction
 
     public override Turn ExecuteTurn()
     {
-        TileInfo ti = Culture.tileInfo;
+        CultureHandler cultureHandler = Culture.CultureHandler;
 
-        foreach(Culture c in ti.cultures.Values)
+        foreach(Culture c in cultureHandler.GetAllSettledCultures())
         {
             if (c == Culture) continue;
             if(Culture.CanMerge(c))
@@ -35,6 +35,7 @@ public class CultureInfluenceAction : CultureAction
         Turn.AddUpdate(new PopulationUpdate(this, Culture, other.Population));
         Turn.AddUpdate(new PopulationUpdate(this, other, -other.Population));
         Turn.AddUpdate(new StateUpdate(this, other, Culture.State.PendingRemoval));
+        Turn.AddUpdate(new NameUpdate(this, Culture, Culture.getRandomString(5)));
 
     }
 

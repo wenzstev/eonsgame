@@ -12,7 +12,6 @@ public class CultureObserver : MonoBehaviour
         //Debug.Log("starting observer");
         cultures = new Dictionary<string, CultureAggregation>();
 
-        EventManager.StartListening("CultureCreated", CreateCulture);
         EventManager.StartListening("CultureAggregateRemoved", RemoveAggregate);
     }
 
@@ -36,7 +35,6 @@ public class CultureObserver : MonoBehaviour
 
     private void OnDestroy()
     {
-        EventManager.StopListening("CultureCreated", CreateCulture);
         EventManager.StopListening("CultureAggregateRemoved", RemoveAggregate);
         foreach(CultureAggregation ca in cultures.Values)
         {

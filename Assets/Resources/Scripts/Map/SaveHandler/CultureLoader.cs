@@ -19,8 +19,6 @@ public class CultureLoader : MonoBehaviour
 
             Culture curCulture = curCultureObj.GetComponent<Culture>();
             curCulture.LoadFromSerialized(curTile, CultureTile);
-            EventManager.TriggerEvent("CultureCreated", new Dictionary<string, object> { { "culture", curCulture.name } });
-            EventManager.TriggerEvent("CultureUpdated" + curCulture.name, new Dictionary<string, object> { { "culture", curCulture } });
         }
     }
 }

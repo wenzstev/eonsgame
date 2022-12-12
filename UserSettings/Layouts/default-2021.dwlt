@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 62
+  controlID: 52
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 63
+  controlID: 92
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,11 +165,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1860.6666
-    height: 793.3333
+    height: 789.3333
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 64
+  controlID: 93
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -180,23 +180,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
+  m_Name: SceneHierarchyWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 721.3333
-    height: 793.3333
-  m_MinSize: {x: 101, y: 121}
+    width: 722
+    height: 789.3333
+  m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 13}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
   - {fileID: 13}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -212,10 +212,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 721.3333
+    x: 722
     y: 0
-    width: 1139.3333
-    height: 793.3333
+    width: 1138.6666
+    height: 789.3333
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
@@ -240,9 +240,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 793.3333
+    y: 789.3333
     width: 1860.6666
-    height: 506.00006
+    height: 510.00006
   m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 17}
@@ -301,8 +301,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 72.66667
-    width: 720.3333
-    height: 772.3333
+    width: 721
+    height: 768.3333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -312,7 +312,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 8ee1ffffd6e1ffff82f9ffff38fbffff
+      m_ExpandedIDs: 8e2bc6ff28adc7ff6802d3ffa002d3ffae02d3ffcc02d3fffe02d3ff9884d4ffecd6d4ff04d7d4ff4436d6ff5236d6ff7036d6ff4cc6d7ff7a00daff8800daffa600dafff6a4daff56a7daff50a4dcffcab2dcffd8b2dcfff6b2dcff0084ddff0c65f7ff1265f7ff5a65f7ff1680f7fff868fafffe68faff4669faff0684faff1485faff5c85faff1ca0faff1ea1faff66a1faff78a3faff1ca6faff64a6faff66a8faff1caafaff64aafaff66acfaff6cadfaffb4adfaffb6affaffc8b0faff10b1faffd0cafaffd2cbfaff1accfaff52cefaffdacffaff22d0faff5ad2faff6ed3faffb6d3faffeed5fafff4d6faff3cd7faff74d9faff78dafaffc0dafaff54defaffd8e2faff20e3faff58e5faff12e7faff5ae7faffeeeafafff0ebfaff38ecfaff70eefaff22f0faff6af0faffa2f2faffa8f3fafff0f3faff84f7faffe4fcfaff2cfdfaff2efffaff3400fbff7c00fbff3c1afbff461bfbff8e1bfbff421dfbfffe1efbff461ffbffe220fbff9c22fbffe422fbff8c3cfbff4c3efbff943efbff4258fbff203dfeff683dfeff1057feffc658feff0e59feffb672feff7874feffc074feff5c76feff1878feff6078feffd479feffda7afeff227bfeff967cfeff7c7efeffc47efeff8498feff8699feffce99feff7e9cfeff809dfeffc89dfeff98a1feff4ea3feff96a3feffbea5feffd2a6feff1aa7feff42a9feff0cabfeff54abfeff7cadfeff7eaefeffc6aefeffeeb0feffaab2fefff2b2feff1ab5feff20b6feff68b6feff0cbbfeffcabcfeff12bdfeff3abffeff40c0feff88c0feffb0c2feffbec3feff06c4feffaac8feffacc9fefff4c9feff1cccfeffd8cdfeff20cefeff48d0feff04d2feff4cd2feff74d4feff96d6feffded6feff06d9feff64dcfeffacdcfeffd4defeffd6dffeff1ee0feff46e2feff1ce6feff64e6feff8ce8feff4aeafeff92eafeff36effeff38f0feff80f0feffa8f2feff84f4feffccf4fefff4f6fefffaf7feff42f8feff6afafeff20fcfeff68fcfeff90fefeff5c00ffffa400ffff4805ffff1007ffff5807ffff8009fffffc0bffff440cffff6c0effff6e0fffffb60fffffde11fffff612ffff3e13ffff6615ffff9018ffffd618ffff5219ffff7e1cffffc61cffffee1effffee1fffff3620ffff5e22ffff7423ffffbc23ffffe425ffffea26ffff3227ffffd62bffffd82cffff202dffff482fffffaa30fffff230ffff1a33ffff2234ffff6a34ffff9236ffff4c38ffff9438ffffbc3affff783dffffc03dffff6442ffffc245ffff0a46ffff3248ffff064affff4e4affff764cffff444fffff8c4fffffb451ffffb652fffffe52ffffa257fffff06dffff386effff2270ffff2a71ffff7271ffff9273ffff9474ffffdc74ffff2878ffff2a79ffff7279ffffb67dffffb87effff007fffff1081ffff0883ffff5083ffff6085ffff1487ffff5c87ffff6c89ffff728affffba8affffca8cffffda8dffff228effff3290ffff5691ffff9e91ffff6a94ffff9a98ffffe298fffff29afffffa9bffff429cffff529effff749fffffbc9fffff88a2ffffa0a3ffffe8a3ffff64a7ffff66a8ffffaea8ffff5aacffff16aeffff5eaeffff0ab2ffffc4b3ffff0cb4fffff6b5ffff5eb8ffffa6b8ffff90baffff9abbffffe2bbffffccbdffffcebeffff16bfffff00c1ffff0cc2ffff54c2ffff3ec4ffff00c6ffff48c6ffff32c8ffffdec9ffff26caffffd2cdffffd8ceffff20cfffffb2d0ffff72d2ffffbad2ffff4cd4ffff12d6ffff5ad6ffffaed7ffff14dcffff5cdcffffb8ddffffbedeffff06dfffff7ae0ffff80e1ffffc8e1ffff74f9ffff26fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -328,7 +328,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 8}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -358,19 +358,19 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 72.66667
-    width: 720.3333
-    height: 772.3333
+    width: 721
+    height: 768.3333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 141
+    ID: 103
     splitterInitialOffset: 328
     currentActiveSplitter: -1
     realSizes:
-    - 380
-    - 322
+    - 378
+    - 320
     relativeSizes:
     - 0.54158
     - 0.45841998
@@ -380,7 +380,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 702
+    lastTotalSize: 698
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -397,7 +397,7 @@ MonoBehaviour:
       name: My project
       fullName: My project
       resultStatus: 2
-      duration: 1.7463123
+      duration: 2.2767322
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -413,7 +413,7 @@ MonoBehaviour:
       name: Tests.dll
       fullName: C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll
       resultStatus: 2
-      duration: 1.672749
+      duration: 2.1083546
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -429,7 +429,7 @@ MonoBehaviour:
       name: BoardAgeTestSuite
       fullName: BoardAgeTestSuite
       resultStatus: 1
-      duration: 0.1622279
+      duration: 0.2259267
       messages: 
       output: 
       stacktrace: 
@@ -445,7 +445,7 @@ MonoBehaviour:
       name: CanGetBoardAgeAtStartup
       fullName: BoardAgeTestSuite.CanGetBoardAgeAtStartup
       resultStatus: 1
-      duration: 0.1147144
+      duration: 0.1661941
       messages: 
       output: 'clearing
 
@@ -464,7 +464,7 @@ MonoBehaviour:
       name: CanUpdateBoardAge
       fullName: BoardAgeTestSuite.CanUpdateBoardAge
       resultStatus: 1
-      duration: 0.0353014
+      duration: 0.0416603
       messages: 
       output: 'clearing
 
@@ -483,7 +483,7 @@ MonoBehaviour:
       name: CultureAffinityTestSuite
       fullName: CultureAffinityTestSuite
       resultStatus: 1
-      duration: 0.0184941
+      duration: 0.0276094
       messages: 
       output: 
       stacktrace: 
@@ -499,7 +499,7 @@ MonoBehaviour:
       name: CanDecayAffinityOnBiome
       fullName: CultureAffinityTestSuite.CanDecayAffinityOnBiome
       resultStatus: 1
-      duration: 0.0111185
+      duration: 0.0139669
       messages: 
       output: 'Final affinity for Grassland is 6.70962
 
@@ -525,7 +525,7 @@ MonoBehaviour:
       name: CanGainAffinityOnBiome
       fullName: CultureAffinityTestSuite.CanGainAffinityOnBiome
       resultStatus: 1
-      duration: 0.0044959
+      duration: 0.0075682
       messages: 
       output: 'Final affinity for Grassland is 3.083034
 
@@ -546,7 +546,7 @@ MonoBehaviour:
       name: CultureContainerTestSuite
       fullName: CultureContainerTestSuite
       resultStatus: 1
-      duration: 0.0189061
+      duration: 0.029778
       messages: 
       output: 
       stacktrace: 
@@ -562,9 +562,11 @@ MonoBehaviour:
       name: CanAddCultureToContainer
       fullName: CultureContainerTestSuite.CanAddCultureToContainer
       resultStatus: 1
-      duration: 0.0058452
+      duration: 0.0087024
       messages: 
-      output: "Adding culture (-2324) to tile \r\n\r\n(-2324)\r\nclearing\r\nclearing\r\n"
+      output: "Renaming culture culture(-557690) to have a name of CultureA\r\nRenaming
+        culture culture(-557692) to have a name of CultureB\r\nAdding culture CultureA(-557690)
+        to tile \r\n\r\nCultureA(-557690)\r\nclearing\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -579,10 +581,12 @@ MonoBehaviour:
       name: CanResortWhenPopulationAdded
       fullName: CultureContainerTestSuite.CanResortWhenPopulationAdded
       resultStatus: 1
-      duration: 0.005699
+      duration: 0.0074976
       messages: 
-      output: "Adding culture (-2356) to tile \r\n\r\n(-2356)\r\nAdding culture (-2358)
-        to tile \r\n(-2356)\r\n(-2356), (-2358)\r\nclearing\r\nclearing\r\n"
+      output: "Renaming culture culture(-557722) to have a name of CultureA\r\nRenaming
+        culture culture(-557724) to have a name of CultureB\r\nAdding culture CultureA(-557722)
+        to tile \r\n\r\nCultureA(-557722)\r\nAdding culture CultureB(-557724) to
+        tile \r\nCultureA(-557722)\r\nCultureA(-557722), CultureB(-557724)\r\nclearing\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -597,10 +601,12 @@ MonoBehaviour:
       name: CanSortCultures
       fullName: CultureContainerTestSuite.CanSortCultures
       resultStatus: 1
-      duration: 0.0047945
+      duration: 0.0075192
       messages: 
-      output: "Adding culture (-2390) to tile \r\n\r\n(-2390)\r\nAdding culture (-2388)
-        to tile \r\n(-2390)\r\n(-2388), (-2390)\r\nclearing\r\nclearing\r\n"
+      output: "Renaming culture culture(-557754) to have a name of CultureA\r\nRenaming
+        culture culture(-557756) to have a name of CultureB\r\nAdding culture CultureB(-557756)
+        to tile \r\n\r\nCultureB(-557756)\r\nAdding culture CultureA(-557754) to
+        tile \r\nCultureB(-557756)\r\nCultureA(-557754), CultureB(-557756)\r\nclearing\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -614,9 +620,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][CultureFoodStoreTestSuite][suite]
       name: CultureFoodStoreTestSuite
       fullName: CultureFoodStoreTestSuite
-      resultStatus: 2
-      duration: 0.0835114
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.1303353
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -630,36 +636,34 @@ MonoBehaviour:
       uniqueId: Tests.dll/CultureFoodStoreTestSuite/[Tests][CultureFoodStoreTestSuite.CanCollectFoodFromTile]
       name: CanCollectFoodFromTile
       fullName: CultureFoodStoreTestSuite.CanCollectFoodFromTile
-      resultStatus: 2
-      duration: 0.0429601
-      messages: 'System.InvalidCastException : Specified cast is not valid.'
-      output: 'Setting tile for culture rthqqn(-2514)(-2514) to tile 0, 0 (Tile)
+      resultStatus: 1
+      duration: 0.0478202
+      messages: 
+      output: 'Setting tile for culture rthqqn(-557904)(-557904) to tile 0, 0 (Tile)
 
         Adding
-        culture rthqqn(-2514) to tile 0, 0 (UnityEngine.Transform)
+        culture rthqqn(-557904) to tile CultureHolder (UnityEngine.Transform)
 
         
 
-        rthqqn(-2514)
+        rthqqn(-557904)
 
         Setup
-        Complete. Culture name is rthqqn(-2514)
+        Complete. Culture name is rthqqn(-557904)
+
+        Adding FoodUpdate(1539805222),
+        Creator: GatherFoodAction, Target: rthqqn(-557904), Value:-1
+
+        99,
+        10, 10
+
+        Adding FoodUpdate(-1578802398), Creator: GatherFoodAction,
+        Target: rthqqn(-557904), Value:10
 
         clearing
 
 '
-      stacktrace: "  at TestUtils+<>c.<GetCombinedFoodChangeInUpdateList>b__4_1 (INonGenericCultureUpdate
-        u) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\Utils\\TestUtils.cs:35
-        \r\n  at System.Linq.Enumerable.Sum[TSource] (System.Collections.Generic.IEnumerable`1[T]
-        source, System.Func`2[T,TResult] selector) [0x0002e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
-        \r\n  at TestUtils.GetCombinedFoodChangeInUpdateList (INonGenericCultureUpdate[]
-        UpdateList) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\Utils\\TestUtils.cs:35
-        \r\n  at CultureFoodStoreTestSuite.AssertFoodChange (System.Single expected)
-        [0x0000c] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\CultureFoodStoreTestSuite.cs:77
-        \r\n  at CultureFoodStoreTestSuite+<CanCollectFoodFromTile>d__2.MoveNext
-        () [0x00024] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\CultureFoodStoreTestSuite.cs:25
-        \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
-        in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46 "
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -672,36 +676,38 @@ MonoBehaviour:
       uniqueId: Tests.dll/CultureFoodStoreTestSuite/[Tests][CultureFoodStoreTestSuite.CanConsumeFoodInTurn]
       name: CanConsumeFoodInTurn
       fullName: CultureFoodStoreTestSuite.CanConsumeFoodInTurn
-      resultStatus: 2
-      duration: 0.0102402
-      messages: 'System.InvalidCastException : Specified cast is not valid.'
-      output: 'Setting tile for culture rthqqn(-2664)(-2664) to tile 0, 0 (Tile)
+      resultStatus: 1
+      duration: 0.0189282
+      messages: 
+      output: 'Setting tile for culture rthqqn(-558078)(-558078) to tile 0, 0 (Tile)
 
         Adding
-        culture rthqqn(-2664) to tile 0, 0 (UnityEngine.Transform)
+        culture rthqqn(-558078) to tile CultureHolder (UnityEngine.Transform)
 
         
 
-        rthqqn(-2664)
+        rthqqn(-558078)
 
         Setup
-        Complete. Culture name is rthqqn(-2664)
+        Complete. Culture name is rthqqn(-558078)
+
+        Adding FoodUpdate(-880203376),
+        Creator: DefaultAction, Target: rthqqn(-558078), Value:-1
+
+        Adding
+        FoodUpdate(555898976), Creator: GatherFoodAction, Target: rthqqn(-558078),
+        Value:-1
+
+        Adding StateUpdate(921594444), Creator: DefaultAction,
+        Target: rthqqn(-558078), Value:Default
+
+        Adding PopulationUpdate(309496060),
+        Creator: DefaultAction, Target: rthqqn(-558078), Value:0
 
         clearing
 
 '
-      stacktrace: "  at TestUtils+<>c.<GetCombinedFoodChangeInUpdateList>b__4_1 (INonGenericCultureUpdate
-        u) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\Utils\\TestUtils.cs:35
-        \r\n  at System.Linq.Enumerable.Sum[TSource] (System.Collections.Generic.IEnumerable`1[T]
-        source, System.Func`2[T,TResult] selector) [0x0002e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
-        \r\n  at TestUtils.GetCombinedFoodChangeInUpdateList (INonGenericCultureUpdate[]
-        UpdateList) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\Utils\\TestUtils.cs:35
-        \r\n  at CultureFoodStoreTestSuite.AssertFoodChange (System.Single expected)
-        [0x0000c] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\CultureFoodStoreTestSuite.cs:77
-        \r\n  at CultureFoodStoreTestSuite+<CanConsumeFoodInTurn>d__3.MoveNext ()
-        [0x00054] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\CultureFoodStoreTestSuite.cs:37
-        \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
-        in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46 "
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -714,36 +720,38 @@ MonoBehaviour:
       uniqueId: Tests.dll/CultureFoodStoreTestSuite/[Tests][CultureFoodStoreTestSuite.CanConsumeFoodMultiplePopulation]
       name: CanConsumeFoodMultiplePopulation
       fullName: CultureFoodStoreTestSuite.CanConsumeFoodMultiplePopulation
-      resultStatus: 2
-      duration: 0.0128178
-      messages: 'System.InvalidCastException : Specified cast is not valid.'
-      output: 'Setting tile for culture rthqqn(-2814)(-2814) to tile 0, 0 (Tile)
+      resultStatus: 1
+      duration: 0.0386357
+      messages: 
+      output: 'Setting tile for culture rthqqn(-558252)(-558252) to tile 0, 0 (Tile)
 
         Adding
-        culture rthqqn(-2814) to tile 0, 0 (UnityEngine.Transform)
+        culture rthqqn(-558252) to tile CultureHolder (UnityEngine.Transform)
 
         
 
-        rthqqn(-2814)
+        rthqqn(-558252)
 
         Setup
-        Complete. Culture name is rthqqn(-2814)
+        Complete. Culture name is rthqqn(-558252)
+
+        Adding FoodUpdate(932953698),
+        Creator: DefaultAction, Target: rthqqn(-558252), Value:-6
+
+        Adding
+        FoodUpdate(580597990), Creator: GatherFoodAction, Target: rthqqn(-558252),
+        Value:-6
+
+        Adding StateUpdate(-1743063512), Creator: DefaultAction,
+        Target: rthqqn(-558252), Value:Default
+
+        Adding PopulationUpdate(-2095419220),
+        Creator: DefaultAction, Target: rthqqn(-558252), Value:0
 
         clearing
 
 '
-      stacktrace: "  at TestUtils+<>c.<GetCombinedFoodChangeInUpdateList>b__4_1 (INonGenericCultureUpdate
-        u) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\Utils\\TestUtils.cs:35
-        \r\n  at System.Linq.Enumerable.Sum[TSource] (System.Collections.Generic.IEnumerable`1[T]
-        source, System.Func`2[T,TResult] selector) [0x0002e] in <1e18c5a6594041c9844bfd0b6618ee4a>:0
-        \r\n  at TestUtils.GetCombinedFoodChangeInUpdateList (INonGenericCultureUpdate[]
-        UpdateList) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\Utils\\TestUtils.cs:35
-        \r\n  at CultureFoodStoreTestSuite.AssertFoodChange (System.Single expected)
-        [0x0000c] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\CultureFoodStoreTestSuite.cs:77
-        \r\n  at CultureFoodStoreTestSuite+<CanConsumeFoodMultiplePopulation>d__4.MoveNext
-        () [0x00065] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\CultureFoodStoreTestSuite.cs:53
-        \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
-        in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46 "
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -757,19 +765,28 @@ MonoBehaviour:
       name: CanReduceFoodOnTile
       fullName: CultureFoodStoreTestSuite.CanReduceFoodOnTile
       resultStatus: 1
-      duration: 0.0144048
+      duration: 0.0184225
       messages: 
-      output: 'Setting tile for culture rthqqn(-2964)(-2964) to tile 0, 0 (Tile)
+      output: 'Setting tile for culture rthqqn(-558440)(-558440) to tile 0, 0 (Tile)
 
         Adding
-        culture rthqqn(-2964) to tile 0, 0 (UnityEngine.Transform)
+        culture rthqqn(-558440) to tile CultureHolder (UnityEngine.Transform)
 
         
 
-        rthqqn(-2964)
+        rthqqn(-558440)
 
         Setup
-        Complete. Culture name is rthqqn(-2964)
+        Complete. Culture name is rthqqn(-558440)
+
+        Adding FoodUpdate(-253707680),
+        Creator: GatherFoodAction, Target: rthqqn(-558440), Value:-1
+
+        99,
+        10, 10
+
+        Adding FoodUpdate(1786675244), Creator: GatherFoodAction,
+        Target: rthqqn(-558440), Value:10
 
         clearing
 
@@ -788,7 +805,7 @@ MonoBehaviour:
       name: CulturePlacementHandlerTestSuite
       fullName: CulturePlacementHandlerTestSuite
       resultStatus: 1
-      duration: 0.8449249
+      duration: 0.8751466
       messages: 
       output: 
       stacktrace: 
@@ -804,12 +821,15 @@ MonoBehaviour:
       name: CanNotShowAdditionalCulturesAfterThree
       fullName: CulturePlacementHandlerTestSuite.CanNotShowAdditionalCulturesAfterThree
       resultStatus: 1
-      duration: 0.108289
+      duration: 0.1129159
       messages: 
-      output: "Adding culture (-3016) to tile \r\n\r\n(-3016)\r\nAdding culture (-3022)
-        to tile \r\n(-3016)\r\n(-3016), (-3022)\r\nAdding culture (-3028) to tile
-        \r\n(-3016), (-3022)\r\n(-3016), (-3022), (-3028)\r\nAdding culture (-3044)
-        to tile \r\n(-3016), (-3022), (-3028)\r\n(-3016), (-3022), (-3028), (-3044)\r\nclearing\r\nclearing\r\n"
+      output: "Adding culture culture(-558492) to tile \r\n\r\nculture(-558492)\r\nAdding
+        culture culture(-558498) to tile \r\nculture(-558492)\r\nculture(-558492),
+        culture(-558498)\r\nAdding culture culture(-558504) to tile \r\nculture(-558492),
+        culture(-558498)\r\nculture(-558492), culture(-558498), culture(-558504)\r\nAdding
+        culture culture(-558520) to tile \r\nculture(-558492), culture(-558498),
+        culture(-558504)\r\nculture(-558492), culture(-558498), culture(-558504),
+        culture(-558520)\r\nclearing\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -824,11 +844,12 @@ MonoBehaviour:
       name: CanRearrangeWhenPopChanges
       fullName: CulturePlacementHandlerTestSuite.CanRearrangeWhenPopChanges
       resultStatus: 1
-      duration: 0.208618
+      duration: 0.2112384
       messages: 
-      output: "Adding culture (-3062) to tile \r\n\r\n(-3062)\r\nAdding culture (-3068)
-        to tile \r\n(-3062)\r\n(-3062), (-3068)\r\nAdding culture (-3074) to tile
-        \r\n(-3062), (-3068)\r\n(-3062), (-3068), (-3074)\r\nclearing\r\nclearing\r\n"
+      output: "Adding culture culture(-558538) to tile \r\n\r\nculture(-558538)\r\nAdding
+        culture culture(-558544) to tile \r\nculture(-558538)\r\nculture(-558538),
+        culture(-558544)\r\nAdding culture culture(-558550) to tile \r\nculture(-558538),
+        culture(-558544)\r\nculture(-558538), culture(-558544), culture(-558550)\r\nclearing\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -843,12 +864,14 @@ MonoBehaviour:
       name: CanReduceFromThreeToTwoCulturesOnTile
       fullName: CulturePlacementHandlerTestSuite.CanReduceFromThreeToTwoCulturesOnTile
       resultStatus: 1
-      duration: 0.2064181
+      duration: 0.2094642
       messages: 
-      output: "Adding culture (-3102) to tile \r\n\r\n(-3102)\r\nAdding culture (-3108)
-        to tile \r\n(-3102)\r\n(-3102), (-3108)\r\nAdding culture (-3114) to tile
-        \r\n(-3102), (-3108)\r\n(-3102), (-3108), (-3114)\r\nRemoving culture (-3102)
-        from tile \r\n(-3102), (-3108), (-3114)\r\n(-3108), (-3114)\r\nclearing\r\nclearing\r\n"
+      output: "Adding culture culture(-558578) to tile \r\n\r\nculture(-558578)\r\nAdding
+        culture culture(-558584) to tile \r\nculture(-558578)\r\nculture(-558578),
+        culture(-558584)\r\nAdding culture culture(-558590) to tile \r\nculture(-558578),
+        culture(-558584)\r\nculture(-558578), culture(-558584), culture(-558590)\r\nRemoving
+        culture culture(-558578) from tile \r\nculture(-558578), culture(-558584),
+        culture(-558590)\r\nculture(-558584), culture(-558590)\r\nclearing\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -863,9 +886,9 @@ MonoBehaviour:
       name: CanShowOneCultureOnTile
       fullName: CulturePlacementHandlerTestSuite.CanShowOneCultureOnTile
       resultStatus: 1
-      duration: 0.1060414
+      duration: 0.1091509
       messages: 
-      output: "Adding culture (-3142) to tile \r\n\r\n(-3142)\r\nclearing\r\nclearing\r\n"
+      output: "Adding culture culture(-558618) to tile \r\n\r\nculture(-558618)\r\nclearing\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -880,11 +903,12 @@ MonoBehaviour:
       name: CanShowThreeCulturesOnTile
       fullName: CulturePlacementHandlerTestSuite.CanShowThreeCulturesOnTile
       resultStatus: 1
-      duration: 0.1056339
+      duration: 0.1160857
       messages: 
-      output: "Adding culture (-3182) to tile \r\n\r\n(-3182)\r\nAdding culture (-3188)
-        to tile \r\n(-3182)\r\n(-3182), (-3188)\r\nAdding culture (-3194) to tile
-        \r\n(-3182), (-3188)\r\n(-3182), (-3188), (-3194)\r\nclearing\r\nclearing\r\n"
+      output: "Adding culture culture(-558658) to tile \r\n\r\nculture(-558658)\r\nAdding
+        culture culture(-558664) to tile \r\nculture(-558658)\r\nculture(-558658),
+        culture(-558664)\r\nAdding culture culture(-558670) to tile \r\nculture(-558658),
+        culture(-558664)\r\nculture(-558658), culture(-558664), culture(-558670)\r\nclearing\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -899,10 +923,11 @@ MonoBehaviour:
       name: CanShowTwoCulturesOnTile
       fullName: CulturePlacementHandlerTestSuite.CanShowTwoCulturesOnTile
       resultStatus: 1
-      duration: 0.1062131
+      duration: 0.1094782
       messages: 
-      output: "Adding culture (-3222) to tile \r\n\r\n(-3222)\r\nAdding culture (-3228)
-        to tile \r\n(-3222)\r\n(-3222), (-3228)\r\nclearing\r\nclearing\r\n"
+      output: "Adding culture culture(-558698) to tile \r\n\r\nculture(-558698)\r\nAdding
+        culture culture(-558704) to tile \r\nculture(-558698)\r\nculture(-558698),
+        culture(-558704)\r\nclearing\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -917,7 +942,7 @@ MonoBehaviour:
       name: CultureTestSuite
       fullName: CultureTestSuite
       resultStatus: 1
-      duration: 0.0252195
+      duration: 0.0366834
       messages: 
       output: 
       stacktrace: 
@@ -933,19 +958,19 @@ MonoBehaviour:
       name: TestCanMerge
       fullName: CultureTestSuite.TestCanMerge
       resultStatus: 1
-      duration: 0.0059162
+      duration: 0.0090171
       messages: 
-      output: 'Setting tile for culture rthqqn(-3360)(-3360) to tile 0, 0 (Tile)
+      output: 'Setting tile for culture rthqqn(-558860)(-558860) to tile 0, 0 (Tile)
 
         Adding
-        culture rthqqn(-3360) to tile 0, 0 (UnityEngine.Transform)
+        culture rthqqn(-558860) to tile CultureHolder (UnityEngine.Transform)
 
         
 
-        rthqqn(-3360)
+        rthqqn(-558860)
 
         Setup
-        Complete. Culture name is rthqqn(-3360)
+        Complete. Culture name is rthqqn(-558860)
 
         clearing
 
@@ -964,19 +989,19 @@ MonoBehaviour:
       name: TestCannotMerge
       fullName: CultureTestSuite.TestCannotMerge
       resultStatus: 1
-      duration: 0.0077087
+      duration: 0.0104143
       messages: 
-      output: 'Setting tile for culture rthqqn(-3548)(-3548) to tile 0, 0 (Tile)
+      output: 'Setting tile for culture rthqqn(-559072)(-559072) to tile 0, 0 (Tile)
 
         Adding
-        culture rthqqn(-3548) to tile 0, 0 (UnityEngine.Transform)
+        culture rthqqn(-559072) to tile CultureHolder (UnityEngine.Transform)
 
         
 
-        rthqqn(-3548)
+        rthqqn(-559072)
 
         Setup
-        Complete. Culture name is rthqqn(-3548)
+        Complete. Culture name is rthqqn(-559072)
 
         clearing
 
@@ -995,22 +1020,22 @@ MonoBehaviour:
       name: TestSplitCulture
       fullName: CultureTestSuite.TestSplitCulture
       resultStatus: 1
-      duration: 0.0076904
+      duration: 0.0120102
       messages: 
-      output: 'Setting tile for culture rthqqn(-3736)(-3736) to tile 0, 0 (Tile)
+      output: 'Setting tile for culture rthqqn(-559284)(-559284) to tile 0, 0 (Tile)
 
         Adding
-        culture rthqqn(-3736) to tile 0, 0 (UnityEngine.Transform)
+        culture rthqqn(-559284) to tile CultureHolder (UnityEngine.Transform)
 
         
 
-        rthqqn(-3736)
+        rthqqn(-559284)
 
         Setup
-        Complete. Culture name is rthqqn(-3736)
+        Complete. Culture name is rthqqn(-559284)
 
-        Split rthqqn(-3816) from
-        rthqqn(-3736) on tile 0, 0 (Tile)
+        Split rthqqn(-559378)
+        from rthqqn(-559284) on tile 0, 0 (Tile)
 
         clearing
 
@@ -1029,7 +1054,7 @@ MonoBehaviour:
       name: CurveTestSuite
       fullName: CurveTestSuite
       resultStatus: 1
-      duration: 0.0041975
+      duration: 0.0059516
       messages: 
       output: 
       stacktrace: 
@@ -1045,7 +1070,7 @@ MonoBehaviour:
       name: TestCompoundCurve
       fullName: CurveTestSuite.TestCompoundCurve
       resultStatus: 1
-      duration: 0.0004633
+      duration: 0.0004314
       messages: 
       output: 
       stacktrace: 
@@ -1062,7 +1087,7 @@ MonoBehaviour:
       name: TestGaussianCurve
       fullName: CurveTestSuite.TestGaussianCurve
       resultStatus: 1
-      duration: 0.000284
+      duration: 0.0001939
       messages: 
       output: 
       stacktrace: 
@@ -1079,7 +1104,7 @@ MonoBehaviour:
       name: TestPowerCurve
       fullName: CurveTestSuite.TestPowerCurve
       resultStatus: 1
-      duration: 0.0002783
+      duration: 0.0001574
       messages: 
       output: 
       stacktrace: 
@@ -1096,7 +1121,7 @@ MonoBehaviour:
       name: TestSigmoidCurve
       fullName: CurveTestSuite.TestSigmoidCurve
       resultStatus: 1
-      duration: 0.000246
+      duration: 0.0001679
       messages: 
       output: 
       stacktrace: 
@@ -1113,7 +1138,7 @@ MonoBehaviour:
       name: FoodAmountIndicatorTestSuite
       fullName: FoodAmountIndicatorTestSuite
       resultStatus: 2
-      duration: 0.0673915
+      duration: 0.0831361
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -1129,20 +1154,20 @@ MonoBehaviour:
       name: CanDisplayAccurateFoodCount
       fullName: FoodAmountIndicatorTestSuite.CanDisplayAccurateFoodCount
       resultStatus: 2
-      duration: 0.0319377
+      duration: 0.0224429
       messages: "  Indicator is not displaying the correct food!\r\n  Expected: 26.7010002f\r\n 
         But was:  0.0f\r\n"
-      output: 'Setting tile for culture rthqqn(-3994)(-3994) to tile 0, 0 (Tile)
+      output: 'Setting tile for culture rthqqn(-559594)(-559594) to tile 0, 0 (Tile)
 
         Adding
-        culture rthqqn(-3994) to tile 0, 0 (UnityEngine.Transform)
+        culture rthqqn(-559594) to tile CultureHolder (UnityEngine.Transform)
 
         
 
-        rthqqn(-3994)
+        rthqqn(-559594)
 
         Setup
-        Complete. Culture name is rthqqn(-3994)
+        Complete. Culture name is rthqqn(-559594)
 
         Amount is 0
 
@@ -1155,10 +1180,10 @@ MonoBehaviour:
 
 '
       stacktrace: 'at FoodAmountIndicatorTestSuite+<CanDisplayAccurateFoodCount>d__3.MoveNext
-        () [0x00052] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\FoodAmountIndicatorTestSuite.cs:35
+        () [0x00063] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\FoodAmountIndicatorTestSuite.cs:35
 
         at
-        UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
+        UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e]
         in C:\Users\wenze\Documents\Unity\Eons\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
 
 '
@@ -1175,19 +1200,19 @@ MonoBehaviour:
       name: CanGenerateFoodIndicatorAtExpectedInterval
       fullName: FoodAmountIndicatorTestSuite.CanGenerateFoodIndicatorAtExpectedInterval
       resultStatus: 1
-      duration: 0.0147908
+      duration: 0.0228142
       messages: 
-      output: 'Setting tile for culture rthqqn(-4160)(-4160) to tile 0, 0 (Tile)
+      output: 'Setting tile for culture rthqqn(-559784)(-559784) to tile 0, 0 (Tile)
 
         Adding
-        culture rthqqn(-4160) to tile 0, 0 (UnityEngine.Transform)
+        culture rthqqn(-559784) to tile CultureHolder (UnityEngine.Transform)
 
         
 
-        rthqqn(-4160)
+        rthqqn(-559784)
 
         Setup
-        Complete. Culture name is rthqqn(-4160)
+        Complete. Culture name is rthqqn(-559784)
 
         Amount is 0
 
@@ -1222,14 +1247,18 @@ MonoBehaviour:
       name: CanNotDuplicateIndicatorWhenSplitting
       fullName: FoodAmountIndicatorTestSuite.CanNotDuplicateIndicatorWhenSplitting
       resultStatus: 1
-      duration: 0.0168456
+      duration: 0.0325336
       messages: 
-      output: "Setting tile for culture rthqqn(-4326)(-4326) to tile 0, 0 (Tile)\r\nAdding
-        culture rthqqn(-4326) to tile 0, 0 (UnityEngine.Transform)\r\n\r\nrthqqn(-4326)\r\nSetup
-        Complete. Culture name is rthqqn(-4326)\r\nAmount is 0\r\nAmount is 0\r\nAmount
-        is 0\r\nSplit rthqqn(-4384) from rthqqn(-4326) on tile 0, 0 (Tile)\r\nmoving
-        to 1, 0 (UnityEngine.GameObject)\r\nremoving culture rthqqn(-4384) (-4384)
-        from \r\nTried to remove from nonexistant tile!\r\nclearing\r\n"
+      output: "Setting tile for culture rthqqn(-559974)(-559974) to tile 0, 0 (Tile)\r\nAdding
+        culture rthqqn(-559974) to tile CultureHolder (UnityEngine.Transform)\r\n\r\nrthqqn(-559974)\r\nSetup
+        Complete. Culture name is rthqqn(-559974)\r\nAmount is 0\r\nAmount is 0\r\nAmount
+        is 0\r\nAdding FoodUpdate(1520107710), Creator: MoveTileAction, Target: rthqqn(-559974),
+        Value:-31\r\nSplit rthqqn(-560046) from rthqqn(-559974) on tile 0, 0 (Tile)\r\nmoving
+        to 1, 0 (UnityEngine.GameObject)\r\nAdding StateUpdate(-862389910), Creator:
+        MoveTileAction, Target: rthqqn(-560046), Value:Moving\r\nAdding StateUpdate(-1932796794),
+        Creator: MoveTileAction, Target: rthqqn(-559974), Value:Default\r\nremoving
+        culture rthqqn(-560046) (-560046) from \r\nTried to remove from nonexistant
+        tile!\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -1244,7 +1273,7 @@ MonoBehaviour:
       name: GreyscaleOverlayTestSuite
       fullName: GreyscaleOverlayTestSuite
       resultStatus: 1
-      duration: 0.0054277
+      duration: 0.0074219
       messages: 
       output: 
       stacktrace: 
@@ -1260,7 +1289,7 @@ MonoBehaviour:
       name: CanMakeImageGreyscale
       fullName: GreyscaleOverlayTestSuite.CanMakeImageGreyscale
       resultStatus: 1
-      duration: 0.0015844
+      duration: 0.0015579
       messages: 
       output: 'clearing
 
@@ -1279,7 +1308,7 @@ MonoBehaviour:
       name: CanSetToVariousTransparencies
       fullName: GreyscaleOverlayTestSuite.CanSetToVariousTransparencies
       resultStatus: 1
-      duration: 0.0007136
+      duration: 0.0007249
       messages: 
       output: 'clearing
 
@@ -1297,9 +1326,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][InfluenceActionTestSuite][suite]
       name: InfluenceActionTestSuite
       fullName: InfluenceActionTestSuite
-      resultStatus: 2
-      duration: 0.0193573
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.0356811
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1313,40 +1342,43 @@ MonoBehaviour:
       uniqueId: Tests.dll/InfluenceActionTestSuite/[Tests][InfluenceActionTestSuite.CanInfluenceNeighborCulture]
       name: CanInfluenceNeighborCulture
       fullName: InfluenceActionTestSuite.CanInfluenceNeighborCulture
-      resultStatus: 2
-      duration: 0.007737
-      messages: "  Neighbor experiencing no changes!\r\n  Expected: True\r\n  But
-        was:  False\r\n"
-      output: 'Setting tile for culture rthqqn(-4590)(-4590) to tile 0, 0 (Tile)
+      resultStatus: 1
+      duration: 0.0122793
+      messages: 
+      output: 'Setting tile for culture rthqqn(-560290)(-560290) to tile 0, 0 (Tile)
 
         Adding
-        culture rthqqn(-4590) to tile 0, 0 (UnityEngine.Transform)
+        culture rthqqn(-560290) to tile CultureHolder (UnityEngine.Transform)
 
         
 
-        rthqqn(-4590)
+        rthqqn(-560290)
 
         Setup
-        Complete. Culture name is rthqqn(-4590)
+        Complete. Culture name is rthqqn(-560290)
 
         Setting tile for culture
-        qstsil(-4628)(-4628) to tile 0, 0 (Tile)
+        qstsil(-560328)(-560328) to tile 0, 0 (Tile)
 
-        Adding culture qstsil(-4628)
-        to tile 0, 0 (UnityEngine.Transform)
+        Adding culture qstsil(-560328)
+        to tile CultureHolder (UnityEngine.Transform)
 
-        rthqqn(-4590)
+        rthqqn(-560290)
 
-        rthqqn(-4590),
-        qstsil(-4628)
+        rthqqn(-560290),
+        qstsil(-560328)
+
+        Adding FoodUpdate(-1755151776), Creator: CultureInfluenceAction,
+        Target: rthqqn(-560290), Value:-1
+
+        Adding ColorUpdate(-136201690),
+        Creator: CultureInfluenceAction, Target: qstsil(-560328), Value:RGBA(0.278,
+        0.120, 0.564, 1.000)
 
         clearing
 
 '
-      stacktrace: 'at InfluenceActionTestSuite.CanInfluenceNeighborCulture () [0x0001c]
-        in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\InfluenceActionTestSuite.cs:24
-
-'
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1359,40 +1391,59 @@ MonoBehaviour:
       uniqueId: Tests.dll/InfluenceActionTestSuite/[Tests][InfluenceActionTestSuite.CanMergeIntoNewCultureIfClose]
       name: CanMergeIntoNewCultureIfClose
       fullName: InfluenceActionTestSuite.CanMergeIntoNewCultureIfClose
-      resultStatus: 2
-      duration: 0.0087482
-      messages: "  Neighbor experiencing no changes!\r\n  Expected: True\r\n  But
-        was:  False\r\n"
-      output: 'Setting tile for culture rthqqn(-4778)(-4778) to tile 0, 0 (Tile)
+      resultStatus: 1
+      duration: 0.0178881
+      messages: 
+      output: 'Setting tile for culture rthqqn(-560502)(-560502) to tile 0, 0 (Tile)
 
         Adding
-        culture rthqqn(-4778) to tile 0, 0 (UnityEngine.Transform)
+        culture rthqqn(-560502) to tile CultureHolder (UnityEngine.Transform)
 
         
 
-        rthqqn(-4778)
+        rthqqn(-560502)
 
         Setup
-        Complete. Culture name is rthqqn(-4778)
+        Complete. Culture name is rthqqn(-560502)
 
         Setting tile for culture
-        qstsil(-4816)(-4816) to tile 0, 0 (Tile)
+        qstsil(-560540)(-560540) to tile 0, 0 (Tile)
 
-        Adding culture qstsil(-4816)
-        to tile 0, 0 (UnityEngine.Transform)
+        Adding culture qstsil(-560540)
+        to tile CultureHolder (UnityEngine.Transform)
 
-        rthqqn(-4778)
+        rthqqn(-560502)
 
-        rthqqn(-4778),
-        qstsil(-4816)
+        rthqqn(-560502),
+        qstsil(-560540)
+
+        Adding FoodUpdate(238984004), Creator: CultureInfluenceAction,
+        Target: rthqqn(-560502), Value:-1
+
+        Adding ColorUpdate(-349496012),
+        Creator: CultureInfluenceAction, Target: rthqqn(-560502), Value:RGBA(0.000,
+        0.000, 1.000, 1.000)
+
+        Adding PopulationUpdate(-871359694), Creator:
+        CultureInfluenceAction, Target: rthqqn(-560502), Value:1
+
+        Adding
+        PopulationUpdate(-1941766578), Creator: CultureInfluenceAction, Target: qstsil(-560540),
+        Value:-1
+
+        Adding StateUpdate(-1288035872), Creator: CultureInfluenceAction,
+        Target: qstsil(-560540), Value:PendingRemoval
+
+        Adding NameUpdate(-909000644),
+        Creator: CultureInfluenceAction, Target: rthqqn(-560502), Value:yfrnzh
+
+        Renaming
+        culture rthqqn(-560502) to have a name of yfrnzh
 
         clearing
 
 '
-      stacktrace: 'at InfluenceActionTestSuite.CanMergeIntoNewCultureIfClose () [0x00049]
-        in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\InfluenceActionTestSuite.cs:47
-
-'
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1401,13 +1452,13 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1004
       parentUniqueId: Tests.dll/[Tests][InfluenceActionTestSuite][suite]
-    - id: 1001
-      uniqueId: Tests.dll/[Tests][MergeActionTestSuite][suite]
-      name: MergeActionTestSuite
-      fullName: MergeActionTestSuite
-      resultStatus: 2
-      duration: 0.0420603
-      messages: One or more child tests had errors
+    - id: 1042
+      uniqueId: Tests.dll/[Tests][MergeWithTileActionTestSuite][suite]
+      name: MergeWithTileActionTestSuite
+      fullName: MergeWithTileActionTestSuite
+      resultStatus: 1
+      duration: 0.0567258
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1415,224 +1466,233 @@ MonoBehaviour:
       description: 
       isSuite: 1
       categories: []
-      parentId: 1009
+      parentId: 1075
       parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1006
-      uniqueId: Tests.dll/MergeActionTestSuite/[Tests][MergeActionTestSuite.CanAddNewCultureToTile]
+    - id: 1044
+      uniqueId: Tests.dll/MergeWithTileActionTestSuite/[Tests][MergeWithTileActionTestSuite.CanAddNewCultureToTile]
       name: CanAddNewCultureToTile
-      fullName: MergeActionTestSuite.CanAddNewCultureToTile
-      resultStatus: 2
-      duration: 0.0075821
-      messages: 'System.NullReferenceException : Object reference not set to an instance
-        of an object'
-      output: 'Setting tile for culture rthqqn(-4966)(-4966) to tile 0, 0 (Tile)
+      fullName: MergeWithTileActionTestSuite.CanAddNewCultureToTile
+      resultStatus: 1
+      duration: 0.0128789
+      messages: 
+      output: 'Setting tile for culture rthqqn(-560742)(-560742) to tile 0, 0 (Tile)
 
         Adding
-        culture rthqqn(-4966) to tile 0, 0 (UnityEngine.Transform)
+        culture rthqqn(-560742) to tile CultureHolder (UnityEngine.Transform)
 
         
 
-        rthqqn(-4966)
+        rthqqn(-560742)
 
         Setup
-        Complete. Culture name is rthqqn(-4966)
+        Complete. Culture name is rthqqn(-560742)
 
         Setting tile for culture
-        qstsil(-4966)(-4966) to tile 0, 0 (Tile)
+        qstsil(-560780)(-560780) to tile 1, 0 (Tile)
 
-        Adding culture qstsil(-4966)
-        to tile 0, 0 (UnityEngine.Transform)
+        Adding culture qstsil(-560780)
+        to tile CultureHolder (UnityEngine.Transform)
 
-        qstsil(-4966)
+        
 
-        qstsil(-4966),
-        qstsil(-4966)
+        qstsil(-560780)
+
+        Setting
+        tile for culture qstsil(-560780)(-560780) to tile 0, 0 (Tile)
+
+        Adding
+        FoodUpdate(-1559097532), Creator: MergeWithTileAction, Target: qstsil(-560780),
+        Value:-1
+
+        merging culture qstsil(-560780)(-560780) with tile 0,
+        0 (Tile)
+
+        Adding StateUpdate(-796270416), Creator: MergeWithTileAction,
+        Target: rthqqn(-560742), Value:Invaded
+
+        Adding StateUpdate(639831936),
+        Creator: MergeWithTileAction, Target: qstsil(-560780), Value:Invader
+
+        Adding
+        culture qstsil(-560780) to tile CultureHolder (UnityEngine.Transform)
+
+        rthqqn(-560742)
+
+        rthqqn(-560742),
+        qstsil(-560780)
 
         clearing
 
 '
-      stacktrace: "  at MergeAction..ctor (Culture c) [0x00007] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\CultureScripts\\Actions\\MergeAction.cs:12
-        \r\n  at MergeActionTestSuite.ExecuteTurnAndSetCultureTurnUpdates () [0x00000]
-        in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\MergeActionTestSuite.cs:97
-        \r\n  at MergeActionTestSuite.CanAddNewCultureToTile () [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\MergeActionTestSuite.cs:44
-        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
-        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
-        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
-        System.Globalization.CultureInfo culture) [0x0006a] in <6073cf49ed704e958b8a66d540dea948>:0 "
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/[Tests][MergeActionTestSuite][suite]
-    - id: 1008
-      uniqueId: Tests.dll/MergeActionTestSuite/[Tests][MergeActionTestSuite.CanCreateAsNewCulture]
+      parentId: 1042
+      parentUniqueId: Tests.dll/[Tests][MergeWithTileActionTestSuite][suite]
+    - id: 1046
+      uniqueId: Tests.dll/MergeWithTileActionTestSuite/[Tests][MergeWithTileActionTestSuite.CanCreateAsNewCulture]
       name: CanCreateAsNewCulture
-      fullName: MergeActionTestSuite.CanCreateAsNewCulture
-      resultStatus: 2
-      duration: 0.0088694
-      messages: 'System.NullReferenceException : Object reference not set to an instance
-        of an object'
-      output: 'Setting tile for culture rthqqn(-5154)(-5154) to tile 0, 0 (Tile)
+      fullName: MergeWithTileActionTestSuite.CanCreateAsNewCulture
+      resultStatus: 1
+      duration: 0.0206201
+      messages: 
+      output: 'Setting tile for culture rthqqn(-560954)(-560954) to tile 0, 0 (Tile)
 
         Adding
-        culture rthqqn(-5154) to tile 0, 0 (UnityEngine.Transform)
+        culture rthqqn(-560954) to tile CultureHolder (UnityEngine.Transform)
 
         
 
-        rthqqn(-5154)
+        rthqqn(-560954)
 
         Setup
-        Complete. Culture name is rthqqn(-5154)
+        Complete. Culture name is rthqqn(-560954)
 
         Setting tile for culture
-        qstsil(-5154)(-5154) to tile 0, 0 (Tile)
+        qstsil(-560992)(-560992) to tile 1, 0 (Tile)
 
-        Adding culture qstsil(-5154)
-        to tile 0, 0 (UnityEngine.Transform)
+        Adding culture qstsil(-560992)
+        to tile CultureHolder (UnityEngine.Transform)
 
-        qstsil(-5154)
+        
 
-        qstsil(-5154),
-        qstsil(-5154)
+        qstsil(-560992)
 
-        Culture has tileInfo, not changing. Unless this is
-        a test it may be a bug.
+        Setting
+        tile for culture qstsil(-560992)(-560992) to tile 0, 0 (Tile)
+
+        Renaming
+        culture rthqqn(-560954) to have a name of test
+
+        Renaming culture
+        qstsil(-560992) to have a name of test
+
+        Adding FoodUpdate(1397879298),
+        Creator: MergeWithTileAction, Target: test(-560992), Value:-1
+
+        merging
+        culture test(-560992)(-560992) with tile 0, 0 (Tile)
+
+        Adding NameUpdate(-1996189088),
+        Creator: MergeWithTileAction, Target: test(-560992), Value:yfrnzh
+
+        Renaming
+        culture test(-560992) to have a name of yfrnzh
+
+        Adding FoodUpdate(1982532874),
+        Creator: MergeWithTileAction, Target: yfrnzh(-560992), Value:-1
+
+        merging
+        culture yfrnzh(-560992)(-560992) with tile 0, 0 (Tile)
+
+        Adding StateUpdate(-454899232),
+        Creator: MergeWithTileAction, Target: test(-560954), Value:Invaded
+
+        Adding
+        StateUpdate(981203120), Creator: MergeWithTileAction, Target: yfrnzh(-560992),
+        Value:Invader
+
+        Adding culture yfrnzh(-560992) to tile CultureHolder
+        (UnityEngine.Transform)
+
+        test(-560954)
+
+        test(-560954),
+        yfrnzh(-560992)
 
         clearing
 
 '
-      stacktrace: "  at MergeAction..ctor (Culture c) [0x00007] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\CultureScripts\\Actions\\MergeAction.cs:12
-        \r\n  at MergeActionTestSuite.ExecuteTurnAndSetCultureTurnUpdates () [0x00000]
-        in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\MergeActionTestSuite.cs:97
-        \r\n  at MergeActionTestSuite.CanCreateAsNewCulture () [0x0001a] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\MergeActionTestSuite.cs:79
-        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
-        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
-        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
-        System.Globalization.CultureInfo culture) [0x0006a] in <6073cf49ed704e958b8a66d540dea948>:0 "
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/[Tests][MergeActionTestSuite][suite]
-    - id: 1005
-      uniqueId: Tests.dll/MergeActionTestSuite/[Tests][MergeActionTestSuite.CanMergeCultures]
+      parentId: 1042
+      parentUniqueId: Tests.dll/[Tests][MergeWithTileActionTestSuite][suite]
+    - id: 1043
+      uniqueId: Tests.dll/MergeWithTileActionTestSuite/[Tests][MergeWithTileActionTestSuite.CanMergeCultures]
       name: CanMergeCultures
-      fullName: MergeActionTestSuite.CanMergeCultures
-      resultStatus: 2
-      duration: 0.0131603
-      messages: 'System.Collections.Generic.KeyNotFoundException : The given key
-        ''qstsil'' was not present in the dictionary.'
-      output: 'Setting tile for culture rthqqn(-5342)(-5342) to tile 0, 0 (Tile)
+      fullName: MergeWithTileActionTestSuite.CanMergeCultures
+      resultStatus: 1
+      duration: 0.0169064
+      messages: 
+      output: 'Setting tile for culture rthqqn(-561166)(-561166) to tile 0, 0 (Tile)
 
         Adding
-        culture rthqqn(-5342) to tile 0, 0 (UnityEngine.Transform)
+        culture rthqqn(-561166) to tile CultureHolder (UnityEngine.Transform)
 
         
 
-        rthqqn(-5342)
+        rthqqn(-561166)
 
         Setup
-        Complete. Culture name is rthqqn(-5342)
+        Complete. Culture name is rthqqn(-561166)
 
         Setting tile for culture
-        qstsil(-5342)(-5342) to tile 0, 0 (Tile)
+        qstsil(-561204)(-561204) to tile 1, 0 (Tile)
 
-        Adding culture qstsil(-5342)
-        to tile 0, 0 (UnityEngine.Transform)
+        Adding culture qstsil(-561204)
+        to tile CultureHolder (UnityEngine.Transform)
 
-        qstsil(-5342)
+        
 
-        qstsil(-5342),
-        qstsil(-5342)
+        qstsil(-561204)
 
-        Culture has tileInfo, not changing. Unless this is
-        a test it may be a bug.
+        Setting
+        tile for culture qstsil(-561204)(-561204) to tile 0, 0 (Tile)
+
+        Renaming
+        culture rthqqn(-561166) to have a name of test
+
+        Renaming culture
+        qstsil(-561204) to have a name of test
+
+        Adding FoodUpdate(761186138),
+        Creator: MergeWithTileAction, Target: test(-561204), Value:-1
+
+        merging
+        culture test(-561204)(-561204) with tile 0, 0 (Tile)
+
+        Adding ColorUpdate(591678164),
+        Creator: MergeWithTileAction, Target: test(-561166), Value:RGBA(0.000, 0.000,
+        0.980, 1.000)
+
+        Adding PopulationUpdate(239322456), Creator: MergeWithTileAction,
+        Target: test(-561166), Value:1
+
+        Adding PopulationUpdate(1675424808),
+        Creator: MergeWithTileAction, Target: test(-561204), Value:-1
+
+        Adding
+        StateUpdate(1323069100), Creator: MergeWithTileAction, Target: test(-561204),
+        Value:PendingRemoval
 
         clearing
 
 '
-      stacktrace: "  at System.Collections.Generic.Dictionary`2[TKey,TValue].get_Item
-        (TKey key) [0x0001e] in <6073cf49ed704e958b8a66d540dea948>:0 \r\n  at TileInfo.UpdateCultureName
-        (System.String oldname, System.String newname) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\TileInfo.cs:51
-        \r\n  at MergeActionTestSuite.CanMergeCultures () [0x0003a] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\MergeActionTestSuite.cs:27
-        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
-        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
-        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
-        System.Globalization.CultureInfo culture) [0x0006a] in <6073cf49ed704e958b8a66d540dea948>:0 "
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
       isSuite: 0
       categories:
       - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/[Tests][MergeActionTestSuite][suite]
-    - id: 1007
-      uniqueId: Tests.dll/MergeActionTestSuite/[Tests][MergeActionTestSuite.CanMergeWithParentCulture]
-      name: CanMergeWithParentCulture
-      fullName: MergeActionTestSuite.CanMergeWithParentCulture
-      resultStatus: 2
-      duration: 0.0088329
-      messages: 'System.Collections.Generic.KeyNotFoundException : The given key
-        ''qstsil'' was not present in the dictionary.'
-      output: 'Setting tile for culture rthqqn(-5530)(-5530) to tile 0, 0 (Tile)
-
-        Adding
-        culture rthqqn(-5530) to tile 0, 0 (UnityEngine.Transform)
-
-        
-
-        rthqqn(-5530)
-
-        Setup
-        Complete. Culture name is rthqqn(-5530)
-
-        Setting tile for culture
-        qstsil(-5530)(-5530) to tile 0, 0 (Tile)
-
-        Adding culture qstsil(-5530)
-        to tile 0, 0 (UnityEngine.Transform)
-
-        qstsil(-5530)
-
-        qstsil(-5530),
-        qstsil(-5530)
-
-        Culture has tileInfo, not changing. Unless this is
-        a test it may be a bug.
-
-        clearing
-
-'
-      stacktrace: "  at System.Collections.Generic.Dictionary`2[TKey,TValue].get_Item
-        (TKey key) [0x0001e] in <6073cf49ed704e958b8a66d540dea948>:0 \r\n  at TileInfo.UpdateCultureName
-        (System.String oldname, System.String newname) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Map\\Tiles\\TileInfo.cs:51
-        \r\n  at MergeActionTestSuite.CanMergeWithParentCulture () [0x0004a] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\MergeActionTestSuite.cs:60
-        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
-        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
-        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
-        System.Globalization.CultureInfo culture) [0x0006a] in <6073cf49ed704e958b8a66d540dea948>:0 "
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/[Tests][MergeActionTestSuite][suite]
+      parentId: 1042
+      parentUniqueId: Tests.dll/[Tests][MergeWithTileActionTestSuite][suite]
     - id: 1001
       uniqueId: Tests.dll/[Tests][MoveActionTestSuite][suite]
       name: MoveActionTestSuite
       fullName: MoveActionTestSuite
-      resultStatus: 2
-      duration: 0.2694618
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.4001129
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1646,55 +1706,54 @@ MonoBehaviour:
       uniqueId: Tests.dll/MoveActionTestSuite/[Tests][MoveActionTestSuite.MoveTileActionTest]
       name: MoveTileActionTest
       fullName: MoveActionTestSuite.MoveTileActionTest
-      resultStatus: 2
-      duration: 0.1421196
-      messages: "  Culture has not changed tiles!\r\n  Expected: True\r\n  But was: 
-        False\r\n"
-      output: 'Setting tile for culture rthqqn(-5718)(-5718) to tile 0, 0 (Tile)
+      resultStatus: 1
+      duration: 0.1491273
+      messages: 
+      output: 'Setting tile for culture rthqqn(-561406)(-561406) to tile 0, 0 (Tile)
 
         Adding
-        culture rthqqn(-5718) to tile 0, 0 (UnityEngine.Transform)
+        culture rthqqn(-561406) to tile CultureHolder (UnityEngine.Transform)
 
         
 
-        rthqqn(-5718)
+        rthqqn(-561406)
 
         Setup
-        Complete. Culture name is rthqqn(-5718)
+        Complete. Culture name is rthqqn(-561406)
 
-        moving to 1, 0 (UnityEngine.GameObject)
+        Adding FoodUpdate(-716964140),
+        Creator: MoveTileAction, Target: rthqqn(-561406), Value:-1
+
+        moving
+        to 1, 0 (UnityEngine.GameObject)
+
+        Adding StateUpdate(-2126386972),
+        Creator: MoveTileAction, Target: rthqqn(-561406), Value:Moving
 
         removing
-        culture rthqqn(-5718) (-5718) from 0, 0 (Tile)
+        culture rthqqn(-561406) (-561406) from 0, 0 (Tile)
 
         Removing culture
-        rthqqn(-5718) from tile 0, 0 (UnityEngine.Transform)
+        rthqqn(-561406) from tile CultureHolder (UnityEngine.Transform)
 
-        rthqqn(-5718)
+        rthqqn(-561406)
 
         
-
-        Setting
-        tile for culture rthqqn(-5718)(-5718) to tile 1, 0 (Tile)
 
         Adding
-        culture rthqqn(-5718) to tile 1, 0 (UnityEngine.Transform)
+        StateUpdate(-2060443550), Creator: MoveTileAction, Target: rthqqn(-561406),
+        Value:NewOnTile
 
-        
+        Adding TileUpdate(-441493464), Creator: MoveTileAction,
+        Target: rthqqn(-561406), Value:1, 0 (Tile)
 
-        rthqqn(-5718)
+        Setting tile for culture
+        rthqqn(-561406)(-561406) to tile 1, 0 (Tile)
 
         clearing
 
 '
-      stacktrace: 'at MoveActionTestSuite+<MoveTileActionTest>d__1.MoveNext () [0x00116]
-        in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\MoveActionTestSuite.cs:39
-
-        at
-        UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
-        in C:\Users\wenze\Documents\Unity\Eons\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
-
-'
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1707,23 +1766,23 @@ MonoBehaviour:
       uniqueId: Tests.dll/MoveActionTestSuite/[Tests][MoveActionTestSuite.MoveTileActionWhenLargeTest]
       name: MoveTileActionWhenLargeTest
       fullName: MoveActionTestSuite.MoveTileActionWhenLargeTest
-      resultStatus: 2
-      duration: 0.0115629
-      messages: "  Expected pop to be in range 5, 20 but pop is actually 5!\r\n 
-        Expected: True\r\n  But was:  False\r\n"
-      output: "Setting tile for culture rthqqn(-5868)(-5868) to tile 0, 0 (Tile)\r\nAdding
-        culture rthqqn(-5868) to tile 0, 0 (UnityEngine.Transform)\r\n\r\nrthqqn(-5868)\r\nSetup
-        Complete. Culture name is rthqqn(-5868)\r\nSplit rthqqn(-5910) from rthqqn(-5868)
-        on tile 0, 0 (Tile)\r\nmoving to 1, 0 (UnityEngine.GameObject)\r\nremoving
-        culture rthqqn(-5910) (-5910) from \r\nTried to remove from nonexistant tile!\r\nclearing\r\n"
-      stacktrace: 'at MoveActionTestSuite+<MoveTileActionWhenLargeTest>d__2.MoveNext
-        () [0x0006e] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\MoveActionTestSuite.cs:56
-
-        at
-        UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
-        in C:\Users\wenze\Documents\Unity\Eons\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
-
-'
+      resultStatus: 1
+      duration: 0.1233841
+      messages: 
+      output: "Setting tile for culture rthqqn(-561580)(-561580) to tile 0, 0 (Tile)\r\nAdding
+        culture rthqqn(-561580) to tile CultureHolder (UnityEngine.Transform)\r\n\r\nrthqqn(-561580)\r\nSetup
+        Complete. Culture name is rthqqn(-561580)\r\nAdding FoodUpdate(-338400614),
+        Creator: MoveTileAction, Target: rthqqn(-561580), Value:-21\r\nSplit rthqqn(-561636)
+        from rthqqn(-561580) on tile 0, 0 (Tile)\r\nmoving to 1, 0 (UnityEngine.GameObject)\r\nAdding
+        StateUpdate(1730801442), Creator: MoveTileAction, Target: rthqqn(-561636),
+        Value:Moving\r\nAdding StateUpdate(321378610), Creator: MoveTileAction, Target:
+        rthqqn(-561580), Value:Default\r\nremoving culture rthqqn(-561636) (-561636)
+        from \r\nTried to remove from nonexistant tile!\r\nAdding StateUpdate(460635800),
+        Creator: MoveTileAction, Target: rthqqn(-561636), Value:NewOnTile\r\nAdding
+        TileUpdate(932284060), Creator: MoveTileAction, Target: rthqqn(-561636),
+        Value:1, 0 (Tile)\r\nSetting tile for culture rthqqn(-561636)(-561636) to
+        tile 1, 0 (Tile)\r\nclearing\r\n"
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1737,41 +1796,48 @@ MonoBehaviour:
       name: RepelledActionTest
       fullName: MoveActionTestSuite.RepelledActionTest
       resultStatus: 1
-      duration: 0.1124254
+      duration: 0.1219088
       messages: 
-      output: 'Setting tile for culture rthqqn(-6072)(-6072) to tile 0, 0 (Tile)
+      output: 'Setting tile for culture rthqqn(-561836)(-561836) to tile 0, 0 (Tile)
 
         Adding
-        culture rthqqn(-6072) to tile 0, 0 (UnityEngine.Transform)
+        culture rthqqn(-561836) to tile CultureHolder (UnityEngine.Transform)
 
         
 
-        rthqqn(-6072)
+        rthqqn(-561836)
 
         Setup
-        Complete. Culture name is rthqqn(-6072)
+        Complete. Culture name is rthqqn(-561836)
 
-        moving to 1, 0 (UnityEngine.GameObject)
+        Adding FoodUpdate(1470627846),
+        Creator: RepelledAction, Target: rthqqn(-561836), Value:-1
+
+        moving
+        to 1, 0 (UnityEngine.GameObject)
+
+        Adding StateUpdate(-1544405312),
+        Creator: RepelledAction, Target: rthqqn(-561836), Value:Moving
 
         removing
-        culture rthqqn(-6072) (-6072) from 0, 0 (Tile)
+        culture rthqqn(-561836) (-561836) from 0, 0 (Tile)
 
         Removing culture
-        rthqqn(-6072) from tile 0, 0 (UnityEngine.Transform)
+        rthqqn(-561836) from tile CultureHolder (UnityEngine.Transform)
 
-        rthqqn(-6072)
+        rthqqn(-561836)
 
         
-
-        Setting
-        tile for culture rthqqn(-6072)(-6072) to tile 1, 0 (Tile)
 
         Adding
-        culture rthqqn(-6072) to tile 1, 0 (UnityEngine.Transform)
+        StateUpdate(2133034028), Creator: RepelledAction, Target: rthqqn(-561836),
+        Value:NewOnTile
 
-        
+        Adding TileUpdate(-360135448), Creator: RepelledAction,
+        Target: rthqqn(-561836), Value:1, 0 (Tile)
 
-        rthqqn(-6072)
+        Setting tile for culture
+        rthqqn(-561836)(-561836) to tile 1, 0 (Tile)
 
         clearing
 
@@ -1789,9 +1855,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][OverpopulationActionTestSuite][suite]
       name: OverpopulationActionTestSuite
       fullName: OverpopulationActionTestSuite
-      resultStatus: 2
-      duration: 0.0162345
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.0285114
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1805,29 +1871,38 @@ MonoBehaviour:
       uniqueId: Tests.dll/OverpopulationActionTestSuite/[Tests][OverpopulationActionTestSuite.CanBecomeOverPopulated]
       name: CanBecomeOverPopulated
       fullName: OverpopulationActionTestSuite.CanBecomeOverPopulated
-      resultStatus: 2
-      duration: 0.005667
-      messages: "  Culture not in overpopulated state!\r\n  Expected: Overpopulated\r\n 
-        But was:  SeekingFood\r\n"
-      output: 'Setting tile for culture rthqqn(-6222)(-6222) to tile 0, 0 (Tile)
+      resultStatus: 1
+      duration: 0.0109167
+      messages: 
+      output: 'Setting tile for culture rthqqn(-562010)(-562010) to tile 0, 0 (Tile)
 
         Adding
-        culture rthqqn(-6222) to tile 0, 0 (UnityEngine.Transform)
+        culture rthqqn(-562010) to tile CultureHolder (UnityEngine.Transform)
 
         
 
-        rthqqn(-6222)
+        rthqqn(-562010)
 
         Setup
-        Complete. Culture name is rthqqn(-6222)
+        Complete. Culture name is rthqqn(-562010)
+
+        Adding FoodUpdate(-1815122602),
+        Creator: DefaultAction, Target: rthqqn(-562010), Value:-101
+
+        Adding
+        FoodUpdate(1332542868), Creator: GatherFoodAction, Target: rthqqn(-562010),
+        Value:-101
+
+        Adding StateUpdate(810679186), Creator: DefaultAction,
+        Target: rthqqn(-562010), Value:Overpopulated
+
+        Adding PopulationUpdate(-1147286848),
+        Creator: DefaultAction, Target: rthqqn(-562010), Value:0
 
         clearing
 
 '
-      stacktrace: 'at OverpopulationActionTestSuite.CanBecomeOverPopulated () [0x0002d]
-        in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\OverpopulationActionTestSuite.cs:24
-
-'
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1841,19 +1916,26 @@ MonoBehaviour:
       name: TestPopulationDrop
       fullName: OverpopulationActionTestSuite.TestPopulationDrop
       resultStatus: 1
-      duration: 0.0078039
+      duration: 0.0128507
       messages: 
-      output: 'Setting tile for culture rthqqn(-6372)(-6372) to tile 0, 0 (Tile)
+      output: 'Setting tile for culture rthqqn(-562198)(-562198) to tile 0, 0 (Tile)
 
         Adding
-        culture rthqqn(-6372) to tile 0, 0 (UnityEngine.Transform)
+        culture rthqqn(-562198) to tile CultureHolder (UnityEngine.Transform)
 
         
 
-        rthqqn(-6372)
+        rthqqn(-562198)
 
         Setup
-        Complete. Culture name is rthqqn(-6372)
+        Complete. Culture name is rthqqn(-562198)
+
+        Adding FoodUpdate(-1326743566),
+        Creator: OverpopulationAction, Target: rthqqn(-562198), Value:-101
+
+        Adding
+        PopulationUpdate(1010257696), Creator: OverpopulationAction, Target: rthqqn(-562198),
+        Value:-1
 
         clearing
 
@@ -1872,7 +1954,7 @@ MonoBehaviour:
       name: PerlinHeightmapGeneratorTestSuite
       fullName: PerlinHeightmapGeneratorTestSuite
       resultStatus: 1
-      duration: 0.0040396
+      duration: 0.0075663
       messages: 
       output: 
       stacktrace: 
@@ -1888,7 +1970,7 @@ MonoBehaviour:
       name: CanAssignExpectedValues
       fullName: PerlinHeightmapGeneratorTestSuite.CanAssignExpectedValues
       resultStatus: 1
-      duration: 0.0014387
+      duration: 0.0020194
       messages: 
       output: 
       stacktrace: 
@@ -1904,9 +1986,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][PopulationChangeIndicatorTestSuite][suite]
       name: PopulationChangeIndicatorTestSuite
       fullName: PopulationChangeIndicatorTestSuite
-      resultStatus: 2
-      duration: 0.0105461
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.0175932
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1920,33 +2002,25 @@ MonoBehaviour:
       uniqueId: Tests.dll/PopulationChangeIndicatorTestSuite/[Tests][PopulationChangeIndicatorTestSuite.CanGenerateIndicator]
       name: CanGenerateIndicator
       fullName: PopulationChangeIndicatorTestSuite.CanGenerateIndicator
-      resultStatus: 2
-      duration: 0.0082393
-      messages: "  Population Indicator was not generated!\r\n  Expected: 1\r\n 
-        But was:  0\r\n"
-      output: 'Setting tile for culture rthqqn(-6538)(-6538) to tile 0, 0 (Tile)
+      resultStatus: 1
+      duration: 0.0137654
+      messages: 
+      output: 'Setting tile for culture rthqqn(-562416)(-562416) to tile 0, 0 (Tile)
 
         Adding
-        culture rthqqn(-6538) to tile 0, 0 (UnityEngine.Transform)
+        culture rthqqn(-562416) to tile CultureHolder (UnityEngine.Transform)
 
         
 
-        rthqqn(-6538)
+        rthqqn(-562416)
 
         Setup
-        Complete. Culture name is rthqqn(-6538)
+        Complete. Culture name is rthqqn(-562416)
 
         clearing
 
 '
-      stacktrace: 'at PopulationChangeIndicatorTestSuite+<CanGenerateIndicator>d__2.MoveNext
-        () [0x00041] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\PopulationChangeIndicatorTestSuite.cs:26
-
-        at
-        UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
-        in C:\Users\wenze\Documents\Unity\Eons\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
-
-'
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1960,7 +2034,7 @@ MonoBehaviour:
       name: PopulationPipMakerTestSuite
       fullName: PopulationPipMakerTestSuite
       resultStatus: 1
-      duration: 0.0234073
+      duration: 0.0377004
       messages: 
       output: 
       stacktrace: 
@@ -1976,30 +2050,30 @@ MonoBehaviour:
       name: CanAddPip
       fullName: PopulationPipMakerTestSuite.CanAddPip
       resultStatus: 1
-      duration: 0.0082557
+      duration: 0.0146353
       messages: 
-      output: 'Setting tile for culture rthqqn(-6688)(-6688) to tile 0, 0 (Tile)
+      output: 'Setting tile for culture rthqqn(-562604)(-562604) to tile 0, 0 (Tile)
 
         Adding
-        culture rthqqn(-6688) to tile 0, 0 (UnityEngine.Transform)
+        culture rthqqn(-562604) to tile CultureHolder (UnityEngine.Transform)
 
         
 
-        rthqqn(-6688)
+        rthqqn(-562604)
 
         Setup
-        Complete. Culture name is rthqqn(-6688)
+        Complete. Culture name is rthqqn(-562604)
 
         Setting tile for culture
-        qstsil(-6688)(-6688) to tile 0, 0 (Tile)
+        qstsil(-562604)(-562604) to tile 0, 0 (Tile)
 
-        Adding culture qstsil(-6688)
-        to tile 0, 0 (UnityEngine.Transform)
+        Adding culture qstsil(-562604)
+        to tile CultureHolder (UnityEngine.Transform)
 
-        qstsil(-6688)
+        qstsil(-562604)
 
-        qstsil(-6688),
-        qstsil(-6688)
+        qstsil(-562604),
+        qstsil(-562604)
 
         clearing
 
@@ -2018,30 +2092,30 @@ MonoBehaviour:
       name: CanRemovePip
       fullName: PopulationPipMakerTestSuite.CanRemovePip
       resultStatus: 1
-      duration: 0.0122144
+      duration: 0.017968
       messages: 
-      output: 'Setting tile for culture rthqqn(-6846)(-6846) to tile 0, 0 (Tile)
+      output: 'Setting tile for culture rthqqn(-562800)(-562800) to tile 0, 0 (Tile)
 
         Adding
-        culture rthqqn(-6846) to tile 0, 0 (UnityEngine.Transform)
+        culture rthqqn(-562800) to tile CultureHolder (UnityEngine.Transform)
 
         
 
-        rthqqn(-6846)
+        rthqqn(-562800)
 
         Setup
-        Complete. Culture name is rthqqn(-6846)
+        Complete. Culture name is rthqqn(-562800)
 
         Setting tile for culture
-        qstsil(-6846)(-6846) to tile 0, 0 (Tile)
+        qstsil(-562800)(-562800) to tile 0, 0 (Tile)
 
-        Adding culture qstsil(-6846)
-        to tile 0, 0 (UnityEngine.Transform)
+        Adding culture qstsil(-562800)
+        to tile CultureHolder (UnityEngine.Transform)
 
-        qstsil(-6846)
+        qstsil(-562800)
 
-        qstsil(-6846),
-        qstsil(-6846)
+        qstsil(-562800),
+        qstsil(-562800)
 
         clearing
 
@@ -2060,7 +2134,7 @@ MonoBehaviour:
       name: TileFoodTestSuite
       fullName: TileFoodTestSuite
       resultStatus: 1
-      duration: 0.0429829
+      duration: 0.0728886
       messages: 
       output: 
       stacktrace: 
@@ -2076,7 +2150,7 @@ MonoBehaviour:
       name: CanCalculateProperFoodRateDesert
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateDesert
       resultStatus: 1
-      duration: 0.0043042
+      duration: 0.0060239
       messages: 
       output: 'clearing
 
@@ -2095,7 +2169,7 @@ MonoBehaviour:
       name: CanCalculateProperFoodRateRainforest
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateRainforest
       resultStatus: 1
-      duration: 0.0054973
+      duration: 0.0076742
       messages: 
       output: 'clearing
 
@@ -2114,7 +2188,7 @@ MonoBehaviour:
       name: CanCalculateProperFoodRateTundra
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateTundra
       resultStatus: 1
-      duration: 0.0044429
+      duration: 0.0079287
       messages: 
       output: 'clearing
 
@@ -2133,7 +2207,7 @@ MonoBehaviour:
       name: CanIncreaseFoodPerTick
       fullName: TileFoodTestSuite.CanIncreaseFoodPerTick
       resultStatus: 1
-      duration: 0.0075378
+      duration: 0.0188342
       messages: 
       output: 'clearing
 
@@ -2152,7 +2226,7 @@ MonoBehaviour:
       name: CanPreventAdditionalFood
       fullName: TileFoodTestSuite.CanPreventAdditionalFood
       resultStatus: 1
-      duration: 0.0070988
+      duration: 0.0127512
       messages: 
       output: 'clearing
 
@@ -2171,7 +2245,7 @@ MonoBehaviour:
       name: CanSetFoodToMaxAtStart
       fullName: TileFoodTestSuite.CanSetFoodToMaxAtStart
       resultStatus: 1
-      duration: 0.0102535
+      duration: 0.0128409
       messages: 
       output: 'clearing
 
@@ -2190,7 +2264,7 @@ MonoBehaviour:
       name: TileGreyscaleOverlayLinkTestSuite
       fullName: TileGreyscaleOverlayLinkTestSuite
       resultStatus: 1
-      duration: 0.004059
+      duration: 0.006304
       messages: 
       output: 
       stacktrace: 
@@ -2206,7 +2280,7 @@ MonoBehaviour:
       name: CanSetToGreyIfLow
       fullName: TileGreyscaleOverlayLinkTestSuite.CanSetToGreyIfLow
       resultStatus: 1
-      duration: 0.0016516
+      duration: 0.0018517
       messages: 
       output: 'clearing
 
@@ -2224,9 +2298,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][TurnTestSuite][suite]
       name: TurnTestSuite
       fullName: TurnTestSuite
-      resultStatus: 2
-      duration: 0.003552
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.0086479
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -2237,17 +2311,14 @@ MonoBehaviour:
       parentId: 1075
       parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
     - id: 1074
-      uniqueId: Tests.dll/TurnTestSuite/[Tests][TurnTestSuite.CanChangeCultureAfterUpdated]
-      name: CanChangeCultureAfterUpdated
-      fullName: TurnTestSuite.CanChangeCultureAfterUpdated
-      resultStatus: 2
-      duration: 0.0002738
-      messages: "  Expected: True\r\n  But was:  False\r\n"
+      uniqueId: Tests.dll/TurnTestSuite/[Tests][TurnTestSuite.CanChangeTurnAfterUpdated]
+      name: CanChangeTurnAfterUpdated
+      fullName: TurnTestSuite.CanChangeTurnAfterUpdated
+      resultStatus: 1
+      duration: 0.0004174
+      messages: 
       output: 
-      stacktrace: 'at TurnTestSuite.CanChangeCultureAfterUpdated () [0x00000] in
-        C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\TurnTestSuite.cs:30
-
-'
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -2260,13 +2331,20 @@ MonoBehaviour:
       uniqueId: Tests.dll/TurnTestSuite/[Tests][TurnTestSuite.CanGetPendingUpdatesFor]
       name: CanGetPendingUpdatesFor
       fullName: TurnTestSuite.CanGetPendingUpdatesFor
-      resultStatus: 2
-      duration: 0.000211
-      messages: "  Expected: True\r\n  But was:  False\r\n"
-      output: 
-      stacktrace: 'at TurnTestSuite.CanGetPendingUpdatesFor () [0x00000] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\TurnTestSuite.cs:18
+      resultStatus: 1
+      duration: 0.0015982
+      messages: 
+      output: 'Adding MockTurnUpdate(1044698930), Creator: , Target: culture(-563754),
+        Value:0
+
+        Adding MockTurnUpdate(-1631318280), Creator: , Target:
+        culture(-563746), Value:0
+
+        Adding MockTurnUpdate(1058038690), Creator:
+        , Target: culture(-563746), Value:0
 
 '
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -2279,13 +2357,14 @@ MonoBehaviour:
       uniqueId: Tests.dll/TurnTestSuite/[Tests][TurnTestSuite.CanUpdateAllCultures]
       name: CanUpdateAllCultures
       fullName: TurnTestSuite.CanUpdateAllCultures
-      resultStatus: 2
-      duration: 0.0001645
-      messages: "  Expected: True\r\n  But was:  False\r\n"
-      output: 
-      stacktrace: 'at TurnTestSuite.CanUpdateAllCultures () [0x00000] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\TurnTestSuite.cs:24
+      resultStatus: 1
+      duration: 0.0006529
+      messages: 
+      output: 'Adding PopulationUpdate(-488690648), Creator: , Target: culture(-563766),
+        Value:1
 
 '
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -2298,13 +2377,14 @@ MonoBehaviour:
       uniqueId: Tests.dll/TurnTestSuite/[Tests][TurnTestSuite.TestAddUpdate]
       name: TestAddUpdate
       fullName: TurnTestSuite.TestAddUpdate
-      resultStatus: 2
-      duration: 0.0001586
-      messages: "  Expected: True\r\n  But was:  False\r\n"
-      output: 
-      stacktrace: 'at TurnTestSuite.TestAddUpdate () [0x00000] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\TurnTestSuite.cs:11
+      resultStatus: 1
+      duration: 0.0007942
+      messages: 
+      output: 'Adding MockTurnUpdate(186362562), Creator: , Target: culture(-563780),
+        Value:0
 
 '
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -2313,18 +2393,28 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1070
       parentUniqueId: Tests.dll/[Tests][TurnTestSuite][suite]
-    m_ResultText: 'CultureFoodStoreTestSuite (0.084s)
+    m_ResultText: "CanDisplayAccurateFoodCount (0.022s)\n---\nIndicator is not displaying
+      the correct food!\r\n  Expected: 26.7010002f\r\n  But was:  0.0f\n---\nat FoodAmountIndicatorTestSuite+<CanDisplayAccurateFoodCount>d__3.MoveNext
+      () [0x00063] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\FoodAmountIndicatorTestSuite.cs:35\r\nat
+      UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in
+      C:\\Users\\wenze\\Documents\\Unity\\Eons\\Library\\PackageCache\\com.unity.test-framework@1.1.31\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:46\n---\nSetting
+      tile for culture rthqqn(-559594)(-559594) to tile 0, 0 (Tile)\r\nAdding culture
+      rthqqn(-559594) to tile CultureHolder (UnityEngine.Transform)\r\n\r\nrthqqn(-559594)\r\nSetup
+      Complete. Culture name is rthqqn(-559594)\r\nAmount is 0\r\nAmount is 0\r\nAmount
+      is 0\r\nclearing"
+    m_ResultStacktrace: 'at FoodAmountIndicatorTestSuite+<CanDisplayAccurateFoodCount>d__3.MoveNext
+      () [0x00063] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\FoodAmountIndicatorTestSuite.cs:35
 
-      ---
+      at
+      UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0004e] in
+      C:\Users\wenze\Documents\Unity\Eons\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
 
-      One or more
-      child tests had errors'
-    m_ResultStacktrace: 
+'
     m_TestListState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c6ec6ba1
-      m_LastClickedID: -1586762554
-      m_ExpandedIDs: bbb6ef82c6ec6ba1c2778cab18e194b54580feccaf90fae781f0ffed5fdcc4f86eca7a08ad6ec22103fe443357683e3426ecfc371a04ba42b71a1147eb084855a0eedc6effffff7f
+      scrollPos: {x: 0, y: 300}
+      m_SelectedIDs: 694d938a
+      m_LastClickedID: -1970057879
+      m_ExpandedIDs: bbb6ef82c6ec6ba11cb03da8c2778cab18e194b54580feccaf90fae781f0ffed5fdcc4f86eca7a08b26d2713ad6ec22132b4d12703fe443357683e3426ecfc371a04ba42b71a1147c10a124feb084855a0eedc6e7c3b3c71ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2422,10 +2512,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 721.3334
+    x: 722
     y: 72.66667
-    width: 1137.3333
-    height: 772.3333
+    width: 1136.6666
+    height: 768.3333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2479,7 +2569,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 25.333334}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -2627,9 +2717,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 28.460833, y: 25.377705, z: -0.41903386}
+    m_Target: {x: 27.02126, y: 27.405071, z: -0.43682557}
     speed: 2
-    m_Value: {x: 28.460833, y: 25.377705, z: -0.41903386}
+    m_Value: {x: 27.02126, y: 27.405071, z: -0.43682557}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -2680,9 +2770,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 3.8280492
+    m_Target: 4.2783065
     speed: 2
-    m_Value: 3.8280492
+    m_Value: 4.2783065
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -2727,10 +2817,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 721.3334
+    x: 722
     y: 72.66667
-    width: 1137.3333
-    height: 772.3333
+    width: 1136.6666
+    height: 768.3333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2777,10 +2867,10 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1137.3333
-      height: 751.3333
-    m_Scale: {x: 0.8885416, y: 0.8885416}
-    m_Translation: {x: 568.6666, y: 375.66666}
+      width: 1136.6666
+      height: 747.3333
+    m_Scale: {x: 0.8880208, y: 0.8880208}
+    m_Translation: {x: 568.3333, y: 373.66666}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -2788,12 +2878,12 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -640
-      y: -422.7902
+      y: -420.78592
       width: 1280
-      height: 845.5804
+      height: 841.57184
     m_MinimalGUI: 1
-  m_defaultScale: 0.8885416
-  m_LastWindowPixelSize: {x: 1705.9999, y: 1158.5}
+  m_defaultScale: 0.8880208
+  m_LastWindowPixelSize: {x: 1705, y: 1152.5}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -2820,9 +2910,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 866
+    y: 862
     width: 1859.6666
-    height: 485.00006
+    height: 489.00006
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2840,22 +2930,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Scripts/CultureScripts/Actions
+    - Assets/Resources/Scripts/Map/Tiles
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Scripts/CultureScripts/Actions
+  - Assets/Resources/Scripts/Map/Tiles
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\wenze\Documents\Unity\Eons
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 585d0000
-    m_LastClickedID: 23896
-    m_ExpandedIDs: 000000001e600000206000002260000024600000
+    scrollPos: {x: 0, y: 266.99994}
+    m_SelectedIDs: c6660000
+    m_LastClickedID: 26310
+    m_ExpandedIDs: 0000000026600000286000002a6000002c6000006a620000a264000054660000b66600001668000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2883,7 +2973,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001e600000206000002260000024600000
+    m_ExpandedIDs: 0000000026600000286000002a6000002c600000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2908,9 +2998,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 0c65f7ff
+    m_LastClickedInstanceID: -563956
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300009e5f0000946c0000ca590000e65b0000a8700000345d00003e5a000080720000565a0000e693ffffc47100004484000038840000b45c0000cc5c000000000000d45b00007c5d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -2927,7 +3017,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -2960,9 +3050,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 866
+    y: 862
     width: 1859.6666
-    height: 485.00006
+    height: 489.00006
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2988,16 +3078,16 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 826.6667
-    width: 2111.6667
-    height: 524.3334
+    y: 866
+    width: 1859.6666
+    height: 485.00006
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -1276
+  m_LastSelectedObjectID: -563956
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
