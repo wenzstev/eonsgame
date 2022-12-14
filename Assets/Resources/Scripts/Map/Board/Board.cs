@@ -5,6 +5,7 @@ using UnityEngine;
 public class Board : MonoBehaviour
 {
     public BoardTileRelationship boardTileRelationship;
+    public BoardEdges BoardEdges;
 
     public GameObject[,] Tiles
     {
@@ -89,7 +90,6 @@ public class Board : MonoBehaviour
     {
         return boardTileRelationship.GetTile(x, y);
     }
-
 }
 
 public class BoardTileRelationship
