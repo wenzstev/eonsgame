@@ -68,7 +68,9 @@ public class MergeWithTileAction : CultureAction
         Turn.AddUpdate(new ColorUpdate(this, remain, lerpedColor));
         Turn.AddUpdate(new PopulationUpdate(this, remain, merged.Population));
         Turn.AddUpdate(new PopulationUpdate(this, merged, -merged.Population));
-        Turn.AddUpdate(new StateUpdate(this, merged, Culture.State.PendingRemoval)); ;
+        Turn.AddUpdate(new StateUpdate(this, merged, Culture.State.PendingRemoval));
+
+        Turn.AddUpdate(new FullAffinityUpdate(this, remain, remain.GetComponent<AffinityManager>().GetStatMerge(merged.GetComponent<AffinityManager>(), percentThisPopulation)));
 
 
         return turn;

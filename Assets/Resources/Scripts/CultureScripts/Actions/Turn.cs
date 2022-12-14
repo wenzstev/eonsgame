@@ -162,3 +162,12 @@ public class FoodUpdate : CultureUpdate<float>
         Target?.GetComponent<CultureFoodStore>().AlterFoodStore(GetCultureChange());
     }
 }
+
+public class FullAffinityUpdate : CultureUpdate<AffinityStats>
+{
+    public FullAffinityUpdate(CultureAction originator, Culture target, AffinityStats val) : base(originator, target, val) { }
+    public override void ExecuteChange()
+    {
+        Target?.GetComponent<AffinityManager>().SetStats(cultureChangeValue);
+    }
+}
