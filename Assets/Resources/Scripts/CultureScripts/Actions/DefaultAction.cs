@@ -59,6 +59,8 @@ public class DefaultAction : CultureAction
             influenceNeighbors.ExecuteTurn();
         }
 
+        Turn.AddUpdate(new ColorUpdate(this, Culture, Culture.mutateColor(Culture.Color)));
+
     }
 
     int GrowPopulation()

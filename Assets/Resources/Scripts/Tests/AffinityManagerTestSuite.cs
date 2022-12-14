@@ -6,7 +6,7 @@ using NUnit.Framework;
 using System.Linq;
 
 
-public class CultureAffinityTestSuite : BasicTest
+public class AffinityManagerTestSuite : BasicTest
 {
     GameObject TestAffinityObj;
     AffinityManager TestAffinityManager;
@@ -46,7 +46,23 @@ public class CultureAffinityTestSuite : BasicTest
         Assert.AreEqual(TestUtils.ThreeDecimals(7.018f), TestUtils.ThreeDecimals(TestAffinityManager.GetAffinity(TileDrawer.BiomeType.Grassland)), "Affinity did not decay at expected rate!");
     }
 
- 
+    [Test]
+    public void CanGetClonedAffinityManager()
+    {
+        HarvestForDays(30, TileDrawer.BiomeType.Grassland);
+        HarvestForDays(1, TileDrawer.BiomeType.Savannah);
+        HarvestForDays(7, TileDrawer.BiomeType.Grassland);
+
+        AffinityStats newStats = TestAffinityManager.GetStatCopy();
+        foreach (TileDrawer.BiomeType biome in Enum.GetValues(typeof(TileDrawer.BiomeType)))
+        {
+            Debug.Log($"Testing {biome}");
+            Assert.AreEqual(TestAffinityManager.AffinityStats.GetAffinity(biome), newStats.GetAffinity(biome), $"{biome} does not have expected affinity!");
+            Assert.AreEqual(TestAffinityManager.AffinityStats.GetNumDaysHarvested(biome), newStats.GetNumDaysHarvested(biome), $"{biome} does not have expected days harvested!");
+            Assert.AreEqual(TestAffinityManager.AffinityStats.GetDecayRate(biome), newStats.GetDecayRate(biome), $"{biome} does not have expected decay rate!");
+        }
+    }
+
 
     void HarvestForDays(int numDays, TileDrawer.BiomeType biome)
     {
