@@ -1,8 +1,16 @@
 using UnityEngine;
+using System;
+
+[Serializable]
 public class PowerCurve : ICurve
 {
-    public float Steepness { get; private set; }
-    public float XOffset { get; private set; }
+    [SerializeField]
+    float _steepness;
+
+    [SerializeField]
+    float _xOffset;
+    public float Steepness { get { return _steepness; } }
+    public float XOffset { get { return _xOffset; } }
 
     public float InitialValue = 1;
     public float PowerMultiplier = 1;
@@ -10,8 +18,8 @@ public class PowerCurve : ICurve
     public PowerCurve(float steepness, float xOffset, float initialValue, float powerMultiplier)
     {
         if(steepness < 0) Debug.LogError("Cannot create curve of negative exponent raised to a power! Consider making the InitialValue negative instead.");
-        Steepness = steepness;
-        XOffset = xOffset;
+        _steepness = steepness;
+        _xOffset = xOffset;
         InitialValue = initialValue;
         PowerMultiplier = powerMultiplier;
     }
