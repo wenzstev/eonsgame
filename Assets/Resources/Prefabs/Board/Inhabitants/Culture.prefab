@@ -194,13 +194,13 @@ MonoBehaviour:
   population: 0
   spreadChance: 0.000416
   shareCultureChance: 0.05
-  baseMutationMax: 0.0023
-  sameCultureCutoff: 0.0193
+  baseMutationMax: 0.008
+  sameCultureCutoff: 0.0402
   FertilityRate: 0.000416
   maxPopTransfer: 20
   minPopTransfer: 5
   influenceRate: 0.05
-  FoodGatherRate: 0.00001
+  FoodGatherRate: 0.00005
   AffinityGainRate: 0.01
   currentState: 0
 --- !u!114 &1772662126385334965
@@ -275,6 +275,119 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9cb92b94a7b987458bb80f6cffdc6d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _currentBiome: 0
+  affinityStats:
+    affinities:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    decayRates:
+    - _daysSinceHarvested: 0
+      _currentDecayRate: 0
+      _forgettingCurve:
+        _steepness: 0
+        _xOffset: 0
+        InitialValue: 0
+        PowerMultiplier: 0
+      _totalDaysHarvested: 0
+    - _daysSinceHarvested: 0
+      _currentDecayRate: 0
+      _forgettingCurve:
+        _steepness: 0
+        _xOffset: 0
+        InitialValue: 0
+        PowerMultiplier: 0
+      _totalDaysHarvested: 0
+    - _daysSinceHarvested: 0
+      _currentDecayRate: 0
+      _forgettingCurve:
+        _steepness: 0
+        _xOffset: 0
+        InitialValue: 0
+        PowerMultiplier: 0
+      _totalDaysHarvested: 0
+    - _daysSinceHarvested: 0
+      _currentDecayRate: 0
+      _forgettingCurve:
+        _steepness: 0
+        _xOffset: 0
+        InitialValue: 0
+        PowerMultiplier: 0
+      _totalDaysHarvested: 0
+    - _daysSinceHarvested: 0
+      _currentDecayRate: 0
+      _forgettingCurve:
+        _steepness: 0
+        _xOffset: 0
+        InitialValue: 0
+        PowerMultiplier: 0
+      _totalDaysHarvested: 0
+    - _daysSinceHarvested: 0
+      _currentDecayRate: 0
+      _forgettingCurve:
+        _steepness: 0
+        _xOffset: 0
+        InitialValue: 0
+        PowerMultiplier: 0
+      _totalDaysHarvested: 0
+    - _daysSinceHarvested: 0
+      _currentDecayRate: 0
+      _forgettingCurve:
+        _steepness: 0
+        _xOffset: 0
+        InitialValue: 0
+        PowerMultiplier: 0
+      _totalDaysHarvested: 0
+    - _daysSinceHarvested: 0
+      _currentDecayRate: 0
+      _forgettingCurve:
+        _steepness: 0
+        _xOffset: 0
+        InitialValue: 0
+        PowerMultiplier: 0
+      _totalDaysHarvested: 0
+    - _daysSinceHarvested: 0
+      _currentDecayRate: 0
+      _forgettingCurve:
+        _steepness: 0
+        _xOffset: 0
+        InitialValue: 0
+        PowerMultiplier: 0
+      _totalDaysHarvested: 0
+    - _daysSinceHarvested: 0
+      _currentDecayRate: 0
+      _forgettingCurve:
+        _steepness: 0
+        _xOffset: 0
+        InitialValue: 0
+        PowerMultiplier: 0
+      _totalDaysHarvested: 0
+    - _daysSinceHarvested: 0
+      _currentDecayRate: 0
+      _forgettingCurve:
+        _steepness: 0
+        _xOffset: 0
+        InitialValue: 0
+        PowerMultiplier: 0
+      _totalDaysHarvested: 0
+    - _daysSinceHarvested: 0
+      _currentDecayRate: 0
+      _forgettingCurve:
+        _steepness: 0
+        _xOffset: 0
+        InitialValue: 0
+        PowerMultiplier: 0
+      _totalDaysHarvested: 0
+    daysHarvested: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   Asymptote: -1
   XDisplacement: 2
   GrowthRate: 0.5
@@ -326,7 +439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FoodAmountIndicatorTemplate: {fileID: 7818443324861133336, guid: 6c4f43eb58d335940bc1f71bd6349ecd, type: 3}
   FoodStore: {fileID: -5036476844479646280}
-  TicksBetweenIndicators: 7
+  TicksBetweenIndicators: 60
 --- !u!114 &7029493985671350848
 MonoBehaviour:
   m_ObjectHideFlags: 0

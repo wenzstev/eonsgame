@@ -53,6 +53,7 @@ public class Culture : MonoBehaviour
         }
     }
 
+
     DecisionMaker decisionMaker;
     public DecisionMaker DecisionMaker { get { return decisionMaker; } }
 
@@ -147,15 +148,19 @@ public class Culture : MonoBehaviour
         EventManager.TriggerEvent("CultureCreated", new Dictionary<string, object> { { "culture", this } });
     }
 
-    public void InitFromParent(Tile t, Color parent, int pop, string n)
+    public void InitFromParent(Culture parent, int newPop)
     {
         currentState = State.Default;
-        population = pop;
-        name = n;
+        population = newPop;
+        name = parent.Name;
         gameObject.name = name;
-        transform.SetParent(t.gameObject.transform);
-        SetColor(parent);
-        GetComponent<AffinityManager>().Initialize();
+        //transform.SetParent(t.gameObject.transform);
+        SetColor(parent.Color);
+        AffinityManager affinityManager = GetComponent<AffinityManager>();
+        affinityManager.Initialize();
+        affinityManager.SetStats(parent.GetComponent<AffinityManager>().GetStatCopy());
+
+
         EventManager.TriggerEvent("CultureCreated", new Dictionary<string, object> { { "culture", this } });
 
     }
@@ -188,7 +193,7 @@ public class Culture : MonoBehaviour
         GameObject newCultureObj = Instantiate(CultureTemplate, transform.position, Quaternion.identity);
         Culture newCulture = newCultureObj.GetComponent<Culture>();
         int numInNewCulture = UnityEngine.Random.Range(minPopTransfer, maxPopTransfer);
-        newCulture.InitFromParent(Tile, color, numInNewCulture, name);
+        newCulture.InitFromParent(this, numInNewCulture);
         AddPopulation(-numInNewCulture);
         newCulture.CultureMemory.previousTile = Tile;
        // Debug.Log($"Split {newCulture} from {this} on tile {this.Tile}");
