@@ -5,7 +5,8 @@ using UnityEngine;
 public class Board : MonoBehaviour
 {
     public BoardTileRelationship boardTileRelationship;
-    public BoardEdges BoardEdges;
+
+
 
     public GameObject[,] Tiles
     {
@@ -18,13 +19,13 @@ public class Board : MonoBehaviour
     public int Width { 
         get
         {
-            return boardStats.width;
+            return boardStats.Width;
         }
     }
     public int Height { 
         get
         {
-            return boardStats.height;
+            return boardStats.Height;
         }
     }
 
@@ -35,10 +36,7 @@ public class Board : MonoBehaviour
     private void Awake()
     {
         boardStats = GetComponent<BoardStats>();
-        if(DEBUG_TEST_GEN)
-        {
-            CreateBoard();
-        }
+        if(DEBUG_TEST_GEN) CreateBoard();
     }
 
 
@@ -54,11 +52,8 @@ public class Board : MonoBehaviour
         boardTileRelationship = GetComponent<BoardInputReader>().GenerateBoard();
     }
 
-    public void CreateBoardFromValues(int[,] values, int w, int h)
+    public void CreateBoardFromValues(int[,] values)
     {
-        boardStats.width = w;
-        boardStats.height = h;
-
         boardTileRelationship = GetComponent<BoardInputReader>().GetBoardFromInput(values);
     }
 

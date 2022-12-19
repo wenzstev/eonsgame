@@ -51,8 +51,7 @@ public class MapPreviewGenerator : MonoBehaviour
         // imperfect but needed to not break everything at the moment. would like to overhaul preview system entirely
         GameObject instantiatedBoard = Instantiate(boardObj);
         BoardStats boardStats = instantiatedBoard.GetComponent<BoardStats>();
-        boardStats.height = y;
-        boardStats.width = x;
+        boardStats.SetDimensions(x, y);
         boardStats.tileTypes = new GameObject[biomeTypes.Length];
 
         //values = bg.CreateBoard(boardStats);
