@@ -24,9 +24,8 @@ public class BasicBoardTest : BasicTest
         TestBoard.GetComponent<BoardInputReader>().bg = TestBoardGenObj.GetComponent<ImprovedBoardGen>();
 
         BoardStats TestBoardStats = TestBoard.GetComponent<BoardStats>();
+        TestBoardStats.SetDimensions(2, 1);
 
-        TestBoardStats.height = 1;
-        TestBoardStats.width = 2;
         TestBoardStats.LandRisePoint = 0;
 
         TestBoard.CreateBoard();

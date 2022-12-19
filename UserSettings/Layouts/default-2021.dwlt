@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1349.3334
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 88
+  controlID: 25
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 89
+  controlID: 112
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,11 +165,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1861.3334
-    height: 777.3333
+    height: 765.3333
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 90
+  controlID: 113
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -180,23 +180,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneHierarchyWindow
+  m_Name: TestRunnerWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 378.66666
-    height: 777.3333
-  m_MinSize: {x: 200, y: 200}
+    width: 590.6667
+    height: 765.3333
+  m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 12}
   - {fileID: 13}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -212,10 +212,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 378.66666
+    x: 590.6667
     y: 0
-    width: 1482.6667
-    height: 777.3333
+    width: 1270.6667
+    height: 765.3333
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
@@ -234,25 +234,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 777.3333
+    y: 765.3333
     width: 1861.3334
-    height: 522.00006
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 16}
+    height: 534.00006
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
   - {fileID: 18}
   - {fileID: 19}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -272,8 +272,8 @@ MonoBehaviour:
     y: 0
     width: 698.6666
     height: 1299.3334
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -301,8 +301,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 72.66667
-    width: 377.66666
-    height: 756.3333
+    width: 589.6667
+    height: 744.3333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -310,9 +310,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: ea5a0000
-      m_LastClickedID: 23274
-      m_ExpandedIDs: b6f3f6ff805af7ff6638faff7438faff32fbffff38fbffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 82dfffffcadfffff2ee1ffff7ce4ffffc4e4ffff28e6ffff32e7ffff7ae7ffffdee8ffff9aeaffffe2eaffff46ecffff1ceeffff64eeffffc8efffff40f2ffff88f2ffffecf3ffff84f5ffffccf5ffff42f7ffff38fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -358,19 +358,19 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 72.66667
-    width: 721.6667
-    height: 767.6667
+    width: 589.6667
+    height: 744.3333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 375
+    ID: 119
     splitterInitialOffset: 328
     currentActiveSplitter: -1
     realSizes:
-    - 377.33334
-    - 319.33334
+    - 365.33334
+    - 308.66666
     relativeSizes:
     - 0.54158
     - 0.45841998
@@ -380,7 +380,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 696.6667
+    lastTotalSize: 674
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -397,7 +397,7 @@ MonoBehaviour:
       name: My project
       fullName: My project
       resultStatus: 1
-      duration: 0.1910191
+      duration: 0.1776826
       messages: 
       output: 
       stacktrace: 
@@ -413,7 +413,7 @@ MonoBehaviour:
       name: Tests.dll
       fullName: C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll
       resultStatus: 1
-      duration: 0.0539403
+      duration: 0.0312694
       messages: 
       output: 
       stacktrace: 
@@ -429,7 +429,7 @@ MonoBehaviour:
       name: AffinityManagerTestSuite
       fullName: AffinityManagerTestSuite
       resultStatus: 1
-      duration: 0.0997804
+      duration: 0.0872358
       messages: 
       output: 
       stacktrace: 
@@ -445,14 +445,18 @@ MonoBehaviour:
       name: CanDecayAffinityOnBiome
       fullName: AffinityManagerTestSuite.CanDecayAffinityOnBiome
       resultStatus: 1
-      duration: 0.0275177
+      duration: 0.0382978
       messages: 
-      output: "Setting decay rate for biome Grassland for culture: \r\nFinal affinity
-        for Grassland is 6.70962\r\nSetting decay rate for biome Savannah for culture:
-        \r\nFinal affinity for Savannah is 0.8646647\r\nSetting decay rate for biome
-        Grassland for culture: \r\nDays since harvested: 1\r\nSteepness: 2 XOffset:
-        0\r\nDecaying affinity by 0.9771599\r\nSteepness: 2 XOffset: 0\r\nFinal affinity
-        for Grassland is 7.017535\r\nclearing\r\n"
+      output: 'Final affinity for Grassland is 6.70962
+
+        Final affinity for
+        Savannah is 0.8646647
+
+        Final affinity for Grassland is 7.017535
+
+        clearing
+
+'
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -467,10 +471,13 @@ MonoBehaviour:
       name: CanGainAffinityOnBiome
       fullName: AffinityManagerTestSuite.CanGainAffinityOnBiome
       resultStatus: 1
-      duration: 0.0142395
+      duration: 0.0191235
       messages: 
-      output: "Setting decay rate for biome Grassland for culture: \r\nFinal affinity
-        for Grassland is 3.083034\r\nclearing\r\n"
+      output: 'Final affinity for Grassland is 3.083034
+
+        clearing
+
+'
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -485,49 +492,46 @@ MonoBehaviour:
       name: CanGetClonedAffinityManager
       fullName: AffinityManagerTestSuite.CanGetClonedAffinityManager
       resultStatus: 1
-      duration: 0.0428049
+      duration: 0.0140959
       messages: 
-      output: "Setting decay rate for biome Grassland for culture: \r\nFinal affinity
-        for Grassland is 6.70962\r\nSetting decay rate for biome Savannah for culture:
-        \r\nFinal affinity for Savannah is 0.8646647\r\nSetting decay rate for biome
-        Grassland for culture: \r\nDays since harvested: 1\r\nSteepness: 2 XOffset:
-        0\r\nDecaying affinity by 0.9771599\r\nSteepness: 2 XOffset: 0\r\nFinal affinity
-        for Grassland is 7.017535\r\nTesting Desert\r\nDays since harvested: 38\r\nSteepness:
-        2 XOffset: 0\r\nDecaying affinity by 0\r\nSteepness: 2 XOffset: 0\r\nDays
-        since harvested: 38\r\nSteepness: 2 XOffset: 0\r\nDecaying affinity by 0\r\nSteepness:
-        2 XOffset: 0\r\nTesting Savannah\r\nDays since harvested: 7\r\nSteepness:
-        2 XOffset: 0\r\nDecaying affinity by 0.0078125\r\nSteepness: 2 XOffset: 0\r\nDays
-        since harvested: 7\r\nSteepness: 2 XOffset: 0\r\nDecaying affinity by 0.0078125\r\nSteepness:
-        2 XOffset: 0\r\nTesting TropicalRainforest\r\nDays since harvested: 38\r\nSteepness:
-        2 XOffset: 0\r\nDecaying affinity by 0\r\nSteepness: 2 XOffset: 0\r\nDays
-        since harvested: 38\r\nSteepness: 2 XOffset: 0\r\nDecaying affinity by 0\r\nSteepness:
-        2 XOffset: 0\r\nTesting Grassland\r\nDays since harvested: 0\r\nIssue with
-        getting decay rate: Object reference not set to an instance of an object\r\nDays
-        since harvested: 0\r\nSteepness: 0 XOffset: 0\r\nDecaying affinity by 0\r\nSteepness:
-        0 XOffset: 0\r\nTesting Woodland\r\nDays since harvested: 38\r\nSteepness:
-        2 XOffset: 0\r\nDecaying affinity by 0\r\nSteepness: 2 XOffset: 0\r\nDays
-        since harvested: 38\r\nSteepness: 2 XOffset: 0\r\nDecaying affinity by 0\r\nSteepness:
-        2 XOffset: 0\r\nTesting SeasonalForest\r\nDays since harvested: 38\r\nSteepness:
-        2 XOffset: 0\r\nDecaying affinity by 0\r\nSteepness: 2 XOffset: 0\r\nDays
-        since harvested: 38\r\nSteepness: 2 XOffset: 0\r\nDecaying affinity by 0\r\nSteepness:
-        2 XOffset: 0\r\nTesting TemperateRainForest\r\nDays since harvested: 38\r\nSteepness:
-        2 XOffset: 0\r\nDecaying affinity by 0\r\nSteepness: 2 XOffset: 0\r\nDays
-        since harvested: 38\r\nSteepness: 2 XOffset: 0\r\nDecaying affinity by 0\r\nSteepness:
-        2 XOffset: 0\r\nTesting BorealForest\r\nDays since harvested: 38\r\nSteepness:
-        2 XOffset: 0\r\nDecaying affinity by 0\r\nSteepness: 2 XOffset: 0\r\nDays
-        since harvested: 38\r\nSteepness: 2 XOffset: 0\r\nDecaying affinity by 0\r\nSteepness:
-        2 XOffset: 0\r\nTesting Tundra\r\nDays since harvested: 38\r\nSteepness:
-        2 XOffset: 0\r\nDecaying affinity by 0\r\nSteepness: 2 XOffset: 0\r\nDays
-        since harvested: 38\r\nSteepness: 2 XOffset: 0\r\nDecaying affinity by 0\r\nSteepness:
-        2 XOffset: 0\r\nTesting Ice\r\nDays since harvested: 38\r\nSteepness: 2 XOffset:
-        0\r\nDecaying affinity by 0\r\nSteepness: 2 XOffset: 0\r\nDays since harvested:
-        38\r\nSteepness: 2 XOffset: 0\r\nDecaying affinity by 0\r\nSteepness: 2 XOffset:
-        0\r\nTesting Water\r\nDays since harvested: 38\r\nSteepness: 2 XOffset: 0\r\nDecaying
-        affinity by 0\r\nSteepness: 2 XOffset: 0\r\nDays since harvested: 38\r\nSteepness:
-        2 XOffset: 0\r\nDecaying affinity by 0\r\nSteepness: 2 XOffset: 0\r\nTesting
-        Barren\r\nDays since harvested: 38\r\nSteepness: 2 XOffset: 0\r\nDecaying
-        affinity by 0\r\nSteepness: 2 XOffset: 0\r\nDays since harvested: 38\r\nSteepness:
-        2 XOffset: 0\r\nDecaying affinity by 0\r\nSteepness: 2 XOffset: 0\r\nclearing\r\n"
+      output: 'Final affinity for Grassland is 6.70962
+
+        Final affinity for
+        Savannah is 0.8646647
+
+        Final affinity for Grassland is 7.017535
+
+        Testing
+        Desert
+
+        Testing Savannah
+
+        Testing TropicalRainforest
+
+        Testing
+        Grassland
+
+        Testing Woodland
+
+        Testing SeasonalForest
+
+        Testing
+        TemperateRainForest
+
+        Testing BorealForest
+
+        Testing Tundra
+
+        Testing
+        Ice
+
+        Testing Water
+
+        Testing Barren
+
+        clearing
+
+'
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -542,7 +546,7 @@ MonoBehaviour:
       name: AffinityStatsTestSuite
       fullName: AffinityStatsTestSuite
       resultStatus: 1
-      duration: 0.0472254
+      duration: 0.0098754
       messages: 
       output: 
       stacktrace: 
@@ -558,7 +562,7 @@ MonoBehaviour:
       name: CanCombineAffinity
       fullName: AffinityStatsTestSuite.CanCombineAffinity
       resultStatus: 1
-      duration: 0.0322616
+      duration: 0.0027491
       messages: 
       output: 'Final affinity for Grassland is 40
 
@@ -569,121 +573,6 @@ MonoBehaviour:
 
         Final affinity
         for Desert is 70
-
-        Days since harvested: 4
-
-        Steepness: 2 XOffset:
-        0
-
-        Decaying affinity by 0.3968502
-
-        Steepness: 2 XOffset:
-        0
-
-        Days since harvested: 9
-
-        Steepness: 2 XOffset: 0
-
-        Decaying
-        affinity by 0
-
-        Steepness: 2 XOffset: 0
-
-        Days since harvested:
-        9
-
-        Steepness: 2 XOffset: 0
-
-        Decaying affinity by 0
-
-        Steepness:
-        2 XOffset: 0
-
-        Days since harvested: 6
-
-        Steepness: 2 XOffset:
-        0
-
-        Decaying affinity by 0.25
-
-        Steepness: 2 XOffset: 0
-
-        Days
-        since harvested: 9
-
-        Steepness: 2 XOffset: 0
-
-        Decaying affinity
-        by 0
-
-        Steepness: 2 XOffset: 0
-
-        Days since harvested: 9
-
-        Steepness:
-        2 XOffset: 0
-
-        Decaying affinity by 0
-
-        Steepness: 2 XOffset:
-        0
-
-        Days since harvested: 5
-
-        Steepness: 2 XOffset: 0
-
-        Decaying
-        affinity by 0.1767767
-
-        Steepness: 2 XOffset: 0
-
-        Days since
-        harvested: 9
-
-        Steepness: 2 XOffset: 0
-
-        Decaying affinity
-        by 0
-
-        Steepness: 2 XOffset: 0
-
-        Days since harvested: 9
-
-        Steepness:
-        2 XOffset: 0
-
-        Decaying affinity by 0
-
-        Steepness: 2 XOffset:
-        0
-
-        Days since harvested: 9
-
-        Steepness: 2 XOffset: 0
-
-        Decaying
-        affinity by 0
-
-        Steepness: 2 XOffset: 0
-
-        Days since harvested:
-        9
-
-        Steepness: 2 XOffset: 0
-
-        Decaying affinity by 0
-
-        Steepness:
-        2 XOffset: 0
-
-        Days since harvested: 9
-
-        Steepness: 2 XOffset:
-        0
-
-        Decaying affinity by 0
-
-        Steepness: 2 XOffset: 0
 
 '
       stacktrace: 
@@ -700,7 +589,7 @@ MonoBehaviour:
       name: CanDuplicateAffinity
       fullName: AffinityStatsTestSuite.CanDuplicateAffinity
       resultStatus: 1
-      duration: 0.0308833
+      duration: 0.0045684
       messages: 
       output: 'Final affinity for Grassland is 40
 
@@ -711,262 +600,31 @@ MonoBehaviour:
 
         Testing Desert
 
-        Days
-        since harvested: 30
-
-        Steepness: 2 XOffset: 0
-
-        Decaying affinity
-        by 0.0009765625
-
-        Steepness: 2 XOffset: 0
-
-        Days since harvested:
-        30
-
-        Steepness: 2 XOffset: 0
-
-        Decaying affinity by 0.0009765625
-
-        Steepness:
-        2 XOffset: 0
-
-        Testing Savannah
-
-        Days since harvested: 0
-
-        Steepness:
-        2 XOffset: 0
-
-        Decaying affinity by 1
-
-        Steepness: 2 XOffset:
-        0
-
-        Days since harvested: 0
-
-        Steepness: 2 XOffset: 0
-
-        Decaying
-        affinity by 1
-
-        Steepness: 2 XOffset: 0
+        Testing
+        Savannah
 
         Testing TropicalRainforest
 
-        Days
-        since harvested: 37
-
-        Steepness: 2 XOffset: 0
-
-        Decaying affinity
-        by 0
-
-        Steepness: 2 XOffset: 0
-
-        Days since harvested: 37
-
-        Steepness:
-        2 XOffset: 0
-
-        Decaying affinity by 0
-
-        Steepness: 2 XOffset:
-        0
-
         Testing Grassland
 
-        Days since harvested: 33
-
-        Steepness:
-        2 XOffset: 0
-
-        Decaying affinity by 0.003284752
-
-        Steepness:
-        2 XOffset: 0
-
-        Days since harvested: 33
-
-        Steepness: 2 XOffset:
-        0
-
-        Decaying affinity by 0.003284752
-
-        Steepness: 2 XOffset:
-        0
-
-        Testing Woodland
-
-        Days since harvested: 37
-
-        Steepness:
-        2 XOffset: 0
-
-        Decaying affinity by 0
-
-        Steepness: 2 XOffset:
-        0
-
-        Days since harvested: 37
-
-        Steepness: 2 XOffset: 0
-
-        Decaying
-        affinity by 0
-
-        Steepness: 2 XOffset: 0
+        Testing
+        Woodland
 
         Testing SeasonalForest
 
-        Days
-        since harvested: 37
-
-        Steepness: 2 XOffset: 0
-
-        Decaying affinity
-        by 0
-
-        Steepness: 2 XOffset: 0
-
-        Days since harvested: 37
-
-        Steepness:
-        2 XOffset: 0
-
-        Decaying affinity by 0
-
-        Steepness: 2 XOffset:
-        0
-
         Testing TemperateRainForest
 
-        Days since harvested: 37
-
-        Steepness:
-        2 XOffset: 0
-
-        Decaying affinity by 0
-
-        Steepness: 2 XOffset:
-        0
-
-        Days since harvested: 37
-
-        Steepness: 2 XOffset: 0
-
-        Decaying
-        affinity by 0
-
-        Steepness: 2 XOffset: 0
-
-        Testing BorealForest
-
-        Days
-        since harvested: 37
-
-        Steepness: 2 XOffset: 0
-
-        Decaying affinity
-        by 0
-
-        Steepness: 2 XOffset: 0
-
-        Days since harvested: 37
-
-        Steepness:
-        2 XOffset: 0
-
-        Decaying affinity by 0
-
-        Steepness: 2 XOffset:
-        0
+        Testing
+        BorealForest
 
         Testing Tundra
 
-        Days since harvested: 37
-
-        Steepness:
-        2 XOffset: 0
-
-        Decaying affinity by 0
-
-        Steepness: 2 XOffset:
-        0
-
-        Days since harvested: 37
-
-        Steepness: 2 XOffset: 0
-
-        Decaying
-        affinity by 0
-
-        Steepness: 2 XOffset: 0
-
         Testing Ice
 
-        Days
-        since harvested: 37
-
-        Steepness: 2 XOffset: 0
-
-        Decaying affinity
-        by 0
-
-        Steepness: 2 XOffset: 0
-
-        Days since harvested: 37
-
-        Steepness:
-        2 XOffset: 0
-
-        Decaying affinity by 0
-
-        Steepness: 2 XOffset:
-        0
-
-        Testing Water
-
-        Days since harvested: 37
-
-        Steepness:
-        2 XOffset: 0
-
-        Decaying affinity by 0
-
-        Steepness: 2 XOffset:
-        0
-
-        Days since harvested: 37
-
-        Steepness: 2 XOffset: 0
-
-        Decaying
-        affinity by 0
-
-        Steepness: 2 XOffset: 0
+        Testing
+        Water
 
         Testing Barren
-
-        Days
-        since harvested: 37
-
-        Steepness: 2 XOffset: 0
-
-        Decaying affinity
-        by 0
-
-        Steepness: 2 XOffset: 0
-
-        Days since harvested: 37
-
-        Steepness:
-        2 XOffset: 0
-
-        Decaying affinity by 0
-
-        Steepness: 2 XOffset:
-        0
 
 '
       stacktrace: 
@@ -983,7 +641,7 @@ MonoBehaviour:
       name: BoardAgeTestSuite
       fullName: BoardAgeTestSuite
       resultStatus: 1
-      duration: 0.15654
+      duration: 0.1504253
       messages: 
       output: 
       stacktrace: 
@@ -999,7 +657,7 @@ MonoBehaviour:
       name: CanGetBoardAgeAtStartup
       fullName: BoardAgeTestSuite.CanGetBoardAgeAtStartup
       resultStatus: 1
-      duration: 0.1272683
+      duration: 0.1212757
       messages: 
       output: 'clearing
 
@@ -1018,7 +676,7 @@ MonoBehaviour:
       name: CanUpdateBoardAge
       fullName: BoardAgeTestSuite.CanUpdateBoardAge
       resultStatus: 1
-      duration: 0.0181662
+      duration: 0.0196949
       messages: 
       output: 'clearing
 
@@ -1032,12 +690,170 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1001
       parentUniqueId: Tests.dll/[Tests][BoardAgeTestSuite][suite]
+    - id: 1011
+      uniqueId: Tests.dll/[Tests][BoardStatsTestSuite][suite]
+      name: BoardStatsTestSuite
+      fullName: BoardStatsTestSuite
+      resultStatus: 1
+      duration: 0.0261296
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1080
+      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1012
+      uniqueId: Tests.dll/BoardStatsTestSuite/[Tests][BoardStatsTestSuite.CanGetAccurateBoardEdges]
+      name: CanGetAccurateBoardEdges
+      fullName: BoardStatsTestSuite.CanGetAccurateBoardEdges
+      resultStatus: 1
+      duration: 0.0143185
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1011
+      parentUniqueId: Tests.dll/[Tests][BoardStatsTestSuite][suite]
+    - id: 1013
+      uniqueId: Tests.dll/[Tests][CameraBoundsTestSuite][suite]
+      name: CameraBoundsTestSuite
+      fullName: CameraBoundsTestSuite
+      resultStatus: 2
+      duration: 0.0384154
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1084
+      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1014
+      uniqueId: Tests.dll/CameraBoundsTestSuite/[Tests][CameraBoundsTestSuite.CanGetBoundsFromBoard]
+      name: CanGetBoundsFromBoard
+      fullName: CameraBoundsTestSuite.CanGetBoundsFromBoard
+      resultStatus: 1
+      duration: 0.0155173
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: Tests.dll/[Tests][CameraBoundsTestSuite][suite]
+    - id: 1015
+      uniqueId: Tests.dll/CameraBoundsTestSuite/[Tests][CameraBoundsTestSuite.CanPreventCameraFromExceedingBounds]
+      name: CanPreventCameraFromExceedingBounds
+      fullName: CameraBoundsTestSuite.CanPreventCameraFromExceedingBounds
+      resultStatus: 2
+      duration: 0.0076673
+      messages: "  Camera did notproperly stay in bounds!\r\n  Expected: (10.00,
+        7.00, 0.00)\r\n  But was:  (188.84, 50.00, 0.00)\r\n"
+      output: 
+      stacktrace: 'at CameraBoundsTestSuite.CanPreventCameraFromExceedingBounds ()
+        [0x0003b] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\CameraBoundsTestSuite.cs:43
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: Tests.dll/[Tests][CameraBoundsTestSuite][suite]
+    - id: 1016
+      uniqueId: Tests.dll/CameraBoundsTestSuite/[Tests][CameraBoundsTestSuite.CanResizeCameraBoundsWhenZooming]
+      name: CanResizeCameraBoundsWhenZooming
+      fullName: CameraBoundsTestSuite.CanResizeCameraBoundsWhenZooming
+      resultStatus: 2
+      duration: 0.0006251
+      messages: "  Expected: False\r\n  But was:  \"Need to figure out where the
+        camera would be!\"\r\n"
+      output: 
+      stacktrace: 'at CameraBoundsTestSuite.CanResizeCameraBoundsWhenZooming () [0x0003b]
+        in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\CameraBoundsTestSuite.cs:51
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: Tests.dll/[Tests][CameraBoundsTestSuite][suite]
+    - id: 1017
+      uniqueId: Tests.dll/[Tests][CameraMovementTestSuite][suite]
+      name: CameraMovementTestSuite
+      fullName: CameraMovementTestSuite
+      resultStatus: 1
+      duration: 0.0254008
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1086
+      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1018
+      uniqueId: Tests.dll/CameraMovementTestSuite/[Tests][CameraMovementTestSuite.CanDetermineNewTransformFromBounds]
+      name: CanDetermineNewTransformFromBounds
+      fullName: CameraMovementTestSuite.CanDetermineNewTransformFromBounds
+      resultStatus: 1
+      duration: 0.013426
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: Tests.dll/[Tests][CameraMovementTestSuite][suite]
+    - id: 1019
+      uniqueId: Tests.dll/CameraMovementTestSuite/[Tests][CameraMovementTestSuite.NewTransformIsAccurate]
+      name: NewTransformIsAccurate
+      fullName: CameraMovementTestSuite.NewTransformIsAccurate
+      resultStatus: 1
+      duration: 0.0137077
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: Tests.dll/[Tests][CameraMovementTestSuite][suite]
     - id: 1007
       uniqueId: Tests.dll/[Tests][CultureContainerTestSuite][suite]
       name: CultureContainerTestSuite
       fullName: CultureContainerTestSuite
       resultStatus: 1
-      duration: 0.0280464
+      duration: 0.035811
       messages: 
       output: 
       stacktrace: 
@@ -1053,7 +869,7 @@ MonoBehaviour:
       name: CanAddCultureToContainer
       fullName: CultureContainerTestSuite.CanAddCultureToContainer
       resultStatus: 1
-      duration: 0.0052277
+      duration: 0.005525
       messages: 
       output: 'clearing
 
@@ -1074,7 +890,7 @@ MonoBehaviour:
       name: CanResortWhenCultureDestroyed
       fullName: CultureContainerTestSuite.CanResortWhenCultureDestroyed
       resultStatus: 1
-      duration: 0.0067455
+      duration: 0.0091433
       messages: 
       output: 'clearing
 
@@ -1095,7 +911,7 @@ MonoBehaviour:
       name: CanResortWhenPopulationAdded
       fullName: CultureContainerTestSuite.CanResortWhenPopulationAdded
       resultStatus: 1
-      duration: 0.0051702
+      duration: 0.0078393
       messages: 
       output: 'clearing
 
@@ -1116,7 +932,7 @@ MonoBehaviour:
       name: CanSortCultures
       fullName: CultureContainerTestSuite.CanSortCultures
       resultStatus: 1
-      duration: 0.00441
+      duration: 0.0057688
       messages: 
       output: 'clearing
 
@@ -1137,7 +953,7 @@ MonoBehaviour:
       name: CultureFoodStoreTestSuite
       fullName: CultureFoodStoreTestSuite
       resultStatus: 1
-      duration: 0.1048158
+      duration: 0.1214473
       messages: 
       output: 
       stacktrace: 
@@ -1153,19 +969,9 @@ MonoBehaviour:
       name: CanCollectFoodFromTile
       fullName: CultureFoodStoreTestSuite.CanCollectFoodFromTile
       resultStatus: 1
-      duration: 0.0415704
+      duration: 0.0438313
       messages: 
-      output: 'Steepness: 2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness:
-        2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Setup Complete.
-        Culture name is rthqqn(-2709584)
+      output: 'Setup Complete. Culture name is rthqqn(-203648)
 
         clearing
 
@@ -1184,19 +990,9 @@ MonoBehaviour:
       name: CanConsumeFoodInTurn
       fullName: CultureFoodStoreTestSuite.CanConsumeFoodInTurn
       resultStatus: 1
-      duration: 0.0152641
+      duration: 0.0207397
       messages: 
-      output: 'Steepness: 2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness:
-        2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Setup Complete.
-        Culture name is rthqqn(-2709758)
+      output: 'Setup Complete. Culture name is rthqqn(-203822)
 
         clearing
 
@@ -1215,19 +1011,9 @@ MonoBehaviour:
       name: CanConsumeFoodMultiplePopulation
       fullName: CultureFoodStoreTestSuite.CanConsumeFoodMultiplePopulation
       resultStatus: 1
-      duration: 0.029073
+      duration: 0.0326739
       messages: 
-      output: 'Steepness: 2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness:
-        2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Setup Complete.
-        Culture name is rthqqn(-2709932)
+      output: 'Setup Complete. Culture name is rthqqn(-203996)
 
         clearing
 
@@ -1246,19 +1032,9 @@ MonoBehaviour:
       name: CanReduceFoodOnTile
       fullName: CultureFoodStoreTestSuite.CanReduceFoodOnTile
       resultStatus: 1
-      duration: 0.0139112
+      duration: 0.0179056
       messages: 
-      output: 'Steepness: 2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness:
-        2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Setup Complete.
-        Culture name is rthqqn(-2710120)
+      output: 'Setup Complete. Culture name is rthqqn(-204184)
 
         clearing
 
@@ -1277,7 +1053,7 @@ MonoBehaviour:
       name: CulturePlacementHandlerTestSuite
       fullName: CulturePlacementHandlerTestSuite
       resultStatus: 1
-      duration: 0.8589302
+      duration: 0.8668808
       messages: 
       output: 
       stacktrace: 
@@ -1293,7 +1069,7 @@ MonoBehaviour:
       name: CanNotShowAdditionalCulturesAfterThree
       fullName: CulturePlacementHandlerTestSuite.CanNotShowAdditionalCulturesAfterThree
       resultStatus: 1
-      duration: 0.1084909
+      duration: 0.110011
       messages: 
       output: 'clearing
 
@@ -1314,7 +1090,7 @@ MonoBehaviour:
       name: CanRearrangeWhenPopChanges
       fullName: CulturePlacementHandlerTestSuite.CanRearrangeWhenPopChanges
       resultStatus: 1
-      duration: 0.2094064
+      duration: 0.2102406
       messages: 
       output: 'clearing
 
@@ -1335,7 +1111,7 @@ MonoBehaviour:
       name: CanReduceFromThreeToTwoCulturesOnTile
       fullName: CulturePlacementHandlerTestSuite.CanReduceFromThreeToTwoCulturesOnTile
       resultStatus: 1
-      duration: 0.209002
+      duration: 0.2105837
       messages: 
       output: 'clearing
 
@@ -1356,7 +1132,7 @@ MonoBehaviour:
       name: CanShowOneCultureOnTile
       fullName: CulturePlacementHandlerTestSuite.CanShowOneCultureOnTile
       resultStatus: 1
-      duration: 0.1088014
+      duration: 0.1102336
       messages: 
       output: 'clearing
 
@@ -1377,7 +1153,7 @@ MonoBehaviour:
       name: CanShowThreeCulturesOnTile
       fullName: CulturePlacementHandlerTestSuite.CanShowThreeCulturesOnTile
       resultStatus: 1
-      duration: 0.1085153
+      duration: 0.1091718
       messages: 
       output: 'clearing
 
@@ -1398,7 +1174,7 @@ MonoBehaviour:
       name: CanShowTwoCulturesOnTile
       fullName: CulturePlacementHandlerTestSuite.CanShowTwoCulturesOnTile
       resultStatus: 1
-      duration: 0.1085898
+      duration: 0.1099862
       messages: 
       output: 'clearing
 
@@ -1419,7 +1195,7 @@ MonoBehaviour:
       name: CultureTestSuite
       fullName: CultureTestSuite
       resultStatus: 1
-      duration: 0.0338475
+      duration: 0.0348203
       messages: 
       output: 
       stacktrace: 
@@ -1435,19 +1211,9 @@ MonoBehaviour:
       name: TestCanMerge
       fullName: CultureTestSuite.TestCanMerge
       resultStatus: 1
-      duration: 0.0082668
+      duration: 0.0076726
       messages: 
-      output: 'Steepness: 2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness:
-        2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Setup Complete.
-        Culture name is rthqqn(-2710540)
+      output: 'Setup Complete. Culture name is rthqqn(-204604)
 
         clearing
 
@@ -1466,19 +1232,9 @@ MonoBehaviour:
       name: TestCannotMerge
       fullName: CultureTestSuite.TestCannotMerge
       resultStatus: 1
-      duration: 0.0098732
+      duration: 0.0099569
       messages: 
-      output: 'Steepness: 2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness:
-        2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Setup Complete.
-        Culture name is rthqqn(-2710752)
+      output: 'Setup Complete. Culture name is rthqqn(-204816)
 
         clearing
 
@@ -1497,19 +1253,9 @@ MonoBehaviour:
       name: TestSplitCulture
       fullName: CultureTestSuite.TestSplitCulture
       resultStatus: 1
-      duration: 0.010905
+      duration: 0.0124323
       messages: 
-      output: 'Steepness: 2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness:
-        2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Setup Complete.
-        Culture name is rthqqn(-2710964)
+      output: 'Setup Complete. Culture name is rthqqn(-205028)
 
         clearing
 
@@ -1528,7 +1274,7 @@ MonoBehaviour:
       name: CurveTestSuite
       fullName: CurveTestSuite
       resultStatus: 1
-      duration: 0.0076388
+      duration: 0.005586
       messages: 
       output: 
       stacktrace: 
@@ -1544,16 +1290,9 @@ MonoBehaviour:
       name: TestCompoundCurve
       fullName: CurveTestSuite.TestCompoundCurve
       resultStatus: 1
-      duration: 0.0014174
+      duration: 0.000342
       messages: 
-      output: 'Steepness: 2 XOffset: 43
-
-        Steepness: 2 XOffset: 43
-
-        Steepness:
-        2 XOffset: 43
-
-'
+      output: 
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -1568,7 +1307,7 @@ MonoBehaviour:
       name: TestGaussianCurve
       fullName: CurveTestSuite.TestGaussianCurve
       resultStatus: 1
-      duration: 0.0001989
+      duration: 0.0002031
       messages: 
       output: 
       stacktrace: 
@@ -1585,13 +1324,9 @@ MonoBehaviour:
       name: TestPowerCurve
       fullName: CurveTestSuite.TestPowerCurve
       resultStatus: 1
-      duration: 0.0008758
+      duration: 0.000154
       messages: 
-      output: 'Steepness: 1.3 XOffset: 8
-
-        Steepness: 1.3 XOffset: 8
-
-'
+      output: 
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -1606,7 +1341,7 @@ MonoBehaviour:
       name: TestSigmoidCurve
       fullName: CurveTestSuite.TestSigmoidCurve
       resultStatus: 1
-      duration: 0.000191
+      duration: 0.000226
       messages: 
       output: 
       stacktrace: 
@@ -1623,7 +1358,7 @@ MonoBehaviour:
       name: FoodAmountIndicatorTestSuite
       fullName: FoodAmountIndicatorTestSuite
       resultStatus: 1
-      duration: 0.0308584
+      duration: 0.0318783
       messages: 
       output: 
       stacktrace: 
@@ -1639,7 +1374,7 @@ MonoBehaviour:
       name: CanDisplayAccurateFoodCount
       fullName: FoodAmountIndicatorTestSuite.CanDisplayAccurateFoodCount
       resultStatus: 1
-      duration: 0.0095172
+      duration: 0.0104858
       messages: 
       output: 
       stacktrace: 
@@ -1656,7 +1391,7 @@ MonoBehaviour:
       name: CanGenerateFoodIndicatorAtExpectedInterval
       fullName: FoodAmountIndicatorTestSuite.CanGenerateFoodIndicatorAtExpectedInterval
       resultStatus: 1
-      duration: 0.0165036
+      duration: 0.016802
       messages: 
       output: 
       stacktrace: 
@@ -1673,7 +1408,7 @@ MonoBehaviour:
       name: GreyscaleOverlayTestSuite
       fullName: GreyscaleOverlayTestSuite
       resultStatus: 1
-      duration: 0.0065198
+      duration: 0.0069097
       messages: 
       output: 
       stacktrace: 
@@ -1689,7 +1424,7 @@ MonoBehaviour:
       name: CanMakeImageGreyscale
       fullName: GreyscaleOverlayTestSuite.CanMakeImageGreyscale
       resultStatus: 1
-      duration: 0.001683
+      duration: 0.0017508
       messages: 
       output: 'clearing
 
@@ -1708,7 +1443,7 @@ MonoBehaviour:
       name: CanSetToVariousTransparencies
       fullName: GreyscaleOverlayTestSuite.CanSetToVariousTransparencies
       resultStatus: 1
-      duration: 0.000742
+      duration: 0.0008456
       messages: 
       output: 'clearing
 
@@ -1727,7 +1462,7 @@ MonoBehaviour:
       name: InfluenceActionTestSuite
       fullName: InfluenceActionTestSuite
       resultStatus: 1
-      duration: 0.0255011
+      duration: 0.0256092
       messages: 
       output: 
       stacktrace: 
@@ -1743,19 +1478,9 @@ MonoBehaviour:
       name: CanInfluenceNeighborCulture
       fullName: InfluenceActionTestSuite.CanInfluenceNeighborCulture
       resultStatus: 1
-      duration: 0.008581
+      duration: 0.0082724
       messages: 
-      output: 'Steepness: 2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness:
-        2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Setup Complete.
-        Culture name is rthqqn(-2711382)
+      output: 'Setup Complete. Culture name is rthqqn(-205446)
 
         clearing
 
@@ -1774,19 +1499,9 @@ MonoBehaviour:
       name: CanMergeIntoNewCultureIfClose
       fullName: InfluenceActionTestSuite.CanMergeIntoNewCultureIfClose
       resultStatus: 1
-      duration: 0.0122964
+      duration: 0.0124045
       messages: 
-      output: 'Steepness: 2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness:
-        2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Setup Complete.
-        Culture name is rthqqn(-2711594)
+      output: 'Setup Complete. Culture name is rthqqn(-205658)
 
         clearing
 
@@ -1805,7 +1520,7 @@ MonoBehaviour:
       name: MergeWithTileActionTestSuite
       fullName: MergeWithTileActionTestSuite
       resultStatus: 1
-      duration: 0.0438618
+      duration: 0.0394817
       messages: 
       output: 
       stacktrace: 
@@ -1821,19 +1536,9 @@ MonoBehaviour:
       name: CanAddNewCultureToTile
       fullName: MergeWithTileActionTestSuite.CanAddNewCultureToTile
       resultStatus: 1
-      duration: 0.0080751
+      duration: 0.008998
       messages: 
-      output: 'Steepness: 2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness:
-        2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Setup Complete.
-        Culture name is rthqqn(-2711834)
+      output: 'Setup Complete. Culture name is rthqqn(-205898)
 
         clearing
 
@@ -1852,19 +1557,9 @@ MonoBehaviour:
       name: CanCreateAsNewCulture
       fullName: MergeWithTileActionTestSuite.CanCreateAsNewCulture
       resultStatus: 1
-      duration: 0.0191368
+      duration: 0.0119652
       messages: 
-      output: 'Steepness: 2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness:
-        2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Setup Complete.
-        Culture name is rthqqn(-2712046)
+      output: 'Setup Complete. Culture name is rthqqn(-206110)
 
         clearing
 
@@ -1883,19 +1578,9 @@ MonoBehaviour:
       name: CanMergeCultures
       fullName: MergeWithTileActionTestSuite.CanMergeCultures
       resultStatus: 1
-      duration: 0.0115094
+      duration: 0.0137089
       messages: 
-      output: 'Steepness: 2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness:
-        2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Setup Complete.
-        Culture name is rthqqn(-2712258)
+      output: 'Setup Complete. Culture name is rthqqn(-206322)
 
         clearing
 
@@ -1914,7 +1599,7 @@ MonoBehaviour:
       name: MoveActionTestSuite
       fullName: MoveActionTestSuite
       resultStatus: 1
-      duration: 0.3891185
+      duration: 0.3898455
       messages: 
       output: 
       stacktrace: 
@@ -1930,19 +1615,9 @@ MonoBehaviour:
       name: MoveTileActionTest
       fullName: MoveActionTestSuite.MoveTileActionTest
       resultStatus: 1
-      duration: 0.1459348
+      duration: 0.1515055
       messages: 
-      output: 'Steepness: 2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness:
-        2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Setup Complete.
-        Culture name is rthqqn(-2712498)
+      output: 'Setup Complete. Culture name is rthqqn(-206562)
 
         clearing
 
@@ -1961,22 +1636,12 @@ MonoBehaviour:
       name: MoveTileActionWhenLargeTest
       fullName: MoveActionTestSuite.MoveTileActionWhenLargeTest
       resultStatus: 1
-      duration: 0.1178659
+      duration: 0.1174627
       messages: 
-      output: 'Steepness: 2 XOffset: 43
+      output: 'Setup Complete. Culture name is rthqqn(-206736)
 
-        Steepness: 0.5 XOffset: 15
-
-        Steepness:
-        2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Setup Complete.
-        Culture name is rthqqn(-2712672)
-
-        Tried to remove from nonexistant
-        tile!
+        Tried to
+        remove from nonexistant tile!
 
         clearing
 
@@ -1995,19 +1660,9 @@ MonoBehaviour:
       name: RepelledActionTest
       fullName: MoveActionTestSuite.RepelledActionTest
       resultStatus: 1
-      duration: 0.1199416
+      duration: 0.1155197
       messages: 
-      output: 'Steepness: 2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness:
-        2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Setup Complete.
-        Culture name is rthqqn(-2712928)
+      output: 'Setup Complete. Culture name is rthqqn(-206992)
 
         clearing
 
@@ -2026,7 +1681,7 @@ MonoBehaviour:
       name: OverpopulationActionTestSuite
       fullName: OverpopulationActionTestSuite
       resultStatus: 1
-      duration: 0.0239671
+      duration: 0.0268086
       messages: 
       output: 
       stacktrace: 
@@ -2042,19 +1697,9 @@ MonoBehaviour:
       name: CanBecomeOverPopulated
       fullName: OverpopulationActionTestSuite.CanBecomeOverPopulated
       resultStatus: 1
-      duration: 0.0084904
+      duration: 0.0109425
       messages: 
-      output: 'Steepness: 2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness:
-        2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Setup Complete.
-        Culture name is rthqqn(-2713102)
+      output: 'Setup Complete. Culture name is rthqqn(-207166)
 
         clearing
 
@@ -2073,19 +1718,9 @@ MonoBehaviour:
       name: TestPopulationDrop
       fullName: OverpopulationActionTestSuite.TestPopulationDrop
       resultStatus: 1
-      duration: 0.010769
+      duration: 0.0109832
       messages: 
-      output: 'Steepness: 2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness:
-        2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Setup Complete.
-        Culture name is rthqqn(-2713290)
+      output: 'Setup Complete. Culture name is rthqqn(-207354)
 
         clearing
 
@@ -2104,7 +1739,7 @@ MonoBehaviour:
       name: PerlinHeightmapGeneratorTestSuite
       fullName: PerlinHeightmapGeneratorTestSuite
       resultStatus: 1
-      duration: 0.0059187
+      duration: 0.0068689
       messages: 
       output: 
       stacktrace: 
@@ -2120,7 +1755,7 @@ MonoBehaviour:
       name: CanAssignExpectedValues
       fullName: PerlinHeightmapGeneratorTestSuite.CanAssignExpectedValues
       resultStatus: 1
-      duration: 0.0019085
+      duration: 0.0021215
       messages: 
       output: 
       stacktrace: 
@@ -2137,7 +1772,7 @@ MonoBehaviour:
       name: PopulationChangeIndicatorTestSuite
       fullName: PopulationChangeIndicatorTestSuite
       resultStatus: 1
-      duration: 0.01784
+      duration: 0.0161931
       messages: 
       output: 
       stacktrace: 
@@ -2153,19 +1788,9 @@ MonoBehaviour:
       name: CanGenerateIndicator
       fullName: PopulationChangeIndicatorTestSuite.CanGenerateIndicator
       resultStatus: 1
-      duration: 0.0137304
+      duration: 0.0124581
       messages: 
-      output: 'Steepness: 2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness:
-        2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Setup Complete.
-        Culture name is rthqqn(-2713508)
+      output: 'Setup Complete. Culture name is rthqqn(-207572)
 
         clearing
 
@@ -2184,7 +1809,7 @@ MonoBehaviour:
       name: PopulationPipMakerTestSuite
       fullName: PopulationPipMakerTestSuite
       resultStatus: 1
-      duration: 0.033892
+      duration: 0.0350006
       messages: 
       output: 
       stacktrace: 
@@ -2200,19 +1825,9 @@ MonoBehaviour:
       name: CanAddPip
       fullName: PopulationPipMakerTestSuite.CanAddPip
       resultStatus: 1
-      duration: 0.0134196
+      duration: 0.0142361
       messages: 
-      output: 'Steepness: 2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness:
-        2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Setup Complete.
-        Culture name is rthqqn(-2713696)
+      output: 'Setup Complete. Culture name is rthqqn(-207760)
 
         clearing
 
@@ -2231,19 +1846,9 @@ MonoBehaviour:
       name: CanRemovePip
       fullName: PopulationPipMakerTestSuite.CanRemovePip
       resultStatus: 1
-      duration: 0.0157643
+      duration: 0.0164336
       messages: 
-      output: 'Steepness: 2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness:
-        2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Setup Complete.
-        Culture name is rthqqn(-2713892)
+      output: 'Setup Complete. Culture name is rthqqn(-207956)
 
         clearing
 
@@ -2262,7 +1867,7 @@ MonoBehaviour:
       name: TileFoodTestSuite
       fullName: TileFoodTestSuite
       resultStatus: 1
-      duration: 0.0669886
+      duration: 0.0647038
       messages: 
       output: 
       stacktrace: 
@@ -2278,23 +1883,9 @@ MonoBehaviour:
       name: CanCalculateProperFoodRateDesert
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateDesert
       resultStatus: 1
-      duration: 0.0068074
+      duration: 0.0059401
       messages: 
-      output: 'Steepness: 2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness:
-        2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness: 2 XOffset:
-        43
-
-        Steepness: 0.5 XOffset: 15
-
-        clearing
+      output: 'clearing
 
 '
       stacktrace: 
@@ -2311,23 +1902,9 @@ MonoBehaviour:
       name: CanCalculateProperFoodRateRainforest
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateRainforest
       resultStatus: 1
-      duration: 0.0081737
+      duration: 0.0077844
       messages: 
-      output: 'Steepness: 2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness:
-        2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness: 2 XOffset:
-        43
-
-        Steepness: 0.5 XOffset: 15
-
-        clearing
+      output: 'clearing
 
 '
       stacktrace: 
@@ -2344,23 +1921,9 @@ MonoBehaviour:
       name: CanCalculateProperFoodRateTundra
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateTundra
       resultStatus: 1
-      duration: 0.0083448
+      duration: 0.0080457
       messages: 
-      output: 'Steepness: 2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness:
-        2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness: 2 XOffset:
-        43
-
-        Steepness: 0.5 XOffset: 15
-
-        clearing
+      output: 'clearing
 
 '
       stacktrace: 
@@ -2377,18 +1940,9 @@ MonoBehaviour:
       name: CanIncreaseFoodPerTick
       fullName: TileFoodTestSuite.CanIncreaseFoodPerTick
       resultStatus: 1
-      duration: 0.0123524
+      duration: 0.0123301
       messages: 
-      output: 'Steepness: 2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness:
-        2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        clearing
+      output: 'clearing
 
 '
       stacktrace: 
@@ -2405,23 +1959,9 @@ MonoBehaviour:
       name: CanPreventAdditionalFood
       fullName: TileFoodTestSuite.CanPreventAdditionalFood
       resultStatus: 1
-      duration: 0.0127944
+      duration: 0.0114361
       messages: 
-      output: 'Steepness: 2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness:
-        2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness: 2 XOffset:
-        43
-
-        Steepness: 0.5 XOffset: 15
-
-        clearing
+      output: 'clearing
 
 '
       stacktrace: 
@@ -2438,23 +1978,9 @@ MonoBehaviour:
       name: CanSetFoodToMaxAtStart
       fullName: TileFoodTestSuite.CanSetFoodToMaxAtStart
       resultStatus: 1
-      duration: 0.0128401
+      duration: 0.0119205
       messages: 
-      output: 'Steepness: 2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness:
-        2 XOffset: 43
-
-        Steepness: 0.5 XOffset: 15
-
-        Steepness: 2 XOffset:
-        43
-
-        Steepness: 0.5 XOffset: 15
-
-        clearing
+      output: 'clearing
 
 '
       stacktrace: 
@@ -2471,7 +1997,7 @@ MonoBehaviour:
       name: TileGreyscaleOverlayLinkTestSuite
       fullName: TileGreyscaleOverlayLinkTestSuite
       resultStatus: 1
-      duration: 0.0058912
+      duration: 0.0071601
       messages: 
       output: 
       stacktrace: 
@@ -2487,7 +2013,7 @@ MonoBehaviour:
       name: CanSetToGreyIfLow
       fullName: TileGreyscaleOverlayLinkTestSuite.CanSetToGreyIfLow
       resultStatus: 1
-      duration: 0.0016278
+      duration: 0.0026652
       messages: 
       output: 'clearing
 
@@ -2506,7 +2032,7 @@ MonoBehaviour:
       name: TurnTestSuite
       fullName: TurnTestSuite
       resultStatus: 1
-      duration: 0.0058285
+      duration: 0.0060313
       messages: 
       output: 
       stacktrace: 
@@ -2522,7 +2048,7 @@ MonoBehaviour:
       name: CanChangeTurnAfterUpdated
       fullName: TurnTestSuite.CanChangeTurnAfterUpdated
       resultStatus: 1
-      duration: 0.0004505
+      duration: 0.0003986
       messages: 
       output: 
       stacktrace: 
@@ -2539,7 +2065,7 @@ MonoBehaviour:
       name: CanGetPendingUpdatesFor
       fullName: TurnTestSuite.CanGetPendingUpdatesFor
       resultStatus: 1
-      duration: 0.000399
+      duration: 0.0003571
       messages: 
       output: 
       stacktrace: 
@@ -2556,7 +2082,7 @@ MonoBehaviour:
       name: CanUpdateAllCultures
       fullName: TurnTestSuite.CanUpdateAllCultures
       resultStatus: 1
-      duration: 0.000206
+      duration: 0.0002137
       messages: 
       output: 
       stacktrace: 
@@ -2573,7 +2099,7 @@ MonoBehaviour:
       name: TestAddUpdate
       fullName: TurnTestSuite.TestAddUpdate
       resultStatus: 1
-      duration: 0.0001735
+      duration: 0.0001766
       messages: 
       output: 
       stacktrace: 
@@ -2585,139 +2111,13 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1070
       parentUniqueId: Tests.dll/[Tests][TurnTestSuite][suite]
-    m_ResultText: 'CanCombineAffinity (0.032s)
-
-      ---
-
-      Final affinity for
-      Grassland is 40
-
-      Final affinity for TemperateRainForest is 50
-
-      Final
-      affinity for Grassland is 30
-
-      Final affinity for Desert is 70
-
-      Days
-      since harvested: 4
-
-      Steepness: 2 XOffset: 0
-
-      Decaying affinity
-      by 0.3968502
-
-      Steepness: 2 XOffset: 0
-
-      Days since harvested: 9
-
-      Steepness:
-      2 XOffset: 0
-
-      Decaying affinity by 0
-
-      Steepness: 2 XOffset: 0
-
-      Days
-      since harvested: 9
-
-      Steepness: 2 XOffset: 0
-
-      Decaying affinity
-      by 0
-
-      Steepness: 2 XOffset: 0
-
-      Days since harvested: 6
-
-      Steepness:
-      2 XOffset: 0
-
-      Decaying affinity by 0.25
-
-      Steepness: 2 XOffset:
-      0
-
-      Days since harvested: 9
-
-      Steepness: 2 XOffset: 0
-
-      Decaying
-      affinity by 0
-
-      Steepness: 2 XOffset: 0
-
-      Days since harvested: 9
-
-      Steepness:
-      2 XOffset: 0
-
-      Decaying affinity by 0
-
-      Steepness: 2 XOffset: 0
-
-      Days
-      since harvested: 5
-
-      Steepness: 2 XOffset: 0
-
-      Decaying affinity
-      by 0.1767767
-
-      Steepness: 2 XOffset: 0
-
-      Days since harvested: 9
-
-      Steepness:
-      2 XOffset: 0
-
-      Decaying affinity by 0
-
-      Steepness: 2 XOffset: 0
-
-      Days
-      since harvested: 9
-
-      Steepness: 2 XOffset: 0
-
-      Decaying affinity
-      by 0
-
-      Steepness: 2 XOffset: 0
-
-      Days since harvested: 9
-
-      Steepness:
-      2 XOffset: 0
-
-      Decaying affinity by 0
-
-      Steepness: 2 XOffset: 0
-
-      Days
-      since harvested: 9
-
-      Steepness: 2 XOffset: 0
-
-      Decaying affinity
-      by 0
-
-      Steepness: 2 XOffset: 0
-
-      Days since harvested: 9
-
-      Steepness:
-      2 XOffset: 0
-
-      Decaying affinity by 0
-
-      Steepness: 2 XOffset: 0'
+    m_ResultText: NewTransformIsAccurate (0.014s)
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 0f0a7e3e
-      m_LastClickedID: 1048447503
-      m_ExpandedIDs: bbb6ef82c6ec6ba11cb03da8c2778cab18e194b58e1814b84580fecc56c0c1dcaf90fae781f0ffed5fdcc4f86eca7a08b26d2713ad6ec22132b4d12703fe443357683e3426ecfc371a04ba42b71a1147c10a124feb084855a0eedc6e7c3b3c71ffffff7f
+      m_SelectedIDs: 0272b875
+      m_LastClickedID: 1975022082
+      m_ExpandedIDs: bbb6ef82ce07e386c6ec6ba11cb03da8c2778cab371506b518e194b58e1814b84580fecc56c0c1dcaf90fae781f0ffed5fdcc4f89d8029056eca7a08b26d2713ad6ec22132b4d12703fe443357683e3426ecfc371a04ba42b71a1147c10a124feb084855a0eedc6e7c3b3c71ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2815,10 +2215,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 378.6667
+    x: 590.6667
     y: 72.66667
-    width: 1480.6667
-    height: 756.3333
+    width: 1268.6667
+    height: 744.3333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2828,8 +2228,8 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: -98.666626, y: -26}
+      snapOffset: {x: -101, y: -26}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -3020,9 +2420,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 7.7694583, y: 4.4304266, z: -0.400204}
+    m_Target: {x: 0.80040693, y: -0.18105352, z: -0.16590917}
     speed: 2
-    m_Value: {x: 7.7694583, y: 4.4304266, z: -0.400204}
+    m_Value: {x: 0.80040693, y: -0.18105352, z: -0.16590917}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -3073,9 +2473,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 26.605854
+    m_Target: 2.9875293
     speed: 2
-    m_Value: 26.605854
+    m_Value: 2.9875293
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -3120,10 +2520,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 378.6667
+    x: 590.6667
     y: 72.66667
-    width: 1480.6667
-    height: 985.6667
+    width: 1268.6667
+    height: 744.3333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -3134,7 +2534,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1920, y: 1080}
+  m_TargetSize: {x: 1268.6667, y: 714}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -3143,16 +2543,16 @@ MonoBehaviour:
   m_VSyncEnabled: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 03000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 01000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -640
-    m_HBaseRangeMax: 640
-    m_VBaseRangeMin: -360
-    m_VBaseRangeMax: 360
+    m_HBaseRangeMin: -422.88892
+    m_HBaseRangeMax: 422.88892
+    m_VBaseRangeMin: -238
+    m_VBaseRangeMax: 238
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -3170,23 +2570,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1480.6667
-      height: 964.6667
+      width: 1268.6667
+      height: 723.3333
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 740.3334, y: 482.33334}
+    m_Translation: {x: 634.3334, y: 361.66666}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -740.3334
-      y: -482.33334
-      width: 1480.6667
-      height: 964.6667
+      x: -634.3334
+      y: -361.66666
+      width: 1268.6667
+      height: 723.3333
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 2221, y: 1478.5}
+  m_LastWindowPixelSize: {x: 1903.0001, y: 1116.5}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -3213,9 +2613,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 850
+    y: 838
     width: 1860.3334
-    height: 501.00006
+    height: 513.00006
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -3233,22 +2633,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Scripts/Map/SaveHandler
+    - Assets/Resources/Scripts/Tests
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Scripts/Map/SaveHandler
+  - Assets/Resources/Scripts/Tests
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\wenze\Documents\Unity\Eons
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 14690000
-    m_LastClickedID: 26900
-    m_ExpandedIDs: 000000003a6000003c6000003e60000040600000426000004460000046600000486000004a60000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 358.99994}
+    m_SelectedIDs: 5c600000
+    m_LastClickedID: 24668
+    m_ExpandedIDs: 000000005460000056600000586000005a6000005c6000005e60000060600000626000006460000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3276,7 +2676,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000003a6000003c6000003e60000040600000426000004460000046600000486000004a600000
+    m_ExpandedIDs: 000000005460000056600000586000005a6000005c6000005e600000606000006260000064600000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3301,8 +2701,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 161b0000
+    m_LastClickedInstanceID: 6934
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300009e5f0000946c0000ca590000e65b0000a8700000345d00003e5a000080720000565a0000e693ffffc47100004484000038840000b45c0000cc5c000000000000d45b00007c5d0000
     m_RenameOverlay:
@@ -3353,9 +2753,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 850
+    y: 838
     width: 1860.3334
-    height: 501.00006
+    height: 513.00006
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -3381,16 +2781,16 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 861.3334
+    y: 850
     width: 1860.3334
-    height: 489.6667
+    height: 501.00006
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 23274
+  m_LastSelectedObjectID: 30912
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52

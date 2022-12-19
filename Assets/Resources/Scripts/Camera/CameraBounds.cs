@@ -1,41 +1,70 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 
-public class CameraBounds : MonoBehaviour
+public class CameraBounds : MonoBehaviour, ICameraRestriction
 {
+    public BoardEdges BoardEdges { get { return boardStats.BoardEdges; } }
+    BoardStats boardStats;
+    public CameraMoveController CameraMoveController;
+    public float BufferZone = 3f;
 
-    private void Awake()
+   
+    public void SetBoard(BoardStats bs)
     {
-        AddColliderOnCamera();
+        boardStats = bs;
+        CameraMoveController.AddRestriction(this); 
     }
 
 
-    public void AddColliderOnCamera()
+    public CameraMovement ProvideModifiedMove(CameraMovement attemptedMove)
     {
-        if(Camera.main == null)
+        if (boardStats == null) Debug.LogError("You need to initialize the CameraBounds with a board!");
+
+        /*
+         * Check if new camera bounds are outside of the board
+         * if so
+         *      set edges of camera bounds to edge of the board
+         *      return new movement with these bounds
+         * else 
+         *      return original, unchanged movement
+         * 
+         * 
+         * if topleft is out of bounds
+         *      recreate where topleft is in bounds
+         * if bottomRight is out of bounds
+         *      recreate where bottomright is in bounds
+         * 
+         */
+
+        Rect newBounds = attemptedMove.NewCameraEdges;
+
+        if(newBounds.x < BoardEdges.Bounds.x)
         {
-            Debug.LogError("No camera found. Make sure you have tagged your main camera!");
-            return;
+            newBounds.x = BoardEdges.Bounds.x;
         }
 
-        Camera cam = Camera.main;
-        if(!cam.orthographic)
+        if(newBounds.xMax > BoardEdges.Bounds.xMax)
         {
-            Debug.LogError("Make sure your camera is set to orthographic mode!");
-            return;
+            newBounds.x = BoardEdges.Bounds.xMax - newBounds.width;
         }
 
-        EdgeCollider2D edgeCollider = gameObject.GetComponent<EdgeCollider2D>();
+        if(newBounds.y < BoardEdges.Bounds.y)
+        {
+            newBounds.y = BoardEdges.Bounds.y;
+        }
 
-        Vector2 leftBottom = cam.ScreenToWorldPoint(new Vector3(0, 0, cam.nearClipPlane));
-        Vector2 leftTop = cam.ScreenToWorldPoint(new Vector3(0, cam.pixelHeight, cam.nearClipPlane));
-        Vector2 rightBottom = cam.ScreenToWorldPoint(new Vector3(cam.pixelWidth, 0, cam.nearClipPlane));
-        Vector2 rightTop = cam.ScreenToWorldPoint(new Vector3(cam.pixelWidth, cam.pixelHeight, cam.nearClipPlane));
+        if (newBounds.yMax > BoardEdges.Bounds.yMax)
+        {
+            newBounds.y = BoardEdges.Bounds.yMax - newBounds.height;
+        }
 
-        Vector2[] edgePoints = new Vector2[] { leftBottom, leftTop, rightTop, rightBottom };
+        return new CameraMovement(newBounds, attemptedMove.Camera);
 
-        edgeCollider.points = edgePoints;
     }
+
+
+
 
 }

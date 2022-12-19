@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,16 +9,22 @@ public class BoardStats : MonoBehaviour
     {
         get
         {
-            return isHemisphere ? 0 : Mathf.FloorToInt(height / 2);
+            return isHemisphere ? 0 : Mathf.FloorToInt(Height / 2);
         }
     }
     public int maxDistFromEquator
     {
         get
         {
-            return isHemisphere ? height : Mathf.CeilToInt(height / 2f);
+            return isHemisphere ? Height : Mathf.CeilToInt(Height / 2f);
         }
     }
+
+    BoardEdges _boardEdges;
+    public BoardEdges BoardEdges { get { return _boardEdges; } }
+
+    public event EventHandler<OnBoardDimensionsChangedEventArgs> OnBoardDimensionsChanged;
+
     public float seaLevel
     {
         get
@@ -27,10 +33,32 @@ public class BoardStats : MonoBehaviour
         }
     }
 
+    public void SetDimensions(int w, int h)
+    {
+        Height = h;
+        Width = w;
+        ResetBoardDimensions();
+    }
+
+    public void SetTileWidth(float tw)
+    {
+        TileWidth = tw;
+        _boardEdges = new BoardEdges(Height, Width, TileWidth);
+        ResetBoardDimensions();
+    }
+
+    void ResetBoardDimensions()
+    {
+        _boardEdges = new BoardEdges(Height, Width, TileWidth);
+        OnBoardDimensionsChanged?.Invoke(this, new OnBoardDimensionsChangedEventArgs() { BoardStats = this, BoardEdges = _boardEdges });
+    }
+
     public int Age; // age in days since the start of the board
 
-    public int height;
-    public int width;
+    public int Height { get; private set; }
+    public int Width { get; private set; }
+
+    public float TileWidth { get; private set; }
 
     public float tempVariance = 25f;
 
@@ -46,6 +74,12 @@ public class BoardStats : MonoBehaviour
 
     public GameObject[] tileTypes;
 
+
+    public class OnBoardDimensionsChangedEventArgs : EventArgs
+    {
+        public BoardEdges BoardEdges;
+        public BoardStats BoardStats;
+    }
 
 
 }
