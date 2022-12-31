@@ -17,6 +17,7 @@ public class CameraBoundsTestSuite
         GameObject DummyBoard = new GameObject("Dummy Board");
 
         TestCamera = TestCameraObject.AddComponent<Camera>();
+        TestCamera.orthographic = true;
         TestCameraMoveController = TestCameraObject.AddComponent<CameraMoveController>();
         TestCameraBounds = TestCameraObject.AddComponent<CameraBounds>();
         TestCameraBounds.BufferZone = 4f;
@@ -39,14 +40,14 @@ public class CameraBoundsTestSuite
     [Test]
     public void CanPreventCameraFromExceedingBounds()
     {
-        TestCameraMoveController.AttemptMove(new CameraMovement(new Rect(new Vector2(100, 0), new Vector2(100, 100)), TestCamera));
+        TestCameraMoveController.AttemptMove(new CameraMovement(new Rect(new Vector2(0, 100), new Vector2(100, 100)), TestCamera));
         Assert.AreEqual(new Vector3(10, 7, 0), TestCamera.transform.position, "Camera did not properly stay in bounds!");
     }
 
     [Test]
     public void CanResizeCameraBoundsWhenZooming()
     {
-        TestCameraMoveController.AttemptMove(new CameraMovement(new Rect(new Vector2(100, 0), new Vector2(50, 50)), TestCamera));
+        TestCameraMoveController.AttemptMove(new CameraMovement(new Rect(new Vector2(0, 100), new Vector2(50, 50)), TestCamera));
 
         Assert.AreEqual(false, "Need to figure out where the camera would be!");
     }
