@@ -33,6 +33,11 @@ public class BoardStats : MonoBehaviour
         }
     }
 
+    public void Initialize()
+    {
+        _boardEdges = new BoardEdges(Height, Width, TileWidth);
+    }
+
     public void SetDimensions(int w, int h)
     {
         _height = h;
@@ -49,6 +54,7 @@ public class BoardStats : MonoBehaviour
 
     void ResetBoardDimensions()
     {
+        Debug.Log("setting dimensions");
         _boardEdges = new BoardEdges(Height, Width, TileWidth);
         OnBoardDimensionsChanged?.Invoke(this, new OnBoardDimensionsChangedEventArgs() { BoardStats = this, BoardEdges = _boardEdges });
     }

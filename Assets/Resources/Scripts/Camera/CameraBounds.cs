@@ -1,20 +1,34 @@
 ﻿using System;
-using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 
 public class CameraBounds : MonoBehaviour, ICameraRestriction
 {
     public BoardEdges BoardEdges { get { return boardStats.BoardEdges; } }
+    public BoardLoader BoardLoader;
     BoardStats boardStats;
     public CameraMoveController CameraMoveController;
     public float BufferZone = 3f;
 
-   
+    Rect BufferEdges;
+
+
+
+    private void Start() {
+        BoardLoader.OnBoardCreated += CameraBounds_OnBoardCreated;
+    }
+
+    public void CameraBounds_OnBoardCreated(object sender, BoardLoader.OnBoardCreatedEventArgs e) {
+        SetBoard(e.BoardStats);
+    }
+
     public void SetBoard(BoardStats bs)
     {
         boardStats = bs;
-        CameraMoveController.AddRestriction(this); 
+        CameraMoveController.AddRestriction(this);
+        Vector2 BufferZoneVector = new Vector2(BufferZone, BufferZone);
+        BufferEdges = new Rect(BoardEdges.BottomLeft - BufferZoneVector, BoardEdges.TopRight + BufferZoneVector);
     }
 
 
@@ -42,30 +56,28 @@ public class CameraBounds : MonoBehaviour, ICameraRestriction
 
         // check bottom, right, top, left in this order to ensure that top left corner trumps the rest
 
-        if (newBounds.y < BoardEdges.Bounds.y)
+        if (newBounds.y < BufferEdges.y)
         {
-            newBounds.y = BoardEdges.Bounds.y;
+            newBounds.y = BufferEdges.y;
         }
 
         // should camera bounds worry about the righthand side of the rectangle? 
         // yes, but should be set first, so that it can be overridden by the righthand side if the whole bounds is too small
-        if (newBounds.xMax > BoardEdges.Bounds.xMax)
+        if (newBounds.xMax > BufferEdges.xMax)
         {
-            Debug.Log("newbounds is too big");
-            Debug.Log($"{BoardEdges.Bounds.xMax} - {newBounds.width} = {BoardEdges.Bounds.xMax - newBounds.width}");
-            newBounds.x = BoardEdges.Bounds.xMax - newBounds.width;
+            newBounds.x = BufferEdges.xMax - newBounds.width;
         }
 
 
-        if (newBounds.yMax > BoardEdges.Bounds.yMax)
+        if (newBounds.yMax > BufferEdges.yMax)
         {
-            newBounds.y = BoardEdges.Bounds.yMax - newBounds.height;
+            newBounds.y = BufferEdges.yMax - newBounds.height;
         }
 
 
-        if (newBounds.x < BoardEdges.Bounds.x)
+        if (newBounds.x < BufferEdges.x)
         {
-            newBounds.x = BoardEdges.Bounds.x;
+            newBounds.x = BufferEdges.x;
         }
 
         return new CameraMovement(newBounds, attemptedMove.Camera);

@@ -16,6 +16,7 @@ public class BoardLoader : MonoBehaviour
     {
         BoardObj = Instantiate(BoardTemplate);
         JsonUtility.FromJsonOverwrite(sb.serializedComponents[0], BoardObj.GetComponent<BoardStats>());
+        BoardObj.GetComponent<BoardStats>().Initialize();
         OnBoardCreated?.Invoke(this, new OnBoardCreatedEventArgs() { BoardStats = BoardObj.GetComponent<BoardStats>() });
         return BoardObj;
     }

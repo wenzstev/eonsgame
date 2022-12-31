@@ -8,7 +8,7 @@ public class CameraMovement
     public readonly float ZoomLevel;
 
     public Camera Camera { get; }
-    public Vector3 NewOrigin { get; }
+    public Vector3 NewOrigin { get { return new Vector3(ActualPosition.center.x, ActualPosition.center.y, Camera.transform.position.z); } }
     public Rect ActualPosition { get { return new Rect(NewBounds.min, new Vector2(NewBounds.height * Camera.aspect, NewBounds.height)); } } // preserve the height, but not the width 
     public float NewZoom { get { return NewBounds.height / 2; } }
 
@@ -22,8 +22,6 @@ public class CameraMovement
 
         NewBounds = newBounds;
         Camera = cam;
-        NewOrigin = ActualPosition.center;
-
     }
 
     public CameraMovement(Vector3 newOrigin, Camera cam)
@@ -34,7 +32,6 @@ public class CameraMovement
             return;
         }
         Camera = cam;
-        NewOrigin = newOrigin;
         float height = Camera.orthographicSize * 2;
         float width = height * Camera.aspect;
 
@@ -50,11 +47,11 @@ public class CameraMovement
         }
         Camera = cam;
 
-        NewOrigin = Camera.transform.position;
+        Vector3 newOrigin = Camera.transform.position;
         float height = newZoom * 2;
         float width = height * Camera.aspect;
 
-        NewBounds = new Rect(new Vector2(NewOrigin.x - width / 2, NewOrigin.y - height / 2), new Vector2(width, height));
+        NewBounds = new Rect(new Vector2(newOrigin.x - width / 2, newOrigin.y - height / 2), new Vector2(width, height));
 
     }
 
