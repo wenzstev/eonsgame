@@ -9,8 +9,8 @@ public class CameraMovement
 
     public Camera Camera { get; }
     public Vector3 NewOrigin { get; }
-    public Rect ActualPosition { get; }
-    public float NewZoom { get; }
+    public Rect ActualPosition { get { return new Rect(NewBounds.min, new Vector2(NewBounds.height * Camera.aspect, NewBounds.height)); } } // preserve the height, but not the width 
+    public float NewZoom { get { return NewBounds.height / 2; } }
 
     public CameraMovement(Rect newBounds, Camera cam)
     {
@@ -22,10 +22,39 @@ public class CameraMovement
 
         NewBounds = newBounds;
         Camera = cam;
-
-        NewZoom = newBounds.height / 2;
-        ActualPosition = new Rect(newBounds.min, new Vector2(newBounds.height * Camera.aspect, newBounds.height));
         NewOrigin = ActualPosition.center;
+
+    }
+
+    public CameraMovement(Vector3 newOrigin, Camera cam)
+    {
+        if (!cam.orthographic)
+        {
+            Debug.LogError("Camera must be orthographic!");
+            return;
+        }
+        Camera = cam;
+        NewOrigin = newOrigin;
+        float height = Camera.orthographicSize * 2;
+        float width = height * Camera.aspect;
+
+        NewBounds = new Rect(new Vector2(newOrigin.x - width / 2, newOrigin.y - height / 2), new Vector2(width, height));        
+    }
+
+    public CameraMovement(float newZoom, Camera cam)
+    {
+        if (!cam.orthographic)
+        {
+            Debug.LogError("Camera must be orthographic!");
+            return;
+        }
+        Camera = cam;
+
+        NewOrigin = Camera.transform.position;
+        float height = newZoom * 2;
+        float width = height * Camera.aspect;
+
+        NewBounds = new Rect(new Vector2(NewOrigin.x - width / 2, NewOrigin.y - height / 2), new Vector2(width, height));
 
     }
 

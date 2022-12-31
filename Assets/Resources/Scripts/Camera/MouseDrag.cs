@@ -12,6 +12,8 @@ public class MouseDrag : MonoBehaviour
 
     bool isDragging;
 
+    public CameraMoveController CameraMoveController;
+
 
     private void Update()
     {
@@ -48,7 +50,9 @@ public class MouseDrag : MonoBehaviour
         float size = Camera.main.orthographicSize;
         Vector3 adjustedPos = Vector3.Scale(pos, new Vector3(size * speedModifierX, size * speedModifierY, 1));
         Vector3 newPos = cameraOriginPosition - adjustedPos;
-        transform.position = newPos;
+
+        CameraMovement move = new CameraMovement(newPos, Camera.main);
+        CameraMoveController.AttemptMove(move);
     }
 
 }

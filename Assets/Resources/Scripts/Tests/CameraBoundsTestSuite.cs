@@ -18,6 +18,7 @@ public class CameraBoundsTestSuite
 
         TestCamera = TestCameraObject.AddComponent<Camera>();
         TestCamera.orthographic = true;
+        TestCamera.aspect = 16f / 10f;
         TestCameraMoveController = TestCameraObject.AddComponent<CameraMoveController>();
         TestCameraBounds = TestCameraObject.AddComponent<CameraBounds>();
         TestCameraBounds.BufferZone = 4f;
@@ -38,18 +39,24 @@ public class CameraBoundsTestSuite
     }
 
     [Test]
-    public void CanPreventCameraFromExceedingBounds()
+    public void CanPreventCameraFromExceedingBoundsLarge()
     {
-        TestCameraMoveController.AttemptMove(new CameraMovement(new Rect(new Vector2(0, 100), new Vector2(100, 100)), TestCamera));
-        Assert.AreEqual(new Vector3(10, 7, 0), TestCamera.transform.position, "Camera did not properly stay in bounds!");
+        TestCameraMoveController.AttemptMove(new CameraMovement(new Rect(new Vector2(0, 0), new Vector2(100, 100)), TestCamera));
+        Assert.AreEqual(new Vector3(80, -43, 0), TestCamera.transform.position, "Camera did not properly stay in bounds!");
     }
 
     [Test]
-    public void CanResizeCameraBoundsWhenZooming()
+    public void CanAllowCameraWhenLegalBoundsChange()
     {
-        TestCameraMoveController.AttemptMove(new CameraMovement(new Rect(new Vector2(0, 100), new Vector2(50, 50)), TestCamera));
+        TestCameraMoveController.AttemptMove(new CameraMovement(new Rect(Vector2.zero, new Vector2(5, 5)), TestCamera));
+        Assert.AreEqual(new Vector3(4f, 2.5f, 0), TestCamera.transform.position, "Camera was prevented from executing legal move!");
+    }
 
-        Assert.AreEqual(false, "Need to figure out where the camera would be!");
+    [Test]
+    public void CanPreventCameraFromExceedingBoundsSmall()
+    {
+        TestCameraMoveController.AttemptMove(new CameraMovement(new Rect(new Vector2(-100, 3), new Vector2(5, 5)), TestCamera));
+        Assert.AreEqual(new Vector3(4f, 4.5f, 0), TestCamera.transform.position, "Camera was prevented from executing legal move!");
     }
 
 }
