@@ -35,8 +35,8 @@ public class BoardStats : MonoBehaviour
 
     public void SetDimensions(int w, int h)
     {
-        Height = h;
-        Width = w;
+        _height = h;
+        _width = w;
         ResetBoardDimensions();
     }
 
@@ -55,8 +55,13 @@ public class BoardStats : MonoBehaviour
 
     public int Age; // age in days since the start of the board
 
-    public int Height { get; private set; }
-    public int Width { get; private set; }
+    [SerializeField]
+    int _height;
+    [SerializeField]
+    int _width;
+
+    public int Height { get { return _height; } }
+    public int Width { get { return _width; } }
 
     public float TileWidth { get; private set; }
 

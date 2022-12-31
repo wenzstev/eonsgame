@@ -40,34 +40,35 @@ public class CameraBounds : MonoBehaviour, ICameraRestriction
 
         Rect newBounds = attemptedMove.ActualPosition;
 
+        // check bottom, right, top, left in this order to ensure that top left corner trumps the rest
 
-
-        if(newBounds.x < BoardEdges.Bounds.x)
+        if (newBounds.y < BoardEdges.Bounds.y)
         {
-            newBounds.x = BoardEdges.Bounds.x;
+            newBounds.y = BoardEdges.Bounds.y;
         }
 
         // should camera bounds worry about the righthand side of the rectangle? 
         // yes, but should be set first, so that it can be overridden by the righthand side if the whole bounds is too small
-        if(newBounds.xMax > BoardEdges.Bounds.xMax)
+        if (newBounds.xMax > BoardEdges.Bounds.xMax)
         {
             Debug.Log("newbounds is too big");
             Debug.Log($"{BoardEdges.Bounds.xMax} - {newBounds.width} = {BoardEdges.Bounds.xMax - newBounds.width}");
             newBounds.x = BoardEdges.Bounds.xMax - newBounds.width;
         }
 
-        if(newBounds.y < BoardEdges.Bounds.y)
-        {
-            newBounds.y = BoardEdges.Bounds.y;
-        }
 
         if (newBounds.yMax > BoardEdges.Bounds.yMax)
         {
             newBounds.y = BoardEdges.Bounds.yMax - newBounds.height;
         }
 
-        return new CameraMovement(newBounds, attemptedMove.Camera);
 
+        if (newBounds.x < BoardEdges.Bounds.x)
+        {
+            newBounds.x = BoardEdges.Bounds.x;
+        }
+
+        return new CameraMovement(newBounds, attemptedMove.Camera);
     }
 
 
