@@ -5,13 +5,17 @@ using UnityEngine;
 public class MouseScroll : MonoBehaviour
 {
     public float scale;
+    public CameraMoveController CameraMoveController;
 
     void Update()
     {
-        Camera.main.orthographicSize += Input.mouseScrollDelta.y * scale;
-        if(Camera.main.orthographicSize < 1)
+        float newScale = Input.mouseScrollDelta.y * scale;
+
+        if(newScale != 0)
         {
-            Camera.main.orthographicSize = 1;
+            CameraMovement move = new CameraMovement(newScale + Camera.main.orthographicSize, Camera.main);
+            CameraMoveController.AttemptMove(move);
         }
     }
+
 }

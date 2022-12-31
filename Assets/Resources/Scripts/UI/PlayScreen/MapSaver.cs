@@ -23,7 +23,11 @@ public class MapSaver : MonoBehaviour
         GameObject bObject = Instantiate(board);
         Board b = bObject.GetComponent<Board>();
 
-        b.CreateBoardFromValues(values, values.GetLength(0), values.GetLength(1));
+        BoardStats boardStats = bObject.GetComponent<BoardStats>();
+        boardStats.SetDimensions(values.GetLength(0), values.GetLength(1));
+        boardStats.SetTileWidth(1); // hard coded right now, need to change to get from spite size
+
+        b.CreateBoardFromValues(values);
 
 
         Save save = new Save(b);
