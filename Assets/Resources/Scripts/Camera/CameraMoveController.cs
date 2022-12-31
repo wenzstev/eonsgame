@@ -15,6 +15,7 @@ public class CameraMoveController : MonoBehaviour
 
     public void AddRestriction(ICameraRestriction restriction)
     {
+        Debug.Log("Adding restriction: " + restriction);
         Restrictions.Add(restriction);
     }
 
@@ -23,7 +24,7 @@ public class CameraMoveController : MonoBehaviour
         CameraMovement modifiedMove = attemptedMove;
         foreach (ICameraRestriction restriction in Restrictions)
         {
-            modifiedMove = restriction.ProvideModifiedMove(attemptedMove);
+            modifiedMove = restriction.ProvideModifiedMove(modifiedMove);
         }
         modifiedMove.ExecuteMove();
     }
