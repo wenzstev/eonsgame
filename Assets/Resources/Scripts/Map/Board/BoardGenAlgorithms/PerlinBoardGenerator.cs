@@ -15,7 +15,7 @@ public class PerlinBoardGenerator : BoardGenAlgorithm
     public override BoardTileRelationship CreateBoard(BoardStats bs)
     {
         HeightmapGenerator heightmapGenerator = GetComponent<HeightmapGenerator>();
-        BoardTileRelationship perlinBoard = CreateRawBoard(bs.gameObject, bs.width, bs.height, heightmapGenerator);
+        BoardTileRelationship perlinBoard = CreateRawBoard(bs.gameObject, bs.Width, bs.Height, heightmapGenerator);
 
         for (int j = 0; j < perlinBoard.tiles.GetLength(1); j++)
         {

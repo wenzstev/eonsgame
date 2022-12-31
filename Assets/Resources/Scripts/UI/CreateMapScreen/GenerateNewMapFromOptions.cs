@@ -28,8 +28,8 @@ public class GenerateNewMapFromOptions : MonoBehaviour
         GameObject boardCreator = Instantiate(MapGeneratorTemplate);
 
         BoardStats bs = boardObj.GetComponent<BoardStats>();
-        bs.height = mapSize.Item2;
-        bs.width = mapSize.Item1;
+        bs.SetDimensions(mapSize.Item1, mapSize.Item2);
+        bs.SetTileWidth(1);
         bs.LandRisePoint = waterlevel;
         bs.globalPrecipitation = precipitation;
         bs.globalTemp = temperature;
