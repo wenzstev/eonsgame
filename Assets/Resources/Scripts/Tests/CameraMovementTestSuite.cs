@@ -22,12 +22,24 @@ public class CameraMovementTestSuite
     }
 
     [Test]
-    public void CanDetermineNewTransformFromBounds()
+    public void CanDetermineNewEdgesFromBounds()
     {
         TestCameraMovement = GenerateTransform(new Rect(0, 0, 50, 50));
+        Assert.AreEqual(new Rect(0, 0, 80, 50), TestCameraMovement.ActualPosition);
+    }
 
-        Assert.AreEqual(new Vector3(40, 25, 0), TestCameraMovement.NewOrigin);
+    [Test]
+    public void CanDetermineNewZoomFromBounds()
+    {
+        TestCameraMovement = GenerateTransform(new Rect(0, 0, 50, 50));
         Assert.AreEqual(25, TestCameraMovement.NewZoom);
+    }
+
+    [Test]
+    public void CanDetermineNewOriginFromBounds()
+    {
+        TestCameraMovement = GenerateTransform(new Rect(0, 0, 50, 50));
+        Assert.AreEqual(new Vector3(40, 25, 0), TestCameraMovement.NewOrigin);
     }
 
     [Test]

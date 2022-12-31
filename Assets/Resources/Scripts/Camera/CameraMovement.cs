@@ -7,7 +7,6 @@ public class CameraMovement
     public readonly Rect NewBounds;
     public readonly float ZoomLevel;
 
-    public Rect NewCameraEdges { get; }
     public Camera Camera { get; }
     public Vector3 NewOrigin { get; }
     public Rect ActualPosition { get; }
@@ -15,6 +14,12 @@ public class CameraMovement
 
     public CameraMovement(Rect newBounds, Camera cam)
     {
+        if(!cam.orthographic)
+        {
+            Debug.LogError("Camera must be orthographic!");
+            return;
+        }
+
         NewBounds = newBounds;
         Camera = cam;
 
