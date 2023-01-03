@@ -28,6 +28,7 @@ public class SaveObject : MonoBehaviour
 
     void SaveGame(Dictionary<string, object> payLoad)
     {
+        Debug.Log("saving game");
         GameObject boardToSave = (GameObject)payLoad["board"];
 
         Save newSave = new Save(boardToSave.GetComponent<Board>());

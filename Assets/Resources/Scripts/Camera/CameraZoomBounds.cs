@@ -14,7 +14,6 @@ public class CameraZoomBounds : MonoBehaviour, ICameraRestriction
 
     public CameraMovement ProvideModifiedMove(CameraMovement attemptedMove)
     {
-        Debug.Log(attemptedMove.NewZoom);
         if(attemptedMove.NewZoom > ZoomMax)
         {
             return new CameraMovement(ZoomMax, attemptedMove.Camera);

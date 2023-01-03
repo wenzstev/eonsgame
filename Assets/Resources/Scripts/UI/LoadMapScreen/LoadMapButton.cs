@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 using TMPro;
 using System.Text.RegularExpressions;
+using System.IO;
 
 public class LoadMapButton : MonoBehaviour
 {
@@ -16,7 +18,7 @@ public class LoadMapButton : MonoBehaviour
     {
         this.filePath = filePath;
         saveName = GetComponentInChildren<TMP_Text>();
-        fileName = GetFilenameFromPath(filePath);
+        fileName = Path.GetFileNameWithoutExtension(filePath);
         if(fileName != "")
         {
             saveName.text = fileName;
@@ -25,32 +27,12 @@ public class LoadMapButton : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-
-
     }
 
     public void LoadMap()
     {
-        Save save = Save.UnserializeSave(filePath);
+        Save save = Save.UnserializeSave(fileName);
         Save.CreatePersistantSave(save, fileName);
         SceneManager.LoadScene("PlayScene");
     }
-
-    public static string GetFilenameFromPath(string filePath)
-    {
-        //Debug.Log(filePath);
-        Regex rx = new Regex(@"\\(.*).json");
-        //Debug.Log(rx);
-        //Debug.Log(rx.Match(filePath));
-        Match match = rx.Match(filePath);
-        if(match.Success)
-        {
-            return match.Groups[1].Value;
-        }
-        return "";
-    }
-
-
-
 }

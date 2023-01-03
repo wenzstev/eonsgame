@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -10,7 +10,6 @@ public class ImprovedBoardGen : BoardGenAlgorithm
 
     GameObject boardObj;
 
-   
 
     public override BoardTileRelationship CreateBoard(BoardStats bs)
     {
@@ -62,6 +61,8 @@ public class ImprovedBoardGen : BoardGenAlgorithm
                 HashSet<GameObject> coastNeighbors = neighbors.Where(neighbor => neighbor.GetComponent<TileChars>().isUnderwater == false).ToHashSet();
                 firstPass.UnionWith(coastNeighbors);
                 curTileChars.precipitation = boardObj.GetComponent<BoardStats>().globalPrecipitation;
+                curTileChars.InformAllStatsCalculated();
+
                 passedTiles.Add(curTile.gameObject);
             }
         }
@@ -76,6 +77,10 @@ public class ImprovedBoardGen : BoardGenAlgorithm
 
                 var passedNeighbors = neighbors.Where(e => passedTiles.Contains(e));
                 curTile.GetComponent<TileChars>().precipitation = passedNeighbors.Average(e => calculatePrecipitation(curTile.gameObject, e)); // actual precipitation calculation is here
+
+                // fire event to indicate that all stats are created
+                curTile.GetComponent<TileChars>().InformAllStatsCalculated();
+
 
                 secondPass.UnionWith(neighbors.Where(e => !passedNeighbors.Contains(e)));
             }
@@ -98,9 +103,6 @@ public class ImprovedBoardGen : BoardGenAlgorithm
         contributedPrecipitation = adjacentTileChars.precipitation * (1 - precipitationDropoff) * tempModifier;
 
         
-
-        //contributedPrecipitation = adjacentTileChars.precipitation * (1-precipitationDropoff) * Mathf.Clamp(.033f * curTileChars.temperature, 0.01f, 1); // mystery function; rewrite with curves
-
 
         float elevationDistance = Mathf.Max(0, curTileChars.elevation - adjacentTileChars.elevation);
 
@@ -134,6 +136,4 @@ public class ImprovedBoardGen : BoardGenAlgorithm
 
         return tempWithoutElevation - tileChars.elevation / 100; // elevation is in meters, lose 1 degree Celcius per 100 meters in height change
     }
-
-
 }
