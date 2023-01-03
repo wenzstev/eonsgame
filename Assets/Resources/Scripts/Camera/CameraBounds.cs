@@ -16,7 +16,7 @@ public class CameraBounds : MonoBehaviour, ICameraRestriction
 
 
     private void Start() {
-        BoardLoader.OnBoardCreated += CameraBounds_OnBoardCreated;
+        if(BoardLoader) BoardLoader.OnBoardCreated += CameraBounds_OnBoardCreated;
     }
 
     public void CameraBounds_OnBoardCreated(object sender, BoardLoader.OnBoardCreatedEventArgs e) {

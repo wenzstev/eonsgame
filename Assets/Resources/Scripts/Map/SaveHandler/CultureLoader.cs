@@ -8,17 +8,38 @@ public class CultureLoader : MonoBehaviour
     public void LoadCulturesFromSerialized(SerializedCultures scs, GameObject boardObj)
     {
         Board b = boardObj.GetComponent<Board>();
-        foreach (SerializedCulture sc in scs.cultures)
+        foreach (SerializedCulture sc in scs.SettledCultures)
         {
             // assuming that the tile has been created
             GameObject curTile = b.GetTile(sc.x, sc.y);
-            GameObject curCultureObj = Instantiate(CultureTile, curTile.transform);
-            JsonUtility.FromJsonOverwrite(sc.serializedComponents[0], curCultureObj.GetComponent<Culture>());
-            JsonUtility.FromJsonOverwrite(sc.serializedComponents[1], curCultureObj.GetComponent<CultureMemory>());
+            Culture NewCulture = DeserializeCulture(sc, curTile);
 
-
-            Culture curCulture = curCultureObj.GetComponent<Culture>();
-            curCulture.LoadFromSerialized(curTile, CultureTile);
+            NewCulture.SetTile(curTile.GetComponent<Tile>(), true);
         }
+
+        foreach(SerializedCulture sc in scs.StagedCultures)
+        {
+            GameObject curTile = b.GetTile(sc.x, sc.y);
+            Culture NewCulture = DeserializeCulture(sc, curTile);
+
+            NewCulture.SetTile(curTile.GetComponent<Tile>(), false);
+        }
+
+    }
+
+
+    Culture DeserializeCulture(SerializedCulture sc, GameObject tile)
+    {
+        GameObject curCultureObj = Instantiate(CultureTile, tile.transform);
+        JsonUtility.FromJsonOverwrite(sc.serializedComponents[0], curCultureObj.GetComponent<Culture>());
+        JsonUtility.FromJsonOverwrite(sc.serializedComponents[1], curCultureObj.GetComponent<CultureMemory>());
+        JsonUtility.FromJsonOverwrite(sc.serializedComponents[2], curCultureObj.GetComponent<AffinityManager>());
+
+        Culture NewCulture = curCultureObj.GetComponent<Culture>();
+        NewCulture.SetColor(NewCulture.Color);
+        NewCulture.RenameCulture(NewCulture.Name);
+
+        EventManager.TriggerEvent("CultureCreated", new Dictionary<string, object>() { { "culture", curCultureObj.GetComponent<Culture>() } });
+        return curCultureObj.GetComponent<Culture>();
     }
 }

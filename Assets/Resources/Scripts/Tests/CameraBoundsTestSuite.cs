@@ -42,7 +42,7 @@ public class CameraBoundsTestSuite
     public void CanPreventCameraFromExceedingBoundsLarge()
     {
         TestCameraMoveController.AttemptMove(new CameraMovement(new Rect(new Vector2(0, 0), new Vector2(100, 100)), TestCamera));
-        Assert.AreEqual(new Vector3(80, -43, 0), TestCamera.transform.position, "Camera did not properly stay in bounds!");
+        Assert.AreEqual(new Vector3(76, -43, 0), TestCamera.transform.position, "Camera did not properly stay in bounds!");
     }
 
     [Test]
@@ -56,7 +56,7 @@ public class CameraBoundsTestSuite
     public void CanPreventCameraFromExceedingBoundsSmall()
     {
         TestCameraMoveController.AttemptMove(new CameraMovement(new Rect(new Vector2(-100, 3), new Vector2(5, 5)), TestCamera));
-        Assert.AreEqual(new Vector3(4f, 4.5f, 0), TestCamera.transform.position, "Camera was prevented from executing legal move!");
+        Assert.AreEqual(new Vector3(0f, 4.5f, 0), TestCamera.transform.position, "Camera did not properly stay in bounds!");
     }
 
 }

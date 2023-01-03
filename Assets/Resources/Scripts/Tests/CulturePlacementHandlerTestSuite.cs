@@ -29,6 +29,7 @@ public class CulturePlacementHandlerTestSuite : BasicTest
         TestCultureContainer = TestCulturePlacementObj.AddComponent<CultureContainer>();
         TestCulturePlacementHandler = TestCulturePlacementObj.AddComponent<CulturePlacementHandler>();
         TestCulturePlacementHandler.CultureContainer = TestCultureContainer;
+        TestCulturePlacementHandler.Initialize();
     }
 
     [UnityTest]

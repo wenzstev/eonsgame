@@ -45,12 +45,23 @@ public class TileLoader : MonoBehaviour
     public GameObject createTile(SerializedTile st)
     {
         GameObject newTile = Instantiate(TileTemplate);
+        newTile.GetComponent<Tile>().board = curBoard.GetComponent<Board>();
+
         JsonUtility.FromJsonOverwrite(st.serializedComponents[0], newTile.GetComponent<TileChars>()); // presently hardcoding the index, inelegant but makes using FromJsonOverwrite very easy. TODO: better way?
+
         TileChars loadedTileChars = newTile.GetComponent<TileChars>();
         newTile.transform.position = new Vector3(loadedTileChars.x, loadedTileChars.y);
+        newTile.GetComponent<TileDrawer>().Initialize();
+
+        JsonUtility.FromJsonOverwrite(st.serializedComponents[1], newTile.GetComponent<TileFood>());
+        newTile.GetComponentInChildren<TileGreyscaleOverlayLink>().Initialize();
+        newTile.GetComponent<TileFood>().Initialize();
+
         newTile.transform.SetParent(curBoard.transform);
-        newTile.GetComponent<Tile>().board = curBoard.GetComponent<Board>();
         newTile.name = loadedTileChars.x + ", " + loadedTileChars.y;
+
+        newTile.GetComponentInChildren<CulturePlacementHandler>().Initialize();
+
         return newTile;
     }
 }

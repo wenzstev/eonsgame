@@ -14,6 +14,7 @@ public class SerializedCulture : SerializedGameObject
         this.y = y;
         serializedComponents.Add(JsonUtility.ToJson(culture));
         serializedComponents.Add(JsonUtility.ToJson(culture.GetComponent<CultureMemory>()));
+        serializedComponents.Add(JsonUtility.ToJson(culture.GetComponent<AffinityManager>()));
     }
 
 }

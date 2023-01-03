@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-
+[System.Serializable]
 public class TileFood : MonoBehaviour
 {
     public float CurFood;
@@ -25,20 +25,20 @@ public class TileFood : MonoBehaviour
 
     public event EventHandler<OnLowFoodEventArgs> OnLowFood;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        Initialize();
+        tileChars = GetComponent<TileChars>();
+        tileChars.OnAllTileStatsCalculated += TileFood_OnAllTileStatsCalculated;
     }
 
     public void Initialize()
     {
-        tileChars = GetComponent<TileChars>();
         TempCurve = CreateTempCurve();
         PrecipitationCurve = CreatePrecipitationCurve();
         CalculateFoodRate();
-        SetMaxFood();
         EventManager.StartListening("Tick", OnTick);
+        FireFoodAction();
+
     }
 
     public float CalculateFoodRate()
@@ -77,6 +77,12 @@ public class TileFood : MonoBehaviour
     public void FireFoodAction()
     {
         OnLowFood?.Invoke(this, new OnLowFoodEventArgs {MaxFood = this.MaxFood, CurFood = this.CurFood });
+    }
+
+    public void TileFood_OnAllTileStatsCalculated(object sender, TileChars.OnAllTileStatsCalculatedEventArgs e)
+    {
+        Initialize();
+        SetMaxFood();
     }
 
     public class OnLowFoodEventArgs : EventArgs

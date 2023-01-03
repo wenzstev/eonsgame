@@ -5,18 +5,26 @@ using System.Collections.Generic;
 [System.Serializable]
 public class SerializedCultures
 {
-    public List<SerializedCulture> cultures;
+
+    public List<SerializedCulture> StagedCultures;
+    public List<SerializedCulture> SettledCultures;
 
     public SerializedCultures(Board b)
     {
-        cultures = new List<SerializedCulture>();
+        StagedCultures = new List<SerializedCulture>();
+        SettledCultures = new List<SerializedCulture>();
+
         for(int j = 0; j < b.Height; j++)
         {
             for(int i = 0; i < b.Width; i++)
             {
-                foreach(KeyValuePair<string, Culture> kvp in b.Tiles[i,j].GetComponent<TileInfo>().cultures)
+                foreach(Culture c in b.Tiles[i, j].GetComponentInChildren<CultureHandler>().GetAllSettledCultures())
                 {
-                    cultures.Add(new SerializedCulture(kvp.Value, i, j));
+                    SettledCultures.Add(new SerializedCulture(c, i, j));
+                }
+                foreach(Culture c in b.Tiles[i, j].GetComponentInChildren<CultureHandler>().GetAllStagedCultures())
+                {
+                    StagedCultures.Add(new SerializedCulture(c, i, j));
                 }
             }
         }

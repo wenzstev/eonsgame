@@ -8,6 +8,8 @@ public class SerializedTile : SerializedGameObject
     public SerializedTile(GameObject tile)
     {
         serializedComponents.Add(JsonUtility.ToJson(tile.GetComponent<TileChars>()));
+        serializedComponents.Add(JsonUtility.ToJson(tile.GetComponent<TileFood>()));
+
     }
 }
 

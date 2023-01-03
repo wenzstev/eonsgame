@@ -280,6 +280,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 2108349012625740236, guid: 924d611a7c3612245a6ee97386fb5028, type: 3}
+      propertyPath: CameraMoveController
+      value: 
+      objectReference: {fileID: 1596317510}
+    - target: {fileID: 2108349012625740237, guid: 924d611a7c3612245a6ee97386fb5028, type: 3}
+      propertyPath: CameraMoveController
+      value: 
+      objectReference: {fileID: 1596317510}
     - target: {fileID: 2108349012625740239, guid: 924d611a7c3612245a6ee97386fb5028, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -610,7 +618,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5695180184468728085, guid: 3681249039e02d34ebfe54f4c812318a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3681249039e02d34ebfe54f4c812318a, type: 3}
@@ -631,6 +639,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81b831b58d8ae43468939a2f4cfbe289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BoardLoader: {fileID: 1079782344}
+  CameraMoveController: {fileID: 1596317510}
+  BufferZone: 3
 --- !u!68 &1596317504
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -653,6 +664,34 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1596317510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596317497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae3a2b58e23c5564b8b6f37e9bb1b70f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Camera: {fileID: 0}
+--- !u!114 &1596317511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596317497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eb531d0e64454300a9837426ba75542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ZoomMin: 1
+  ZoomMax: 20
+  CameraMoveController: {fileID: 1596317510}
 --- !u!1 &1600105421
 GameObject:
   m_ObjectHideFlags: 0
