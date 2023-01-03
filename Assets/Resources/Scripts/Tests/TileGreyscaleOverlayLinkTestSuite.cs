@@ -14,6 +14,7 @@ public class TileGreyscaleOverlayLinkTestSuite
     {
         // link everything up
         TestTileObject = new GameObject();
+        TestTileObject.AddComponent<TileChars>();
         TestTileFood = TestTileObject.AddComponent<TileFood>();
         TestTileObject.AddComponent<SpriteRenderer>();
 

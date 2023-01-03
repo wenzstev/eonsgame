@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +7,9 @@ public class TileChars : MonoBehaviour
 {
     public int x;
     public int y;
+
+    public event EventHandler<OnAllTileStatsCalculatedEventArgs> OnAllTileStatsCalculated;
+
 
     public TileDrawer.BiomeType Biome
     {
@@ -54,9 +57,19 @@ public class TileChars : MonoBehaviour
         {
             if(_boardStats == null)
             {
-                        _boardStats = GetComponent<Tile>().board.GetComponent<BoardStats>();
+                _boardStats = GetComponent<Tile>().board.GetComponent<BoardStats>();
             }
             return _boardStats;
         }
+    }
+
+    public void InformAllStatsCalculated()
+    {
+        OnAllTileStatsCalculated?.Invoke(this, new OnAllTileStatsCalculatedEventArgs() { TileChars = this });
+    }
+
+    public class OnAllTileStatsCalculatedEventArgs : EventArgs
+    {
+        public TileChars TileChars;
     }
 }

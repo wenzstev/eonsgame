@@ -2,6 +2,7 @@
 using UnityEngine;
 
 
+[System.Serializable]
 public class GompertzCurve : ICurve
 {
     public float Asymptote;

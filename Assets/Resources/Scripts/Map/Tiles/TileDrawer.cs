@@ -62,8 +62,7 @@ public class TileDrawer : MonoBehaviour
         {BiomeType.Ice, BiomeType.Tundra, BiomeType.BorealForest, BiomeType.TemperateRainForest, BiomeType.TropicalRainforest, BiomeType.TropicalRainforest },
     };
 
-    // Start is called before the first frame update
-    void Start()
+    public void Initialize()
     {
         tileChars = GetComponent<TileChars>();
         sr = GetComponent<SpriteRenderer>();

@@ -18,6 +18,7 @@ public class Culture : MonoBehaviour
     public Tile Tile { get; private set; }
     public TileInfo tileInfo { get; private set; }
 
+
     CultureHandler cultureHandler;
 
     public CultureHandler CultureHandler { get { return cultureHandler; } }
@@ -126,13 +127,6 @@ public class Culture : MonoBehaviour
         decisionMaker = new DecisionMaker(this);
     }
 
-    public void LoadFromSerialized(GameObject t, GameObject cultureTemplate)
-    {
-        Tile = t.GetComponent<Tile>();
-        SetColor(color);
-        gameObject.name = name;
-    }
-
     public void Init(Tile t, int InitialPopulation)
     {
         currentState = State.Default;
@@ -169,7 +163,7 @@ public class Culture : MonoBehaviour
     {
         if(newState == State.PendingRemoval)
         {
-            DestroyCulture();
+            Destroy(gameObject);
             return;
         }
         if(CultureMemory.previousState != newState)
@@ -220,21 +214,13 @@ public class Culture : MonoBehaviour
 
     }
 
-    public void DestroyCulture()
-    {
-        //Debug.Log($"Destroying {this}");
-        EventManager.TriggerEvent("CultureDestroyed", new Dictionary<string, object> { { "culture", this } });
-        OnCultureDestroyed?.Invoke(this, new OnCultureDestroyedEventArgs() { DestroyedCulture = this });
-        Destroy(gameObject);
-    }
-
     public void AddPopulation(int num)
     { 
         //Debug.Log("adding " + num + " to  " + GetHashCode());
         population += num;
         if(population == 0)
         {
-            DestroyCulture();
+            Destroy(gameObject);
         }
 
         if (num != 0) OnPopulationChanged?.Invoke(this, new OnPopulationChangedEventArgs() { PopChange = num});
@@ -301,6 +287,12 @@ public class Culture : MonoBehaviour
     public override string ToString()
     {
         return $"{name}({GetHashCode()})";
+    }
+
+    private void OnDestroy()
+    {
+        EventManager.TriggerEvent("CultureDestroyed", new Dictionary<string, object> { { "culture", this } });
+        OnCultureDestroyed?.Invoke(this, new OnCultureDestroyedEventArgs() { DestroyedCulture = this });
     }
 
 

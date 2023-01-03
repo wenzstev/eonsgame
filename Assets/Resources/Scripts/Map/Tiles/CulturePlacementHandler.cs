@@ -15,7 +15,8 @@ public class CulturePlacementHandler : MonoBehaviour
 
     Vector3[][] Positions;
 
-    private void Start()
+
+    public void Initialize()
     {
         currentList = new Culture[0];
         CalculateCulturePositionList();
@@ -51,6 +52,7 @@ public class CulturePlacementHandler : MonoBehaviour
 
     void CompareOldPositionsToNew(Culture[] newCulturelist)
     {
+        if (!gameObject.activeInHierarchy) return; // don't attempt if object is inactive (such as when exiting to main menu)
         Vector3[] ExpectedPositions = CalculateExpectedLocations(newCulturelist);
         for (int i = 0; i < ExpectedPositions.Length; i++)
         {
@@ -60,7 +62,7 @@ public class CulturePlacementHandler : MonoBehaviour
             if (oldCultureAtPosition == null
                 || oldCultureAtPosition != newCultureAtPosition
                 || oldCultureAtPosition.transform.position != ExpectedPositions[i]
-                || !newCultureAtPosition.Equals(null)) // culture can be destroyed
+                || !newCultureAtPosition.Equals(null))  // culture can be destroyed
             {
                 StartCoroutine(MoveCulture(newCultureAtPosition, ExpectedPositions[i]));
             }
