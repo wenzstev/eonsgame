@@ -11,11 +11,6 @@ public class TileGreyscaleOverlayLink : MonoBehaviour
     float percentLowIndicator = .2f;
 
 
-    void Start()
-    {
-        Initialize();    
-    }
-
     public void Initialize()
     {
         _tileFood = GetComponentInParent<TileFood>();
@@ -35,6 +30,8 @@ public class TileGreyscaleOverlayLink : MonoBehaviour
             MakeOverlayTransparent();
         }
     }
+
+ 
 
     void AdjustOverlayTransparency(float curFood, float maxFood)
     {

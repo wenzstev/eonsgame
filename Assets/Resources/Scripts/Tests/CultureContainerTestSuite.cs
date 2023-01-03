@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using NUnit.Framework;
+using UnityEngine.TestTools;
 
 public class CultureContainerTestSuite : BasicTest
 {
@@ -61,8 +62,8 @@ public class CultureContainerTestSuite : BasicTest
         Assert.AreEqual(TestCultureB, TestCultureContainer.GetAllCultures()[0], "CultureB should be first!");
     }
 
-    [Test]
-    public void CanResortWhenCultureDestroyed()
+    [UnityTest]
+    public IEnumerator CanResortWhenCultureDestroyed()
     {
         TestCultureA.AddPopulation(5);
         TestCultureB.AddPopulation(2);
@@ -71,7 +72,9 @@ public class CultureContainerTestSuite : BasicTest
         TestCultureContainer.AddCulture(TestCultureA);
         TestCultureContainer.AddCulture(TestCultureB);
 
-        TestCultureA.DestroyCulture();
+        MonoBehaviour.Destroy(TestCultureA);
+
+        yield return null;
 
         Assert.AreEqual(TestCultureB, TestCultureContainer.GetAllCultures()[0]);
         Assert.AreEqual(1, TestCultureContainer.GetAllCultures().Length);
