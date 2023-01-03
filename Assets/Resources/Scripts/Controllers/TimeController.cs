@@ -11,13 +11,6 @@ public class TimeController : MonoBehaviour
 
     bool isPaused = true;
 
-    /*
-     Level 1: 1 tick per second => 1
-     Level 2: 2 ticks per second => .5f
-     Level 3: 4 ticks per second => .25f
-     Level 4: 8 ticks per second => .125f
-     */
-
 
     private void Start()
     {
