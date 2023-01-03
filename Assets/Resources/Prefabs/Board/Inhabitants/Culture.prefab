@@ -439,7 +439,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FoodAmountIndicatorTemplate: {fileID: 7818443324861133336, guid: 6c4f43eb58d335940bc1f71bd6349ecd, type: 3}
   FoodStore: {fileID: -5036476844479646280}
-  TicksBetweenIndicators: 60
+  CurTicksBetweenIndicators: 1
+  TicksBetweenIndicators: 01000000070000003c000000ffffffff
 --- !u!114 &7029493985671350848
 MonoBehaviour:
   m_ObjectHideFlags: 0
