@@ -40,7 +40,7 @@ public class FoodAmountIndicatorTestSuite
 
     IEnumerator SetFoodAndPassTime(int ticksBetween)
     {
-        TestFoodAmountIndicatorGenerator.TicksBetweenIndicators = ticksBetween;
+        TestFoodAmountIndicatorGenerator.CurTicksBetweenIndicators = ticksBetween;
 
         foreach (var _ in Enumerable.Range(0, ticksBetween)) 
         {
