@@ -237,7 +237,7 @@ public class Culture : MonoBehaviour
         //Debug.Log($"removing culture {this} ({this.GetHashCode()}) from {Tile}");
         if(Tile == null)
         {
-            Debug.LogWarning("Tried to remove from nonexistant tile!");
+            //Debug.LogWarning("Tried to remove from nonexistant tile!");
             return;
         }
         cultureHandler.RemoveCulture(this);

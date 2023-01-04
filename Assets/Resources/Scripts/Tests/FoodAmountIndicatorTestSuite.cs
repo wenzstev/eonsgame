@@ -5,7 +5,7 @@ using UnityEngine.TestTools;
 using System.Linq;
 using NUnit.Framework;
 
-public class FoodAmountIndicatorTestSuite 
+public class FoodAmountIndicatorTestSuite : BasicTest
 {
     FoodAmountIndicatorGenerator TestFoodAmountIndicatorGenerator;
     CultureFoodStore TestCultureFoodStore;
@@ -13,9 +13,14 @@ public class FoodAmountIndicatorTestSuite
     [UnitySetUp]
     public IEnumerator SetUpFoodIndicatorTest()
     {
+        GameObject TimeControllerObj = new GameObject("Time Controller");
+        TimeControllerObj.AddComponent<TimeController>();
+        TimeController.instance.speeds = new float[] { 1 };
+
         GameObject TestObject = new GameObject("TestStoreObj");
         TestCultureFoodStore = TestObject.AddComponent<CultureFoodStore>();
         TestFoodAmountIndicatorGenerator = TestObject.AddComponent<FoodAmountIndicatorGenerator>();
+        TestFoodAmountIndicatorGenerator.TicksBetweenIndicators = new int[] { 1, 7, 60, -1 };
         TestFoodAmountIndicatorGenerator.FoodStore = TestCultureFoodStore;
         TestFoodAmountIndicatorGenerator.FoodAmountIndicatorTemplate = Resources.Load<GameObject>("Prefabs/Board/Inhabitants/FoodAmountIndicator");
         yield return null;
@@ -40,11 +45,12 @@ public class FoodAmountIndicatorTestSuite
 
     IEnumerator SetFoodAndPassTime(int ticksBetween)
     {
-        TestFoodAmountIndicatorGenerator.TicksBetweenIndicators = ticksBetween;
+        TestFoodAmountIndicatorGenerator.CurTicksBetweenIndicators = ticksBetween;
 
         foreach (var _ in Enumerable.Range(0, ticksBetween)) 
         {
             TestCultureFoodStore.AlterFoodStore(10);
+            TestFoodAmountIndicatorGenerator.TickExecuted();
             yield return null;
         }
     }

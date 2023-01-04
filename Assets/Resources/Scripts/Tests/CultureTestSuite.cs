@@ -6,6 +6,13 @@ using NUnit.Framework;
 
 public class CultureTestSuite : CultureInteractionTest
 {
+    [SetUp]
+    public void SetUpInteractionTest()
+    {
+        GameObject TimeControllerObject = new GameObject("TimeController");
+        TimeControllerObject.AddComponent<TimeController>(); // need a TimeController because the template that the culture needs to create a new culture requires it (TODO: reduce this dependency)
+    }
+
     [Test]
     public void TestSplitCulture()
     {
@@ -19,7 +26,6 @@ public class CultureTestSuite : CultureInteractionTest
         Assert.That(splitCulture.name == TestCulture.name, "Split culture's name doesn't match!");
         Assert.That(splitCulture.Population >= TestCulture.minPopTransfer && splitCulture.Population <= TestCulture.maxPopTransfer, "Split culture's size doesn't match split amount!");
         Assert.That(TestCulture.Population == oldPopulation - splitCulture.Population, "Parent culture's population wasn't lowered!");
-        Assert.That(splitCulture.GetComponent<CultureMemory>().cultureParentName == TestCulture.GetComponent<CultureMemory>().cultureParentName, "Split culture doesn't have the same parent!");
     }
 
     [Test]

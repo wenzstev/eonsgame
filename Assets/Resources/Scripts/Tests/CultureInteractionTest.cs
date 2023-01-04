@@ -11,8 +11,8 @@ public class CultureInteractionTest : CultureActionTest
     [UnitySetUp]
     public IEnumerator CreateNeighbor()
     {
-        NeighborObject = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Board/Inhabitants/Culture"));
-        Neighbor = NeighborObject.GetComponent<Culture>();
+        Neighbor = CreateBarebonesCulture("Neighbor");
+        NeighborObject = Neighbor.gameObject;
         yield return null;
     }
     

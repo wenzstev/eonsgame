@@ -1,4 +1,5 @@
 using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,16 +7,26 @@ public class FoodAmountIndicatorGenerator : MonoBehaviour
 {
     public GameObject FoodAmountIndicatorTemplate;
     public CultureFoodStore FoodStore;
-    public int TicksBetweenIndicators = 1;
+    public int CurTicksBetweenIndicators = 1;
+
+    public int[] TicksBetweenIndicators;
 
     float _amountFoodChange = 0;
     int _numTicksSinceIndicator;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         FoodStore.OnFoodStoreChanged += FoodAmountIndicatorGenerator_OnFoodStoreChanged;
+        EventManager.StartListening("SpeedChange", ChangeTicksBetween);
         _numTicksSinceIndicator = 0;
+        CurTicksBetweenIndicators = TicksBetweenIndicators[TimeController.GetCurTimeLevel()];
+    }
+
+
+    void ChangeTicksBetween(Dictionary<string, object> newSpeed)
+    {
+        _numTicksSinceIndicator = 0;
+        CurTicksBetweenIndicators = TicksBetweenIndicators[(int)newSpeed["speed"]];
     }
 
     void CreateIndicator()
@@ -26,11 +37,15 @@ public class FoodAmountIndicatorGenerator : MonoBehaviour
         _amountFoodChange = 0;
     }
 
+    public void TickExecuted()
+    {
+        _numTicksSinceIndicator++;
+        if (_numTicksSinceIndicator == CurTicksBetweenIndicators) CreateIndicator();
+    }
+
     void FoodAmountIndicatorGenerator_OnFoodStoreChanged(object sender, CultureFoodStore.OnFoodStoreChangedEventArgs e)
     {
         _amountFoodChange += e.FoodChangeAmount;
-        _numTicksSinceIndicator++;
-        if (_numTicksSinceIndicator == TicksBetweenIndicators) CreateIndicator();
     }
 
 }
