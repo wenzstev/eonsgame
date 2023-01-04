@@ -11,7 +11,12 @@ public class PopulationPipMakerTestSuite : CultureActionTest
     public IEnumerator SetUpWithRightPopulation()
     {
         TestCulture.Init(TestTile, 4);
-        TestPopulationPipMaker = TestCulture.GetComponentInChildren<PopulationPipMaker>();
+
+        GameObject TestPopulationPipMakerObj = new GameObject("Population Pip Maker");
+        TestPopulationPipMaker = TestPopulationPipMakerObj.AddComponent<PopulationPipMaker>();
+        TestPopulationPipMaker.PopPip = Resources.Load<GameObject>("Prefabs/Board/Inhabitants/PopulationPip");
+        TestPopulationPipMakerObj.transform.SetParent(TestCulture.transform);
+
         yield return null;
     }
 

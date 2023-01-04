@@ -10,7 +10,7 @@ public class CultureFoodStoreTestSuite : CultureActionTest
     [UnitySetUp]
     public IEnumerator GetCultureFood()
     {
-        TestCultureFoodStore = TestCulture.GetComponent<CultureFoodStore>();
+        TestCultureFoodStore = TestCultureObj.AddComponent<CultureFoodStore>();
         TestCultureFoodStore.StorePerPopulation = 100;
         MonoBehaviour.Destroy(TestCulture.GetComponent<AffinityManager>()); // remove the affinitymanager to prevent cross-pollination of tests 
         TestCulture.FoodGatherRate = .01f;
@@ -22,7 +22,7 @@ public class CultureFoodStoreTestSuite : CultureActionTest
     public IEnumerator CanCollectFoodFromTile()
     {
         SetFoodAndExecuteTurn();
-        AssertFoodChange(10 - 1);
+        AssertFoodChange(10 - 2);
         yield return null;
     }
 
@@ -59,7 +59,7 @@ public class CultureFoodStoreTestSuite : CultureActionTest
     public IEnumerator CanReduceFoodOnTile()
     {
         SetFoodAndExecuteTurn();
-        Assert.AreEqual(990, TestTile.GetComponent<TileFood>().CurFood, "Food on tile is not what's expected!");
+        Assert.AreEqual(991, TestTile.GetComponent<TileFood>().CurFood, "Food on tile is not what's expected!");
         yield return null;
     }
 

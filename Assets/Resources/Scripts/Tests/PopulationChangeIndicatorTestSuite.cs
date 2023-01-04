@@ -11,7 +11,10 @@ public class PopulationChangeIndicatorTestSuite : CultureActionTest
     [UnitySetUp]
     public IEnumerator PopulationChangeIndicatorSetUp()
     {
-        TestPopulationChangeIndicatorGenerator = TestCulture.GetComponentInChildren<PopulationChangeIndicatorGenerator>();
+        GameObject TestPopulationChangeIndicatorGeneratorObj = new GameObject("Population Indicator Generator");
+        TestPopulationChangeIndicatorGenerator = TestPopulationChangeIndicatorGeneratorObj.AddComponent<PopulationChangeIndicatorGenerator>();
+        TestPopulationChangeIndicatorGenerator.PopulationChangeIndicator = Resources.Load<GameObject>("Prefabs/Board/Inhabitants/PopulationChangeIndicator");
+        TestPopulationChangeIndicatorGeneratorObj.transform.SetParent(TestCulture.transform);
         yield return null;
     }
 

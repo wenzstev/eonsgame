@@ -10,6 +10,7 @@ public class MoveActionTestSuite : CultureActionTest
     public IEnumerator SetUp()
     {
         NeighborTile.GetComponent<TileDrawer>().tileType = TileDrawer.BiomeType.Grassland; // otherwise the minimum height will always be underwater
+
         yield return null;
     }
 
@@ -43,6 +44,10 @@ public class MoveActionTestSuite : CultureActionTest
     [UnityTest]
     public IEnumerator MoveTileActionWhenLargeTest()
     {
+        GameObject TimeControllerObj = new GameObject("Time Controller");
+        TimeControllerObj.AddComponent<TimeController>();
+        TimeController.instance.speeds = new float[] { 1 };
+
         TestCulture.AddPopulation(20);
 
         MoveTileAction mta = new MoveTileAction(TestCulture);
