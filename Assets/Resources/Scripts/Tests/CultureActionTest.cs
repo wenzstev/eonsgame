@@ -15,8 +15,9 @@ public abstract class CultureActionTest : BasicBoardTest
     [UnitySetUp]
     public IEnumerator SetupCultureActionTest()
     {
-        TestCultureObj = MonoBehaviour.Instantiate(Resources.Load<GameObject>("Prefabs/Board/Inhabitants/Culture"));
-        TestCulture = TestCultureObj.GetComponent<Culture>();
+
+        TestCulture = CreateBarebonesCulture("Test Culture");
+        TestCultureObj = TestCulture.gameObject;
 
         TestTileObj = TestBoard.GetTile(0, 0);
         TestTile = TestTileObj.GetComponent<Tile>();
@@ -27,6 +28,20 @@ public abstract class CultureActionTest : BasicBoardTest
         TestCulture.Init(TestTile, 1);
         Debug.Log($"Setup Complete. Culture name is {TestCulture}");
         yield return null;
+    }
+
+    public Culture CreateBarebonesCulture(string name)
+    {
+        GameObject CultureObj = new GameObject(name);
+        CultureObj.AddComponent<SpriteRenderer>();
+        CultureObj.AddComponent<AffinityManager>();
+        CultureObj.AddComponent<CultureFoodStore>();
+
+        Culture Culture = CultureObj.AddComponent<Culture>();
+
+        CultureMemory TestCultureMemory = CultureObj.AddComponent<CultureMemory>();
+        TestCultureMemory.Culture = Culture;
+        return Culture;
     }
 
 

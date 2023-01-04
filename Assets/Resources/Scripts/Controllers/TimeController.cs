@@ -4,20 +4,38 @@ using UnityEngine;
 
 public class TimeController : MonoBehaviour
 {
+    private static TimeController timeController;
+
+    public static TimeController instance
+    {
+        get
+        {
+            if (!timeController)
+            {
+                timeController = FindObjectOfType(typeof(TimeController)) as TimeController;
+
+                if (!timeController)
+                {
+                    Debug.LogError("There needs to be one active TimeController script on a GameObject in your scene.");
+                }
+            }
+            return timeController;
+        }
+    }
+
     public float[] speeds;
+
+    int curSpeedLevel;
 
     float curSpeed;
     float timer = 0;
 
     bool isPaused = true;
 
-    /*
-     Level 1: 1 tick per second => 1
-     Level 2: 2 ticks per second => .5f
-     Level 3: 4 ticks per second => .25f
-     Level 4: 8 ticks per second => .125f
-     */
-
+    public static int GetCurTimeLevel()
+    {
+        return instance.curSpeedLevel;
+    }
 
     private void Start()
     {
@@ -56,8 +74,8 @@ public class TimeController : MonoBehaviour
         }
 
         curSpeed = speeds[newSpeedLevel];
+        curSpeedLevel = newSpeedLevel;
     }
-
 
     void TogglePause(Dictionary<string, object> empty)
     {
