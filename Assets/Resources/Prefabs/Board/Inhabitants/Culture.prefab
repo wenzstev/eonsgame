@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: -5036476844479646280}
   - component: {fileID: 4313577059489789669}
   - component: {fileID: 3803302301534434715}
+  - component: {fileID: 5240362234942587747}
   m_Layer: 0
   m_Name: Culture
   m_TagString: Untagged
@@ -276,6 +277,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentBiome: 0
+  AffinityGrowthRate:
+    Asymptote: 0
+    XDisplacement: 0
+    GrowthRate: 0
+    YDisplacement: 0
   affinityStats:
     affinities:
     - 0
@@ -392,6 +398,20 @@ MonoBehaviour:
   XDisplacement: 2
   GrowthRate: 0.5
   YDisplacement: 1
+--- !u!114 &5240362234942587747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829645622402238992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8294578d847b4024584133c5ab958b66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Culture: {fileID: 5402215717768767427}
+  FoodAmountIndicatorGenerator: {fileID: 8979528551454491597}
 --- !u!1 &4746160324585285361
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,7 +452,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4746160324585285361}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 085c4d11bb0597c4c96f3a44d9746dc6, type: 3}
   m_Name: 
@@ -448,7 +468,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4746160324585285361}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8c0473c3006f534f9c4af980d0ed074, type: 3}
   m_Name: 

@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CultureController : MonoBehaviour
 {
-    List<Culture> AllCultures;
+    List<CultureBrain> AllCultures;
 
     private void Start()
     {
-        AllCultures = new List<Culture>();
+        AllCultures = new List<CultureBrain>();
 
         EventManager.StartListening("Tick", OnTick);
         EventManager.StartListening("CultureCreated", OnCultureCreated);
@@ -23,7 +24,7 @@ public class CultureController : MonoBehaviour
     void OnCultureCreated(Dictionary<string, object> createdCulture)
     {
         Culture c = (Culture) createdCulture["culture"];
-        AllCultures.Add(c);
+        AllCultures.Add(c.GetComponent<CultureBrain>());
     }
 
     void OnCultureDestroyed(Dictionary<string, object> destroyedCulture)
@@ -31,22 +32,21 @@ public class CultureController : MonoBehaviour
         Culture c = (Culture) destroyedCulture["culture"];
         //Debug.Log($"Removing {c} from CultureList");
 
-        AllCultures.Remove(c);
+        AllCultures.Remove(c.GetComponent<CultureBrain>());
     }
 
     public Culture[] GetAllCultures()
     {
-        return AllCultures.ToArray();
+        return AllCultures.Select(c => c.Culture).ToArray();
     }
 
 
     void ExecuteAllCultureTurns()
     {
-        Culture[] culturesToUpdate = AllCultures.ToArray(); 
-        foreach(Culture c in culturesToUpdate)
+        CultureBrain[] culturesToUpdate = AllCultures.ToArray(); 
+        foreach(CultureBrain c in culturesToUpdate)
         {
-            c.DecisionMaker.ExecuteTurn();
-            Turn.UpdateAllCultures();
+            c.ExecuteCultureTurn();
         }
     }
 
