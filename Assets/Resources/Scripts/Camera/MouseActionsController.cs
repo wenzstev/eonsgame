@@ -18,6 +18,7 @@ public class MouseActionsController : MonoBehaviour
     {
         if(Input.GetMouseButtonUp(0) && !isMouseMovingCamera) // TODO: move all mouse button commands into a single input class
         {
+            Debug.Log("MouseUpGeneric");
             EventManager.TriggerEvent("MouseUpGeneric", new Dictionary<string, object>() { { "button", 0 } });
         }
     }
@@ -26,6 +27,7 @@ public class MouseActionsController : MonoBehaviour
     { 
         if(!isMouseMovingCamera)
         {
+            Debug.Log("InteractiveMouseUp");
             EventManager.TriggerEvent("InteractiveMouseUp", tileInfo);
         }
     }
