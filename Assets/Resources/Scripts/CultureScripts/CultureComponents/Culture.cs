@@ -28,6 +28,8 @@ public class Culture : MonoBehaviour
     public event EventHandler<OnCultureNameChangedEventArgs> OnNameChanged;
     public event EventHandler<OnCultureDestroyedEventArgs> OnCultureDestroyed;
 
+    bool isQuitting = false;
+
     CultureFoodStore cultureFoodStore;
     public CultureFoodStore CultureFoodStore
     {
@@ -291,8 +293,11 @@ public class Culture : MonoBehaviour
 
     private void OnDestroy()
     {
-        EventManager.TriggerEvent("CultureDestroyed", new Dictionary<string, object> { { "culture", this } });
-        OnCultureDestroyed?.Invoke(this, new OnCultureDestroyedEventArgs() { DestroyedCulture = this });
+        if(!isQuitting)
+        {
+            EventManager.TriggerEvent("CultureDestroyed", new Dictionary<string, object> { { "culture", this } });
+            OnCultureDestroyed?.Invoke(this, new OnCultureDestroyedEventArgs() { DestroyedCulture = this });
+        }
     }
 
 
@@ -312,6 +317,11 @@ public class Culture : MonoBehaviour
             rand += characters[Mathf.FloorToInt(UnityEngine.Random.value * characters.Length)];
         }
         return rand;
+    }
+
+    private void OnApplicationQuit()
+    {
+        isQuitting = true;
     }
 
     public class OnPopulationChangedEventArgs : EventArgs
