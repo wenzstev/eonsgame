@@ -21,6 +21,8 @@ public class AffinityManager : MonoBehaviour
     public float GrowthRate = .5f;
     public float YDisplacement = 1f;
 
+    public event EventHandler<OnAffinityChangedEventArgs> OnAffinityChanged;
+
 
     public AffinityStats AffinityStats { get { return affinityStats; } }
     
@@ -48,6 +50,7 @@ public class AffinityManager : MonoBehaviour
     public void ChangeAffinity(TileDrawer.BiomeType biome, float newAmount)
     {
         affinityStats.ChangeAffinity(biome, newAmount);
+        OnAffinityChanged?.Invoke(this, new OnAffinityChangedEventArgs() { Biome = biome });
     }
 
     public void HarvestedOnBiome(TileDrawer.BiomeType biome)
@@ -69,6 +72,7 @@ public class AffinityManager : MonoBehaviour
     {
         affinityStats.AddNewDecayTracker(_currentBiome);
         affinityStats.UpdateAffinityForDecay(newBiome);
+        OnAffinityChanged?.Invoke(this, new OnAffinityChangedEventArgs() { Biome = newBiome });
     }
 
     public void IncrementAffinity(TileDrawer.BiomeType biome)
@@ -76,6 +80,11 @@ public class AffinityManager : MonoBehaviour
         float currentAffinity = affinityStats.GetAffinity(biome);
         float valToAdd = AffinityGrowthRate.GetPointOnCurve(currentAffinity);
         ChangeAffinity(biome, currentAffinity + valToAdd);
+    }
+
+    public (TileDrawer.BiomeType, float)[] GetAllAffinities()
+    {
+        return affinityStats.GetAllAffinities();
     }
 
     public void OnTick(Dictionary<string, object> empty)
@@ -92,5 +101,10 @@ public class AffinityManager : MonoBehaviour
     public AffinityStats GetStatMerge(AffinityManager other, float ratio)
     {
         return affinityStats.CombineAffinities(other.AffinityStats, ratio);
+    }
+
+    public class OnAffinityChangedEventArgs : EventArgs
+    {
+        public TileDrawer.BiomeType Biome;
     }
 }

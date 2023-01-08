@@ -96,7 +96,6 @@ GameObject:
   - component: {fileID: -2590900883632236751}
   - component: {fileID: 5402215717768767427}
   - component: {fileID: 1772662126385334965}
-  - component: {fileID: -8479225915283109699}
   - component: {fileID: -5036476844479646280}
   - component: {fileID: 4313577059489789669}
   - component: {fileID: 3803302301534434715}
@@ -221,19 +220,6 @@ MonoBehaviour:
   cultureParentName: 
   _previousState: 0
   wasRepelled: 0
---- !u!114 &-8479225915283109699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 829645622402238992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9eb99b9d2c757f742953164d2aabcfcb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CultureHighlightPanelPefab: {fileID: 5405400365266782984, guid: 87e4b57308ccbeb4f865808eb7cbe030, type: 3}
 --- !u!114 &-5036476844479646280
 MonoBehaviour:
   m_ObjectHideFlags: 0

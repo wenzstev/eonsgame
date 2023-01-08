@@ -246,6 +246,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Controllers
       objectReference: {fileID: 0}
+    - target: {fileID: 6640202242992830277, guid: 3e6a8b09f8354c04eb25225f2f2f8761, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1396727208}
+    - target: {fileID: 6640202242992830277, guid: 3e6a8b09f8354c04eb25225f2f2f8761, type: 3}
+      propertyPath: MouseActionsController
+      value: 
+      objectReference: {fileID: 1218317985}
     m_RemovedComponents:
     - {fileID: 3182784075990835560, guid: 3e6a8b09f8354c04eb25225f2f2f8761, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3e6a8b09f8354c04eb25225f2f2f8761, type: 3}
@@ -268,6 +276,10 @@ PrefabInstance:
       propertyPath: CameraMoveController
       value: 
       objectReference: {fileID: 1596317511}
+    - target: {fileID: 2108349012625740237, guid: 924d611a7c3612245a6ee97386fb5028, type: 3}
+      propertyPath: MouseActionsController
+      value: 
+      objectReference: {fileID: 1218317985}
     - target: {fileID: 2108349012625740239, guid: 924d611a7c3612245a6ee97386fb5028, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -496,6 +508,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BoardTemplate: {fileID: 734804678373380931, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
+--- !u!114 &1218317985 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 592987361289120464, guid: 3e6a8b09f8354c04eb25225f2f2f8761, type: 3}
+  m_PrefabInstance: {fileID: 147185954}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeab5dd1ec566d34b8677482bcb44ed9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1327944290
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,6 +564,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TileTemplate: {fileID: 2394264196207273235, guid: f1f23fe5e71224d48812a5e386bf80bf, type: 3}
+--- !u!223 &1396727208 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 1389126392837008743, guid: 2780f63bb22845b40868e7b23c8ec3f6, type: 3}
+  m_PrefabInstance: {fileID: 1389126394050262255}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1443400297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -548,6 +576,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5695180184468728074, guid: 3681249039e02d34ebfe54f4c812318a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5695180184468728075, guid: 3681249039e02d34ebfe54f4c812318a, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -619,9 +651,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81b831b58d8ae43468939a2f4cfbe289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoardLoader: {fileID: 0}
+  BoardLoader: {fileID: 1079782344}
   CameraMoveController: {fileID: 1596317511}
-  BufferZone: 3
+  BufferZone: 20
 --- !u!68 &1596317504
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -804,6 +836,10 @@ PrefabInstance:
       propertyPath: initialPopulation
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5217356476487281931, guid: 375657675557a8e45a07bee945f4df02, type: 3}
+      propertyPath: MouseActionsController
+      value: 
+      objectReference: {fileID: 1218317985}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 375657675557a8e45a07bee945f4df02, type: 3}
 --- !u!1001 &1389126394050262255

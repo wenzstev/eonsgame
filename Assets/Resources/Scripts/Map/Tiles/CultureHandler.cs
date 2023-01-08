@@ -1,20 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
+using System;
 
 public class CultureHandler : MonoBehaviour
 {
     public CultureContainer CultureContainer;
     public CultureStaging CultureStaging;
 
+    public event EventHandler<OnPopulationChangedEventArgs> OnPopulationChanged;
+
+    private void Awake()
+    {
+        CultureContainer.OnListChanged += CultureHandler_OnListChanged;
+        CultureStaging.OnCulturePopulationChanged += CultureHandler_OnListChanged;
+    } 
+
     public void AddNewArrival(Culture c)
     {
         CultureStaging.AddArrival(c);
+        FirePopulationChangedEvent();
     }
 
     public void BypassArrival(Culture c)
     {
         CultureContainer.AddCulture(c);
+        FirePopulationChangedEvent();
     }
 
     public void TransferArrivalToTile(Culture c)
@@ -33,6 +45,12 @@ public class CultureHandler : MonoBehaviour
         return CultureStaging.GetAllCultures();
     }
 
+    public Culture[] GetAllCultures()
+    {
+        return GetAllSettledCultures().Concat(GetAllStagedCultures()).ToArray();
+
+    }
+
     public bool HasCultureByName(string cultureName)
     {
         return CultureContainer.HasCultureByName(cultureName);
@@ -45,8 +63,12 @@ public class CultureHandler : MonoBehaviour
 
     public void RemoveCulture(Culture c)
     {
-        if (CultureStaging.RemoveArrival(c)) return;
-        if (CultureContainer.RemoveCulture(c)) return;
+        if (CultureStaging.RemoveArrival(c) || CultureContainer.RemoveCulture(c))
+        {
+            FirePopulationChangedEvent();
+            return;
+        }
+
 
         Debug.LogError("Tried to remove culture from tile it wasn't on!");
     }
@@ -54,5 +76,20 @@ public class CultureHandler : MonoBehaviour
     public void RenameCulture(Culture c, string oldname)
     {
         if(CultureContainer.ContainsCulture(c)) CultureContainer.ChangeCultureName(c, oldname);
+    }
+
+    void FirePopulationChangedEvent()
+    {
+        OnPopulationChanged?.Invoke(this, new OnPopulationChangedEventArgs() { CurrentCultures = GetAllCultures() });
+    }
+
+    void CultureHandler_OnListChanged(object sender, CultureContainer.OnListChangedEventArgs e)
+    {
+        FirePopulationChangedEvent();
+    }
+
+    public class OnPopulationChangedEventArgs : EventArgs
+    {
+        public Culture[] CurrentCultures;
     }
 }
