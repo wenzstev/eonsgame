@@ -45,5 +45,11 @@ public class CultureListPanel : MonoBehaviour
         CreateAndSortList();
     }
 
+    private void OnDestroy()
+    {
+        cultureHandler.OnPopulationChanged -= CultureListPanel_OnPopulationChanged;
+
+    }
+
 
 }

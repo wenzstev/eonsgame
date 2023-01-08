@@ -56,14 +56,14 @@ public class TileInfoPanelController : MonoBehaviour
 
     void SetFoodAmount(float foodAmount)
     {
-        string foodString = foodAmount > 1000 ? RoundToKilo(foodAmount) + "k" : Mathf.RoundToInt(foodAmount).ToString();
+        string foodString = foodAmount > 1000 ? ValueDisplay.RoundToKilo(foodAmount) + "k" : Mathf.RoundToInt(foodAmount).ToString();
         TileFood.text = foodString;
     }
 
     void UpdateToCurrentPopulation()
     {
         int pop = CalculateTilePopulation();
-        string popString = pop > 1000 ? RoundToKilo(pop) + "k" : pop.ToString();
+        string popString = pop > 1000 ? ValueDisplay.RoundToKilo(pop) + "k" : pop.ToString();
         TilePopulation.text = popString;
     }
 
@@ -77,8 +77,4 @@ public class TileInfoPanelController : MonoBehaviour
         CalculateTilePopulation();
     }
 
-    static float RoundToKilo(float val)
-    {
-        return Mathf.RoundToInt(val / 100) / 10f;
-    }
 }

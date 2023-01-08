@@ -33,11 +33,11 @@ RectTransform:
   m_Father: {fileID: 4391993729021293692}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 45.57292, y: -17.135}
-  m_SizeDelta: {x: 91.1553, y: 34.27}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 15, y: 34.27}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &6366824580189818483
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -259,7 +259,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Desert
+  m_text: Tundra
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b79cac46d54274a4ab4cd35bbe9ac062, type: 2}
   m_sharedMaterial: {fileID: -5694041247658261344, guid: b79cac46d54274a4ab4cd35bbe9ac062, type: 2}
@@ -286,12 +286,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 31.5
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 36
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
@@ -343,7 +343,7 @@ MonoBehaviour:
   m_IgnoreLayout: 0
   m_MinWidth: 150
   m_MinHeight: -1
-  m_PreferredWidth: -1
+  m_PreferredWidth: 150
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
@@ -384,7 +384,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 48.975327}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5766521677226031752
 MonoBehaviour:
@@ -417,6 +417,7 @@ GameObject:
   - component: {fileID: 8534151125299612596}
   - component: {fileID: 141305315578179946}
   - component: {fileID: 2171465720138847882}
+  - component: {fileID: 6183281336898922388}
   m_Layer: 5
   m_Name: FirstAffinity
   m_TagString: Untagged
@@ -464,11 +465,11 @@ MonoBehaviour:
     m_Top: 10
     m_Bottom: 10
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 5
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
-  m_ChildControlHeight: 1
+  m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
@@ -492,6 +493,20 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &6183281336898922388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3081650014654558291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f245f6860d63a047a760e24dfc1686d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AffinityName: {fileID: 5653711143449367679}
+  AffinityBar: {fileID: 5653711143455620778}
 --- !u!1 &4342492924558595275
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,11 +540,11 @@ RectTransform:
   m_Father: {fileID: 4990529893702305754}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 45.57292, y: -17.135}
-  m_SizeDelta: {x: 91.1553, y: 34.27}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 15, y: 34.27}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &4349159359944985129
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -580,6 +595,7 @@ GameObject:
   - component: {fileID: 5653711143384700402}
   - component: {fileID: 5653711143384700405}
   - component: {fileID: 824492537869446576}
+  - component: {fileID: 4594840168428989637}
   m_Layer: 5
   m_Name: CultureInfoPanel
   m_TagString: Untagged
@@ -673,6 +689,22 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &4594840168428989637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5653711143384700407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40e650b1f383819408b578cfa51978f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CultureName: {fileID: 5653711143549410404}
+  CulturePop: {fileID: 2241164078727373358}
+  CultureColor: {fileID: 5653711144414907415}
+  AffinityPanelController: {fileID: 62646182575761722}
 --- !u!1 &5653711143449367553
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,7 +742,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 48.975327}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5653711143449367676
 CanvasRenderer:
@@ -740,7 +772,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Desert
+  m_text: BorealForest
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b79cac46d54274a4ab4cd35bbe9ac062, type: 2}
   m_sharedMaterial: {fileID: -5694041247658261344, guid: b79cac46d54274a4ab4cd35bbe9ac062, type: 2}
@@ -767,12 +799,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 23.4
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 36
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
@@ -824,7 +856,7 @@ MonoBehaviour:
   m_IgnoreLayout: 0
   m_MinWidth: 150
   m_MinHeight: -1
-  m_PreferredWidth: -1
+  m_PreferredWidth: 150
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
@@ -862,11 +894,11 @@ RectTransform:
   m_Father: {fileID: 4436133226320218940}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 45.57292, y: -17.135}
-  m_SizeDelta: {x: 91.1553, y: 34.27}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 15, y: 34.27}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &5653711143455620776
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -917,7 +949,7 @@ GameObject:
   - component: {fileID: 5653711143549410405}
   - component: {fileID: 5653711143549410404}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: CultureName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -998,10 +1030,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
+  m_fontSize: 63.55
   m_fontSizeBase: 70
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -1150,6 +1182,7 @@ GameObject:
   - component: {fileID: 5653711144151443581}
   - component: {fileID: 194245884295278998}
   - component: {fileID: 784245610267576346}
+  - component: {fileID: 62646182575761722}
   m_Layer: 5
   m_Name: AffinityPanel
   m_TagString: Untagged
@@ -1264,6 +1297,23 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &62646182575761722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5653711144151443583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c5ae84ad07f0574bbf24562973f0792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bars:
+  - {fileID: 6183281336898922388}
+  - {fileID: 461322379856984244}
+  - {fileID: 2558401158702566903}
+  MaxAffinityAmount: 25
 --- !u!1 &5653711144414907417
 GameObject:
   m_ObjectHideFlags: 0
@@ -1445,6 +1495,7 @@ GameObject:
   - component: {fileID: 5224245954159636130}
   - component: {fileID: 1986384352093861702}
   - component: {fileID: 8626663349712744759}
+  - component: {fileID: 2558401158702566903}
   m_Layer: 5
   m_Name: ThirdAffinity
   m_TagString: Untagged
@@ -1492,7 +1543,7 @@ MonoBehaviour:
     m_Top: 10
     m_Bottom: 10
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 5
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
@@ -1520,6 +1571,20 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &2558401158702566903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6515496132678627088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f245f6860d63a047a760e24dfc1686d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AffinityName: {fileID: 3310132204935993243}
+  AffinityBar: {fileID: 2140695961964493768}
 --- !u!1 &6877225307763526549
 GameObject:
   m_ObjectHideFlags: 0
@@ -1587,7 +1652,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Desert
+  m_text: Ice
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b79cac46d54274a4ab4cd35bbe9ac062, type: 2}
   m_sharedMaterial: {fileID: -5694041247658261344, guid: b79cac46d54274a4ab4cd35bbe9ac062, type: 2}
@@ -1614,12 +1679,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 31.5
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 36
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
@@ -1671,7 +1736,7 @@ MonoBehaviour:
   m_IgnoreLayout: 0
   m_MinWidth: 150
   m_MinHeight: -1
-  m_PreferredWidth: -1
+  m_PreferredWidth: 150
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
@@ -1822,6 +1887,7 @@ GameObject:
   - component: {fileID: 874765856356126751}
   - component: {fileID: 2597646907408230122}
   - component: {fileID: 9012650081064047978}
+  - component: {fileID: 461322379856984244}
   m_Layer: 5
   m_Name: 'SecondAffinity '
   m_TagString: Untagged
@@ -1869,7 +1935,7 @@ MonoBehaviour:
     m_Top: 10
     m_Bottom: 10
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 5
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
@@ -1897,3 +1963,17 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &461322379856984244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9184898103858438864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f245f6860d63a047a760e24dfc1686d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AffinityName: {fileID: 3592434944422476760}
+  AffinityBar: {fileID: 3998406234266653020}
