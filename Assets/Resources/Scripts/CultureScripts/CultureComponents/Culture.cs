@@ -27,6 +27,9 @@ public class Culture : MonoBehaviour
     public event EventHandler<OnPopulationChangedEventArgs> OnPopulationChanged;
     public event EventHandler<OnCultureNameChangedEventArgs> OnNameChanged;
     public event EventHandler<OnCultureDestroyedEventArgs> OnCultureDestroyed;
+    public event EventHandler<OnColorChangedEventArgs> OnColorChanged;
+
+    bool isQuitting = false;
 
     CultureFoodStore cultureFoodStore;
     public CultureFoodStore CultureFoodStore
@@ -281,7 +284,9 @@ public class Culture : MonoBehaviour
         {
             return (UnityEngine.Random.value * baseMutationMax) - (baseMutationMax / 2);
         }
-        return new Color(getMutationRate() + parentColor.r, getMutationRate() + parentColor.g, getMutationRate() + parentColor.b);
+        Color newColor = new Color(getMutationRate() + parentColor.r, getMutationRate() + parentColor.g, getMutationRate() + parentColor.b);
+        OnColorChanged?.Invoke(this, new OnColorChangedEventArgs() { color = newColor });
+        return newColor;
     }
     
     public override string ToString()
@@ -291,8 +296,11 @@ public class Culture : MonoBehaviour
 
     private void OnDestroy()
     {
-        EventManager.TriggerEvent("CultureDestroyed", new Dictionary<string, object> { { "culture", this } });
-        OnCultureDestroyed?.Invoke(this, new OnCultureDestroyedEventArgs() { DestroyedCulture = this });
+        if(!isQuitting)
+        {
+            EventManager.TriggerEvent("CultureDestroyed", new Dictionary<string, object> { { "culture", this } });
+            OnCultureDestroyed?.Invoke(this, new OnCultureDestroyedEventArgs() { DestroyedCulture = this });
+        }
     }
 
 
@@ -314,6 +322,11 @@ public class Culture : MonoBehaviour
         return rand;
     }
 
+    private void OnApplicationQuit()
+    {
+        isQuitting = true;
+    }
+
     public class OnPopulationChangedEventArgs : EventArgs
     {
         public int PopChange;
@@ -328,6 +341,11 @@ public class Culture : MonoBehaviour
     public class OnCultureDestroyedEventArgs : EventArgs
     {
         public Culture DestroyedCulture;
+    }
+
+    public class OnColorChangedEventArgs : EventArgs
+    {
+        public Color color;
     }
 
 }

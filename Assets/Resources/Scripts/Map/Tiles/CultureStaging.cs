@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class CultureStaging : MonoBehaviour
 {
     public List<Culture> NewArrivals {get; private set;}
+
+    public event EventHandler<CultureContainer.OnListChangedEventArgs> OnCulturePopulationChanged;
 
     private void Awake()
     {
@@ -21,6 +24,7 @@ public class CultureStaging : MonoBehaviour
     {
         NewArrivals.Add(c);
         c.OnCultureDestroyed += CultureContainer_OnCultureDestroyed;
+        c.OnPopulationChanged += CultureContainer_OnCulturePopulationChanged;
         c.transform.parent = transform;
     }
 
@@ -34,4 +38,11 @@ public class CultureStaging : MonoBehaviour
     {
         NewArrivals.Remove(e.DestroyedCulture);
     }
+
+    private void CultureContainer_OnCulturePopulationChanged(object sender, Culture.OnPopulationChangedEventArgs e)
+    {
+        OnCulturePopulationChanged?.Invoke(this, new CultureContainer.OnListChangedEventArgs() { CultureList = GetAllCultures() });
+    }
+    
+
 }

@@ -14,12 +14,12 @@ public class TileGreyscaleOverlayLink : MonoBehaviour
     public void Initialize()
     {
         _tileFood = GetComponentInParent<TileFood>();
-        _tileFood.OnLowFood += TileGreyscaleOverlayLink_OnLowFood;
+        _tileFood.OnFoodChange += TileGreyscaleOverlayLink_OnLowFood;
         _greyscaleOverlay = GetComponent<GreyscaleOverlay>();
         _greyscaleOverlay.Initialize(targetSprite);
     }
 
-    private void TileGreyscaleOverlayLink_OnLowFood(object sender, TileFood.OnLowFoodEventArgs e)
+    private void TileGreyscaleOverlayLink_OnLowFood(object sender, TileFood.OnFoodChangeEventArgs e)
     {
         if(e.CurFood / e.MaxFood < percentLowIndicator)
         {
@@ -48,7 +48,7 @@ public class TileGreyscaleOverlayLink : MonoBehaviour
 
     private void OnDestroy()
     {
-        _tileFood.OnLowFood -= TileGreyscaleOverlayLink_OnLowFood;
+        _tileFood.OnFoodChange -= TileGreyscaleOverlayLink_OnLowFood;
     }
 
 }

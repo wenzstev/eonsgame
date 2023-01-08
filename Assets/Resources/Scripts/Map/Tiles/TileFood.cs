@@ -23,7 +23,7 @@ public class TileFood : MonoBehaviour
     CompoundCurve PrecipitationCurve;
 
 
-    public event EventHandler<OnLowFoodEventArgs> OnLowFood;
+    public event EventHandler<OnFoodChangeEventArgs> OnFoodChange;
 
     private void Awake()
     {
@@ -76,7 +76,7 @@ public class TileFood : MonoBehaviour
 
     public void FireFoodAction()
     {
-        OnLowFood?.Invoke(this, new OnLowFoodEventArgs {MaxFood = this.MaxFood, CurFood = this.CurFood });
+        OnFoodChange?.Invoke(this, new OnFoodChangeEventArgs {MaxFood = this.MaxFood, CurFood = this.CurFood });
     }
 
     public void TileFood_OnAllTileStatsCalculated(object sender, TileChars.OnAllTileStatsCalculatedEventArgs e)
@@ -85,7 +85,7 @@ public class TileFood : MonoBehaviour
         SetMaxFood();
     }
 
-    public class OnLowFoodEventArgs : EventArgs
+    public class OnFoodChangeEventArgs : EventArgs
     {
         public float MaxFood;
         public float CurFood;

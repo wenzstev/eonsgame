@@ -78,6 +78,11 @@ public class AffinityStats
         }
     }
 
+    public (TileDrawer.BiomeType, float)[] GetAllAffinities()
+    {
+        return affinities.Select((a, i) => ((TileDrawer.BiomeType) i, a)).ToArray();
+    }
+
     public AffinityStats CreateCopy()
     {
         string affinitySerialization = JsonUtility.ToJson(this);
