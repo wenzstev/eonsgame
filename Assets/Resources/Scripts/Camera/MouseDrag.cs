@@ -7,42 +7,32 @@ public class MouseDrag : MonoBehaviour
     Vector3 mouseOriginPosition;
     Vector3 cameraOriginPosition;
 
+
+
     public float speedModifierX = 2;
     public float speedModifierY = 2;
 
-    bool isDragging;
 
     public CameraMoveController CameraMoveController;
+    public MouseActionsController MouseActionsController;
 
 
-    private void Update()
+    private void Awake()
     {
-        if(Input.GetMouseButtonDown(0))
-        {
-            mouseOriginPosition = Input.mousePosition;
-            cameraOriginPosition = transform.position;
-        }
+        MouseActionsController.MouseDownAction += MouseDrag_OnMouseDownAction;
+        MouseActionsController.MouseDragInAction += MouseDrag_OnMouseDragInAction;
+    }
 
-        if (!Input.GetMouseButton(0))
-        {
-            if(isDragging)
-            {
-                isDragging = false;
-                EventManager.TriggerEvent("MouseDragStopped", null);
-            }
-            return;
-        };
+    void MouseDrag_OnMouseDownAction(object sender, MouseActionsController.MouseActionEventArgs e)
+    {
+        cameraOriginPosition = transform.position;
+        mouseOriginPosition = e.MousePosition;
+    }
 
-        Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - mouseOriginPosition);
-        
-        if(!isDragging && pos.magnitude > 0)
-        {
-            isDragging = true;
-            EventManager.TriggerEvent("MouseDragInAction", null);
-        }
-
+    void MouseDrag_OnMouseDragInAction(object sender, MouseActionsController.MouseActionEventArgs e)
+    {
+        Vector3 pos = Camera.main.ScreenToViewportPoint(e.MousePosition - mouseOriginPosition);
         AdjustCameraLocation(pos);
-
     }
 
     public void AdjustCameraLocation(Vector3 pos)

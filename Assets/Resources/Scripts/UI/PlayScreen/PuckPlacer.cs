@@ -6,28 +6,28 @@ public class PuckPlacer : MonoBehaviour
 {
     public GameObject culturePuck;
     public int initialPopulation;
+    public MouseActionsController MouseActionsController;
 
 
-    private void Start()
+    private void Awake()
     {
-        EventManager.StartListening("InteractiveMouseUp", placePuck);
+        MouseActionsController.MouseUpAction += MouseActionsController_MouseUpAction;
     }
 
-    void placePuck(Dictionary<string, object> message)
+    private void MouseActionsController_MouseUpAction(object sender, MouseActionsController.MouseActionEventArgs e)
     {
-        //Debug.Log($"{ gameObject.GetHashCode()} is placing a tile");
-        if(Input.GetKey("space"))
+        if(Input.GetKey("space") && e.GetFirstThatContains<Tile>() != null)
         {
-            GameObject tileClicked = (GameObject)message["tile"];
-            GameObject puck = Instantiate(culturePuck, tileClicked.transform.position, Quaternion.identity);
-            puck.GetComponent<Culture>().Init(tileClicked.GetComponent<Tile>(), initialPopulation);
-            EventManager.TriggerEvent("CultureUpdated" + puck.GetComponent<Culture>().name, new Dictionary<string, object> { { "culture", puck.GetComponent<Culture>() } });
+            PlacePuck(e.GetFirstThatContains<Tile>());
         }
-
     }
 
-    private void OnDestroy()
+    void PlacePuck(GameObject TileClicked)
     {
-        EventManager.StopListening("InteractiveMouseUp", placePuck);
+        GameObject puck = Instantiate(culturePuck, TileClicked.transform.position, Quaternion.identity);
+        puck.GetComponent<Culture>().Init(TileClicked.GetComponent<Tile>(), initialPopulation);
+        EventManager.TriggerEvent("CultureUpdated" + puck.GetComponent<Culture>().name, new Dictionary<string, object> { { "culture", puck.GetComponent<Culture>() } });
+        
+
     }
 }
