@@ -25,8 +25,8 @@ public class CultureContainer : MonoBehaviour
 
     public void AddCulture(Culture culture)
     {
-        //Debug.Log($"Adding culture {culture} to tile {gameObject.transform.parent}");
-        //Debug.Log(String.Join(", ", CultureList));
+        Debug.Log($"Adding culture {culture} to tile {gameObject.transform.parent.parent}");
+        Debug.Log($"Before: {PrintContents()}");
 
         if (!HasCultureByName(culture.Name))
         {
@@ -39,22 +39,28 @@ public class CultureContainer : MonoBehaviour
         culture.OnCultureDestroyed += CultureContainer_OnCultureDestroyed;
         SortListByPopulation();
         culture.transform.parent = transform;
-        //Debug.Log(String.Join(", ", CultureList));
+        Debug.Log($"After: {PrintContents()}");
 
     }
 
     public bool RemoveCulture(Culture culture)
     {
-        //Debug.Log($"Removing culture {culture} from tile {gameObject.transform.parent}");
-        //Debug.Log(String.Join(", ", CultureList));
+        Debug.Log($"Removing culture {culture} from tile {gameObject.transform.parent.parent}");
+        Debug.Log($"Before: {PrintContents()}");
 
         bool wasRemoved = CultureList.Remove(culture);
         if (!wasRemoved) return false;
-        //Debug.Log(String.Join(", ", CultureList));
-        CultureDictionary.Remove(culture.name);
+
+        CultureDictionary.Remove(culture.name); // <-- this doesn't work right now because the culture, when removed, may have a different name
+
+        Debug.Log($"After: {PrintContents()}");
+
+
         SortListByPopulation();
         culture.OnPopulationChanged -= CultureContainer_OnPopulationChanged;
         culture.OnCultureDestroyed -= CultureContainer_OnCultureDestroyed;
+
+
 
         return true;
     }
@@ -64,25 +70,42 @@ public class CultureContainer : MonoBehaviour
         return CultureList.ToArray();
     }
 
+    
     public bool HasCultureByName(string cultureName)
     {
          return CultureDictionary.ContainsKey(cultureName);
     }
+    
 
+    
     public Culture GetCultureByName(string cultureName)
     {
-        return CultureDictionary[cultureName];
+        Culture c;
+        if (CultureDictionary.TryGetValue(cultureName, out c)) return c;
+        return null;
     }
+    
 
     public bool ContainsCulture(Culture c)
     {
         return CultureList.Contains(c);
     }
 
+    
     public void ChangeCultureName(Culture culture, string oldName)
     {
+        Debug.Log($"Renaming culture {culture} from old name {oldName}");
         Culture c = GetCultureByName(oldName);
         if (c != culture) { Debug.LogError("trying to change culture name that doesn't exist on tile."); return; }
+
+        Culture potentialNamed = GetCultureByName(culture.Name);
+        if(potentialNamed)
+        {
+            Debug.Log(potentialNamed);
+            
+        }
+
+
         CultureDictionary.Remove(oldName);
         CultureDictionary.Add(culture.name, culture);
     }
@@ -99,11 +122,12 @@ public class CultureContainer : MonoBehaviour
     }
 
 
-
+    
     void InsertCultureInDictionary(Culture culture)
     {
         CultureDictionary.Add(culture.name, culture);
     }
+    
 
     public class OnListChangedEventArgs : EventArgs
     {
@@ -119,5 +143,13 @@ public class CultureContainer : MonoBehaviour
     {
         RemoveCulture(e.DestroyedCulture);
         SortListByPopulation();
+    }
+
+    public string PrintContents()
+    {
+        string list = String.Join(',', CultureList.Select(c => c.ToString()));
+        string dict = String.Join(',', CultureDictionary.Select(v => $"{v.Key}: {v.Value}"));
+
+        return $"ListVals: {list} DictVals: {dict}";
     }
 }

@@ -166,7 +166,8 @@ public class Culture : MonoBehaviour
     {
         if(newState == State.PendingRemoval)
         {
-            Destroy(gameObject);
+            Debug.Log("Setting to destroy " + this);
+            DestroyCulture();
             return;
         }
         if(CultureMemory.previousState != newState)
@@ -223,7 +224,7 @@ public class Culture : MonoBehaviour
         population += num;
         if(population == 0)
         {
-            Destroy(gameObject);
+            DestroyCulture();
         }
 
         if (num != 0) OnPopulationChanged?.Invoke(this, new OnPopulationChangedEventArgs() { PopChange = num});
@@ -294,15 +295,22 @@ public class Culture : MonoBehaviour
         return $"{name}({GetHashCode()})";
     }
 
-    private void OnDestroy()
+    private void DestroyCulture()
     {
-        if(!isQuitting)
+        transform.parent = null;
+        if (!isQuitting)
         {
             EventManager.TriggerEvent("CultureDestroyed", new Dictionary<string, object> { { "culture", this } });
             OnCultureDestroyed?.Invoke(this, new OnCultureDestroyedEventArgs() { DestroyedCulture = this });
         }
+        gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 
+    private void OnDestroy()
+    {
+
+    }
 
     public static Color influenceColor(Culture parent, Culture influencer)
     {
@@ -310,12 +318,28 @@ public class Culture : MonoBehaviour
         return Color.Lerp(parent.color, influencer.color, rate);
     }
 
+    public static string MutateString(string original)
+    {
+        int mutationIndex = (int)(UnityEngine.Random.value * original.Length);
+        string newChar = getRandomString(1);
+        return original.Substring(0, mutationIndex) + newChar + original.Substring(mutationIndex + 1);
+
+    }
+
+    public static string CombineStrings(string first, string second)
+    {
+        int combineIndex = (int)first.Length / 2;
+        Debug.Log($"Combining {first} and {second} into {first.Substring(0, combineIndex) + second.Substring(combineIndex)}");
+
+        return first.Substring(0, combineIndex) + second.Substring(combineIndex);
+    }
+
     public static string getRandomString(int length)
     {
         char[] characters = "abcdefghijklmnopqrstuvwxyz".ToCharArray();
 
         string rand = "";
-        while(rand.Length <= length)
+        while(rand.Length < length)
         {
             rand += characters[Mathf.FloorToInt(UnityEngine.Random.value * characters.Length)];
         }
