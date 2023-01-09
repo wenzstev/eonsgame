@@ -16,7 +16,7 @@ public class CultureStaging : MonoBehaviour
 
     public Culture[] GetAllCultures()
     {
-        if (NewArrivals.Count != transform.childCount) Debug.LogError("Should never have differnece between children and child count!");
+        if (NewArrivals.Count != transform.childCount) Debug.LogError("Should never have difference between children and child count!");
         return NewArrivals.ToArray();
     }
 

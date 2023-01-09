@@ -35,7 +35,7 @@ public class CultureInfluenceAction : CultureAction
         Turn.AddUpdate(new PopulationUpdate(this, Culture, other.Population));
         Turn.AddUpdate(new PopulationUpdate(this, other, -other.Population));
         Turn.AddUpdate(new StateUpdate(this, other, Culture.State.PendingRemoval));
-        Turn.AddUpdate(new NameUpdate(this, Culture, Culture.getRandomString(5)));
+        Turn.AddUpdate(new NameUpdate(this, Culture, Culture.CombineStrings(Culture.Name, other.Name)));
 
     }
 

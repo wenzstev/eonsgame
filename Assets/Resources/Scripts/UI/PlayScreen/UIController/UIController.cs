@@ -29,11 +29,12 @@ public class UIController : MonoBehaviour
 
     void SelectNewTile(GameObject NewSelectedTile)
     {
-        CultureListButton[] cultures = CurrentCultureInfoPanel.GetComponentsInChildren<CultureListButton>();
-        foreach (CultureListButton button in cultures) button.OnCultureButtonClicked -= CultureListButton_OnCultureButtonClicked;
+        if(CurrentCultureInfoPanel)
+        {
+            StopListeningToOldTile();
+        }
 
         Destroy(CurrentTileInfoPanel);
-
         CurrentTile = NewSelectedTile;
         CurrentTileInfoPanel = CreateTileInfoPanel(CurrentTile);
     }
@@ -67,6 +68,12 @@ public class UIController : MonoBehaviour
         GameObject NewCultureInfoPanel = Instantiate(CultureInfoPanel, canvas.transform);
         NewCultureInfoPanel.GetComponent<CulturePanelController>().SetValues(SelectedCulture);
         return NewCultureInfoPanel;
+    }
+
+    void StopListeningToOldTile()
+    {
+        CultureListButton[] cultures = CurrentCultureInfoPanel.GetComponentsInChildren<CultureListButton>();
+        foreach (CultureListButton button in cultures) button.OnCultureButtonClicked -= CultureListButton_OnCultureButtonClicked;
     }
 
     void UIController_OnMouseUpAction(object sender, MouseActionsController.MouseActionEventArgs e)
