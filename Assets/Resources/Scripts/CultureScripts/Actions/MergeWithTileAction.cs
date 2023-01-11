@@ -53,9 +53,9 @@ public class MergeWithTileAction : CultureAction
 
     public Turn CreateAsNewCulture()
     {
-        string newName = Culture.getRandomString(5);
+        string newName = Culture.MutateString(Culture.Name);
         Turn.AddUpdate(new NameUpdate(this, Culture, newName));
-        //Debug.Log("changing culture name (" + culture.GetHashCode() + ") but memory is " + culture.GetComponent<CultureMemory>().previousTile);
+        //Debug.Log($"Changing name of {Culture} to {newName}");
         return turn;
     }
 

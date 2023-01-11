@@ -129,7 +129,10 @@ public class StateUpdate : CultureUpdate<Culture.State>
 
 public class NameUpdate : CultureUpdate<string>
 {
-    public NameUpdate(CultureAction originator, Culture target, string val) : base(originator, target, val) { }
+    public NameUpdate(CultureAction originator, Culture target, string val) : base(originator, target, val) 
+    {
+        Turn.AddUpdate(new StateUpdate(originator, target, Culture.State.NewOnTile)); // we add this because currently, renaming cultures requires them to be moved to staging, to prevent collisions when adding potentially same-named cultures
+    }
     public override void ExecuteChange()
     {
         Target?.RenameCulture(GetCultureChange());

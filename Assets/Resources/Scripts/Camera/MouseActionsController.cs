@@ -76,7 +76,6 @@ public class MouseActionsController : MonoBehaviour
 
     bool IsMouseOverUI()
     {
-        Debug.Log(EventSystem.current.IsPointerOverGameObject());
         return EventSystem.current.IsPointerOverGameObject();
     }
 
