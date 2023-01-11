@@ -13,11 +13,26 @@ public class FadeFromBlack : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(FadeOut());
+        FadeOut();
     }
 
-    IEnumerator FadeOut()
+    public void FadeIn()
     {
+        StartCoroutine(FadeCoroutine(false));
+    }
+
+    public void FadeOut()
+    {
+        StartCoroutine(FadeCoroutine(true));
+
+    }
+
+    IEnumerator FadeCoroutine(bool fadeOut)
+    {
+        float alphaStart = fadeOut ? 1 : 0;
+        float alphaEnd = fadeOut ? 0 : 1;
+  
+
         image.color = startColor;
         yield return new WaitForSeconds(startPause);
         float curTime = 0;
@@ -25,10 +40,10 @@ public class FadeFromBlack : MonoBehaviour
         {
             curTime += Time.deltaTime;
             float curLerp = Mathf.InverseLerp(0, fadeTime, curTime);
-            float curAlpha = Mathf.Lerp(1, 0, curLerp);
+            float curAlpha = Mathf.Lerp(alphaStart, alphaEnd, curLerp);
             image.color = new Color(startColor.r, startColor.g, startColor.b, curAlpha);
             yield return null;
         }
-        Destroy(gameObject);
     }
+
 }
