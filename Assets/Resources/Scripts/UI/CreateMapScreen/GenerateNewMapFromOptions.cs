@@ -18,7 +18,7 @@ public class GenerateNewMapFromOptions : MonoBehaviour
     public GameObject BoardTemplate;
     public GameObject MapGeneratorTemplate;
 
-    (int, int)[] sizes = { (75, 50), (150, 100), (300, 200) };
+    public (int, int)[] sizes = { (50, 35), (75, 50), (150, 100) };
 
     public void CreateAndLoadMap()
     {
