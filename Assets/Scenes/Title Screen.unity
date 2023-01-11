@@ -1245,11 +1245,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1668891175587230222, guid: 7ade4593fe5346944aa136430dc16211, type: 3}
       propertyPath: m_Value
-      value: 60
+      value: 175
       objectReference: {fileID: 0}
     - target: {fileID: 1668891175587230222, guid: 7ade4593fe5346944aa136430dc16211, type: 3}
       propertyPath: m_MaxValue
-      value: 600
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 1668891175587230222, guid: 7ade4593fe5346944aa136430dc16211, type: 3}
       propertyPath: m_MinValue
