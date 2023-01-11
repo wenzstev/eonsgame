@@ -21,6 +21,7 @@ public class CameraBounds : MonoBehaviour, ICameraRestriction
 
     public void CameraBounds_OnBoardCreated(object sender, BoardLoader.OnBoardCreatedEventArgs e) {
         SetBoard(e.BoardStats);
+        CameraMoveController.AttemptMove(new CameraMovement(BoardEdges.Bounds.center, CameraMoveController.Camera));
     }
 
     public void SetBoard(BoardStats bs)
@@ -28,7 +29,7 @@ public class CameraBounds : MonoBehaviour, ICameraRestriction
         boardStats = bs;
         CameraMoveController.AddRestriction(this);
         Vector2 BufferZoneVector = new Vector2(BufferZone, BufferZone);
-        BufferEdges = new Rect(BoardEdges.BottomLeft - BufferZoneVector, BoardEdges.TopRight + BufferZoneVector);
+        BufferEdges = new Rect(BoardEdges.BottomLeft - BufferZoneVector, BoardEdges.TopRight +  2 * BufferZoneVector);
     }
 
 
