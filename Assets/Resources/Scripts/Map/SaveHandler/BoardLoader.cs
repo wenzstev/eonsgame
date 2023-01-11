@@ -11,12 +11,13 @@ public class BoardLoader : MonoBehaviour
 
     public event EventHandler<OnBoardCreatedEventArgs> OnBoardCreated;
 
+    public float TileSize = 1;
 
     public GameObject LoadBoardFromSerialized(SerializedBoard sb)
     {
         BoardObj = Instantiate(BoardTemplate);
         JsonUtility.FromJsonOverwrite(sb.serializedComponents[0], BoardObj.GetComponent<BoardStats>());
-        BoardObj.GetComponent<BoardStats>().Initialize();
+        BoardObj.GetComponent<BoardStats>().Initialize(TileSize);
         OnBoardCreated?.Invoke(this, new OnBoardCreatedEventArgs() { BoardStats = BoardObj.GetComponent<BoardStats>() });
         return BoardObj;
     }

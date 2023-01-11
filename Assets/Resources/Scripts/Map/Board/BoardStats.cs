@@ -33,8 +33,9 @@ public class BoardStats : MonoBehaviour
         }
     }
 
-    public void Initialize()
+    public void Initialize(float tileWidth)
     {
+        TileWidth = tileWidth;
         _boardEdges = new BoardEdges(Height, Width, TileWidth);
     }
 
