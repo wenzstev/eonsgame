@@ -51,15 +51,19 @@ public class CultureHandler : MonoBehaviour
 
     }
 
+    
     public bool HasCultureByName(string cultureName)
     {
         return CultureContainer.HasCultureByName(cultureName);
     }
+    
 
+    
     public Culture GetCultureByName(string cultureName)
     {
         return CultureContainer.GetCultureByName(cultureName);
     }
+    
 
     public void RemoveCulture(Culture c)
     {
@@ -70,13 +74,20 @@ public class CultureHandler : MonoBehaviour
         }
 
 
-        Debug.LogError("Tried to remove culture from tile it wasn't on!");
+        Debug.LogError($"Tried to remove culture {c} from tile it wasn't on!");
     }
 
+    
     public void RenameCulture(Culture c, string oldname)
     {
-        if(CultureContainer.ContainsCulture(c)) CultureContainer.ChangeCultureName(c, oldname);
+        // rename logic goes here, because we're moving the culture back to staging
+        if(CultureContainer.ContainsCulture(c))
+        {
+            CultureContainer.RemoveCulture(c);
+            CultureStaging.AddArrival(c);
+        }
     }
+    
 
     void FirePopulationChangedEvent()
     {
