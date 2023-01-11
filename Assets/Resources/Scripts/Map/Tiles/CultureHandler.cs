@@ -74,7 +74,7 @@ public class CultureHandler : MonoBehaviour
         }
 
 
-        Debug.LogError("Tried to remove culture from tile it wasn't on!");
+        Debug.LogError($"Tried to remove culture {c} from tile it wasn't on!");
     }
 
     

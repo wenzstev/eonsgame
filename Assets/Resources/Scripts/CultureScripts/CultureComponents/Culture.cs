@@ -166,7 +166,7 @@ public class Culture : MonoBehaviour
     {
         if(newState == State.PendingRemoval)
         {
-            Debug.Log("Setting to destroy " + this);
+            //Debug.Log("Setting to destroy " + this);
             DestroyCulture();
             return;
         }
@@ -295,7 +295,7 @@ public class Culture : MonoBehaviour
         return $"{name}({GetHashCode()})";
     }
 
-    private void DestroyCulture()
+    public void DestroyCulture()
     {
         transform.parent = null;
         if (!isQuitting)
@@ -329,7 +329,7 @@ public class Culture : MonoBehaviour
     public static string CombineStrings(string first, string second)
     {
         int combineIndex = (int)first.Length / 2;
-        Debug.Log($"Combining {first} and {second} into {first.Substring(0, combineIndex) + second.Substring(combineIndex)}");
+        //Debug.Log($"Combining {first} and {second} into {first.Substring(0, combineIndex) + second.Substring(combineIndex)}");
 
         return first.Substring(0, combineIndex) + second.Substring(combineIndex);
     }

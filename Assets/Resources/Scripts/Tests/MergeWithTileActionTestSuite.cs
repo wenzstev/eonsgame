@@ -20,9 +20,12 @@ public class MergeWithTileActionTestSuite : CultureInteractionTest
     [Test]
     public void CanMergeCultures()
     {
-        string oldCultureName = TestCulture.name;
+        RenameAndRecolorCulture(TestCulture, "test", Color.blue);
+        MergeWithTileAction firstCultureMerge = new MergeWithTileAction(TestCulture);
+        firstCultureMerge.ExecuteTurn();
 
-        RenameAndRecolorCultures("test", "test", Color.blue, new Color(0, 0, .96f, 1));
+        RenameAndRecolorCulture(Neighbor, "test", new Color(0, 0, .96f, 1));
+
 
         Color a = TestCulture.Color;
         Color b = Neighbor.Color;
@@ -48,9 +51,18 @@ public class MergeWithTileActionTestSuite : CultureInteractionTest
     [Test]
     public void CanCreateAsNewCulture()
     {
-        RenameAndRecolorCultures("test", "test", Color.blue, Color.red);
+        RenameAndRecolorCulture(TestCulture, "test", Color.blue);
+        MergeWithTileAction firstCultureMerge = new MergeWithTileAction(TestCulture);
+        firstCultureMerge.ExecuteTurn();
 
-        ExecuteTurnAndSetCultureTurnUpdates();
+        RenameAndRecolorCulture(Neighbor, "test", Color.red);
+
+        MergeWithTileAction secondCultureMerge = new MergeWithTileAction(Neighbor);
+        secondCultureMerge.ExecuteTurn();
+
+        TestCultureUpdateList = Turn.GetPendingUpdatesFor(TestCulture);
+        NeighborUpdateList = Turn.GetPendingUpdatesFor(Neighbor);
+
         Assert.AreEqual(1, NeighborUpdateList.Where(u => u.GetType() == typeof(NameUpdate)).ToArray().Length, "Culture didn't get a name change!");
 
         Turn.UpdateAllCultures();
@@ -63,13 +75,12 @@ public class MergeWithTileActionTestSuite : CultureInteractionTest
         Assert.AreEqual(Culture.State.Invaded, TestUtils.GetLastStateInUpdateList(TestCultureUpdateList), "Invaded culture isn't marked as such!");
     }
 
-    void RenameAndRecolorCultures(string testCultureName, string neighborName, Color testCultureColor, Color neighborColor)
+    void RenameAndRecolorCulture(Culture c, string newName, Color newColor)
     {
-        TestCulture.RenameCulture(testCultureName);
-        Neighbor.RenameCulture(neighborName);
-        TestCulture.SetColor(testCultureColor);
-        Neighbor.SetColor(neighborColor);
+        c.RenameCulture(newName);
+        c.SetColor(newColor);
     }
+
 
     void ExecuteTurnAndSetCultureTurnUpdates()
     {
