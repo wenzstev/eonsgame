@@ -46,7 +46,7 @@ public class PerlinHeightmapGenerator : HeightmapGenerator
 
         float[,] points = new float[width, height];
 
-        Random.InitState(seed);
+        Random.InitState(System.DateTime.Now.Millisecond); // TODO: move this to allow for user editing of seed
         Vector2 startPoint = new Vector2(Random.Range(0, 10000), Random.Range(0, 10000));
         for (int y = 0; y < height; y++)
         {
