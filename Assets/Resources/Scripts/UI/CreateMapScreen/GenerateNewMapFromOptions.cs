@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GenerateNewMapFromOptions : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class GenerateNewMapFromOptions : MonoBehaviour
     public Slider tempSlider;
     public Slider precipitationSlider;
     public Slider waterlevelSlider;
+
+    public TMP_InputField MapName;
 
     public GameObject BoardTemplate;
     public GameObject MapGeneratorTemplate;
@@ -37,14 +40,16 @@ public class GenerateNewMapFromOptions : MonoBehaviour
         boardObj.GetComponent<BoardInputReader>().bg = boardCreator.GetComponent<BoardGenAlgorithm>();
         boardObj.GetComponent<Board>().CreateBoard();
 
-        CreateSaveAndLoadMap(boardObj.GetComponent<Board>());
+
+        CreateSaveAndLoadMap(boardObj.GetComponent<Board>(), MapName.text);
     }
 
-    void CreateSaveAndLoadMap(Board b)
+    void CreateSaveAndLoadMap(Board b, string mapName)
     {
+        if (mapName == "") mapName = "New World";
         Save save = new Save(b);
-        Save.SerializeSave(save, "untitled");
-        Save.CreatePersistantSave(save, "untitled");
+        Save.SerializeSave(save, mapName);
+        Save.CreatePersistantSave(save, mapName);
         SceneManager.LoadScene("PlayScene");
     }
 }
