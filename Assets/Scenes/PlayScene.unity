@@ -324,7 +324,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5230641761157741150, guid: 924d611a7c3612245a6ee97386fb5028, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 924d611a7c3612245a6ee97386fb5028, type: 3}
 --- !u!1 &360096154
 GameObject:
@@ -508,6 +509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BoardTemplate: {fileID: 734804678373380931, guid: 9bb9534752373ad4eadb0a4c9ec799c5, type: 3}
+  TileSize: 1
 --- !u!114 &1218317985 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 592987361289120464, guid: 3e6a8b09f8354c04eb25225f2f2f8761, type: 3}
@@ -630,7 +632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5695180184468728085, guid: 3681249039e02d34ebfe54f4c812318a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3681249039e02d34ebfe54f4c812318a, type: 3}
@@ -653,29 +655,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BoardLoader: {fileID: 1079782344}
   CameraMoveController: {fileID: 1596317511}
-  BufferZone: 20
---- !u!68 &1596317504
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1596317497}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -0.5, y: 0}
-  - {x: 0.5, y: 0}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
+  BufferZone: 1
 --- !u!114 &1596317510
 MonoBehaviour:
   m_ObjectHideFlags: 0

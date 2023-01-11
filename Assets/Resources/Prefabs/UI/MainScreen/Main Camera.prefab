@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2108349012625740082}
   - component: {fileID: 2108349012625740237}
   - component: {fileID: 2108349012625740236}
+  - component: {fileID: 5230641761157741150}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -45,7 +46,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.254717, g: 0.254717, b: 0.254717, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -100,6 +101,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedModifierX: 3.9
   speedModifierY: 2
+  CameraMoveController: {fileID: 0}
+  MouseActionsController: {fileID: 0}
 --- !u!114 &2108349012625740236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,3 +116,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scale: 1
+  CameraMoveController: {fileID: 0}
+--- !u!68 &5230641761157741150
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108349012625740083}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.5, y: 0}
+  - {x: 0.5, y: 0}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
