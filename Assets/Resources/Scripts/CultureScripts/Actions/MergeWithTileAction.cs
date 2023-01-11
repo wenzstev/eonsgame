@@ -55,7 +55,7 @@ public class MergeWithTileAction : CultureAction
     {
         string newName = Culture.MutateString(Culture.Name);
         Turn.AddUpdate(new NameUpdate(this, Culture, newName));
-        Debug.Log($"Changing name of {Culture} to {newName}");
+        //Debug.Log($"Changing name of {Culture} to {newName}");
         return turn;
     }
 

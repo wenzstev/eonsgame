@@ -72,7 +72,7 @@ public class CultureContainerTestSuite : BasicTest
         TestCultureContainer.AddCulture(TestCultureA);
         TestCultureContainer.AddCulture(TestCultureB);
 
-        MonoBehaviour.Destroy(TestCultureA);
+        TestCultureA.DestroyCulture();
 
         yield return null;
 

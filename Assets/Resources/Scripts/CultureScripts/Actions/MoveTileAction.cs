@@ -10,7 +10,7 @@ public class MoveTileAction : CultureMoveAction
 
     public override Turn ExecuteTurn()
     {
-        return AttemptMove();
+        return Culture.isActiveAndEnabled ? AttemptMove() : turn;
 
     }
 
