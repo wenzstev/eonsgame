@@ -14,7 +14,7 @@ public class AffinityBarController : MonoBehaviour
 
     public void SetValues(TileDrawer.BiomeType biome, float affinity, float MaxAffinityAmount)
     {
-        AffinityName.text = biome.ToString();
+        AffinityName.text = DisplayUtils.SplitCamelCase(biome.ToString());
 
         float barPercent = Mathf.InverseLerp(0, MaxAffinityAmount, affinity);
         float barWidth = Mathf.Lerp(MIN_WIDTH, MAX_WIDTH, barPercent);
