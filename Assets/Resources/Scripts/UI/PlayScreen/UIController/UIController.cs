@@ -50,10 +50,10 @@ public class UIController : MonoBehaviour
     GameObject CreateTileInfoPanel(GameObject SelectedTile)
     {
         GameObject NewTileInfoPanel = Instantiate(TileInfoPanel, canvas.transform);
-        NewTileInfoPanel.GetComponent<TileInfoPanelController>().SetValues(SelectedTile);
+        CultureListPanel NewPanel = NewTileInfoPanel.GetComponentInChildren<CultureListPanel>();
+        NewPanel.OnCultureButtonCreated += CultureListPanel_OnCultureButtonCreated;
 
-        CultureListButton[] cultures = NewTileInfoPanel.GetComponentsInChildren<CultureListButton>();
-        foreach(CultureListButton button in cultures) button.OnCultureButtonClicked += CultureListButton_OnCultureButtonClicked;
+        NewTileInfoPanel.GetComponent<TileInfoPanelController>().SetValues(SelectedTile);
 
         return NewTileInfoPanel;
     }
@@ -61,6 +61,11 @@ public class UIController : MonoBehaviour
     private void CultureListButton_OnCultureButtonClicked(object sender, CultureListButton.OnCultureButtonClickedEventArgs e)
     {
         SelectNewCulture(e.Culture.gameObject);
+    }
+
+    void CultureListPanel_OnCultureButtonCreated(object sender, CultureListPanel.OnCultureButtonCreatedEventArgs e)
+    {
+        e.NewButton.GetComponent<CultureListButton>().OnCultureButtonClicked += CultureListButton_OnCultureButtonClicked;
     }
 
     GameObject CreateCultureInfoPanel(GameObject SelectedCulture)

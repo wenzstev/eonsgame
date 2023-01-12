@@ -579,6 +579,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5695180184468728074, guid: 3681249039e02d34ebfe54f4c812318a, type: 3}
+      propertyPath: saveName
+      value: New World
+      objectReference: {fileID: 0}
+    - target: {fileID: 5695180184468728074, guid: 3681249039e02d34ebfe54f4c812318a, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}

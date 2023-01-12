@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -10,6 +11,7 @@ public class CulturePanelController: MonoBehaviour
     public TextMeshProUGUI CulturePop;
     public Image CultureColor;
     public AffinityPanelController AffinityPanelController;
+
 
     Culture Culture;
 
@@ -26,6 +28,7 @@ public class CulturePanelController: MonoBehaviour
         Culture.OnPopulationChanged += Culture_OnPopulationChanged;
         Culture.OnNameChanged += Culture_OnNameChanged;
         Culture.OnColorChanged += Culture_OnColorChanged;
+        Culture.OnCultureDestroyed += Culture_OnDestroyed;
     }
 
     private void Culture_OnColorChanged(object sender, Culture.OnColorChangedEventArgs e)
@@ -41,6 +44,11 @@ public class CulturePanelController: MonoBehaviour
     private void Culture_OnPopulationChanged(object sender, Culture.OnPopulationChangedEventArgs e)
     {
         SetPopulationText(Culture.Population);
+    }
+
+    private void Culture_OnDestroyed(object sender, Culture.OnCultureDestroyedEventArgs e)
+    {
+        Destroy(gameObject);
     }
 
     void SetPopulationText(int population)
@@ -65,6 +73,7 @@ public class CulturePanelController: MonoBehaviour
         Culture.OnPopulationChanged -= Culture_OnPopulationChanged;
         Culture.OnNameChanged -= Culture_OnNameChanged;
         Culture.OnColorChanged -= Culture_OnColorChanged;
+        Culture.OnCultureDestroyed -= Culture_OnDestroyed;
     }
 
 }
