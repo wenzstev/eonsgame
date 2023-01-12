@@ -31,7 +31,7 @@ public class TileDrawer : MonoBehaviour
         Grassland,
         Woodland,
         SeasonalForest,
-        TemperateRainForest,
+        TemperateRainforest,
         BorealForest,
         Tundra,
         Ice,
@@ -59,7 +59,7 @@ public class TileDrawer : MonoBehaviour
         {BiomeType.Ice, BiomeType.Tundra, BiomeType.Woodland, BiomeType.Woodland, BiomeType.Savannah, BiomeType.Savannah },
         {BiomeType.Ice, BiomeType.Tundra, BiomeType.BorealForest, BiomeType.Woodland, BiomeType.Savannah, BiomeType.Savannah },
         {BiomeType.Ice, BiomeType.Tundra, BiomeType.BorealForest, BiomeType.SeasonalForest, BiomeType.TropicalRainforest, BiomeType.TropicalRainforest },
-        {BiomeType.Ice, BiomeType.Tundra, BiomeType.BorealForest, BiomeType.TemperateRainForest, BiomeType.TropicalRainforest, BiomeType.TropicalRainforest },
+        {BiomeType.Ice, BiomeType.Tundra, BiomeType.BorealForest, BiomeType.TemperateRainforest, BiomeType.TropicalRainforest, BiomeType.TropicalRainforest },
     };
 
     public void Initialize()
@@ -106,7 +106,7 @@ public class TileDrawer : MonoBehaviour
             case BiomeType.SeasonalForest:
                 sr.color = SeasonalForestColor;
                 break;
-            case BiomeType.TemperateRainForest:
+            case BiomeType.TemperateRainforest:
                 sr.color = TemperateRainForestColor;
                 break;
             case BiomeType.TropicalRainforest:

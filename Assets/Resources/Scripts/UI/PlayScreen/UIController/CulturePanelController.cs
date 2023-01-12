@@ -55,7 +55,7 @@ public class CulturePanelController: MonoBehaviour
     {
         CulturePop.text = population < 1000 ?
             population.ToString() :
-            ValueDisplay.RoundToKilo(population).ToString();
+            DisplayUtils.RoundToKilo(population).ToString();
     }
 
     void SetNameText(string name)

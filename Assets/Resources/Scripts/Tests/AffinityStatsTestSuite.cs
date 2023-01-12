@@ -41,7 +41,7 @@ public class AffinityStatsTestSuite
         AffinityStats SecondStats = new AffinityStats();
 
         HarvestForDays(4, TileDrawer.BiomeType.Grassland, TestAffinityStats);
-        HarvestForDays(5, TileDrawer.BiomeType.TemperateRainForest, TestAffinityStats);
+        HarvestForDays(5, TileDrawer.BiomeType.TemperateRainforest, TestAffinityStats);
 
         HarvestForDays(3, TileDrawer.BiomeType.Grassland, SecondStats);
         HarvestForDays(7, TileDrawer.BiomeType.Desert, SecondStats);

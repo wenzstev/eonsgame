@@ -28,7 +28,7 @@ public class TileInfoPanelController : MonoBehaviour
         SelectedTileFood = SelectedTile.GetComponent<TileFood>();
         SelectedTileCultures = SelectedTile.GetComponentInChildren<CultureHandler>();
 
-        TileName.text = SelectedTileChars.Biome.ToString();
+        SetBiomeText(SelectedTileChars.Biome);
         SetFoodAmount(SelectedTileFood.CurFood);
         UpdateToCurrentPopulation();
         CultureListPanel.Initialize(SelectedTile);
@@ -36,6 +36,11 @@ public class TileInfoPanelController : MonoBehaviour
 
         SelectedTileFood.OnFoodChange += TileInfoPanelController_OnFoodChange;
         SelectedTileCultures.OnPopulationChanged += TileInfoPanelController_OnPopulationChanged;
+    }
+
+    void SetBiomeText(TileDrawer.BiomeType biome)
+    {
+        TileName.text = DisplayUtils.SplitCamelCase(biome.ToString());
     }
 
     void DeselectPreviousTile()
@@ -56,14 +61,14 @@ public class TileInfoPanelController : MonoBehaviour
 
     void SetFoodAmount(float foodAmount)
     {
-        string foodString = foodAmount > 1000 ? ValueDisplay.RoundToKilo(foodAmount) + "k" : Mathf.RoundToInt(foodAmount).ToString();
+        string foodString = foodAmount > 1000 ? DisplayUtils.RoundToKilo(foodAmount) + "k" : Mathf.RoundToInt(foodAmount).ToString();
         TileFood.text = foodString;
     }
 
     void UpdateToCurrentPopulation()
     {
         int pop = CalculateTilePopulation();
-        string popString = pop > 1000 ? ValueDisplay.RoundToKilo(pop) + "k" : pop.ToString();
+        string popString = pop > 1000 ? DisplayUtils.RoundToKilo(pop) + "k" : pop.ToString();
         TilePopulation.text = popString;
     }
 
