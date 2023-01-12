@@ -40,6 +40,11 @@ public class CultureController : MonoBehaviour
         return AllCultures.Select(c => c.Culture).ToArray();
     }
 
+    private void OnDestroy()
+    {
+        EventManager.StopListening("Tick", OnTick);
+    }
+
 
     void ExecuteAllCultureTurns()
     {
