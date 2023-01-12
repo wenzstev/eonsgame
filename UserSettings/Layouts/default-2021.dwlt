@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1349.3334
   m_ShowMode: 4
-  m_Title: Inspector
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 62
+  controlID: 19
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,12 +139,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1961.3334
+    width: 2254
     height: 1299.3334
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 67
+  controlID: 20
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,12 +164,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1961.3334
-    height: 628
+    width: 2254
+    height: 1082
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 68
+  controlID: 21
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -187,10 +187,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 386
-    height: 628
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+    width: 173.33333
+    height: 1082
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -207,23 +207,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: GameView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 386
+    x: 173.33333
     y: 0
-    width: 1575.3334
-    height: 628
+    width: 2080.6667
+    height: 1082
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 15}
+  m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 15}
   - {fileID: 16}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -240,11 +240,11 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 628
-    width: 1961.3334
-    height: 671.3334
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+    y: 1082
+    width: 2254
+    height: 217.33337
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 17}
@@ -269,12 +269,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1961.3334
+    x: 2254
     y: 0
-    width: 598.6666
+    width: 306
     height: 1299.3334
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -301,9 +301,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 756.6667
-    width: 2222.3333
-    height: 594.3334
+    y: 732
+    width: 2253
+    height: 619.00006
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -346,10 +346,10 @@ MonoBehaviour:
         m_FrameDataHierarchyView:
           m_Serialized: 1
           m_TreeViewState:
-            scrollPos: {x: 0, y: 128}
-            m_SelectedIDs: 
-            m_LastClickedID: 0
-            m_ExpandedIDs: 04000000470000007f000000ea000000eb000000fb000000fe0000003f010000400100005001000053010000540100005c01000065010000c5010000ed0100000102000016020000170200009c020000
+            scrollPos: {x: 0, y: 0}
+            m_SelectedIDs: 0e010000
+            m_LastClickedID: 270
+            m_ExpandedIDs: 040000004400000045000000470000007f0000009a000000e2000000
             m_RenameOverlay:
               m_UserAcceptedRename: 0
               m_Name: 
@@ -369,7 +369,7 @@ MonoBehaviour:
             m_SearchString: 
           m_MultiColumnHeaderState:
             m_Columns:
-            - width: 1342.6666
+            - width: 1641.6666
               sortedAscending: 1
               headerContent:
                 m_Text: Overview
@@ -1317,8 +1317,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 72.66667
-    width: 385
-    height: 607
+    width: 172.33333
+    height: 1061
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1326,9 +1326,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 00fbffff
-      m_LastClickedID: -1280
-      m_ExpandedIDs: 32fbffff38fbffff
+      m_SelectedIDs: 3a8adeff
+      m_LastClickedID: 0
+      m_ExpandedIDs: 7a8adeff20e8fcff38fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1374,19 +1374,19 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 72.66667
-    width: 703.6667
-    height: 842.3333
+    width: 552.3333
+    height: 623
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 2000
+    ID: 131
     splitterInitialOffset: 316.5
     currentActiveSplitter: -1
     realSizes:
-    - 412.66666
-    - 359.33334
+    - 295.33334
+    - 257.33334
     relativeSizes:
     - 0.5344828
     - 0.46551722
@@ -1396,7 +1396,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 772
+    lastTotalSize: 552.6667
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -1412,9 +1412,9 @@ MonoBehaviour:
       uniqueId: '[My project][suite]'
       name: My project
       fullName: My project
-      resultStatus: 2
-      duration: 2.579103
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.2990464
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1428,9 +1428,9 @@ MonoBehaviour:
       uniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
       name: Tests.dll
       fullName: C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll
-      resultStatus: 2
-      duration: 2.1909788
-      messages: One or more child tests had errors
+      resultStatus: 1
+      duration: 0.1619785
+      messages: 
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1445,7 +1445,7 @@ MonoBehaviour:
       name: AffinityManagerTestSuite
       fullName: AffinityManagerTestSuite
       resultStatus: 1
-      duration: 0.0950813
+      duration: 0.079992
       messages: 
       output: 
       stacktrace: 
@@ -1461,7 +1461,7 @@ MonoBehaviour:
       name: CanDecayAffinityOnBiome
       fullName: AffinityManagerTestSuite.CanDecayAffinityOnBiome
       resultStatus: 1
-      duration: 0.0295561
+      duration: 0.0243814
       messages: 
       output: 'Final affinity for Grassland is 6.70962
 
@@ -1487,7 +1487,7 @@ MonoBehaviour:
       name: CanGainAffinityOnBiome
       fullName: AffinityManagerTestSuite.CanGainAffinityOnBiome
       resultStatus: 1
-      duration: 0.0291128
+      duration: 0.0273638
       messages: 
       output: 'Final affinity for Grassland is 3.083034
 
@@ -1508,7 +1508,7 @@ MonoBehaviour:
       name: CanGetClonedAffinityManager
       fullName: AffinityManagerTestSuite.CanGetClonedAffinityManager
       resultStatus: 1
-      duration: 0.0186474
+      duration: 0.0151565
       messages: 
       output: 'Final affinity for Grassland is 6.70962
 
@@ -1562,7 +1562,7 @@ MonoBehaviour:
       name: AffinityStatsTestSuite
       fullName: AffinityStatsTestSuite
       resultStatus: 1
-      duration: 0.0124572
+      duration: 0.010628
       messages: 
       output: 
       stacktrace: 
@@ -1578,7 +1578,7 @@ MonoBehaviour:
       name: CanCombineAffinity
       fullName: AffinityStatsTestSuite.CanCombineAffinity
       resultStatus: 1
-      duration: 0.0034239
+      duration: 0.0026937
       messages: 
       output: 'Final affinity for Grassland is 40
 
@@ -1605,7 +1605,7 @@ MonoBehaviour:
       name: CanDuplicateAffinity
       fullName: AffinityStatsTestSuite.CanDuplicateAffinity
       resultStatus: 1
-      duration: 0.0053441
+      duration: 0.004642
       messages: 
       output: 'Final affinity for Grassland is 40
 
@@ -1657,7 +1657,7 @@ MonoBehaviour:
       name: BoardAgeTestSuite
       fullName: BoardAgeTestSuite
       resultStatus: 1
-      duration: 0.1693314
+      duration: 0.1494743
       messages: 
       output: 
       stacktrace: 
@@ -1673,7 +1673,7 @@ MonoBehaviour:
       name: CanGetBoardAgeAtStartup
       fullName: BoardAgeTestSuite.CanGetBoardAgeAtStartup
       resultStatus: 1
-      duration: 0.1261863
+      duration: 0.1269329
       messages: 
       output: 'clearing
 
@@ -1692,7 +1692,7 @@ MonoBehaviour:
       name: CanUpdateBoardAge
       fullName: BoardAgeTestSuite.CanUpdateBoardAge
       resultStatus: 1
-      duration: 0.028879
+      duration: 0.0130458
       messages: 
       output: 'clearing
 
@@ -1711,7 +1711,7 @@ MonoBehaviour:
       name: BoardStatsTestSuite
       fullName: BoardStatsTestSuite
       resultStatus: 1
-      duration: 0.010015
+      duration: 0.0090706
       messages: 
       output: 
       stacktrace: 
@@ -1727,7 +1727,7 @@ MonoBehaviour:
       name: CanGetAccurateBoardEdges
       fullName: BoardStatsTestSuite.CanGetAccurateBoardEdges
       resultStatus: 1
-      duration: 0.0040627
+      duration: 0.0037784
       messages: 
       output: 'setting dimensions
 
@@ -1748,7 +1748,7 @@ MonoBehaviour:
       name: CameraBoundsTestSuite
       fullName: CameraBoundsTestSuite
       resultStatus: 1
-      duration: 0.0140206
+      duration: 0.0110295
       messages: 
       output: 
       stacktrace: 
@@ -1764,7 +1764,7 @@ MonoBehaviour:
       name: CanAllowCameraWhenLegalBoundsChange
       fullName: CameraBoundsTestSuite.CanAllowCameraWhenLegalBoundsChange
       resultStatus: 1
-      duration: 0.0039899
+      duration: 0.0040967
       messages: 
       output: 'setting dimensions
 
@@ -1788,7 +1788,7 @@ MonoBehaviour:
       name: CanGetBoundsFromBoard
       fullName: CameraBoundsTestSuite.CanGetBoundsFromBoard
       resultStatus: 1
-      duration: 0.0009037
+      duration: 0.0010846
       messages: 
       output: 'setting dimensions
 
@@ -1812,7 +1812,7 @@ MonoBehaviour:
       name: CanPreventCameraFromExceedingBoundsLarge
       fullName: CameraBoundsTestSuite.CanPreventCameraFromExceedingBoundsLarge
       resultStatus: 1
-      duration: 0.0009631
+      duration: 0.0011456
       messages: 
       output: 'setting dimensions
 
@@ -1836,7 +1836,7 @@ MonoBehaviour:
       name: CanPreventCameraFromExceedingBoundsSmall
       fullName: CameraBoundsTestSuite.CanPreventCameraFromExceedingBoundsSmall
       resultStatus: 1
-      duration: 0.0011013
+      duration: 0.0010738
       messages: 
       output: 'setting dimensions
 
@@ -1860,7 +1860,7 @@ MonoBehaviour:
       name: CameraMovementTestSuite
       fullName: CameraMovementTestSuite
       resultStatus: 1
-      duration: 0.0107718
+      duration: 0.0088639
       messages: 
       output: 
       stacktrace: 
@@ -1876,7 +1876,7 @@ MonoBehaviour:
       name: CanDetermineNewEdgesFromBounds
       fullName: CameraMovementTestSuite.CanDetermineNewEdgesFromBounds
       resultStatus: 1
-      duration: 0.0006826
+      duration: 0.000717
       messages: 
       output: 
       stacktrace: 
@@ -1893,7 +1893,7 @@ MonoBehaviour:
       name: CanDetermineNewOriginFromBounds
       fullName: CameraMovementTestSuite.CanDetermineNewOriginFromBounds
       resultStatus: 1
-      duration: 0.0002696
+      duration: 0.0002798
       messages: 
       output: 
       stacktrace: 
@@ -1910,7 +1910,7 @@ MonoBehaviour:
       name: CanDetermineNewZoomFromBounds
       fullName: CameraMovementTestSuite.CanDetermineNewZoomFromBounds
       resultStatus: 1
-      duration: 0.0004264
+      duration: 0.0003172
       messages: 
       output: 
       stacktrace: 
@@ -1927,7 +1927,7 @@ MonoBehaviour:
       name: NewTransformIsAccurate
       fullName: CameraMovementTestSuite.NewTransformIsAccurate
       resultStatus: 1
-      duration: 0.0006021
+      duration: 0.0005503
       messages: 
       output: 
       stacktrace: 
@@ -1944,7 +1944,7 @@ MonoBehaviour:
       name: CultureContainerTestSuite
       fullName: CultureContainerTestSuite
       resultStatus: 1
-      duration: 0.0396246
+      duration: 2.5678394
       messages: 
       output: 
       stacktrace: 
@@ -1960,13 +1960,9 @@ MonoBehaviour:
       name: CanAddCultureToContainer
       fullName: CultureContainerTestSuite.CanAddCultureToContainer
       resultStatus: 1
-      duration: 0.0064255
+      duration: 0.0231823
       messages: 
-      output: 'clearing
-
-        clearing
-
-'
+      output: "Before: ListVals: \r\nAfter: ListVals: CultureA(-24248)\r\nclearing\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -1981,13 +1977,11 @@ MonoBehaviour:
       name: CanResortWhenCultureDestroyed
       fullName: CultureContainerTestSuite.CanResortWhenCultureDestroyed
       resultStatus: 1
-      duration: 0.0135959
+      duration: 2.554428
       messages: 
-      output: 'clearing
-
-        clearing
-
-'
+      output: "Before: ListVals: \r\nAfter: ListVals: CultureA(-26342)\r\nBefore:
+        ListVals: CultureA(-26342)\r\nAfter: ListVals: CultureA(-26342),CultureB(-26344)\r\nBefore:
+        ListVals: CultureA(-26342),CultureB(-26344)\r\nAfter: ListVals: CultureB(-26344)\r\nclearing\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2002,13 +1996,10 @@ MonoBehaviour:
       name: CanResortWhenPopulationAdded
       fullName: CultureContainerTestSuite.CanResortWhenPopulationAdded
       resultStatus: 1
-      duration: 0.0060225
+      duration: 0.0046801
       messages: 
-      output: 'clearing
-
-        clearing
-
-'
+      output: "Before: ListVals: \r\nAfter: ListVals: CultureA(-24312)\r\nBefore:
+        ListVals: CultureA(-24312)\r\nAfter: ListVals: CultureA(-24312),CultureB(-24314)\r\nclearing\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2023,13 +2014,10 @@ MonoBehaviour:
       name: CanSortCultures
       fullName: CultureContainerTestSuite.CanSortCultures
       resultStatus: 1
-      duration: 0.0060159
+      duration: 0.0060214
       messages: 
-      output: 'clearing
-
-        clearing
-
-'
+      output: "Before: ListVals: \r\nAfter: ListVals: CultureB(-24346)\r\nBefore:
+        ListVals: CultureB(-24346)\r\nAfter: ListVals: CultureA(-24344),CultureB(-24346)\r\nclearing\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2044,7 +2032,7 @@ MonoBehaviour:
       name: CultureFoodStoreTestSuite
       fullName: CultureFoodStoreTestSuite
       resultStatus: 1
-      duration: 0.1019455
+      duration: 0.0791106
       messages: 
       output: 
       stacktrace: 
@@ -2060,15 +2048,11 @@ MonoBehaviour:
       name: CanCollectFoodFromTile
       fullName: CultureFoodStoreTestSuite.CanCollectFoodFromTile
       resultStatus: 1
-      duration: 0.0326003
+      duration: 0.0351676
       messages: 
-      output: 'setting dimensions
-
-        Setup Complete. Culture name is rthqqn(-4046226)
-
-        clearing
-
-'
+      output: "setting dimensions\r\nAdding culture rthqq(-3600) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
+        ListVals: \r\nAfter: ListVals: rthqq(-3600)\r\nSetup Complete. Culture name
+        is rthqq(-3600)\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2083,15 +2067,11 @@ MonoBehaviour:
       name: CanConsumeFoodInTurn
       fullName: CultureFoodStoreTestSuite.CanConsumeFoodInTurn
       resultStatus: 1
-      duration: 0.0217091
+      duration: 0.015711
       messages: 
-      output: 'setting dimensions
-
-        Setup Complete. Culture name is rthqqn(-4046378)
-
-        clearing
-
-'
+      output: "setting dimensions\r\nAdding culture rthqq(-3748) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
+        ListVals: \r\nAfter: ListVals: rthqq(-3748)\r\nSetup Complete. Culture name
+        is rthqq(-3748)\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2106,15 +2086,11 @@ MonoBehaviour:
       name: CanConsumeFoodMultiplePopulation
       fullName: CultureFoodStoreTestSuite.CanConsumeFoodMultiplePopulation
       resultStatus: 1
-      duration: 0.0208913
+      duration: 0.0118965
       messages: 
-      output: 'setting dimensions
-
-        Setup Complete. Culture name is rthqqn(-4046530)
-
-        clearing
-
-'
+      output: "setting dimensions\r\nAdding culture rthqq(-3896) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
+        ListVals: \r\nAfter: ListVals: rthqq(-3896)\r\nSetup Complete. Culture name
+        is rthqq(-3896)\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2129,15 +2105,11 @@ MonoBehaviour:
       name: CanReduceFoodOnTile
       fullName: CultureFoodStoreTestSuite.CanReduceFoodOnTile
       resultStatus: 1
-      duration: 0.0191962
+      duration: 0.0120396
       messages: 
-      output: 'setting dimensions
-
-        Setup Complete. Culture name is rthqqn(-4046682)
-
-        clearing
-
-'
+      output: "setting dimensions\r\nAdding culture rthqq(-4044) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
+        ListVals: \r\nAfter: ListVals: rthqq(-4044)\r\nSetup Complete. Culture name
+        is rthqq(-4044)\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2152,7 +2124,7 @@ MonoBehaviour:
       name: CulturePlacementHandlerTestSuite
       fullName: CulturePlacementHandlerTestSuite
       resultStatus: 1
-      duration: 0.8919605
+      duration: 0.2466056
       messages: 
       output: 
       stacktrace: 
@@ -2168,13 +2140,13 @@ MonoBehaviour:
       name: CanNotShowAdditionalCulturesAfterThree
       fullName: CulturePlacementHandlerTestSuite.CanNotShowAdditionalCulturesAfterThree
       resultStatus: 1
-      duration: 0.1123149
+      duration: 0.1284934
       messages: 
-      output: 'clearing
-
-        clearing
-
-'
+      output: "Before: ListVals: \r\nAfter: ListVals: culture(-10862)\r\nBefore:
+        ListVals: culture(-10862)\r\nAfter: ListVals: culture(-10862),culture(-10868)\r\nBefore:
+        ListVals: culture(-10862),culture(-10868)\r\nAfter: ListVals: culture(-10862),culture(-10868),culture(-10874)\r\nBefore:
+        ListVals: culture(-10862),culture(-10868),culture(-10874)\r\nAfter: ListVals:
+        culture(-10862),culture(-10868),culture(-10874),culture(-10890)\r\nclearing\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2189,13 +2161,11 @@ MonoBehaviour:
       name: CanRearrangeWhenPopChanges
       fullName: CulturePlacementHandlerTestSuite.CanRearrangeWhenPopChanges
       resultStatus: 1
-      duration: 0.2129084
+      duration: 0.20826
       messages: 
-      output: 'clearing
-
-        clearing
-
-'
+      output: "Before: ListVals: \r\nAfter: ListVals: culture(-10908)\r\nBefore:
+        ListVals: culture(-10908)\r\nAfter: ListVals: culture(-10908),culture(-10914)\r\nBefore:
+        ListVals: culture(-10908),culture(-10914)\r\nAfter: ListVals: culture(-10908),culture(-10914),culture(-10920)\r\nclearing\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2210,13 +2180,13 @@ MonoBehaviour:
       name: CanReduceFromThreeToTwoCulturesOnTile
       fullName: CulturePlacementHandlerTestSuite.CanReduceFromThreeToTwoCulturesOnTile
       resultStatus: 1
-      duration: 0.220551
+      duration: 0.2328586
       messages: 
-      output: 'clearing
-
-        clearing
-
-'
+      output: "Before: ListVals: \r\nAfter: ListVals: culture(-12252)\r\nBefore:
+        ListVals: culture(-12252)\r\nAfter: ListVals: culture(-12252),culture(-12258)\r\nBefore:
+        ListVals: culture(-12252),culture(-12258)\r\nAfter: ListVals: culture(-12252),culture(-12258),culture(-12264)\r\nBefore:
+        ListVals: culture(-12252),culture(-12258),culture(-12264)\r\nAfter: ListVals:
+        culture(-12258),culture(-12264)\r\nclearing\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2231,13 +2201,9 @@ MonoBehaviour:
       name: CanShowOneCultureOnTile
       fullName: CulturePlacementHandlerTestSuite.CanShowOneCultureOnTile
       resultStatus: 1
-      duration: 0.1138315
+      duration: 0.1082991
       messages: 
-      output: 'clearing
-
-        clearing
-
-'
+      output: "Before: ListVals: \r\nAfter: ListVals: culture(-10988)\r\nclearing\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2252,13 +2218,11 @@ MonoBehaviour:
       name: CanShowThreeCulturesOnTile
       fullName: CulturePlacementHandlerTestSuite.CanShowThreeCulturesOnTile
       resultStatus: 1
-      duration: 0.1116042
+      duration: 0.107219
       messages: 
-      output: 'clearing
-
-        clearing
-
-'
+      output: "Before: ListVals: \r\nAfter: ListVals: culture(-11028)\r\nBefore:
+        ListVals: culture(-11028)\r\nAfter: ListVals: culture(-11028),culture(-11034)\r\nBefore:
+        ListVals: culture(-11028),culture(-11034)\r\nAfter: ListVals: culture(-11028),culture(-11034),culture(-11040)\r\nclearing\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2273,13 +2237,10 @@ MonoBehaviour:
       name: CanShowTwoCulturesOnTile
       fullName: CulturePlacementHandlerTestSuite.CanShowTwoCulturesOnTile
       resultStatus: 1
-      duration: 0.1122909
+      duration: 0.1069641
       messages: 
-      output: 'clearing
-
-        clearing
-
-'
+      output: "Before: ListVals: \r\nAfter: ListVals: culture(-11068)\r\nBefore:
+        ListVals: culture(-11068)\r\nAfter: ListVals: culture(-11068),culture(-11074)\r\nclearing\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2294,7 +2255,7 @@ MonoBehaviour:
       name: CultureTestSuite
       fullName: CultureTestSuite
       resultStatus: 1
-      duration: 0.0531441
+      duration: 0.0454097
       messages: 
       output: 
       stacktrace: 
@@ -2310,15 +2271,11 @@ MonoBehaviour:
       name: TestCanMerge
       fullName: CultureTestSuite.TestCanMerge
       resultStatus: 1
-      duration: 0.0112805
+      duration: 0.0091292
       messages: 
-      output: 'setting dimensions
-
-        Setup Complete. Culture name is rthqqn(-4047080)
-
-        clearing
-
-'
+      output: "setting dimensions\r\nAdding culture rthqq(-4438) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
+        ListVals: \r\nAfter: ListVals: rthqq(-4438)\r\nSetup Complete. Culture name
+        is rthqq(-4438)\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2333,15 +2290,11 @@ MonoBehaviour:
       name: TestCannotMerge
       fullName: CultureTestSuite.TestCannotMerge
       resultStatus: 1
-      duration: 0.0134093
+      duration: 0.0100995
       messages: 
-      output: 'setting dimensions
-
-        Setup Complete. Culture name is rthqqn(-4047250)
-
-        clearing
-
-'
+      output: "setting dimensions\r\nAdding culture rthqq(-4604) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
+        ListVals: \r\nAfter: ListVals: rthqq(-4604)\r\nSetup Complete. Culture name
+        is rthqq(-4604)\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2356,15 +2309,11 @@ MonoBehaviour:
       name: TestSplitCulture
       fullName: CultureTestSuite.TestSplitCulture
       resultStatus: 1
-      duration: 0.0212624
+      duration: 0.0219988
       messages: 
-      output: 'setting dimensions
-
-        Setup Complete. Culture name is rthqqn(-4047420)
-
-        clearing
-
-'
+      output: "setting dimensions\r\nAdding culture rthqq(-4770) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
+        ListVals: \r\nAfter: ListVals: rthqq(-4770)\r\nSetup Complete. Culture name
+        is rthqq(-4770)\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2379,7 +2328,7 @@ MonoBehaviour:
       name: CurveTestSuite
       fullName: CurveTestSuite
       resultStatus: 1
-      duration: 0.0115002
+      duration: 0.0069801
       messages: 
       output: 
       stacktrace: 
@@ -2395,7 +2344,7 @@ MonoBehaviour:
       name: TestCompoundCurve
       fullName: CurveTestSuite.TestCompoundCurve
       resultStatus: 1
-      duration: 0.0004249
+      duration: 0.0007527
       messages: 
       output: 
       stacktrace: 
@@ -2412,7 +2361,7 @@ MonoBehaviour:
       name: TestGaussianCurve
       fullName: CurveTestSuite.TestGaussianCurve
       resultStatus: 1
-      duration: 0.0002324
+      duration: 0.0003479
       messages: 
       output: 
       stacktrace: 
@@ -2429,7 +2378,7 @@ MonoBehaviour:
       name: TestPowerCurve
       fullName: CurveTestSuite.TestPowerCurve
       resultStatus: 1
-      duration: 0.0001867
+      duration: 0.0002094
       messages: 
       output: 
       stacktrace: 
@@ -2446,7 +2395,7 @@ MonoBehaviour:
       name: TestSigmoidCurve
       fullName: CurveTestSuite.TestSigmoidCurve
       resultStatus: 1
-      duration: 0.0001799
+      duration: 0.0002324
       messages: 
       output: 
       stacktrace: 
@@ -2463,7 +2412,7 @@ MonoBehaviour:
       name: FoodAmountIndicatorTestSuite
       fullName: FoodAmountIndicatorTestSuite
       resultStatus: 2
-      duration: 0.0239484
+      duration: 0.052777
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -2479,7 +2428,7 @@ MonoBehaviour:
       name: CanDisplayAccurateFoodCount
       fullName: FoodAmountIndicatorTestSuite.CanDisplayAccurateFoodCount
       resultStatus: 2
-      duration: 0.0093478
+      duration: 0.0238908
       messages: 'SetUp : Unhandled log message: ''[Exception] NullReferenceException:
         Object reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
       output: 'NullReferenceException: Object reference not set to an instance of
@@ -2500,7 +2449,7 @@ MonoBehaviour:
       name: CanGenerateFoodIndicatorAtExpectedInterval
       fullName: FoodAmountIndicatorTestSuite.CanGenerateFoodIndicatorAtExpectedInterval
       resultStatus: 2
-      duration: 0.0077848
+      duration: 0.0152755
       messages: 'SetUp : Unhandled log message: ''[Exception] NullReferenceException:
         Object reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
       output: 'NullReferenceException: Object reference not set to an instance of
@@ -2524,7 +2473,7 @@ MonoBehaviour:
       name: GreyscaleOverlayTestSuite
       fullName: GreyscaleOverlayTestSuite
       resultStatus: 1
-      duration: 0.0085099
+      duration: 0.0067429
       messages: 
       output: 
       stacktrace: 
@@ -2540,7 +2489,7 @@ MonoBehaviour:
       name: CanMakeImageGreyscale
       fullName: GreyscaleOverlayTestSuite.CanMakeImageGreyscale
       resultStatus: 1
-      duration: 0.0019594
+      duration: 0.0022754
       messages: 
       output: 'clearing
 
@@ -2559,7 +2508,7 @@ MonoBehaviour:
       name: CanSetToVariousTransparencies
       fullName: GreyscaleOverlayTestSuite.CanSetToVariousTransparencies
       resultStatus: 1
-      duration: 0.0007975
+      duration: 0.0008105
       messages: 
       output: 'clearing
 
@@ -2578,7 +2527,7 @@ MonoBehaviour:
       name: InfluenceActionTestSuite
       fullName: InfluenceActionTestSuite
       resultStatus: 1
-      duration: 0.0341838
+      duration: 0.0972816
       messages: 
       output: 
       stacktrace: 
@@ -2594,15 +2543,11 @@ MonoBehaviour:
       name: CanInfluenceNeighborCulture
       fullName: InfluenceActionTestSuite.CanInfluenceNeighborCulture
       resultStatus: 1
-      duration: 0.0113266
+      duration: 0.0617383
       messages: 
-      output: 'setting dimensions
-
-        Setup Complete. Culture name is rthqqn(-4047754)
-
-        clearing
-
-'
+      output: "setting dimensions\r\nBefore: ListVals: \r\nAfter: ListVals: rthqq(-13982)\r\nSetup
+        Complete. Culture name is rthqq(-13982)\r\nBefore: ListVals: rthqq(-13982)\r\nAfter:
+        ListVals: rthqq(-13982),wqsts(-13996)\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2617,15 +2562,14 @@ MonoBehaviour:
       name: CanMergeIntoNewCultureIfClose
       fullName: InfluenceActionTestSuite.CanMergeIntoNewCultureIfClose
       resultStatus: 1
-      duration: 0.015191
+      duration: 0.0244134
       messages: 
-      output: 'setting dimensions
-
-        Setup Complete. Culture name is rthqqn(-4047918)
-
-        clearing
-
-'
+      output: "setting dimensions\r\nBefore: ListVals: \r\nAfter: ListVals: rthqq(-14142)\r\nSetup
+        Complete. Culture name is rthqq(-14142)\r\nBefore: ListVals: rthqq(-14142)\r\nAfter:
+        ListVals: rthqq(-14142),wqsts(-14156)\r\nCombining rthqq and wqsts into rtsts\r\nBefore:
+        ListVals: rthqq(-14142),wqsts(-14156)\r\nAfter: ListVals: rthqq(-14142)\r\nSetting
+        to destroy wqsts(-14156)\r\nBefore: ListVals: rtsts(-14142)\r\nAfter: ListVals:
+        \r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2640,7 +2584,7 @@ MonoBehaviour:
       name: MergeWithTileActionTestSuite
       fullName: MergeWithTileActionTestSuite
       resultStatus: 1
-      duration: 0.0531306
+      duration: 0.1554717
       messages: 
       output: 
       stacktrace: 
@@ -2656,15 +2600,11 @@ MonoBehaviour:
       name: CanAddNewCultureToTile
       fullName: MergeWithTileActionTestSuite.CanAddNewCultureToTile
       resultStatus: 1
-      duration: 0.0123897
+      duration: 0.0715648
       messages: 
-      output: 'setting dimensions
-
-        Setup Complete. Culture name is rthqqn(-4048082)
-
-        clearing
-
-'
+      output: "setting dimensions\r\nBefore: ListVals: \r\nAfter: ListVals: rthqq(-36668)\r\nSetup
+        Complete. Culture name is rthqq(-36668)\r\nBefore: ListVals: \r\nAfter: ListVals:
+        wqsts(-36682)\r\nBefore: ListVals: rthqq(-36668)\r\nAfter: ListVals: rthqq(-36668),wqsts(-36682)\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2679,15 +2619,13 @@ MonoBehaviour:
       name: CanCreateAsNewCulture
       fullName: MergeWithTileActionTestSuite.CanCreateAsNewCulture
       resultStatus: 1
-      duration: 0.0181925
+      duration: 0.0296623
       messages: 
-      output: 'setting dimensions
-
-        Setup Complete. Culture name is rthqqn(-4048246)
-
-        clearing
-
-'
+      output: "setting dimensions\r\nBefore: ListVals: \r\nAfter: ListVals: rthqq(-36828)\r\nSetup
+        Complete. Culture name is rthqq(-36828)\r\nBefore: ListVals: \r\nAfter: ListVals:
+        wqsts(-36842)\r\nBefore: ListVals: test(-36828)\r\nAfter: ListVals: \r\nBefore:
+        ListVals: \r\nAfter: ListVals: test(-36828)\r\nChanging name of test(-36842)
+        to oest\r\nBefore: ListVals: test(-36828)\r\nAfter: ListVals: test(-36828),oest(-36842)\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2702,15 +2640,13 @@ MonoBehaviour:
       name: CanMergeCultures
       fullName: MergeWithTileActionTestSuite.CanMergeCultures
       resultStatus: 1
-      duration: 0.0153735
+      duration: 0.037548
       messages: 
-      output: 'setting dimensions
-
-        Setup Complete. Culture name is rthqqn(-4048410)
-
-        clearing
-
-'
+      output: "setting dimensions\r\nBefore: ListVals: \r\nAfter: ListVals: rthqq(-36988)\r\nSetup
+        Complete. Culture name is rthqq(-36988)\r\nBefore: ListVals: \r\nAfter: ListVals:
+        wqsts(-37002)\r\nBefore: ListVals: test(-36988)\r\nAfter: ListVals: \r\nBefore:
+        ListVals: \r\nAfter: ListVals: test(-36988)\r\nBefore: ListVals: test(-37002)\r\nAfter:
+        ListVals: \r\nSetting to destroy test(-37002)\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2725,7 +2661,7 @@ MonoBehaviour:
       name: MoveActionTestSuite
       fullName: MoveActionTestSuite
       resultStatus: 1
-      duration: 0.4104694
+      duration: 0.3783329
       messages: 
       output: 
       stacktrace: 
@@ -2741,15 +2677,12 @@ MonoBehaviour:
       name: MoveTileActionTest
       fullName: MoveActionTestSuite.MoveTileActionTest
       resultStatus: 1
-      duration: 0.1525025
+      duration: 0.1445952
       messages: 
-      output: 'setting dimensions
-
-        Setup Complete. Culture name is rthqqn(-4048574)
-
-        clearing
-
-'
+      output: "setting dimensions\r\nAdding culture rthqq(-5898) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
+        ListVals: \r\nAfter: ListVals: rthqq(-5898)\r\nSetup Complete. Culture name
+        is rthqq(-5898)\r\nRemoving culture rthqq(-5898) from tile 0, 0 (UnityEngine.Transform)\r\nBefore:
+        ListVals: rthqq(-5898)\r\nAfter: ListVals: \r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2764,15 +2697,11 @@ MonoBehaviour:
       name: MoveTileActionWhenLargeTest
       fullName: MoveActionTestSuite.MoveTileActionWhenLargeTest
       resultStatus: 1
-      duration: 0.1260504
+      duration: 0.1168147
       messages: 
-      output: 'setting dimensions
-
-        Setup Complete. Culture name is rthqqn(-4048724)
-
-        clearing
-
-'
+      output: "setting dimensions\r\nAdding culture rthqq(-6044) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
+        ListVals: \r\nAfter: ListVals: rthqq(-6044)\r\nSetup Complete. Culture name
+        is rthqq(-6044)\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2787,15 +2716,12 @@ MonoBehaviour:
       name: RepelledActionTest
       fullName: MoveActionTestSuite.RepelledActionTest
       resultStatus: 1
-      duration: 0.1241526
+      duration: 0.1120705
       messages: 
-      output: 'setting dimensions
-
-        Setup Complete. Culture name is rthqqn(-4048936)
-
-        clearing
-
-'
+      output: "setting dimensions\r\nAdding culture rthqq(-6250) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
+        ListVals: \r\nAfter: ListVals: rthqq(-6250)\r\nSetup Complete. Culture name
+        is rthqq(-6250)\r\nRemoving culture rthqq(-6250) from tile 0, 0 (UnityEngine.Transform)\r\nBefore:
+        ListVals: rthqq(-6250)\r\nAfter: ListVals: \r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2810,7 +2736,7 @@ MonoBehaviour:
       name: OverpopulationActionTestSuite
       fullName: OverpopulationActionTestSuite
       resultStatus: 1
-      duration: 0.0365952
+      duration: 0.0172394
       messages: 
       output: 
       stacktrace: 
@@ -2826,15 +2752,11 @@ MonoBehaviour:
       name: CanBecomeOverPopulated
       fullName: OverpopulationActionTestSuite.CanBecomeOverPopulated
       resultStatus: 1
-      duration: 0.0166611
+      duration: 0.0066105
       messages: 
-      output: 'setting dimensions
-
-        Setup Complete. Culture name is rthqqn(-4049086)
-
-        clearing
-
-'
+      output: "setting dimensions\r\nAdding culture rthqq(-6396) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
+        ListVals: \r\nAfter: ListVals: rthqq(-6396)\r\nSetup Complete. Culture name
+        is rthqq(-6396)\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2849,15 +2771,11 @@ MonoBehaviour:
       name: TestPopulationDrop
       fullName: OverpopulationActionTestSuite.TestPopulationDrop
       resultStatus: 1
-      duration: 0.0135533
+      duration: 0.0075345
       messages: 
-      output: 'setting dimensions
-
-        Setup Complete. Culture name is rthqqn(-4049236)
-
-        clearing
-
-'
+      output: "setting dimensions\r\nAdding culture rthqq(-6542) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
+        ListVals: \r\nAfter: ListVals: rthqq(-6542)\r\nSetup Complete. Culture name
+        is rthqq(-6542)\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2872,7 +2790,7 @@ MonoBehaviour:
       name: PerlinHeightmapGeneratorTestSuite
       fullName: PerlinHeightmapGeneratorTestSuite
       resultStatus: 1
-      duration: 0.0085511
+      duration: 0.0039808
       messages: 
       output: 
       stacktrace: 
@@ -2888,7 +2806,7 @@ MonoBehaviour:
       name: CanAssignExpectedValues
       fullName: PerlinHeightmapGeneratorTestSuite.CanAssignExpectedValues
       resultStatus: 1
-      duration: 0.0026792
+      duration: 0.0014579
       messages: 
       output: 
       stacktrace: 
@@ -2905,7 +2823,7 @@ MonoBehaviour:
       name: PopulationChangeIndicatorTestSuite
       fullName: PopulationChangeIndicatorTestSuite
       resultStatus: 1
-      duration: 0.0386431
+      duration: 0.0311314
       messages: 
       output: 
       stacktrace: 
@@ -2921,15 +2839,11 @@ MonoBehaviour:
       name: CanGenerateIndicator
       fullName: PopulationChangeIndicatorTestSuite.CanGenerateIndicator
       resultStatus: 1
-      duration: 0.032584
+      duration: 0.0282442
       messages: 
-      output: 'setting dimensions
-
-        Setup Complete. Culture name is rthqqn(-4049402)
-
-        clearing
-
-'
+      output: "setting dimensions\r\nAdding culture rthqq(-6704) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
+        ListVals: \r\nAfter: ListVals: rthqq(-6704)\r\nSetup Complete. Culture name
+        is rthqq(-6704)\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2944,7 +2858,7 @@ MonoBehaviour:
       name: PopulationPipMakerTestSuite
       fullName: PopulationPipMakerTestSuite
       resultStatus: 1
-      duration: 0.0457003
+      duration: 0.0252503
       messages: 
       output: 
       stacktrace: 
@@ -2960,15 +2874,12 @@ MonoBehaviour:
       name: CanAddPip
       fullName: PopulationPipMakerTestSuite.CanAddPip
       resultStatus: 1
-      duration: 0.0177584
+      duration: 0.0099458
       messages: 
-      output: 'setting dimensions
-
-        Setup Complete. Culture name is rthqqn(-4049572)
-
-        clearing
-
-'
+      output: "setting dimensions\r\nAdding culture rthqq(-6870) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
+        ListVals: \r\nAfter: ListVals: rthqq(-6870)\r\nSetup Complete. Culture name
+        is rthqq(-6870)\r\nAdding culture wqsts(-6870) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
+        ListVals: wqsts(-6870)\r\nAfter: ListVals: wqsts(-6870)\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -2983,15 +2894,12 @@ MonoBehaviour:
       name: CanRemovePip
       fullName: PopulationPipMakerTestSuite.CanRemovePip
       resultStatus: 1
-      duration: 0.0209563
+      duration: 0.0115439
       messages: 
-      output: 'setting dimensions
-
-        Setup Complete. Culture name is rthqqn(-4049736)
-
-        clearing
-
-'
+      output: "setting dimensions\r\nAdding culture rthqq(-7030) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
+        ListVals: \r\nAfter: ListVals: rthqq(-7030)\r\nSetup Complete. Culture name
+        is rthqq(-7030)\r\nAdding culture wqsts(-7030) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
+        ListVals: wqsts(-7030)\r\nAfter: ListVals: wqsts(-7030)\r\nclearing\r\n"
       stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
@@ -3006,7 +2914,7 @@ MonoBehaviour:
       name: TileFoodTestSuite
       fullName: TileFoodTestSuite
       resultStatus: 1
-      duration: 0.0885444
+      duration: 0.0468754
       messages: 
       output: 
       stacktrace: 
@@ -3022,7 +2930,7 @@ MonoBehaviour:
       name: CanCalculateProperFoodRateDesert
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateDesert
       resultStatus: 1
-      duration: 0.0091201
+      duration: 0.0048371
       messages: 
       output: 'setting dimensions
 
@@ -3043,7 +2951,7 @@ MonoBehaviour:
       name: CanCalculateProperFoodRateRainforest
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateRainforest
       resultStatus: 1
-      duration: 0.0115401
+      duration: 0.0059173
       messages: 
       output: 'setting dimensions
 
@@ -3064,7 +2972,7 @@ MonoBehaviour:
       name: CanCalculateProperFoodRateTundra
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateTundra
       resultStatus: 1
-      duration: 0.0105261
+      duration: 0.0053827
       messages: 
       output: 'setting dimensions
 
@@ -3085,7 +2993,7 @@ MonoBehaviour:
       name: CanIncreaseFoodPerTick
       fullName: TileFoodTestSuite.CanIncreaseFoodPerTick
       resultStatus: 1
-      duration: 0.0164658
+      duration: 0.0094549
       messages: 
       output: 'setting dimensions
 
@@ -3106,7 +3014,7 @@ MonoBehaviour:
       name: CanPreventAdditionalFood
       fullName: TileFoodTestSuite.CanPreventAdditionalFood
       resultStatus: 1
-      duration: 0.0163101
+      duration: 0.0079676
       messages: 
       output: 'setting dimensions
 
@@ -3127,7 +3035,7 @@ MonoBehaviour:
       name: CanSetFoodToMaxAtStart
       fullName: TileFoodTestSuite.CanSetFoodToMaxAtStart
       resultStatus: 1
-      duration: 0.0163546
+      duration: 0.0088493
       messages: 
       output: 'setting dimensions
 
@@ -3148,7 +3056,7 @@ MonoBehaviour:
       name: TileGreyscaleOverlayLinkTestSuite
       fullName: TileGreyscaleOverlayLinkTestSuite
       resultStatus: 1
-      duration: 0.0081244
+      duration: 0.0048289
       messages: 
       output: 
       stacktrace: 
@@ -3164,7 +3072,7 @@ MonoBehaviour:
       name: CanSetToGreyIfLow
       fullName: TileGreyscaleOverlayLinkTestSuite.CanSetToGreyIfLow
       resultStatus: 1
-      duration: 0.0022643
+      duration: 0.002062
       messages: 
       output: 'clearing
 
@@ -3183,7 +3091,7 @@ MonoBehaviour:
       name: TurnTestSuite
       fullName: TurnTestSuite
       resultStatus: 1
-      duration: 0.0080824
+      duration: 0.0055237
       messages: 
       output: 
       stacktrace: 
@@ -3199,7 +3107,7 @@ MonoBehaviour:
       name: CanChangeTurnAfterUpdated
       fullName: TurnTestSuite.CanChangeTurnAfterUpdated
       resultStatus: 1
-      duration: 0.0004994
+      duration: 0.0016725
       messages: 
       output: 
       stacktrace: 
@@ -3216,7 +3124,7 @@ MonoBehaviour:
       name: CanGetPendingUpdatesFor
       fullName: TurnTestSuite.CanGetPendingUpdatesFor
       resultStatus: 1
-      duration: 0.0004079
+      duration: 0.000368
       messages: 
       output: 
       stacktrace: 
@@ -3233,7 +3141,7 @@ MonoBehaviour:
       name: CanUpdateAllCultures
       fullName: TurnTestSuite.CanUpdateAllCultures
       resultStatus: 1
-      duration: 0.0002441
+      duration: 0.0002248
       messages: 
       output: 
       stacktrace: 
@@ -3250,7 +3158,7 @@ MonoBehaviour:
       name: TestAddUpdate
       fullName: TurnTestSuite.TestAddUpdate
       resultStatus: 1
-      duration: 0.0002364
+      duration: 0.00021
       messages: 
       output: 
       stacktrace: 
@@ -3262,23 +3170,12 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1070
       parentUniqueId: Tests.dll/[Tests][TurnTestSuite][suite]
-    m_ResultText: 'CanDisplayAccurateFoodCount (0.009s)
-
-      ---
-
-      SetUp :
-      Unhandled log message: ''[Exception] NullReferenceException: Object reference
-      not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect
-
-      ---
-
-      NullReferenceException:
-      Object reference not set to an instance of an object'
+    m_ResultText: MergeWithTileActionTestSuite (0.155s)
     m_ResultStacktrace: 
     m_TestListState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 694d938a
-      m_LastClickedID: -1970057879
+      scrollPos: {x: 0, y: 360}
+      m_SelectedIDs: c10a124f
+      m_LastClickedID: 1326582465
       m_ExpandedIDs: bbb6ef82ce07e386c6ec6ba11cb03da8c2778cab371506b518e194b58e1814b84580fecc56c0c1dcaf90fae781f0ffed5fdcc4f89d8029056eca7a08b26d2713ad6ec22132b4d12703fe443357683e3426ecfc371a04ba42b71a114750a8734ec10a124feb084855a0eedc6e7c3b3c71ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -3377,10 +3274,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 386
+    x: 173.33334
     y: 72.66667
-    width: 1573.3334
-    height: 607
+    width: 2078.6667
+    height: 1061
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -3582,9 +3479,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 26.425291, y: 26.161802, z: 14.366427}
+    m_Target: {x: 78.26113, y: 40.788784, z: 9.176974}
     speed: 2
-    m_Value: {x: 26.425291, y: 26.161802, z: 14.366427}
+    m_Value: {x: 78.26113, y: 40.788784, z: 9.176974}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -3635,9 +3532,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 2.8828974
+    m_Target: 53.450493
     speed: 2
-    m_Value: 2.8828974
+    m_Value: 53.450493
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -3682,10 +3579,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 386
+    x: 173.33334
     y: 72.66667
-    width: 1573.3334
-    height: 953
+    width: 2078.6667
+    height: 1061
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -3732,23 +3629,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1573.3334
-      height: 932
+      width: 2078.6667
+      height: 1040
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 786.6667, y: 466}
+    m_Translation: {x: 1039.3334, y: 520}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -786.6667
-      y: -466
-      width: 1573.3334
-      height: 932
+      x: -1039.3334
+      y: -520
+      width: 2078.6667
+      height: 1040
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 2360, y: 1429.5}
+  m_LastWindowPixelSize: {x: 3118, y: 1591.5}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -3775,9 +3672,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 587.3334
-    width: 1947.6666
-    height: 763.6667
+    y: 716.6667
+    width: 2253
+    height: 634.3334
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -3795,22 +3692,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Scripts/UI/PlayScreen
+    - Assets/Resources/Scripts/Map/SaveHandler
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Scripts/UI/PlayScreen
+  - Assets/Resources/Scripts/Map/SaveHandler
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\wenze\Documents\Unity\Eons
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 140.33331}
-    m_SelectedIDs: 14620000
-    m_LastClickedID: 25108
-    m_ExpandedIDs: 00000000b4610000b6610000b8610000ba610000bc610000be610000c0610000c2610000c4610000c6610000c8610000ca610000cc61000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 260.3333}
+    m_SelectedIDs: 0e6c0000
+    m_LastClickedID: 27662
+    m_ExpandedIDs: 00000000b8610000ba610000bc610000be610000c0610000c2610000c4610000c6610000c8610000ca610000cc610000ce610000d0610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3838,7 +3735,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b4610000b6610000b8610000ba610000bc610000be610000c0610000c2610000c4610000c6610000c8610000ca610000cc610000
+    m_ExpandedIDs: 00000000b8610000ba610000bc610000be610000c0610000c2610000c4610000c6610000c8610000ca610000cc610000ce610000d0610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3863,8 +3760,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 00fbffff
-    m_LastClickedInstanceID: -1280
+    m_SelectedInstanceIDs: 2a230100
+    m_LastClickedInstanceID: 74538
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300009e5f0000946c0000ca590000e65b0000a8700000345d00003e5a000080720000565a0000e693ffffc47100004484000038840000b45c0000cc5c000000000000d45b00007c5d0000785f0000705b0000
     m_RenameOverlay:
@@ -3915,9 +3812,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 700.6667
-    width: 1960.3334
-    height: 650.3334
+    y: 1154.6667
+    width: 2253
+    height: 196.33337
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -3943,16 +3840,16 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 756.6667
-    width: 2222.3333
-    height: 594.3334
+    y: 732
+    width: 2253
+    height: 619.00006
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -1280
+  m_LastSelectedObjectID: 74556
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -3974,9 +3871,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 756.6667
-    width: 2222.3333
-    height: 594.3334
+    y: 732
+    width: 2253
+    height: 619.00006
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -4005,14 +3902,14 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 0.9490526
+    - e00: 1
       e01: 0
       e02: 0
-      e03: 313.54736
+      e03: 439.66663
       e10: 0
-      e11: 0.9490526
+      e11: 1
       e12: 0
-      e13: 84.47331
+      e13: 125
       e20: 0
       e21: 0
       e22: 1
@@ -4028,7 +3925,7 @@ MonoBehaviour:
       e10: 0
       e11: 0.8252713
       e12: 0
-      e13: 59.215363
+      e13: 59.215332
       e20: 0
       e21: 0
       e22: 1
@@ -4070,9 +3967,11 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 6e1ea7ce95362bd43b6e9e2020a2a019, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 7932117235907219867, guid: 6e1ea7ce95362bd43b6e9e2020a2a019, type: 2}
+  - m_Target: {fileID: -2208600786771584181, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
+    m_ScrollPosition: {x: 0, y: 0}
+  - m_Target: {fileID: -3373428290895615280, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -4105,9 +4004,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1961.3334
+    x: 2254
     y: 72.66667
-    width: 597.6666
+    width: 305
     height: 1278.3334
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
