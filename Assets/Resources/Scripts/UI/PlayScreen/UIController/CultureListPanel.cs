@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using System;
 
 public class CultureListPanel : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class CultureListPanel : MonoBehaviour
     CultureHandler cultureHandler;
 
     GameObject[] ButtonList;
+    public event EventHandler<OnCultureButtonCreatedEventArgs> OnCultureButtonCreated;
+
 
     public void Initialize(GameObject SelectedTile)
     {
@@ -31,6 +34,7 @@ public class CultureListPanel : MonoBehaviour
     {
         GameObject CurCultureButton = Instantiate(CultureButton, transform);
         CurCultureButton.GetComponent<CultureListButton>().Initialize(c);
+        OnCultureButtonCreated?.Invoke(this, new OnCultureButtonCreatedEventArgs() { NewButton = CurCultureButton });
         return CurCultureButton;
     }
 
@@ -49,6 +53,12 @@ public class CultureListPanel : MonoBehaviour
     {
         cultureHandler.OnPopulationChanged -= CultureListPanel_OnPopulationChanged;
 
+    }
+
+
+    public class OnCultureButtonCreatedEventArgs : EventArgs
+    {
+        public GameObject NewButton;
     }
 
 
