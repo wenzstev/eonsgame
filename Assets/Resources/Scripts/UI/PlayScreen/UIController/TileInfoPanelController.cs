@@ -74,7 +74,7 @@ public class TileInfoPanelController : MonoBehaviour
 
     void TileInfoPanelController_OnPopulationChanged(object sender, CultureHandler.OnPopulationChangedEventArgs e)
     {
-        CalculateTilePopulation();
+        UpdateToCurrentPopulation();
     }
 
 }
