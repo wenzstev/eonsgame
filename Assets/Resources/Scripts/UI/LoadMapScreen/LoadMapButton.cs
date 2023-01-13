@@ -35,4 +35,10 @@ public class LoadMapButton : MonoBehaviour
         Save.CreatePersistantSave(save, fileName);
         SceneManager.LoadScene("PlayScene");
     }
+
+    public void DeleteSave()
+    {
+        File.Delete(filePath);
+        Destroy(gameObject);
+    }
 }

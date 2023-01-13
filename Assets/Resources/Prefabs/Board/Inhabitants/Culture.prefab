@@ -194,12 +194,12 @@ MonoBehaviour:
   population: 0
   spreadChance: 0.000416
   shareCultureChance: 0.05
-  baseMutationMax: 0.008
-  sameCultureCutoff: 0.0402
+  baseMutationMax: 0.0016
+  sameCultureCutoff: 0.038
   FertilityRate: 0.000416
   maxPopTransfer: 20
   minPopTransfer: 5
-  influenceRate: 0.05
+  influenceRate: 0.0084
   FoodGatherRate: 0.00005
   AffinityGainRate: 0.01
   currentState: 0
