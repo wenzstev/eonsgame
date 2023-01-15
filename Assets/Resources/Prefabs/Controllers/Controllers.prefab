@@ -228,6 +228,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2473273781738588298}
   - component: {fileID: 6640202242992830277}
+  - component: {fileID: 3175518743567789320}
   m_Layer: 0
   m_Name: UIController
   m_TagString: Untagged
@@ -264,3 +265,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TileInfoPanel: {fileID: 7567786801633798854, guid: c1f19130a6e411b44957af14999096e6, type: 3}
   CultureInfoPanel: {fileID: 5653711143384700407, guid: 25398c22a3af6744f986dffbc899a8f5, type: 3}
+  MouseActionsController: {fileID: 592987361289120464}
+  canvas: {fileID: 0}
+--- !u!114 &3175518743567789320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7237816659790229338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e10d91fc05406ba47a40998747f993bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIController: {fileID: 6640202242992830277}
+  TileHighlightTemplate: {fileID: 4773238086278964982, guid: a726152de39870e429f282c38e06ceda, type: 3}

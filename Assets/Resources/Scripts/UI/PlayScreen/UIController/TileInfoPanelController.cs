@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using System.Linq;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -16,7 +17,7 @@ public class TileInfoPanelController : MonoBehaviour
     TileFood SelectedTileFood;
     CultureHandler SelectedTileCultures;
 
-
+    public event EventHandler<EventArgs> OnPanelDestroyed;
 
     public CultureListPanel CultureListPanel;
 
@@ -36,6 +37,8 @@ public class TileInfoPanelController : MonoBehaviour
 
         SelectedTileFood.OnFoodChange += TileInfoPanelController_OnFoodChange;
         SelectedTileCultures.OnPopulationChanged += TileInfoPanelController_OnPopulationChanged;
+
+        GetComponentInChildren<ZoomToObj>().SetSelectedObj(SelectedTile);
     }
 
     void SetBiomeText(TileDrawer.BiomeType biome)
@@ -80,6 +83,12 @@ public class TileInfoPanelController : MonoBehaviour
     void TileInfoPanelController_OnPopulationChanged(object sender, CultureHandler.OnPopulationChangedEventArgs e)
     {
         UpdateToCurrentPopulation();
+    }
+
+    public void DestroyPanel()
+    {
+        Destroy(gameObject);
+        OnPanelDestroyed?.Invoke(this, EventArgs.Empty);
     }
 
 }
