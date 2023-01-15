@@ -18,7 +18,6 @@ public class TileFoodTestSuite : BasicBoardTest
         TestTile = TestTileObj.GetComponent<Tile>();
         TestTileChars = TestTileObj.GetComponent<TileChars>();
         TestTileFood = TestTileObj.GetComponent<TileFood>();
-        TestTileFood.FoodModifier = 1f;
 
 
         yield return null;
@@ -30,7 +29,7 @@ public class TileFoodTestSuite : BasicBoardTest
         TestTileChars.precipitation = 25f; // expect contribution of .046f
         TestTileChars.temperature = 24f; // expect contribution of .4f
 
-        TestTileFood.CalculateFoodRate();
+        TestTileFood.CalculateFoodPerTick();
         Assert.AreEqual(.446f, TestUtils.ThreeDecimals(TestTileFood.NewFoodPerTick), "Did not calculate the right new food!");
     }
 
@@ -39,7 +38,7 @@ public class TileFoodTestSuite : BasicBoardTest
     {
         TestTileChars.precipitation = 40f; // expect contribution of .083f
         TestTileChars.temperature = 5f; // expect contribution of -.018f
-        TestTileFood.CalculateFoodRate();
+        TestTileFood.CalculateFoodPerTick();
 
         Assert.AreEqual(0.065f, TestUtils.ThreeDecimals(TestTileFood.NewFoodPerTick), "Did not calculate right new food!");
     }
@@ -49,7 +48,7 @@ public class TileFoodTestSuite : BasicBoardTest
     {
         TestTileChars.precipitation = 318.3406f; // expect contribution of 1f
         TestTileChars.temperature = 24.58829f; // expect contribution of .399f
-        TestTileFood.CalculateFoodRate();
+        TestTileFood.CalculateFoodPerTick();
 
         Assert.AreEqual(1.399f, TestUtils.ThreeDecimals(TestTileFood.NewFoodPerTick), "Did not calculate right new food!");
 
@@ -73,7 +72,7 @@ public class TileFoodTestSuite : BasicBoardTest
     {
         TestTileChars.precipitation = 40f; // expect contribution of .083f
         TestTileChars.temperature = 5f; // expect contribution of -.018f
-        TestTileFood.CalculateFoodRate();
+        TestTileFood.CalculateFoodPerTick();
         TestTileFood.SetMaxFood();
         yield return null;
         Assert.AreEqual(Mathf.FloorToInt(TestTileFood.NewFoodPerTick * 1000f), TestTileFood.CurFood, "Curfood was set to the wrong amount!");
@@ -84,7 +83,7 @@ public class TileFoodTestSuite : BasicBoardTest
     {
         TestTileChars.precipitation = 40f; // expect contribution of .083f
         TestTileChars.temperature = 5f; // expect contribution of -.018f
-        TestTileFood.CalculateFoodRate();
+        TestTileFood.CalculateFoodPerTick();
         TestTileFood.SetMaxFood();
         yield return null;
         EventManager.TriggerEvent("Tick", null);

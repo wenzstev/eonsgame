@@ -259,9 +259,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurFood: 0
-  MAX_FOOD_MODIFIER: 1000
+  MAX_FOOD_MODIFIER: 100000
   NewFoodPerTick: 0
-  FoodModifier: 10
+  FoodGrowthPercent: 0.00143
 --- !u!1 &4154498010608124306
 GameObject:
   m_ObjectHideFlags: 0

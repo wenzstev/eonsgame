@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OverpopulationAction : CultureAction
 {
-    public float popLossChance = .033f;
+    public float popLossChance = .1f;
     public int numPopLost = -1;
     public OverpopulationAction(Culture c) : base(c) { }
 
@@ -16,8 +16,7 @@ public class OverpopulationAction : CultureAction
             return turn;
         }
 
-        MoveTileAction moveTile = new MoveTileAction(Culture);
-        moveTile.moveChance = 1;
+        MovePreferredTileAction moveTile = new MovePreferredTileAction(Culture);
         return moveTile.ExecuteTurn();
     }
 }
