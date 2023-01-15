@@ -8,16 +8,17 @@ public class TileFood : MonoBehaviour
 {
     public float CurFood;
     public float MAX_FOOD_MODIFIER = 1f;
-    public int MaxFood {
-        get {
-            return Mathf.FloorToInt(FoodModifier * NewFoodPerTick * MAX_FOOD_MODIFIER);
-        }
-    }
+    public int MaxFood { get; private set; }
+    
     public float NewFoodPerTick;
 
     TileChars tileChars;
 
-    public float FoodModifier;
+    /// <summary>
+    /// Percent of max food that is replenished every tick
+    /// </summary>
+    [Range(0, .01f)]
+    public float FoodGrowthPercent;
 
     CompoundCurve TempCurve;
     CompoundCurve PrecipitationCurve;
@@ -31,21 +32,32 @@ public class TileFood : MonoBehaviour
         tileChars.OnAllTileStatsCalculated += TileFood_OnAllTileStatsCalculated;
     }
 
+    void DetermineMaxFood()
+    {
+        MaxFood = Mathf.Max(0, Mathf.FloorToInt(CalculateFoodRate() * MAX_FOOD_MODIFIER));
+    }
+
     public void Initialize()
     {
         TempCurve = CreateTempCurve();
         PrecipitationCurve = CreatePrecipitationCurve();
-        CalculateFoodRate();
+        DetermineMaxFood();
+
+
+        NewFoodPerTick = CalculateFoodPerTick();
         EventManager.StartListening("Tick", OnTick);
         FireFoodAction();
 
     }
 
-    public float CalculateFoodRate()
+    float CalculateFoodRate()
     {
-        float climateModifier = TempCurve.GetPointOnCurve(tileChars.temperature) - .1f + PrecipitationCurve.GetPointOnCurve(tileChars.precipitation);
-        NewFoodPerTick = Mathf.Max(0, climateModifier * FoodModifier);
-        return NewFoodPerTick;
+        return TempCurve.GetPointOnCurve(tileChars.temperature) - .1f + PrecipitationCurve.GetPointOnCurve(tileChars.precipitation);
+    }
+
+    public float CalculateFoodPerTick()
+    {
+        return MaxFood * FoodGrowthPercent; 
     }
 
     CompoundCurve CreateTempCurve()

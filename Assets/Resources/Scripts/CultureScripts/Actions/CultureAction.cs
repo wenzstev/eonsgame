@@ -19,6 +19,10 @@ public abstract class CultureAction
         //Debug.Log(turn.UpdateCulture(culture).FoodChange);
     }
 
+    /// <summary>
+    /// Get the cost of this action. Returns a negative value.
+    /// </summary>
+    /// <returns></returns>
     protected float GetActionCost()
     {
         return -ActionCost * Culture.Population;

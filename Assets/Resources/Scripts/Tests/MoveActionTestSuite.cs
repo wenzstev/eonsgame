@@ -19,7 +19,7 @@ public class MoveActionTestSuite : CultureActionTest
     public IEnumerator MoveTileActionTest()
     {
 
-        MoveTileAction mta = new MoveTileAction(TestCulture);
+        MoveRandomTileAction mta = new MoveRandomTileAction(TestCulture);
         mta.moveChance = 1;
         Turn TestTurn = mta.ExecuteTurn();
         yield return null;
@@ -50,7 +50,7 @@ public class MoveActionTestSuite : CultureActionTest
 
         TestCulture.AddPopulation(20);
 
-        MoveTileAction mta = new MoveTileAction(TestCulture);
+        MoveRandomTileAction mta = new MoveRandomTileAction(TestCulture);
         mta.moveChance = 1;
         Turn testTurn = mta.ExecuteTurn();
 

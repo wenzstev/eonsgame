@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1349.3334
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 21
+  controlID: 3604
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -139,12 +139,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2254
+    width: 1842
     height: 1299.3334
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 89
+  controlID: 3605
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,12 +164,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2254
-    height: 738
+    width: 1842
+    height: 482.66666
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 90
+  controlID: 3606
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -187,10 +187,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 387.33334
-    height: 738
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+    width: 312.66666
+    height: 482.66666
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -212,10 +212,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 387.33334
+    x: 312.66666
     y: 0
-    width: 1866.6666
-    height: 738
+    width: 1529.3334
+    height: 482.66666
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 15}
@@ -234,25 +234,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ProfilerWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 738
-    width: 2254
-    height: 561.3334
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 17}
+    y: 482.66666
+    width: 1842
+    height: 816.66675
+  m_MinSize: {x: 881, y: 237}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 17}
   - {fileID: 18}
   - {fileID: 19}
   - {fileID: 20}
-  - {fileID: 12}
-  m_Selected: 0
+  - {fileID: 21}
+  m_Selected: 4
   m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
@@ -264,23 +264,2863 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
+  m_Name: InspectorWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 2254
+    x: 1842
     y: 0
-    width: 306
+    width: 718
     height: 1299.3334
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 21}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 12}
   m_Panes:
-  - {fileID: 21}
+  - {fileID: 12}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Inspector
+    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1842
+    y: 72.66667
+    width: 717
+    height: 1278.3334
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_ObjectsLockedBeforeSerialization: []
+  m_InstanceIDsLockedBeforeSerialization: 
+  m_PreviewResizer:
+    m_CachedPref: -160
+    m_ControlHash: -371814159
+    m_PrefName: Preview_InspectorPreview
+  m_LastInspectedObjectInstanceID: -1
+  m_LastVerticalScrollValue: 0
+  m_GlobalObjectId: 
+  m_InspectorMode: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_PreviewWindow: {fileID: 0}
+--- !u!114 &13
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12061, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Hierarchy
+    m_Image: {fileID: -3734745235275155857, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 72.66667
+    width: 311.66666
+    height: 461.66666
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_SceneHierarchy:
+    m_TreeViewState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 625b0000
+      m_LastClickedID: 0
+      m_ExpandedIDs: fe2f9aff3cc09aff58869bffd60c9cff26ababff2cababfffef9acff14c8b1ff8234b2ffd601b3ffd480b3ffc857e9ffd657e9fff257e9ffa0c3e9ff78def5ff86def5ffa2def5ff38faf5ff46faf5ff62faf5ff5e01f6ff6601f6ff8201f6ff7078f6ff42d1fbff20dcffff68dcffff14f2ffff38fbffffac770000
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 9}
+      m_SearchString: 
+    m_ExpandedScenes: []
+    m_CurrenRootInstanceID: 0
+    m_LockTracker:
+      m_IsLocked: 0
+    m_CurrentSortingName: TransformSorting
+  m_WindowGUID: 4c969a2b90040154d917609493e03593
+--- !u!114 &14
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Test Runner
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 72.66667
+    width: 311.66666
+    height: 715
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_Spl:
+    ID: 241
+    splitterInitialOffset: 316.5
+    currentActiveSplitter: -1
+    realSizes:
+    - 344.66666
+    - 300.00003
+    relativeSizes:
+    - 0.5344828
+    - 0.46551722
+    minSizes:
+    - 32
+    - 32
+    maxSizes:
+    - 0
+    - 0
+    lastTotalSize: 644.6667
+    splitSize: 6
+    xOffset: 0
+    m_Version: 1
+    oldRealSizes: 
+    oldMinSizes: 
+    oldMaxSizes: 
+    oldSplitSize: 0
+  m_TestTypeToolbarIndex: 0
+  m_PlayModeTestListGUI:
+    m_Window: {fileID: 14}
+    m_NewResultList:
+    - id: 1004
+      uniqueId: '[My project][suite]'
+      name: My project
+      fullName: My project
+      resultStatus: 2
+      duration: 1.9022486
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1090
+      uniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+      name: Tests.dll
+      fullName: C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll
+      resultStatus: 2
+      duration: 1.8251238
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[My project][suite]'
+    - id: 1006
+      uniqueId: Tests.dll/[Tests][AffinityManagerTestSuite][suite]
+      name: AffinityManagerTestSuite
+      fullName: AffinityManagerTestSuite
+      resultStatus: 1
+      duration: 0.0617595
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1077
+      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1008
+      uniqueId: Tests.dll/AffinityManagerTestSuite/[Tests][AffinityManagerTestSuite.CanDecayAffinityOnBiome]
+      name: CanDecayAffinityOnBiome
+      fullName: AffinityManagerTestSuite.CanDecayAffinityOnBiome
+      resultStatus: 1
+      duration: 0.02207
+      messages: 
+      output: 'Final affinity for Grassland is 6.70962
+
+        Final affinity for
+        Savannah is 0.8646647
+
+        Final affinity for Grassland is 7.017535
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1006
+      parentUniqueId: Tests.dll/[Tests][AffinityManagerTestSuite][suite]
+    - id: 1007
+      uniqueId: Tests.dll/AffinityManagerTestSuite/[Tests][AffinityManagerTestSuite.CanGainAffinityOnBiome]
+      name: CanGainAffinityOnBiome
+      fullName: AffinityManagerTestSuite.CanGainAffinityOnBiome
+      resultStatus: 1
+      duration: 0.0113838
+      messages: 
+      output: 'Final affinity for Grassland is 3.083034
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1006
+      parentUniqueId: Tests.dll/[Tests][AffinityManagerTestSuite][suite]
+    - id: 1004
+      uniqueId: Tests.dll/AffinityManagerTestSuite/[Tests][AffinityManagerTestSuite.CanGetClonedAffinityManager]
+      name: CanGetClonedAffinityManager
+      fullName: AffinityManagerTestSuite.CanGetClonedAffinityManager
+      resultStatus: 1
+      duration: 0.0153579
+      messages: 
+      output: 'Final affinity for Grassland is 6.70962
+
+        Final affinity for
+        Savannah is 0.8646647
+
+        Final affinity for Grassland is 7.017535
+
+        Testing
+        Desert
+
+        Testing Savannah
+
+        Testing TropicalRainforest
+
+        Testing
+        Grassland
+
+        Testing Woodland
+
+        Testing SeasonalForest
+
+        Testing
+        TemperateRainforest
+
+        Testing BorealForest
+
+        Testing Tundra
+
+        Testing
+        Ice
+
+        Testing Water
+
+        Testing Barren
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][AffinityManagerTestSuite][suite]
+    - id: 1052
+      uniqueId: Tests.dll/[Tests][AffinityStatsTestSuite][suite]
+      name: AffinityStatsTestSuite
+      fullName: AffinityStatsTestSuite
+      resultStatus: 1
+      duration: 0.0085838
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1078
+      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1006
+      uniqueId: Tests.dll/AffinityStatsTestSuite/[Tests][AffinityStatsTestSuite.CanCombineAffinity]
+      name: CanCombineAffinity
+      fullName: AffinityStatsTestSuite.CanCombineAffinity
+      resultStatus: 1
+      duration: 0.0024582
+      messages: 
+      output: 'Final affinity for Grassland is 40
+
+        Final affinity for TemperateRainforest
+        is 50
+
+        Final affinity for Grassland is 30
+
+        Final affinity
+        for Desert is 70
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Tests.dll/[Tests][AffinityStatsTestSuite][suite]
+    - id: 1053
+      uniqueId: Tests.dll/AffinityStatsTestSuite/[Tests][AffinityStatsTestSuite.CanDuplicateAffinity]
+      name: CanDuplicateAffinity
+      fullName: AffinityStatsTestSuite.CanDuplicateAffinity
+      resultStatus: 1
+      duration: 0.0042607
+      messages: 
+      output: 'Final affinity for Grassland is 40
+
+        Final affinity for Desert
+        is 30
+
+        Final affinity for Savannah is 300
+
+        Testing Desert
+
+        Testing
+        Savannah
+
+        Testing TropicalRainforest
+
+        Testing Grassland
+
+        Testing
+        Woodland
+
+        Testing SeasonalForest
+
+        Testing TemperateRainforest
+
+        Testing
+        BorealForest
+
+        Testing Tundra
+
+        Testing Ice
+
+        Testing
+        Water
+
+        Testing Barren
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1052
+      parentUniqueId: Tests.dll/[Tests][AffinityStatsTestSuite][suite]
+    - id: 1001
+      uniqueId: Tests.dll/[Tests][BoardAgeTestSuite][suite]
+      name: BoardAgeTestSuite
+      fullName: BoardAgeTestSuite
+      resultStatus: 1
+      duration: 0.1404856
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1024
+      parentUniqueId: '[Tests][/Users/steven.wenzel/Documents/unity/eonsgame/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1002
+      uniqueId: Tests.dll/BoardAgeTestSuite/[Tests][BoardAgeTestSuite.CanGetBoardAgeAtStartup]
+      name: CanGetBoardAgeAtStartup
+      fullName: BoardAgeTestSuite.CanGetBoardAgeAtStartup
+      resultStatus: 1
+      duration: 0.1182471
+      messages: 
+      output: 'clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][BoardAgeTestSuite][suite]
+    - id: 1003
+      uniqueId: Tests.dll/BoardAgeTestSuite/[Tests][BoardAgeTestSuite.CanUpdateBoardAge]
+      name: CanUpdateBoardAge
+      fullName: BoardAgeTestSuite.CanUpdateBoardAge
+      resultStatus: 1
+      duration: 0.0129173
+      messages: 
+      output: 'clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][BoardAgeTestSuite][suite]
+    - id: 1011
+      uniqueId: Tests.dll/[Tests][BoardStatsTestSuite][suite]
+      name: BoardStatsTestSuite
+      fullName: BoardStatsTestSuite
+      resultStatus: 2
+      duration: 0.0120796
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1080
+      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1012
+      uniqueId: Tests.dll/BoardStatsTestSuite/[Tests][BoardStatsTestSuite.CanGetAccurateBoardEdges]
+      name: CanGetAccurateBoardEdges
+      fullName: BoardStatsTestSuite.CanGetAccurateBoardEdges
+      resultStatus: 2
+      duration: 0.0082353
+      messages: "  Expected: (0.00, 0.00)\r\n  But was:  (-0.50, -0.50)\r\n"
+      output: 'setting dimensions
+
+        setting dimensions
+
+'
+      stacktrace: 'at BoardStatsTestSuite.CanGetAccurateBoardEdges () [0x00071] in
+        C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\BoardStatsTestSuite.cs:32
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1011
+      parentUniqueId: Tests.dll/[Tests][BoardStatsTestSuite][suite]
+    - id: 1013
+      uniqueId: Tests.dll/[Tests][CameraBoundsTestSuite][suite]
+      name: CameraBoundsTestSuite
+      fullName: CameraBoundsTestSuite
+      resultStatus: 2
+      duration: 0.0108124
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1084
+      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1016
+      uniqueId: Tests.dll/CameraBoundsTestSuite/[Tests][CameraBoundsTestSuite.CanAllowCameraWhenLegalBoundsChange]
+      name: CanAllowCameraWhenLegalBoundsChange
+      fullName: CameraBoundsTestSuite.CanAllowCameraWhenLegalBoundsChange
+      resultStatus: 1
+      duration: 0.0038778
+      messages: 
+      output: 'setting dimensions
+
+        setting dimensions
+
+        Adding restriction:
+        Camera (CameraBounds)
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: Tests.dll/[Tests][CameraBoundsTestSuite][suite]
+    - id: 1014
+      uniqueId: Tests.dll/CameraBoundsTestSuite/[Tests][CameraBoundsTestSuite.CanGetBoundsFromBoard]
+      name: CanGetBoundsFromBoard
+      fullName: CameraBoundsTestSuite.CanGetBoundsFromBoard
+      resultStatus: 1
+      duration: 0.0008771
+      messages: 
+      output: 'setting dimensions
+
+        setting dimensions
+
+        Adding restriction:
+        Camera (CameraBounds)
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: Tests.dll/[Tests][CameraBoundsTestSuite][suite]
+    - id: 1015
+      uniqueId: Tests.dll/CameraBoundsTestSuite/[Tests][CameraBoundsTestSuite.CanPreventCameraFromExceedingBoundsLarge]
+      name: CanPreventCameraFromExceedingBoundsLarge
+      fullName: CameraBoundsTestSuite.CanPreventCameraFromExceedingBoundsLarge
+      resultStatus: 2
+      duration: 0.0014919
+      messages: "  Camera did not properly stay in bounds!\r\n  Expected: (76.00,
+        -43.00, 0.00)\r\n  But was:  (75.50, -39.50, 0.00)\r\n"
+      output: 'setting dimensions
+
+        setting dimensions
+
+        Adding restriction:
+        Camera (CameraBounds)
+
+'
+      stacktrace: 'at CameraBoundsTestSuite.CanPreventCameraFromExceedingBoundsLarge
+        () [0x00039] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\CameraBoundsTestSuite.cs:45
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: Tests.dll/[Tests][CameraBoundsTestSuite][suite]
+    - id: 1017
+      uniqueId: Tests.dll/CameraBoundsTestSuite/[Tests][CameraBoundsTestSuite.CanPreventCameraFromExceedingBoundsSmall]
+      name: CanPreventCameraFromExceedingBoundsSmall
+      fullName: CameraBoundsTestSuite.CanPreventCameraFromExceedingBoundsSmall
+      resultStatus: 2
+      duration: 0.0010311
+      messages: "  Camera did not properly stay in bounds!\r\n  Expected: (0.00,
+        4.50, 0.00)\r\n  But was:  (-0.50, 5.50, 0.00)\r\n"
+      output: 'setting dimensions
+
+        setting dimensions
+
+        Adding restriction:
+        Camera (CameraBounds)
+
+'
+      stacktrace: 'at CameraBoundsTestSuite.CanPreventCameraFromExceedingBoundsSmall
+        () [0x00039] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\CameraBoundsTestSuite.cs:59
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1013
+      parentUniqueId: Tests.dll/[Tests][CameraBoundsTestSuite][suite]
+    - id: 1017
+      uniqueId: Tests.dll/[Tests][CameraMovementTestSuite][suite]
+      name: CameraMovementTestSuite
+      fullName: CameraMovementTestSuite
+      resultStatus: 1
+      duration: 0.0074469
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1086
+      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1018
+      uniqueId: Tests.dll/CameraMovementTestSuite/[Tests][CameraMovementTestSuite.CanDetermineNewEdgesFromBounds]
+      name: CanDetermineNewEdgesFromBounds
+      fullName: CameraMovementTestSuite.CanDetermineNewEdgesFromBounds
+      resultStatus: 1
+      duration: 0.0006787
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: Tests.dll/[Tests][CameraMovementTestSuite][suite]
+    - id: 1020
+      uniqueId: Tests.dll/CameraMovementTestSuite/[Tests][CameraMovementTestSuite.CanDetermineNewOriginFromBounds]
+      name: CanDetermineNewOriginFromBounds
+      fullName: CameraMovementTestSuite.CanDetermineNewOriginFromBounds
+      resultStatus: 1
+      duration: 0.0002841
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: Tests.dll/[Tests][CameraMovementTestSuite][suite]
+    - id: 1019
+      uniqueId: Tests.dll/CameraMovementTestSuite/[Tests][CameraMovementTestSuite.CanDetermineNewZoomFromBounds]
+      name: CanDetermineNewZoomFromBounds
+      fullName: CameraMovementTestSuite.CanDetermineNewZoomFromBounds
+      resultStatus: 1
+      duration: 0.0003049
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: Tests.dll/[Tests][CameraMovementTestSuite][suite]
+    - id: 1019
+      uniqueId: Tests.dll/CameraMovementTestSuite/[Tests][CameraMovementTestSuite.NewTransformIsAccurate]
+      name: NewTransformIsAccurate
+      fullName: CameraMovementTestSuite.NewTransformIsAccurate
+      resultStatus: 1
+      duration: 0.0004906
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1017
+      parentUniqueId: Tests.dll/[Tests][CameraMovementTestSuite][suite]
+    - id: 1007
+      uniqueId: Tests.dll/[Tests][CultureContainerTestSuite][suite]
+      name: CultureContainerTestSuite
+      fullName: CultureContainerTestSuite
+      resultStatus: 1
+      duration: 0.035326
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1075
+      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1008
+      uniqueId: Tests.dll/CultureContainerTestSuite/[Tests][CultureContainerTestSuite.CanAddCultureToContainer]
+      name: CanAddCultureToContainer
+      fullName: CultureContainerTestSuite.CanAddCultureToContainer
+      resultStatus: 1
+      duration: 0.0088453
+      messages: 
+      output: 'clearing
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: Tests.dll/[Tests][CultureContainerTestSuite][suite]
+    - id: 1013
+      uniqueId: Tests.dll/CultureContainerTestSuite/[Tests][CultureContainerTestSuite.CanResortWhenCultureDestroyed]
+      name: CanResortWhenCultureDestroyed
+      fullName: CultureContainerTestSuite.CanResortWhenCultureDestroyed
+      resultStatus: 1
+      duration: 0.0150852
+      messages: 
+      output: 'clearing
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1009
+      parentUniqueId: Tests.dll/[Tests][CultureContainerTestSuite][suite]
+    - id: 1010
+      uniqueId: Tests.dll/CultureContainerTestSuite/[Tests][CultureContainerTestSuite.CanResortWhenPopulationAdded]
+      name: CanResortWhenPopulationAdded
+      fullName: CultureContainerTestSuite.CanResortWhenPopulationAdded
+      resultStatus: 1
+      duration: 0.0038704
+      messages: 
+      output: 'clearing
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: Tests.dll/[Tests][CultureContainerTestSuite][suite]
+    - id: 1009
+      uniqueId: Tests.dll/CultureContainerTestSuite/[Tests][CultureContainerTestSuite.CanSortCultures]
+      name: CanSortCultures
+      fullName: CultureContainerTestSuite.CanSortCultures
+      resultStatus: 1
+      duration: 0.0034987
+      messages: 
+      output: 'clearing
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: Tests.dll/[Tests][CultureContainerTestSuite][suite]
+    - id: 1004
+      uniqueId: Tests.dll/[Tests][CultureFoodStoreTestSuite][suite]
+      name: CultureFoodStoreTestSuite
+      fullName: CultureFoodStoreTestSuite
+      resultStatus: 1
+      duration: 0.0673403
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1038
+      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1005
+      uniqueId: Tests.dll/CultureFoodStoreTestSuite/[Tests][CultureFoodStoreTestSuite.CanCollectFoodFromTile]
+      name: CanCollectFoodFromTile
+      fullName: CultureFoodStoreTestSuite.CanCollectFoodFromTile
+      resultStatus: 1
+      duration: 0.0330142
+      messages: 
+      output: 'setting dimensions
+
+        Setup Complete. Culture name is xxtch(-4676)
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Tests.dll/[Tests][CultureFoodStoreTestSuite][suite]
+    - id: 1006
+      uniqueId: Tests.dll/CultureFoodStoreTestSuite/[Tests][CultureFoodStoreTestSuite.CanConsumeFoodInTurn]
+      name: CanConsumeFoodInTurn
+      fullName: CultureFoodStoreTestSuite.CanConsumeFoodInTurn
+      resultStatus: 1
+      duration: 0.0116203
+      messages: 
+      output: 'setting dimensions
+
+        Setup Complete. Culture name is mkerj(-4824)
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Tests.dll/[Tests][CultureFoodStoreTestSuite][suite]
+    - id: 1007
+      uniqueId: Tests.dll/CultureFoodStoreTestSuite/[Tests][CultureFoodStoreTestSuite.CanConsumeFoodMultiplePopulation]
+      name: CanConsumeFoodMultiplePopulation
+      fullName: CultureFoodStoreTestSuite.CanConsumeFoodMultiplePopulation
+      resultStatus: 1
+      duration: 0.0090119
+      messages: 
+      output: 'setting dimensions
+
+        Setup Complete. Culture name is cogwz(-4972)
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Tests.dll/[Tests][CultureFoodStoreTestSuite][suite]
+    - id: 1008
+      uniqueId: Tests.dll/CultureFoodStoreTestSuite/[Tests][CultureFoodStoreTestSuite.CanReduceFoodOnTile]
+      name: CanReduceFoodOnTile
+      fullName: CultureFoodStoreTestSuite.CanReduceFoodOnTile
+      resultStatus: 1
+      duration: 0.009968
+      messages: 
+      output: 'setting dimensions
+
+        Setup Complete. Culture name is hxxct(-5120)
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Tests.dll/[Tests][CultureFoodStoreTestSuite][suite]
+    - id: 1016
+      uniqueId: Tests.dll/[Tests][CulturePlacementHandlerTestSuite][suite]
+      name: CulturePlacementHandlerTestSuite
+      fullName: CulturePlacementHandlerTestSuite
+      resultStatus: 1
+      duration: 0.8472356
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1075
+      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1021
+      uniqueId: Tests.dll/CulturePlacementHandlerTestSuite/[Tests][CulturePlacementHandlerTestSuite.CanNotShowAdditionalCulturesAfterThree]
+      name: CanNotShowAdditionalCulturesAfterThree
+      fullName: CulturePlacementHandlerTestSuite.CanNotShowAdditionalCulturesAfterThree
+      resultStatus: 1
+      duration: 0.107024
+      messages: 
+      output: 'clearing
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1016
+      parentUniqueId: Tests.dll/[Tests][CulturePlacementHandlerTestSuite][suite]
+    - id: 1022
+      uniqueId: Tests.dll/CulturePlacementHandlerTestSuite/[Tests][CulturePlacementHandlerTestSuite.CanRearrangeWhenPopChanges]
+      name: CanRearrangeWhenPopChanges
+      fullName: CulturePlacementHandlerTestSuite.CanRearrangeWhenPopChanges
+      resultStatus: 1
+      duration: 0.2062861
+      messages: 
+      output: 'clearing
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1016
+      parentUniqueId: Tests.dll/[Tests][CulturePlacementHandlerTestSuite][suite]
+    - id: 1020
+      uniqueId: Tests.dll/CulturePlacementHandlerTestSuite/[Tests][CulturePlacementHandlerTestSuite.CanReduceFromThreeToTwoCulturesOnTile]
+      name: CanReduceFromThreeToTwoCulturesOnTile
+      fullName: CulturePlacementHandlerTestSuite.CanReduceFromThreeToTwoCulturesOnTile
+      resultStatus: 1
+      duration: 0.209812
+      messages: 
+      output: 'clearing
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1016
+      parentUniqueId: Tests.dll/[Tests][CulturePlacementHandlerTestSuite][suite]
+    - id: 1017
+      uniqueId: Tests.dll/CulturePlacementHandlerTestSuite/[Tests][CulturePlacementHandlerTestSuite.CanShowOneCultureOnTile]
+      name: CanShowOneCultureOnTile
+      fullName: CulturePlacementHandlerTestSuite.CanShowOneCultureOnTile
+      resultStatus: 1
+      duration: 0.1057105
+      messages: 
+      output: 'clearing
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1016
+      parentUniqueId: Tests.dll/[Tests][CulturePlacementHandlerTestSuite][suite]
+    - id: 1019
+      uniqueId: Tests.dll/CulturePlacementHandlerTestSuite/[Tests][CulturePlacementHandlerTestSuite.CanShowThreeCulturesOnTile]
+      name: CanShowThreeCulturesOnTile
+      fullName: CulturePlacementHandlerTestSuite.CanShowThreeCulturesOnTile
+      resultStatus: 1
+      duration: 0.1065167
+      messages: 
+      output: 'clearing
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1016
+      parentUniqueId: Tests.dll/[Tests][CulturePlacementHandlerTestSuite][suite]
+    - id: 1018
+      uniqueId: Tests.dll/CulturePlacementHandlerTestSuite/[Tests][CulturePlacementHandlerTestSuite.CanShowTwoCulturesOnTile]
+      name: CanShowTwoCulturesOnTile
+      fullName: CulturePlacementHandlerTestSuite.CanShowTwoCulturesOnTile
+      resultStatus: 1
+      duration: 0.1076808
+      messages: 
+      output: 'clearing
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1016
+      parentUniqueId: Tests.dll/[Tests][CulturePlacementHandlerTestSuite][suite]
+    - id: 1001
+      uniqueId: Tests.dll/[Tests][CultureTestSuite][suite]
+      name: CultureTestSuite
+      fullName: CultureTestSuite
+      resultStatus: 1
+      duration: 0.0354271
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1011
+      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1003
+      uniqueId: Tests.dll/CultureTestSuite/[Tests][CultureTestSuite.TestCanMerge]
+      name: TestCanMerge
+      fullName: CultureTestSuite.TestCanMerge
+      resultStatus: 1
+      duration: 0.007109
+      messages: 
+      output: 'setting dimensions
+
+        Setup Complete. Culture name is jsckx(-5514)
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][CultureTestSuite][suite]
+    - id: 1006
+      uniqueId: Tests.dll/CultureTestSuite/[Tests][CultureTestSuite.TestCannotMerge]
+      name: TestCannotMerge
+      fullName: CultureTestSuite.TestCannotMerge
+      resultStatus: 1
+      duration: 0.0080638
+      messages: 
+      output: 'setting dimensions
+
+        Setup Complete. Culture name is iudws(-5680)
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Tests.dll/[Tests][CultureTestSuite][suite]
+    - id: 1002
+      uniqueId: Tests.dll/CultureTestSuite/[Tests][CultureTestSuite.TestSplitCulture]
+      name: TestSplitCulture
+      fullName: CultureTestSuite.TestSplitCulture
+      resultStatus: 1
+      duration: 0.0168457
+      messages: 
+      output: 'setting dimensions
+
+        Setup Complete. Culture name is khoml(-5846)
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][CultureTestSuite][suite]
+    - id: 1008
+      uniqueId: Tests.dll/[Tests][CurveTestSuite][suite]
+      name: CurveTestSuite
+      fullName: CurveTestSuite
+      resultStatus: 1
+      duration: 0.0050925
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1031
+      parentUniqueId: '[Tests][/Users/steven.wenzel/Documents/unity/eonsgame/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1012
+      uniqueId: Tests.dll/CurveTestSuite/[Tests][CurveTestSuite.TestCompoundCurve]
+      name: TestCompoundCurve
+      fullName: CurveTestSuite.TestCompoundCurve
+      resultStatus: 1
+      duration: 0.0006216
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: Tests.dll/[Tests][CurveTestSuite][suite]
+    - id: 1009
+      uniqueId: Tests.dll/CurveTestSuite/[Tests][CurveTestSuite.TestGaussianCurve]
+      name: TestGaussianCurve
+      fullName: CurveTestSuite.TestGaussianCurve
+      resultStatus: 1
+      duration: 0.0002656
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: Tests.dll/[Tests][CurveTestSuite][suite]
+    - id: 1011
+      uniqueId: Tests.dll/CurveTestSuite/[Tests][CurveTestSuite.TestPowerCurve]
+      name: TestPowerCurve
+      fullName: CurveTestSuite.TestPowerCurve
+      resultStatus: 1
+      duration: 0.0002153
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: Tests.dll/[Tests][CurveTestSuite][suite]
+    - id: 1010
+      uniqueId: Tests.dll/CurveTestSuite/[Tests][CurveTestSuite.TestSigmoidCurve]
+      name: TestSigmoidCurve
+      fullName: CurveTestSuite.TestSigmoidCurve
+      resultStatus: 1
+      duration: 0.0002025
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1008
+      parentUniqueId: Tests.dll/[Tests][CurveTestSuite][suite]
+    - id: 1018
+      uniqueId: Tests.dll/[Tests][FoodAmountIndicatorTestSuite][suite]
+      name: FoodAmountIndicatorTestSuite
+      fullName: FoodAmountIndicatorTestSuite
+      resultStatus: 2
+      duration: 0.0155549
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1045
+      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1020
+      uniqueId: Tests.dll/FoodAmountIndicatorTestSuite/[Tests][FoodAmountIndicatorTestSuite.CanDisplayAccurateFoodCount]
+      name: CanDisplayAccurateFoodCount
+      fullName: FoodAmountIndicatorTestSuite.CanDisplayAccurateFoodCount
+      resultStatus: 2
+      duration: 0.0071644
+      messages: 'SetUp : Unhandled log message: ''[Exception] NullReferenceException:
+        Object reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: 'NullReferenceException: Object reference not set to an instance of
+        an object
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: Tests.dll/[Tests][FoodAmountIndicatorTestSuite][suite]
+    - id: 1019
+      uniqueId: Tests.dll/FoodAmountIndicatorTestSuite/[Tests][FoodAmountIndicatorTestSuite.CanGenerateFoodIndicatorAtExpectedInterval]
+      name: CanGenerateFoodIndicatorAtExpectedInterval
+      fullName: FoodAmountIndicatorTestSuite.CanGenerateFoodIndicatorAtExpectedInterval
+      resultStatus: 2
+      duration: 0.0046047
+      messages: 'SetUp : Unhandled log message: ''[Exception] NullReferenceException:
+        Object reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: 'NullReferenceException: Object reference not set to an instance of
+        an object
+
+        NullReferenceException: Object reference not set to an
+        instance of an object
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: Tests.dll/[Tests][FoodAmountIndicatorTestSuite][suite]
+    - id: 1025
+      uniqueId: Tests.dll/[Tests][GreyscaleOverlayTestSuite][suite]
+      name: GreyscaleOverlayTestSuite
+      fullName: GreyscaleOverlayTestSuite
+      resultStatus: 1
+      duration: 0.0075068
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1058
+      parentUniqueId: '[Tests][/Users/steven.wenzel/Documents/unity/eonsgame/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1026
+      uniqueId: Tests.dll/GreyscaleOverlayTestSuite/[Tests][GreyscaleOverlayTestSuite.CanMakeImageGreyscale]
+      name: CanMakeImageGreyscale
+      fullName: GreyscaleOverlayTestSuite.CanMakeImageGreyscale
+      resultStatus: 1
+      duration: 0.002065
+      messages: 
+      output: 'clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1025
+      parentUniqueId: Tests.dll/[Tests][GreyscaleOverlayTestSuite][suite]
+    - id: 1027
+      uniqueId: Tests.dll/GreyscaleOverlayTestSuite/[Tests][GreyscaleOverlayTestSuite.CanSetToVariousTransparencies]
+      name: CanSetToVariousTransparencies
+      fullName: GreyscaleOverlayTestSuite.CanSetToVariousTransparencies
+      resultStatus: 1
+      duration: 0.0007896
+      messages: 
+      output: 'clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1025
+      parentUniqueId: Tests.dll/[Tests][GreyscaleOverlayTestSuite][suite]
+    - id: 1004
+      uniqueId: Tests.dll/[Tests][InfluenceActionTestSuite][suite]
+      name: InfluenceActionTestSuite
+      fullName: InfluenceActionTestSuite
+      resultStatus: 1
+      duration: 0.0219517
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1016
+      parentUniqueId: '[Tests][/Users/steven.wenzel/Documents/unity/eonsgame/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1005
+      uniqueId: Tests.dll/InfluenceActionTestSuite/[Tests][InfluenceActionTestSuite.CanInfluenceNeighborCulture]
+      name: CanInfluenceNeighborCulture
+      fullName: InfluenceActionTestSuite.CanInfluenceNeighborCulture
+      resultStatus: 1
+      duration: 0.0075286
+      messages: 
+      output: 'setting dimensions
+
+        Setup Complete. Culture name is pgksn(-6174)
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Tests.dll/[Tests][InfluenceActionTestSuite][suite]
+    - id: 1006
+      uniqueId: Tests.dll/InfluenceActionTestSuite/[Tests][InfluenceActionTestSuite.CanMergeIntoNewCultureIfClose]
+      name: CanMergeIntoNewCultureIfClose
+      fullName: InfluenceActionTestSuite.CanMergeIntoNewCultureIfClose
+      resultStatus: 1
+      duration: 0.01037
+      messages: 
+      output: 'setting dimensions
+
+        Setup Complete. Culture name is zvsjm(-6334)
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1004
+      parentUniqueId: Tests.dll/[Tests][InfluenceActionTestSuite][suite]
+    - id: 1042
+      uniqueId: Tests.dll/[Tests][MergeWithTileActionTestSuite][suite]
+      name: MergeWithTileActionTestSuite
+      fullName: MergeWithTileActionTestSuite
+      resultStatus: 1
+      duration: 0.0317959
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1075
+      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1044
+      uniqueId: Tests.dll/MergeWithTileActionTestSuite/[Tests][MergeWithTileActionTestSuite.CanAddNewCultureToTile]
+      name: CanAddNewCultureToTile
+      fullName: MergeWithTileActionTestSuite.CanAddNewCultureToTile
+      resultStatus: 1
+      duration: 0.0079017
+      messages: 
+      output: 'setting dimensions
+
+        Setup Complete. Culture name is wedzf(-6494)
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1042
+      parentUniqueId: Tests.dll/[Tests][MergeWithTileActionTestSuite][suite]
+    - id: 1046
+      uniqueId: Tests.dll/MergeWithTileActionTestSuite/[Tests][MergeWithTileActionTestSuite.CanCreateAsNewCulture]
+      name: CanCreateAsNewCulture
+      fullName: MergeWithTileActionTestSuite.CanCreateAsNewCulture
+      resultStatus: 1
+      duration: 0.0105374
+      messages: 
+      output: 'setting dimensions
+
+        Setup Complete. Culture name is uykqz(-6654)
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1042
+      parentUniqueId: Tests.dll/[Tests][MergeWithTileActionTestSuite][suite]
+    - id: 1043
+      uniqueId: Tests.dll/MergeWithTileActionTestSuite/[Tests][MergeWithTileActionTestSuite.CanMergeCultures]
+      name: CanMergeCultures
+      fullName: MergeWithTileActionTestSuite.CanMergeCultures
+      resultStatus: 1
+      duration: 0.0099186
+      messages: 
+      output: 'setting dimensions
+
+        Setup Complete. Culture name is dhmbo(-6814)
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1042
+      parentUniqueId: Tests.dll/[Tests][MergeWithTileActionTestSuite][suite]
+    - id: 1001
+      uniqueId: Tests.dll/[Tests][MoveActionTestSuite][suite]
+      name: MoveActionTestSuite
+      fullName: MoveActionTestSuite
+      resultStatus: 1
+      duration: 0.3705499
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1004
+      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1002
+      uniqueId: Tests.dll/MoveActionTestSuite/[Tests][MoveActionTestSuite.MoveTileActionTest]
+      name: MoveTileActionTest
+      fullName: MoveActionTestSuite.MoveTileActionTest
+      resultStatus: 1
+      duration: 0.1420796
+      messages: 
+      output: 'setting dimensions
+
+        Setup Complete. Culture name is ryipd(-6974)
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][MoveActionTestSuite][suite]
+    - id: 1002
+      uniqueId: Tests.dll/MoveActionTestSuite/[Tests][MoveActionTestSuite.MoveTileActionWhenLargeTest]
+      name: MoveTileActionWhenLargeTest
+      fullName: MoveActionTestSuite.MoveTileActionWhenLargeTest
+      resultStatus: 1
+      duration: 0.1126016
+      messages: 
+      output: 'setting dimensions
+
+        Setup Complete. Culture name is tisxc(-7120)
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][MoveActionTestSuite][suite]
+    - id: 1003
+      uniqueId: Tests.dll/MoveActionTestSuite/[Tests][MoveActionTestSuite.RepelledActionTest]
+      name: RepelledActionTest
+      fullName: MoveActionTestSuite.RepelledActionTest
+      resultStatus: 1
+      duration: 0.1117938
+      messages: 
+      output: 'setting dimensions
+
+        Setup Complete. Culture name is enfom(-7326)
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: Tests.dll/[Tests][MoveActionTestSuite][suite]
+    - id: 1016
+      uniqueId: Tests.dll/[Tests][OverpopulationActionTestSuite][suite]
+      name: OverpopulationActionTestSuite
+      fullName: OverpopulationActionTestSuite
+      resultStatus: 1
+      duration: 0.0171284
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1019
+      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1017
+      uniqueId: Tests.dll/OverpopulationActionTestSuite/[Tests][OverpopulationActionTestSuite.CanBecomeOverPopulated]
+      name: CanBecomeOverPopulated
+      fullName: OverpopulationActionTestSuite.CanBecomeOverPopulated
+      resultStatus: 1
+      duration: 0.0064262
+      messages: 
+      output: 'setting dimensions
+
+        Setup Complete. Culture name is arufh(-7472)
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1016
+      parentUniqueId: Tests.dll/[Tests][OverpopulationActionTestSuite][suite]
+    - id: 1018
+      uniqueId: Tests.dll/OverpopulationActionTestSuite/[Tests][OverpopulationActionTestSuite.TestPopulationDrop]
+      name: TestPopulationDrop
+      fullName: OverpopulationActionTestSuite.TestPopulationDrop
+      resultStatus: 1
+      duration: 0.0073756
+      messages: 
+      output: 'setting dimensions
+
+        Setup Complete. Culture name is edjke(-7618)
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1016
+      parentUniqueId: Tests.dll/[Tests][OverpopulationActionTestSuite][suite]
+    - id: 1038
+      uniqueId: Tests.dll/[Tests][PerlinHeightmapGeneratorTestSuite][suite]
+      name: PerlinHeightmapGeneratorTestSuite
+      fullName: PerlinHeightmapGeneratorTestSuite
+      resultStatus: 1
+      duration: 0.0050762
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1047
+      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1039
+      uniqueId: Tests.dll/PerlinHeightmapGeneratorTestSuite/[Tests][PerlinHeightmapGeneratorTestSuite.CanAssignExpectedValues]
+      name: CanAssignExpectedValues
+      fullName: PerlinHeightmapGeneratorTestSuite.CanAssignExpectedValues
+      resultStatus: 1
+      duration: 0.0022211
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1038
+      parentUniqueId: Tests.dll/[Tests][PerlinHeightmapGeneratorTestSuite][suite]
+    - id: 1040
+      uniqueId: Tests.dll/[Tests][PopulationChangeIndicatorTestSuite][suite]
+      name: PopulationChangeIndicatorTestSuite
+      fullName: PopulationChangeIndicatorTestSuite
+      resultStatus: 1
+      duration: 0.0312972
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1052
+      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1041
+      uniqueId: Tests.dll/PopulationChangeIndicatorTestSuite/[Tests][PopulationChangeIndicatorTestSuite.CanGenerateIndicator]
+      name: CanGenerateIndicator
+      fullName: PopulationChangeIndicatorTestSuite.CanGenerateIndicator
+      resultStatus: 1
+      duration: 0.0283018
+      messages: 
+      output: 'setting dimensions
+
+        Setup Complete. Culture name is hhike(-7780)
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1040
+      parentUniqueId: Tests.dll/[Tests][PopulationChangeIndicatorTestSuite][suite]
+    - id: 1040
+      uniqueId: Tests.dll/[Tests][PopulationPipMakerTestSuite][suite]
+      name: PopulationPipMakerTestSuite
+      fullName: PopulationPipMakerTestSuite
+      resultStatus: 1
+      duration: 0.0254455
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1050
+      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1041
+      uniqueId: Tests.dll/PopulationPipMakerTestSuite/[Tests][PopulationPipMakerTestSuite.CanAddPip]
+      name: CanAddPip
+      fullName: PopulationPipMakerTestSuite.CanAddPip
+      resultStatus: 1
+      duration: 0.0095607
+      messages: 
+      output: 'setting dimensions
+
+        Setup Complete. Culture name is hzkkb(-7946)
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1040
+      parentUniqueId: Tests.dll/[Tests][PopulationPipMakerTestSuite][suite]
+    - id: 1042
+      uniqueId: Tests.dll/PopulationPipMakerTestSuite/[Tests][PopulationPipMakerTestSuite.CanRemovePip]
+      name: CanRemovePip
+      fullName: PopulationPipMakerTestSuite.CanRemovePip
+      resultStatus: 1
+      duration: 0.0117477
+      messages: 
+      output: 'setting dimensions
+
+        Setup Complete. Culture name is nrhzn(-8106)
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1040
+      parentUniqueId: Tests.dll/[Tests][PopulationPipMakerTestSuite][suite]
+    - id: 1024
+      uniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
+      name: TileFoodTestSuite
+      fullName: TileFoodTestSuite
+      resultStatus: 1
+      duration: 0.0459593
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1027
+      parentUniqueId: '[Tests][/Users/steven.wenzel/Documents/unity/eonsgame/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1025
+      uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanCalculateProperFoodRateDesert]
+      name: CanCalculateProperFoodRateDesert
+      fullName: TileFoodTestSuite.CanCalculateProperFoodRateDesert
+      resultStatus: 1
+      duration: 0.0045872
+      messages: 
+      output: 'setting dimensions
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
+    - id: 1032
+      uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanCalculateProperFoodRateRainforest]
+      name: CanCalculateProperFoodRateRainforest
+      fullName: TileFoodTestSuite.CanCalculateProperFoodRateRainforest
+      resultStatus: 1
+      duration: 0.0059308
+      messages: 
+      output: 'setting dimensions
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
+    - id: 1026
+      uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanCalculateProperFoodRateTundra]
+      name: CanCalculateProperFoodRateTundra
+      fullName: TileFoodTestSuite.CanCalculateProperFoodRateTundra
+      resultStatus: 1
+      duration: 0.0055556
+      messages: 
+      output: 'setting dimensions
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
+    - id: 1033
+      uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanIncreaseFoodPerTick]
+      name: CanIncreaseFoodPerTick
+      fullName: TileFoodTestSuite.CanIncreaseFoodPerTick
+      resultStatus: 1
+      duration: 0.0086216
+      messages: 
+      output: 'setting dimensions
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
+    - id: 1035
+      uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanPreventAdditionalFood]
+      name: CanPreventAdditionalFood
+      fullName: TileFoodTestSuite.CanPreventAdditionalFood
+      resultStatus: 1
+      duration: 0.0082979
+      messages: 
+      output: 'setting dimensions
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
+    - id: 1034
+      uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanSetFoodToMaxAtStart]
+      name: CanSetFoodToMaxAtStart
+      fullName: TileFoodTestSuite.CanSetFoodToMaxAtStart
+      resultStatus: 1
+      duration: 0.0085333
+      messages: 
+      output: 'setting dimensions
+
+        clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
+    - id: 1068
+      uniqueId: Tests.dll/[Tests][TileGreyscaleOverlayLinkTestSuite][suite]
+      name: TileGreyscaleOverlayLinkTestSuite
+      fullName: TileGreyscaleOverlayLinkTestSuite
+      resultStatus: 1
+      duration: 0.0073849
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1075
+      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1069
+      uniqueId: Tests.dll/TileGreyscaleOverlayLinkTestSuite/[Tests][TileGreyscaleOverlayLinkTestSuite.CanSetToGreyIfLow]
+      name: CanSetToGreyIfLow
+      fullName: TileGreyscaleOverlayLinkTestSuite.CanSetToGreyIfLow
+      resultStatus: 1
+      duration: 0.002099
+      messages: 
+      output: 'clearing
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1068
+      parentUniqueId: Tests.dll/[Tests][TileGreyscaleOverlayLinkTestSuite][suite]
+    - id: 1070
+      uniqueId: Tests.dll/[Tests][TurnTestSuite][suite]
+      name: TurnTestSuite
+      fullName: TurnTestSuite
+      resultStatus: 1
+      duration: 0.00491
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1075
+      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
+    - id: 1074
+      uniqueId: Tests.dll/TurnTestSuite/[Tests][TurnTestSuite.CanChangeTurnAfterUpdated]
+      name: CanChangeTurnAfterUpdated
+      fullName: TurnTestSuite.CanChangeTurnAfterUpdated
+      resultStatus: 1
+      duration: 0.0004761
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1070
+      parentUniqueId: Tests.dll/[Tests][TurnTestSuite][suite]
+    - id: 1072
+      uniqueId: Tests.dll/TurnTestSuite/[Tests][TurnTestSuite.CanGetPendingUpdatesFor]
+      name: CanGetPendingUpdatesFor
+      fullName: TurnTestSuite.CanGetPendingUpdatesFor
+      resultStatus: 1
+      duration: 0.0005049
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1070
+      parentUniqueId: Tests.dll/[Tests][TurnTestSuite][suite]
+    - id: 1073
+      uniqueId: Tests.dll/TurnTestSuite/[Tests][TurnTestSuite.CanUpdateAllCultures]
+      name: CanUpdateAllCultures
+      fullName: TurnTestSuite.CanUpdateAllCultures
+      resultStatus: 1
+      duration: 0.0002406
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1070
+      parentUniqueId: Tests.dll/[Tests][TurnTestSuite][suite]
+    - id: 1071
+      uniqueId: Tests.dll/TurnTestSuite/[Tests][TurnTestSuite.TestAddUpdate]
+      name: TestAddUpdate
+      fullName: TurnTestSuite.TestAddUpdate
+      resultStatus: 1
+      duration: 0.0002052
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1070
+      parentUniqueId: Tests.dll/[Tests][TurnTestSuite][suite]
+    m_ResultText: "CanPreventCameraFromExceedingBoundsSmall (0.001s)\n---\nCamera
+      did not properly stay in bounds!\r\n  Expected: (0.00, 4.50, 0.00)\r\n  But
+      was:  (-0.50, 5.50, 0.00)\n---\nat CameraBoundsTestSuite.CanPreventCameraFromExceedingBoundsSmall
+      () [0x00039] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\CameraBoundsTestSuite.cs:59\n---\nsetting
+      dimensions\r\nsetting dimensions\r\nAdding restriction: Camera (CameraBounds)"
+    m_ResultStacktrace: 'at CameraBoundsTestSuite.CanPreventCameraFromExceedingBoundsSmall
+      () [0x00039] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\CameraBoundsTestSuite.cs:59
+
+'
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: b9ba4993
+      m_LastClickedID: -1823884615
+      m_ExpandedIDs: bbb6ef82ce07e386c6ec6ba11cb03da8c2778cab371506b518e194b58e1814b84580fecc56c0c1dcaf90fae781f0ffed5fdcc4f89d8029056eca7a08b26d2713ad6ec22132b4d12703fe443357683e3426ecfc371a04ba42b71a114750a8734ec10a124feb084855a0eedc6e7c3b3c71ffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+    m_SelectedOption: 0
+  m_EditModeTestListGUI:
+    m_Window: {fileID: 14}
+    m_NewResultList:
+    - id: 1000
+      uniqueId: '[My project][suite]'
+      name: My project
+      fullName: My project
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    m_ResultText: 
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 03fe4433ffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+--- !u!114 &15
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12013, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Scene
+    m_Image: {fileID: 8634526014445323508, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 312.6667
+    y: 72.66667
+    width: 1527.3334
+    height: 461.66666
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData:
+    - dockPosition: 0
+      containerId: overlay-toolbar__top
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: -98.666626, y: -26}
+      snapCorner: 3
+      id: Tool Settings
+      index: 0
+      layout: 1
+    - dockPosition: 0
+      containerId: overlay-toolbar__top
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: -141, y: 149}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 1
+      id: unity-grid-and-snap-toolbar
+      index: 1
+      layout: 1
+    - dockPosition: 1
+      containerId: overlay-toolbar__top
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: unity-scene-view-toolbar
+      index: 0
+      layout: 1
+    - dockPosition: 1
+      containerId: overlay-toolbar__top
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 1
+      id: unity-search-toolbar
+      index: 1
+      layout: 1
+    - dockPosition: 0
+      containerId: overlay-container--left
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: unity-transform-toolbar
+      index: 0
+      layout: 2
+    - dockPosition: 0
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 67.5, y: 86}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Orientation
+      index: 0
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Light Settings
+      index: 0
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Camera
+      index: 1
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Cloth Constraints
+      index: 2
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Cloth Collisions
+      index: 3
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Navmesh Display
+      index: 4
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Agent Display
+      index: 5
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Obstacle Display
+      index: 6
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Occlusion Culling
+      index: 7
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Physics Debugger
+      index: 8
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Scene Visibility
+      index: 9
+      layout: 4
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Particles
+      index: 10
+      layout: 4
+  m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
+  m_Gizmos: 1
+  m_OverrideSceneCullingMask: 6917529027641081856
+  m_SceneIsLit: 1
+  m_SceneLighting: 1
+  m_2DMode: 1
+  m_isRotationLocked: 0
+  m_PlayAudio: 0
+  m_AudioPlay: 0
+  m_Position:
+    m_Target: {x: 21.439173, y: 13.034859, z: 13.535018}
+    speed: 2
+    m_Value: {x: 21.439173, y: 13.034859, z: 13.535018}
+  m_RenderMode: 0
+  m_CameraMode:
+    drawMode: 0
+    name: Shaded
+    section: Shading Mode
+  m_ValidateTrueMetals: 0
+  m_DoValidateTrueMetals: 0
+  m_ExposureSliderValue: 0
+  m_SceneViewState:
+    m_AlwaysRefresh: 0
+    showFog: 1
+    showSkybox: 1
+    showFlares: 1
+    showImageEffects: 1
+    showParticleSystems: 1
+    showVisualEffectGraphs: 1
+    m_FxEnabled: 1
+  m_Grid:
+    xGrid:
+      m_Fade:
+        m_Target: 0
+        speed: 2
+        m_Value: 0
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+      m_Pivot: {x: 0, y: 0, z: 0}
+      m_Size: {x: 0, y: 0}
+    yGrid:
+      m_Fade:
+        m_Target: 0
+        speed: 2
+        m_Value: 0
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+      m_Pivot: {x: 0, y: 0, z: 0}
+      m_Size: {x: 1, y: 1}
+    zGrid:
+      m_Fade:
+        m_Target: 1
+        speed: 2
+        m_Value: 1
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+      m_Pivot: {x: 0, y: 0, z: 0}
+      m_Size: {x: 1, y: 1}
+    m_ShowGrid: 1
+    m_GridAxis: 1
+    m_gridOpacity: 0.5
+  m_Rotation:
+    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    speed: 2
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
+  m_Size:
+    m_Target: 8.128262
+    speed: 2
+    m_Value: 8.128262
+  m_Ortho:
+    m_Target: 1
+    speed: 2
+    m_Value: 1
+  m_CameraSettings:
+    m_Speed: 1
+    m_SpeedNormalized: 0.5
+    m_SpeedMin: 0.001
+    m_SpeedMax: 2
+    m_EasingEnabled: 1
+    m_EasingDuration: 0.4
+    m_AccelerationEnabled: 1
+    m_FieldOfViewHorizontalOrVertical: 60
+    m_NearClip: 0.03
+    m_FarClip: 10000
+    m_DynamicClip: 1
+    m_OcclusionCulling: 0
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewOrtho: 0
+  m_ReplacementShader: {fileID: 0}
+  m_ReplacementString: 
+  m_SceneVisActive: 1
+  m_LastLockedObject: {fileID: 0}
+  m_ViewIsLockedToObject: 0
+--- !u!114 &16
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Game
+    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 312.6667
+    y: 72.66667
+    width: 1527.3334
+    height: 461.66666
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_SerializedViewNames: []
+  m_SerializedViewValues: []
+  m_PlayModeViewName: GameView
+  m_ShowGizmos: 0
+  m_TargetDisplay: 0
+  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+  m_TargetSize: {x: 1920, y: 1080}
+  m_TextureFilterMode: 0
+  m_TextureHideFlags: 61
+  m_RenderIMGUI: 1
+  m_EnterPlayModeBehavior: 0
+  m_UseMipMap: 0
+  m_VSyncEnabled: 0
+  m_Gizmos: 0
+  m_Stats: 0
+  m_SelectedSizes: 03000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_ZoomArea:
+    m_HRangeLocked: 0
+    m_VRangeLocked: 0
+    hZoomLockedByDefault: 0
+    vZoomLockedByDefault: 0
+    m_HBaseRangeMin: -640
+    m_HBaseRangeMax: 640
+    m_VBaseRangeMin: -360
+    m_VBaseRangeMax: 360
+    m_HAllowExceedBaseRangeMin: 1
+    m_HAllowExceedBaseRangeMax: 1
+    m_VAllowExceedBaseRangeMin: 1
+    m_VAllowExceedBaseRangeMax: 1
+    m_ScaleWithWindow: 0
+    m_HSlider: 0
+    m_VSlider: 0
+    m_IgnoreScrollWheelUntilClicked: 0
+    m_EnableMouseInput: 0
+    m_EnableSliderZoomHorizontal: 0
+    m_EnableSliderZoomVertical: 0
+    m_UniformScale: 1
+    m_UpDirection: 1
+    m_DrawArea:
+      serializedVersion: 2
+      x: 0
+      y: 21
+      width: 1527.3334
+      height: 440.66666
+    m_Scale: {x: 0.612037, y: 0.612037}
+    m_Translation: {x: 763.6667, y: 220.33333}
+    m_MarginLeft: 0
+    m_MarginRight: 0
+    m_MarginTop: 0
+    m_MarginBottom: 0
+    m_LastShownAreaInsideMargins:
+      serializedVersion: 2
+      x: -1247.746
+      y: -360
+      width: 2495.492
+      height: 720
+    m_MinimalGUI: 1
+  m_defaultScale: 0.612037
+  m_LastWindowPixelSize: {x: 2291, y: 692.5}
+  m_ClearInEditMode: 1
+  m_NoCameraWarning: 1
+  m_LowResolutionForAspectRatios: 01000000000000000000
+  m_XRRenderMode: 0
+  m_RenderTexture: {fileID: 0}
+--- !u!114 &17
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_TitleContent:
+    m_Text: Project
+    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 983.3334
+    width: 1841
+    height: 367.6667
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_SearchFilter:
+    m_NameFilter: 
+    m_ClassNames: []
+    m_AssetLabels: []
+    m_AssetBundleNames: []
+    m_VersionControlStates: []
+    m_SoftLockControlStates: []
+    m_ReferencingInstanceIDs: 
+    m_SceneHandles: 
+    m_ShowAllHits: 0
+    m_SkipHidden: 0
+    m_SearchArea: 1
+    m_Folders:
+    - Assets/Resources/Prefabs/Board/Inhabitants
+    m_Globs: []
+    m_OriginalText: 
+  m_ViewMode: 1
+  m_StartGridSize: 64
+  m_LastFolders:
+  - Assets/Resources/Prefabs/Board/Inhabitants
+  m_LastFoldersGridSize: -1
+  m_LastProjectPath: C:\Users\wenze\Documents\Unity\Eons
+  m_LockTracker:
+    m_IsLocked: 0
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 89.666626}
+    m_SelectedIDs: e2610000
+    m_LastClickedID: 25058
+    m_ExpandedIDs: 00000000b2610000b4610000b6610000b8610000ba610000bc610000be610000c0610000c2610000c4610000c6610000c8610000ca61000000ca9a3bffffff7f
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 10}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_AssetTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 00000000b2610000b4610000b6610000b8610000ba610000bc610000be610000c0610000c2610000c4610000c6610000c8610000ca61000000ca9a3bffffff7f
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_ListAreaState:
+    m_SelectedInstanceIDs: 625b0000
+    m_LastClickedInstanceID: 23394
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c62300009e5f0000946c0000ca590000e65b0000a8700000345d00003e5a000080720000565a0000e693ffffc47100004484000038840000b45c0000cc5c000000000000d45b00007c5d0000785f0000705b0000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 10}
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+    m_NewAssetIndexInList: -1
+    m_ScrollPosition: {x: 0, y: 0}
+    m_GridSize: 64
+  m_SkipHiddenPackages: 0
+  m_DirectoriesAreaWidth: 341
+--- !u!114 &18
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Console
+    m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 555.3334
+    width: 1841
+    height: 795.66675
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+--- !u!114 &19
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12071, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Animation
+    m_Image: {fileID: -3237396543322336831, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 808.6667
+    width: 1841
+    height: 542.3334
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_LockTracker:
+    m_IsLocked: 0
+  m_LastSelectedObjectID: -4712520
+--- !u!114 &20
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12914, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Animator
+    m_Image: {fileID: 1711060831702674872, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 808.6667
+    width: 1841
+    height: 542.3334
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_ViewTransforms:
+    m_KeySerializationHelper:
+    - {fileID: -5183453786790052467, guid: ddb7da4d02db4694b8a60a64ad0c9bce, type: 2}
+    - {fileID: -2208600786771584181, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
+    - {fileID: -3373428290895615280, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
+    - {fileID: 8030200332961901116, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
+    - {fileID: 7932117235907219867, guid: 6e1ea7ce95362bd43b6e9e2020a2a019, type: 2}
+    m_ValueSerializationHelper:
+    - e00: 0.89244986
+      e01: 0
+      e02: 0
+      e03: 81.92392
+      e10: 0
+      e11: 0.89244986
+      e12: 0
+      e13: 244.61092
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 1
+      e01: 0
+      e02: 0
+      e03: 148.66663
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 4
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 0.8252713
+      e01: 0
+      e02: 0
+      e03: -58.394867
+      e10: 0
+      e11: 0.8252713
+      e12: 0
+      e13: -6.7846766
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 1.0032251
+      e01: 0
+      e02: 0
+      e03: 151.79115
+      e10: 0
+      e11: 1.0032251
+      e12: 0
+      e13: 100.01798
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  m_PreviewAnimator: {fileID: 0}
+  m_AnimatorController: {fileID: 9100000, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
+  m_BreadCrumbs:
+  - m_Target: {fileID: -2208600786771584181, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
+    m_ScrollPosition: {x: 0, y: 0}
+  - m_Target: {fileID: 8030200332961901116, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
+    m_ScrollPosition: {x: 0, y: 0}
+  stateMachineGraph: {fileID: 0}
+  stateMachineGraphGUI: {fileID: 0}
+  blendTreeGraph: {fileID: 0}
+  blendTreeGraphGUI: {fileID: 0}
+  m_AutoLiveLink: 1
+  m_MiniTool: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_CurrentEditor: 1
+  m_LayerEditor:
+    m_SelectedLayerIndex: 0
+--- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -301,9 +3141,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 732
-    width: 2253
-    height: 619.00006
+    y: 555.3334
+    width: 1841
+    height: 795.66675
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -340,16 +3180,16 @@ MonoBehaviour:
         m_PaneScroll: {x: 0, y: 0}
         m_ViewType: 0
         updateViewLive: 0
-        m_CurrentFrameIndex: -1
+        m_CurrentFrameIndex: 1307114
         m_HierarchyOverruledThreadFromSelection: 0
         m_ProfilerViewFilteringOptions: 1
         m_FrameDataHierarchyView:
           m_Serialized: 1
           m_TreeViewState:
             scrollPos: {x: 0, y: 0}
-            m_SelectedIDs: 0e010000
-            m_LastClickedID: 270
-            m_ExpandedIDs: 040000004400000045000000470000007f0000009a000000e2000000
+            m_SelectedIDs: 97010000
+            m_LastClickedID: 407
+            m_ExpandedIDs: 04000000440000007f000000e4000000
             m_RenameOverlay:
               m_UserAcceptedRename: 0
               m_Name: 
@@ -1295,2733 +4135,3 @@ MonoBehaviour:
       data:
         m_SortAscending: 0
         m_SortedColumn: -1
---- !u!114 &13
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12061, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Hierarchy
-    m_Image: {fileID: -3734745235275155857, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 72.66667
-    width: 386.33334
-    height: 717
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_SceneHierarchy:
-    m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 38fbffff
-      m_RenameOverlay:
-        m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
-        m_EditFieldRect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        m_UserData: 0
-        m_IsWaitingForDelay: 0
-        m_IsRenaming: 0
-        m_OriginalEventType: 11
-        m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 8}
-      m_SearchString: 
-    m_ExpandedScenes: []
-    m_CurrenRootInstanceID: 0
-    m_LockTracker:
-      m_IsLocked: 0
-    m_CurrentSortingName: TransformSorting
-  m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &14
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Test Runner
-    m_Image: {fileID: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 72.66667
-    width: 386.33334
-    height: 717
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_Spl:
-    ID: 34058
-    splitterInitialOffset: 316.5
-    currentActiveSplitter: -1
-    realSizes:
-    - 345.33334
-    - 301.33334
-    relativeSizes:
-    - 0.5344828
-    - 0.46551722
-    minSizes:
-    - 32
-    - 32
-    maxSizes:
-    - 0
-    - 0
-    lastTotalSize: 646.6667
-    splitSize: 6
-    xOffset: 0
-    m_Version: 1
-    oldRealSizes: 
-    oldMinSizes: 
-    oldMaxSizes: 
-    oldSplitSize: 0
-  m_TestTypeToolbarIndex: 0
-  m_PlayModeTestListGUI:
-    m_Window: {fileID: 14}
-    m_NewResultList:
-    - id: 1004
-      uniqueId: '[My project][suite]'
-      name: My project
-      fullName: My project
-      resultStatus: 1
-      duration: 0.2990464
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 
-      parentUniqueId: 
-    - id: 1090
-      uniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-      name: Tests.dll
-      fullName: C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll
-      resultStatus: 1
-      duration: 0.1619785
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1000
-      parentUniqueId: '[My project][suite]'
-    - id: 1006
-      uniqueId: Tests.dll/[Tests][AffinityManagerTestSuite][suite]
-      name: AffinityManagerTestSuite
-      fullName: AffinityManagerTestSuite
-      resultStatus: 1
-      duration: 0.079992
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1077
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1008
-      uniqueId: Tests.dll/AffinityManagerTestSuite/[Tests][AffinityManagerTestSuite.CanDecayAffinityOnBiome]
-      name: CanDecayAffinityOnBiome
-      fullName: AffinityManagerTestSuite.CanDecayAffinityOnBiome
-      resultStatus: 1
-      duration: 0.0243814
-      messages: 
-      output: 'Final affinity for Grassland is 6.70962
-
-        Final affinity for
-        Savannah is 0.8646647
-
-        Final affinity for Grassland is 7.017535
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1006
-      parentUniqueId: Tests.dll/[Tests][AffinityManagerTestSuite][suite]
-    - id: 1007
-      uniqueId: Tests.dll/AffinityManagerTestSuite/[Tests][AffinityManagerTestSuite.CanGainAffinityOnBiome]
-      name: CanGainAffinityOnBiome
-      fullName: AffinityManagerTestSuite.CanGainAffinityOnBiome
-      resultStatus: 1
-      duration: 0.0273638
-      messages: 
-      output: 'Final affinity for Grassland is 3.083034
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1006
-      parentUniqueId: Tests.dll/[Tests][AffinityManagerTestSuite][suite]
-    - id: 1004
-      uniqueId: Tests.dll/AffinityManagerTestSuite/[Tests][AffinityManagerTestSuite.CanGetClonedAffinityManager]
-      name: CanGetClonedAffinityManager
-      fullName: AffinityManagerTestSuite.CanGetClonedAffinityManager
-      resultStatus: 1
-      duration: 0.0151565
-      messages: 
-      output: 'Final affinity for Grassland is 6.70962
-
-        Final affinity for
-        Savannah is 0.8646647
-
-        Final affinity for Grassland is 7.017535
-
-        Testing
-        Desert
-
-        Testing Savannah
-
-        Testing TropicalRainforest
-
-        Testing
-        Grassland
-
-        Testing Woodland
-
-        Testing SeasonalForest
-
-        Testing
-        TemperateRainForest
-
-        Testing BorealForest
-
-        Testing Tundra
-
-        Testing
-        Ice
-
-        Testing Water
-
-        Testing Barren
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: Tests.dll/[Tests][AffinityManagerTestSuite][suite]
-    - id: 1052
-      uniqueId: Tests.dll/[Tests][AffinityStatsTestSuite][suite]
-      name: AffinityStatsTestSuite
-      fullName: AffinityStatsTestSuite
-      resultStatus: 1
-      duration: 0.010628
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1078
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1006
-      uniqueId: Tests.dll/AffinityStatsTestSuite/[Tests][AffinityStatsTestSuite.CanCombineAffinity]
-      name: CanCombineAffinity
-      fullName: AffinityStatsTestSuite.CanCombineAffinity
-      resultStatus: 1
-      duration: 0.0026937
-      messages: 
-      output: 'Final affinity for Grassland is 40
-
-        Final affinity for TemperateRainForest
-        is 50
-
-        Final affinity for Grassland is 30
-
-        Final affinity
-        for Desert is 70
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/[Tests][AffinityStatsTestSuite][suite]
-    - id: 1053
-      uniqueId: Tests.dll/AffinityStatsTestSuite/[Tests][AffinityStatsTestSuite.CanDuplicateAffinity]
-      name: CanDuplicateAffinity
-      fullName: AffinityStatsTestSuite.CanDuplicateAffinity
-      resultStatus: 1
-      duration: 0.004642
-      messages: 
-      output: 'Final affinity for Grassland is 40
-
-        Final affinity for Desert
-        is 30
-
-        Final affinity for Savannah is 300
-
-        Testing Desert
-
-        Testing
-        Savannah
-
-        Testing TropicalRainforest
-
-        Testing Grassland
-
-        Testing
-        Woodland
-
-        Testing SeasonalForest
-
-        Testing TemperateRainForest
-
-        Testing
-        BorealForest
-
-        Testing Tundra
-
-        Testing Ice
-
-        Testing
-        Water
-
-        Testing Barren
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1052
-      parentUniqueId: Tests.dll/[Tests][AffinityStatsTestSuite][suite]
-    - id: 1001
-      uniqueId: Tests.dll/[Tests][BoardAgeTestSuite][suite]
-      name: BoardAgeTestSuite
-      fullName: BoardAgeTestSuite
-      resultStatus: 1
-      duration: 0.1494743
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1024
-      parentUniqueId: '[Tests][/Users/steven.wenzel/Documents/unity/eonsgame/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1002
-      uniqueId: Tests.dll/BoardAgeTestSuite/[Tests][BoardAgeTestSuite.CanGetBoardAgeAtStartup]
-      name: CanGetBoardAgeAtStartup
-      fullName: BoardAgeTestSuite.CanGetBoardAgeAtStartup
-      resultStatus: 1
-      duration: 0.1269329
-      messages: 
-      output: 'clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: Tests.dll/[Tests][BoardAgeTestSuite][suite]
-    - id: 1003
-      uniqueId: Tests.dll/BoardAgeTestSuite/[Tests][BoardAgeTestSuite.CanUpdateBoardAge]
-      name: CanUpdateBoardAge
-      fullName: BoardAgeTestSuite.CanUpdateBoardAge
-      resultStatus: 1
-      duration: 0.0130458
-      messages: 
-      output: 'clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: Tests.dll/[Tests][BoardAgeTestSuite][suite]
-    - id: 1011
-      uniqueId: Tests.dll/[Tests][BoardStatsTestSuite][suite]
-      name: BoardStatsTestSuite
-      fullName: BoardStatsTestSuite
-      resultStatus: 1
-      duration: 0.0090706
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1080
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1012
-      uniqueId: Tests.dll/BoardStatsTestSuite/[Tests][BoardStatsTestSuite.CanGetAccurateBoardEdges]
-      name: CanGetAccurateBoardEdges
-      fullName: BoardStatsTestSuite.CanGetAccurateBoardEdges
-      resultStatus: 1
-      duration: 0.0037784
-      messages: 
-      output: 'setting dimensions
-
-        setting dimensions
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1011
-      parentUniqueId: Tests.dll/[Tests][BoardStatsTestSuite][suite]
-    - id: 1013
-      uniqueId: Tests.dll/[Tests][CameraBoundsTestSuite][suite]
-      name: CameraBoundsTestSuite
-      fullName: CameraBoundsTestSuite
-      resultStatus: 1
-      duration: 0.0110295
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1084
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1016
-      uniqueId: Tests.dll/CameraBoundsTestSuite/[Tests][CameraBoundsTestSuite.CanAllowCameraWhenLegalBoundsChange]
-      name: CanAllowCameraWhenLegalBoundsChange
-      fullName: CameraBoundsTestSuite.CanAllowCameraWhenLegalBoundsChange
-      resultStatus: 1
-      duration: 0.0040967
-      messages: 
-      output: 'setting dimensions
-
-        setting dimensions
-
-        Adding restriction:
-        Camera (CameraBounds)
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1013
-      parentUniqueId: Tests.dll/[Tests][CameraBoundsTestSuite][suite]
-    - id: 1014
-      uniqueId: Tests.dll/CameraBoundsTestSuite/[Tests][CameraBoundsTestSuite.CanGetBoundsFromBoard]
-      name: CanGetBoundsFromBoard
-      fullName: CameraBoundsTestSuite.CanGetBoundsFromBoard
-      resultStatus: 1
-      duration: 0.0010846
-      messages: 
-      output: 'setting dimensions
-
-        setting dimensions
-
-        Adding restriction:
-        Camera (CameraBounds)
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1013
-      parentUniqueId: Tests.dll/[Tests][CameraBoundsTestSuite][suite]
-    - id: 1015
-      uniqueId: Tests.dll/CameraBoundsTestSuite/[Tests][CameraBoundsTestSuite.CanPreventCameraFromExceedingBoundsLarge]
-      name: CanPreventCameraFromExceedingBoundsLarge
-      fullName: CameraBoundsTestSuite.CanPreventCameraFromExceedingBoundsLarge
-      resultStatus: 1
-      duration: 0.0011456
-      messages: 
-      output: 'setting dimensions
-
-        setting dimensions
-
-        Adding restriction:
-        Camera (CameraBounds)
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1013
-      parentUniqueId: Tests.dll/[Tests][CameraBoundsTestSuite][suite]
-    - id: 1017
-      uniqueId: Tests.dll/CameraBoundsTestSuite/[Tests][CameraBoundsTestSuite.CanPreventCameraFromExceedingBoundsSmall]
-      name: CanPreventCameraFromExceedingBoundsSmall
-      fullName: CameraBoundsTestSuite.CanPreventCameraFromExceedingBoundsSmall
-      resultStatus: 1
-      duration: 0.0010738
-      messages: 
-      output: 'setting dimensions
-
-        setting dimensions
-
-        Adding restriction:
-        Camera (CameraBounds)
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1013
-      parentUniqueId: Tests.dll/[Tests][CameraBoundsTestSuite][suite]
-    - id: 1017
-      uniqueId: Tests.dll/[Tests][CameraMovementTestSuite][suite]
-      name: CameraMovementTestSuite
-      fullName: CameraMovementTestSuite
-      resultStatus: 1
-      duration: 0.0088639
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1086
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1018
-      uniqueId: Tests.dll/CameraMovementTestSuite/[Tests][CameraMovementTestSuite.CanDetermineNewEdgesFromBounds]
-      name: CanDetermineNewEdgesFromBounds
-      fullName: CameraMovementTestSuite.CanDetermineNewEdgesFromBounds
-      resultStatus: 1
-      duration: 0.000717
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1017
-      parentUniqueId: Tests.dll/[Tests][CameraMovementTestSuite][suite]
-    - id: 1020
-      uniqueId: Tests.dll/CameraMovementTestSuite/[Tests][CameraMovementTestSuite.CanDetermineNewOriginFromBounds]
-      name: CanDetermineNewOriginFromBounds
-      fullName: CameraMovementTestSuite.CanDetermineNewOriginFromBounds
-      resultStatus: 1
-      duration: 0.0002798
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1017
-      parentUniqueId: Tests.dll/[Tests][CameraMovementTestSuite][suite]
-    - id: 1019
-      uniqueId: Tests.dll/CameraMovementTestSuite/[Tests][CameraMovementTestSuite.CanDetermineNewZoomFromBounds]
-      name: CanDetermineNewZoomFromBounds
-      fullName: CameraMovementTestSuite.CanDetermineNewZoomFromBounds
-      resultStatus: 1
-      duration: 0.0003172
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1017
-      parentUniqueId: Tests.dll/[Tests][CameraMovementTestSuite][suite]
-    - id: 1019
-      uniqueId: Tests.dll/CameraMovementTestSuite/[Tests][CameraMovementTestSuite.NewTransformIsAccurate]
-      name: NewTransformIsAccurate
-      fullName: CameraMovementTestSuite.NewTransformIsAccurate
-      resultStatus: 1
-      duration: 0.0005503
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1017
-      parentUniqueId: Tests.dll/[Tests][CameraMovementTestSuite][suite]
-    - id: 1007
-      uniqueId: Tests.dll/[Tests][CultureContainerTestSuite][suite]
-      name: CultureContainerTestSuite
-      fullName: CultureContainerTestSuite
-      resultStatus: 1
-      duration: 2.5678394
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1075
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1008
-      uniqueId: Tests.dll/CultureContainerTestSuite/[Tests][CultureContainerTestSuite.CanAddCultureToContainer]
-      name: CanAddCultureToContainer
-      fullName: CultureContainerTestSuite.CanAddCultureToContainer
-      resultStatus: 1
-      duration: 0.0231823
-      messages: 
-      output: "Before: ListVals: \r\nAfter: ListVals: CultureA(-24248)\r\nclearing\r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1007
-      parentUniqueId: Tests.dll/[Tests][CultureContainerTestSuite][suite]
-    - id: 1013
-      uniqueId: Tests.dll/CultureContainerTestSuite/[Tests][CultureContainerTestSuite.CanResortWhenCultureDestroyed]
-      name: CanResortWhenCultureDestroyed
-      fullName: CultureContainerTestSuite.CanResortWhenCultureDestroyed
-      resultStatus: 1
-      duration: 2.554428
-      messages: 
-      output: "Before: ListVals: \r\nAfter: ListVals: CultureA(-26342)\r\nBefore:
-        ListVals: CultureA(-26342)\r\nAfter: ListVals: CultureA(-26342),CultureB(-26344)\r\nBefore:
-        ListVals: CultureA(-26342),CultureB(-26344)\r\nAfter: ListVals: CultureB(-26344)\r\nclearing\r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1009
-      parentUniqueId: Tests.dll/[Tests][CultureContainerTestSuite][suite]
-    - id: 1010
-      uniqueId: Tests.dll/CultureContainerTestSuite/[Tests][CultureContainerTestSuite.CanResortWhenPopulationAdded]
-      name: CanResortWhenPopulationAdded
-      fullName: CultureContainerTestSuite.CanResortWhenPopulationAdded
-      resultStatus: 1
-      duration: 0.0046801
-      messages: 
-      output: "Before: ListVals: \r\nAfter: ListVals: CultureA(-24312)\r\nBefore:
-        ListVals: CultureA(-24312)\r\nAfter: ListVals: CultureA(-24312),CultureB(-24314)\r\nclearing\r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1007
-      parentUniqueId: Tests.dll/[Tests][CultureContainerTestSuite][suite]
-    - id: 1009
-      uniqueId: Tests.dll/CultureContainerTestSuite/[Tests][CultureContainerTestSuite.CanSortCultures]
-      name: CanSortCultures
-      fullName: CultureContainerTestSuite.CanSortCultures
-      resultStatus: 1
-      duration: 0.0060214
-      messages: 
-      output: "Before: ListVals: \r\nAfter: ListVals: CultureB(-24346)\r\nBefore:
-        ListVals: CultureB(-24346)\r\nAfter: ListVals: CultureA(-24344),CultureB(-24346)\r\nclearing\r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1007
-      parentUniqueId: Tests.dll/[Tests][CultureContainerTestSuite][suite]
-    - id: 1004
-      uniqueId: Tests.dll/[Tests][CultureFoodStoreTestSuite][suite]
-      name: CultureFoodStoreTestSuite
-      fullName: CultureFoodStoreTestSuite
-      resultStatus: 1
-      duration: 0.0791106
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1038
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1005
-      uniqueId: Tests.dll/CultureFoodStoreTestSuite/[Tests][CultureFoodStoreTestSuite.CanCollectFoodFromTile]
-      name: CanCollectFoodFromTile
-      fullName: CultureFoodStoreTestSuite.CanCollectFoodFromTile
-      resultStatus: 1
-      duration: 0.0351676
-      messages: 
-      output: "setting dimensions\r\nAdding culture rthqq(-3600) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
-        ListVals: \r\nAfter: ListVals: rthqq(-3600)\r\nSetup Complete. Culture name
-        is rthqq(-3600)\r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/[Tests][CultureFoodStoreTestSuite][suite]
-    - id: 1006
-      uniqueId: Tests.dll/CultureFoodStoreTestSuite/[Tests][CultureFoodStoreTestSuite.CanConsumeFoodInTurn]
-      name: CanConsumeFoodInTurn
-      fullName: CultureFoodStoreTestSuite.CanConsumeFoodInTurn
-      resultStatus: 1
-      duration: 0.015711
-      messages: 
-      output: "setting dimensions\r\nAdding culture rthqq(-3748) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
-        ListVals: \r\nAfter: ListVals: rthqq(-3748)\r\nSetup Complete. Culture name
-        is rthqq(-3748)\r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/[Tests][CultureFoodStoreTestSuite][suite]
-    - id: 1007
-      uniqueId: Tests.dll/CultureFoodStoreTestSuite/[Tests][CultureFoodStoreTestSuite.CanConsumeFoodMultiplePopulation]
-      name: CanConsumeFoodMultiplePopulation
-      fullName: CultureFoodStoreTestSuite.CanConsumeFoodMultiplePopulation
-      resultStatus: 1
-      duration: 0.0118965
-      messages: 
-      output: "setting dimensions\r\nAdding culture rthqq(-3896) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
-        ListVals: \r\nAfter: ListVals: rthqq(-3896)\r\nSetup Complete. Culture name
-        is rthqq(-3896)\r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/[Tests][CultureFoodStoreTestSuite][suite]
-    - id: 1008
-      uniqueId: Tests.dll/CultureFoodStoreTestSuite/[Tests][CultureFoodStoreTestSuite.CanReduceFoodOnTile]
-      name: CanReduceFoodOnTile
-      fullName: CultureFoodStoreTestSuite.CanReduceFoodOnTile
-      resultStatus: 1
-      duration: 0.0120396
-      messages: 
-      output: "setting dimensions\r\nAdding culture rthqq(-4044) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
-        ListVals: \r\nAfter: ListVals: rthqq(-4044)\r\nSetup Complete. Culture name
-        is rthqq(-4044)\r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/[Tests][CultureFoodStoreTestSuite][suite]
-    - id: 1016
-      uniqueId: Tests.dll/[Tests][CulturePlacementHandlerTestSuite][suite]
-      name: CulturePlacementHandlerTestSuite
-      fullName: CulturePlacementHandlerTestSuite
-      resultStatus: 1
-      duration: 0.2466056
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1075
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1021
-      uniqueId: Tests.dll/CulturePlacementHandlerTestSuite/[Tests][CulturePlacementHandlerTestSuite.CanNotShowAdditionalCulturesAfterThree]
-      name: CanNotShowAdditionalCulturesAfterThree
-      fullName: CulturePlacementHandlerTestSuite.CanNotShowAdditionalCulturesAfterThree
-      resultStatus: 1
-      duration: 0.1284934
-      messages: 
-      output: "Before: ListVals: \r\nAfter: ListVals: culture(-10862)\r\nBefore:
-        ListVals: culture(-10862)\r\nAfter: ListVals: culture(-10862),culture(-10868)\r\nBefore:
-        ListVals: culture(-10862),culture(-10868)\r\nAfter: ListVals: culture(-10862),culture(-10868),culture(-10874)\r\nBefore:
-        ListVals: culture(-10862),culture(-10868),culture(-10874)\r\nAfter: ListVals:
-        culture(-10862),culture(-10868),culture(-10874),culture(-10890)\r\nclearing\r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1016
-      parentUniqueId: Tests.dll/[Tests][CulturePlacementHandlerTestSuite][suite]
-    - id: 1022
-      uniqueId: Tests.dll/CulturePlacementHandlerTestSuite/[Tests][CulturePlacementHandlerTestSuite.CanRearrangeWhenPopChanges]
-      name: CanRearrangeWhenPopChanges
-      fullName: CulturePlacementHandlerTestSuite.CanRearrangeWhenPopChanges
-      resultStatus: 1
-      duration: 0.20826
-      messages: 
-      output: "Before: ListVals: \r\nAfter: ListVals: culture(-10908)\r\nBefore:
-        ListVals: culture(-10908)\r\nAfter: ListVals: culture(-10908),culture(-10914)\r\nBefore:
-        ListVals: culture(-10908),culture(-10914)\r\nAfter: ListVals: culture(-10908),culture(-10914),culture(-10920)\r\nclearing\r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1016
-      parentUniqueId: Tests.dll/[Tests][CulturePlacementHandlerTestSuite][suite]
-    - id: 1020
-      uniqueId: Tests.dll/CulturePlacementHandlerTestSuite/[Tests][CulturePlacementHandlerTestSuite.CanReduceFromThreeToTwoCulturesOnTile]
-      name: CanReduceFromThreeToTwoCulturesOnTile
-      fullName: CulturePlacementHandlerTestSuite.CanReduceFromThreeToTwoCulturesOnTile
-      resultStatus: 1
-      duration: 0.2328586
-      messages: 
-      output: "Before: ListVals: \r\nAfter: ListVals: culture(-12252)\r\nBefore:
-        ListVals: culture(-12252)\r\nAfter: ListVals: culture(-12252),culture(-12258)\r\nBefore:
-        ListVals: culture(-12252),culture(-12258)\r\nAfter: ListVals: culture(-12252),culture(-12258),culture(-12264)\r\nBefore:
-        ListVals: culture(-12252),culture(-12258),culture(-12264)\r\nAfter: ListVals:
-        culture(-12258),culture(-12264)\r\nclearing\r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1016
-      parentUniqueId: Tests.dll/[Tests][CulturePlacementHandlerTestSuite][suite]
-    - id: 1017
-      uniqueId: Tests.dll/CulturePlacementHandlerTestSuite/[Tests][CulturePlacementHandlerTestSuite.CanShowOneCultureOnTile]
-      name: CanShowOneCultureOnTile
-      fullName: CulturePlacementHandlerTestSuite.CanShowOneCultureOnTile
-      resultStatus: 1
-      duration: 0.1082991
-      messages: 
-      output: "Before: ListVals: \r\nAfter: ListVals: culture(-10988)\r\nclearing\r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1016
-      parentUniqueId: Tests.dll/[Tests][CulturePlacementHandlerTestSuite][suite]
-    - id: 1019
-      uniqueId: Tests.dll/CulturePlacementHandlerTestSuite/[Tests][CulturePlacementHandlerTestSuite.CanShowThreeCulturesOnTile]
-      name: CanShowThreeCulturesOnTile
-      fullName: CulturePlacementHandlerTestSuite.CanShowThreeCulturesOnTile
-      resultStatus: 1
-      duration: 0.107219
-      messages: 
-      output: "Before: ListVals: \r\nAfter: ListVals: culture(-11028)\r\nBefore:
-        ListVals: culture(-11028)\r\nAfter: ListVals: culture(-11028),culture(-11034)\r\nBefore:
-        ListVals: culture(-11028),culture(-11034)\r\nAfter: ListVals: culture(-11028),culture(-11034),culture(-11040)\r\nclearing\r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1016
-      parentUniqueId: Tests.dll/[Tests][CulturePlacementHandlerTestSuite][suite]
-    - id: 1018
-      uniqueId: Tests.dll/CulturePlacementHandlerTestSuite/[Tests][CulturePlacementHandlerTestSuite.CanShowTwoCulturesOnTile]
-      name: CanShowTwoCulturesOnTile
-      fullName: CulturePlacementHandlerTestSuite.CanShowTwoCulturesOnTile
-      resultStatus: 1
-      duration: 0.1069641
-      messages: 
-      output: "Before: ListVals: \r\nAfter: ListVals: culture(-11068)\r\nBefore:
-        ListVals: culture(-11068)\r\nAfter: ListVals: culture(-11068),culture(-11074)\r\nclearing\r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1016
-      parentUniqueId: Tests.dll/[Tests][CulturePlacementHandlerTestSuite][suite]
-    - id: 1001
-      uniqueId: Tests.dll/[Tests][CultureTestSuite][suite]
-      name: CultureTestSuite
-      fullName: CultureTestSuite
-      resultStatus: 1
-      duration: 0.0454097
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1011
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1003
-      uniqueId: Tests.dll/CultureTestSuite/[Tests][CultureTestSuite.TestCanMerge]
-      name: TestCanMerge
-      fullName: CultureTestSuite.TestCanMerge
-      resultStatus: 1
-      duration: 0.0091292
-      messages: 
-      output: "setting dimensions\r\nAdding culture rthqq(-4438) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
-        ListVals: \r\nAfter: ListVals: rthqq(-4438)\r\nSetup Complete. Culture name
-        is rthqq(-4438)\r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: Tests.dll/[Tests][CultureTestSuite][suite]
-    - id: 1006
-      uniqueId: Tests.dll/CultureTestSuite/[Tests][CultureTestSuite.TestCannotMerge]
-      name: TestCannotMerge
-      fullName: CultureTestSuite.TestCannotMerge
-      resultStatus: 1
-      duration: 0.0100995
-      messages: 
-      output: "setting dimensions\r\nAdding culture rthqq(-4604) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
-        ListVals: \r\nAfter: ListVals: rthqq(-4604)\r\nSetup Complete. Culture name
-        is rthqq(-4604)\r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/[Tests][CultureTestSuite][suite]
-    - id: 1002
-      uniqueId: Tests.dll/CultureTestSuite/[Tests][CultureTestSuite.TestSplitCulture]
-      name: TestSplitCulture
-      fullName: CultureTestSuite.TestSplitCulture
-      resultStatus: 1
-      duration: 0.0219988
-      messages: 
-      output: "setting dimensions\r\nAdding culture rthqq(-4770) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
-        ListVals: \r\nAfter: ListVals: rthqq(-4770)\r\nSetup Complete. Culture name
-        is rthqq(-4770)\r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: Tests.dll/[Tests][CultureTestSuite][suite]
-    - id: 1008
-      uniqueId: Tests.dll/[Tests][CurveTestSuite][suite]
-      name: CurveTestSuite
-      fullName: CurveTestSuite
-      resultStatus: 1
-      duration: 0.0069801
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1031
-      parentUniqueId: '[Tests][/Users/steven.wenzel/Documents/unity/eonsgame/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1012
-      uniqueId: Tests.dll/CurveTestSuite/[Tests][CurveTestSuite.TestCompoundCurve]
-      name: TestCompoundCurve
-      fullName: CurveTestSuite.TestCompoundCurve
-      resultStatus: 1
-      duration: 0.0007527
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1008
-      parentUniqueId: Tests.dll/[Tests][CurveTestSuite][suite]
-    - id: 1009
-      uniqueId: Tests.dll/CurveTestSuite/[Tests][CurveTestSuite.TestGaussianCurve]
-      name: TestGaussianCurve
-      fullName: CurveTestSuite.TestGaussianCurve
-      resultStatus: 1
-      duration: 0.0003479
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1008
-      parentUniqueId: Tests.dll/[Tests][CurveTestSuite][suite]
-    - id: 1011
-      uniqueId: Tests.dll/CurveTestSuite/[Tests][CurveTestSuite.TestPowerCurve]
-      name: TestPowerCurve
-      fullName: CurveTestSuite.TestPowerCurve
-      resultStatus: 1
-      duration: 0.0002094
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1008
-      parentUniqueId: Tests.dll/[Tests][CurveTestSuite][suite]
-    - id: 1010
-      uniqueId: Tests.dll/CurveTestSuite/[Tests][CurveTestSuite.TestSigmoidCurve]
-      name: TestSigmoidCurve
-      fullName: CurveTestSuite.TestSigmoidCurve
-      resultStatus: 1
-      duration: 0.0002324
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1008
-      parentUniqueId: Tests.dll/[Tests][CurveTestSuite][suite]
-    - id: 1018
-      uniqueId: Tests.dll/[Tests][FoodAmountIndicatorTestSuite][suite]
-      name: FoodAmountIndicatorTestSuite
-      fullName: FoodAmountIndicatorTestSuite
-      resultStatus: 2
-      duration: 0.052777
-      messages: One or more child tests had errors
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1045
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1020
-      uniqueId: Tests.dll/FoodAmountIndicatorTestSuite/[Tests][FoodAmountIndicatorTestSuite.CanDisplayAccurateFoodCount]
-      name: CanDisplayAccurateFoodCount
-      fullName: FoodAmountIndicatorTestSuite.CanDisplayAccurateFoodCount
-      resultStatus: 2
-      duration: 0.0238908
-      messages: 'SetUp : Unhandled log message: ''[Exception] NullReferenceException:
-        Object reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
-      output: 'NullReferenceException: Object reference not set to an instance of
-        an object
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1018
-      parentUniqueId: Tests.dll/[Tests][FoodAmountIndicatorTestSuite][suite]
-    - id: 1019
-      uniqueId: Tests.dll/FoodAmountIndicatorTestSuite/[Tests][FoodAmountIndicatorTestSuite.CanGenerateFoodIndicatorAtExpectedInterval]
-      name: CanGenerateFoodIndicatorAtExpectedInterval
-      fullName: FoodAmountIndicatorTestSuite.CanGenerateFoodIndicatorAtExpectedInterval
-      resultStatus: 2
-      duration: 0.0152755
-      messages: 'SetUp : Unhandled log message: ''[Exception] NullReferenceException:
-        Object reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
-      output: 'NullReferenceException: Object reference not set to an instance of
-        an object
-
-        NullReferenceException: Object reference not set to an
-        instance of an object
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1018
-      parentUniqueId: Tests.dll/[Tests][FoodAmountIndicatorTestSuite][suite]
-    - id: 1025
-      uniqueId: Tests.dll/[Tests][GreyscaleOverlayTestSuite][suite]
-      name: GreyscaleOverlayTestSuite
-      fullName: GreyscaleOverlayTestSuite
-      resultStatus: 1
-      duration: 0.0067429
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1058
-      parentUniqueId: '[Tests][/Users/steven.wenzel/Documents/unity/eonsgame/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1026
-      uniqueId: Tests.dll/GreyscaleOverlayTestSuite/[Tests][GreyscaleOverlayTestSuite.CanMakeImageGreyscale]
-      name: CanMakeImageGreyscale
-      fullName: GreyscaleOverlayTestSuite.CanMakeImageGreyscale
-      resultStatus: 1
-      duration: 0.0022754
-      messages: 
-      output: 'clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1025
-      parentUniqueId: Tests.dll/[Tests][GreyscaleOverlayTestSuite][suite]
-    - id: 1027
-      uniqueId: Tests.dll/GreyscaleOverlayTestSuite/[Tests][GreyscaleOverlayTestSuite.CanSetToVariousTransparencies]
-      name: CanSetToVariousTransparencies
-      fullName: GreyscaleOverlayTestSuite.CanSetToVariousTransparencies
-      resultStatus: 1
-      duration: 0.0008105
-      messages: 
-      output: 'clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1025
-      parentUniqueId: Tests.dll/[Tests][GreyscaleOverlayTestSuite][suite]
-    - id: 1004
-      uniqueId: Tests.dll/[Tests][InfluenceActionTestSuite][suite]
-      name: InfluenceActionTestSuite
-      fullName: InfluenceActionTestSuite
-      resultStatus: 1
-      duration: 0.0972816
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1016
-      parentUniqueId: '[Tests][/Users/steven.wenzel/Documents/unity/eonsgame/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1005
-      uniqueId: Tests.dll/InfluenceActionTestSuite/[Tests][InfluenceActionTestSuite.CanInfluenceNeighborCulture]
-      name: CanInfluenceNeighborCulture
-      fullName: InfluenceActionTestSuite.CanInfluenceNeighborCulture
-      resultStatus: 1
-      duration: 0.0617383
-      messages: 
-      output: "setting dimensions\r\nBefore: ListVals: \r\nAfter: ListVals: rthqq(-13982)\r\nSetup
-        Complete. Culture name is rthqq(-13982)\r\nBefore: ListVals: rthqq(-13982)\r\nAfter:
-        ListVals: rthqq(-13982),wqsts(-13996)\r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/[Tests][InfluenceActionTestSuite][suite]
-    - id: 1006
-      uniqueId: Tests.dll/InfluenceActionTestSuite/[Tests][InfluenceActionTestSuite.CanMergeIntoNewCultureIfClose]
-      name: CanMergeIntoNewCultureIfClose
-      fullName: InfluenceActionTestSuite.CanMergeIntoNewCultureIfClose
-      resultStatus: 1
-      duration: 0.0244134
-      messages: 
-      output: "setting dimensions\r\nBefore: ListVals: \r\nAfter: ListVals: rthqq(-14142)\r\nSetup
-        Complete. Culture name is rthqq(-14142)\r\nBefore: ListVals: rthqq(-14142)\r\nAfter:
-        ListVals: rthqq(-14142),wqsts(-14156)\r\nCombining rthqq and wqsts into rtsts\r\nBefore:
-        ListVals: rthqq(-14142),wqsts(-14156)\r\nAfter: ListVals: rthqq(-14142)\r\nSetting
-        to destroy wqsts(-14156)\r\nBefore: ListVals: rtsts(-14142)\r\nAfter: ListVals:
-        \r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1004
-      parentUniqueId: Tests.dll/[Tests][InfluenceActionTestSuite][suite]
-    - id: 1042
-      uniqueId: Tests.dll/[Tests][MergeWithTileActionTestSuite][suite]
-      name: MergeWithTileActionTestSuite
-      fullName: MergeWithTileActionTestSuite
-      resultStatus: 1
-      duration: 0.1554717
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1075
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1044
-      uniqueId: Tests.dll/MergeWithTileActionTestSuite/[Tests][MergeWithTileActionTestSuite.CanAddNewCultureToTile]
-      name: CanAddNewCultureToTile
-      fullName: MergeWithTileActionTestSuite.CanAddNewCultureToTile
-      resultStatus: 1
-      duration: 0.0715648
-      messages: 
-      output: "setting dimensions\r\nBefore: ListVals: \r\nAfter: ListVals: rthqq(-36668)\r\nSetup
-        Complete. Culture name is rthqq(-36668)\r\nBefore: ListVals: \r\nAfter: ListVals:
-        wqsts(-36682)\r\nBefore: ListVals: rthqq(-36668)\r\nAfter: ListVals: rthqq(-36668),wqsts(-36682)\r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1042
-      parentUniqueId: Tests.dll/[Tests][MergeWithTileActionTestSuite][suite]
-    - id: 1046
-      uniqueId: Tests.dll/MergeWithTileActionTestSuite/[Tests][MergeWithTileActionTestSuite.CanCreateAsNewCulture]
-      name: CanCreateAsNewCulture
-      fullName: MergeWithTileActionTestSuite.CanCreateAsNewCulture
-      resultStatus: 1
-      duration: 0.0296623
-      messages: 
-      output: "setting dimensions\r\nBefore: ListVals: \r\nAfter: ListVals: rthqq(-36828)\r\nSetup
-        Complete. Culture name is rthqq(-36828)\r\nBefore: ListVals: \r\nAfter: ListVals:
-        wqsts(-36842)\r\nBefore: ListVals: test(-36828)\r\nAfter: ListVals: \r\nBefore:
-        ListVals: \r\nAfter: ListVals: test(-36828)\r\nChanging name of test(-36842)
-        to oest\r\nBefore: ListVals: test(-36828)\r\nAfter: ListVals: test(-36828),oest(-36842)\r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1042
-      parentUniqueId: Tests.dll/[Tests][MergeWithTileActionTestSuite][suite]
-    - id: 1043
-      uniqueId: Tests.dll/MergeWithTileActionTestSuite/[Tests][MergeWithTileActionTestSuite.CanMergeCultures]
-      name: CanMergeCultures
-      fullName: MergeWithTileActionTestSuite.CanMergeCultures
-      resultStatus: 1
-      duration: 0.037548
-      messages: 
-      output: "setting dimensions\r\nBefore: ListVals: \r\nAfter: ListVals: rthqq(-36988)\r\nSetup
-        Complete. Culture name is rthqq(-36988)\r\nBefore: ListVals: \r\nAfter: ListVals:
-        wqsts(-37002)\r\nBefore: ListVals: test(-36988)\r\nAfter: ListVals: \r\nBefore:
-        ListVals: \r\nAfter: ListVals: test(-36988)\r\nBefore: ListVals: test(-37002)\r\nAfter:
-        ListVals: \r\nSetting to destroy test(-37002)\r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1042
-      parentUniqueId: Tests.dll/[Tests][MergeWithTileActionTestSuite][suite]
-    - id: 1001
-      uniqueId: Tests.dll/[Tests][MoveActionTestSuite][suite]
-      name: MoveActionTestSuite
-      fullName: MoveActionTestSuite
-      resultStatus: 1
-      duration: 0.3783329
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1004
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1002
-      uniqueId: Tests.dll/MoveActionTestSuite/[Tests][MoveActionTestSuite.MoveTileActionTest]
-      name: MoveTileActionTest
-      fullName: MoveActionTestSuite.MoveTileActionTest
-      resultStatus: 1
-      duration: 0.1445952
-      messages: 
-      output: "setting dimensions\r\nAdding culture rthqq(-5898) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
-        ListVals: \r\nAfter: ListVals: rthqq(-5898)\r\nSetup Complete. Culture name
-        is rthqq(-5898)\r\nRemoving culture rthqq(-5898) from tile 0, 0 (UnityEngine.Transform)\r\nBefore:
-        ListVals: rthqq(-5898)\r\nAfter: ListVals: \r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: Tests.dll/[Tests][MoveActionTestSuite][suite]
-    - id: 1002
-      uniqueId: Tests.dll/MoveActionTestSuite/[Tests][MoveActionTestSuite.MoveTileActionWhenLargeTest]
-      name: MoveTileActionWhenLargeTest
-      fullName: MoveActionTestSuite.MoveTileActionWhenLargeTest
-      resultStatus: 1
-      duration: 0.1168147
-      messages: 
-      output: "setting dimensions\r\nAdding culture rthqq(-6044) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
-        ListVals: \r\nAfter: ListVals: rthqq(-6044)\r\nSetup Complete. Culture name
-        is rthqq(-6044)\r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: Tests.dll/[Tests][MoveActionTestSuite][suite]
-    - id: 1003
-      uniqueId: Tests.dll/MoveActionTestSuite/[Tests][MoveActionTestSuite.RepelledActionTest]
-      name: RepelledActionTest
-      fullName: MoveActionTestSuite.RepelledActionTest
-      resultStatus: 1
-      duration: 0.1120705
-      messages: 
-      output: "setting dimensions\r\nAdding culture rthqq(-6250) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
-        ListVals: \r\nAfter: ListVals: rthqq(-6250)\r\nSetup Complete. Culture name
-        is rthqq(-6250)\r\nRemoving culture rthqq(-6250) from tile 0, 0 (UnityEngine.Transform)\r\nBefore:
-        ListVals: rthqq(-6250)\r\nAfter: ListVals: \r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: Tests.dll/[Tests][MoveActionTestSuite][suite]
-    - id: 1016
-      uniqueId: Tests.dll/[Tests][OverpopulationActionTestSuite][suite]
-      name: OverpopulationActionTestSuite
-      fullName: OverpopulationActionTestSuite
-      resultStatus: 1
-      duration: 0.0172394
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1019
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1017
-      uniqueId: Tests.dll/OverpopulationActionTestSuite/[Tests][OverpopulationActionTestSuite.CanBecomeOverPopulated]
-      name: CanBecomeOverPopulated
-      fullName: OverpopulationActionTestSuite.CanBecomeOverPopulated
-      resultStatus: 1
-      duration: 0.0066105
-      messages: 
-      output: "setting dimensions\r\nAdding culture rthqq(-6396) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
-        ListVals: \r\nAfter: ListVals: rthqq(-6396)\r\nSetup Complete. Culture name
-        is rthqq(-6396)\r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1016
-      parentUniqueId: Tests.dll/[Tests][OverpopulationActionTestSuite][suite]
-    - id: 1018
-      uniqueId: Tests.dll/OverpopulationActionTestSuite/[Tests][OverpopulationActionTestSuite.TestPopulationDrop]
-      name: TestPopulationDrop
-      fullName: OverpopulationActionTestSuite.TestPopulationDrop
-      resultStatus: 1
-      duration: 0.0075345
-      messages: 
-      output: "setting dimensions\r\nAdding culture rthqq(-6542) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
-        ListVals: \r\nAfter: ListVals: rthqq(-6542)\r\nSetup Complete. Culture name
-        is rthqq(-6542)\r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1016
-      parentUniqueId: Tests.dll/[Tests][OverpopulationActionTestSuite][suite]
-    - id: 1038
-      uniqueId: Tests.dll/[Tests][PerlinHeightmapGeneratorTestSuite][suite]
-      name: PerlinHeightmapGeneratorTestSuite
-      fullName: PerlinHeightmapGeneratorTestSuite
-      resultStatus: 1
-      duration: 0.0039808
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1047
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1039
-      uniqueId: Tests.dll/PerlinHeightmapGeneratorTestSuite/[Tests][PerlinHeightmapGeneratorTestSuite.CanAssignExpectedValues]
-      name: CanAssignExpectedValues
-      fullName: PerlinHeightmapGeneratorTestSuite.CanAssignExpectedValues
-      resultStatus: 1
-      duration: 0.0014579
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1038
-      parentUniqueId: Tests.dll/[Tests][PerlinHeightmapGeneratorTestSuite][suite]
-    - id: 1040
-      uniqueId: Tests.dll/[Tests][PopulationChangeIndicatorTestSuite][suite]
-      name: PopulationChangeIndicatorTestSuite
-      fullName: PopulationChangeIndicatorTestSuite
-      resultStatus: 1
-      duration: 0.0311314
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1052
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1041
-      uniqueId: Tests.dll/PopulationChangeIndicatorTestSuite/[Tests][PopulationChangeIndicatorTestSuite.CanGenerateIndicator]
-      name: CanGenerateIndicator
-      fullName: PopulationChangeIndicatorTestSuite.CanGenerateIndicator
-      resultStatus: 1
-      duration: 0.0282442
-      messages: 
-      output: "setting dimensions\r\nAdding culture rthqq(-6704) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
-        ListVals: \r\nAfter: ListVals: rthqq(-6704)\r\nSetup Complete. Culture name
-        is rthqq(-6704)\r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1040
-      parentUniqueId: Tests.dll/[Tests][PopulationChangeIndicatorTestSuite][suite]
-    - id: 1040
-      uniqueId: Tests.dll/[Tests][PopulationPipMakerTestSuite][suite]
-      name: PopulationPipMakerTestSuite
-      fullName: PopulationPipMakerTestSuite
-      resultStatus: 1
-      duration: 0.0252503
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1050
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1041
-      uniqueId: Tests.dll/PopulationPipMakerTestSuite/[Tests][PopulationPipMakerTestSuite.CanAddPip]
-      name: CanAddPip
-      fullName: PopulationPipMakerTestSuite.CanAddPip
-      resultStatus: 1
-      duration: 0.0099458
-      messages: 
-      output: "setting dimensions\r\nAdding culture rthqq(-6870) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
-        ListVals: \r\nAfter: ListVals: rthqq(-6870)\r\nSetup Complete. Culture name
-        is rthqq(-6870)\r\nAdding culture wqsts(-6870) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
-        ListVals: wqsts(-6870)\r\nAfter: ListVals: wqsts(-6870)\r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1040
-      parentUniqueId: Tests.dll/[Tests][PopulationPipMakerTestSuite][suite]
-    - id: 1042
-      uniqueId: Tests.dll/PopulationPipMakerTestSuite/[Tests][PopulationPipMakerTestSuite.CanRemovePip]
-      name: CanRemovePip
-      fullName: PopulationPipMakerTestSuite.CanRemovePip
-      resultStatus: 1
-      duration: 0.0115439
-      messages: 
-      output: "setting dimensions\r\nAdding culture rthqq(-7030) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
-        ListVals: \r\nAfter: ListVals: rthqq(-7030)\r\nSetup Complete. Culture name
-        is rthqq(-7030)\r\nAdding culture wqsts(-7030) to tile 0, 0 (UnityEngine.Transform)\r\nBefore:
-        ListVals: wqsts(-7030)\r\nAfter: ListVals: wqsts(-7030)\r\nclearing\r\n"
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1040
-      parentUniqueId: Tests.dll/[Tests][PopulationPipMakerTestSuite][suite]
-    - id: 1024
-      uniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
-      name: TileFoodTestSuite
-      fullName: TileFoodTestSuite
-      resultStatus: 1
-      duration: 0.0468754
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1027
-      parentUniqueId: '[Tests][/Users/steven.wenzel/Documents/unity/eonsgame/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1025
-      uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanCalculateProperFoodRateDesert]
-      name: CanCalculateProperFoodRateDesert
-      fullName: TileFoodTestSuite.CanCalculateProperFoodRateDesert
-      resultStatus: 1
-      duration: 0.0048371
-      messages: 
-      output: 'setting dimensions
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1024
-      parentUniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
-    - id: 1032
-      uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanCalculateProperFoodRateRainforest]
-      name: CanCalculateProperFoodRateRainforest
-      fullName: TileFoodTestSuite.CanCalculateProperFoodRateRainforest
-      resultStatus: 1
-      duration: 0.0059173
-      messages: 
-      output: 'setting dimensions
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1029
-      parentUniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
-    - id: 1026
-      uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanCalculateProperFoodRateTundra]
-      name: CanCalculateProperFoodRateTundra
-      fullName: TileFoodTestSuite.CanCalculateProperFoodRateTundra
-      resultStatus: 1
-      duration: 0.0053827
-      messages: 
-      output: 'setting dimensions
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1024
-      parentUniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
-    - id: 1033
-      uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanIncreaseFoodPerTick]
-      name: CanIncreaseFoodPerTick
-      fullName: TileFoodTestSuite.CanIncreaseFoodPerTick
-      resultStatus: 1
-      duration: 0.0094549
-      messages: 
-      output: 'setting dimensions
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1029
-      parentUniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
-    - id: 1035
-      uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanPreventAdditionalFood]
-      name: CanPreventAdditionalFood
-      fullName: TileFoodTestSuite.CanPreventAdditionalFood
-      resultStatus: 1
-      duration: 0.0079676
-      messages: 
-      output: 'setting dimensions
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1029
-      parentUniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
-    - id: 1034
-      uniqueId: Tests.dll/TileFoodTestSuite/[Tests][TileFoodTestSuite.CanSetFoodToMaxAtStart]
-      name: CanSetFoodToMaxAtStart
-      fullName: TileFoodTestSuite.CanSetFoodToMaxAtStart
-      resultStatus: 1
-      duration: 0.0088493
-      messages: 
-      output: 'setting dimensions
-
-        clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1029
-      parentUniqueId: Tests.dll/[Tests][TileFoodTestSuite][suite]
-    - id: 1068
-      uniqueId: Tests.dll/[Tests][TileGreyscaleOverlayLinkTestSuite][suite]
-      name: TileGreyscaleOverlayLinkTestSuite
-      fullName: TileGreyscaleOverlayLinkTestSuite
-      resultStatus: 1
-      duration: 0.0048289
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1075
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1069
-      uniqueId: Tests.dll/TileGreyscaleOverlayLinkTestSuite/[Tests][TileGreyscaleOverlayLinkTestSuite.CanSetToGreyIfLow]
-      name: CanSetToGreyIfLow
-      fullName: TileGreyscaleOverlayLinkTestSuite.CanSetToGreyIfLow
-      resultStatus: 1
-      duration: 0.002062
-      messages: 
-      output: 'clearing
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1068
-      parentUniqueId: Tests.dll/[Tests][TileGreyscaleOverlayLinkTestSuite][suite]
-    - id: 1070
-      uniqueId: Tests.dll/[Tests][TurnTestSuite][suite]
-      name: TurnTestSuite
-      fullName: TurnTestSuite
-      resultStatus: 1
-      duration: 0.0055237
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1075
-      parentUniqueId: '[Tests][C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll][suite]'
-    - id: 1074
-      uniqueId: Tests.dll/TurnTestSuite/[Tests][TurnTestSuite.CanChangeTurnAfterUpdated]
-      name: CanChangeTurnAfterUpdated
-      fullName: TurnTestSuite.CanChangeTurnAfterUpdated
-      resultStatus: 1
-      duration: 0.0016725
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1070
-      parentUniqueId: Tests.dll/[Tests][TurnTestSuite][suite]
-    - id: 1072
-      uniqueId: Tests.dll/TurnTestSuite/[Tests][TurnTestSuite.CanGetPendingUpdatesFor]
-      name: CanGetPendingUpdatesFor
-      fullName: TurnTestSuite.CanGetPendingUpdatesFor
-      resultStatus: 1
-      duration: 0.000368
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1070
-      parentUniqueId: Tests.dll/[Tests][TurnTestSuite][suite]
-    - id: 1073
-      uniqueId: Tests.dll/TurnTestSuite/[Tests][TurnTestSuite.CanUpdateAllCultures]
-      name: CanUpdateAllCultures
-      fullName: TurnTestSuite.CanUpdateAllCultures
-      resultStatus: 1
-      duration: 0.0002248
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1070
-      parentUniqueId: Tests.dll/[Tests][TurnTestSuite][suite]
-    - id: 1071
-      uniqueId: Tests.dll/TurnTestSuite/[Tests][TurnTestSuite.TestAddUpdate]
-      name: TestAddUpdate
-      fullName: TurnTestSuite.TestAddUpdate
-      resultStatus: 1
-      duration: 0.00021
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1070
-      parentUniqueId: Tests.dll/[Tests][TurnTestSuite][suite]
-    m_ResultText: MergeWithTileActionTestSuite (0.155s)
-    m_ResultStacktrace: 
-    m_TestListState:
-      scrollPos: {x: 0, y: 360}
-      m_SelectedIDs: c10a124f
-      m_LastClickedID: 1326582465
-      m_ExpandedIDs: bbb6ef82ce07e386c6ec6ba11cb03da8c2778cab371506b518e194b58e1814b84580fecc56c0c1dcaf90fae781f0ffed5fdcc4f89d8029056eca7a08b26d2713ad6ec22132b4d12703fe443357683e3426ecfc371a04ba42b71a114750a8734ec10a124feb084855a0eedc6e7c3b3c71ffffff7f
-      m_RenameOverlay:
-        m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
-        m_EditFieldRect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        m_UserData: 0
-        m_IsWaitingForDelay: 0
-        m_IsRenaming: 0
-        m_OriginalEventType: 11
-        m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
-      m_SearchString: 
-    m_TestRunnerUIFilter:
-      PassedHidden: 0
-      FailedHidden: 0
-      NotRunHidden: 0
-      m_SearchString: 
-      selectedCategoryMask: 0
-      availableCategories:
-      - Uncategorized
-    m_SelectedOption: 0
-  m_EditModeTestListGUI:
-    m_Window: {fileID: 14}
-    m_NewResultList:
-    - id: 1000
-      uniqueId: '[My project][suite]'
-      name: My project
-      fullName: My project
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 
-      parentUniqueId: 
-    m_ResultText: 
-    m_ResultStacktrace: 
-    m_TestListState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 03fe4433ffffff7f
-      m_RenameOverlay:
-        m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
-        m_EditFieldRect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        m_UserData: 0
-        m_IsWaitingForDelay: 0
-        m_IsRenaming: 0
-        m_OriginalEventType: 11
-        m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
-      m_SearchString: 
-    m_TestRunnerUIFilter:
-      PassedHidden: 0
-      FailedHidden: 0
-      NotRunHidden: 0
-      m_SearchString: 
-      selectedCategoryMask: 0
-      availableCategories:
-      - Uncategorized
---- !u!114 &15
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12013, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Scene
-    m_Image: {fileID: 8634526014445323508, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 387.33334
-    y: 72.66667
-    width: 1864.6666
-    height: 717
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData:
-    - dockPosition: 0
-      containerId: overlay-toolbar__top
-      floating: 0
-      collapsed: 0
-      displayed: 1
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: -98.666626, y: -26}
-      snapCorner: 3
-      id: Tool Settings
-      index: 0
-      layout: 1
-    - dockPosition: 0
-      containerId: overlay-toolbar__top
-      floating: 0
-      collapsed: 0
-      displayed: 1
-      snapOffset: {x: -141, y: 149}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 1
-      id: unity-grid-and-snap-toolbar
-      index: 1
-      layout: 1
-    - dockPosition: 1
-      containerId: overlay-toolbar__top
-      floating: 0
-      collapsed: 0
-      displayed: 1
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: unity-scene-view-toolbar
-      index: 0
-      layout: 1
-    - dockPosition: 1
-      containerId: overlay-toolbar__top
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 1
-      id: unity-search-toolbar
-      index: 1
-      layout: 1
-    - dockPosition: 0
-      containerId: overlay-container--left
-      floating: 0
-      collapsed: 0
-      displayed: 1
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: unity-transform-toolbar
-      index: 0
-      layout: 2
-    - dockPosition: 0
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 1
-      snapOffset: {x: 67.5, y: 86}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Orientation
-      index: 0
-      layout: 4
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Scene View/Light Settings
-      index: 0
-      layout: 4
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Scene View/Camera
-      index: 1
-      layout: 4
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Scene View/Cloth Constraints
-      index: 2
-      layout: 4
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Scene View/Cloth Collisions
-      index: 3
-      layout: 4
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Scene View/Navmesh Display
-      index: 4
-      layout: 4
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Scene View/Agent Display
-      index: 5
-      layout: 4
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Scene View/Obstacle Display
-      index: 6
-      layout: 4
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Scene View/Occlusion Culling
-      index: 7
-      layout: 4
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Scene View/Physics Debugger
-      index: 8
-      layout: 4
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Scene View/Scene Visibility
-      index: 9
-      layout: 4
-    - dockPosition: 1
-      containerId: overlay-container--right
-      floating: 0
-      collapsed: 0
-      displayed: 0
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
-      id: Scene View/Particles
-      index: 10
-      layout: 4
-  m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
-  m_Gizmos: 1
-  m_OverrideSceneCullingMask: 6917529027641081856
-  m_SceneIsLit: 1
-  m_SceneLighting: 1
-  m_2DMode: 1
-  m_isRotationLocked: 0
-  m_PlayAudio: 0
-  m_AudioPlay: 0
-  m_Position:
-    m_Target: {x: 1740.4601, y: 346.63995, z: -5.921356}
-    speed: 2
-    m_Value: {x: 1740.4601, y: 346.63995, z: -5.921356}
-  m_RenderMode: 0
-  m_CameraMode:
-    drawMode: 0
-    name: Shaded
-    section: Shading Mode
-  m_ValidateTrueMetals: 0
-  m_DoValidateTrueMetals: 0
-  m_ExposureSliderValue: 0
-  m_SceneViewState:
-    m_AlwaysRefresh: 0
-    showFog: 1
-    showSkybox: 1
-    showFlares: 1
-    showImageEffects: 1
-    showParticleSystems: 1
-    showVisualEffectGraphs: 1
-    m_FxEnabled: 1
-  m_Grid:
-    xGrid:
-      m_Fade:
-        m_Target: 0
-        speed: 2
-        m_Value: 0
-      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
-      m_Pivot: {x: 0, y: 0, z: 0}
-      m_Size: {x: 0, y: 0}
-    yGrid:
-      m_Fade:
-        m_Target: 0
-        speed: 2
-        m_Value: 0
-      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
-      m_Pivot: {x: 0, y: 0, z: 0}
-      m_Size: {x: 1, y: 1}
-    zGrid:
-      m_Fade:
-        m_Target: 1
-        speed: 2
-        m_Value: 1
-      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
-      m_Pivot: {x: 0, y: 0, z: 0}
-      m_Size: {x: 1, y: 1}
-    m_ShowGrid: 1
-    m_GridAxis: 1
-    m_gridOpacity: 0.5
-  m_Rotation:
-    m_Target: {x: 0, y: 0, z: 0, w: 1}
-    speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
-  m_Size:
-    m_Target: 1026.901
-    speed: 2
-    m_Value: 1026.901
-  m_Ortho:
-    m_Target: 1
-    speed: 2
-    m_Value: 1
-  m_CameraSettings:
-    m_Speed: 1
-    m_SpeedNormalized: 0.5
-    m_SpeedMin: 0.001
-    m_SpeedMax: 2
-    m_EasingEnabled: 1
-    m_EasingDuration: 0.4
-    m_AccelerationEnabled: 1
-    m_FieldOfViewHorizontalOrVertical: 60
-    m_NearClip: 0.03
-    m_FarClip: 10000
-    m_DynamicClip: 1
-    m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
-  m_LastSceneViewOrtho: 0
-  m_ReplacementShader: {fileID: 0}
-  m_ReplacementString: 
-  m_SceneVisActive: 1
-  m_LastLockedObject: {fileID: 0}
-  m_ViewIsLockedToObject: 0
---- !u!114 &16
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Game
-    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 387.33334
-    y: 72.66667
-    width: 1864.6666
-    height: 717
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_SerializedViewNames: []
-  m_SerializedViewValues: []
-  m_PlayModeViewName: GameView
-  m_ShowGizmos: 0
-  m_TargetDisplay: 0
-  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1920, y: 1080}
-  m_TextureFilterMode: 0
-  m_TextureHideFlags: 61
-  m_RenderIMGUI: 1
-  m_EnterPlayModeBehavior: 0
-  m_UseMipMap: 0
-  m_VSyncEnabled: 0
-  m_Gizmos: 0
-  m_Stats: 0
-  m_SelectedSizes: 03000000000000000000000000000000000000000000000000000000000000000000000000000000
-  m_ZoomArea:
-    m_HRangeLocked: 0
-    m_VRangeLocked: 0
-    hZoomLockedByDefault: 0
-    vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -640
-    m_HBaseRangeMax: 640
-    m_VBaseRangeMin: -360
-    m_VBaseRangeMax: 360
-    m_HAllowExceedBaseRangeMin: 1
-    m_HAllowExceedBaseRangeMax: 1
-    m_VAllowExceedBaseRangeMin: 1
-    m_VAllowExceedBaseRangeMax: 1
-    m_ScaleWithWindow: 0
-    m_HSlider: 0
-    m_VSlider: 0
-    m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
-    m_EnableSliderZoomHorizontal: 0
-    m_EnableSliderZoomVertical: 0
-    m_UniformScale: 1
-    m_UpDirection: 1
-    m_DrawArea:
-      serializedVersion: 2
-      x: 0
-      y: 21
-      width: 1864.6666
-      height: 696
-    m_Scale: {x: 0.96666664, y: 0.96666664}
-    m_Translation: {x: 932.3333, y: 348}
-    m_MarginLeft: 0
-    m_MarginRight: 0
-    m_MarginTop: 0
-    m_MarginBottom: 0
-    m_LastShownAreaInsideMargins:
-      serializedVersion: 2
-      x: -964.4828
-      y: -360
-      width: 1928.9656
-      height: 720
-    m_MinimalGUI: 1
-  m_defaultScale: 0.96666664
-  m_LastWindowPixelSize: {x: 2797, y: 1075.5}
-  m_ClearInEditMode: 1
-  m_NoCameraWarning: 1
-  m_LowResolutionForAspectRatios: 01000000000000000000
-  m_XRRenderMode: 0
-  m_RenderTexture: {fileID: 0}
---- !u!114 &17
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
-  m_TitleContent:
-    m_Text: Project
-    m_Image: {fileID: -5179483145760003458, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 810.6667
-    width: 2253
-    height: 540.3334
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_SearchFilter:
-    m_NameFilter: 
-    m_ClassNames: []
-    m_AssetLabels: []
-    m_AssetBundleNames: []
-    m_VersionControlStates: []
-    m_SoftLockControlStates: []
-    m_ReferencingInstanceIDs: 
-    m_SceneHandles: 
-    m_ShowAllHits: 0
-    m_SkipHidden: 0
-    m_SearchArea: 1
-    m_Folders:
-    - Assets/Resources/Prefabs/UI/LoadMapScreen
-    m_Globs: []
-    m_OriginalText: 
-  m_ViewMode: 1
-  m_StartGridSize: 64
-  m_LastFolders:
-  - Assets/Resources/Prefabs/UI/LoadMapScreen
-  m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\wenze\Documents\Unity\Eons
-  m_LockTracker:
-    m_IsLocked: 0
-  m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e4600000
-    m_LastClickedID: 24804
-    m_ExpandedIDs: 00000000bc600000be600000c0600000c2600000c4600000c6600000c8600000ca600000cc600000ce600000d0600000d2600000d460000000ca9a3bffffff7f
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 10}
-    m_SearchString: 
-    m_CreateAssetUtility:
-      m_EndAction: {fileID: 0}
-      m_InstanceID: 0
-      m_Path: 
-      m_Icon: {fileID: 0}
-      m_ResourceFile: 
-  m_AssetTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 00000000bc600000be600000c0600000c2600000c4600000c6600000c8600000ca600000cc600000ce600000d0600000d2600000d4600000
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
-    m_SearchString: 
-    m_CreateAssetUtility:
-      m_EndAction: {fileID: 0}
-      m_InstanceID: 0
-      m_Path: 
-      m_Icon: {fileID: 0}
-      m_ResourceFile: 
-  m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c62300009e5f0000946c0000ca590000e65b0000a8700000345d00003e5a000080720000565a0000e693ffffc47100004484000038840000b45c0000cc5c000000000000d45b00007c5d0000785f0000705b0000
-    m_RenameOverlay:
-      m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
-      m_EditFieldRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      m_UserData: 0
-      m_IsWaitingForDelay: 0
-      m_IsRenaming: 0
-      m_OriginalEventType: 11
-      m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 10}
-    m_CreateAssetUtility:
-      m_EndAction: {fileID: 0}
-      m_InstanceID: 0
-      m_Path: 
-      m_Icon: {fileID: 0}
-      m_ResourceFile: 
-    m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 64
-  m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 341
---- !u!114 &18
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Console
-    m_Image: {fileID: -4950941429401207979, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 810.6667
-    width: 2253
-    height: 540.3334
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
---- !u!114 &19
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12071, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Animation
-    m_Image: {fileID: -3237396543322336831, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 732
-    width: 2253
-    height: 619.00006
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_LockTracker:
-    m_IsLocked: 0
-  m_LastSelectedObjectID: -5003248
---- !u!114 &20
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12914, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Animator
-    m_Image: {fileID: 1711060831702674872, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 732
-    width: 2253
-    height: 619.00006
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_ViewTransforms:
-    m_KeySerializationHelper:
-    - {fileID: -5183453786790052467, guid: ddb7da4d02db4694b8a60a64ad0c9bce, type: 2}
-    - {fileID: -2208600786771584181, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
-    - {fileID: -3373428290895615280, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
-    - {fileID: 8030200332961901116, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
-    - {fileID: 7932117235907219867, guid: 6e1ea7ce95362bd43b6e9e2020a2a019, type: 2}
-    m_ValueSerializationHelper:
-    - e00: 0.89244986
-      e01: 0
-      e02: 0
-      e03: 81.92392
-      e10: 0
-      e11: 0.89244986
-      e12: 0
-      e13: 244.61092
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    - e00: 1
-      e01: 0
-      e02: 0
-      e03: 439.66663
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 125
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    - e00: 0.8252713
-      e01: 0
-      e02: 0
-      e03: 191.60516
-      e10: 0
-      e11: 0.8252713
-      e12: 0
-      e13: 59.215332
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    - e00: 1.0032251
-      e01: 0
-      e02: 0
-      e03: 61.791077
-      e10: 0
-      e11: 1.0032251
-      e12: 0
-      e13: 116.017975
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    - e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-  m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
-  m_BreadCrumbs:
-  - m_Target: {fileID: -2208600786771584181, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
-    m_ScrollPosition: {x: 0, y: 0}
-  - m_Target: {fileID: -3373428290895615280, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
-    m_ScrollPosition: {x: 0, y: 0}
-  stateMachineGraph: {fileID: 0}
-  stateMachineGraphGUI: {fileID: 0}
-  blendTreeGraph: {fileID: 0}
-  blendTreeGraphGUI: {fileID: 0}
-  m_AutoLiveLink: 1
-  m_MiniTool: 0
-  m_LockTracker:
-    m_IsLocked: 0
-  m_CurrentEditor: 1
-  m_LayerEditor:
-    m_SelectedLayerIndex: 0
---- !u!114 &21
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Inspector
-    m_Image: {fileID: -440750813802333266, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-  m_Pos:
-    serializedVersion: 2
-    x: 2254
-    y: 72.66667
-    width: 305
-    height: 1278.3334
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-  m_ObjectsLockedBeforeSerialization: []
-  m_InstanceIDsLockedBeforeSerialization: 
-  m_PreviewResizer:
-    m_CachedPref: -160
-    m_ControlHash: -371814159
-    m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
-  m_GlobalObjectId: 
-  m_InspectorMode: 0
-  m_LockTracker:
-    m_IsLocked: 0
-  m_PreviewWindow: {fileID: 0}

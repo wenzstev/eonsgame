@@ -34,7 +34,6 @@ public class TileGreyscaleOverlayLinkTestSuite
     public void CanSetToGreyIfLow()
     {
         TestTileFood.NewFoodPerTick = 1;
-        TestTileFood.FoodModifier = 1;
         TestTileFood.MAX_FOOD_MODIFIER = 1000f;
 
         (float, float)[] testValues = new (float, float)[]
