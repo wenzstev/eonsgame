@@ -24,6 +24,7 @@ public class CulturePanelController: MonoBehaviour
         SetColor(Culture.Color);
 
         AffinityPanelController.SetValues(Culture);
+        GetComponentInChildren<ZoomToObj>().SetSelectedObj(c);
 
         Culture.OnPopulationChanged += Culture_OnPopulationChanged;
         Culture.OnNameChanged += Culture_OnNameChanged;
@@ -48,7 +49,7 @@ public class CulturePanelController: MonoBehaviour
 
     private void Culture_OnDestroyed(object sender, Culture.OnCultureDestroyedEventArgs e)
     {
-        Destroy(gameObject);
+        DestroyPanel();
     }
 
     void SetPopulationText(int population)
@@ -66,6 +67,11 @@ public class CulturePanelController: MonoBehaviour
     void SetColor(Color color)
     {
         CultureColor.color = color;
+    }
+
+    public void DestroyPanel()
+    {
+        Destroy(gameObject);
     }
 
     private void OnDestroy()

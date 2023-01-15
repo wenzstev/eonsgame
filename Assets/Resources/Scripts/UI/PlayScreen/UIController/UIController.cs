@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class UIController : MonoBehaviour
@@ -9,11 +8,13 @@ public class UIController : MonoBehaviour
     public MouseActionsController MouseActionsController;
     public Canvas canvas;
 
-    GameObject CurrentTile;
+    public GameObject CurrentTile { get; private set; }
     GameObject CurrentCulture;
 
     GameObject CurrentTileInfoPanel;
     GameObject CurrentCultureInfoPanel;
+
+    public event EventHandler<OnTileSelectedArgs> OnTileSelected;
 
 
     private void Awake()
@@ -21,11 +22,6 @@ public class UIController : MonoBehaviour
         MouseActionsController.MouseUpAction += UIController_OnMouseUpAction;
     }
 
-
-    void OnMouseUpTile(Dictionary<string, object> NewFocusedTile)
-    {
-        SelectNewTile((GameObject)NewFocusedTile["tile"]);
-    }
 
     void SelectNewTile(GameObject NewSelectedTile)
     {
@@ -37,6 +33,8 @@ public class UIController : MonoBehaviour
         Destroy(CurrentTileInfoPanel);
         CurrentTile = NewSelectedTile;
         CurrentTileInfoPanel = CreateTileInfoPanel(CurrentTile);
+        OnTileSelected?.Invoke(this, new OnTileSelectedArgs() { SelectedTile = NewSelectedTile, SelectedTileInfoPanel = CurrentTileInfoPanel });
+
     }
 
     void SelectNewCulture(GameObject NewSelectedCulture)
@@ -97,5 +95,17 @@ public class UIController : MonoBehaviour
             }
             
         }
+    }
+
+    void TileInfoPanelController_OnPanelDestroyed(object sender, EventArgs e)
+    {
+        StopListeningToOldTile();
+        CurrentTileInfoPanel = null;
+    }
+
+    public class OnTileSelectedArgs : EventArgs
+    {
+        public GameObject SelectedTile;
+        public GameObject SelectedTileInfoPanel;
     }
 }

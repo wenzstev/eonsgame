@@ -52,7 +52,21 @@ public class CameraMovement
         float width = height * Camera.aspect;
 
         NewBounds = new Rect(new Vector2(newOrigin.x - width / 2, newOrigin.y - height / 2), new Vector2(width, height));
+    }
 
+    public CameraMovement(float newZoom, Vector3 newCenter, Camera cam)
+    {
+        if (!cam.orthographic)
+        {
+            Debug.LogError("Camera must be orthographic!");
+            return;
+        }
+        Camera = cam;
+
+        float height = newZoom * 2;
+        float width = height * Camera.aspect;
+
+        NewBounds = new Rect(new Vector2(newCenter.x - width / 2, newCenter.y - height / 2), new Vector2(width, height));
     }
 
     public void ExecuteMove()
