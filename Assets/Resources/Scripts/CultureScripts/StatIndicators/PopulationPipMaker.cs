@@ -11,7 +11,7 @@ public class PopulationPipMaker : MonoBehaviour
     public float DegreeSeparation;
     public float Radius;
 
-    int[] PipLevels = { 5, 10, 20, 50, 100, 500, 1000 };
+    int[] PipLevels = { 5, 10, 20, 50, 100, 500, 1000, 5000, 10000 };
 
     private void Start()
     {
@@ -29,7 +29,6 @@ public class PopulationPipMaker : MonoBehaviour
 
     void SetPips(int pop)
     {
-
         int desiredLevel = 0;
         while (PipLevels[desiredLevel] <= pop && desiredLevel < PipLevels.Length) desiredLevel++;
         int curLevel = transform.childCount;

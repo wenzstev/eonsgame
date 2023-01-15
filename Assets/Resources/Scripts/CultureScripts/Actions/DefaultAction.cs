@@ -13,33 +13,41 @@ public class DefaultAction : CultureAction
         // gather food most likely. everything else is kind of a side effect
         // try to gather food. if no food, move? 
 
-        AttemptToGatherFood();
+        float amountGathered = AttemptToGatherFood();
 
         // tried to gather food, now perform logic
 
-        CheckIfHasSufficientFood();
+        CheckIfHasSufficientFood(amountGathered);
         AddSideEffects();
 
         return turn;
     }
 
-    void AttemptToGatherFood()
+    float AttemptToGatherFood()
     {
         GatherFoodAction gather = new GatherFoodAction(Culture);
         gather.ExecuteTurn();
+        return gather.FoodGatheredInTurn;
     }
 
-    void CheckIfHasSufficientFood()
+    void CheckIfHasSufficientFood(float amountGathered)
     {
+        if (amountGathered + GetActionCost() > 0) return; // stay in default mode if you're gathering enough food
+
+        float starvingThreshold = .01f;
         float overpopulationThreshold = .05f;
         float seekingFoodThreshold = .2f;
+        
         float FoodStore = Culture.GetComponent<CultureFoodStore>().CurrentFoodStore;
         float MaxFoodStore = Culture.GetComponent<CultureFoodStore>().MaxFoodStore;
 
-        Culture.State newState = FoodStore < overpopulationThreshold * MaxFoodStore ? 
+        Culture.State newState = FoodStore < starvingThreshold * MaxFoodStore ? Culture.State.Starving :
+            FoodStore < overpopulationThreshold * MaxFoodStore ? 
             Culture.State.Overpopulated : 
             FoodStore < seekingFoodThreshold * MaxFoodStore ?
             Culture.State.SeekingFood : Culture.State.Default;
+
+        
 
         Turn.AddUpdate(new StateUpdate(this, Culture, newState));
 

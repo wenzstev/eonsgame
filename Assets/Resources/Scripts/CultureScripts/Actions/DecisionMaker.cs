@@ -35,7 +35,10 @@ public class DecisionMaker
                 action = new OverpopulationAction(culture);
                 break;
             case Culture.State.SeekingFood:
-                action = new MoveTileAction(culture);
+                action = new MovePreferredTileAction(culture);
+                break;
+            case Culture.State.Starving:
+                action = new StarvationAction(culture);
                 break;
             case Culture.State.PendingRemoval:
             default:

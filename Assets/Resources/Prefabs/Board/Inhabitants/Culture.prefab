@@ -193,15 +193,15 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   population: 0
   spreadChance: 0.000416
-  shareCultureChance: 0.05
-  baseMutationMax: 0.0016
-  sameCultureCutoff: 0.038
+  shareCultureChance: 0.0025
+  baseMutationMax: 0.0046
+  sameCultureCutoff: 0.0906
   FertilityRate: 0.000416
   maxPopTransfer: 20
   minPopTransfer: 5
-  influenceRate: 0.0084
+  influenceRate: 0.0008
   FoodGatherRate: 0.00005
-  AffinityGainRate: 0.01
+  AffinityGainRate: 0.005
   currentState: 0
 --- !u!114 &1772662126385334965
 MonoBehaviour:
@@ -499,7 +499,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7893839530812120579}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9897630596f90947a5831818309f750, type: 3}
   m_Name: 

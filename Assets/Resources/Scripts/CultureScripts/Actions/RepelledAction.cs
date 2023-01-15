@@ -16,18 +16,21 @@ public class RepelledAction : CultureMoveAction
         return ReturnToPreviousTile();
     }
 
+    protected override GameObject GetTargetTile()
+    {
+        return Culture.GetComponent<CultureMemory>().previousTile.gameObject;
+    }
+
     Turn ReturnToPreviousTile()
     {
         //Debug.Log(culture.GetComponent<CultureMemory>().previousTile);
 
-        Culture.StartCoroutine(MoveTile(Culture.gameObject, Culture.GetComponent<CultureMemory>().previousTile.gameObject));
-        Turn.AddUpdate(new StateUpdate(this, Culture, Culture.State.Moving));
-        return turn;
+        return ExecuteMove();
     }
 
     Turn WasPreviouslyRepelled()
     {
-        MoveTileAction mta = new MoveTileAction(Culture);
+        MoveRandomTileAction mta = new MoveRandomTileAction(Culture);
         return mta.ExecuteTurn();
     }
  

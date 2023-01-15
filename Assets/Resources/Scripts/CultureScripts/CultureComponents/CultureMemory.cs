@@ -10,7 +10,10 @@ public class CultureMemory : MonoBehaviour
     [SerializeField]
     Tile _previousTile;
     public Tile previousTile { 
-        get => _previousTile;
+        get 
+        {
+            return _previousTile;
+        }
         set 
         {
             if(value != null)
