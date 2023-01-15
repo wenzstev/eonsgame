@@ -35,6 +35,10 @@ public class Tile : MonoBehaviour
         return NeighborTileGetter.GetRandomNeighbor();
     }
 
+    public GameObject[] GetAllNeighbors()
+    {
+        return NeighborTileGetter.GetAllNeighbors();
+    }
 
     class TileNeighbors
     {
@@ -83,6 +87,12 @@ public class Tile : MonoBehaviour
                 return neighbor;
             }
         }
+
+        public GameObject[] GetAllNeighbors()
+        {
+            return neighbors.Select(kvp => kvp.Value).Where(go => go != null).ToArray();
+        }
+
         void AddNeighborTile(GameObject neighbor, Direction d)
         {
             neighbors.Add(d, neighbor);

@@ -5,6 +5,8 @@ public class GatherFoodAction : CultureAction
     AffinityManager affinityManager;
     TileFood CurrentTileFood;
     CultureFoodStore CultureFood;
+
+    public float FoodGatheredInTurn { get; private set; }
     public GatherFoodAction(Culture c) : base(c) 
     {
         affinityManager = c.GetComponent<AffinityManager>();
@@ -44,6 +46,7 @@ public class GatherFoodAction : CultureAction
 
         CurrentTileFood.CurFood -= ActualAmountToGather; // TODO: update tile food to be it's own turn system
         Turn.AddUpdate(new FoodUpdate(this, Culture, ActualAmountToGather));
+        FoodGatheredInTurn = ActualAmountToGather;
         //Debug.Log("Affinity rate was " + GetAndInformAffinity());
     }
 
