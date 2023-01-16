@@ -10,7 +10,7 @@ public class CulturePanelController: MonoBehaviour
     public TextMeshProUGUI CultureName;
     public TextMeshProUGUI CulturePop;
     public Image CultureColor;
-    public AffinityPanelController AffinityPanelController;
+    public AffinityDisplay AffinityDisplay;
 
 
     Culture Culture;
@@ -23,7 +23,7 @@ public class CulturePanelController: MonoBehaviour
         SetPopulationText(Culture.Population);
         SetColor(Culture.Color);
 
-        AffinityPanelController.SetValues(Culture);
+        AffinityDisplay.SetValues(Culture);
         GetComponentInChildren<ZoomToObj>().SetSelectedObj(c);
 
         Culture.OnPopulationChanged += Culture_OnPopulationChanged;
