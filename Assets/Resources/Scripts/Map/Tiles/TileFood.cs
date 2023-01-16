@@ -97,7 +97,7 @@ public class TileFood : MonoBehaviour
         SetMaxFood();
     }
 
-    public class OnFoodChangeEventArgs : EventArgs
+    public struct OnFoodChangeEventArgs 
     {
         public float MaxFood;
         public float CurFood;
