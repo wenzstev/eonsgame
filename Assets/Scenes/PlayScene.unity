@@ -250,10 +250,6 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 1396727208}
-    - target: {fileID: 6640202242992830277, guid: 3e6a8b09f8354c04eb25225f2f2f8761, type: 3}
-      propertyPath: MouseActionsController
-      value: 
-      objectReference: {fileID: 1218317985}
     m_RemovedComponents:
     - {fileID: 3182784075990835560, guid: 3e6a8b09f8354c04eb25225f2f2f8761, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3e6a8b09f8354c04eb25225f2f2f8761, type: 3}
@@ -636,7 +632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5695180184468728085, guid: 3681249039e02d34ebfe54f4c812318a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3681249039e02d34ebfe54f4c812318a, type: 3}
