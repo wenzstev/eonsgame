@@ -22,27 +22,27 @@ public class TestUtils
 
     public static Culture.State GetLastStateInUpdateList(INonGenericCultureUpdate[] UpdateList)
     {
-        return (Culture.State)UpdateList.Where(u => u.GetType() == typeof(StateUpdate)).Last().GetCultureChange();
+        return (Culture.State)UpdateList.Where(u => u.GetCultureChange().GetType() == typeof(Culture.State)).Last().GetCultureChange();
     }
 
     public static int GetCombinedPopulationInUpdateList(INonGenericCultureUpdate[] UpdateList)
     {
-        return UpdateList.Where(u => u.GetType() == typeof(PopulationUpdate)).Sum(u => (int)u.GetCultureChange());
+        return UpdateList.Where(u => u.GetCultureChange().GetType() == typeof(int)).Sum(u => (int)u.GetCultureChange());
     }
 
     public static float GetCombinedFoodChangeInUpdateList(INonGenericCultureUpdate[] UpdateList)
     {
-        return UpdateList.Where(u => u.GetType() == typeof(FoodUpdate)).Sum(u => (float) u.GetCultureChange());
+        return UpdateList.Where(u => u.GetCultureChange().GetType() == typeof(float)).Sum(u => (float) u.GetCultureChange());
     }
 
     public static Color GetLastColorInUpdateList(INonGenericCultureUpdate[] UpdateList)
     {
-        return (Color)UpdateList.Where(u => u.GetType() == typeof(ColorUpdate)).Last().GetCultureChange();
+        return (Color)UpdateList.Where(u => u.GetCultureChange().GetType() == typeof(Color)).Last().GetCultureChange();
     }
 
     public static Tile GetLastTileInUpdateList(INonGenericCultureUpdate[] UpdateList)
     {
-        return (Tile)UpdateList.Where(u => u.GetType() == typeof(TileUpdate)).Last().GetCultureChange();
+        return (Tile)UpdateList.Where(u => u.GetCultureChange().GetType() == typeof(Tile)).Last().GetCultureChange();
     }
 
 }

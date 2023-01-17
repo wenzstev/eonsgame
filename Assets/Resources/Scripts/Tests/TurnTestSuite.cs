@@ -17,7 +17,7 @@ public class TurnTestSuite
     public void TestAddUpdate()
     {
 
-        Turn.AddUpdate(new MockTurnUpdate(TestCulture));
+        Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(null, TestCulture, 0));
         INonGenericCultureUpdate[] updates = Turn.GetPendingUpdatesFor(TestCulture);
         Assert.AreEqual(1, updates.Length);
     }
@@ -28,9 +28,9 @@ public class TurnTestSuite
     {
         GameObject OtherCultureObj = new GameObject("OtherCulture");
         Culture OtherCulture = OtherCultureObj.AddComponent<Culture>();
-        Turn.AddUpdate(new MockTurnUpdate(OtherCulture));
-        Turn.AddUpdate(new MockTurnUpdate(TestCulture));
-        Turn.AddUpdate(new MockTurnUpdate(TestCulture));
+        Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(null, OtherCulture, 0));
+        Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(null, TestCulture, 0));
+        Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(null, TestCulture, 0));
         INonGenericCultureUpdate[] updates = Turn.GetPendingUpdatesFor(TestCulture);
         Assert.AreEqual(2, updates.Length);
     }
@@ -38,7 +38,7 @@ public class TurnTestSuite
     [Test]
     public void CanUpdateAllCultures()
     {
-        Turn.AddUpdate(new PopulationUpdate(null, TestCulture, 1));
+        Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(null, TestCulture, 1));
         Turn.UpdateAllCultures();
         Assert.AreEqual(1, TestCulture.Population);
     }
@@ -57,10 +57,4 @@ public class TurnTestSuite
         Turn.UpdateAllCultures();
     }
 
-}
-
-public class MockTurnUpdate : CultureUpdate<int>
-{
-    public override void ExecuteChange() { }
-    public MockTurnUpdate(Culture c) : base(null, c, 0) { }
 }

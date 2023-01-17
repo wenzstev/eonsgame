@@ -41,8 +41,8 @@ public abstract class CultureMoveAction : CultureAction
         //newTile.GetComponentInChildren<CulturePlacementHandler>().AddCulture(culture);
 
         //Debug.Log("hooking current turn from move");
-        Turn.AddUpdate(new StateUpdate(this, cultureToMove, Culture.State.NewOnTile));
-        Turn.AddUpdate(new TileUpdate(this, cultureToMove, newTile.GetComponent<Tile>()));
+        Turn.AddUpdate(CultureUpdateGetter.GetStateUpdate(this, cultureToMove, Culture.State.NewOnTile));
+        Turn.AddUpdate(CultureUpdateGetter.GetTileUpdate(this, cultureToMove, newTile.GetComponent<Tile>()));
 
     }
 
@@ -74,15 +74,15 @@ public abstract class CultureMoveAction : CultureAction
         GameObject splitCultureObj = Culture.SplitCultureFromParent();
         Culture splitCulture = splitCultureObj.GetComponent<Culture>();
         splitCulture.StartCoroutine(MoveTile(splitCulture.gameObject, TargetTile));
-        Turn.AddUpdate(new StateUpdate(this, splitCulture, Culture.State.Moving));
-        Turn.AddUpdate(new StateUpdate(this, Culture, Culture.State.Default));
+        Turn.AddUpdate(CultureUpdateGetter.GetStateUpdate(this, splitCulture, Culture.State.Moving));
+        Turn.AddUpdate(CultureUpdateGetter.GetStateUpdate(this, Culture, Culture.State.Default));
         return turn;
     }
 
     Turn MoveWholeCulture()
     {
         Culture.StartCoroutine(MoveTile(Culture.gameObject, TargetTile));
-        Turn.AddUpdate(new StateUpdate(this, Culture, Culture.State.Moving));
+        Turn.AddUpdate(CultureUpdateGetter.GetStateUpdate(this, Culture, Culture.State.Moving));
         return turn;
     }
 

@@ -49,7 +49,7 @@ public class DefaultAction : CultureAction
 
         
 
-        Turn.AddUpdate(new StateUpdate(this, Culture, newState));
+        Turn.AddUpdate(CultureUpdateGetter.GetStateUpdate(this, Culture, newState));
 
 
     }
@@ -57,7 +57,7 @@ public class DefaultAction : CultureAction
 
     void AddSideEffects()
     {
-        Turn.AddUpdate(new PopulationUpdate(this, Culture, GrowPopulation()));
+        Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(this, Culture, GrowPopulation()));
 
         // need to change influence into a side effect?
         if (Culture.CultureHandler.GetAllSettledCultures().Length > 1 && Random.value < .1f)
@@ -67,7 +67,7 @@ public class DefaultAction : CultureAction
             influenceNeighbors.ExecuteTurn();
         }
 
-        Turn.AddUpdate(new ColorUpdate(this, Culture, Culture.mutateColor(Culture.Color)));
+        Turn.AddUpdate(CultureUpdateGetter.GetColorUpdate(this, Culture, Culture.mutateColor(Culture.Color)));
 
     }
 

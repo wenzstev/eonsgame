@@ -46,15 +46,15 @@ public class MergeWithTileAction : CultureAction
     {
         foreach (Culture c in cultureHandler.GetAllSettledCultures())
         {
-            Turn.AddUpdate(new StateUpdate(this, c, Culture.State.Invaded));
+            Turn.AddUpdate(CultureUpdateGetter.GetStateUpdate(this, c, Culture.State.Invaded));
         }
-        Turn.AddUpdate(new StateUpdate(this, Culture, Culture.State.Invader));
+        Turn.AddUpdate(CultureUpdateGetter.GetStateUpdate(this, Culture, Culture.State.Invader));
     }
 
     public Turn CreateAsNewCulture()
     {
         string newName = Culture.MutateString(Culture.Name);
-        Turn.AddUpdate(new NameUpdate(this, Culture, newName));
+        Turn.AddUpdate(CultureUpdateGetter.GetNameUpdate(this, Culture, newName));
         //Debug.Log($"Changing name of {Culture} to {newName}");
         return turn;
     }
@@ -65,12 +65,12 @@ public class MergeWithTileAction : CultureAction
         float percentThisPopulation = (float)remain.Population / (remain.Population + merged.Population);
         Color lerpedColor = Color.Lerp(remain.Color, merged.Color, percentThisPopulation);
 
-        Turn.AddUpdate(new ColorUpdate(this, remain, lerpedColor));
-        Turn.AddUpdate(new PopulationUpdate(this, remain, merged.Population));
-        Turn.AddUpdate(new PopulationUpdate(this, merged, -merged.Population));
-        Turn.AddUpdate(new StateUpdate(this, merged, Culture.State.PendingRemoval));
+        Turn.AddUpdate(CultureUpdateGetter.GetColorUpdate(this, remain, lerpedColor));
+        Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(this, remain, merged.Population));
+        Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(this, merged, -merged.Population));
+        Turn.AddUpdate(CultureUpdateGetter.GetStateUpdate(this, merged, Culture.State.PendingRemoval));
 
-        Turn.AddUpdate(new FullAffinityUpdate(this, remain, remain.GetComponent<AffinityManager>().GetStatMerge(merged.GetComponent<AffinityManager>(), percentThisPopulation)));
+        Turn.AddUpdate(CultureUpdateGetter.GetFullAffinityUpdate(this, remain, remain.GetComponent<AffinityManager>().GetStatMerge(merged.GetComponent<AffinityManager>(), percentThisPopulation)));
 
 
         return turn;

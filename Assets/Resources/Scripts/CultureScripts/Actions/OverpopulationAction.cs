@@ -12,7 +12,7 @@ public class OverpopulationAction : CultureAction
     {
         if (Random.value < popLossChance)
         {
-            Turn.AddUpdate(new PopulationUpdate(this, Culture, numPopLost));
+            Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(this, Culture, numPopLost));
             return turn;
         }
 
