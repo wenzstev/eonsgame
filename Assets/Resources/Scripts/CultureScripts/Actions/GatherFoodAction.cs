@@ -45,7 +45,7 @@ public class GatherFoodAction : CultureAction
         float ActualAmountToGather = differenceBetweenMaxFoodAndCurFood < maxThatCouldBeGathered ? differenceBetweenMaxFoodAndCurFood : maxThatCouldBeGathered;
 
         CurrentTileFood.CurFood -= ActualAmountToGather; // TODO: update tile food to be it's own turn system
-        Turn.AddUpdate(new FoodUpdate(this, Culture, ActualAmountToGather));
+        Turn.AddUpdate(CultureUpdateGetter.GetFoodUpdate(this, Culture, ActualAmountToGather));
         FoodGatheredInTurn = ActualAmountToGather;
         //Debug.Log("Affinity rate was " + GetAndInformAffinity());
     }

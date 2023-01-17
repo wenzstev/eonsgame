@@ -31,11 +31,11 @@ public class CultureInfluenceAction : CultureAction
         float percentThisPopulation = (float)Culture.Population / (Culture.Population + other.maxPopTransfer);
         Color lerpedColor = Color.Lerp(Culture.Color, other.Color, percentThisPopulation);
 
-        Turn.AddUpdate(new ColorUpdate(this, Culture, lerpedColor));
-        Turn.AddUpdate(new PopulationUpdate(this, Culture, other.Population));
-        Turn.AddUpdate(new PopulationUpdate(this, other, -other.Population));
-        Turn.AddUpdate(new StateUpdate(this, other, Culture.State.PendingRemoval));
-        Turn.AddUpdate(new NameUpdate(this, Culture, Culture.CombineStrings(Culture.Name, other.Name)));
+        Turn.AddUpdate(CultureUpdateGetter.GetColorUpdate(this, Culture, lerpedColor));
+        Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(this, Culture, other.Population));
+        Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(this, other, -other.Population));
+        Turn.AddUpdate(CultureUpdateGetter.GetStateUpdate(this, other, Culture.State.PendingRemoval));
+        Turn.AddUpdate(CultureUpdateGetter.GetNameUpdate(this, Culture, Culture.CombineStrings(Culture.Name, other.Name)));
 
     }
 
@@ -44,7 +44,7 @@ public class CultureInfluenceAction : CultureAction
         //Debug.Log("in influenceculture");
         float influenceValue = Random.value * Culture.influenceRate;
         Color lerpedColor = Color.Lerp(other.Color, Culture.Color, influenceValue);
-        Turn.AddUpdate(new ColorUpdate(this, other, lerpedColor));
+        Turn.AddUpdate(CultureUpdateGetter.GetColorUpdate(this, other, lerpedColor));
         //EventManager.TriggerEvent("PauseSpeed", null);
     }
 

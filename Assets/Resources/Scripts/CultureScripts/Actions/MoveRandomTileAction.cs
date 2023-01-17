@@ -22,7 +22,7 @@ public class MoveRandomTileAction : CultureMoveAction
     {
         if (TargetTile == null || TargetTile.GetComponent<TileChars>().Biome == TileDrawer.BiomeType.Water) // this is doing way too much work
         {
-            Turn.AddUpdate(new StateUpdate(this, Culture, Culture.State.Default));
+            Turn.AddUpdate(CultureUpdateGetter.GetStateUpdate(this, Culture, Culture.State.Default));
 
             return turn;
         }

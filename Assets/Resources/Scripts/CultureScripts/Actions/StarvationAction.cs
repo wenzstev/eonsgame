@@ -13,7 +13,7 @@ public class StarvationAction : CultureAction
     {
         if(Random.value > PopLossChance)
         {
-            Turn.AddUpdate(new PopulationUpdate(this, Culture, -NumPopLost));
+            Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(this, Culture, -NumPopLost));
         }
         MoveRandomTileAction randomMove = new MoveRandomTileAction(Culture);
         return randomMove.ExecuteTurn();

@@ -48,7 +48,7 @@ public class InfluenceActionTestSuite : CultureInteractionTest
         Assert.That(TestCultureList.Length > 0, "Neighbor experiencing no changes!");
 
         Assert.AreEqual(Culture.State.PendingRemoval, TestUtils.GetLastStateInUpdateList(NeighborList), "Neighbor not slated for removal!");
-        Assert.AreEqual(1, TestCultureList.Where(u => u.GetType() == typeof(NameUpdate)).ToArray().Length, "Culture not getting new name!");
+        Assert.AreEqual(1, TestCultureList.Where(u => u.GetCultureChange().GetType() == typeof(string)).ToArray().Length, "Culture not getting new name!");
         Assert.AreEqual(Neighbor.Population, TestUtils.GetCombinedPopulationInUpdateList(TestCultureList), "Culture not gaining members of neighbor culture!");
     }
 }

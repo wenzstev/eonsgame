@@ -63,7 +63,7 @@ public class MergeWithTileActionTestSuite : CultureInteractionTest
         TestCultureUpdateList = Turn.GetPendingUpdatesFor(TestCulture);
         NeighborUpdateList = Turn.GetPendingUpdatesFor(Neighbor);
 
-        Assert.AreEqual(1, NeighborUpdateList.Where(u => u.GetType() == typeof(NameUpdate)).ToArray().Length, "Culture didn't get a name change!");
+        Assert.AreEqual(1, NeighborUpdateList.Where(u => u.GetCultureChange().GetType() == typeof(string)).ToArray().Length, "Culture didn't get a name change!");
 
         Turn.UpdateAllCultures();
 
