@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OverpopulationAction : CultureAction
+public class OverpopulationAction : CultureTurnInfo
 {
     public float popLossChance = .1f;
     public int numPopLost = -1;

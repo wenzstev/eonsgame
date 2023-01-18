@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class CultureMoveAction : CultureAction
+public abstract class CultureMoveAction : CultureTurnInfo
 {
     static float moveTime = .1f;
 

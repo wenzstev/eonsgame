@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MergeWithTileAction : CultureAction
+public class MergeWithTileAction : CultureTurnInfo
 {
     CultureHandler cultureHandler;
     Tile NewTile;

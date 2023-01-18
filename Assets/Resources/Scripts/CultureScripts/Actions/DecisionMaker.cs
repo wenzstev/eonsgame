@@ -1,19 +1,51 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class DecisionMaker
 {
     Culture culture;
 
+    Func<CultureTurnInfo, Turn> CultureActions;
+
+    /*
+         public enum State
+    {
+        Default, 
+        Repelled,
+        Invaded,
+        Invader,
+        NewCulture,
+        Moving,
+        NewOnTile,
+        PendingRemoval,
+        Overpopulated,
+        SeekingFood,
+        Starving
+    }
+     */
+
     public DecisionMaker(Culture c)
     {
         culture = c;
+        CultureActions = new Func<CultureTurnInfo, Turn>[]
+        {
+            DefaultAction.ExecuteTurn,
+            RepelledAction.ExecuteTurn,
+        };
     }
+
+    
 
     public Turn ExecuteTurn()
     {
-        CultureAction action = new DoNothingAction(culture);
+        CultureTurnInfo cti = new CultureTurnInfo(culture);
+
+        return CultureActions[(int)culture.currentState].ExecuteTurn();
+
+
+        CultureTurnInfo action = new DoNothingAction(cti);
 
 
         switch (culture.currentState)
@@ -47,4 +79,28 @@ public class DecisionMaker
 
         return action.ExecuteTurn();
     }
+}
+
+public struct CultureTurnInfo
+{
+    public Culture Culture { get; private set; }
+    public int CostPerPop { get; set; }
+    public Turn Turn { get; private set; }
+
+    public TileComponents TileComponents { get; private set; }
+
+    public CultureTurnInfo(Culture c, Turn t)
+    {
+        Culture = c;
+        CostPerPop = 1;
+        Turn = t;
+        TileComponents = Culture.TileComponents;
+    }
+
+    public int GetCost()
+    {
+        return CostPerPop * Culture.Population;
+    }
+
+
 }
