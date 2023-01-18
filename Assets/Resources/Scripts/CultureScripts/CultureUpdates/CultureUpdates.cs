@@ -15,7 +15,7 @@ public interface INonGenericCultureUpdate
 
 public static class CultureUpdateGetter
 { 
-    public static CultureUpdate<int> GetPopulationUpdate(CultureAction originator, Culture target, int updateAmount)
+    public static CultureUpdate<int> GetPopulationUpdate(CultureTurnInfo originator, Culture target, int updateAmount)
     {
         CultureUpdate<int> PopulationUpdate = new CultureUpdate<int>();
         PopulationUpdate.CultureChangeValue = updateAmount;
@@ -25,7 +25,7 @@ public static class CultureUpdateGetter
         return PopulationUpdate;
     }
 
-    public static CultureUpdate<Culture.State> GetStateUpdate(CultureAction originator, Culture target, Culture.State newState)
+    public static CultureUpdate<Culture.State> GetStateUpdate(CultureTurnInfo originator, Culture target, Culture.State newState)
     {
         CultureUpdate<Culture.State> StateUpdate = new CultureUpdate<Culture.State>();
         StateUpdate.CultureChangeValue = newState;
@@ -35,7 +35,7 @@ public static class CultureUpdateGetter
         return StateUpdate;
     }
 
-    public static CultureUpdate<string> GetNameUpdate(CultureAction originator, Culture target, string newName)
+    public static CultureUpdate<string> GetNameUpdate(CultureTurnInfo originator, Culture target, string newName)
     {
         CultureUpdate<string> GetNameUpdate = new CultureUpdate<string>();
         GetNameUpdate.CultureChangeValue = newName;
@@ -45,7 +45,7 @@ public static class CultureUpdateGetter
         return GetNameUpdate;
     }
 
-    public static CultureUpdate<Color> GetColorUpdate(CultureAction originator, Culture target, Color newColor)
+    public static CultureUpdate<Color> GetColorUpdate(CultureTurnInfo originator, Culture target, Color newColor)
     {
         CultureUpdate<Color> ColorUpdate = new CultureUpdate<Color>();
         ColorUpdate.CultureChangeValue = newColor;
@@ -55,7 +55,7 @@ public static class CultureUpdateGetter
         return ColorUpdate;
     }
 
-    public static CultureUpdate<Tile> GetTileUpdate(CultureAction originator, Culture target, Tile newTile)
+    public static CultureUpdate<Tile> GetTileUpdate(CultureTurnInfo originator, Culture target, Tile newTile)
     {
         CultureUpdate<Tile> TileUpdate = new CultureUpdate<Tile>();
         TileUpdate.CultureChangeValue = newTile;
@@ -65,7 +65,7 @@ public static class CultureUpdateGetter
         return TileUpdate;
     }
 
-    public static CultureUpdate<float> GetFoodUpdate(CultureAction originator, Culture target, float newFood)
+    public static CultureUpdate<float> GetFoodUpdate(CultureTurnInfo originator, Culture target, float newFood)
     {
         CultureUpdate<float> FoodUpdate = new CultureUpdate<float>();
         FoodUpdate.CultureChangeValue = newFood;
@@ -75,7 +75,7 @@ public static class CultureUpdateGetter
         return FoodUpdate;
     }
 
-    public static CultureUpdate<AffinityStats> GetFullAffinityUpdate(CultureAction originator, Culture target, AffinityStats newAffinities)
+    public static CultureUpdate<AffinityStats> GetFullAffinityUpdate(CultureTurnInfo originator, Culture target, AffinityStats newAffinities)
     {
         CultureUpdate<AffinityStats> AffinityUpdate = new CultureUpdate<AffinityStats>();
         AffinityUpdate.CultureChangeValue = newAffinities;
@@ -99,7 +99,7 @@ public struct CultureUpdate<G> : INonGenericCultureUpdate
         return CultureChangeValue;
     }
 
-    public CultureAction Originator;
+    public CultureTurnInfo Originator;
 
     public Action<CultureUpdate<G>, G> ExecuteChangeAction; 
 

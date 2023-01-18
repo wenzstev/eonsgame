@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class StarvationAction : CultureAction
+public class StarvationAction : CultureTurnInfo
 {
     public StarvationAction(Culture c) : base(c) { }
 

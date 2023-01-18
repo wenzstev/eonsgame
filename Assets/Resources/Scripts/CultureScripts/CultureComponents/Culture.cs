@@ -18,6 +18,9 @@ public class Culture : MonoBehaviour
     public Tile Tile { get; private set; }
     public TileInfo tileInfo { get; private set; }
 
+    public TileComponents TileComponents { get; private set; }
+
+
 
     CultureHandler cultureHandler;
 
@@ -56,6 +59,9 @@ public class Culture : MonoBehaviour
             return cultureMemory;
         }
     }
+
+    AffinityManager _affinityManager;
+    public AffinityManager AffinityManager { get { return _affinityManager; } }
 
 
     DecisionMaker decisionMaker;
@@ -141,7 +147,8 @@ public class Culture : MonoBehaviour
         SetTile(t, true);
 
         SetColor(color);
-        GetComponent<AffinityManager>().Initialize();
+        _affinityManager = GetComponent<AffinityManager>();
+        AffinityManager.Initialize();
         EventManager.TriggerEvent("CultureCreated", new Dictionary<string, object> { { "culture", this } });
     }
 
@@ -153,9 +160,9 @@ public class Culture : MonoBehaviour
         gameObject.name = name;
         //transform.SetParent(t.gameObject.transform);
         SetColor(parent.Color);
-        AffinityManager affinityManager = GetComponent<AffinityManager>();
-        affinityManager.Initialize();
-        affinityManager.SetStats(parent.GetComponent<AffinityManager>().GetStatCopy());
+        _affinityManager = GetComponent<AffinityManager>();
+        AffinityManager.Initialize();
+        AffinityManager.SetStats(parent.GetComponent<AffinityManager>().GetStatCopy());
 
 
         EventManager.TriggerEvent("CultureCreated", new Dictionary<string, object> { { "culture", this } });

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttemptRepelAction : CultureAction
+public class AttemptRepelAction : CultureTurnInfo
 {
     public AttemptRepelAction(Culture c) : base(c) { }
 

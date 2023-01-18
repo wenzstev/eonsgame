@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface ICultureAction
+public abstract class CultureTurn
 {
     public Culture Culture { get; }
     float ActionCost { get; }
+
+    Turn Turn { get; set; }
 
 
     /// <summary>
@@ -21,10 +23,11 @@ public interface ICultureAction
 
 }
 
-public class DoNothingAction : CultureAction
+public static class DoNothingAction : CultureTurnInfo
 {
-    public DoNothingAction(Culture c) : base(c) { }
-    public override Turn ExecuteTurn()
+    
+
+    public Turn ExecuteTurn()
     {
         return turn;
     }

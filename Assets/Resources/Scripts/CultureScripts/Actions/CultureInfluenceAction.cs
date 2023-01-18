@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CultureInfluenceAction : CultureAction
+public class CultureInfluenceAction : CultureTurnInfo
 {
     public CultureInfluenceAction(Culture c) : base(c) {}
 
