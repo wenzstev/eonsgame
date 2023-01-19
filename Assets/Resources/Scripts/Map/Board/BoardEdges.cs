@@ -28,7 +28,7 @@ public class BoardEdges
     public BoardEdges(int height, int width, float tileDimension)
     {
         float halfTile = tileDimension / 2;
-        Bounds = new Rect(0-halfTile, 0-halfTile, width+halfTile, height+halfTile);
+        Bounds = new Rect(0-halfTile, 0-halfTile, width, height);
     }
 
  
