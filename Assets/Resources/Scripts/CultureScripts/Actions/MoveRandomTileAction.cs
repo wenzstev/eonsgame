@@ -15,7 +15,7 @@ public class MoveRandomTileAction : CultureMoveAction
 
     protected override GameObject GetTargetTile()
     {
-        return Culture.Tile.GetRandomNeighbor();
+        return Culture.Tile.TileLocation.GetRandomNeighbor();
     }
 
     Turn AttemptMove()
