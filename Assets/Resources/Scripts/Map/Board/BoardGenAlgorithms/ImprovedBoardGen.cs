@@ -53,7 +53,7 @@ public class ImprovedBoardGen : BoardGenAlgorithm
                 if (!curTileChars.isUnderwater) continue;
                 
 
-                Tile curTile = tiles[x, y].GetComponent<Tile>();
+                TileLocation curTile = tiles[x, y].GetComponent<TileLocation>();
 
 
                 // linq is cool 
@@ -72,7 +72,7 @@ public class ImprovedBoardGen : BoardGenAlgorithm
         {
             foreach(GameObject tileObj in firstPass)
             {
-                Tile curTile = tileObj.GetComponent<Tile>();
+                TileLocation curTile = tileObj.GetComponent<TileLocation>();
                 var neighbors = Enumerable.Range(0, 8).Select(i => curTile.GetNeighbor((Direction)i)).Where(e => e != null);
 
                 var passedNeighbors = neighbors.Where(e => passedTiles.Contains(e));
