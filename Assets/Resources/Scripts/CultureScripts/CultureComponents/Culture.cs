@@ -16,6 +16,7 @@ public class Culture : MonoBehaviour
     public Color Color { get { return color; } }
 
     public Tile Tile { get; private set; }
+
     public TileInfo tileInfo { get; private set; }
 
 
