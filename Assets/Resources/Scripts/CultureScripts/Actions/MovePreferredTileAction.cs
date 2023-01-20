@@ -2,14 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovePreferredTileAction : CultureMoveAction
+public static class MovePreferredTileAction
 {
-    List<GameObject> ForbiddenTiles;
-    TileChars[] NeighboringTiles;
-
-    public MovePreferredTileAction(Culture c) : base(c) { }
-
-    protected override GameObject GetTargetTile()
+    static Tile GetTargetTile(CultureTurnInfo cultureTurnInfo)
     {
         /**
          * Sort tiles by affinity
@@ -19,58 +14,56 @@ public class MovePreferredTileAction : CultureMoveAction
          *  if so, try the next and repeat
          */
 
-        NeighboringTiles = GetNeighboringTiles();
-        ForbiddenTiles = SetForbiddenTiles();
+        Culture culture = cultureTurnInfo.Culture;
 
-        foreach((TileDrawer.BiomeType, float) affinity in GetSortedAffinities())
+        Tile[] NeighboringTiles = GetNeighboringTiles(culture);
+        List<GameObject> ForbiddenTiles = SetForbiddenTiles(culture);
+
+        foreach((TileDrawer.BiomeType, float) affinity in GetSortedAffinities(culture))
         {
-            GameObject prospectiveTile = GetAndCheckTilesOfBiome(affinity.Item1, NeighboringTiles);
+            Tile prospectiveTile = GetAndCheckTilesOfBiome(affinity.Item1, NeighboringTiles, ForbiddenTiles);
             if (prospectiveTile != null) return prospectiveTile;
         }
         return null;
     }
 
-    List<GameObject> SetForbiddenTiles()
+    static List<GameObject> SetForbiddenTiles(Culture culture)
     {
         List<GameObject> forbiddenTiles = new List<GameObject>();
-        if(Culture.GetComponent<CultureMemory>().previousTile != null) 
-            forbiddenTiles.Add(Culture.GetComponent<CultureMemory>().previousTile.gameObject);     
+        if(culture.CultureMemory.previousTile != null) 
+            forbiddenTiles.Add(culture.GetComponent<CultureMemory>().previousTile.gameObject);     
         return forbiddenTiles;
     }
 
-    TileChars[] GetNeighboringTiles()
+    static Tile[] GetNeighboringTiles(Culture culture)
     {
-        return Culture.Tile.TileLocation.GetAllNeighbors().Select(t => t.GetComponent<TileChars>()).ToArray();
+        return culture.Tile.TileLocation.GetAllNeighbors().Select(t => t.GetComponent<Tile>()).ToArray();
     }
 
-    GameObject GetAndCheckTilesOfBiome(TileDrawer.BiomeType b, TileChars[] NeighboringTiles)
+    static Tile GetAndCheckTilesOfBiome(TileDrawer.BiomeType b, Tile[] NeighboringTiles, List<GameObject> ForbiddenTiles)
     {
-        List<TileChars> TilesOfThisBiome = NeighboringTiles.Where(t => t.Biome == b).ToList();
+        List<Tile> TilesOfThisBiome = NeighboringTiles.Where(t => t.TileChars.Biome == b).ToList();
         while (TilesOfThisBiome.Count > 0)
         {
-            TileChars current = TilesOfThisBiome[Mathf.FloorToInt(Random.value * TilesOfThisBiome.Count)];
-            if (!IsForbiddenTile(current.gameObject)) return current.gameObject;
+            Tile current = TilesOfThisBiome[Mathf.FloorToInt(Random.value * TilesOfThisBiome.Count)];
+            if (!ForbiddenTiles.Contains(current.gameObject)) return current;
             TilesOfThisBiome.Remove(current);
         }
         return null;
     }
 
-    bool IsForbiddenTile(GameObject tile)
-    {
-        return ForbiddenTiles.Contains(tile);
-    }
 
-
-    (TileDrawer.BiomeType, float)[] GetSortedAffinities()
+    static (TileDrawer.BiomeType, float)[] GetSortedAffinities(Culture culture)
     {
-        return Culture.GetComponent<AffinityManager>().GetAllAffinities()
+        return culture.GetComponent<AffinityManager>().GetAllAffinities()
             .OrderByDescending(kvp => kvp.Item2).ToArray();
     }
 
 
-    public override Turn ExecuteTurn()
+    public static void MoveToPreferredTile(CultureTurnInfo cultureTurnInfo)
     {
-        return ExecuteMove();
+        Tile targetTile = GetTargetTile(cultureTurnInfo);
+        CultureMoveAction.ExecuteMove(cultureTurnInfo, targetTile);
     }
 
 

@@ -2,31 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveRandomTileAction : CultureMoveAction
+public static class MoveRandomTileAction
 {
-    public float moveChance = .01f; // no more need for a movechance either
 
-    public MoveRandomTileAction(Culture c) : base(c) {}
-
-    public override Turn ExecuteTurn()
+    public static void MoveRandomTile(CultureTurnInfo cultureTurnInfo)
     {
-        return Culture.isActiveAndEnabled ? AttemptMove() : turn;
+        Culture culture = cultureTurnInfo.Culture;
+        if(culture.isActiveAndEnabled) AttemptMove(cultureTurnInfo);
     }
 
-    protected override GameObject GetTargetTile()
+    static Tile GetTargetTile(Culture c)
     {
-        return Culture.Tile.TileLocation.GetRandomNeighbor();
+        return c.Tile.TileLocation.GetRandomNeighbor().GetComponent<Tile>(); // kinda gross
     }
 
-    Turn AttemptMove()
+    static void AttemptMove(CultureTurnInfo cultureTurnInfo)
     {
+        Culture culture = cultureTurnInfo.Culture;
+        Tile TargetTile = GetTargetTile(culture);
         if (TargetTile == null || TargetTile.GetComponent<TileChars>().Biome == TileDrawer.BiomeType.Water) // this is doing way too much work
         {
-            Turn.AddUpdate(CultureUpdateGetter.GetStateUpdate(this, Culture, Culture.State.Default));
-
-            return turn;
+            Turn.AddUpdate(CultureUpdateGetter.GetStateUpdate(cultureTurnInfo, culture, Culture.State.Default));
+            return;
         }
 
-        return ExecuteMove();
+        CultureMoveAction.ExecuteMove(cultureTurnInfo, TargetTile);
     }
 }

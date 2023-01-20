@@ -18,10 +18,9 @@ public class MoveActionTestSuite : CultureActionTest
     [UnityTest]
     public IEnumerator MoveTileActionTest()
     {
+        CultureTurnInfo cultureTurnInfo = new CultureTurnInfo(TestCulture, Turn.CurrentTurn);
 
-        MoveRandomTileAction mta = new MoveRandomTileAction(TestCulture);
-        mta.moveChance = 1;
-        Turn TestTurn = mta.ExecuteTurn();
+        MoveRandomTileAction.MoveRandomTile(cultureTurnInfo);
         yield return null;
 
         Turn.UpdateAllCultures();
@@ -50,9 +49,9 @@ public class MoveActionTestSuite : CultureActionTest
 
         TestCulture.AddPopulation(20);
 
-        MoveRandomTileAction mta = new MoveRandomTileAction(TestCulture);
-        mta.moveChance = 1;
-        Turn testTurn = mta.ExecuteTurn();
+        CultureTurnInfo cultureTurnInfo = new CultureTurnInfo(TestCulture, Turn.CurrentTurn);
+
+        MoveRandomTileAction.MoveRandomTile(cultureTurnInfo);
 
         yield return null;
 
@@ -84,9 +83,9 @@ public class MoveActionTestSuite : CultureActionTest
     public IEnumerator RepelledActionTest()
     {
         TestCulture.GetComponent<CultureMemory>().previousTile = NeighborTile.GetComponent<Tile>();
+        CultureTurnInfo cultureTurnInfo = new CultureTurnInfo(TestCulture, Turn.CurrentTurn);
 
-        RepelledAction tra = new RepelledAction(TestCulture);
-        tra.ExecuteTurn();
+        RepelledAction.RepelCulture(cultureTurnInfo);
         Turn.UpdateAllCultures();
 
         yield return null;

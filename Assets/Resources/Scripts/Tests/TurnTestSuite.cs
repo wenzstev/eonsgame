@@ -5,19 +5,21 @@ using NUnit.Framework;
 public class TurnTestSuite 
 {
     Culture TestCulture;
+    CultureTurnInfo dummyTurnInfo;
 
     [SetUp]
     public void SetUpTurnTest()
     {
         GameObject TestCultureObj = new GameObject("testCulture");
         TestCulture = TestCultureObj.AddComponent<Culture>();
+        dummyTurnInfo = new CultureTurnInfo();
     }
 
     [Test]
     public void TestAddUpdate()
     {
 
-        Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(null, TestCulture, 0));
+        Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(dummyTurnInfo, TestCulture, 0));
         INonGenericCultureUpdate[] updates = Turn.GetPendingUpdatesFor(TestCulture);
         Assert.AreEqual(1, updates.Length);
     }
@@ -28,9 +30,9 @@ public class TurnTestSuite
     {
         GameObject OtherCultureObj = new GameObject("OtherCulture");
         Culture OtherCulture = OtherCultureObj.AddComponent<Culture>();
-        Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(null, OtherCulture, 0));
-        Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(null, TestCulture, 0));
-        Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(null, TestCulture, 0));
+        Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(dummyTurnInfo, OtherCulture, 0));
+        Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(dummyTurnInfo, TestCulture, 0));
+        Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(dummyTurnInfo, TestCulture, 0));
         INonGenericCultureUpdate[] updates = Turn.GetPendingUpdatesFor(TestCulture);
         Assert.AreEqual(2, updates.Length);
     }
@@ -38,7 +40,7 @@ public class TurnTestSuite
     [Test]
     public void CanUpdateAllCultures()
     {
-        Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(null, TestCulture, 1));
+        Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(dummyTurnInfo, TestCulture, 1));
         Turn.UpdateAllCultures();
         Assert.AreEqual(1, TestCulture.Population);
     }

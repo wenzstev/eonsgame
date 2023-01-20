@@ -18,8 +18,9 @@ public class OverpopulationActionTestSuite : CultureActionTest
     public void CanBecomeOverPopulated()
     {
         TestCulture.spreadChance = 0;
-        DefaultAction da = new DefaultAction(TestCulture);
-        da.ExecuteTurn();
+        CultureTurnInfo cultureTurnInfo = new CultureTurnInfo(TestCulture, Turn.CurrentTurn);
+        DefaultAction.ExecuteTurn(cultureTurnInfo);
+
         INonGenericCultureUpdate[] TestCultureUpdates = Turn.GetPendingUpdatesFor(TestCulture);
         Assert.AreEqual(Culture.State.Overpopulated, TestUtils.GetLastStateInUpdateList(TestCultureUpdates), "Culture not in overpopulated state!");
     }
@@ -27,9 +28,8 @@ public class OverpopulationActionTestSuite : CultureActionTest
     [Test]
     public void TestPopulationDrop()
     {
-        OverpopulationAction opa = new OverpopulationAction(TestCulture);
-        opa.popLossChance = 1f;
-        opa.ExecuteTurn();
+        CultureTurnInfo cultureTurnInfo = new CultureTurnInfo(TestCulture, Turn.CurrentTurn);
+        OverpopulationAction.ExecuteTurn(cultureTurnInfo);
 
         INonGenericCultureUpdate[] TestCultureUpdates = Turn.GetPendingUpdatesFor(TestCulture);
         Assert.AreEqual(-1, TestUtils.GetCombinedPopulationInUpdateList(TestCultureUpdates), "Culture did not lose size!");

@@ -71,7 +71,7 @@ public static class CultureUpdateGetter
         FoodUpdate.CultureChangeValue = newFood;
         FoodUpdate.Originator = originator;
         FoodUpdate._target = target;
-        FoodUpdate.ExecuteChangeAction = (foodUpdate, newFood) => foodUpdate.Target?.GetComponent<CultureFoodStore>().AlterFoodStore(newFood);
+        FoodUpdate.ExecuteChangeAction = (fu, nf) => fu.Target?.GetComponent<CultureFoodStore>().AlterFoodStore(nf);
         return FoodUpdate;
     }
 

@@ -21,8 +21,8 @@ public class MergeWithTileActionTestSuite : CultureInteractionTest
     public void CanMergeCultures()
     {
         RenameAndRecolorCulture(TestCulture, "test", Color.blue);
-        MergeWithTileAction firstCultureMerge = new MergeWithTileAction(TestCulture);
-        firstCultureMerge.ExecuteTurn();
+        CultureTurnInfo cultureTurnInfo = new CultureTurnInfo(TestCulture, Turn.CurrentTurn);
+        MergeWithTileAction.CombineCultureWithNewTile(cultureTurnInfo);
 
         RenameAndRecolorCulture(Neighbor, "test", new Color(0, 0, .96f, 1));
 
@@ -52,13 +52,15 @@ public class MergeWithTileActionTestSuite : CultureInteractionTest
     public void CanCreateAsNewCulture()
     {
         RenameAndRecolorCulture(TestCulture, "test", Color.blue);
-        MergeWithTileAction firstCultureMerge = new MergeWithTileAction(TestCulture);
-        firstCultureMerge.ExecuteTurn();
+        CultureTurnInfo cultureTurnInfo = new CultureTurnInfo(TestCulture, Turn.CurrentTurn);
+
+        MergeWithTileAction.CombineCultureWithNewTile(cultureTurnInfo);
 
         RenameAndRecolorCulture(Neighbor, "test", Color.red);
 
-        MergeWithTileAction secondCultureMerge = new MergeWithTileAction(Neighbor);
-        secondCultureMerge.ExecuteTurn();
+        cultureTurnInfo = new CultureTurnInfo(TestCulture, Turn.CurrentTurn);
+
+        MergeWithTileAction.CombineCultureWithNewTile(cultureTurnInfo);
 
         TestCultureUpdateList = Turn.GetPendingUpdatesFor(TestCulture);
         NeighborUpdateList = Turn.GetPendingUpdatesFor(Neighbor);
@@ -84,8 +86,9 @@ public class MergeWithTileActionTestSuite : CultureInteractionTest
 
     void ExecuteTurnAndSetCultureTurnUpdates()
     {
-        MergeWithTileAction testMergeAction = new MergeWithTileAction(Neighbor);
-        testMergeAction.ExecuteTurn();
+        CultureTurnInfo cultureTurnInfo = new CultureTurnInfo(TestCulture, Turn.CurrentTurn);
+
+        MergeWithTileAction.CombineCultureWithNewTile(cultureTurnInfo);
 
         TestCultureUpdateList = Turn.GetPendingUpdatesFor(TestCulture);
         NeighborUpdateList = Turn.GetPendingUpdatesFor(Neighbor);

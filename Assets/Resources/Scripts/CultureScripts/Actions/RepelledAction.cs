@@ -2,36 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RepelledAction : CultureMoveAction
+public static class RepelledAction
 {
-    public RepelledAction(Culture c) : base(c) { }
 
-    public override Turn ExecuteTurn()
+    public static void RepelCulture(CultureTurnInfo cultureTurnInfo)
     {
-        if(Culture.GetComponent<CultureMemory>().wasRepelled)
+        Culture culture = cultureTurnInfo.Culture;
+        if(culture.CultureMemory.wasRepelled)
         {
-            return WasPreviouslyRepelled();
+            WasPreviouslyRepelled(cultureTurnInfo);
+            return;
         }
 
-        return ReturnToPreviousTile();
+        ReturnToPreviousTile(cultureTurnInfo);
     }
 
-    protected override GameObject GetTargetTile()
+    static Tile GetTargetTile(Culture c)
     {
-        return Culture.GetComponent<CultureMemory>().previousTile.gameObject;
+        return c.CultureMemory.previousTile;
     }
 
-    Turn ReturnToPreviousTile()
+    static void ReturnToPreviousTile(CultureTurnInfo cultureTurnInfo)
     {
         //Debug.Log(culture.GetComponent<CultureMemory>().previousTile);
 
-        return ExecuteMove();
+        CultureMoveAction.ExecuteMove(cultureTurnInfo, GetTargetTile(cultureTurnInfo.Culture));
     }
 
-    Turn WasPreviouslyRepelled()
+    static void WasPreviouslyRepelled(CultureTurnInfo cultureTurnInfo)
     {
-        MoveRandomTileAction mta = new MoveRandomTileAction(Culture);
-        return mta.ExecuteTurn();
+        MoveRandomTileAction.MoveRandomTile(cultureTurnInfo);
     }
  
 }

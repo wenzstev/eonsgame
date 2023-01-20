@@ -7,7 +7,7 @@ public class DecisionMaker
 {
     Culture culture;
 
-    Func<CultureTurnInfo, Turn> CultureActions;
+    Action<CultureTurnInfo>[] CultureActions;
 
     /*
          public enum State
@@ -16,7 +16,6 @@ public class DecisionMaker
         Repelled,
         Invaded,
         Invader,
-        NewCulture,
         Moving,
         NewOnTile,
         PendingRemoval,
@@ -29,55 +28,28 @@ public class DecisionMaker
     public DecisionMaker(Culture c)
     {
         culture = c;
-        CultureActions = new Func<CultureTurnInfo, Turn>[]
+        CultureActions = new Action<CultureTurnInfo>[]
         {
-            DefaultAction.ExecuteTurn,
-            RepelledAction.ExecuteTurn,
+            DefaultAction.ExecuteTurn,                          // default
+            RepelledAction.RepelCulture,                        // repelled
+            AttemptRepelAction.AttemptRepel,                    // invaded
+            DefaultAction.ExecuteTurn,                          // invader
+            DoNothingAction.DoNothing,                          // moving
+            MergeWithTileAction.CombineCultureWithNewTile,      // newontile
+            DoNothingAction.DoNothing,                          // pendingremoval
+            OverpopulationAction.ExecuteTurn,                   // overpopulatied
+            MovePreferredTileAction.MoveToPreferredTile,        // seeking food
+            StarvationAction.ExecuteTurn,                       // starving
         };
     }
 
     
 
-    public Turn ExecuteTurn()
+    public void ExecuteTurn()
     {
-        CultureTurnInfo cti = new CultureTurnInfo(culture);
-
-        return CultureActions[(int)culture.currentState].ExecuteTurn();
-
-
-        CultureTurnInfo action = new DoNothingAction(cti);
-
-
-        switch (culture.currentState)
-        {
-            case Culture.State.Default:
-            case Culture.State.Invader:
-                action = new DefaultAction(culture);
-                break;
-            case Culture.State.Invaded:
-                action = new AttemptRepelAction(culture);
-                break;
-            case Culture.State.Repelled:
-                action = new RepelledAction(culture);
-                break;
-            case Culture.State.NewOnTile:
-                action = new MergeWithTileAction(culture);
-                break;
-            case Culture.State.Overpopulated:
-                action = new OverpopulationAction(culture);
-                break;
-            case Culture.State.SeekingFood:
-                action = new MovePreferredTileAction(culture);
-                break;
-            case Culture.State.Starving:
-                action = new StarvationAction(culture);
-                break;
-            case Culture.State.PendingRemoval:
-            default:
-                break;
-        }
-
-        return action.ExecuteTurn();
+        CultureTurnInfo cultureTurnInfo = new CultureTurnInfo(culture, Turn.CurrentTurn);
+        CultureActions[(int)culture.currentState].Invoke(cultureTurnInfo);
+        Turn.AddUpdate(CultureUpdateGetter.GetFoodUpdate(cultureTurnInfo, culture, -cultureTurnInfo.GetCost()));
     }
 }
 
@@ -87,14 +59,14 @@ public struct CultureTurnInfo
     public int CostPerPop { get; set; }
     public Turn Turn { get; private set; }
 
-    public TileComponents TileComponents { get; private set; }
+    public Tile CurTile { get; private set; }
 
     public CultureTurnInfo(Culture c, Turn t)
     {
         Culture = c;
         CostPerPop = 1;
         Turn = t;
-        TileComponents = Culture.TileComponents;
+        CurTile = Culture.Tile;
     }
 
     public int GetCost()

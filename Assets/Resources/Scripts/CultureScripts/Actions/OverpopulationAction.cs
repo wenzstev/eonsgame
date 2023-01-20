@@ -2,21 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OverpopulationAction : CultureTurnInfo
+public static class OverpopulationAction 
 {
-    public float popLossChance = .1f;
-    public int numPopLost = -1;
-    public OverpopulationAction(Culture c) : base(c) { }
+    static float popLossChance = .1f;
+    static int numPopLost = -1;
 
-    public override Turn ExecuteTurn()
+    public static void ExecuteTurn(CultureTurnInfo cultureTurnInfo)
     {
         if (Random.value < popLossChance)
         {
-            Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(this, Culture, numPopLost));
-            return turn;
+            Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(cultureTurnInfo, cultureTurnInfo.Culture, numPopLost));
+            return;
         }
-
-        MovePreferredTileAction moveTile = new MovePreferredTileAction(Culture);
-        return moveTile.ExecuteTurn();
+        MovePreferredTileAction.MoveToPreferredTile(cultureTurnInfo);
     }
 }

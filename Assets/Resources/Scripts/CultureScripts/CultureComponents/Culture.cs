@@ -118,7 +118,6 @@ public class Culture : MonoBehaviour
         Repelled,
         Invaded,
         Invader,
-        NewCulture,
         Moving,
         NewOnTile,
         PendingRemoval,

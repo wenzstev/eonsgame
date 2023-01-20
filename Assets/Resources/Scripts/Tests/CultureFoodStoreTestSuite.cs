@@ -31,8 +31,8 @@ public class CultureFoodStoreTestSuite : CultureActionTest
     {
         TestTile.GetComponent<TileFood>().CurFood = 0;
         TestCultureFoodStore.AlterFoodStore(TestCultureFoodStore.MaxFoodStore);
-        DefaultAction TestDefaultAction = new DefaultAction(TestCulture);
-        TestDefaultAction.ExecuteTurn();
+        CultureTurnInfo cultureTurnInfo = new CultureTurnInfo(TestCulture, Turn.CurrentTurn);
+        DefaultAction.ExecuteTurn(cultureTurnInfo);
 
         AssertFoodChange(-2);
         yield return null;
@@ -46,9 +46,9 @@ public class CultureFoodStoreTestSuite : CultureActionTest
         TestCulture.AddPopulation(5);
         TestCulture.GetComponent<CultureFoodStore>().AlterFoodStore(1000);
 
-        
-        DefaultAction TestDefaultAction = new DefaultAction(TestCulture);
-        Turn turn = TestDefaultAction.ExecuteTurn();
+
+        CultureTurnInfo cultureTurnInfo = new CultureTurnInfo(TestCulture, Turn.CurrentTurn);
+        DefaultAction.ExecuteTurn(cultureTurnInfo);
 
         AssertFoodChange(-12);
 
@@ -65,9 +65,9 @@ public class CultureFoodStoreTestSuite : CultureActionTest
 
     void SetFoodAndExecuteTurn()
     {
-        TestTile.GetComponent<TileFood>().CurFood = 1000; 
-        GatherFoodAction TestGatherFoodAction = new GatherFoodAction(TestCulture);
-        TestGatherFoodAction.ExecuteTurn();
+        TestTile.GetComponent<TileFood>().CurFood = 1000;
+        CultureTurnInfo cultureTurnInfo = new CultureTurnInfo(TestCulture, Turn.CurrentTurn);
+        GatherFoodAction.GatherFood(cultureTurnInfo);
     }
 
     void AssertFoodChange(float expected)

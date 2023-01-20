@@ -23,13 +23,8 @@ public abstract class CultureTurn
 
 }
 
-public static class DoNothingAction : CultureTurnInfo
+public static class DoNothingAction
 {
-    
-
-    public Turn ExecuteTurn()
-    {
-        return turn;
-    }
+    public static void DoNothing(CultureTurnInfo cultureTurnInfo){}
 }
 

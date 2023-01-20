@@ -2,77 +2,71 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MergeWithTileAction : CultureTurnInfo
+public static class MergeWithTileAction
 {
-    CultureHandler cultureHandler;
-    Tile NewTile;
 
-    public MergeWithTileAction(Culture c) : base(c) 
+    public static void CombineCultureWithNewTile(CultureTurnInfo cultureTurnInfo)
     {
-        cultureHandler = Culture.CultureHandler;
-        NewTile = cultureHandler.GetComponentInParent<Tile>();
-    }
+        Culture culture = cultureTurnInfo.Culture;
+        Tile newTile = cultureTurnInfo.CurTile;
+        CultureHandler cultureHandler = newTile.GetComponentInChildren<CultureHandler>();
 
-    public override Turn ExecuteTurn()
-    {
-        return CombineCultureWithNewTile();
-    }
-
-    Turn CombineCultureWithNewTile()
-    {
         //Debug.Log($"merging culture {Culture}({Culture.GetHashCode()}) with tile {NewTile}");
-        if (cultureHandler.HasCultureByName(Culture.name)) return AttemptToCombineCultures();
-        return AddForeignCulture();
-    }
-
-    Turn AttemptToCombineCultures()
-    {
-        if(Culture.CanMerge(cultureHandler.GetCultureByName(Culture.name)))
+        if (cultureHandler.HasCultureByName(culture.name))
         {
-            return MergeCultures(cultureHandler.GetCultureByName(Culture.name), Culture);
+            AttemptToCombineCultures(cultureTurnInfo, cultureHandler);
+            return;
         }
-        return CreateAsNewCulture();
+        AddForeignCulture(cultureTurnInfo, cultureHandler);
     }
 
-    Turn AddForeignCulture()
+    static void AttemptToCombineCultures(CultureTurnInfo cultureTurnInfo, CultureHandler cultureHandler)
     {
-        SetExistingCulturesToInvaded();
-        cultureHandler.TransferArrivalToTile(Culture);
-
-        return turn;
+        Culture culture = cultureTurnInfo.Culture;
+        Culture other = cultureHandler.GetCultureByName(culture.name);
+        if (culture.CanMerge(other))
+        {
+            MergeCultures(cultureTurnInfo, other, culture);
+            return;
+        }
+        CreateAsNewCulture(cultureTurnInfo);
     }
 
-    void SetExistingCulturesToInvaded()
+    static void AddForeignCulture(CultureTurnInfo cultureTurnInfo, CultureHandler cultureHandler)
     {
+        SetExistingCulturesToInvaded(cultureTurnInfo, cultureHandler);
+        cultureHandler.TransferArrivalToTile(cultureTurnInfo.Culture);
+    }
+
+    static void SetExistingCulturesToInvaded(CultureTurnInfo cultureTurnInfo, CultureHandler cultureHandler)
+    {
+        Culture culture = cultureTurnInfo.Culture;
         foreach (Culture c in cultureHandler.GetAllSettledCultures())
         {
-            Turn.AddUpdate(CultureUpdateGetter.GetStateUpdate(this, c, Culture.State.Invaded));
+            Turn.AddUpdate(CultureUpdateGetter.GetStateUpdate(cultureTurnInfo, c, Culture.State.Invaded));
         }
-        Turn.AddUpdate(CultureUpdateGetter.GetStateUpdate(this, Culture, Culture.State.Invader));
+        Turn.AddUpdate(CultureUpdateGetter.GetStateUpdate(cultureTurnInfo, culture, Culture.State.Invader));
     }
 
-    public Turn CreateAsNewCulture()
+    static void CreateAsNewCulture(CultureTurnInfo cultureTurnInfo)
     {
-        string newName = Culture.MutateString(Culture.Name);
-        Turn.AddUpdate(CultureUpdateGetter.GetNameUpdate(this, Culture, newName));
+        Culture culture = cultureTurnInfo.Culture;
+        string newName = Culture.MutateString(culture.Name);
+        Turn.AddUpdate(CultureUpdateGetter.GetNameUpdate(cultureTurnInfo, culture, newName));
         //Debug.Log($"Changing name of {Culture} to {newName}");
-        return turn;
     }
 
-    public Turn MergeCultures(Culture remain, Culture merged)
+    static void MergeCultures(CultureTurnInfo cultureTurnInfo, Culture remain, Culture merged)
     {
         //Debug.Log("merging cultures");
         float percentThisPopulation = (float)remain.Population / (remain.Population + merged.Population);
         Color lerpedColor = Color.Lerp(remain.Color, merged.Color, percentThisPopulation);
 
-        Turn.AddUpdate(CultureUpdateGetter.GetColorUpdate(this, remain, lerpedColor));
-        Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(this, remain, merged.Population));
-        Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(this, merged, -merged.Population));
-        Turn.AddUpdate(CultureUpdateGetter.GetStateUpdate(this, merged, Culture.State.PendingRemoval));
+        Turn.AddUpdate(CultureUpdateGetter.GetColorUpdate(cultureTurnInfo, remain, lerpedColor));
+        Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(cultureTurnInfo, remain, merged.Population));
+        Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(cultureTurnInfo, merged, -merged.Population));
+        Turn.AddUpdate(CultureUpdateGetter.GetStateUpdate(cultureTurnInfo, merged, Culture.State.PendingRemoval));
 
-        Turn.AddUpdate(CultureUpdateGetter.GetFullAffinityUpdate(this, remain, remain.GetComponent<AffinityManager>().GetStatMerge(merged.GetComponent<AffinityManager>(), percentThisPopulation)));
-
-
-        return turn;
+        Turn.AddUpdate(CultureUpdateGetter.GetFullAffinityUpdate(cultureTurnInfo, remain, remain.GetComponent<AffinityManager>().GetStatMerge(merged.GetComponent<AffinityManager>(), percentThisPopulation)));
     }
 }

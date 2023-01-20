@@ -1,22 +1,20 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class StarvationAction : CultureTurnInfo
+public static class StarvationAction
 {
-    public StarvationAction(Culture c) : base(c) { }
 
-    public float PopLossChance = .5f;
-    public int NumPopLost = 1;
+    public static float PopLossChance = .5f;
+    public static int NumPopLost = 1;
 
 
-    public override Turn ExecuteTurn()
+    public static void ExecuteTurn(CultureTurnInfo cultureTurnInfo)
     {
         if(Random.value > PopLossChance)
         {
-            Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(this, Culture, -NumPopLost));
+            Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(cultureTurnInfo, cultureTurnInfo.Culture, -NumPopLost));
         }
-        MoveRandomTileAction randomMove = new MoveRandomTileAction(Culture);
-        return randomMove.ExecuteTurn();
+        MoveRandomTileAction.MoveRandomTile(cultureTurnInfo);
     }
 
 }
