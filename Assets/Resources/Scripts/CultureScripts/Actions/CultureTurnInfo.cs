@@ -23,8 +23,19 @@ public abstract class CultureTurn
 
 }
 
+<<<<<<< HEAD
 public static class DoNothingAction
 {
     public static void DoNothing(CultureTurnInfo cultureTurnInfo){}
+=======
+public static class DoNothingAction : CultureTurnInfo
+{
+    
+
+    public Turn ExecuteTurn()
+    {
+        return turn;
+    }
+>>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
 }
 

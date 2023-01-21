@@ -28,7 +28,11 @@ public class TileLoader : MonoBehaviour
             GameObject curTile = createTile(t);
             boardTiles[i, j] = curTile;
             tileLookup.Add(curTile, (i, j));
+<<<<<<< HEAD
             curTile.GetComponent<TileLocation>().id = j * width + i;
+=======
+            curTile.GetComponent<Tile>().id = j * width + i;
+>>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
 
             i++;
             if (i >= width)
@@ -45,7 +49,11 @@ public class TileLoader : MonoBehaviour
     public GameObject createTile(SerializedTile st)
     {
         GameObject newTile = Instantiate(TileTemplate);
+<<<<<<< HEAD
         newTile.GetComponent<TileLocation>().board = curBoard.GetComponent<Board>();
+=======
+        newTile.GetComponent<Tile>().board = curBoard.GetComponent<Board>();
+>>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
 
         JsonUtility.FromJsonOverwrite(st.serializedComponents[0], newTile.GetComponent<TileChars>()); // presently hardcoding the index, inelegant but makes using FromJsonOverwrite very easy. TODO: better way?
 

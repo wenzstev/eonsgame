@@ -60,7 +60,10 @@ GameObject:
   - component: {fileID: -8931355259138405904}
   - component: {fileID: 1229982994972344701}
   - component: {fileID: -4231853352628952675}
+<<<<<<< HEAD
   - component: {fileID: -6394847766927115716}
+=======
+>>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
   m_Layer: 0
   m_Name: EmptyTile
   m_TagString: Untagged
@@ -199,7 +202,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2394264196207273235}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 92f5c8aaf8757b148befb8de8bfc0102, type: 3}
+=======
+  m_Script: {fileID: 11500000, guid: 9c7bbd872eceb804c908496f096ea476, type: 3}
+>>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
   m_Name: 
   m_EditorClassIdentifier: 
   board: {fileID: 0}
@@ -263,6 +270,7 @@ MonoBehaviour:
   MAX_FOOD_MODIFIER: 100000
   NewFoodPerTick: 0
   FoodGrowthPercent: 0.00143
+<<<<<<< HEAD
 --- !u!114 &-6394847766927115716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,6 +283,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6afd5baa00f53440b75575140868539, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+>>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
 --- !u!1 &4154498010608124306
 GameObject:
   m_ObjectHideFlags: 0

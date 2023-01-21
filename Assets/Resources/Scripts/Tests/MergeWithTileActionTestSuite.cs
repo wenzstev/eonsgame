@@ -21,8 +21,13 @@ public class MergeWithTileActionTestSuite : CultureInteractionTest
     public void CanMergeCultures()
     {
         RenameAndRecolorCulture(TestCulture, "test", Color.blue);
+<<<<<<< HEAD
         CultureTurnInfo cultureTurnInfo = new CultureTurnInfo(TestCulture, Turn.CurrentTurn);
         MergeWithTileAction.CombineCultureWithNewTile(cultureTurnInfo);
+=======
+        MergeWithTileAction firstCultureMerge = new MergeWithTileAction(TestCulture);
+        firstCultureMerge.ExecuteTurn();
+>>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
 
         RenameAndRecolorCulture(Neighbor, "test", new Color(0, 0, .96f, 1));
 
@@ -52,6 +57,7 @@ public class MergeWithTileActionTestSuite : CultureInteractionTest
     public void CanCreateAsNewCulture()
     {
         RenameAndRecolorCulture(TestCulture, "test", Color.blue);
+<<<<<<< HEAD
         CultureTurnInfo cultureTurnInfo = new CultureTurnInfo(TestCulture, Turn.CurrentTurn);
 
         MergeWithTileAction.CombineCultureWithNewTile(cultureTurnInfo);
@@ -61,6 +67,15 @@ public class MergeWithTileActionTestSuite : CultureInteractionTest
         cultureTurnInfo = new CultureTurnInfo(TestCulture, Turn.CurrentTurn);
 
         MergeWithTileAction.CombineCultureWithNewTile(cultureTurnInfo);
+=======
+        MergeWithTileAction firstCultureMerge = new MergeWithTileAction(TestCulture);
+        firstCultureMerge.ExecuteTurn();
+
+        RenameAndRecolorCulture(Neighbor, "test", Color.red);
+
+        MergeWithTileAction secondCultureMerge = new MergeWithTileAction(Neighbor);
+        secondCultureMerge.ExecuteTurn();
+>>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
 
         TestCultureUpdateList = Turn.GetPendingUpdatesFor(TestCulture);
         NeighborUpdateList = Turn.GetPendingUpdatesFor(Neighbor);
@@ -86,9 +101,14 @@ public class MergeWithTileActionTestSuite : CultureInteractionTest
 
     void ExecuteTurnAndSetCultureTurnUpdates()
     {
+<<<<<<< HEAD
         CultureTurnInfo cultureTurnInfo = new CultureTurnInfo(TestCulture, Turn.CurrentTurn);
 
         MergeWithTileAction.CombineCultureWithNewTile(cultureTurnInfo);
+=======
+        MergeWithTileAction testMergeAction = new MergeWithTileAction(Neighbor);
+        testMergeAction.ExecuteTurn();
+>>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
 
         TestCultureUpdateList = Turn.GetPendingUpdatesFor(TestCulture);
         NeighborUpdateList = Turn.GetPendingUpdatesFor(Neighbor);

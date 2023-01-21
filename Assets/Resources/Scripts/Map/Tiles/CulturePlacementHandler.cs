@@ -98,7 +98,11 @@ public class CulturePlacementHandler : MonoBehaviour
 
         while(curTime <= AnimationTransferTime)
         {
+<<<<<<< HEAD
             if (culture.Equals(null) || culture.transform.parent == null) yield break; // culture was destroyed or changed tiles in the middle of transferring position
+=======
+            if (culture.Equals(null)) yield break; // culture was destroyed in the middle of transferring position
+>>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
             curTime += Time.deltaTime;
             float curDistance = Mathf.InverseLerp(0, AnimationTransferTime, curTime);
             culture.transform.localPosition = Vector3.Lerp(startPosition, endPosition, curDistance);

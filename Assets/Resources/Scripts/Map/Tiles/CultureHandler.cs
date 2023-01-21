@@ -19,23 +19,33 @@ public class CultureHandler : MonoBehaviour
 
     public void AddNewArrival(Culture c)
     {
+<<<<<<< HEAD
         c.transform.SetParent(CultureStaging.transform, true);
+=======
+>>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
         CultureStaging.AddArrival(c);
         FirePopulationChangedEvent();
     }
 
     public void BypassArrival(Culture c)
     {
+<<<<<<< HEAD
         c.transform.SetParent(CultureContainer.transform, true);
+=======
+>>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
         CultureContainer.AddCulture(c);
         FirePopulationChangedEvent();
     }
 
     public void TransferArrivalToTile(Culture c)
     {
+<<<<<<< HEAD
         //Debug.Log($"Transferring {c} to settled on {transform.parent}");
         CultureStaging.RemoveArrival(c);
         c.transform.SetParent(CultureContainer.transform, true);
+=======
+        CultureStaging.RemoveArrival(c);
+>>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
         CultureContainer.AddCulture(c);
     }
 
@@ -73,13 +83,20 @@ public class CultureHandler : MonoBehaviour
     {
         if (CultureStaging.RemoveArrival(c) || CultureContainer.RemoveCulture(c))
         {
+<<<<<<< HEAD
             c.transform.SetParent(null, true);
+=======
+>>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
             FirePopulationChangedEvent();
             return;
         }
 
 
+<<<<<<< HEAD
         Debug.LogError($"Tried to remove culture {c} from tile it wasn't on ({transform.parent})!");
+=======
+        Debug.LogError($"Tried to remove culture {c} from tile it wasn't on!");
+>>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
     }
 
     
@@ -90,7 +107,10 @@ public class CultureHandler : MonoBehaviour
         {
             CultureContainer.RemoveCulture(c);
             CultureStaging.AddArrival(c);
+<<<<<<< HEAD
             c.transform.parent = CultureStaging.transform;
+=======
+>>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
         }
     }
     

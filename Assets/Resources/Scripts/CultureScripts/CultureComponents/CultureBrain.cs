@@ -17,6 +17,7 @@ public class CultureBrain : MonoBehaviour
     public void ExecuteCultureTurn()
     {
         Culture.DecisionMaker.ExecuteTurn();
+<<<<<<< HEAD
 
         // Other components that need to know when a tick was executed
 
@@ -24,5 +25,11 @@ public class CultureBrain : MonoBehaviour
 
         Turn.UpdateAllCultures();
 
+=======
+        Turn.UpdateAllCultures();
+
+        // Other components that need to know when a tick was executed
+        FoodAmountIndicatorGenerator.TickExecuted();
+>>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
     }
 }

@@ -576,7 +576,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5695180184468728074, guid: 3681249039e02d34ebfe54f4c812318a, type: 3}
       propertyPath: saveName
+<<<<<<< HEAD
       value: New World
+=======
+      value: Steville
+>>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
       objectReference: {fileID: 0}
     - target: {fileID: 5695180184468728074, guid: 3681249039e02d34ebfe54f4c812318a, type: 3}
       propertyPath: m_Enabled
