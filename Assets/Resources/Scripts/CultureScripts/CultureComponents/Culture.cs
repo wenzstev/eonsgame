@@ -16,10 +16,6 @@ public class Culture : MonoBehaviour
     public Color Color { get { return color; } }
 
     public Tile Tile { get; private set; }
-<<<<<<< HEAD
-
-=======
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
     public TileInfo tileInfo { get; private set; }
 
     public TileComponents TileComponents { get; private set; }
@@ -121,10 +117,6 @@ public class Culture : MonoBehaviour
         Repelled,
         Invaded,
         Invader,
-<<<<<<< HEAD
-=======
-        NewCulture,
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
         Moving,
         NewOnTile,
         PendingRemoval,
@@ -133,12 +125,6 @@ public class Culture : MonoBehaviour
         Starving
     }
 
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
     private void Awake()
     {
         layerMode = GetComponent<SpriteRenderer>();
@@ -195,13 +181,10 @@ public class Culture : MonoBehaviour
         {
             CultureMemory.wasRepelled = false;
         }
-<<<<<<< HEAD
-=======
         if(newState == State.Moving)
         {
             RemoveFromTile();
         }
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
         
         currentState = newState;
     }
@@ -240,11 +223,7 @@ public class Culture : MonoBehaviour
 
     public void AddPopulation(int num)
     { 
-<<<<<<< HEAD
         //Debug.Log($"Adding {num} to {this} for new pop of {population + num}");
-=======
-        //Debug.Log("adding " + num + " to  " + GetHashCode());
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
         population += num;
         if(population == 0)
         {
@@ -260,25 +239,15 @@ public class Culture : MonoBehaviour
         SetTile(newTile, false);
     }
 
-<<<<<<< HEAD
     public void RemoveFromTile()
     {
         //Debug.Log($"removing culture {this} from {Tile}");
-=======
-    void RemoveFromTile()
-    {
-        //Debug.Log($"removing culture {this} ({this.GetHashCode()}) from {Tile}");
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
         if(Tile == null)
         {
             //Debug.LogWarning("Tried to remove from nonexistant tile!");
             return;
         }
-<<<<<<< HEAD
         cultureHandler?.RemoveCulture(this);
-=======
-        cultureHandler.RemoveCulture(this);
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
         CultureMemory.previousTile = Tile;
         Tile = null;
         tileInfo = null;
@@ -287,18 +256,9 @@ public class Culture : MonoBehaviour
 
     public void SetTile(Tile newTile, bool bypassArrival)
     {
-<<<<<<< HEAD
         if(Tile != null) RemoveFromTile();
 
         //Debug.Log($"Setting tile for culture {this} to tile {newTile}");
-=======
-        if (newTile == null)
-        {
-            RemoveFromTile();
-            return;
-        }
-        //Debug.Log($"Setting tile for culture {this}({this.GetHashCode()}) to tile {newTile}");
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
         CultureHandler newCultureHandler = newTile.GetComponentInChildren<CultureHandler>();
 
         if (bypassArrival) newCultureHandler.BypassArrival(this); else newCultureHandler.AddNewArrival(this);
@@ -337,15 +297,9 @@ public class Culture : MonoBehaviour
 
     public void DestroyCulture()
     {
-<<<<<<< HEAD
         if (!isQuitting)
         {
             RemoveFromTile();
-=======
-        transform.parent = null;
-        if (!isQuitting)
-        {
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
             EventManager.TriggerEvent("CultureDestroyed", new Dictionary<string, object> { { "culture", this } });
             OnCultureDestroyed?.Invoke(this, new OnCultureDestroyedEventArgs() { DestroyedCulture = this });
         }

@@ -39,11 +39,7 @@ public class BoardInputReader : MonoBehaviour
     {
         GameObject newTile = Instantiate(tileTypes[type], new Vector3(i + (offset * i), j + (offset * j), 0), Quaternion.identity);
         newTile.transform.SetParent(transform);
-<<<<<<< HEAD
         newTile.GetComponent<TileLocation>().board = GetComponent<Board>();
-=======
-        newTile.GetComponent<Tile>().board = GetComponent<Board>();
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
         newTile.name = i + ", " + j;
 
         newTile.GetComponent<TileSpriteLoader>().Load(spriteGroundId, spriteTopId);
@@ -68,11 +64,7 @@ public class BoardInputReader : MonoBehaviour
             {
                 //Debug.Log($"Creating tile for {i}, {j}, of type {rawTileValues[i, j]}");
                 GameObject curTile = createTile(i, j, rawTileValues[i, j]);
-<<<<<<< HEAD
                 curTile.GetComponent<TileLocation>().id = j * width + i; // unique id for each tile
-=======
-                curTile.GetComponent<Tile>().id = j * width + i; // unique id for each tile
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
                 boardTiles[i, j] = curTile;
                 tileLookup.Add(curTile, (i, j));
 

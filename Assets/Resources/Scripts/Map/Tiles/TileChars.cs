@@ -57,11 +57,7 @@ public class TileChars : MonoBehaviour
         {
             if(_boardStats == null)
             {
-<<<<<<< HEAD
                 _boardStats = GetComponent<TileLocation>().board.GetComponent<BoardStats>();
-=======
-                _boardStats = GetComponent<Tile>().board.GetComponent<BoardStats>();
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
             }
             return _boardStats;
         }

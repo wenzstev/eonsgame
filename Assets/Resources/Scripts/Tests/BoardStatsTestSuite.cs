@@ -23,17 +23,10 @@ public class BoardStatsTestSuite
 
         Vector2[] Edges = new Vector2[]
         {
-<<<<<<< HEAD
             new Vector2(-.5f, -.5f),
             new Vector2(-.5f, 4.5f),
             new Vector2(4.5f, 4.5f),
             new Vector2(4.5f, -.5f)
-=======
-            Vector2.zero,
-            new Vector2(0, 5),
-            new Vector2(5, 5),
-            new Vector2(5, 0)
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
         };
 
         Assert.AreEqual(Edges[0], TestBoardStats.BoardEdges.BottomLeft);

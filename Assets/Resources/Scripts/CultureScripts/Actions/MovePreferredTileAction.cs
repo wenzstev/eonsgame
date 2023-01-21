@@ -79,7 +79,7 @@ public class MovePreferredTileAction : CultureMoveAction
 
     TileChars[] GetNeighboringTiles()
     {
-        return Culture.Tile.GetAllNeighbors().Select(t => t.GetComponent<TileChars>()).ToArray();
+        return Culture.Tile.TileLocation.GetAllNeighbors().Select(t => t.GetComponent<TileChars>()).ToArray();
     }
 
     GameObject GetAndCheckTilesOfBiome(TileDrawer.BiomeType b, TileChars[] NeighboringTiles)
