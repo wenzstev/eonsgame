@@ -31,14 +31,14 @@ public static class AttemptRepelAction
         if (Random.value < repelThreshold)
         {
             Turn.AddUpdate(CultureUpdateGetter.GetStateUpdate(cultureTurnInfo, invader, Culture.State.Repelled));
-            Debug.Log(invader.name + " is repelled by " + culture.name);
+            //Debug.Log(invader.name + " is repelled by " + culture.name);
             return true;
         }
         else
         {
             Turn.AddUpdate(CultureUpdateGetter.GetStateUpdate(cultureTurnInfo, invader, Culture.State.Default));
 
-            Debug.Log(invader.Tile.name);
+            //Debug.Log(invader.Tile.name);
             //EventManager.TriggerEvent("PauseSpeed", null);
             return false;
         }

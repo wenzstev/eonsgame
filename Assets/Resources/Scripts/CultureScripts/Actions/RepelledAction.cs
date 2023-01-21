@@ -8,7 +8,7 @@ public static class RepelledAction
     public static void RepelCulture(CultureTurnInfo cultureTurnInfo)
     {
         Culture culture = cultureTurnInfo.Culture;
-        if(culture.CultureMemory.wasRepelled)
+        if(culture.CultureMemory.wasRepelled || culture.CultureMemory.previousTile == null)
         {
             WasPreviouslyRepelled(cultureTurnInfo);
             return;
@@ -26,7 +26,7 @@ public static class RepelledAction
     {
         //Debug.Log(culture.GetComponent<CultureMemory>().previousTile);
 
-        CultureMoveAction.ExecuteMove(cultureTurnInfo, GetTargetTile(cultureTurnInfo.Culture));
+        Turn.AddUpdate(CultureUpdateGetter.GetMoveUpdate(cultureTurnInfo, cultureTurnInfo.Culture, GetTargetTile(cultureTurnInfo.Culture)));
     }
 
     static void WasPreviouslyRepelled(CultureTurnInfo cultureTurnInfo)

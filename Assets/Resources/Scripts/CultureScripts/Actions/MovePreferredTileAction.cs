@@ -63,7 +63,7 @@ public static class MovePreferredTileAction
     public static void MoveToPreferredTile(CultureTurnInfo cultureTurnInfo)
     {
         Tile targetTile = GetTargetTile(cultureTurnInfo);
-        CultureMoveAction.ExecuteMove(cultureTurnInfo, targetTile);
+        Turn.AddUpdate(CultureUpdateGetter.GetMoveUpdate(cultureTurnInfo, cultureTurnInfo.Culture, targetTile));
     }
 
 

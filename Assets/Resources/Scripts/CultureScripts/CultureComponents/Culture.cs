@@ -128,7 +128,6 @@ public class Culture : MonoBehaviour
 
 
 
-
     private void Awake()
     {
         layerMode = GetComponent<SpriteRenderer>();
@@ -185,10 +184,6 @@ public class Culture : MonoBehaviour
         {
             CultureMemory.wasRepelled = false;
         }
-        if(newState == State.Moving)
-        {
-            RemoveFromTile();
-        }
         
         currentState = newState;
     }
@@ -227,7 +222,7 @@ public class Culture : MonoBehaviour
 
     public void AddPopulation(int num)
     { 
-        //Debug.Log("adding " + num + " to  " + GetHashCode());
+        //Debug.Log($"Adding {num} to {this} for new pop of {population + num}");
         population += num;
         if(population == 0)
         {
@@ -243,15 +238,15 @@ public class Culture : MonoBehaviour
         SetTile(newTile, false);
     }
 
-    void RemoveFromTile()
+    public void RemoveFromTile()
     {
-        //Debug.Log($"removing culture {this} ({this.GetHashCode()}) from {Tile}");
+        //Debug.Log($"removing culture {this} from {Tile}");
         if(Tile == null)
         {
             //Debug.LogWarning("Tried to remove from nonexistant tile!");
             return;
         }
-        cultureHandler.RemoveCulture(this);
+        cultureHandler?.RemoveCulture(this);
         CultureMemory.previousTile = Tile;
         Tile = null;
         tileInfo = null;
@@ -260,12 +255,9 @@ public class Culture : MonoBehaviour
 
     public void SetTile(Tile newTile, bool bypassArrival)
     {
-        if (newTile == null)
-        {
-            RemoveFromTile();
-            return;
-        }
-        //Debug.Log($"Setting tile for culture {this}({this.GetHashCode()}) to tile {newTile}");
+        if(Tile != null) RemoveFromTile();
+
+        //Debug.Log($"Setting tile for culture {this} to tile {newTile}");
         CultureHandler newCultureHandler = newTile.GetComponentInChildren<CultureHandler>();
 
         if (bypassArrival) newCultureHandler.BypassArrival(this); else newCultureHandler.AddNewArrival(this);
@@ -304,9 +296,9 @@ public class Culture : MonoBehaviour
 
     public void DestroyCulture()
     {
-        transform.parent = null;
         if (!isQuitting)
         {
+            RemoveFromTile();
             EventManager.TriggerEvent("CultureDestroyed", new Dictionary<string, object> { { "culture", this } });
             OnCultureDestroyed?.Invoke(this, new OnCultureDestroyedEventArgs() { DestroyedCulture = this });
         }

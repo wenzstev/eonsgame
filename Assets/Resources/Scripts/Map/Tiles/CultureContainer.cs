@@ -25,12 +25,10 @@ public class CultureContainer : MonoBehaviour
     {
         //Debug.Log($"Before: {PrintContents()}");
         InsertCultureInList(culture);
-        culture.transform.SetParent(transform);
 
         culture.OnPopulationChanged += CultureContainer_OnPopulationChanged;
         culture.OnCultureDestroyed += CultureContainer_OnCultureDestroyed;
         SortListByPopulation();
-        culture.transform.parent = transform;
        // Debug.Log($"After: {PrintContents()}");
 
     }

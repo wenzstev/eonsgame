@@ -41,7 +41,11 @@ public static class CultureUpdateGetter
         GetNameUpdate.CultureChangeValue = newName;
         GetNameUpdate.Originator = originator;
         GetNameUpdate._target = target;
-        GetNameUpdate.ExecuteChangeAction = (nameUpdate, newName) => nameUpdate.Target?.RenameCulture(newName);
+        GetNameUpdate.ExecuteChangeAction = (nameUpdate, newName) =>
+        {
+            nameUpdate.Target?.RenameCulture(newName);
+            nameUpdate.Target?.ChangeState(Culture.State.NewOnTile); // renaming resets culture to newontile in order to merge with other named cultures
+        };
         return GetNameUpdate;
     }
 
@@ -71,7 +75,10 @@ public static class CultureUpdateGetter
         FoodUpdate.CultureChangeValue = newFood;
         FoodUpdate.Originator = originator;
         FoodUpdate._target = target;
-        FoodUpdate.ExecuteChangeAction = (fu, nf) => fu.Target?.GetComponent<CultureFoodStore>().AlterFoodStore(nf);
+        FoodUpdate.ExecuteChangeAction = (fu, nf) =>
+        {
+            fu.Target?.GetComponent<CultureFoodStore>().AlterFoodStore(nf);
+        };
         return FoodUpdate;
     }
 
@@ -83,6 +90,20 @@ public static class CultureUpdateGetter
         AffinityUpdate._target = target;
         AffinityUpdate.ExecuteChangeAction = (affinityUpdate, newAffinities) => affinityUpdate.Target?.GetComponent<AffinityManager>().SetStats(newAffinities);
         return AffinityUpdate;
+    }
+
+    public static CultureUpdate<Tile> GetMoveUpdate(CultureTurnInfo originator, Culture target, Tile TileToMoveTo)
+    {
+        CultureUpdate<Tile> MoveUpdate = new CultureUpdate<Tile>();
+        MoveUpdate.CultureChangeValue = TileToMoveTo;
+        MoveUpdate.Originator = originator;
+        MoveUpdate._target = target;
+        MoveUpdate.ExecuteChangeAction = (moveUpdate, tileToMoveTo) =>
+        {
+            if(moveUpdate.Target != null) CultureMoveAction.ExecuteMove(moveUpdate.Originator, tileToMoveTo);
+        };
+  
+        return MoveUpdate;
     }
 
 
@@ -109,7 +130,7 @@ public struct CultureUpdate<G> : INonGenericCultureUpdate
     {
         get
         {
-            if (_target != null && !_target.Equals(null)) return _target; // destroyed objects don't immediately equal null
+            if (_target != null && !_target.Equals(null) && _target.isActiveAndEnabled) return _target; // destroyed objects don't immediately equal null
             return null;
         }
     }

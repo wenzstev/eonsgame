@@ -26,6 +26,6 @@ public static class MoveRandomTileAction
             return;
         }
 
-        CultureMoveAction.ExecuteMove(cultureTurnInfo, TargetTile);
+        Turn.AddUpdate(CultureUpdateGetter.GetMoveUpdate(cultureTurnInfo, culture, TargetTile));
     }
 }

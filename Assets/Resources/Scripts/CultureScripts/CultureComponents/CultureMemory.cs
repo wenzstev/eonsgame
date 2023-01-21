@@ -7,7 +7,7 @@ public class CultureMemory : MonoBehaviour
 {
     public Culture Culture;
 
-    [SerializeField]
+
     Tile _previousTile;
     public Tile previousTile { 
         get 
@@ -44,7 +44,7 @@ public class CultureMemory : MonoBehaviour
     public bool wasRepelled;
 
 
-    private void Start()
+    private void Awake()
     {
         Culture.OnNameChanged += CultureMemory_OnNameChanged;
     }

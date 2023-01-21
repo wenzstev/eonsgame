@@ -6,10 +6,18 @@ using System.Linq;
 public class Turn
 {
     static Turn currentTurn;
+
+    public enum TurnState
+    {
+        Executing,
+        Next, 
+        Complete
+    };
+
     public static Turn CurrentTurn
     {
         get {
-            if (currentTurn == null || currentTurn.hasBeenPushed)
+            if (currentTurn == null || currentTurn.CurState != TurnState.Next)
             {
                 //Debug.Log("getting new turn");
                 currentTurn = new Turn();
@@ -21,6 +29,8 @@ public class Turn
 
     List<INonGenericCultureUpdate> UpdateList;
     bool hasBeenPushed = false;
+    public TurnState CurState { get; private set; }
+
 
     /// <summary>
     /// Add a Culture Update to the current turn. Generally advised to create the update when adding.
@@ -34,11 +44,14 @@ public class Turn
 
     public static void UpdateAllCultures()
     {
-        foreach(INonGenericCultureUpdate update in CurrentTurn.UpdateList)
+        List<INonGenericCultureUpdate> UpdateList = CurrentTurn.UpdateList;
+        CurrentTurn.CurState = TurnState.Executing;
+        foreach(INonGenericCultureUpdate update in UpdateList)
         {
             update.ExecuteChange();
         }
         CurrentTurn.hasBeenPushed = true;
+        CurrentTurn.CurState = TurnState.Complete;
     }
 
     public static INonGenericCultureUpdate[] GetPendingUpdatesFor(Culture c)
@@ -50,6 +63,7 @@ public class Turn
     Turn()
     {
         UpdateList = new List<INonGenericCultureUpdate>();
+        CurState = TurnState.Next;
     }
 }
 
