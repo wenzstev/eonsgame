@@ -41,15 +41,11 @@ public static class CultureUpdateGetter
         GetNameUpdate.CultureChangeValue = newName;
         GetNameUpdate.Originator = originator;
         GetNameUpdate._target = target;
-<<<<<<< HEAD
         GetNameUpdate.ExecuteChangeAction = (nameUpdate, newName) =>
         {
             nameUpdate.Target?.RenameCulture(newName);
             nameUpdate.Target?.ChangeState(Culture.State.NewOnTile); // renaming resets culture to newontile in order to merge with other named cultures
         };
-=======
-        GetNameUpdate.ExecuteChangeAction = (nameUpdate, newName) => nameUpdate.Target?.RenameCulture(newName);
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
         return GetNameUpdate;
     }
 
@@ -79,14 +75,10 @@ public static class CultureUpdateGetter
         FoodUpdate.CultureChangeValue = newFood;
         FoodUpdate.Originator = originator;
         FoodUpdate._target = target;
-<<<<<<< HEAD
         FoodUpdate.ExecuteChangeAction = (fu, nf) =>
         {
             fu.Target?.GetComponent<CultureFoodStore>().AlterFoodStore(nf);
         };
-=======
-        FoodUpdate.ExecuteChangeAction = (foodUpdate, newFood) => foodUpdate.Target?.GetComponent<CultureFoodStore>().AlterFoodStore(newFood);
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
         return FoodUpdate;
     }
 
@@ -100,7 +92,6 @@ public static class CultureUpdateGetter
         return AffinityUpdate;
     }
 
-<<<<<<< HEAD
     public static CultureUpdate<Tile> GetMoveUpdate(CultureTurnInfo originator, Culture target, Tile TileToMoveTo)
     {
         CultureUpdate<Tile> MoveUpdate = new CultureUpdate<Tile>();
@@ -115,8 +106,6 @@ public static class CultureUpdateGetter
         return MoveUpdate;
     }
 
-=======
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
 
 }
 
@@ -141,11 +130,7 @@ public struct CultureUpdate<G> : INonGenericCultureUpdate
     {
         get
         {
-<<<<<<< HEAD
             if (_target != null && !_target.Equals(null) && _target.isActiveAndEnabled) return _target; // destroyed objects don't immediately equal null
-=======
-            if (_target != null && !_target.Equals(null)) return _target; // destroyed objects don't immediately equal null
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
             return null;
         }
     }

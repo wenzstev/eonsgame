@@ -25,18 +25,9 @@ public class CultureContainer : MonoBehaviour
     {
         //Debug.Log($"Before: {PrintContents()}");
         InsertCultureInList(culture);
-<<<<<<< HEAD
-=======
-        culture.transform.SetParent(transform);
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
-
         culture.OnPopulationChanged += CultureContainer_OnPopulationChanged;
         culture.OnCultureDestroyed += CultureContainer_OnCultureDestroyed;
         SortListByPopulation();
-<<<<<<< HEAD
-=======
-        culture.transform.parent = transform;
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
        // Debug.Log($"After: {PrintContents()}");
 
     }

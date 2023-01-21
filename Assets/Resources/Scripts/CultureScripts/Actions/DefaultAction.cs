@@ -5,11 +5,7 @@ using UnityEngine;
 public static class DefaultAction 
 {
 
-<<<<<<< HEAD
     public static void ExecuteTurn(CultureTurnInfo cultureTurnInfo)
-=======
-    public static Turn ExecuteTurn(CultureTurnInfo cultureTurnInfo)
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
     {
         Culture Culture = cultureTurnInfo.Culture;
 
@@ -23,11 +19,6 @@ public static class DefaultAction
 
         CheckIfHasSufficientFood(cultureTurnInfo, amountGathered);
         AddSideEffects(cultureTurnInfo);
-<<<<<<< HEAD
-=======
-
-        return cultureTurnInfo.Turn;
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
     }
 
     static float AttemptToGatherFood(CultureTurnInfo cultureTurnInfo)
@@ -43,11 +34,7 @@ public static class DefaultAction
         Culture Culture = cultureTurnInfo.Culture;
         CultureFoodStore CultureFoodStore = Culture.CultureFoodStore;
 
-<<<<<<< HEAD
         if (amountGathered - cultureTurnInfo.GetCost() > 0) return; // stay in default mode if you're gathering enough food
-=======
-        if (amountGathered + cultureTurnInfo.GetCost() > 0) return; // stay in default mode if you're gathering enough food
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
 
         float starvingThreshold = .01f;
         float overpopulationThreshold = .05f;
@@ -78,12 +65,7 @@ public static class DefaultAction
         if (Culture.CultureHandler.GetAllSettledCultures().Length > 1 && Random.value < .1f)
         {
             //Debug.Log("influencing neighbors");
-<<<<<<< HEAD
             CultureInfluenceAction.ExecuteTurn(cultureTurnInfo);
-=======
-            CultureInfluenceAction influenceNeighbors = new CultureInfluenceAction(Culture);
-            influenceNeighbors.ExecuteTurn();
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
         }
 
         Turn.AddUpdate(CultureUpdateGetter.GetColorUpdate(cultureTurnInfo, Culture, Culture.mutateColor(Culture.Color)));

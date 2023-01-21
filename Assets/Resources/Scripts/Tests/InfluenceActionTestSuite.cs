@@ -16,13 +16,8 @@ public class InfluenceActionTestSuite : CultureInteractionTest
     [Test]
     public void CanInfluenceNeighborCulture()
     {
-<<<<<<< HEAD
         CultureTurnInfo cultureTurnInfo = new CultureTurnInfo(TestCulture, Turn.CurrentTurn);
         CultureInfluenceAction.ExecuteTurn(cultureTurnInfo);
-=======
-        CultureInfluenceAction cia = new CultureInfluenceAction(TestCulture);
-        cia.ExecuteTurn();
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
 
         INonGenericCultureUpdate[] NeighborList = Turn.GetPendingUpdatesFor(Neighbor);
         
@@ -41,14 +36,8 @@ public class InfluenceActionTestSuite : CultureInteractionTest
         TestCulture.SetColor(Color.blue);
         Neighbor.SetColor(Color.blue);
 
-<<<<<<< HEAD
         CultureTurnInfo cultureTurnInfo = new CultureTurnInfo(TestCulture, Turn.CurrentTurn);
         CultureInfluenceAction.ExecuteTurn(cultureTurnInfo);
-=======
-
-        CultureInfluenceAction cia = new CultureInfluenceAction(TestCulture);
-        cia.ExecuteTurn();
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
 
         INonGenericCultureUpdate[] NeighborList = Turn.GetPendingUpdatesFor(Neighbor);
         INonGenericCultureUpdate[] TestCultureList = Turn.GetPendingUpdatesFor(TestCulture);
