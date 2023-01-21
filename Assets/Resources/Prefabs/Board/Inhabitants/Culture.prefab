@@ -199,11 +199,7 @@ MonoBehaviour:
   FertilityRate: 0.000416
   maxPopTransfer: 20
   minPopTransfer: 5
-<<<<<<< HEAD
-  influenceRate: 0.05
-=======
   influenceRate: 0.0008
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
   FoodGatherRate: 0.00005
   AffinityGainRate: 0.005
   currentState: 0
@@ -220,10 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Culture: {fileID: 5402215717768767427}
-<<<<<<< HEAD
-=======
   _previousTile: {fileID: 0}
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
   cultureParentName: 
   _previousState: 0
   wasRepelled: 0
