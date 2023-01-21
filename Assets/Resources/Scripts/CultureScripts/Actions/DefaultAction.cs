@@ -2,44 +2,59 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DefaultAction : CultureAction
+public static class DefaultAction 
 {
-    public DefaultAction(Culture c) : base(c) { }
 
-    public override Turn ExecuteTurn()
+<<<<<<< HEAD
+    public static void ExecuteTurn(CultureTurnInfo cultureTurnInfo)
+=======
+    public static Turn ExecuteTurn(CultureTurnInfo cultureTurnInfo)
+>>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
     {
+        Culture Culture = cultureTurnInfo.Culture;
 
         // culture is on tile, nothing terrible is happening. what will it do? 
         // gather food most likely. everything else is kind of a side effect
         // try to gather food. if no food, move? 
 
-        float amountGathered = AttemptToGatherFood();
+        float amountGathered = AttemptToGatherFood(cultureTurnInfo);
 
         // tried to gather food, now perform logic
 
-        CheckIfHasSufficientFood(amountGathered);
-        AddSideEffects();
+        CheckIfHasSufficientFood(cultureTurnInfo, amountGathered);
+        AddSideEffects(cultureTurnInfo);
+<<<<<<< HEAD
+=======
 
-        return turn;
+        return cultureTurnInfo.Turn;
+>>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
     }
 
-    float AttemptToGatherFood()
+    static float AttemptToGatherFood(CultureTurnInfo cultureTurnInfo)
     {
-        GatherFoodAction gather = new GatherFoodAction(Culture);
-        gather.ExecuteTurn();
-        return gather.FoodGatheredInTurn;
+        float amountGathered = GatherFoodAction.GatherFood(cultureTurnInfo);
+        Turn.AddUpdate(CultureUpdateGetter.GetFoodUpdate(cultureTurnInfo, cultureTurnInfo.Culture, amountGathered));
+
+        return amountGathered;
     }
 
-    void CheckIfHasSufficientFood(float amountGathered)
+    static void CheckIfHasSufficientFood(CultureTurnInfo cultureTurnInfo, float amountGathered)
     {
-        if (amountGathered + GetActionCost() > 0) return; // stay in default mode if you're gathering enough food
+        Culture Culture = cultureTurnInfo.Culture;
+        CultureFoodStore CultureFoodStore = Culture.CultureFoodStore;
+
+<<<<<<< HEAD
+        if (amountGathered - cultureTurnInfo.GetCost() > 0) return; // stay in default mode if you're gathering enough food
+=======
+        if (amountGathered + cultureTurnInfo.GetCost() > 0) return; // stay in default mode if you're gathering enough food
+>>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
 
         float starvingThreshold = .01f;
         float overpopulationThreshold = .05f;
         float seekingFoodThreshold = .2f;
         
-        float FoodStore = Culture.GetComponent<CultureFoodStore>().CurrentFoodStore;
-        float MaxFoodStore = Culture.GetComponent<CultureFoodStore>().MaxFoodStore;
+        float FoodStore = CultureFoodStore.CurrentFoodStore;
+        float MaxFoodStore = CultureFoodStore.MaxFoodStore;
 
         Culture.State newState = FoodStore < starvingThreshold * MaxFoodStore ? Culture.State.Starving :
             FoodStore < overpopulationThreshold * MaxFoodStore ? 
@@ -49,29 +64,33 @@ public class DefaultAction : CultureAction
 
         
 
-        Turn.AddUpdate(CultureUpdateGetter.GetStateUpdate(this, Culture, newState));
-
-
+        Turn.AddUpdate(CultureUpdateGetter.GetStateUpdate(cultureTurnInfo, Culture, newState));
     }
 
 
-    void AddSideEffects()
+    static void AddSideEffects(CultureTurnInfo cultureTurnInfo)
     {
-        Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(this, Culture, GrowPopulation()));
+        Culture Culture = cultureTurnInfo.Culture;
+
+        Turn.AddUpdate(CultureUpdateGetter.GetPopulationUpdate(cultureTurnInfo, Culture, GrowPopulation(Culture)));
 
         // need to change influence into a side effect?
         if (Culture.CultureHandler.GetAllSettledCultures().Length > 1 && Random.value < .1f)
         {
             //Debug.Log("influencing neighbors");
+<<<<<<< HEAD
+            CultureInfluenceAction.ExecuteTurn(cultureTurnInfo);
+=======
             CultureInfluenceAction influenceNeighbors = new CultureInfluenceAction(Culture);
             influenceNeighbors.ExecuteTurn();
+>>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
         }
 
-        Turn.AddUpdate(CultureUpdateGetter.GetColorUpdate(this, Culture, Culture.mutateColor(Culture.Color)));
+        Turn.AddUpdate(CultureUpdateGetter.GetColorUpdate(cultureTurnInfo, Culture, Culture.mutateColor(Culture.Color)));
 
     }
 
-    int GrowPopulation()
+    static int GrowPopulation(Culture Culture)
     {
         if (Culture.Population == 1) return 0; // can't reproduce if only one person
         float combinedFertilityRate = Culture.FertilityRate * Culture.Population;

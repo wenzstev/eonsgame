@@ -16,8 +16,10 @@ public class Culture : MonoBehaviour
     public Color Color { get { return color; } }
 
     public Tile Tile { get; private set; }
-
     public TileInfo tileInfo { get; private set; }
+
+    public TileComponents TileComponents { get; private set; }
+
 
 
     CultureHandler cultureHandler;
@@ -57,6 +59,9 @@ public class Culture : MonoBehaviour
             return cultureMemory;
         }
     }
+
+    AffinityManager _affinityManager;
+    public AffinityManager AffinityManager { get { return _affinityManager; } }
 
 
     DecisionMaker decisionMaker;
@@ -112,7 +117,6 @@ public class Culture : MonoBehaviour
         Repelled,
         Invaded,
         Invader,
-        NewCulture,
         Moving,
         NewOnTile,
         PendingRemoval,
@@ -120,9 +124,6 @@ public class Culture : MonoBehaviour
         SeekingFood,
         Starving
     }
-
-
-
 
     private void Awake()
     {
@@ -142,7 +143,8 @@ public class Culture : MonoBehaviour
         SetTile(t, true);
 
         SetColor(color);
-        GetComponent<AffinityManager>().Initialize();
+        _affinityManager = GetComponent<AffinityManager>();
+        AffinityManager.Initialize();
         EventManager.TriggerEvent("CultureCreated", new Dictionary<string, object> { { "culture", this } });
     }
 
@@ -154,9 +156,9 @@ public class Culture : MonoBehaviour
         gameObject.name = name;
         //transform.SetParent(t.gameObject.transform);
         SetColor(parent.Color);
-        AffinityManager affinityManager = GetComponent<AffinityManager>();
-        affinityManager.Initialize();
-        affinityManager.SetStats(parent.GetComponent<AffinityManager>().GetStatCopy());
+        _affinityManager = GetComponent<AffinityManager>();
+        AffinityManager.Initialize();
+        AffinityManager.SetStats(parent.GetComponent<AffinityManager>().GetStatCopy());
 
 
         EventManager.TriggerEvent("CultureCreated", new Dictionary<string, object> { { "culture", this } });
@@ -221,7 +223,7 @@ public class Culture : MonoBehaviour
 
     public void AddPopulation(int num)
     { 
-        //Debug.Log("adding " + num + " to  " + GetHashCode());
+        //Debug.Log($"Adding {num} to {this} for new pop of {population + num}");
         population += num;
         if(population == 0)
         {
@@ -237,15 +239,15 @@ public class Culture : MonoBehaviour
         SetTile(newTile, false);
     }
 
-    void RemoveFromTile()
+    public void RemoveFromTile()
     {
-        //Debug.Log($"removing culture {this} ({this.GetHashCode()}) from {Tile}");
+        //Debug.Log($"removing culture {this} from {Tile}");
         if(Tile == null)
         {
             //Debug.LogWarning("Tried to remove from nonexistant tile!");
             return;
         }
-        cultureHandler.RemoveCulture(this);
+        cultureHandler?.RemoveCulture(this);
         CultureMemory.previousTile = Tile;
         Tile = null;
         tileInfo = null;
@@ -254,12 +256,9 @@ public class Culture : MonoBehaviour
 
     public void SetTile(Tile newTile, bool bypassArrival)
     {
-        if (newTile == null)
-        {
-            RemoveFromTile();
-            return;
-        }
-        //Debug.Log($"Setting tile for culture {this}({this.GetHashCode()}) to tile {newTile}");
+        if(Tile != null) RemoveFromTile();
+
+        //Debug.Log($"Setting tile for culture {this} to tile {newTile}");
         CultureHandler newCultureHandler = newTile.GetComponentInChildren<CultureHandler>();
 
         if (bypassArrival) newCultureHandler.BypassArrival(this); else newCultureHandler.AddNewArrival(this);
@@ -298,9 +297,9 @@ public class Culture : MonoBehaviour
 
     public void DestroyCulture()
     {
-        transform.parent = null;
         if (!isQuitting)
         {
+            RemoveFromTile();
             EventManager.TriggerEvent("CultureDestroyed", new Dictionary<string, object> { { "culture", this } });
             OnCultureDestroyed?.Invoke(this, new OnCultureDestroyedEventArgs() { DestroyedCulture = this });
         }

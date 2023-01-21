@@ -29,6 +29,7 @@ public class BoardEdges
     {
         float halfTile = tileDimension / 2;
         Bounds = new Rect(0-halfTile, 0-halfTile, width, height);
+
     }
 
  

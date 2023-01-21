@@ -51,7 +51,11 @@ public class CultureController : MonoBehaviour
         CultureBrain[] culturesToUpdate = AllCultures.ToArray(); 
         foreach(CultureBrain c in culturesToUpdate)
         {
+<<<<<<< HEAD
+            if(c.isActiveAndEnabled) c.ExecuteCultureTurn();
+=======
             c.ExecuteCultureTurn();
+>>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
         }
     }
 

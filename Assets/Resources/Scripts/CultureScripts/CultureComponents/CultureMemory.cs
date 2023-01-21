@@ -7,7 +7,11 @@ public class CultureMemory : MonoBehaviour
 {
     public Culture Culture;
 
+<<<<<<< HEAD
+
+=======
     [SerializeField]
+>>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
     Tile _previousTile;
     public Tile previousTile { 
         get 
@@ -44,7 +48,11 @@ public class CultureMemory : MonoBehaviour
     public bool wasRepelled;
 
 
+<<<<<<< HEAD
+    private void Awake()
+=======
     private void Start()
+>>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
     {
         Culture.OnNameChanged += CultureMemory_OnNameChanged;
     }

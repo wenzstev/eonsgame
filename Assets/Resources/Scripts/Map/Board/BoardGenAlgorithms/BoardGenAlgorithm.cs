@@ -36,6 +36,7 @@ public abstract class BoardGenAlgorithm : MonoBehaviour
         newTile.name = x + ", " + y;
 
         TileLocation tileComponent = newTile.GetComponent<TileLocation>();
+
         tileComponent.board = b;
         tileComponent.id = y * b.Width + x; // unique id for each tile
 

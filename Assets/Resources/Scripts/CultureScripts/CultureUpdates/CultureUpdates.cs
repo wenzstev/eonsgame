@@ -15,7 +15,7 @@ public interface INonGenericCultureUpdate
 
 public static class CultureUpdateGetter
 { 
-    public static CultureUpdate<int> GetPopulationUpdate(CultureAction originator, Culture target, int updateAmount)
+    public static CultureUpdate<int> GetPopulationUpdate(CultureTurnInfo originator, Culture target, int updateAmount)
     {
         CultureUpdate<int> PopulationUpdate = new CultureUpdate<int>();
         PopulationUpdate.CultureChangeValue = updateAmount;
@@ -25,7 +25,7 @@ public static class CultureUpdateGetter
         return PopulationUpdate;
     }
 
-    public static CultureUpdate<Culture.State> GetStateUpdate(CultureAction originator, Culture target, Culture.State newState)
+    public static CultureUpdate<Culture.State> GetStateUpdate(CultureTurnInfo originator, Culture target, Culture.State newState)
     {
         CultureUpdate<Culture.State> StateUpdate = new CultureUpdate<Culture.State>();
         StateUpdate.CultureChangeValue = newState;
@@ -35,17 +35,25 @@ public static class CultureUpdateGetter
         return StateUpdate;
     }
 
-    public static CultureUpdate<string> GetNameUpdate(CultureAction originator, Culture target, string newName)
+    public static CultureUpdate<string> GetNameUpdate(CultureTurnInfo originator, Culture target, string newName)
     {
         CultureUpdate<string> GetNameUpdate = new CultureUpdate<string>();
         GetNameUpdate.CultureChangeValue = newName;
         GetNameUpdate.Originator = originator;
         GetNameUpdate._target = target;
+<<<<<<< HEAD
+        GetNameUpdate.ExecuteChangeAction = (nameUpdate, newName) =>
+        {
+            nameUpdate.Target?.RenameCulture(newName);
+            nameUpdate.Target?.ChangeState(Culture.State.NewOnTile); // renaming resets culture to newontile in order to merge with other named cultures
+        };
+=======
         GetNameUpdate.ExecuteChangeAction = (nameUpdate, newName) => nameUpdate.Target?.RenameCulture(newName);
+>>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
         return GetNameUpdate;
     }
 
-    public static CultureUpdate<Color> GetColorUpdate(CultureAction originator, Culture target, Color newColor)
+    public static CultureUpdate<Color> GetColorUpdate(CultureTurnInfo originator, Culture target, Color newColor)
     {
         CultureUpdate<Color> ColorUpdate = new CultureUpdate<Color>();
         ColorUpdate.CultureChangeValue = newColor;
@@ -55,7 +63,7 @@ public static class CultureUpdateGetter
         return ColorUpdate;
     }
 
-    public static CultureUpdate<Tile> GetTileUpdate(CultureAction originator, Culture target, Tile newTile)
+    public static CultureUpdate<Tile> GetTileUpdate(CultureTurnInfo originator, Culture target, Tile newTile)
     {
         CultureUpdate<Tile> TileUpdate = new CultureUpdate<Tile>();
         TileUpdate.CultureChangeValue = newTile;
@@ -65,17 +73,24 @@ public static class CultureUpdateGetter
         return TileUpdate;
     }
 
-    public static CultureUpdate<float> GetFoodUpdate(CultureAction originator, Culture target, float newFood)
+    public static CultureUpdate<float> GetFoodUpdate(CultureTurnInfo originator, Culture target, float newFood)
     {
         CultureUpdate<float> FoodUpdate = new CultureUpdate<float>();
         FoodUpdate.CultureChangeValue = newFood;
         FoodUpdate.Originator = originator;
         FoodUpdate._target = target;
+<<<<<<< HEAD
+        FoodUpdate.ExecuteChangeAction = (fu, nf) =>
+        {
+            fu.Target?.GetComponent<CultureFoodStore>().AlterFoodStore(nf);
+        };
+=======
         FoodUpdate.ExecuteChangeAction = (foodUpdate, newFood) => foodUpdate.Target?.GetComponent<CultureFoodStore>().AlterFoodStore(newFood);
+>>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
         return FoodUpdate;
     }
 
-    public static CultureUpdate<AffinityStats> GetFullAffinityUpdate(CultureAction originator, Culture target, AffinityStats newAffinities)
+    public static CultureUpdate<AffinityStats> GetFullAffinityUpdate(CultureTurnInfo originator, Culture target, AffinityStats newAffinities)
     {
         CultureUpdate<AffinityStats> AffinityUpdate = new CultureUpdate<AffinityStats>();
         AffinityUpdate.CultureChangeValue = newAffinities;
@@ -85,6 +100,23 @@ public static class CultureUpdateGetter
         return AffinityUpdate;
     }
 
+<<<<<<< HEAD
+    public static CultureUpdate<Tile> GetMoveUpdate(CultureTurnInfo originator, Culture target, Tile TileToMoveTo)
+    {
+        CultureUpdate<Tile> MoveUpdate = new CultureUpdate<Tile>();
+        MoveUpdate.CultureChangeValue = TileToMoveTo;
+        MoveUpdate.Originator = originator;
+        MoveUpdate._target = target;
+        MoveUpdate.ExecuteChangeAction = (moveUpdate, tileToMoveTo) =>
+        {
+            if(moveUpdate.Target != null) CultureMoveAction.ExecuteMove(moveUpdate.Originator, tileToMoveTo);
+        };
+  
+        return MoveUpdate;
+    }
+
+=======
+>>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
 
 }
 
@@ -99,7 +131,7 @@ public struct CultureUpdate<G> : INonGenericCultureUpdate
         return CultureChangeValue;
     }
 
-    public CultureAction Originator;
+    public CultureTurnInfo Originator;
 
     public Action<CultureUpdate<G>, G> ExecuteChangeAction; 
 
@@ -109,7 +141,11 @@ public struct CultureUpdate<G> : INonGenericCultureUpdate
     {
         get
         {
+<<<<<<< HEAD
+            if (_target != null && !_target.Equals(null) && _target.isActiveAndEnabled) return _target; // destroyed objects don't immediately equal null
+=======
             if (_target != null && !_target.Equals(null)) return _target; // destroyed objects don't immediately equal null
+>>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
             return null;
         }
     }
