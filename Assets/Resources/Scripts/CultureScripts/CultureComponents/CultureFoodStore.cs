@@ -6,6 +6,8 @@ public class CultureFoodStore : MonoBehaviour
     [SerializeField]
     float currentFoodStore;
 
+    Culture _culture;
+
     public float StorePerPopulation = 10;
     public event EventHandler<OnFoodStoreChangedEventArgs> OnFoodStoreChanged;
 
@@ -21,8 +23,13 @@ public class CultureFoodStore : MonoBehaviour
     {
         get
         {
-            return GetComponent<Culture>().Population * StorePerPopulation;
+            return _culture.Population * StorePerPopulation;
         }
+    }
+
+    private void Awake()
+    {
+        _culture = GetComponent<Culture>();
     }
 
     public void AlterFoodStore(float lastTickChange)

@@ -19,11 +19,9 @@ public class InfluenceActionTestSuite : CultureInteractionTest
         CultureTurnInfo cultureTurnInfo = new CultureTurnInfo(TestCulture, Turn.CurrentTurn);
         CultureInfluenceAction.ExecuteTurn(cultureTurnInfo);
 
-        INonGenericCultureUpdate[] NeighborList = Turn.GetPendingUpdatesFor(Neighbor);
         
-        Assert.That(NeighborList.Length > 0, "Neighbor experiencing no changes!");
 
-        Color newColor = TestUtils.GetLastColorInUpdateList(NeighborList);
+        Color newColor = TestUtils.GetLastColorInUpdateList(Turn.CurrentTurn.UpdateHolder.GetColorUpdates(), Neighbor);
 
         Assert.That(CultureHelperMethods.GetColorDistance(TestCulture.Color, newColor) 
                     < CultureHelperMethods.GetColorDistance(TestCulture.Color, Neighbor.Color),
@@ -39,15 +37,9 @@ public class InfluenceActionTestSuite : CultureInteractionTest
         CultureTurnInfo cultureTurnInfo = new CultureTurnInfo(TestCulture, Turn.CurrentTurn);
         CultureInfluenceAction.ExecuteTurn(cultureTurnInfo);
 
-        INonGenericCultureUpdate[] NeighborList = Turn.GetPendingUpdatesFor(Neighbor);
-        INonGenericCultureUpdate[] TestCultureList = Turn.GetPendingUpdatesFor(TestCulture);
 
-
-        Assert.That(NeighborList.Length > 0, "Neighbor experiencing no changes!");
-        Assert.That(TestCultureList.Length > 0, "Neighbor experiencing no changes!");
-
-        Assert.AreEqual(Culture.State.PendingRemoval, TestUtils.GetLastStateInUpdateList(NeighborList), "Neighbor not slated for removal!");
-        Assert.AreEqual(1, TestCultureList.Where(u => u.GetCultureChange().GetType() == typeof(string)).ToArray().Length, "Culture not getting new name!");
-        Assert.AreEqual(Neighbor.Population, TestUtils.GetCombinedPopulationInUpdateList(TestCultureList), "Culture not gaining members of neighbor culture!");
+        Assert.AreEqual(Culture.State.PendingRemoval, TestUtils.GetLastStateInUpdateList(Turn.CurrentTurn.UpdateHolder.GetStateUpdates(), Neighbor), "Neighbor not slated for removal!");
+        Assert.AreEqual(1, Turn.CurrentTurn.UpdateHolder.GetStringUpdates().Where(u => u.Target == TestCulture).ToArray().Length, "Culture not getting new name!");
+        Assert.AreEqual(Neighbor.Population, TestUtils.GetCombinedPopulationInUpdateList(Turn.CurrentTurn.UpdateHolder.GetIntUpdates(), TestCulture), "Culture not gaining members of neighbor culture!");
     }
 }

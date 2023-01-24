@@ -10,14 +10,9 @@ public class TileChars : MonoBehaviour
 
     public event EventHandler<OnAllTileStatsCalculatedEventArgs> OnAllTileStatsCalculated;
 
+    TileDrawer tileDrawer;
 
-    public TileDrawer.BiomeType Biome
-    {
-        get
-        {
-            return GetComponent<TileDrawer>().tileType; // should change, this is too tightly coupled to tiledrawer
-        }
-    }
+    public TileDrawer.BiomeType Biome { get { return tileDrawer.tileType; } }
 
     public float elevation
     {
@@ -63,10 +58,18 @@ public class TileChars : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        tileDrawer = GetComponent<TileDrawer>();
+
+
+    }
+
     public void InformAllStatsCalculated()
     {
         OnAllTileStatsCalculated?.Invoke(this, new OnAllTileStatsCalculatedEventArgs() { TileChars = this });
     }
+
 
     public class OnAllTileStatsCalculatedEventArgs : EventArgs
     {

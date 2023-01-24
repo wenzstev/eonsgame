@@ -3,7 +3,7 @@ using UnityEngine;
 using System;
 
 [Serializable]
-public class DecayTracker
+public struct DecayTracker
 {
     [SerializeField]
     int _daysSinceHarvested;
@@ -40,12 +40,6 @@ public class DecayTracker
         _totalDaysHarvested = NumDaysHarvested;
     }
 
-    public DecayTracker CombineTrackers (DecayTracker other, float ratio)
-    {
-        int combinedDaysHarvest = Mathf.FloorToInt(Mathf.Lerp(DaysSinceHarvested, other.DaysSinceHarvested, ratio));
-        int combinedDaysSinceHarvest = Mathf.FloorToInt(Mathf.Lerp(TotalDaysHarvested, other.TotalDaysHarvested, ratio));
-        return new DecayTracker(combinedDaysHarvest, combinedDaysSinceHarvest);
-    }
 
     public float GetDecayRate()
     {

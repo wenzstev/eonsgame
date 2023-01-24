@@ -6,7 +6,7 @@ using UnityEngine;
 using System.Text;
 
 [Serializable]
-public class AffinityStats 
+public struct AffinityStats 
 {
     [SerializeField]
     float[] affinities;
@@ -17,14 +17,18 @@ public class AffinityStats
     [SerializeField]
     int[] daysHarvested;
 
-    public AffinityStats()
+    public static AffinityStats InitializeStats()
     {
+        AffinityStats newStats = new AffinityStats();
         int numBiomes = Enum.GetNames(typeof(TileDrawer.BiomeType)).Length;
 
-        affinities = new float[numBiomes];
-        decayRates = Enumerable.Range(0, numBiomes).Select(e => new DecayTracker(0)).ToArray();
-        daysHarvested = new int[numBiomes];
+        newStats.affinities = new float[numBiomes];
+        newStats.decayRates = Enumerable.Range(0, numBiomes).Select(e => new DecayTracker(0)).ToArray();
+        newStats.daysHarvested = new int[numBiomes];
+
+        return newStats;
     }
+
 
     AffinityStats (float[] a, DecayTracker[] dr, int[] dh)
     {
@@ -74,7 +78,7 @@ public class AffinityStats
     {
         for (int i = 0; i < decayRates.Length; i++)
         {
-            if(i != (int) current) decayRates[i]?.IncreaseDaysSinceHarvested();
+            if(i != (int) current) decayRates[i].IncreaseDaysSinceHarvested();
         }
     }
 

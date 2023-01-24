@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class TileDrawer : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class TileDrawer : MonoBehaviour
 
     public float precipitationMinValue;
     public float precipitationMaxValue;
+
 
     public enum BiomeType
     {
@@ -127,4 +129,6 @@ public class TileDrawer : MonoBehaviour
         }
 
     }
+
+    
 }

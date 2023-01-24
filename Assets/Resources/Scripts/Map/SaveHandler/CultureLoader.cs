@@ -30,12 +30,14 @@ public class CultureLoader : MonoBehaviour
 
     Culture DeserializeCulture(SerializedCulture sc, GameObject tile)
     {
-        GameObject curCultureObj = Instantiate(CultureTile, tile.transform);
+        Culture NewCulture = CulturePool.GetCulture(); 
+        GameObject curCultureObj = NewCulture.gameObject;
+        NewCulture.transform.position = tile.transform.position;
+
         JsonUtility.FromJsonOverwrite(sc.serializedComponents[0], curCultureObj.GetComponent<Culture>());
         JsonUtility.FromJsonOverwrite(sc.serializedComponents[1], curCultureObj.GetComponent<CultureMemory>());
         JsonUtility.FromJsonOverwrite(sc.serializedComponents[2], curCultureObj.GetComponent<AffinityManager>());
 
-        Culture NewCulture = curCultureObj.GetComponent<Culture>();
         NewCulture.SetColor(NewCulture.Color);
         NewCulture.RenameCulture(NewCulture.Name);
 

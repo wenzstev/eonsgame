@@ -26,7 +26,7 @@ public class CulturePlacementHandler : MonoBehaviour
     void CalculateCulturePositionList()
     {
         Positions = new Vector3[NumDisplayedCultures][];
-        Positions[0] = new Vector3[] { Vector3.zero };
+        Positions[0] = new Vector3[] { (Vector3.zero + transform.position) };
 
         
 
@@ -39,7 +39,8 @@ public class CulturePlacementHandler : MonoBehaviour
             for(int j = 0; j < curNumOfCulturesShown; j++)
             {
                 int curAngleAmount = j + 1;
-                Positions[i][j] = TrigUtils.GetLocationOnCircleRadians(Radius, (theta * j) + AngleOffset[i]);
+                Vector2 circlePosition = TrigUtils.GetLocationOnCircleRadians(Radius, (theta * j) + AngleOffset[i]);
+                Positions[i][j] = new Vector3(circlePosition.x, circlePosition.y, 0) + transform.position;
             }
         }
     }
@@ -93,15 +94,15 @@ public class CulturePlacementHandler : MonoBehaviour
     {
         if (culture.Equals(null)) yield break;
         float curTime = 0;
-        Vector3 startPosition = culture.transform.localPosition;
+        Vector3 startPosition = culture.transform.position;
         yield return null;
 
         while(curTime <= AnimationTransferTime)
         {
-            if (culture.Equals(null) || culture.transform.parent == null) yield break; // culture was destroyed or changed tiles in the middle of transferring position
+            if (culture.Equals(null) || culture.currentState == Culture.State.Moving) yield break; // culture was destroyed or changed tiles in the middle of transferring position (ties it to Culture.State, unsure if good)
             curTime += Time.deltaTime;
             float curDistance = Mathf.InverseLerp(0, AnimationTransferTime, curTime);
-            culture.transform.localPosition = Vector3.Lerp(startPosition, endPosition, curDistance);
+            culture.transform.position = Vector3.Lerp(startPosition, endPosition, curDistance);
             yield return null;
         }
     }

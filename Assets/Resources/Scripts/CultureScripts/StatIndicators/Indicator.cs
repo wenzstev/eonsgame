@@ -23,7 +23,7 @@ public class Indicator : MonoBehaviour
         float StartPositionY = transform.position.y;
         float EndPositionY = StartPositionY + YMoveAmount;
         float StartPositionX = transform.position.x;
-        while (timer < AnimationTime)
+        while (timer < AnimationTime && isActiveAndEnabled)
         {
             float CurInverseLerpPoint = Mathf.InverseLerp(0, AnimationTime, timer);
             transform.position = new Vector2(StartPositionX, Mathf.Lerp(StartPositionY, EndPositionY, CurInverseLerpPoint));
