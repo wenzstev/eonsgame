@@ -191,14 +191,15 @@ public class Culture : MonoBehaviour
 
     public GameObject SplitCultureFromParent() // creates new culture group from parent
     {
-        GameObject newCultureObj = Instantiate(CultureTemplate, transform.position, Quaternion.identity);
-        Culture newCulture = newCultureObj.GetComponent<Culture>();
+        Culture newCulture = CulturePool.GetCulture();
+        newCulture.transform.position = transform.position;
+
         int numInNewCulture = UnityEngine.Random.Range(minPopTransfer, maxPopTransfer);
         newCulture.InitFromParent(this, numInNewCulture);
         AddPopulation(-numInNewCulture);
         newCulture.CultureMemory.previousTile = Tile;
        // Debug.Log($"Split {newCulture} from {this} on tile {this.Tile}");
-        return newCultureObj;
+        return newCulture.gameObject;
     }
 
     public void SetColor(Color c)
@@ -303,8 +304,7 @@ public class Culture : MonoBehaviour
             EventManager.TriggerEvent("CultureDestroyed", new Dictionary<string, object> { { "culture", this } });
             OnCultureDestroyed?.Invoke(this, new OnCultureDestroyedEventArgs() { DestroyedCulture = this });
         }
-        gameObject.SetActive(false);
-        Destroy(gameObject);
+        CulturePool.ReleaseCulture(this);
     }
 
     private void OnDestroy()

@@ -25,15 +25,17 @@ public class AffinityManager : MonoBehaviour
 
 
     public AffinityStats AffinityStats { get { return affinityStats; } }
-    
 
+    private void Awake()
+    {
+        EventManager.StartListening("Tick", OnTick);
+    }
 
     public void Initialize()
     {
         AffinityGrowthRate = new GompertzCurve(Asymptote, XDisplacement, GrowthRate, YDisplacement);
         _currentBiome = TileDrawer.BiomeType.Barren;
-        EventManager.StartListening("Tick", OnTick);
-        affinityStats = new AffinityStats();
+        affinityStats = AffinityStats.InitializeStats();
     }
 
     public void SetStats(AffinityStats stats)
@@ -89,13 +91,13 @@ public class AffinityManager : MonoBehaviour
 
     public void OnTick(Dictionary<string, object> empty)
     {
-        affinityStats.IncrementDecayDays(_currentBiome);
+        if(gameObject.activeInHierarchy) affinityStats.IncrementDecayDays(_currentBiome);
     }
 
 
     public AffinityStats GetStatCopy()
     {
-        return affinityStats.CreateCopy();
+        return affinityStats; // does this auto copy the struct?
     }
 
     public AffinityStats GetStatMerge(AffinityManager other, float ratio)

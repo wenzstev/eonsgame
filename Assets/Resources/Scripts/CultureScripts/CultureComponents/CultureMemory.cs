@@ -45,6 +45,7 @@ public class CultureMemory : MonoBehaviour
 
     private void Awake()
     {
+        if (Culture == null) Culture = GetComponent<Culture>();
         Culture.OnNameChanged += CultureMemory_OnNameChanged;
     }
 

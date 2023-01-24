@@ -8,7 +8,7 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
-  m_EditorHideFlags: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -19,11 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1349.3334
   m_ShowMode: 4
-<<<<<<< HEAD
-  m_Title: Console
-=======
-  m_Title: Inspector
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -123,11 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-<<<<<<< HEAD
-  controlID: 21
-=======
-  controlID: 108
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+  controlID: 132
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,20 +139,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
     width: 2078.6667
-=======
-    width: 1842.6666
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
     height: 1299.3334
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-<<<<<<< HEAD
-  controlID: 22
-=======
-  controlID: 109
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+  controlID: 133
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -180,21 +164,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
     width: 2078.6667
-    height: 708
+    height: 508.66666
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 23
-=======
-    width: 1842.6666
-    height: 504
-  m_MinSize: {x: 200, y: 100}
-  m_MaxSize: {x: 16192, y: 8096}
-  vertical: 0
-  controlID: 110
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+  controlID: 134
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -205,40 +180,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-<<<<<<< HEAD
   m_Name: SceneHierarchyWindow
-=======
-  m_Name: TestRunnerWindow
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-    width: 494.66666
-    height: 708
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+    width: 723.3333
+    height: 508.66666
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
   - {fileID: 14}
   m_Selected: 0
   m_LastSelected: 1
-=======
-    width: 444.66666
-    height: 504
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 14}
-  m_Panes:
-  - {fileID: 13}
-  - {fileID: 14}
-  m_Selected: 1
-  m_LastSelected: 0
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -254,21 +212,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 494.66666
+    x: 723.3333
     y: 0
-    width: 1584.0001
-    height: 708
+    width: 1355.3335
+    height: 508.66666
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-=======
-    x: 444.66666
-    y: 0
-    width: 1398
-    height: 504
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -285,44 +234,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-<<<<<<< HEAD
-  m_Name: ConsoleWindow
-=======
   m_Name: ProfilerWindow
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-    y: 708
+    y: 508.66666
     width: 2078.6667
-    height: 591.3334
-  m_MinSize: {x: 101, y: 121}
+    height: 790.66675
+  m_MinSize: {x: 881, y: 237}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 18}
-=======
-    y: 504
-    width: 1842.6666
-    height: 795.3334
-  m_MinSize: {x: 880, y: 216}
-  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 21}
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
   m_Panes:
   - {fileID: 17}
   - {fileID: 18}
   - {fileID: 19}
   - {fileID: 20}
   - {fileID: 21}
-<<<<<<< HEAD
-  m_Selected: 1
-  m_LastSelected: 0
-=======
   m_Selected: 4
-  m_LastSelected: 1
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+  m_LastSelected: 2
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -338,15 +269,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-<<<<<<< HEAD
     x: 2078.6667
     y: 0
     width: 481.33325
-=======
-    x: 1842.6666
-    y: 0
-    width: 717.3334
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
     height: 1299.3334
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
@@ -375,15 +300,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
     x: 2078.6667
     y: 72.66667
     width: 480.33325
-=======
-    x: 1842.6667
-    y: 72.66667
-    width: 716.3334
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
     height: 1278.3334
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -424,30 +343,18 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 72.66667
-<<<<<<< HEAD
-    width: 493.66666
-    height: 687
-=======
-    width: 443.66666
-    height: 561
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+    width: 722.3333
+    height: 487.66666
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-<<<<<<< HEAD
-      scrollPos: {x: 0, y: 2816}
-      m_SelectedIDs: f6faffff
-      m_LastClickedID: -1290
-      m_ExpandedIDs: 303cf9ff5e4af9ffd24bf9ffc44ff9fffa4ff9ff4a52f9ffc853f9ff9867f9fffa21faff1e7efaffeadcfaff2a05fbfff253fbff985dfbfff85ffbff7e62fbffc265fbffc469fbffb26bfbff0070fbff8672fbff367dfbff827dfbff967ffbffbc7ffbff0880fbffc680fbff3881fbff1c82fbff0a84fbffc884fbff1485fbff3a85fbff1e86fbff2887fbff3288fbff768bfbffe88bfbff3e8dfbff648dfbff4c96fbff7c97fbffd298fbff749afbfff09bfbffae9cfbffb89dfbfffca0fbffbaa1fbff9ea2fbffeaa2fbfffea4fbff24a5fbff4aa5fbff96a5fbffeca6fbff30aafbff3caffbffaeaffbff46b0fbff04b1fbffe83cfcfff03cfcff0e3dfcff6cd4fcffd0d4fcff38e7fcff40e7fcff5ee7fcffd006fdffde06fdff8c50feffa052feff5a55feff7255feff9e58feffb658feff965bfeffae5bfeff3484feff0c8afeff248afeffe88dfeff008efeff348efeff4c8efeff0810ffff1610ffff3410ffff4e2fffff562fffff742fffff7638ffff8438ffffa238ffff0c39ffff1239ffff1a39ffff3839ffff5e3cffff6c3cffff8a3cffffd642ffffde42fffffc42ffff944cffff9a4cffffa24cffffc04cffff5e55ffff6c55ffff8a55ffff5856ffff5e56ffff6656ffff8456ffff2c87ffff3a87ffff5887ffff5a90ffff6890ffff8690ffff8c90ffff9a90ffffb890ffffcaa7ffffd8a7fffff6a7ffff2ea8ffff3ca8ffff5aa8ffff5cb1ffff6ab1ffff88b1ffff7cf8ffff32fbffff38fbffff
-=======
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 0c8bceff
-      m_LastClickedID: -3241204
-      m_ExpandedIDs: 4e8bceff968bceff2ea1ceffa032feff9ef8ffff38fbffff
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 303ff1ff3e3ff1ff5c3ff1ffb6a7f1fff87ffdff4080fdffa483fdffb284fdfffa84fdff6887fdff7688fdffbe88fdffb08afdff7a8cfdffc28cfdffb48efdffc68ffdff0e90fdff0092fdffd293fdff1a94fdff0c96fdffd697fdff1e98fdff109afdff8c9cfdffd49cfdffc69efdff8ea0fdffd6a0fdffc4a2fdff8ca4fdffd4a4fdffc6a6fdff92a8fdffdaa8fdffccaafdff90adfdffd8adfdffcaaffdffe6b1fdff2eb2fdff1cb4fdff2ab5fdff72b5fdff60b7fdffe4b9fdff2cbafdff1abcfdff28bdfdff70bdfdff5ebffdff40c1fdff88c1fdff76c3fdffc6c4fdff0ec5fdfffcc6fdff0cc8fdff54c8fdffcec9fdff54ccfdff9cccfdff10cefdff1ecffdff66cffdff0ad3fdff18d4fdff60d4fdffbcd5fdff92d7fdffdad7fdff40d9fdff1cdbfdff64dbfdffcadcfdffd8ddfdff20defdffb2dffdffc0e0fdff08e1fdff72e2fdffeae4fdff32e5fdff9ce6fdffa6e8fdffeee8fdff58eafdff6eebfdffb6ebfdff20edfdff98effdffe6effdff6ef1fdffc4caffff0ccbffff34e0ffff06faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -493,46 +400,29 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 72.66667
-    width: 443.66666
-<<<<<<< HEAD
-    height: 829
-=======
-    height: 483
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+    width: 722.3333
+    height: 487.66666
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-<<<<<<< HEAD
-    ID: 131
-    splitterInitialOffset: 507.66666
+    ID: 560
+    splitterInitialOffset: 677.6667
     currentActiveSplitter: -1
     realSizes:
-    - 625.3333
-    - 133.33337
-=======
-    ID: 6520
-    splitterInitialOffset: 507.66666
-    currentActiveSplitter: -1
-    realSizes:
-    - 340
-    - 72.666664
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+    - 276.66666
+    - 140
     relativeSizes:
-    - 0.8241551
-    - 0.17584491
+    - 0.6633916
+    - 0.3366084
     minSizes:
     - 32
     - 32
     maxSizes:
     - 0
     - 0
-<<<<<<< HEAD
-    lastTotalSize: 758.6667
-=======
-    lastTotalSize: 412.66666
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+    lastTotalSize: 416.66666
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -549,11 +439,7 @@ MonoBehaviour:
       name: My project
       fullName: My project
       resultStatus: 2
-<<<<<<< HEAD
-      duration: 2.8984177
-=======
-      duration: 3.0053754
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.2106686
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -569,11 +455,7 @@ MonoBehaviour:
       name: Tests.dll
       fullName: C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll
       resultStatus: 2
-<<<<<<< HEAD
-      duration: 2.5238616
-=======
-      duration: 2.6576722
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.1324821
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -589,11 +471,7 @@ MonoBehaviour:
       name: AffinityManagerTestSuite
       fullName: AffinityManagerTestSuite
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.1119582
-=======
-      duration: 0.1144904
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0693581
       messages: 
       output: 
       stacktrace: 
@@ -609,11 +487,7 @@ MonoBehaviour:
       name: CanDecayAffinityOnBiome
       fullName: AffinityManagerTestSuite.CanDecayAffinityOnBiome
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0433575
-=======
-      duration: 0.0478369
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0232474
       messages: 
       output: 'Final affinity for Grassland is 6.70962
 
@@ -639,11 +513,7 @@ MonoBehaviour:
       name: CanGainAffinityOnBiome
       fullName: AffinityManagerTestSuite.CanGainAffinityOnBiome
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0236058
-=======
-      duration: 0.0214794
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0134366
       messages: 
       output: 'Final affinity for Grassland is 3.083034
 
@@ -664,11 +534,7 @@ MonoBehaviour:
       name: CanGetClonedAffinityManager
       fullName: AffinityManagerTestSuite.CanGetClonedAffinityManager
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0229083
-=======
-      duration: 0.0190523
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0206123
       messages: 
       output: 'Final affinity for Grassland is 6.70962
 
@@ -722,11 +588,7 @@ MonoBehaviour:
       name: AffinityStatsTestSuite
       fullName: AffinityStatsTestSuite
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0158519
-=======
-      duration: 0.015904
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0309198
       messages: 
       output: 
       stacktrace: 
@@ -742,11 +604,7 @@ MonoBehaviour:
       name: CanCombineAffinity
       fullName: AffinityStatsTestSuite.CanCombineAffinity
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0045221
-=======
-      duration: 0.0043563
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.020091
       messages: 
       output: 'Final affinity for Grassland is 40
 
@@ -773,11 +631,7 @@ MonoBehaviour:
       name: CanDuplicateAffinity
       fullName: AffinityStatsTestSuite.CanDuplicateAffinity
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0061983
-=======
-      duration: 0.0066652
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0125088
       messages: 
       output: 'Final affinity for Grassland is 40
 
@@ -829,11 +683,7 @@ MonoBehaviour:
       name: BoardAgeTestSuite
       fullName: BoardAgeTestSuite
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.2535293
-=======
-      duration: 0.3488319
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.1930837
       messages: 
       output: 
       stacktrace: 
@@ -849,8 +699,7 @@ MonoBehaviour:
       name: CanGetBoardAgeAtStartup
       fullName: BoardAgeTestSuite.CanGetBoardAgeAtStartup
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.207752
+      duration: 0.1676547
       messages: 
       output: 'The referenced script (Unknown) on this Behaviour is missing!
 
@@ -870,29 +719,24 @@ MonoBehaviour:
         this Behaviour is missing!
 
         The referenced script on this Behaviour
-        (Game Object ''Ocean'') is missing!
+        (Game Object ''Tundra'') is missing!
 
         The referenced script on this
-        Behaviour (Game Object ''Grassland'') is missing!
+        Behaviour (Game Object ''Forest'') is missing!
+
+        The referenced script
+        on this Behaviour (Game Object ''Grassland'') is missing!
 
         The referenced
-        script on this Behaviour (Game Object ''Forest'') is missing!
-
-        The
-        referenced script on this Behaviour (Game Object ''Desert'') is missing!
+        script on this Behaviour (Game Object ''Desert'') is missing!
 
         The
         referenced script on this Behaviour (Game Object ''Mountain'') is missing!
 
         The
-        referenced script on this Behaviour (Game Object ''Tundra'') is missing!
+        referenced script on this Behaviour (Game Object ''Ocean'') is missing!
 
         clearing
-=======
-      duration: 0.2838102
-      messages: 
-      output: 'clearing
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
 
 '
       stacktrace: 
@@ -909,11 +753,7 @@ MonoBehaviour:
       name: CanUpdateBoardAge
       fullName: BoardAgeTestSuite.CanUpdateBoardAge
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0291111
-=======
-      duration: 0.0425116
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0176434
       messages: 
       output: 'clearing
 
@@ -931,15 +771,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][BoardStatsTestSuite][suite]
       name: BoardStatsTestSuite
       fullName: BoardStatsTestSuite
-<<<<<<< HEAD
       resultStatus: 1
-      duration: 0.0119925
+      duration: 0.0075159
       messages: 
-=======
-      resultStatus: 2
-      duration: 0.0249995
-      messages: One or more child tests had errors
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
       output: 
       stacktrace: 
       notRunnable: 0
@@ -953,28 +787,15 @@ MonoBehaviour:
       uniqueId: Tests.dll/BoardStatsTestSuite/[Tests][BoardStatsTestSuite.CanGetAccurateBoardEdges]
       name: CanGetAccurateBoardEdges
       fullName: BoardStatsTestSuite.CanGetAccurateBoardEdges
-<<<<<<< HEAD
       resultStatus: 1
-      duration: 0.0044092
+      duration: 0.0041305
       messages: 
-=======
-      resultStatus: 2
-      duration: 0.0178122
-      messages: "  Expected: (0.00, 0.00)\r\n  But was:  (-0.50, -0.50)\r\n"
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
       output: 'setting dimensions
 
         setting dimensions
 
 '
-<<<<<<< HEAD
       stacktrace: 
-=======
-      stacktrace: 'at BoardStatsTestSuite.CanGetAccurateBoardEdges () [0x00071] in
-        C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\BoardStatsTestSuite.cs:32
-
-'
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -988,11 +809,7 @@ MonoBehaviour:
       name: CameraBoundsTestSuite
       fullName: CameraBoundsTestSuite
       resultStatus: 2
-<<<<<<< HEAD
-      duration: 0.0307045
-=======
-      duration: 0.0208961
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0152254
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -1008,11 +825,7 @@ MonoBehaviour:
       name: CanAllowCameraWhenLegalBoundsChange
       fullName: CameraBoundsTestSuite.CanAllowCameraWhenLegalBoundsChange
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0045334
-=======
-      duration: 0.0054578
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0044309
       messages: 
       output: 'setting dimensions
 
@@ -1036,11 +849,7 @@ MonoBehaviour:
       name: CanGetBoundsFromBoard
       fullName: CameraBoundsTestSuite.CanGetBoundsFromBoard
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0011431
-=======
-      duration: 0.0013181
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0009874
       messages: 
       output: 'setting dimensions
 
@@ -1064,15 +873,9 @@ MonoBehaviour:
       name: CanPreventCameraFromExceedingBoundsLarge
       fullName: CameraBoundsTestSuite.CanPreventCameraFromExceedingBoundsLarge
       resultStatus: 2
-<<<<<<< HEAD
-      duration: 0.0140174
+      duration: 0.0039237
       messages: "  Camera did not properly stay in bounds!\r\n  Expected: (76.00,
         -43.00, 0.00)\r\n  But was:  (75.50, -40.00, 0.00)\r\n"
-=======
-      duration: 0.0025454
-      messages: "  Camera did not properly stay in bounds!\r\n  Expected: (76.00,
-        -43.00, 0.00)\r\n  But was:  (75.50, -39.50, 0.00)\r\n"
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
       output: 'setting dimensions
 
         setting dimensions
@@ -1098,11 +901,7 @@ MonoBehaviour:
       name: CanPreventCameraFromExceedingBoundsSmall
       fullName: CameraBoundsTestSuite.CanPreventCameraFromExceedingBoundsSmall
       resultStatus: 2
-<<<<<<< HEAD
-      duration: 0.0017233
-=======
-      duration: 0.0023017
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0018402
       messages: "  Camera did not properly stay in bounds!\r\n  Expected: (0.00,
         4.50, 0.00)\r\n  But was:  (-0.50, 5.50, 0.00)\r\n"
       output: 'setting dimensions
@@ -1130,11 +929,7 @@ MonoBehaviour:
       name: CameraMovementTestSuite
       fullName: CameraMovementTestSuite
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0137262
-=======
-      duration: 0.0163766
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0095578
       messages: 
       output: 
       stacktrace: 
@@ -1150,11 +945,7 @@ MonoBehaviour:
       name: CanDetermineNewEdgesFromBounds
       fullName: CameraMovementTestSuite.CanDetermineNewEdgesFromBounds
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0010948
-=======
-      duration: 0.0010845
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0008265
       messages: 
       output: 
       stacktrace: 
@@ -1171,11 +962,7 @@ MonoBehaviour:
       name: CanDetermineNewOriginFromBounds
       fullName: CameraMovementTestSuite.CanDetermineNewOriginFromBounds
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.000452
-=======
-      duration: 0.000502
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0003148
       messages: 
       output: 
       stacktrace: 
@@ -1192,11 +979,7 @@ MonoBehaviour:
       name: CanDetermineNewZoomFromBounds
       fullName: CameraMovementTestSuite.CanDetermineNewZoomFromBounds
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0006336
-=======
-      duration: 0.0006421
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0009421
       messages: 
       output: 
       stacktrace: 
@@ -1213,11 +996,7 @@ MonoBehaviour:
       name: NewTransformIsAccurate
       fullName: CameraMovementTestSuite.NewTransformIsAccurate
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.000787
-=======
-      duration: 0.0013049
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0005619
       messages: 
       output: 
       stacktrace: 
@@ -1234,11 +1013,7 @@ MonoBehaviour:
       name: CultureContainerTestSuite
       fullName: CultureContainerTestSuite
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0465376
-=======
-      duration: 0.0470946
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0539064
       messages: 
       output: 
       stacktrace: 
@@ -1254,11 +1029,7 @@ MonoBehaviour:
       name: CanAddCultureToContainer
       fullName: CultureContainerTestSuite.CanAddCultureToContainer
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0074778
-=======
-      duration: 0.0071007
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0059719
       messages: 
       output: 'clearing
 
@@ -1279,11 +1050,7 @@ MonoBehaviour:
       name: CanResortWhenCultureDestroyed
       fullName: CultureContainerTestSuite.CanResortWhenCultureDestroyed
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0143501
-=======
-      duration: 0.0148976
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0428768
       messages: 
       output: 'clearing
 
@@ -1304,11 +1071,7 @@ MonoBehaviour:
       name: CanResortWhenPopulationAdded
       fullName: CultureContainerTestSuite.CanResortWhenPopulationAdded
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0072395
-=======
-      duration: 0.0070284
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.004017
       messages: 
       output: 'clearing
 
@@ -1329,11 +1092,7 @@ MonoBehaviour:
       name: CanSortCultures
       fullName: CultureContainerTestSuite.CanSortCultures
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0069926
-=======
-      duration: 0.0070334
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0038958
       messages: 
       output: 'clearing
 
@@ -1353,15 +1112,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][CultureFoodStoreTestSuite][suite]
       name: CultureFoodStoreTestSuite
       fullName: CultureFoodStoreTestSuite
-<<<<<<< HEAD
       resultStatus: 2
-      duration: 0.1300921
+      duration: 0.092822
       messages: One or more child tests had errors
-=======
-      resultStatus: 1
-      duration: 0.1524586
-      messages: 
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1375,41 +1128,58 @@ MonoBehaviour:
       uniqueId: Tests.dll/CultureFoodStoreTestSuite/[Tests][CultureFoodStoreTestSuite.CanCollectFoodFromTile]
       name: CanCollectFoodFromTile
       fullName: CultureFoodStoreTestSuite.CanCollectFoodFromTile
-<<<<<<< HEAD
-      resultStatus: 2
-      duration: 0.0508833
-      messages: "  FoodChange is incorrect!\r\n  Expected: 8.0f\r\n  But was:  0.0f\r\n"
-      output: 'setting dimensions
-
-        Setup Complete. Culture name is mheof(-2424190)
-=======
       resultStatus: 1
-      duration: 0.0629869
+      duration: 0.0755317
       messages: 
-      output: 'setting dimensions
+      output: 'The referenced script (Unknown) on this Behaviour is missing!
 
-        Setup Complete. Culture name is hpbyj(-3236646)
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+        The
+        referenced script (Unknown) on this Behaviour is missing!
+
+        The referenced
+        script (Unknown) on this Behaviour is missing!
+
+        The referenced script
+        (Unknown) on this Behaviour is missing!
+
+        The referenced script (Unknown)
+        on this Behaviour is missing!
+
+        The referenced script (Unknown) on
+        this Behaviour is missing!
+
+        The referenced script on this Behaviour
+        (Game Object ''Tundra'') is missing!
+
+        The referenced script on this
+        Behaviour (Game Object ''Forest'') is missing!
+
+        The referenced script
+        on this Behaviour (Game Object ''Grassland'') is missing!
+
+        The referenced
+        script on this Behaviour (Game Object ''Desert'') is missing!
+
+        The
+        referenced script on this Behaviour (Game Object ''Mountain'') is missing!
+
+        The
+        referenced script on this Behaviour (Game Object ''Ocean'') is missing!
+
+        setting
+        dimensions
+
+        Setup Complete. Culture name is hxije(-159622)
+
+        getting
+        new turn
+
+        casn gather foodl
 
         clearing
 
 '
-<<<<<<< HEAD
-      stacktrace: 'at CultureFoodStoreTestSuite.AssertFoodChange (System.Single expected)
-        [0x0000c] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\CultureFoodStoreTestSuite.cs:76
-
-        at
-        CultureFoodStoreTestSuite+<CanCollectFoodFromTile>d__2.MoveNext () [0x00024]
-        in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\CultureFoodStoreTestSuite.cs:25
-
-        at
-        UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
-        in C:\Users\wenze\Documents\Unity\Eons\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
-
-'
-=======
       stacktrace: 
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1422,28 +1192,21 @@ MonoBehaviour:
       uniqueId: Tests.dll/CultureFoodStoreTestSuite/[Tests][CultureFoodStoreTestSuite.CanConsumeFoodInTurn]
       name: CanConsumeFoodInTurn
       fullName: CultureFoodStoreTestSuite.CanConsumeFoodInTurn
-<<<<<<< HEAD
       resultStatus: 2
-      duration: 0.0301524
+      duration: 0.0724014
       messages: "  FoodChange is incorrect!\r\n  Expected: -2.0f\r\n  But was:  0.0f\r\n"
       output: 'setting dimensions
 
-        Setup Complete. Culture name is ymgky(-2424342)
-=======
-      resultStatus: 1
-      duration: 0.0262562
-      messages: 
-      output: 'setting dimensions
+        Setup Complete. Culture name is vjwkc(-160466)
 
-        Setup Complete. Culture name is obbyy(-3236794)
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+        getting
+        new turn
 
         clearing
 
 '
-<<<<<<< HEAD
       stacktrace: 'at CultureFoodStoreTestSuite.AssertFoodChange (System.Single expected)
-        [0x0000c] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\CultureFoodStoreTestSuite.cs:76
+        [0x00000] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\CultureFoodStoreTestSuite.cs:75
 
         at
         CultureFoodStoreTestSuite+<CanConsumeFoodInTurn>d__3.MoveNext () [0x0005e]
@@ -1454,9 +1217,6 @@ MonoBehaviour:
         in C:\Users\wenze\Documents\Unity\Eons\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
 
 '
-=======
-      stacktrace: 
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1469,42 +1229,20 @@ MonoBehaviour:
       uniqueId: Tests.dll/CultureFoodStoreTestSuite/[Tests][CultureFoodStoreTestSuite.CanConsumeFoodMultiplePopulation]
       name: CanConsumeFoodMultiplePopulation
       fullName: CultureFoodStoreTestSuite.CanConsumeFoodMultiplePopulation
-<<<<<<< HEAD
       resultStatus: 2
-      duration: 0.019815
-      messages: "  FoodChange is incorrect!\r\n  Expected: -12.0f\r\n  But was: 
-        0.0f\r\n"
+      duration: 0.0257361
+      messages: 'SetUp : Unhandled log message: ''[Exception] NullReferenceException:
+        Object reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
       output: 'setting dimensions
 
-        Setup Complete. Culture name is gjfkq(-2424494)
-=======
-      resultStatus: 1
-      duration: 0.0260948
-      messages: 
-      output: 'setting dimensions
+        NullReferenceException: Object reference
+        not set to an instance of an object
 
-        Setup Complete. Culture name is ebsku(-3236942)
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
-
-        clearing
+        Setup Complete. Culture name
+        is rftwo(-143266)
 
 '
-<<<<<<< HEAD
-      stacktrace: 'at CultureFoodStoreTestSuite.AssertFoodChange (System.Single expected)
-        [0x0000c] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\CultureFoodStoreTestSuite.cs:76
-
-        at
-        CultureFoodStoreTestSuite+<CanConsumeFoodMultiplePopulation>d__4.MoveNext
-        () [0x00069] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\CultureFoodStoreTestSuite.cs:53
-
-        at
-        UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
-        in C:\Users\wenze\Documents\Unity\Eons\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
-
-'
-=======
       stacktrace: 
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1517,38 +1255,64 @@ MonoBehaviour:
       uniqueId: Tests.dll/CultureFoodStoreTestSuite/[Tests][CultureFoodStoreTestSuite.CanReduceFoodOnTile]
       name: CanReduceFoodOnTile
       fullName: CultureFoodStoreTestSuite.CanReduceFoodOnTile
-<<<<<<< HEAD
       resultStatus: 2
-      duration: 0.018957
+      duration: 0.0809465
       messages: "  Food on tile is not what's expected!\r\n  Expected: 991\r\n  But
         was:  990.0f\r\n"
-      output: 'setting dimensions
+      output: 'The referenced script (Unknown) on this Behaviour is missing!
 
-        Setup Complete. Culture name is ldezu(-2424646)
-=======
-      resultStatus: 1
-      duration: 0.025256
-      messages: 
-      output: 'setting dimensions
+        The
+        referenced script (Unknown) on this Behaviour is missing!
 
-        Setup Complete. Culture name is vyigt(-3237090)
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+        The referenced
+        script (Unknown) on this Behaviour is missing!
+
+        The referenced script
+        (Unknown) on this Behaviour is missing!
+
+        The referenced script (Unknown)
+        on this Behaviour is missing!
+
+        The referenced script (Unknown) on
+        this Behaviour is missing!
+
+        The referenced script on this Behaviour
+        (Game Object ''Tundra'') is missing!
+
+        The referenced script on this
+        Behaviour (Game Object ''Forest'') is missing!
+
+        The referenced script
+        on this Behaviour (Game Object ''Grassland'') is missing!
+
+        The referenced
+        script on this Behaviour (Game Object ''Desert'') is missing!
+
+        The
+        referenced script on this Behaviour (Game Object ''Mountain'') is missing!
+
+        The
+        referenced script on this Behaviour (Game Object ''Ocean'') is missing!
+
+        setting
+        dimensions
+
+        Setup Complete. Culture name is piydf(-161494)
+
+        getting
+        new turn
 
         clearing
 
 '
-<<<<<<< HEAD
       stacktrace: 'at CultureFoodStoreTestSuite+<CanReduceFoodOnTile>d__5.MoveNext
-        () [0x00024] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\CultureFoodStoreTestSuite.cs:62
+        () [0x00025] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\CultureFoodStoreTestSuite.cs:62
 
         at
         UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
         in C:\Users\wenze\Documents\Unity\Eons\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
 
 '
-=======
-      stacktrace: 
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1561,13 +1325,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][CulturePlacementHandlerTestSuite][suite]
       name: CulturePlacementHandlerTestSuite
       fullName: CulturePlacementHandlerTestSuite
-      resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.8975922
-=======
-      duration: 0.9090374
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
-      messages: 
+      resultStatus: 2
+      duration: 0.896388
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1581,19 +1341,22 @@ MonoBehaviour:
       uniqueId: Tests.dll/CulturePlacementHandlerTestSuite/[Tests][CulturePlacementHandlerTestSuite.CanNotShowAdditionalCulturesAfterThree]
       name: CanNotShowAdditionalCulturesAfterThree
       fullName: CulturePlacementHandlerTestSuite.CanNotShowAdditionalCulturesAfterThree
-      resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.1124508
-=======
-      duration: 0.114122
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
-      messages: 
+      resultStatus: 2
+      duration: 0.1325942
+      messages: "  Expected: (50.87, 49.50, 0.00)\r\n  But was:  (0.00, 0.00, 0.00)\r\n"
       output: 'clearing
 
         clearing
 
 '
-      stacktrace: 
+      stacktrace: 'at CulturePlacementHandlerTestSuite+<CanNotShowAdditionalCulturesAfterThree>d__11.MoveNext
+        () [0x000a2] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\CulturePlacementHandlerTestSuite.cs:102
+
+        at
+        UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
+        in C:\Users\wenze\Documents\Unity\Eons\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
+
+'
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1606,19 +1369,22 @@ MonoBehaviour:
       uniqueId: Tests.dll/CulturePlacementHandlerTestSuite/[Tests][CulturePlacementHandlerTestSuite.CanRearrangeWhenPopChanges]
       name: CanRearrangeWhenPopChanges
       fullName: CulturePlacementHandlerTestSuite.CanRearrangeWhenPopChanges
-      resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.2137127
-=======
-      duration: 0.2174575
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
-      messages: 
+      resultStatus: 2
+      duration: 0.2084521
+      messages: "  Expected: (50.00, 51.00, 0.00)\r\n  But was:  (0.00, 0.00, 0.00)\r\n"
       output: 'clearing
 
         clearing
 
 '
-      stacktrace: 
+      stacktrace: 'at CulturePlacementHandlerTestSuite+<CanRearrangeWhenPopChanges>d__12.MoveNext
+        () [0x000b5] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\CulturePlacementHandlerTestSuite.cs:118
+
+        at
+        UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
+        in C:\Users\wenze\Documents\Unity\Eons\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
+
+'
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1631,19 +1397,22 @@ MonoBehaviour:
       uniqueId: Tests.dll/CulturePlacementHandlerTestSuite/[Tests][CulturePlacementHandlerTestSuite.CanReduceFromThreeToTwoCulturesOnTile]
       name: CanReduceFromThreeToTwoCulturesOnTile
       fullName: CulturePlacementHandlerTestSuite.CanReduceFromThreeToTwoCulturesOnTile
-      resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.2144637
-=======
-      duration: 0.2168134
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
-      messages: 
+      resultStatus: 2
+      duration: 0.2092872
+      messages: "  Expected: (49.00, 50.00, 0.00)\r\n  But was:  (0.00, 0.00, 0.00)\r\n"
       output: 'clearing
 
         clearing
 
 '
-      stacktrace: 
+      stacktrace: 'at CulturePlacementHandlerTestSuite+<CanReduceFromThreeToTwoCulturesOnTile>d__10.MoveNext
+        () [0x000ba] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\CulturePlacementHandlerTestSuite.cs:85
+
+        at
+        UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
+        in C:\Users\wenze\Documents\Unity\Eons\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
+
+'
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1656,19 +1425,22 @@ MonoBehaviour:
       uniqueId: Tests.dll/CulturePlacementHandlerTestSuite/[Tests][CulturePlacementHandlerTestSuite.CanShowOneCultureOnTile]
       name: CanShowOneCultureOnTile
       fullName: CulturePlacementHandlerTestSuite.CanShowOneCultureOnTile
-      resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.1142002
-=======
-      duration: 0.1166412
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
-      messages: 
+      resultStatus: 2
+      duration: 0.1074899
+      messages: "  Expected: (50.00, 50.00, 0.00)\r\n  But was:  (0.00, 0.00, 0.00)\r\n"
       output: 'clearing
 
         clearing
 
 '
-      stacktrace: 
+      stacktrace: 'at CulturePlacementHandlerTestSuite+<CanShowOneCultureOnTile>d__7.MoveNext
+        () [0x00055] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\CulturePlacementHandlerTestSuite.cs:42
+
+        at
+        UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
+        in C:\Users\wenze\Documents\Unity\Eons\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
+
+'
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1681,19 +1453,22 @@ MonoBehaviour:
       uniqueId: Tests.dll/CulturePlacementHandlerTestSuite/[Tests][CulturePlacementHandlerTestSuite.CanShowThreeCulturesOnTile]
       name: CanShowThreeCulturesOnTile
       fullName: CulturePlacementHandlerTestSuite.CanShowThreeCulturesOnTile
-      resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.1153603
-=======
-      duration: 0.1149417
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
-      messages: 
+      resultStatus: 2
+      duration: 0.1145972
+      messages: "  Expected: (50.00, 51.00, 0.00)\r\n  But was:  (0.00, 0.00, 0.00)\r\n"
       output: 'clearing
 
         clearing
 
 '
-      stacktrace: 
+      stacktrace: 'at CulturePlacementHandlerTestSuite+<CanShowThreeCulturesOnTile>d__9.MoveNext
+        () [0x00077] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\CulturePlacementHandlerTestSuite.cs:66
+
+        at
+        UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
+        in C:\Users\wenze\Documents\Unity\Eons\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
+
+'
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1706,19 +1481,22 @@ MonoBehaviour:
       uniqueId: Tests.dll/CulturePlacementHandlerTestSuite/[Tests][CulturePlacementHandlerTestSuite.CanShowTwoCulturesOnTile]
       name: CanShowTwoCulturesOnTile
       fullName: CulturePlacementHandlerTestSuite.CanShowTwoCulturesOnTile
-      resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.1151411
-=======
-      duration: 0.1159223
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
-      messages: 
+      resultStatus: 2
+      duration: 0.1094108
+      messages: "  Expected: (49.00, 50.00, 0.00)\r\n  But was:  (0.00, 0.00, 0.00)\r\n"
       output: 'clearing
 
         clearing
 
 '
-      stacktrace: 
+      stacktrace: 'at CulturePlacementHandlerTestSuite+<CanShowTwoCulturesOnTile>d__8.MoveNext
+        () [0x00066] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\CulturePlacementHandlerTestSuite.cs:53
+
+        at
+        UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a]
+        in C:\Users\wenze\Documents\Unity\Eons\Library\PackageCache\com.unity.test-framework@1.1.31\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:46
+
+'
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1731,13 +1509,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][CultureTestSuite][suite]
       name: CultureTestSuite
       fullName: CultureTestSuite
-      resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0987473
-=======
-      duration: 0.1335164
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
-      messages: 
+      resultStatus: 2
+      duration: 0.1270112
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1752,19 +1526,50 @@ MonoBehaviour:
       name: TestCanMerge
       fullName: CultureTestSuite.TestCanMerge
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0164352
+      duration: 0.0642648
       messages: 
-      output: 'setting dimensions
+      output: 'The referenced script (Unknown) on this Behaviour is missing!
 
-        Setup Complete. Culture name is pnplh(-2425044)
-=======
-      duration: 0.0143696
-      messages: 
-      output: 'setting dimensions
+        The
+        referenced script (Unknown) on this Behaviour is missing!
 
-        Setup Complete. Culture name is nckom(-3237484)
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+        The referenced
+        script (Unknown) on this Behaviour is missing!
+
+        The referenced script
+        (Unknown) on this Behaviour is missing!
+
+        The referenced script (Unknown)
+        on this Behaviour is missing!
+
+        The referenced script (Unknown) on
+        this Behaviour is missing!
+
+        The referenced script on this Behaviour
+        (Game Object ''Tundra'') is missing!
+
+        The referenced script on this
+        Behaviour (Game Object ''Forest'') is missing!
+
+        The referenced script
+        on this Behaviour (Game Object ''Grassland'') is missing!
+
+        The referenced
+        script on this Behaviour (Game Object ''Desert'') is missing!
+
+        The
+        referenced script on this Behaviour (Game Object ''Mountain'') is missing!
+
+        The
+        referenced script on this Behaviour (Game Object ''Ocean'') is missing!
+
+        setting
+        dimensions
+
+        Setup Complete. Culture name is pcjlo(-163298)
+
+        getting
+        new turn
 
         clearing
 
@@ -1783,19 +1588,11 @@ MonoBehaviour:
       name: TestCannotMerge
       fullName: CultureTestSuite.TestCannotMerge
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0157301
+      duration: 0.0165227
       messages: 
       output: 'setting dimensions
 
-        Setup Complete. Culture name is lykpf(-2425214)
-=======
-      duration: 0.0268411
-      messages: 
-      output: 'setting dimensions
-
-        Setup Complete. Culture name is iwcht(-3237650)
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+        Setup Complete. Culture name is ounty(-163474)
 
         clearing
 
@@ -1813,25 +1610,28 @@ MonoBehaviour:
       uniqueId: Tests.dll/CultureTestSuite/[Tests][CultureTestSuite.TestSplitCulture]
       name: TestSplitCulture
       fullName: CultureTestSuite.TestSplitCulture
-      resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0569896
-      messages: 
+      resultStatus: 2
+      duration: 0.0312636
+      messages: 'System.ArgumentException : The Object you want to instantiate is
+        null.'
       output: 'setting dimensions
 
-        Setup Complete. Culture name is iyxye(-2425384)
-=======
-      duration: 0.0823648
-      messages: 
-      output: 'setting dimensions
-
-        Setup Complete. Culture name is orjgg(-3237816)
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+        Setup Complete. Culture name is dnmrw(-163650)
 
         clearing
 
 '
-      stacktrace: 
+      stacktrace: "  at UnityEngine.Object.Instantiate[T] (T original) [0x0003d]
+        in <40205bb2cb25478a9cb0f5e54cf11441>:0 \r\n  at CulturePool.<Awake>b__5_0
+        () [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\CultureScripts\\CulturePool.cs:30
+        \r\n  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00014] in <40205bb2cb25478a9cb0f5e54cf11441>:0
+        \r\n  at CulturePool.GetCulture () [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\CultureScripts\\CulturePool.cs:17
+        \r\n  at Culture.SplitCultureFromParent () [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\CultureScripts\\CultureComponents\\Culture.cs:194
+        \r\n  at CultureTestSuite.TestSplitCulture () [0x00018] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\CultureTestSuite.cs:23
+        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
+        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
+        System.Globalization.CultureInfo culture) [0x0006a] in <6073cf49ed704e958b8a66d540dea948>:0 "
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1845,11 +1645,7 @@ MonoBehaviour:
       name: CurveTestSuite
       fullName: CurveTestSuite
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0119266
-=======
-      duration: 0.0150908
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0044941
       messages: 
       output: 
       stacktrace: 
@@ -1865,11 +1661,7 @@ MonoBehaviour:
       name: TestCompoundCurve
       fullName: CurveTestSuite.TestCompoundCurve
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0006436
-=======
-      duration: 0.0007418
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.000547
       messages: 
       output: 
       stacktrace: 
@@ -1886,11 +1678,7 @@ MonoBehaviour:
       name: TestGaussianCurve
       fullName: CurveTestSuite.TestGaussianCurve
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0005871
-=======
-      duration: 0.0005843
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0002752
       messages: 
       output: 
       stacktrace: 
@@ -1907,11 +1695,7 @@ MonoBehaviour:
       name: TestPowerCurve
       fullName: CurveTestSuite.TestPowerCurve
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0005286
-=======
-      duration: 0.0004835
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0001968
       messages: 
       output: 
       stacktrace: 
@@ -1928,11 +1712,7 @@ MonoBehaviour:
       name: TestSigmoidCurve
       fullName: CurveTestSuite.TestSigmoidCurve
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0003962
-=======
-      duration: 0.0004654
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0001821
       messages: 
       output: 
       stacktrace: 
@@ -1949,11 +1729,7 @@ MonoBehaviour:
       name: FoodAmountIndicatorTestSuite
       fullName: FoodAmountIndicatorTestSuite
       resultStatus: 2
-<<<<<<< HEAD
-      duration: 0.0292359
-=======
-      duration: 0.0307446
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0234239
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -1969,11 +1745,7 @@ MonoBehaviour:
       name: CanDisplayAccurateFoodCount
       fullName: FoodAmountIndicatorTestSuite.CanDisplayAccurateFoodCount
       resultStatus: 2
-<<<<<<< HEAD
-      duration: 0.0115978
-=======
-      duration: 0.0123759
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.015376
       messages: 'SetUp : Unhandled log message: ''[Exception] NullReferenceException:
         Object reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
       output: 'NullReferenceException: Object reference not set to an instance of
@@ -1994,11 +1766,7 @@ MonoBehaviour:
       name: CanGenerateFoodIndicatorAtExpectedInterval
       fullName: FoodAmountIndicatorTestSuite.CanGenerateFoodIndicatorAtExpectedInterval
       resultStatus: 2
-<<<<<<< HEAD
-      duration: 0.0091941
-=======
-      duration: 0.0093767
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0045593
       messages: 'SetUp : Unhandled log message: ''[Exception] NullReferenceException:
         Object reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
       output: 'NullReferenceException: Object reference not set to an instance of
@@ -2022,11 +1790,7 @@ MonoBehaviour:
       name: GreyscaleOverlayTestSuite
       fullName: GreyscaleOverlayTestSuite
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0118026
-=======
-      duration: 0.0123062
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.005539
       messages: 
       output: 
       stacktrace: 
@@ -2042,11 +1806,7 @@ MonoBehaviour:
       name: CanMakeImageGreyscale
       fullName: GreyscaleOverlayTestSuite.CanMakeImageGreyscale
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0024894
-=======
-      duration: 0.0029722
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0020473
       messages: 
       output: 'clearing
 
@@ -2065,11 +1825,7 @@ MonoBehaviour:
       name: CanSetToVariousTransparencies
       fullName: GreyscaleOverlayTestSuite.CanSetToVariousTransparencies
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.001184
-=======
-      duration: 0.0015053
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0007684
       messages: 
       output: 'clearing
 
@@ -2087,13 +1843,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][InfluenceActionTestSuite][suite]
       name: InfluenceActionTestSuite
       fullName: InfluenceActionTestSuite
-      resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0408201
-=======
-      duration: 0.0375596
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
-      messages: 
+      resultStatus: 2
+      duration: 0.0197099
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -2107,22 +1859,24 @@ MonoBehaviour:
       uniqueId: Tests.dll/InfluenceActionTestSuite/[Tests][InfluenceActionTestSuite.CanInfluenceNeighborCulture]
       name: CanInfluenceNeighborCulture
       fullName: InfluenceActionTestSuite.CanInfluenceNeighborCulture
-      resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.012761
-      messages: 
+      resultStatus: 2
+      duration: 0.0072473
+      messages: 'SetUp : Unhandled log message: ''[Exception] NullReferenceException:
+        Object reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect
+
+        SetUp
+        : Unhandled log message: ''[Exception] NullReferenceException: Object reference
+        not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
       output: 'setting dimensions
 
-        Setup Complete. Culture name is genxv(-2425716)
-=======
-      duration: 0.0116078
-      messages: 
-      output: 'setting dimensions
+        NullReferenceException: Object reference
+        not set to an instance of an object
 
-        Setup Complete. Culture name is fzkhk(-3238144)
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+        Setup Complete. Culture name
+        is btqui(-10698)
 
-        clearing
+        NullReferenceException: Object reference not set
+        to an instance of an object
 
 '
       stacktrace: 
@@ -2138,22 +1892,24 @@ MonoBehaviour:
       uniqueId: Tests.dll/InfluenceActionTestSuite/[Tests][InfluenceActionTestSuite.CanMergeIntoNewCultureIfClose]
       name: CanMergeIntoNewCultureIfClose
       fullName: InfluenceActionTestSuite.CanMergeIntoNewCultureIfClose
-      resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0188386
-      messages: 
+      resultStatus: 2
+      duration: 0.0085636
+      messages: 'SetUp : Unhandled log message: ''[Exception] NullReferenceException:
+        Object reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect
+
+        SetUp
+        : Unhandled log message: ''[Exception] NullReferenceException: Object reference
+        not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
       output: 'setting dimensions
 
-        Setup Complete. Culture name is xujro(-2425880)
-=======
-      duration: 0.0178079
-      messages: 
-      output: 'setting dimensions
+        NullReferenceException: Object reference
+        not set to an instance of an object
 
-        Setup Complete. Culture name is utles(-3238304)
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+        Setup Complete. Culture name
+        is qpylh(-10858)
 
-        clearing
+        NullReferenceException: Object reference not set
+        to an instance of an object
 
 '
       stacktrace: 
@@ -2169,15 +1925,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][MergeWithTileActionTestSuite][suite]
       name: MergeWithTileActionTestSuite
       fullName: MergeWithTileActionTestSuite
-<<<<<<< HEAD
       resultStatus: 2
-      duration: 0.0645828
+      duration: 0.0278638
       messages: One or more child tests had errors
-=======
-      resultStatus: 1
-      duration: 0.0582263
-      messages: 
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
       output: 
       stacktrace: 
       notRunnable: 0
@@ -2191,34 +1941,27 @@ MonoBehaviour:
       uniqueId: Tests.dll/MergeWithTileActionTestSuite/[Tests][MergeWithTileActionTestSuite.CanAddNewCultureToTile]
       name: CanAddNewCultureToTile
       fullName: MergeWithTileActionTestSuite.CanAddNewCultureToTile
-<<<<<<< HEAD
       resultStatus: 2
-      duration: 0.0153413
-      messages: "  Culture on tile not set to invaded!\r\n  Expected: Invaded\r\n 
-        But was:  PendingRemoval\r\n"
+      duration: 0.0073505
+      messages: 'SetUp : Unhandled log message: ''[Exception] NullReferenceException:
+        Object reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect
+
+        SetUp
+        : Unhandled log message: ''[Exception] NullReferenceException: Object reference
+        not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
       output: 'setting dimensions
 
-        Setup Complete. Culture name is muuwo(-2426044)
-=======
-      resultStatus: 1
-      duration: 0.0132007
-      messages: 
-      output: 'setting dimensions
+        NullReferenceException: Object reference
+        not set to an instance of an object
 
-        Setup Complete. Culture name is isayv(-3238464)
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+        Setup Complete. Culture name
+        is gpghr(-11018)
 
-        clearing
+        NullReferenceException: Object reference not set
+        to an instance of an object
 
 '
-<<<<<<< HEAD
-      stacktrace: 'at MergeWithTileActionTestSuite.CanAddNewCultureToTile () [0x00006]
-        in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\MergeWithTileActionTestSuite.cs:47
-
-'
-=======
       stacktrace: 
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -2231,34 +1974,27 @@ MonoBehaviour:
       uniqueId: Tests.dll/MergeWithTileActionTestSuite/[Tests][MergeWithTileActionTestSuite.CanCreateAsNewCulture]
       name: CanCreateAsNewCulture
       fullName: MergeWithTileActionTestSuite.CanCreateAsNewCulture
-<<<<<<< HEAD
       resultStatus: 2
-      duration: 0.0206549
-      messages: "  Culture didn't get a name change!\r\n  Expected: 1\r\n  But was: 
-        0\r\n"
+      duration: 0.0089457
+      messages: 'SetUp : Unhandled log message: ''[Exception] NullReferenceException:
+        Object reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect
+
+        SetUp
+        : Unhandled log message: ''[Exception] NullReferenceException: Object reference
+        not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
       output: 'setting dimensions
 
-        Setup Complete. Culture name is ebfvt(-2426208)
-=======
-      resultStatus: 1
-      duration: 0.0190207
-      messages: 
-      output: 'setting dimensions
+        NullReferenceException: Object reference
+        not set to an instance of an object
 
-        Setup Complete. Culture name is typzf(-3238624)
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+        Setup Complete. Culture name
+        is pweda(-11178)
 
-        clearing
+        NullReferenceException: Object reference not set
+        to an instance of an object
 
 '
-<<<<<<< HEAD
-      stacktrace: 'at MergeWithTileActionTestSuite.CanCreateAsNewCulture () [0x00078]
-        in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\MergeWithTileActionTestSuite.cs:68
-
-'
-=======
       stacktrace: 
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -2271,34 +2007,27 @@ MonoBehaviour:
       uniqueId: Tests.dll/MergeWithTileActionTestSuite/[Tests][MergeWithTileActionTestSuite.CanMergeCultures]
       name: CanMergeCultures
       fullName: MergeWithTileActionTestSuite.CanMergeCultures
-<<<<<<< HEAD
       resultStatus: 2
-      duration: 0.0191032
-      messages: "  Merged culture's population change isn't expected!\r\n  Expected:
-        1\r\n  But was:  0\r\n"
+      duration: 0.0076908
+      messages: 'SetUp : Unhandled log message: ''[Exception] NullReferenceException:
+        Object reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect
+
+        SetUp
+        : Unhandled log message: ''[Exception] NullReferenceException: Object reference
+        not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
       output: 'setting dimensions
 
-        Setup Complete. Culture name is vmqrp(-2426372)
-=======
-      resultStatus: 1
-      duration: 0.0170882
-      messages: 
-      output: 'setting dimensions
+        NullReferenceException: Object reference
+        not set to an instance of an object
 
-        Setup Complete. Culture name is ymgky(-3238784)
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+        Setup Complete. Culture name
+        is wyltz(-11338)
 
-        clearing
+        NullReferenceException: Object reference not set
+        to an instance of an object
 
 '
-<<<<<<< HEAD
-      stacktrace: 'at MergeWithTileActionTestSuite.CanMergeCultures () [0x0007d]
-        in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\MergeWithTileActionTestSuite.cs:36
-
-'
-=======
       stacktrace: 
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -2311,13 +2040,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][MoveActionTestSuite][suite]
       name: MoveActionTestSuite
       fullName: MoveActionTestSuite
-      resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.4178464
-=======
-      duration: 0.4087413
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
-      messages: 
+      resultStatus: 2
+      duration: 0.0238968
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -2331,22 +2056,17 @@ MonoBehaviour:
       uniqueId: Tests.dll/MoveActionTestSuite/[Tests][MoveActionTestSuite.MoveTileActionTest]
       name: MoveTileActionTest
       fullName: MoveActionTestSuite.MoveTileActionTest
-      resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.1547653
-      messages: 
+      resultStatus: 2
+      duration: 0.0065659
+      messages: 'SetUp : Unhandled log message: ''[Exception] NullReferenceException:
+        Object reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
       output: 'setting dimensions
 
-        Setup Complete. Culture name is xhedd(-2426536)
-=======
-      duration: 0.1518322
-      messages: 
-      output: 'setting dimensions
+        NullReferenceException: Object reference
+        not set to an instance of an object
 
-        Setup Complete. Culture name is slyrf(-3238944)
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
-
-        clearing
+        Setup Complete. Culture name
+        is vbvez(-11498)
 
 '
       stacktrace: 
@@ -2362,22 +2082,17 @@ MonoBehaviour:
       uniqueId: Tests.dll/MoveActionTestSuite/[Tests][MoveActionTestSuite.MoveTileActionWhenLargeTest]
       name: MoveTileActionWhenLargeTest
       fullName: MoveActionTestSuite.MoveTileActionWhenLargeTest
-      resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.1272319
-      messages: 
+      resultStatus: 2
+      duration: 0.0066512
+      messages: 'SetUp : Unhandled log message: ''[Exception] NullReferenceException:
+        Object reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
       output: 'setting dimensions
 
-        Setup Complete. Culture name is mqryi(-2426686)
-=======
-      duration: 0.1244899
-      messages: 
-      output: 'setting dimensions
+        NullReferenceException: Object reference
+        not set to an instance of an object
 
-        Setup Complete. Culture name is jxfou(-3239090)
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
-
-        clearing
+        Setup Complete. Culture name
+        is tblgf(-11644)
 
 '
       stacktrace: 
@@ -2393,22 +2108,17 @@ MonoBehaviour:
       uniqueId: Tests.dll/MoveActionTestSuite/[Tests][MoveActionTestSuite.RepelledActionTest]
       name: RepelledActionTest
       fullName: MoveActionTestSuite.RepelledActionTest
-      resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.1257914
-      messages: 
+      resultStatus: 2
+      duration: 0.007362
+      messages: 'SetUp : Unhandled log message: ''[Exception] NullReferenceException:
+        Object reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
       output: 'setting dimensions
 
-        Setup Complete. Culture name is rnqnc(-2426880)
-=======
-      duration: 0.1228586
-      messages: 
-      output: 'setting dimensions
+        NullReferenceException: Object reference
+        not set to an instance of an object
 
-        Setup Complete. Culture name is vgchd(-3239280)
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
-
-        clearing
+        Setup Complete. Culture name
+        is oyood(-11790)
 
 '
       stacktrace: 
@@ -2425,11 +2135,7 @@ MonoBehaviour:
       name: OverpopulationActionTestSuite
       fullName: OverpopulationActionTestSuite
       resultStatus: 2
-<<<<<<< HEAD
-      duration: 0.0507551
-=======
-      duration: 0.0350897
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0163622
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -2445,40 +2151,19 @@ MonoBehaviour:
       name: CanBecomeOverPopulated
       fullName: OverpopulationActionTestSuite.CanBecomeOverPopulated
       resultStatus: 2
-<<<<<<< HEAD
-      duration: 0.0137149
-      messages: 'System.InvalidOperationException : Sequence contains no elements'
+      duration: 0.0062279
+      messages: 'SetUp : Unhandled log message: ''[Exception] NullReferenceException:
+        Object reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
       output: 'setting dimensions
 
-        Setup Complete. Culture name is vchio(-2427030)
-=======
-      duration: 0.0122049
-      messages: "  Culture not in overpopulated state!\r\n  Expected: Overpopulated\r\n 
-        But was:  Starving\r\n"
-      output: 'setting dimensions
+        NullReferenceException: Object reference
+        not set to an instance of an object
 
-        Setup Complete. Culture name is jasqp(-3239426)
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
-
-        clearing
+        Setup Complete. Culture name
+        is aoawg(-11936)
 
 '
-<<<<<<< HEAD
-      stacktrace: "  at System.Linq.Enumerable.Last[TSource] (System.Collections.Generic.IEnumerable`1[T]
-        source) [0x00010] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 \r\n  at TestUtils.GetLastStateInUpdateList
-        (INonGenericCultureUpdate[] UpdateList) [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\Utils\\TestUtils.cs:25
-        \r\n  at OverpopulationActionTestSuite.CanBecomeOverPopulated () [0x00031]
-        in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\OverpopulationActionTestSuite.cs:25
-        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
-        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
-        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
-        System.Globalization.CultureInfo culture) [0x0006a] in <6073cf49ed704e958b8a66d540dea948>:0 "
-=======
-      stacktrace: 'at OverpopulationActionTestSuite.CanBecomeOverPopulated () [0x0002d]
-        in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\OverpopulationActionTestSuite.cs:24
-
-'
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -2491,39 +2176,20 @@ MonoBehaviour:
       uniqueId: Tests.dll/OverpopulationActionTestSuite/[Tests][OverpopulationActionTestSuite.TestPopulationDrop]
       name: TestPopulationDrop
       fullName: OverpopulationActionTestSuite.TestPopulationDrop
-<<<<<<< HEAD
       resultStatus: 2
-      duration: 0.02826
-      messages: "  Culture did not lose size!\r\n  Expected: -1\r\n  But was:  0\r\n"
+      duration: 0.0071941
+      messages: 'SetUp : Unhandled log message: ''[Exception] NullReferenceException:
+        Object reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
       output: 'setting dimensions
 
-        Setup Complete. Culture name is qdxzh(-2427180)
+        NullReferenceException: Object reference
+        not set to an instance of an object
 
-        There
-        needs to be one active TimeController script on a GameObject in your scene.
-
-        NullReferenceException:
-        Object reference not set to an instance of an object
-=======
-      resultStatus: 1
-      duration: 0.0138741
-      messages: 
-      output: 'setting dimensions
-
-        Setup Complete. Culture name is zawsv(-3239572)
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
-
-        clearing
+        Setup Complete. Culture name
+        is zuqdu(-12082)
 
 '
-<<<<<<< HEAD
-      stacktrace: 'at OverpopulationActionTestSuite.TestPopulationDrop () [0x00021]
-        in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\OverpopulationActionTestSuite.cs:35
-
-'
-=======
       stacktrace: 
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -2537,11 +2203,7 @@ MonoBehaviour:
       name: PerlinHeightmapGeneratorTestSuite
       fullName: PerlinHeightmapGeneratorTestSuite
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0109872
-=======
-      duration: 0.0098322
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0042759
       messages: 
       output: 
       stacktrace: 
@@ -2557,11 +2219,7 @@ MonoBehaviour:
       name: CanAssignExpectedValues
       fullName: PerlinHeightmapGeneratorTestSuite.CanAssignExpectedValues
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0034446
-=======
-      duration: 0.0030661
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0016579
       messages: 
       output: 
       stacktrace: 
@@ -2577,13 +2235,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][PopulationChangeIndicatorTestSuite][suite]
       name: PopulationChangeIndicatorTestSuite
       fullName: PopulationChangeIndicatorTestSuite
-      resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.050735
-=======
-      duration: 0.0539006
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
-      messages: 
+      resultStatus: 2
+      duration: 0.0136777
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -2597,22 +2251,17 @@ MonoBehaviour:
       uniqueId: Tests.dll/PopulationChangeIndicatorTestSuite/[Tests][PopulationChangeIndicatorTestSuite.CanGenerateIndicator]
       name: CanGenerateIndicator
       fullName: PopulationChangeIndicatorTestSuite.CanGenerateIndicator
-      resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.04307
-      messages: 
+      resultStatus: 2
+      duration: 0.0078705
+      messages: 'SetUp : Unhandled log message: ''[Exception] NullReferenceException:
+        Object reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
       output: 'setting dimensions
 
-        Setup Complete. Culture name is kbefw(-2427384)
-=======
-      duration: 0.0459496
-      messages: 
-      output: 'setting dimensions
+        NullReferenceException: Object reference
+        not set to an instance of an object
 
-        Setup Complete. Culture name is tjfaq(-3239734)
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
-
-        clearing
+        Setup Complete. Culture name
+        is lnedx(-12244)
 
 '
       stacktrace: 
@@ -2628,13 +2277,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][PopulationPipMakerTestSuite][suite]
       name: PopulationPipMakerTestSuite
       fullName: PopulationPipMakerTestSuite
-      resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.058038
-=======
-      duration: 0.0497509
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
-      messages: 
+      resultStatus: 2
+      duration: 0.0193636
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -2648,22 +2293,17 @@ MonoBehaviour:
       uniqueId: Tests.dll/PopulationPipMakerTestSuite/[Tests][PopulationPipMakerTestSuite.CanAddPip]
       name: CanAddPip
       fullName: PopulationPipMakerTestSuite.CanAddPip
-      resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0235916
-      messages: 
+      resultStatus: 2
+      duration: 0.0085013
+      messages: 'SetUp : Unhandled log message: ''[Exception] NullReferenceException:
+        Object reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
       output: 'setting dimensions
 
-        Setup Complete. Culture name is ioqsu(-2427554)
-=======
-      duration: 0.0185394
-      messages: 
-      output: 'setting dimensions
+        NullReferenceException: Object reference
+        not set to an instance of an object
 
-        Setup Complete. Culture name is sonmk(-3239900)
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
-
-        clearing
+        Setup Complete. Culture name
+        is wsxko(-12396)
 
 '
       stacktrace: 
@@ -2679,22 +2319,17 @@ MonoBehaviour:
       uniqueId: Tests.dll/PopulationPipMakerTestSuite/[Tests][PopulationPipMakerTestSuite.CanRemovePip]
       name: CanRemovePip
       fullName: PopulationPipMakerTestSuite.CanRemovePip
-      resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0246585
-      messages: 
+      resultStatus: 2
+      duration: 0.0074872
+      messages: 'SetUp : Unhandled log message: ''[Exception] NullReferenceException:
+        Object reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
       output: 'setting dimensions
 
-        Setup Complete. Culture name is jdbyp(-2427718)
-=======
-      duration: 0.0206749
-      messages: 
-      output: 'setting dimensions
+        NullReferenceException: Object reference
+        not set to an instance of an object
 
-        Setup Complete. Culture name is cwqll(-3240060)
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
-
-        clearing
+        Setup Complete. Culture name
+        is bgiup(-12548)
 
 '
       stacktrace: 
@@ -2711,11 +2346,7 @@ MonoBehaviour:
       name: TileFoodTestSuite
       fullName: TileFoodTestSuite
       resultStatus: 2
-<<<<<<< HEAD
-      duration: 0.1035436
-=======
-      duration: 0.1038025
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0557001
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -2731,11 +2362,7 @@ MonoBehaviour:
       name: CanCalculateProperFoodRateDesert
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateDesert
       resultStatus: 2
-<<<<<<< HEAD
-      duration: 0.0096449
-=======
-      duration: 0.0110949
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0064042
       messages: "  Did not calculate the right new food!\r\n  Expected: 0.44600001f\r\n 
         But was:  0.0f\r\n"
       output: 'setting dimensions
@@ -2760,11 +2387,7 @@ MonoBehaviour:
       name: CanCalculateProperFoodRateRainforest
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateRainforest
       resultStatus: 2
-<<<<<<< HEAD
-      duration: 0.0128964
-=======
-      duration: 0.0142675
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0080378
       messages: "  Did not calculate right new food!\r\n  Expected: 1.39900005f\r\n 
         But was:  0.0f\r\n"
       output: 'setting dimensions
@@ -2789,11 +2412,7 @@ MonoBehaviour:
       name: CanCalculateProperFoodRateTundra
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateTundra
       resultStatus: 2
-<<<<<<< HEAD
-      duration: 0.0128531
-=======
-      duration: 0.0129118
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0063265
       messages: "  Did not calculate right new food!\r\n  Expected: 0.0649999976f\r\n 
         But was:  0.0f\r\n"
       output: 'setting dimensions
@@ -2818,11 +2437,7 @@ MonoBehaviour:
       name: CanIncreaseFoodPerTick
       fullName: TileFoodTestSuite.CanIncreaseFoodPerTick
       resultStatus: 2
-<<<<<<< HEAD
-      duration: 0.0198362
-=======
-      duration: 0.0199104
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0111367
       messages: "  Food did not increase by expected amount!\r\n  Expected: 1.39999998f\r\n 
         But was:  0.0f\r\n"
       output: 'setting dimensions
@@ -2851,11 +2466,7 @@ MonoBehaviour:
       name: CanPreventAdditionalFood
       fullName: TileFoodTestSuite.CanPreventAdditionalFood
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0184161
-=======
-      duration: 0.0171489
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0099069
       messages: 
       output: 'setting dimensions
 
@@ -2876,11 +2487,7 @@ MonoBehaviour:
       name: CanSetFoodToMaxAtStart
       fullName: TileFoodTestSuite.CanSetFoodToMaxAtStart
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0178414
-=======
-      duration: 0.0172537
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.009365
       messages: 
       output: 'setting dimensions
 
@@ -2901,11 +2508,7 @@ MonoBehaviour:
       name: TileGreyscaleOverlayLinkTestSuite
       fullName: TileGreyscaleOverlayLinkTestSuite
       resultStatus: 2
-<<<<<<< HEAD
-      duration: 0.0112273
-=======
-      duration: 0.0104313
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0053138
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -2921,20 +2524,16 @@ MonoBehaviour:
       name: CanSetToGreyIfLow
       fullName: TileGreyscaleOverlayLinkTestSuite.CanSetToGreyIfLow
       resultStatus: 2
-<<<<<<< HEAD
-      duration: 0.0032992
-=======
-      duration: 0.0029732
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
-      messages: "  Test Food amount: 100 -- Greyscale Overlay is not expected transparency!\r\n 
-        Expected: 0.5f\r\n  But was:  0.0f\r\n"
-      output: 'clearing
+      duration: 0.0025332
+      messages: 'SetUp : Unhandled log message: ''[Exception] NullReferenceException:
+        Object reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
+      output: 'NullReferenceException: Object reference not set to an instance of
+        an object
+
+        clearing
 
 '
-      stacktrace: 'at TileGreyscaleOverlayLinkTestSuite.CanSetToGreyIfLow () [0x000a7]
-        in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\TileGreyscaleOverlayLinkTestSuite.cs:48
-
-'
+      stacktrace: 
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -2948,11 +2547,7 @@ MonoBehaviour:
       name: TurnTestSuite
       fullName: TurnTestSuite
       resultStatus: 2
-<<<<<<< HEAD
-      duration: 0.0208665
-=======
-      duration: 0.0178652
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0121066
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -2968,11 +2563,7 @@ MonoBehaviour:
       name: CanChangeTurnAfterUpdated
       fullName: TurnTestSuite.CanChangeTurnAfterUpdated
       resultStatus: 1
-<<<<<<< HEAD
-      duration: 0.0038951
-=======
-      duration: 0.0009822
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0029821
       messages: 
       output: 
       stacktrace: 
@@ -2989,11 +2580,7 @@ MonoBehaviour:
       name: CanGetPendingUpdatesFor
       fullName: TurnTestSuite.CanGetPendingUpdatesFor
       resultStatus: 2
-<<<<<<< HEAD
-      duration: 0.0027621
-=======
-      duration: 0.0037772
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      duration: 0.0032051
       messages: 'TearDown : System.NullReferenceException : Object reference not
         set to an instance of an object
 
@@ -3018,19 +2605,7 @@ MonoBehaviour:
       name: CanUpdateAllCultures
       fullName: TurnTestSuite.CanUpdateAllCultures
       resultStatus: 2
-<<<<<<< HEAD
-      duration: 0.0025413
-      messages: 'System.NullReferenceException : Object reference not set to an instance
-        of an object
-
-        TearDown : System.NullReferenceException : Object reference
-        not set to an instance of an object
-
-        TearDown : Unhandled log message:
-        ''[Error] There needs to be one active EventManager script on a GameObject
-        in your scene.''. Use UnityEngine.TestTools.LogAssert.Expect'
-=======
-      duration: 0.002461
+      duration: 0.0012728
       messages: 'System.NullReferenceException : Object reference not set to an instance
         of an object
 
@@ -3040,7 +2615,6 @@ MonoBehaviour:
         TearDown : Unhandled
         log message: ''[Error] There needs to be one active EventManager script on
         a GameObject in your scene.''. Use UnityEngine.TestTools.LogAssert.Expect'
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
       output: 'There needs to be one active EventManager script on a GameObject in
         your scene.
 
@@ -3062,17 +2636,11 @@ MonoBehaviour:
       name: TestAddUpdate
       fullName: TurnTestSuite.TestAddUpdate
       resultStatus: 2
-<<<<<<< HEAD
-      duration: 0.0017835
-=======
-      duration: 0.0016988
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
-      messages: 'TearDown : System.NullReferenceException : Object reference not
-        set to an instance of an object
-
-        TearDown : Unhandled log message:
-        ''[Error] There needs to be one active EventManager script on a GameObject
-        in your scene.''. Use UnityEngine.TestTools.LogAssert.Expect'
+      duration: 0.0008424
+      messages: "  Expected: 1\r\n  But was:  5\r\n\r\nTearDown : System.NullReferenceException
+        : Object reference not set to an instance of an object\r\nTearDown : Unhandled
+        log message: '[Error] There needs to be one active EventManager script on
+        a GameObject in your scene.'. Use UnityEngine.TestTools.LogAssert.Expect"
       output: 'There needs to be one active EventManager script on a GameObject in
         your scene.
 
@@ -3086,46 +2654,34 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1070
       parentUniqueId: Tests.dll/[Tests][TurnTestSuite][suite]
-<<<<<<< HEAD
-    m_ResultText: 'CanUpdateAllCultures (0.003s)
-
-      ---
-
-      System.NullReferenceException
-      : Object reference not set to an instance of an object
-
-      TearDown : System.NullReferenceException
-      : Object reference not set to an instance of an object
-
-      TearDown : Unhandled
-      log message: ''[Error] There needs to be one active EventManager script on
-      a GameObject in your scene.''. Use UnityEngine.TestTools.LogAssert.Expect
-
-      ---
-
-      There
-      needs to be one active EventManager script on a GameObject in your scene.
-
-      There
-      needs to be one active EventManager script on a GameObject in your scene.'
-    m_ResultStacktrace: 
+    m_ResultText: "TestSplitCulture (0.031s)\n---\nSystem.ArgumentException : The
+      Object you want to instantiate is null.\n---\nat UnityEngine.Object.Instantiate[T]
+      (T original) [0x0003d] in <40205bb2cb25478a9cb0f5e54cf11441>:0 \r\n  at CulturePool.<Awake>b__5_0
+      () [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\CultureScripts\\CulturePool.cs:30
+      \r\n  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00014] in <40205bb2cb25478a9cb0f5e54cf11441>:0
+      \r\n  at CulturePool.GetCulture () [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\CultureScripts\\CulturePool.cs:17
+      \r\n  at Culture.SplitCultureFromParent () [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\CultureScripts\\CultureComponents\\Culture.cs:194
+      \r\n  at CultureTestSuite.TestSplitCulture () [0x00018] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\CultureTestSuite.cs:23
+      \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
+      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+      invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo
+      culture) [0x0006a] in <6073cf49ed704e958b8a66d540dea948>:0\n---\nsetting dimensions\r\nSetup
+      Complete. Culture name is dnmrw(-163650)\r\nclearing"
+    m_ResultStacktrace: "  at UnityEngine.Object.Instantiate[T] (T original) [0x0003d]
+      in <40205bb2cb25478a9cb0f5e54cf11441>:0 \r\n  at CulturePool.<Awake>b__5_0
+      () [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\CultureScripts\\CulturePool.cs:30
+      \r\n  at UnityEngine.Pool.ObjectPool`1[T].Get () [0x00014] in <40205bb2cb25478a9cb0f5e54cf11441>:0
+      \r\n  at CulturePool.GetCulture () [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\CultureScripts\\CulturePool.cs:17
+      \r\n  at Culture.SplitCultureFromParent () [0x00000] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\CultureScripts\\CultureComponents\\Culture.cs:194
+      \r\n  at CultureTestSuite.TestSplitCulture () [0x00018] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\CultureTestSuite.cs:23
+      \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
+      at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+      invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo
+      culture) [0x0006a] in <6073cf49ed704e958b8a66d540dea948>:0 "
     m_TestListState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 0f99fa38
-      m_LastClickedID: 955947279
-=======
-    m_ResultText: "CanSetToGreyIfLow (0.003s)\n---\nTest Food amount: 100 -- Greyscale
-      Overlay is not expected transparency!\r\n  Expected: 0.5f\r\n  But was:  0.0f\n---\nat
-      TileGreyscaleOverlayLinkTestSuite.CanSetToGreyIfLow () [0x000a7] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\TileGreyscaleOverlayLinkTestSuite.cs:48\n---\nclearing"
-    m_ResultStacktrace: 'at TileGreyscaleOverlayLinkTestSuite.CanSetToGreyIfLow ()
-      [0x000a7] in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\TileGreyscaleOverlayLinkTestSuite.cs:48
-
-'
-    m_TestListState:
-      scrollPos: {x: 0, y: 300}
-      m_SelectedIDs: 8709d72f
-      m_LastClickedID: 802621831
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      scrollPos: {x: 0, y: 360}
+      m_SelectedIDs: fe3dfcab
+      m_LastClickedID: -1409532418
       m_ExpandedIDs: bbb6ef82ce07e386c6ec6ba11cb03da8c2778cab371506b518e194b58e1814b84580fecc56c0c1dcaf90fae781f0ffed5fdcc4f89d8029056eca7a08b26d2713ad6ec22132b4d12703fe443357683e3426ecfc371a04ba42b71a114750a8734ec10a124feb084855a0eedc6e7c3b3c71ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -3224,17 +2780,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 494.6667
+    x: 723.3334
     y: 72.66667
-    width: 1582.0001
-    height: 687
-=======
-    x: 444.6667
-    y: 72.66667
-    width: 1396
-    height: 483
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+    width: 1353.3335
+    height: 487.66666
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -3244,8 +2793,8 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: -101, y: -1.333313}
-      snapOffsetDelta: {x: 0, y: -24.666687}
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: -98.666626, y: -26}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -3266,11 +2815,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-<<<<<<< HEAD
       snapOffset: {x: 0, y: 0}
-=======
-      snapOffset: {x: 0, y: 25}
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-scene-view-toolbar
@@ -3440,15 +2985,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-<<<<<<< HEAD
-    m_Target: {x: 6.0940266, y: 1.4705334, z: -0.089193605}
+    m_Target: {x: 32.88417, y: 11.630175, z: -0.099000774}
     speed: 2
-    m_Value: {x: 5.8639374, y: 1.4288226, z: -0.08694713}
-=======
-    m_Target: {x: 21.171812, y: 16.318033, z: 3.300602}
-    speed: 2
-    m_Value: {x: 21.190409, y: 16.264463, z: 3.2027729}
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+    m_Value: {x: 32.859783, y: 11.723193, z: -0.10141157}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -3499,15 +3038,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-<<<<<<< HEAD
-    m_Target: 5.2168336
+    m_Target: 5.1162815
     speed: 2
-    m_Value: 4.992185
-=======
-    m_Target: 0.5427703
-    speed: 2
-    m_Value: 0.51939744
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+    m_Value: 5.3573627
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -3552,17 +3085,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 494.6667
+    x: 723.3334
     y: 72.66667
-    width: 1582.0001
-    height: 687
-=======
-    x: 444.6667
-    y: 72.66667
-    width: 1396
-    height: 483
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+    width: 1353.3335
+    height: 487.66666
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -3581,11 +3107,7 @@ MonoBehaviour:
   m_UseMipMap: 0
   m_VSyncEnabled: 0
   m_Gizmos: 0
-<<<<<<< HEAD
   m_Stats: 0
-=======
-  m_Stats: 1
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
   m_SelectedSizes: 03000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
@@ -3613,40 +3135,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-<<<<<<< HEAD
-      width: 1582.0001
-      height: 666
-    m_Scale: {x: 0.925, y: 0.925}
-    m_Translation: {x: 791.00006, y: 333}
-=======
-      width: 1396
-      height: 462
-    m_Scale: {x: 0.64166665, y: 0.64166665}
-    m_Translation: {x: 698, y: 231}
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+      width: 1353.3335
+      height: 466.66666
+    m_Scale: {x: 0.6481482, y: 0.6481481}
+    m_Translation: {x: 676.66675, y: 233.33333}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-<<<<<<< HEAD
-      x: -855.1352
+      x: -1044.0001
       y: -360
-      width: 1710.2704
+      width: 2088.0002
       height: 720
     m_MinimalGUI: 1
-  m_defaultScale: 0.925
-  m_LastWindowPixelSize: {x: 2373.0002, y: 1030.5}
-=======
-      x: -1087.7922
-      y: -360
-      width: 2175.5845
-      height: 720
-    m_MinimalGUI: 1
-  m_defaultScale: 0.64166665
-  m_LastWindowPixelSize: {x: 2094, y: 724.5}
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+  m_defaultScale: 0.6481481
+  m_LastWindowPixelSize: {x: 2030.0002, y: 731.5}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -3673,15 +3178,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-    y: 811.3334
-    width: 1695.6666
-    height: 539.6667
-=======
-    y: 359.33334
-    width: 1841.6666
-    height: 991.66675
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+    y: 581.3334
+    width: 2077.6667
+    height: 769.66675
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -3699,29 +3198,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Scripts/CultureScripts/CultureComponents
+    - Assets/Resources/Scripts/CultureScripts/CultureComponents/AffinitySystem
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Scripts/CultureScripts/CultureComponents
+  - Assets/Resources/Scripts/CultureScripts/CultureComponents/AffinitySystem
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\wenze\Documents\Unity\Eons
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 4e620000
-    m_LastClickedID: 25166
-    m_ExpandedIDs: 000000000462000006620000086200000a6200000c6200000e62000010620000126200001462000016620000186200001a6200001c6200001e62000000ca9a3bffffff7f
-=======
-    scrollPos: {x: 0, y: 152.33325}
-    m_SelectedIDs: 48690000
-    m_LastClickedID: 26952
-    m_ExpandedIDs: 00000000f4610000f6610000f8610000fa610000fc610000fe61000000620000026200000462000006620000086200000a6200000c6200000e62000000ca9a3bffffff7f
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+    m_SelectedIDs: 8e620000
+    m_LastClickedID: 25230
+    m_ExpandedIDs: 00000000e25a0000e45a0000e65a0000e85a00009062000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3749,11 +3241,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-<<<<<<< HEAD
-    m_ExpandedIDs: 000000000462000006620000086200000a6200000c6200000e62000010620000126200001462000016620000186200001a6200001c6200001e620000
-=======
-    m_ExpandedIDs: 00000000f4610000f6610000f8610000fa610000fc610000fe61000000620000026200000462000006620000086200000a6200000c6200000e620000
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+    m_ExpandedIDs: 00000000e25a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -3778,15 +3266,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-<<<<<<< HEAD
-    m_SelectedInstanceIDs: 8ea0feff
-    m_LastClickedInstanceID: -89970
-    m_HadKeyboardFocusLastEvent: 1
-=======
-    m_SelectedInstanceIDs: 0c8bceff
-    m_LastClickedInstanceID: -3241204
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
     m_ExpandedInstanceIDs: c62300009e5f0000946c0000ca590000e65b0000a8700000345d00003e5a000080720000565a0000e693ffffc47100004484000038840000b45c0000cc5c000000000000d45b00007c5d0000785f0000705b0000545c0000485d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -3836,15 +3318,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-    y: 780.6667
+    y: 581.3334
     width: 2077.6667
-    height: 570.3334
-=======
-    y: 866
-    width: 1841.6666
-    height: 485.00006
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+    height: 769.66675
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -3870,26 +3346,16 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-    y: 922.6667
-    width: 1841.6666
-    height: 428.33337
-=======
-    y: 359.33334
-    width: 1841.6666
-    height: 991.66675
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+    y: 581.3334
+    width: 2077.6667
+    height: 769.66675
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-<<<<<<< HEAD
-  m_LastSelectedObjectID: -1290
-=======
-  m_LastSelectedObjectID: -3241204
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+  m_LastSelectedObjectID: -1596
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -3911,15 +3377,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-    y: 800.6667
-    width: 1841.6666
-    height: 550.3334
-=======
-    y: 359.33334
-    width: 1841.6666
-    height: 991.66675
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+    y: 1076.6667
+    width: 2077.6667
+    height: 274.33337
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -4051,15 +3511,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-    y: 811.3334
-    width: 1695.6666
-    height: 539.6667
-=======
-    y: 576.6667
-    width: 1841.6666
-    height: 774.3334
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+    y: 581.3334
+    width: 2077.6667
+    height: 769.66675
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -4096,22 +3550,16 @@ MonoBehaviour:
         m_PaneScroll: {x: 0, y: 0}
         m_ViewType: 0
         updateViewLive: 0
-        m_CurrentFrameIndex: -1
+        m_CurrentFrameIndex: 85758
         m_HierarchyOverruledThreadFromSelection: 0
         m_ProfilerViewFilteringOptions: 1
         m_FrameDataHierarchyView:
           m_Serialized: 1
           m_TreeViewState:
             scrollPos: {x: 0, y: 0}
-<<<<<<< HEAD
-            m_SelectedIDs: f6000000
-            m_LastClickedID: 246
-            m_ExpandedIDs: 0400000037000000440000007f000000e2000000
-=======
-            m_SelectedIDs: 
-            m_LastClickedID: 0
-            m_ExpandedIDs: 040000004400000047000000510000007f000000e8000000ea000000f9000000fd000000fe000000050100000c0100000e0100001d01000030010000320100004b010000590100005a010000
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+            m_SelectedIDs: 04000000
+            m_LastClickedID: 4
+            m_ExpandedIDs: 040000001200000037000000440000007f000000
             m_RenameOverlay:
               m_UserAcceptedRename: 0
               m_Name: 
@@ -4131,11 +3579,7 @@ MonoBehaviour:
             m_SearchString: 
           m_MultiColumnHeaderState:
             m_Columns:
-<<<<<<< HEAD
             - width: 1239.6666
-=======
-            - width: 1417.6666
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
               sortedAscending: 1
               headerContent:
                 m_Text: Overview
@@ -4226,11 +3670,7 @@ MonoBehaviour:
               canSort: 1
               userData: 0
             - width: 80
-<<<<<<< HEAD
-              sortedAscending: 1
-=======
               sortedAscending: 0
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
               headerContent:
                 m_Text: Self ms
                 m_Image: {fileID: 0}
@@ -4260,11 +3700,7 @@ MonoBehaviour:
               canSort: 1
               userData: 0
             m_VisibleColumns: 0000000001000000020000000300000004000000050000000600000007000000
-<<<<<<< HEAD
-            m_SortedColumns: 050000000600000000000000
-=======
-            m_SortedColumns: 05000000
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+            m_SortedColumns: 01000000060000000000000005000000
           m_ThreadIndexInThreadNames: 0
           m_DetailedViewType: 0
           m_DetailedViewSpliterState:
@@ -4569,11 +4005,7 @@ MonoBehaviour:
                 m_SortedColumns: 03000000
           m_FullThreadName: Main Thread
           m_ThreadName: Main Thread
-<<<<<<< HEAD
-          <threadId>k__BackingField: 380
-=======
-          <threadId>k__BackingField: 20128
->>>>>>> 9110bf8fe4618a00a695e102b0305ad6ac2df074
+          <threadId>k__BackingField: 22400
           <threadIndex>k__BackingField: 0
           m_GroupName: 
     - rid: 712732069685362689

@@ -20,29 +20,29 @@ public class TestUtils
     }
 
 
-    public static Culture.State GetLastStateInUpdateList(INonGenericCultureUpdate[] UpdateList)
+    public static Culture.State GetLastStateInUpdateList(CultureUpdate<Culture.State>[] UpdateList, Culture c)
     {
-        return (Culture.State)UpdateList.Where(u => u.GetCultureChange().GetType() == typeof(Culture.State)).Last().GetCultureChange();
+        return UpdateList.Where(u => u.Target == c).Last().CultureChangeValue;
     }
 
-    public static int GetCombinedPopulationInUpdateList(INonGenericCultureUpdate[] UpdateList)
+    public static int GetCombinedPopulationInUpdateList(CultureUpdate<int>[] UpdateList, Culture c)
     {
-        return UpdateList.Where(u => u.GetCultureChange().GetType() == typeof(int)).Sum(u => (int)u.GetCultureChange());
+        return UpdateList.Where(u => u.Target == c).Sum(u => u.CultureChangeValue);
     }
 
-    public static float GetCombinedFoodChangeInUpdateList(INonGenericCultureUpdate[] UpdateList)
+    public static float GetCombinedFoodChangeInUpdateList(CultureUpdate<float>[] UpdateList, Culture c)
     {
-        return UpdateList.Where(u => u.GetCultureChange().GetType() == typeof(float)).Sum(u => (float) u.GetCultureChange());
+        return UpdateList.Where(u => u.Target == c).Sum(u => u.CultureChangeValue);
     }
 
-    public static Color GetLastColorInUpdateList(INonGenericCultureUpdate[] UpdateList)
+    public static Color GetLastColorInUpdateList(CultureUpdate<Color>[] UpdateList, Culture c)
     {
-        return (Color)UpdateList.Where(u => u.GetCultureChange().GetType() == typeof(Color)).Last().GetCultureChange();
+        return (Color)UpdateList.Where(u => u.Target == c).Last().CultureChangeValue;
     }
 
-    public static Tile GetLastTileInUpdateList(INonGenericCultureUpdate[] UpdateList)
+    public static Tile GetLastTileInUpdateList(CultureUpdate<Tile>[] UpdateList, Culture c)
     {
-        return (Tile)UpdateList.Where(u => u.GetCultureChange().GetType() == typeof(Tile)).Last().GetCultureChange();
+        return (Tile)UpdateList.Where(u => u.Target == c).Last().CultureChangeValue;
     }
 
 }

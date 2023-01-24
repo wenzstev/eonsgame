@@ -632,7 +632,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5695180184468728085, guid: 3681249039e02d34ebfe54f4c812318a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3681249039e02d34ebfe54f4c812318a, type: 3}
@@ -822,6 +822,51 @@ PrefabInstance:
       objectReference: {fileID: 1218317985}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 375657675557a8e45a07bee945f4df02, type: 3}
+--- !u!1 &1917780757
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1917780759}
+  - component: {fileID: 1917780758}
+  m_Layer: 0
+  m_Name: CulturePool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1917780758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917780757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74e83211c12f24a429183a18736c8a94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _culturePrefab: {fileID: 5402215717768767427, guid: 91bd2b84f71ef374188cda7ba741b0a6, type: 3}
+--- !u!4 &1917780759
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917780757}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 23.100258, y: 23.100729, z: -0.11686785}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1389126394050262255
 PrefabInstance:
   m_ObjectHideFlags: 0

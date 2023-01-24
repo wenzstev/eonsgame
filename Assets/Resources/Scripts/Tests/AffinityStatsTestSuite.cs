@@ -12,7 +12,7 @@ public class AffinityStatsTestSuite
     [SetUp]
     public void SetUpAffinityStatsTest()
     {
-        TestAffinityStats = new AffinityStats();
+        TestAffinityStats = AffinityStats.InitializeStats();
     }
 
 
@@ -38,7 +38,7 @@ public class AffinityStatsTestSuite
     [Test]
     public void CanCombineAffinity()
     {
-        AffinityStats SecondStats = new AffinityStats();
+        AffinityStats SecondStats = AffinityStats.InitializeStats();
 
         HarvestForDays(4, TileDrawer.BiomeType.Grassland, TestAffinityStats);
         HarvestForDays(5, TileDrawer.BiomeType.TemperateRainforest, TestAffinityStats);
