@@ -3,7 +3,7 @@ using UnityEngine;
 
 
 [System.Serializable]
-public class GompertzCurve : ICurve
+public struct GompertzCurve : ICurve
 {
     public float Asymptote;
     public float XDisplacement;

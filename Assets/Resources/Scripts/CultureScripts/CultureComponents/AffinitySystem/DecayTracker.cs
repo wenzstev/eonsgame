@@ -55,6 +55,10 @@ public struct DecayTracker
 
     public static DecayTracker CombineDecayRates(DecayTracker first, DecayTracker second, float ratio)
     {
-        return new DecayTracker(Mathf.FloorToInt(Mathf.Lerp(first.TotalDaysHarvested, second.TotalDaysHarvested, ratio)), Mathf.FloorToInt(Mathf.Lerp(first.DaysSinceHarvested, second.DaysSinceHarvested, ratio)));
+        second._daysSinceHarvested = Mathf.FloorToInt(Mathf.Lerp(first.DaysSinceHarvested, second.DaysSinceHarvested, ratio));
+        second._totalDaysHarvested = Mathf.FloorToInt(Mathf.Lerp(first.TotalDaysHarvested, second.TotalDaysHarvested, ratio));
+        second._currentDecayRate = .5f;
+
+        return second;
     }
 }

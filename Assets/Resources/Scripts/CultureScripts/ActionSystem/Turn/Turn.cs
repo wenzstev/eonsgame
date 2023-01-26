@@ -3,25 +3,28 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class Turn
+public struct Turn
 {
-    static Turn currentTurn;
+    static Turn currentTurn = InitializeTurn();
+
+    static Turn InitializeTurn()
+    {
+        Turn firstTurn = new Turn();
+        firstTurn.UpdateHolder = new UpdateHolder();
+        return firstTurn;
+    }
 
     public enum TurnState
     {
+        Next,
         Executing,
-        Next, 
         Complete
     };
 
     public static Turn CurrentTurn
     {
         get {
-            if (currentTurn == null)
-            {
-                Debug.Log("getting new turn");
-                currentTurn = new Turn();
-            } else if (currentTurn.CurState != TurnState.Next)
+            if (currentTurn.CurState != TurnState.Next)
             {
                 currentTurn = new Turn(currentTurn.UpdateHolder);
             }
@@ -42,11 +45,6 @@ public class Turn
         cur.CurState = TurnState.Complete;
     }
 
-    Turn()
-    {
-        UpdateHolder = new UpdateHolder();
-        CurState = TurnState.Next;
-    }
 
     Turn(UpdateHolder holder)
     {

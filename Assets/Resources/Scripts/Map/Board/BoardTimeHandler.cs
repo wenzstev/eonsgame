@@ -15,15 +15,20 @@ public class BoardTimeHandler : MonoBehaviour
         }
     }
 
+    Dictionary<string, object> boardStatsAgeDict;
+
+
     private void Start()
     {
         EventManager.StartListening("Tick", IncrementBoardAge);
         EventManager.StartListening("RequestBoardAge", ProvideBoardAge);
+        boardStatsAgeDict = new Dictionary<string, object>() { { "age", 0 } };
     }
 
     void SendBoardAge()
     {
-        EventManager.TriggerEvent("NewBoardAge", new Dictionary<string, object> { { "age", BoardStats.Age } });
+        boardStatsAgeDict["age"] = BoardStats.Age;
+        EventManager.TriggerEvent("NewBoardAge", boardStatsAgeDict);
     }
 
     void IncrementBoardAge(Dictionary<string, object> empty)

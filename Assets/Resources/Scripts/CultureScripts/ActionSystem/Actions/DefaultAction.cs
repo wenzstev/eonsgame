@@ -71,7 +71,7 @@ public static class DefaultAction
         Turn.AddIntUpdate(CultureUpdateGetter.GetPopulationUpdate(cultureTurnInfo, Culture, GrowPopulation(Culture)));
 
         // need to change influence into a side effect?
-        if (Culture.CultureHandler.GetAllSettledCultures().Length > 1 && Random.value < .1f)
+        if (Culture.CultureHandler.GetAllSettledCultures().Count > 1 && Random.value < .1f)
         {
             //Debug.Log("influencing neighbors");
             CultureInfluenceAction.ExecuteTurn(cultureTurnInfo);

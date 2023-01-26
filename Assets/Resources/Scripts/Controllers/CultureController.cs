@@ -6,6 +6,7 @@ using UnityEngine;
 public class CultureController : MonoBehaviour
 {
     List<CultureBrain> AllCultures;
+    List<CultureBrain> _culturesToExecute;
 
     private void Start()
     {
@@ -48,8 +49,8 @@ public class CultureController : MonoBehaviour
 
     void ExecuteAllCultureTurns()
     {
-        CultureBrain[] culturesToUpdate = AllCultures.ToArray(); 
-        foreach(CultureBrain c in culturesToUpdate)
+        CultureBrain[] culturesToExecute = AllCultures.ToArray();
+        foreach(CultureBrain c in culturesToExecute)
         {
             if(c.isActiveAndEnabled) c.ExecuteCultureTurn();
         }

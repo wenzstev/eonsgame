@@ -28,9 +28,18 @@ public class Culture : MonoBehaviour
 
 
     public event EventHandler<OnPopulationChangedEventArgs> OnPopulationChanged;
+    OnPopulationChangedEventArgs onPopulationChangedEventArgs;
+
     public event EventHandler<OnCultureNameChangedEventArgs> OnNameChanged;
+    OnCultureNameChangedEventArgs onCultureNameChangedEventArgs;
+
     public event EventHandler<OnCultureDestroyedEventArgs> OnCultureDestroyed;
+    OnCultureDestroyedEventArgs onCultureDestroyedEventArgs;
+
     public event EventHandler<OnColorChangedEventArgs> OnColorChanged;
+    OnColorChangedEventArgs onColorChangedEventArgs;
+
+    Dictionary<string, object> cultureDict;
 
     bool isQuitting = false;
 
@@ -130,6 +139,14 @@ public class Culture : MonoBehaviour
         layerMode = GetComponent<SpriteRenderer>();
         //circleMode = transform.GetChild(1).GetComponent<SpriteRenderer>();
         decisionMaker = new DecisionMaker(this);
+        _affinityManager = GetComponent<AffinityManager>();
+
+        // cache events to prevent gc allocation
+        onPopulationChangedEventArgs = new OnPopulationChangedEventArgs() { Culture = this };
+        onCultureDestroyedEventArgs = new OnCultureDestroyedEventArgs() { DestroyedCulture = this };
+        onCultureNameChangedEventArgs = new OnCultureNameChangedEventArgs();
+        onColorChangedEventArgs = new OnColorChangedEventArgs();
+        cultureDict = new Dictionary<string, object>() { { "culture", this } };
     }
 
     public void Init(Tile t, int InitialPopulation)
@@ -145,7 +162,7 @@ public class Culture : MonoBehaviour
         SetColor(color);
         _affinityManager = GetComponent<AffinityManager>();
         AffinityManager.Initialize();
-        EventManager.TriggerEvent("CultureCreated", new Dictionary<string, object> { { "culture", this } });
+        EventManager.TriggerEvent("CultureCreated", cultureDict);
     }
 
     public void InitFromParent(Culture parent, int newPop)
@@ -156,12 +173,10 @@ public class Culture : MonoBehaviour
         gameObject.name = name;
         //transform.SetParent(t.gameObject.transform);
         SetColor(parent.Color);
-        _affinityManager = GetComponent<AffinityManager>();
-        AffinityManager.Initialize();
-        AffinityManager.SetStats(parent.GetComponent<AffinityManager>().GetStatCopy());
+        AffinityManager.Initialize(parent.AffinityManager);
 
 
-        EventManager.TriggerEvent("CultureCreated", new Dictionary<string, object> { { "culture", this } });
+        EventManager.TriggerEvent("CultureCreated", cultureDict);
 
     }
 
@@ -231,7 +246,8 @@ public class Culture : MonoBehaviour
             DestroyCulture();
         }
 
-        if (num != 0) OnPopulationChanged?.Invoke(this, new OnPopulationChangedEventArgs() { PopChange = num});
+        onPopulationChangedEventArgs.PopChange = num;
+        if (num != 0) OnPopulationChanged?.Invoke(this, onPopulationChangedEventArgs); ;
     }
 
     void SwapTile(Tile newTile)
@@ -277,7 +293,9 @@ public class Culture : MonoBehaviour
         name = newName;
         gameObject.name = newName;
         CultureHandler?.RenameCulture(this, oldName);
-        OnNameChanged?.Invoke(this, new OnCultureNameChangedEventArgs() {NewName = newName, OldName = oldName});
+        onCultureNameChangedEventArgs.NewName = newName;
+        onCultureNameChangedEventArgs.OldName = oldName;
+        OnNameChanged?.Invoke(this, onCultureNameChangedEventArgs);
     }
 
     public Color mutateColor(Color parentColor)
@@ -301,8 +319,8 @@ public class Culture : MonoBehaviour
         if (!isQuitting)
         {
             RemoveFromTile();
-            EventManager.TriggerEvent("CultureDestroyed", new Dictionary<string, object> { { "culture", this } });
-            OnCultureDestroyed?.Invoke(this, new OnCultureDestroyedEventArgs() { DestroyedCulture = this });
+            EventManager.TriggerEvent("CultureDestroyed", cultureDict);
+            OnCultureDestroyed?.Invoke(this, onCultureDestroyedEventArgs);
         }
         CulturePool.ReleaseCulture(this);
     }
@@ -353,6 +371,7 @@ public class Culture : MonoBehaviour
 
     public class OnPopulationChangedEventArgs : EventArgs
     {
+        public Culture Culture;
         public int PopChange;
     }
 
