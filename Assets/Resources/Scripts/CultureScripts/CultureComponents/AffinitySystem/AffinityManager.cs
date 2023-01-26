@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
-using System.Linq;
+using UnityEngine.Profiling;
 
 [Serializable]
 public class AffinityManager : MonoBehaviour
@@ -11,14 +11,14 @@ public class AffinityManager : MonoBehaviour
     TileDrawer.BiomeType _currentBiome;
 
     [SerializeField]
-    GompertzCurve AffinityGrowthRate;
+    public GompertzCurve AffinityGrowthRate;
 
     [SerializeField]
     AffinityStats affinityStats;
 
     public float Asymptote = -1f;
     public float XDisplacement = 2;
-    public float GrowthRate = .5f;
+    public float GrowthRate = .3f;
     public float YDisplacement = 1f;
 
     public event EventHandler<OnAffinityChangedEventArgs> OnAffinityChanged;
@@ -36,6 +36,13 @@ public class AffinityManager : MonoBehaviour
         AffinityGrowthRate = new GompertzCurve(Asymptote, XDisplacement, GrowthRate, YDisplacement);
         _currentBiome = TileDrawer.BiomeType.Barren;
         affinityStats = AffinityStats.InitializeStats();
+    }
+
+    public void Initialize(AffinityManager parent)
+    {
+        AffinityGrowthRate = new GompertzCurve(Asymptote, XDisplacement, GrowthRate, YDisplacement);
+        affinityStats = parent.GetStatCopy();
+        _currentBiome = TileDrawer.BiomeType.Barren;
     }
 
     public void SetStats(AffinityStats stats)

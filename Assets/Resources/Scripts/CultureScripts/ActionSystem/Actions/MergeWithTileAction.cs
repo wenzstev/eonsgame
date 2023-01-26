@@ -11,7 +11,7 @@ public static class MergeWithTileAction
         CultureHandler cultureHandler = newTile.GetComponentInChildren<CultureHandler>();
 
         //Debug.Log($"merging culture {Culture}({Culture.GetHashCode()}) with tile {NewTile}");
-        if (cultureHandler.HasCultureByName(culture.name))
+        if (cultureHandler.HasCultureByName(culture.Name))
         {
             AttemptToCombineCultures(cultureTurnInfo, cultureHandler);
             return;

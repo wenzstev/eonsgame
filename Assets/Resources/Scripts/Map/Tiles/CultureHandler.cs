@@ -39,12 +39,12 @@ public class CultureHandler : MonoBehaviour
         CultureContainer.AddCulture(c);
     }
 
-    public Culture[] GetAllSettledCultures()
+    public List<Culture> GetAllSettledCultures()
     {
         return CultureContainer.GetAllCultures();
     }
 
-    public Culture[] GetAllStagedCultures()
+    public List<Culture> GetAllStagedCultures()
     {
         return CultureStaging.GetAllCultures();
     }

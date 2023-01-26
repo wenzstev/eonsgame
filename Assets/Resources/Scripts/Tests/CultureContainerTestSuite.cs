@@ -31,7 +31,7 @@ public class CultureContainerTestSuite : BasicTest
     public void CanAddCultureToContainer()
     {
         TestCultureContainer.AddCulture(TestCultureA);
-        Assert.AreEqual(1, TestCultureContainer.GetAllCultures().Length, "CultureContainer does not have expected number of cultures!");
+        Assert.AreEqual(1, TestCultureContainer.GetAllCultures().Count, "CultureContainer does not have expected number of cultures!");
     }
 
     [Test]
@@ -77,7 +77,7 @@ public class CultureContainerTestSuite : BasicTest
         yield return null;
 
         Assert.AreEqual(TestCultureB, TestCultureContainer.GetAllCultures()[0]);
-        Assert.AreEqual(1, TestCultureContainer.GetAllCultures().Length);
+        Assert.AreEqual(1, TestCultureContainer.GetAllCultures().Count);
     }
 
     [TearDown]

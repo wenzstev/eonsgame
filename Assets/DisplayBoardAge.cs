@@ -40,7 +40,7 @@ public class DisplayBoardAge : MonoBehaviour
         int months = daysLeftInYear / 30;
         int daysLeftInMonth = daysLeftInYear % 30;
 
-        return $"{years} / {months} / {daysLeftInMonth}";
+        return $"{years} / {months} / {daysLeftInMonth}"; // creates some garbage, unsure how to fix
     }
 
     private void OnDestroy()

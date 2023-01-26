@@ -194,9 +194,9 @@ MonoBehaviour:
   population: 0
   spreadChance: 0.000416
   shareCultureChance: 0.0025
-  baseMutationMax: 0.0046
+  baseMutationMax: 0.0025
   sameCultureCutoff: 0.0906
-  FertilityRate: 0.000416
+  FertilityRate: 0.0002
   maxPopTransfer: 20
   minPopTransfer: 5
   influenceRate: 0.0008
@@ -216,7 +216,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Culture: {fileID: 5402215717768767427}
-  _previousTile: {fileID: 0}
   cultureParentName: 
   _previousState: 0
   wasRepelled: 0
@@ -446,7 +445,7 @@ MonoBehaviour:
   FoodAmountIndicatorTemplate: {fileID: 7818443324861133336, guid: 6c4f43eb58d335940bc1f71bd6349ecd, type: 3}
   FoodStore: {fileID: -5036476844479646280}
   CurTicksBetweenIndicators: 1
-  TicksBetweenIndicators: 01000000070000003c000000ffffffff
+  TicksBetweenIndicators: ffffffffffffffffffffffffffffffff
 --- !u!114 &7029493985671350848
 MonoBehaviour:
   m_ObjectHideFlags: 0
