@@ -30,7 +30,7 @@ public class TileInfoPanelController : MonoBehaviour
         SelectedTileCultures = SelectedTile.GetComponentInChildren<CultureHandler>();
 
         SetBiomeText(SelectedTileChars.Biome);
-        SetFoodAmount(SelectedTileFood.CurFood);
+        if(SelectedTileChars.Biome != TileDrawer.BiomeType.Water) SetFoodAmount(SelectedTileFood.CurFood);
         UpdateToCurrentPopulation();
         CultureListPanel.Initialize(SelectedTile);
 
