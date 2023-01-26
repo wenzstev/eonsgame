@@ -576,7 +576,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5695180184468728074, guid: 3681249039e02d34ebfe54f4c812318a, type: 3}
       propertyPath: saveName
-      value: New World
+      value: New GC
       objectReference: {fileID: 0}
     - target: {fileID: 5695180184468728074, guid: 3681249039e02d34ebfe54f4c812318a, type: 3}
       propertyPath: m_Enabled
