@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
@@ -13,6 +12,17 @@ public class LoadMapButton : MonoBehaviour
     string filePath;
     string fileName;
 
+    public FadeFromBlack Fader;
+
+    private void Awake()
+    {
+        Fader.OnFadeComplete += Fader_OnFadeComplete;
+    }
+
+    void Fader_OnFadeComplete(object sender, EventArgs e)
+    {
+        LoadMap();
+    }
 
     public void Init(string filePath)
     {

@@ -289,22 +289,38 @@ PrefabInstance:
     - target: {fileID: 8902239437774477304, guid: 1fb9747a0a2f93d4191208aba30b797b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1501366528594788416}
+      objectReference: {fileID: 4643257009081675057}
     - target: {fileID: 8902239437774477304, guid: 1fb9747a0a2f93d4191208aba30b797b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 8849616515105119614}
+      objectReference: {fileID: 1501366528594788416}
     - target: {fileID: 8902239437774477304, guid: 1fb9747a0a2f93d4191208aba30b797b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8902239437774477304, guid: 1fb9747a0a2f93d4191208aba30b797b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReturnToMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8902239437774477304, guid: 1fb9747a0a2f93d4191208aba30b797b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: LoadMainMenuScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 8902239437774477304, guid: 1fb9747a0a2f93d4191208aba30b797b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FadeOutReturnToMenu, MainAssembly
       objectReference: {fileID: 0}
     - target: {fileID: 8902239437774477304, guid: 1fb9747a0a2f93d4191208aba30b797b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: SceneLoader, MainAssembly
+      objectReference: {fileID: 0}
+    - target: {fileID: 8902239437774477304, guid: 1fb9747a0a2f93d4191208aba30b797b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8902239437774477304, guid: 1fb9747a0a2f93d4191208aba30b797b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 955750721570846000, guid: 1fb9747a0a2f93d4191208aba30b797b, type: 3}
@@ -331,6 +347,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c898fd416cb4e27ac5b6ee4cc6ac78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4643257009081675057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6961828043947416414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 636eed6a5bc5e1c4ab13c589c4963aa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneLoader: {fileID: 1501366528594788416}
 --- !u!1001 &3489792960839064012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -343,9 +372,49 @@ PrefabInstance:
       value: ModalBackdrop
       objectReference: {fileID: 0}
     - target: {fileID: 5385772304597735564, guid: 70abddd4314d70745a85929443ee8fe5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5385772304597735564, guid: 70abddd4314d70745a85929443ee8fe5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5385772304597735564, guid: 70abddd4314d70745a85929443ee8fe5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 4760504514465748947}
+    - target: {fileID: 5385772304597735564, guid: 70abddd4314d70745a85929443ee8fe5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 4760504514465748947}
+    - target: {fileID: 5385772304597735564, guid: 70abddd4314d70745a85929443ee8fe5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5385772304597735564, guid: 70abddd4314d70745a85929443ee8fe5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickModal
+      objectReference: {fileID: 0}
+    - target: {fileID: 5385772304597735564, guid: 70abddd4314d70745a85929443ee8fe5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: OnClickModal
+      objectReference: {fileID: 0}
+    - target: {fileID: 5385772304597735564, guid: 70abddd4314d70745a85929443ee8fe5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ModalControl, MainAssembly
+      objectReference: {fileID: 0}
+    - target: {fileID: 5385772304597735564, guid: 70abddd4314d70745a85929443ee8fe5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: ModalControl, MainAssembly
+      objectReference: {fileID: 0}
+    - target: {fileID: 5385772304597735564, guid: 70abddd4314d70745a85929443ee8fe5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5385772304597735564, guid: 70abddd4314d70745a85929443ee8fe5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5385772304597735567, guid: 70abddd4314d70745a85929443ee8fe5, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
