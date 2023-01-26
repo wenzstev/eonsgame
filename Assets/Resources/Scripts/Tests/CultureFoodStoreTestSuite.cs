@@ -21,8 +21,8 @@ public class CultureFoodStoreTestSuite : CultureActionTest
     [UnityTest]
     public IEnumerator CanCollectFoodFromTile()
     {
-        SetFoodAndExecuteTurn();
-        AssertFoodChange(10 - 2);
+        float amountGathered = SetFoodAndExecuteTurn();
+        Assert.AreEqual(10, amountGathered);
         yield return null;
     }
 
@@ -31,10 +31,10 @@ public class CultureFoodStoreTestSuite : CultureActionTest
     {
         TestTile.GetComponent<TileFood>().CurFood = 0;
         TestCultureFoodStore.AlterFoodStore(TestCultureFoodStore.MaxFoodStore);
-        DefaultAction TestDefaultAction = new DefaultAction(TestCulture);
-        TestDefaultAction.ExecuteTurn();
+        CultureTurnInfo cultureTurnInfo = new CultureTurnInfo(TestCulture, Turn.CurrentTurn);
+        DefaultAction.ExecuteTurn(cultureTurnInfo);
 
-        AssertFoodChange(-2);
+        AssertFoodChange(-1);
         yield return null;
     }
 
@@ -46,11 +46,11 @@ public class CultureFoodStoreTestSuite : CultureActionTest
         TestCulture.AddPopulation(5);
         TestCulture.GetComponent<CultureFoodStore>().AlterFoodStore(1000);
 
-        
-        DefaultAction TestDefaultAction = new DefaultAction(TestCulture);
-        Turn turn = TestDefaultAction.ExecuteTurn();
 
-        AssertFoodChange(-12);
+        CultureTurnInfo cultureTurnInfo = new CultureTurnInfo(TestCulture, Turn.CurrentTurn);
+        DefaultAction.ExecuteTurn(cultureTurnInfo);
+
+        AssertFoodChange(-6);
 
         yield return null;
     }
@@ -63,17 +63,16 @@ public class CultureFoodStoreTestSuite : CultureActionTest
         yield return null;
     }
 
-    void SetFoodAndExecuteTurn()
+    float SetFoodAndExecuteTurn()
     {
-        TestTile.GetComponent<TileFood>().CurFood = 1000; 
-        GatherFoodAction TestGatherFoodAction = new GatherFoodAction(TestCulture);
-        TestGatherFoodAction.ExecuteTurn();
+        TestTile.GetComponent<TileFood>().CurFood = 1000;
+        CultureTurnInfo cultureTurnInfo = new CultureTurnInfo(TestCulture, Turn.CurrentTurn);
+        return GatherFoodAction.GatherFood(cultureTurnInfo);
     }
 
     void AssertFoodChange(float expected)
     {
-        INonGenericCultureUpdate[] TestCultureUpdateList = Turn.GetPendingUpdatesFor(TestCulture);
-        Assert.AreEqual(expected, TestUtils.GetCombinedFoodChangeInUpdateList(TestCultureUpdateList), "FoodChange is incorrect!");
+        Assert.AreEqual(expected, TestUtils.GetCombinedFoodChangeInUpdateList(Turn.CurrentTurn.UpdateHolder.GetFloatUpdates(), TestCulture), "FoodChange is incorrect!");
     }
 
 }

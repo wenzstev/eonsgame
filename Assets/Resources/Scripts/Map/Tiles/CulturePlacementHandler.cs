@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Profiling;
 
 public class CulturePlacementHandler : MonoBehaviour
 {
@@ -11,22 +13,24 @@ public class CulturePlacementHandler : MonoBehaviour
     public float[] AngleOffset = new float[]{0, Mathf.PI, Mathf.PI / 2f};
     public CultureContainer CultureContainer;
 
-    Culture[] currentList;
+    List<Culture> currentList;
 
     Vector3[][] Positions;
+    List<Vector3> ExpectedPositions; // cached
 
 
     public void Initialize()
     {
-        currentList = new Culture[0];
+        currentList = new List<Culture>();
         CalculateCulturePositionList();
         CultureContainer.OnListChanged += CulturePlacementHandler_OnListChanged;
+        ExpectedPositions = new List<Vector3>();
     }
 
     void CalculateCulturePositionList()
     {
         Positions = new Vector3[NumDisplayedCultures][];
-        Positions[0] = new Vector3[] { Vector3.zero };
+        Positions[0] = new Vector3[] { (Vector3.zero + transform.position) };
 
         
 
@@ -39,70 +43,74 @@ public class CulturePlacementHandler : MonoBehaviour
             for(int j = 0; j < curNumOfCulturesShown; j++)
             {
                 int curAngleAmount = j + 1;
-                Positions[i][j] = TrigUtils.GetLocationOnCircleRadians(Radius, (theta * j) + AngleOffset[i]);
+                Vector2 circlePosition = TrigUtils.GetLocationOnCircleRadians(Radius, (theta * j) + AngleOffset[i]);
+                Positions[i][j] = new Vector3(circlePosition.x, circlePosition.y, 0) + transform.position;
             }
         }
     }
 
     public void CulturePlacementHandler_OnListChanged(object sender, CultureContainer.OnListChangedEventArgs e)
     {
-        if (e.CultureList.Length > 0) CompareOldPositionsToNew(e.CultureList);
+        if (e.CultureList.Count > 0) CompareOldPositionsToNew(e.CultureList);
         currentList = e.CultureList;
     }
 
-    void CompareOldPositionsToNew(Culture[] newCulturelist)
+    void CompareOldPositionsToNew(List<Culture> newCulturelist)
     {
         if (!gameObject.activeInHierarchy) return; // don't attempt if object is inactive (such as when exiting to main menu)
-        Vector3[] ExpectedPositions = CalculateExpectedLocations(newCulturelist);
-        for (int i = 0; i < ExpectedPositions.Length; i++)
+        ExpectedPositions = CalculateExpectedLocations(newCulturelist);
+        for (int i = 0; i < newCulturelist.Count; i++)
         {
             Culture newCultureAtPosition = newCulturelist[i];
-            Culture oldCultureAtPosition = i < currentList.Length ? currentList[i] : null;
+            Culture oldCultureAtPosition = i < currentList.Count ? currentList[i] : null;
 
             if (oldCultureAtPosition == null
                 || oldCultureAtPosition != newCultureAtPosition
                 || oldCultureAtPosition.transform.position != ExpectedPositions[i]
                 || !newCultureAtPosition.Equals(null))  // culture can be destroyed
             {
-                StartCoroutine(MoveCulture(newCultureAtPosition, ExpectedPositions[i]));
+                //StartCoroutine(MoveCulture(newCultureAtPosition, ExpectedPositions[i]));
+                newCultureAtPosition.transform.position = ExpectedPositions[i];
             }
         }
+        ExpectedPositions.Clear();
+
     }
 
-    Vector3[] CalculateExpectedLocations(Culture[] cultureList)
+    List<Vector3> CalculateExpectedLocations(List<Culture> cultureList)
     {
-        int CurPositionIndex = cultureList.Length < NumDisplayedCultures ? cultureList.Length - 1: NumDisplayedCultures - 1;
+        int CurPositionIndex = cultureList.Count < NumDisplayedCultures ? cultureList.Count - 1: NumDisplayedCultures - 1;
         Vector3[] CurPositions = Positions[CurPositionIndex];
-        Vector3[] ExpectedLocations = new Vector3[cultureList.Length];
+        ExpectedPositions.Clear();
 
-        for (int i = 0; i < cultureList.Length; i++)
+        for (int i = 0; i < cultureList.Count; i++)
         {
             if (i >= CurPositions.Length) break;
-            ExpectedLocations[i] = CurPositions[i];
+            ExpectedPositions.Add(CurPositions[i]);
         }
 
-        for (int i = CurPositions.Length; i < cultureList.Length; i++)
+        for (int i = CurPositions.Length; i < cultureList.Count; i++)
         {
-            ExpectedLocations[i] = CurPositions[CurPositions.Length - 1];
+            ExpectedPositions.Add(CurPositions[CurPositions.Length - 1]);
         }
 
-        return ExpectedLocations;
+        return ExpectedPositions;
     }
 
     IEnumerator MoveCulture(Culture culture, Vector3 endPosition)
     {
-        if (culture.Equals(null)) yield break;
+        if (!culture.isActiveAndEnabled) yield break;
         float curTime = 0;
-        Vector3 startPosition = culture.transform.localPosition;
+        Vector3 startPosition = culture.transform.position;
         yield return null;
-
         while(curTime <= AnimationTransferTime)
         {
-            if (culture.Equals(null)) yield break; // culture was destroyed in the middle of transferring position
+            if (!culture.isActiveAndEnabled || culture.currentState == Culture.State.Moving) yield break; // culture was destroyed or changed tiles in the middle of transferring position (ties it to Culture.State, unsure if good)
             curTime += Time.deltaTime;
             float curDistance = Mathf.InverseLerp(0, AnimationTransferTime, curTime);
-            culture.transform.localPosition = Vector3.Lerp(startPosition, endPosition, curDistance);
+            culture.transform.position = Vector3.Lerp(startPosition, endPosition, curDistance);
             yield return null;
+
         }
     }
 

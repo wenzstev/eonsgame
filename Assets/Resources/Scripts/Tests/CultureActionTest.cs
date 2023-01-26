@@ -34,10 +34,12 @@ public abstract class CultureActionTest : BasicBoardTest
     {
         GameObject CultureObj = new GameObject(name);
         CultureObj.AddComponent<SpriteRenderer>();
+
+        Culture Culture = CultureObj.AddComponent<Culture>();
+
         CultureObj.AddComponent<AffinityManager>();
         CultureObj.AddComponent<CultureFoodStore>();
 
-        Culture Culture = CultureObj.AddComponent<Culture>();
 
         CultureMemory TestCultureMemory = CultureObj.AddComponent<CultureMemory>();
         TestCultureMemory.Culture = Culture;

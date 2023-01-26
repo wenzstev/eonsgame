@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
-using System.Linq;
+using UnityEngine.Profiling;
 
 [Serializable]
 public class AffinityManager : MonoBehaviour
@@ -11,29 +11,38 @@ public class AffinityManager : MonoBehaviour
     TileDrawer.BiomeType _currentBiome;
 
     [SerializeField]
-    GompertzCurve AffinityGrowthRate;
+    public GompertzCurve AffinityGrowthRate;
 
     [SerializeField]
     AffinityStats affinityStats;
 
     public float Asymptote = -1f;
     public float XDisplacement = 2;
-    public float GrowthRate = .5f;
+    public float GrowthRate = .3f;
     public float YDisplacement = 1f;
 
     public event EventHandler<OnAffinityChangedEventArgs> OnAffinityChanged;
 
 
     public AffinityStats AffinityStats { get { return affinityStats; } }
-    
 
+    private void Awake()
+    {
+        EventManager.StartListening("Tick", OnTick);
+    }
 
     public void Initialize()
     {
         AffinityGrowthRate = new GompertzCurve(Asymptote, XDisplacement, GrowthRate, YDisplacement);
         _currentBiome = TileDrawer.BiomeType.Barren;
-        EventManager.StartListening("Tick", OnTick);
-        affinityStats = new AffinityStats();
+        affinityStats = AffinityStats.InitializeStats();
+    }
+
+    public void Initialize(AffinityManager parent)
+    {
+        AffinityGrowthRate = new GompertzCurve(Asymptote, XDisplacement, GrowthRate, YDisplacement);
+        affinityStats = parent.GetStatCopy();
+        _currentBiome = TileDrawer.BiomeType.Barren;
     }
 
     public void SetStats(AffinityStats stats)
@@ -89,13 +98,13 @@ public class AffinityManager : MonoBehaviour
 
     public void OnTick(Dictionary<string, object> empty)
     {
-        affinityStats.IncrementDecayDays(_currentBiome);
+        if(gameObject.activeInHierarchy) affinityStats.IncrementDecayDays(_currentBiome);
     }
 
 
     public AffinityStats GetStatCopy()
     {
-        return affinityStats.CreateCopy();
+        return affinityStats; // does this auto copy the struct?
     }
 
     public AffinityStats GetStatMerge(AffinityManager other, float ratio)

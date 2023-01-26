@@ -19,28 +19,32 @@ public class CultureHandler : MonoBehaviour
 
     public void AddNewArrival(Culture c)
     {
+        c.transform.SetParent(CultureStaging.transform, true);
         CultureStaging.AddArrival(c);
         FirePopulationChangedEvent();
     }
 
     public void BypassArrival(Culture c)
     {
+        c.transform.SetParent(CultureContainer.transform, true);
         CultureContainer.AddCulture(c);
         FirePopulationChangedEvent();
     }
 
     public void TransferArrivalToTile(Culture c)
     {
+        //Debug.Log($"Transferring {c} to settled on {transform.parent}");
         CultureStaging.RemoveArrival(c);
+        c.transform.SetParent(CultureContainer.transform, true);
         CultureContainer.AddCulture(c);
     }
 
-    public Culture[] GetAllSettledCultures()
+    public List<Culture> GetAllSettledCultures()
     {
         return CultureContainer.GetAllCultures();
     }
 
-    public Culture[] GetAllStagedCultures()
+    public List<Culture> GetAllStagedCultures()
     {
         return CultureStaging.GetAllCultures();
     }
@@ -69,12 +73,13 @@ public class CultureHandler : MonoBehaviour
     {
         if (CultureStaging.RemoveArrival(c) || CultureContainer.RemoveCulture(c))
         {
+            c.transform.SetParent(null, true);
             FirePopulationChangedEvent();
             return;
         }
 
 
-        Debug.LogError($"Tried to remove culture {c} from tile it wasn't on!");
+        Debug.LogError($"Tried to remove culture {c} from tile it wasn't on ({transform.parent})!");
     }
 
     
@@ -85,6 +90,7 @@ public class CultureHandler : MonoBehaviour
         {
             CultureContainer.RemoveCulture(c);
             CultureStaging.AddArrival(c);
+            c.transform.parent = CultureStaging.transform;
         }
     }
     

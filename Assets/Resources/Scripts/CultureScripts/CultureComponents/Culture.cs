@@ -18,6 +18,9 @@ public class Culture : MonoBehaviour
     public Tile Tile { get; private set; }
     public TileInfo tileInfo { get; private set; }
 
+    public TileComponents TileComponents { get; private set; }
+
+
 
     CultureHandler cultureHandler;
 
@@ -25,9 +28,18 @@ public class Culture : MonoBehaviour
 
 
     public event EventHandler<OnPopulationChangedEventArgs> OnPopulationChanged;
+    OnPopulationChangedEventArgs onPopulationChangedEventArgs;
+
     public event EventHandler<OnCultureNameChangedEventArgs> OnNameChanged;
+    OnCultureNameChangedEventArgs onCultureNameChangedEventArgs;
+
     public event EventHandler<OnCultureDestroyedEventArgs> OnCultureDestroyed;
+    OnCultureDestroyedEventArgs onCultureDestroyedEventArgs;
+
     public event EventHandler<OnColorChangedEventArgs> OnColorChanged;
+    OnColorChangedEventArgs onColorChangedEventArgs;
+
+    Dictionary<string, object> cultureDict;
 
     bool isQuitting = false;
 
@@ -56,6 +68,9 @@ public class Culture : MonoBehaviour
             return cultureMemory;
         }
     }
+
+    AffinityManager _affinityManager;
+    public AffinityManager AffinityManager { get { return _affinityManager; } }
 
 
     DecisionMaker decisionMaker;
@@ -111,7 +126,6 @@ public class Culture : MonoBehaviour
         Repelled,
         Invaded,
         Invader,
-        NewCulture,
         Moving,
         NewOnTile,
         PendingRemoval,
@@ -120,14 +134,19 @@ public class Culture : MonoBehaviour
         Starving
     }
 
-
-
-
     private void Awake()
     {
         layerMode = GetComponent<SpriteRenderer>();
         //circleMode = transform.GetChild(1).GetComponent<SpriteRenderer>();
         decisionMaker = new DecisionMaker(this);
+        _affinityManager = GetComponent<AffinityManager>();
+
+        // cache events to prevent gc allocation
+        onPopulationChangedEventArgs = new OnPopulationChangedEventArgs() { Culture = this };
+        onCultureDestroyedEventArgs = new OnCultureDestroyedEventArgs() { DestroyedCulture = this };
+        onCultureNameChangedEventArgs = new OnCultureNameChangedEventArgs();
+        onColorChangedEventArgs = new OnColorChangedEventArgs();
+        cultureDict = new Dictionary<string, object>() { { "culture", this } };
     }
 
     public void Init(Tile t, int InitialPopulation)
@@ -141,8 +160,9 @@ public class Culture : MonoBehaviour
         SetTile(t, true);
 
         SetColor(color);
-        GetComponent<AffinityManager>().Initialize();
-        EventManager.TriggerEvent("CultureCreated", new Dictionary<string, object> { { "culture", this } });
+        _affinityManager = GetComponent<AffinityManager>();
+        AffinityManager.Initialize();
+        EventManager.TriggerEvent("CultureCreated", cultureDict);
     }
 
     public void InitFromParent(Culture parent, int newPop)
@@ -153,12 +173,10 @@ public class Culture : MonoBehaviour
         gameObject.name = name;
         //transform.SetParent(t.gameObject.transform);
         SetColor(parent.Color);
-        AffinityManager affinityManager = GetComponent<AffinityManager>();
-        affinityManager.Initialize();
-        affinityManager.SetStats(parent.GetComponent<AffinityManager>().GetStatCopy());
+        AffinityManager.Initialize(parent.AffinityManager);
 
 
-        EventManager.TriggerEvent("CultureCreated", new Dictionary<string, object> { { "culture", this } });
+        EventManager.TriggerEvent("CultureCreated", cultureDict);
 
     }
 
@@ -188,14 +206,15 @@ public class Culture : MonoBehaviour
 
     public GameObject SplitCultureFromParent() // creates new culture group from parent
     {
-        GameObject newCultureObj = Instantiate(CultureTemplate, transform.position, Quaternion.identity);
-        Culture newCulture = newCultureObj.GetComponent<Culture>();
+        Culture newCulture = CulturePool.GetCulture();
+        newCulture.transform.position = transform.position;
+
         int numInNewCulture = UnityEngine.Random.Range(minPopTransfer, maxPopTransfer);
         newCulture.InitFromParent(this, numInNewCulture);
         AddPopulation(-numInNewCulture);
         newCulture.CultureMemory.previousTile = Tile;
        // Debug.Log($"Split {newCulture} from {this} on tile {this.Tile}");
-        return newCultureObj;
+        return newCulture.gameObject;
     }
 
     public void SetColor(Color c)
@@ -220,14 +239,15 @@ public class Culture : MonoBehaviour
 
     public void AddPopulation(int num)
     { 
-        //Debug.Log("adding " + num + " to  " + GetHashCode());
+        //Debug.Log($"Adding {num} to {this} for new pop of {population + num}");
         population += num;
         if(population == 0)
         {
             DestroyCulture();
         }
 
-        if (num != 0) OnPopulationChanged?.Invoke(this, new OnPopulationChangedEventArgs() { PopChange = num});
+        onPopulationChangedEventArgs.PopChange = num;
+        if (num != 0) OnPopulationChanged?.Invoke(this, onPopulationChangedEventArgs); ;
     }
 
     void SwapTile(Tile newTile)
@@ -236,15 +256,15 @@ public class Culture : MonoBehaviour
         SetTile(newTile, false);
     }
 
-    void RemoveFromTile()
+    public void RemoveFromTile()
     {
-        //Debug.Log($"removing culture {this} ({this.GetHashCode()}) from {Tile}");
+        //Debug.Log($"removing culture {this} from {Tile}");
         if(Tile == null)
         {
             //Debug.LogWarning("Tried to remove from nonexistant tile!");
             return;
         }
-        cultureHandler.RemoveCulture(this);
+        cultureHandler?.RemoveCulture(this);
         CultureMemory.previousTile = Tile;
         Tile = null;
         tileInfo = null;
@@ -253,12 +273,9 @@ public class Culture : MonoBehaviour
 
     public void SetTile(Tile newTile, bool bypassArrival)
     {
-        if (newTile == null)
-        {
-            RemoveFromTile();
-            return;
-        }
-        //Debug.Log($"Setting tile for culture {this}({this.GetHashCode()}) to tile {newTile}");
+        if(Tile != null) RemoveFromTile();
+
+        //Debug.Log($"Setting tile for culture {this} to tile {newTile}");
         CultureHandler newCultureHandler = newTile.GetComponentInChildren<CultureHandler>();
 
         if (bypassArrival) newCultureHandler.BypassArrival(this); else newCultureHandler.AddNewArrival(this);
@@ -276,7 +293,9 @@ public class Culture : MonoBehaviour
         name = newName;
         gameObject.name = newName;
         CultureHandler?.RenameCulture(this, oldName);
-        OnNameChanged?.Invoke(this, new OnCultureNameChangedEventArgs() {NewName = newName, OldName = oldName});
+        onCultureNameChangedEventArgs.NewName = newName;
+        onCultureNameChangedEventArgs.OldName = oldName;
+        OnNameChanged?.Invoke(this, onCultureNameChangedEventArgs);
     }
 
     public Color mutateColor(Color parentColor)
@@ -297,14 +316,13 @@ public class Culture : MonoBehaviour
 
     public void DestroyCulture()
     {
-        transform.parent = null;
         if (!isQuitting)
         {
-            EventManager.TriggerEvent("CultureDestroyed", new Dictionary<string, object> { { "culture", this } });
-            OnCultureDestroyed?.Invoke(this, new OnCultureDestroyedEventArgs() { DestroyedCulture = this });
+            RemoveFromTile();
+            EventManager.TriggerEvent("CultureDestroyed", cultureDict);
+            OnCultureDestroyed?.Invoke(this, onCultureDestroyedEventArgs);
         }
-        gameObject.SetActive(false);
-        Destroy(gameObject);
+        CulturePool.ReleaseCulture(this);
     }
 
     private void OnDestroy()
@@ -353,6 +371,7 @@ public class Culture : MonoBehaviour
 
     public class OnPopulationChangedEventArgs : EventArgs
     {
+        public Culture Culture;
         public int PopChange;
     }
 

@@ -6,7 +6,7 @@ using UnityEngine;
 using System.Text;
 
 [Serializable]
-public class AffinityStats 
+public struct AffinityStats 
 {
     [SerializeField]
     float[] affinities;
@@ -17,14 +17,18 @@ public class AffinityStats
     [SerializeField]
     int[] daysHarvested;
 
-    public AffinityStats()
+    public static AffinityStats InitializeStats()
     {
+        AffinityStats newStats = new AffinityStats();
         int numBiomes = Enum.GetNames(typeof(TileDrawer.BiomeType)).Length;
 
-        affinities = new float[numBiomes];
-        decayRates = Enumerable.Range(0, numBiomes).Select(e => new DecayTracker(0)).ToArray();
-        daysHarvested = new int[numBiomes];
+        newStats.affinities = new float[numBiomes];
+        newStats.decayRates = Enumerable.Range(0, numBiomes).Select(e => new DecayTracker(0)).ToArray();
+        newStats.daysHarvested = new int[numBiomes];
+
+        return newStats;
     }
+
 
     AffinityStats (float[] a, DecayTracker[] dr, int[] dh)
     {
@@ -74,7 +78,7 @@ public class AffinityStats
     {
         for (int i = 0; i < decayRates.Length; i++)
         {
-            if(i != (int) current) decayRates[i]?.IncreaseDaysSinceHarvested();
+            if(i != (int) current) decayRates[i].IncreaseDaysSinceHarvested();
         }
     }
 
@@ -85,9 +89,7 @@ public class AffinityStats
 
     public AffinityStats CreateCopy()
     {
-        string affinitySerialization = JsonUtility.ToJson(this);
-        AffinityStats copy = JsonUtility.FromJson<AffinityStats>(affinitySerialization);
-        return copy;        
+        return this;      
     }
 
     public float GetDecayRate(TileDrawer.BiomeType biome)
@@ -110,21 +112,15 @@ public class AffinityStats
 
     public AffinityStats CombineAffinities(AffinityStats other, float ratio)
     {
-        int numBiomes = Enum.GetNames(typeof(TileDrawer.BiomeType)).Length;
-        float[] combinedAffinities = new float[numBiomes];
-        int[] combinedDays = new int[numBiomes];
-        DecayTracker[] combinedDecayRates = new DecayTracker[numBiomes];
-
-        foreach(TileDrawer.BiomeType biome in Enum.GetValues(typeof(TileDrawer.BiomeType)))
+        for(int i = 0; i < other.affinities.Length; i++)
         {
-            int curIndex = (int)biome;
-            combinedAffinities[curIndex] = Mathf.Lerp(affinities[curIndex], other.GetAffinity(biome), ratio);
-            combinedDays[curIndex] = Mathf.FloorToInt(Mathf.Lerp(daysHarvested[curIndex], other.GetNumDaysHarvested(biome), ratio));
-            combinedDecayRates[curIndex] = DecayTracker.CombineDecayRates(decayRates[(int)biome], other.GetDecayTracker(biome), ratio);
+            other.affinities[i] = Mathf.Lerp(affinities[i], other.affinities[i], ratio);
+            other.daysHarvested[i] = Mathf.FloorToInt(Mathf.Lerp(daysHarvested[i], other.daysHarvested[i], ratio));
+            other.decayRates[i] = DecayTracker.CombineDecayRates(decayRates[i], other.decayRates[i], ratio);
         }
 
-        return new AffinityStats(combinedAffinities, combinedDecayRates, combinedDays);
 
+        return other; // since it's a struct, returning other doesn't change struct that was brought in
     }
 
 

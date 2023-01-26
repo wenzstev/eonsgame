@@ -2,7 +2,7 @@ using UnityEngine;
 using System;
 
 [Serializable]
-public class PowerCurve : ICurve
+public struct PowerCurve : ICurve
 {
     [SerializeField]
     float _steepness;
@@ -12,8 +12,8 @@ public class PowerCurve : ICurve
     public float Steepness { get { return _steepness; } }
     public float XOffset { get { return _xOffset; } }
 
-    public float InitialValue = 1;
-    public float PowerMultiplier = 1;
+    public float InitialValue;
+    public float PowerMultiplier;
 
     public PowerCurve(float steepness, float xOffset, float initialValue, float powerMultiplier)
     {

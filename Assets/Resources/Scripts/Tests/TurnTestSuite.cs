@@ -1,25 +1,27 @@
 ﻿using System.Collections;
 using UnityEngine;
 using NUnit.Framework;
+using System.Linq;
 
-public class TurnTestSuite 
+public class TurnTestSuite : BasicTest
 {
     Culture TestCulture;
+    CultureTurnInfo dummyTurnInfo;
 
     [SetUp]
     public void SetUpTurnTest()
     {
         GameObject TestCultureObj = new GameObject("testCulture");
         TestCulture = TestCultureObj.AddComponent<Culture>();
+        dummyTurnInfo = new CultureTurnInfo();
     }
 
     [Test]
     public void TestAddUpdate()
     {
 
-        Turn.AddUpdate(new MockTurnUpdate(TestCulture));
-        INonGenericCultureUpdate[] updates = Turn.GetPendingUpdatesFor(TestCulture);
-        Assert.AreEqual(1, updates.Length);
+        Turn.AddIntUpdate(CultureUpdateGetter.GetPopulationUpdate(dummyTurnInfo, TestCulture, 0));
+        Assert.AreEqual(1, Turn.CurrentTurn.UpdateHolder.GetIntUpdates().Length);
     }
 
     [Test]
@@ -28,17 +30,16 @@ public class TurnTestSuite
     {
         GameObject OtherCultureObj = new GameObject("OtherCulture");
         Culture OtherCulture = OtherCultureObj.AddComponent<Culture>();
-        Turn.AddUpdate(new MockTurnUpdate(OtherCulture));
-        Turn.AddUpdate(new MockTurnUpdate(TestCulture));
-        Turn.AddUpdate(new MockTurnUpdate(TestCulture));
-        INonGenericCultureUpdate[] updates = Turn.GetPendingUpdatesFor(TestCulture);
-        Assert.AreEqual(2, updates.Length);
+        Turn.AddIntUpdate(CultureUpdateGetter.GetPopulationUpdate(dummyTurnInfo, OtherCulture, 0));
+        Turn.AddIntUpdate(CultureUpdateGetter.GetPopulationUpdate(dummyTurnInfo, TestCulture, 0));
+        Turn.AddIntUpdate(CultureUpdateGetter.GetPopulationUpdate(dummyTurnInfo, TestCulture, 0));
+        Assert.AreEqual(2, Turn.CurrentTurn.UpdateHolder.GetIntUpdates().Where(u => u.Target == TestCulture).ToArray().Length);
     }
 
     [Test]
     public void CanUpdateAllCultures()
     {
-        Turn.AddUpdate(new PopulationUpdate(null, TestCulture, 1));
+        Turn.AddIntUpdate(CultureUpdateGetter.GetPopulationUpdate(dummyTurnInfo, TestCulture, 1));
         Turn.UpdateAllCultures();
         Assert.AreEqual(1, TestCulture.Population);
     }
@@ -57,10 +58,4 @@ public class TurnTestSuite
         Turn.UpdateAllCultures();
     }
 
-}
-
-public class MockTurnUpdate : CultureUpdate<int>
-{
-    public override void ExecuteChange() { }
-    public MockTurnUpdate(Culture c) : base(null, c, 0) { }
 }

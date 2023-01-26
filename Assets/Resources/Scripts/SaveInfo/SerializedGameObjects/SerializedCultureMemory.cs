@@ -11,7 +11,7 @@ public class SerializedCultureMemory
 
     public SerializedCultureMemory(CultureMemory cm)
     {
-        previousTile = cm.previousTile.id;
+        previousTile = cm.previousTile.TileLocation.id;
         previousState = (int)cm.previousState;
         cultureParentName = cm.cultureParentName;
         wasRepelled = cm.wasRepelled;

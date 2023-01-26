@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using System;
+using UnityEngine.Profiling;
 
 public class CultureContainer : MonoBehaviour
 {
@@ -10,27 +11,39 @@ public class CultureContainer : MonoBehaviour
 
     public event EventHandler<OnListChangedEventArgs> OnListChanged;
 
+    delegate void AddListHandler(object sender, Culture.OnPopulationChangedEventArgs e);
+
+    EventHandler<Culture.OnPopulationChangedEventArgs> cc_OnPopulationChange;
+    EventHandler<Culture.OnCultureDestroyedEventArgs> cc_onCulutureDestroyed;
+
+    OnListChangedEventArgs onListChangedEventArgs;
 
     private void Awake()
     {
         Initialize();
     }
 
+    AddListHandler handler;
+
     public void Initialize()
     {
         CultureList = new List<Culture>();
+
+        // create the eventhandlers and cache them to prevent boxing later
+        cc_OnPopulationChange = CultureContainer_OnPopulationChanged;
+        cc_onCulutureDestroyed = CultureContainer_OnCultureDestroyed;
+        onListChangedEventArgs = new OnListChangedEventArgs() { CultureList = CultureList };
     }
 
     public void AddCulture(Culture culture)
     {
         //Debug.Log($"Before: {PrintContents()}");
-        InsertCultureInList(culture);
-        culture.transform.SetParent(transform);
+        InsertCultureIntoList(culture);
+        Profiler.BeginSample("subscribing to culture events");
+        culture.OnPopulationChanged += cc_OnPopulationChange;
+        culture.OnCultureDestroyed += cc_onCulutureDestroyed;
+        Profiler.EndSample();
 
-        culture.OnPopulationChanged += CultureContainer_OnPopulationChanged;
-        culture.OnCultureDestroyed += CultureContainer_OnCultureDestroyed;
-        SortListByPopulation();
-        culture.transform.parent = transform;
        // Debug.Log($"After: {PrintContents()}");
 
     }
@@ -44,32 +57,42 @@ public class CultureContainer : MonoBehaviour
 
         //Debug.Log($"After: {PrintContents()}");
 
+        Profiler.BeginSample("removing onpopchange");
+        culture.OnPopulationChanged -= cc_OnPopulationChange;
+        Profiler.EndSample();
+        Profiler.BeginSample("removing culturedestroyed");
 
-        SortListByPopulation();
-        culture.OnPopulationChanged -= CultureContainer_OnPopulationChanged;
-        culture.OnCultureDestroyed -= CultureContainer_OnCultureDestroyed;
-
-
+        culture.OnCultureDestroyed -= cc_onCulutureDestroyed;
+        Profiler.EndSample();
+        InvokeListChange();
 
         return true;
     }
 
-    public Culture[] GetAllCultures()
+    public List<Culture> GetAllCultures()
     {
-        return CultureList.ToArray();
+        return CultureList;
     }
 
     
     public bool HasCultureByName(string cultureName)
     {
-        return CultureList.Select(c => c.Name == cultureName).Any(b => b);
+        for(int i = 0; i < CultureList.Count; i++)
+        {
+            if (cultureName == CultureList[i].Name) return true;
+        }
+        return false;
     }
     
 
     
     public Culture GetCultureByName(string cultureName)
     {
-        return CultureList.Where(c => c.Name == cultureName).FirstOrDefault();
+        for (int i = 0; i < CultureList.Count; i++)
+        {
+            if (cultureName == CultureList[i].Name) return CultureList[i];
+        }
+        return null;
     }
     
 
@@ -78,31 +101,35 @@ public class CultureContainer : MonoBehaviour
         return CultureList.Contains(c);
     }
 
-    void InsertCultureInList(Culture culture) 
+
+    void InsertCultureIntoList(Culture c)
     {
-        CultureList.Add(culture);
+        CultureList.Remove(c); // if culture is already present, remove
+        int curCultureIndex = 0;
+        while (curCultureIndex < CultureList.Count && c.Population < CultureList[curCultureIndex].Population) curCultureIndex++;
+
+        CultureList.Insert(curCultureIndex, c);
+        InvokeListChange();
     }
 
-    void SortListByPopulation()
+    void InvokeListChange()
     {
-        CultureList = CultureList.OrderByDescending(c => c.Population).ToList();
-        OnListChanged?.Invoke(this, new OnListChangedEventArgs() { CultureList = GetAllCultures() });
+        OnListChanged?.Invoke(this, onListChangedEventArgs);
     }
 
     public class OnListChangedEventArgs : EventArgs
     {
-        public Culture[] CultureList;
+        public List<Culture> CultureList;
     }
 
-    private void CultureContainer_OnPopulationChanged(object sender, Culture.OnPopulationChangedEventArgs e)
+    void CultureContainer_OnPopulationChanged(object sender, Culture.OnPopulationChangedEventArgs e)
     {
-        SortListByPopulation();
+        InsertCultureIntoList(e.Culture);
     }
 
-    private void CultureContainer_OnCultureDestroyed(object sender, Culture.OnCultureDestroyedEventArgs e)
+     void CultureContainer_OnCultureDestroyed(object sender, Culture.OnCultureDestroyedEventArgs e)
     {
         RemoveCulture(e.DestroyedCulture);
-        SortListByPopulation();
     }
 
     public string PrintContents()
