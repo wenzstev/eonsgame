@@ -17,12 +17,13 @@ public class PuckPlacer : MonoBehaviour
     {
         if(Input.GetKey("space") && e.GetFirstThatContains<Tile>() != null)
         {
-            PlacePuck(e.GetFirstThatContains<Tile>());
+            AttemptPlacement(e.GetFirstThatContains<Tile>());
         }
     }
 
-    void PlacePuck(GameObject TileClicked)
+    void AttemptPlacement(GameObject TileClicked)
     {
+        if (TileClicked.GetComponent<TileChars>().Biome == TileDrawer.BiomeType.Water) return; 
         Culture puck = CulturePool.GetCulture();
         puck.transform.position = TileClicked.transform.position;
         puck.Init(TileClicked.GetComponent<Tile>(), initialPopulation);
