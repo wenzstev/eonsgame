@@ -42,6 +42,8 @@ public static class MovePreferredTileAction
 
     static Tile GetAndCheckTilesOfBiome(TileDrawer.BiomeType b, Tile[] NeighboringTiles, List<GameObject> ForbiddenTiles)
     {
+        if (b == TileDrawer.BiomeType.Water) return null;
+
         List<Tile> TilesOfThisBiome = NeighboringTiles.Where(t => t.TileChars.Biome == b).ToList();
         while (TilesOfThisBiome.Count > 0)
         {
