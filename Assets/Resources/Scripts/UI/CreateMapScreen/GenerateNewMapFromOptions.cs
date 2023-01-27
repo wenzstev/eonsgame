@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -18,7 +17,19 @@ public class GenerateNewMapFromOptions : MonoBehaviour
     public GameObject BoardTemplate;
     public GameObject MapGeneratorTemplate;
 
-    public (int, int)[] sizes = { (50, 35), (75, 50), (150, 100) };
+    public FadeFromBlack fader;
+
+    public (int, int)[] sizes = { (50, 35), (75, 50), (100, 65) };
+
+    private void Awake()
+    {
+        fader.OnFadeComplete += Fader_OnFadeComplete;
+    }
+
+    void Fader_OnFadeComplete(object sender, EventArgs e)
+    {
+        CreateAndLoadMap();
+    }
 
     public void CreateAndLoadMap()
     {

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,10 +12,8 @@ public class FadeFromBlack : MonoBehaviour
     public float fadeTime;
     public float startPause = 0;
 
-    private void Start()
-    {
-        FadeOut();
-    }
+    public EventHandler<EventArgs> OnFadeComplete;
+
 
     public void FadeIn()
     {
@@ -33,7 +32,7 @@ public class FadeFromBlack : MonoBehaviour
         float alphaEnd = fadeOut ? 0 : 1;
   
 
-        image.color = startColor;
+        image.color = new Color(startColor.r, startColor.g, startColor.b, alphaStart);
         yield return new WaitForSeconds(startPause);
         float curTime = 0;
         while (curTime < fadeTime)
@@ -44,6 +43,9 @@ public class FadeFromBlack : MonoBehaviour
             image.color = new Color(startColor.r, startColor.g, startColor.b, curAlpha);
             yield return null;
         }
+
+        OnFadeComplete?.Invoke(this, EventArgs.Empty);
+
     }
 
 }

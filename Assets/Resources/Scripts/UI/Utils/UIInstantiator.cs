@@ -8,5 +8,7 @@ public class UIInstantiator : MonoBehaviour
     {
         GameObject canvas = FindObjectOfType<Canvas>().gameObject;
         GameObject objInstance = Instantiate(obj, canvas.transform);
+        objInstance.transform.SetSiblingIndex(transform.GetSiblingIndex() + 1);
+
     }
 }
