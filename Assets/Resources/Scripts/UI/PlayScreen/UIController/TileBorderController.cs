@@ -10,7 +10,6 @@ public class TileBorderController : MonoBehaviour
 
     GameObject CurrentHighlight;
     GameObject CurrentTile;
-    GameObject CurrentTileInfoPanel;
 
 
 
