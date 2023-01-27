@@ -703,7 +703,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5695180184468728074, guid: 3681249039e02d34ebfe54f4c812318a, type: 3}
       propertyPath: saveName
-      value: New GC
+      value: New World
       objectReference: {fileID: 0}
     - target: {fileID: 5695180184468728074, guid: 3681249039e02d34ebfe54f4c812318a, type: 3}
       propertyPath: m_Enabled
@@ -780,8 +780,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81b831b58d8ae43468939a2f4cfbe289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BoardLoader: {fileID: 1079782344}
   CameraMoveController: {fileID: 1596317511}
+  BoardLoader: {fileID: 1079782344}
   BufferZone: 1
 --- !u!114 &1596317510
 MonoBehaviour:
@@ -796,7 +796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ZoomMin: 1
-  ZoomMax: 20
+  ZoomMax: 30
   CameraMoveController: {fileID: 1596317511}
 --- !u!114 &1596317511
 MonoBehaviour:
@@ -811,6 +811,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Camera: {fileID: 0}
+--- !u!114 &1596317517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596317497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be592b2f8902984d89127acd66738f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BufferZone: 1
+  boardLoader: {fileID: 1079782344}
+  CameraMoveController: {fileID: 1596317511}
 --- !u!1 &1600105421
 GameObject:
   m_ObjectHideFlags: 0

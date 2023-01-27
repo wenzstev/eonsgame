@@ -4,11 +4,14 @@
 public class CameraMovement
 {
 
-    public readonly Rect NewBounds;
-    public readonly float ZoomLevel;
+    readonly Rect NewBounds;
 
     public Camera Camera { get; }
     public Vector3 NewOrigin { get { return new Vector3(ActualPosition.center.x, ActualPosition.center.y, Camera.transform.position.z); } }
+
+    /// <summary>
+    /// The actual position of the new camera frustrum in worldspace.
+    /// </summary>
     public Rect ActualPosition { get { return new Rect(NewBounds.min, new Vector2(NewBounds.height * Camera.aspect, NewBounds.height)); } } // preserve the height, but not the width 
     public float NewZoom { get { return NewBounds.height / 2; } }
 
