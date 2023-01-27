@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System;
 using UnityEngine;
 using NUnit.Framework;
 
@@ -29,7 +29,9 @@ public class CameraBoundsTestSuite
         TestBoardStats.SetDimensions(10, 7);
         TestBoardStats.SetTileWidth(1);
 
-        TestCameraBounds.SetBoard(TestBoardStats);
+        MockBoardEdgesGetter mockBoardEdgesGetter = new MockBoardEdgesGetter(TestBoardStats.BoardEdges);
+
+        TestCameraBounds.SetBoardEdgesGetter(mockBoardEdgesGetter);
     }
 
     [Test]
@@ -59,4 +61,17 @@ public class CameraBoundsTestSuite
         Assert.AreEqual(new Vector3(0f, 4.5f, 0), TestCamera.transform.position, "Camera did not properly stay in bounds!");
     }
 
+
+}
+
+class MockBoardEdgesGetter : IBoardEdgesGetter
+{
+    BoardEdges boardEdges;
+    public BoardEdges BoardEdges { get { return boardEdges; } }
+    public EventHandler<EventArgs> OnBoardEdgesSet { get; set; }
+
+    public MockBoardEdgesGetter(BoardEdges be)
+    {
+        boardEdges = be;
+    }
 }
