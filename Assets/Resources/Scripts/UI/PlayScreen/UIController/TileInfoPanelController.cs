@@ -1,10 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using System;
 using System.Linq;
-using System;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 public class TileInfoPanelController : MonoBehaviour
@@ -17,9 +13,11 @@ public class TileInfoPanelController : MonoBehaviour
     TileFood SelectedTileFood;
     CultureHandler SelectedTileCultures;
 
+
     public event EventHandler<EventArgs> OnPanelDestroyed;
 
     public CultureListPanel CultureListPanel;
+    public TileCharsPanelController TileCharsPanelController;
 
     public void SetValues(GameObject SelectedTile)
     {
@@ -33,6 +31,8 @@ public class TileInfoPanelController : MonoBehaviour
         if(SelectedTileChars.Biome != TileDrawer.BiomeType.Water) SetFoodAmount(SelectedTileFood.CurFood);
         UpdateToCurrentPopulation();
         CultureListPanel.Initialize(SelectedTile);
+
+        TileCharsPanelController.SetValues(SelectedTileChars);
 
 
         SelectedTileFood.OnFoodChange += TileInfoPanelController_OnFoodChange;

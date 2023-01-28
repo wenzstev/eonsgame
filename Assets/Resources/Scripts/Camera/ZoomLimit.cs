@@ -16,7 +16,7 @@ public class ZoomLimit : MonoBehaviour, ICameraRestriction
 
     Rect BufferEdges;
 
-    private void Start()
+    private void Awake()
     {
         if (boardLoader) boardEdgesGetter = new BoardEdgesGetter(boardLoader);
         CameraMoveController.AddRestriction(this);

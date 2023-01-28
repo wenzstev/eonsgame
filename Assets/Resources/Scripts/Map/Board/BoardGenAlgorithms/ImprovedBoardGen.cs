@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ImprovedBoardGen : BoardGenAlgorithm
 {
-    public float precipitationDropoff = .1f;
+    public float precipitationDropoff = .3f;
     public float elevationModifier = .05f;
 
     GameObject boardObj;

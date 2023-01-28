@@ -6,6 +6,7 @@ using System;
 public class TileDrawer : MonoBehaviour
 {
     TileChars tileChars;
+    TileFood tileFood;
     SpriteRenderer sr;
 
     public BiomeType tileType;
@@ -67,6 +68,8 @@ public class TileDrawer : MonoBehaviour
     public void Initialize()
     {
         tileChars = GetComponent<TileChars>();
+        tileFood = GetComponent<TileFood>();
+
         sr = GetComponent<SpriteRenderer>();
         DetermineBiomeAndColor();
     }
@@ -86,7 +89,7 @@ public class TileDrawer : MonoBehaviour
 
 
 
-        tileType = tileChars.precipitation <= 10 ? BiomeType.Barren : tileChars.isUnderwater ? BiomeType.Water : BiomeTable[precipitationInt, temperatureInt];
+        tileType = tileFood.MaxFood <= 0 ? BiomeType.Barren : tileChars.isUnderwater ? BiomeType.Water : BiomeTable[precipitationInt, temperatureInt];
         
         switch(tileType)
         {

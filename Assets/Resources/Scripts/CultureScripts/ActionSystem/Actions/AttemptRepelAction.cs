@@ -4,6 +4,8 @@ using UnityEngine;
 public static class AttemptRepelAction
 {
 
+    static float repelModifier = .8f;
+
     public static void AttemptRepel(CultureTurnInfo cultureTurnInfo)
     {
         Culture culture = cultureTurnInfo.Culture;
@@ -25,7 +27,7 @@ public static class AttemptRepelAction
         //TODO: re-add affinity information so that repel ability is function of new affinity
         float hasAffinityAdvantage = 0;
         float popAdvantage = ((float)culture.Population - invader.Population) / 10f;
-        float repelThreshold = .6f + hasAffinityAdvantage + popAdvantage;
+        float repelThreshold = repelModifier + hasAffinityAdvantage + popAdvantage;
         //Debug.Log("repel threshold = .6 + " + hasAffinityAdvantage + " + " + popAdvantage);
         if (Random.value < repelThreshold)
         {
