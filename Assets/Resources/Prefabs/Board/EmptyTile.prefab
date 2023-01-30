@@ -174,10 +174,10 @@ MonoBehaviour:
   precipitationMax: {r: 0, g: 0, b: 0, a: 0}
   waterColor: {r: 0, g: 0.12593818, b: 1, a: 1}
   frozenColor: {r: 0, g: 0.68605995, b: 1, a: 1}
-  tempMinValue: 0
-  tempMaxValue: 30
+  tempMinValue: -15
+  tempMaxValue: 35
   precipitationMinValue: 0
-  precipitationMaxValue: 100
+  precipitationMaxValue: 450
   DesertColor: {r: 0.9716981, g: 0.9579877, b: 0, a: 1}
   SavannahColor: {r: 1, g: 0.5735978, b: 0, a: 1}
   TropicalRainforestColor: {r: 0.13052988, g: 0.6981132, b: 0, a: 1}

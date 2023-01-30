@@ -10,9 +10,10 @@ public class PerlinHeightmapGenerator : HeightmapGenerator
     public float scale;
     public int seed;
 
+    public float heightBuffer;
+
     public float WaterLevel = .1f;
     public float AvgAboveWaterElevation = .1f;
-    public float MountainSteepness = 30;
     public float SeaLevelRiseSteepness = 15;
 
     public override float LandRisePoint{ get; set; }

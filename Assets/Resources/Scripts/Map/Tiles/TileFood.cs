@@ -13,6 +13,7 @@ public class TileFood : MonoBehaviour
     public float NewFoodPerTick;
 
     TileChars tileChars;
+    TileDrawer tileDrawer;
 
     /// <summary>
     /// Percent of max food that is replenished every tick
@@ -29,6 +30,7 @@ public class TileFood : MonoBehaviour
     private void Awake()
     {
         tileChars = GetComponent<TileChars>();
+        tileDrawer = GetComponent<TileDrawer>();
         tileChars.OnAllTileStatsCalculated += TileFood_OnAllTileStatsCalculated;
     }
 
@@ -52,6 +54,8 @@ public class TileFood : MonoBehaviour
 
     float CalculateFoodRate()
     {
+        if (tileChars.temperature > tileDrawer.tempMaxValue) return 0;
+        if (tileChars.temperature < tileDrawer.tempMinValue) return 0;
         return TempCurve.GetPointOnCurve(tileChars.temperature) - .1f + PrecipitationCurve.GetPointOnCurve(tileChars.precipitation);
     }
 

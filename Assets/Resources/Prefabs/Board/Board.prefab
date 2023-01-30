@@ -76,12 +76,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Age: 0
-  height: 50
-  width: 50
-  tempVariance: 25
-  percentUnderWater: 0
+  _height: 0
+  _width: 0
+  tempVariance: 45
+  LandRisePoint: 0
+  NormalizedSeaLevel: 0
   globalTemp: 0
-  globalHumidity: 0
+  globalPrecipitation: 0
   isHemisphere: 0
   elevationRange: 8000
   tileTypes:

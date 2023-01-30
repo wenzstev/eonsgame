@@ -19,27 +19,27 @@ public class TileDrawer : MonoBehaviour
     public Color waterColor;
     public Color frozenColor;
 
-    public float tempMinValue;
-    public float tempMaxValue;
+    public float tempMinValue = -15;
+    public float tempMaxValue = 35;
 
-    public float precipitationMinValue;
-    public float precipitationMaxValue;
+    public float precipitationMinValue = 0;
+    public float precipitationMaxValue = 450;
 
 
     public enum BiomeType
     {
-        Desert,
-        Savannah,
-        TropicalRainforest,
-        Grassland,
-        Woodland,
-        SeasonalForest,
-        TemperateRainforest,
-        BorealForest,
-        Tundra,
-        Ice,
-        Water,
-        Barren
+        Desert,                     // temp above 5 degrees, precipitation 25 or below
+        Savannah,                   // temp between 10 and 25, precipitation between 50 and 125 
+        TropicalRainforest,         // temp above 18, precipitation greater than 168 cm
+        Grassland,                  // temp between 5 and 20, precipitation between 25 and 50
+        Woodland,                   // temp between 5 and 20, precipitation between 50 and 
+        SeasonalForest,             //
+        TemperateRainforest,        // temp between 5 and 18, precipitation greater than 168 cm
+        Taiga,               // temp 0 - 5 degrees, precipitation 25 - 125
+        Tundra,                     // temp 0 - 5 degrees, precipitation 15 - 25 c,
+        Ice,                        // temp below 0, any precipitation
+        Water,                      
+        Barren                      // temp above 32
     }
 
     public Color DesertColor;
@@ -55,20 +55,37 @@ public class TileDrawer : MonoBehaviour
     public Color WaterColor;
     public Color BarrenColor;
 
-    BiomeType[,] BiomeTable = new BiomeType[6, 6]
+    BiomeType[,] oldBiomeTable = new BiomeType[6, 6]
     {
         {BiomeType.Ice, BiomeType.Tundra, BiomeType.Grassland, BiomeType.Desert, BiomeType.Desert, BiomeType.Desert },
         {BiomeType.Ice, BiomeType.Tundra, BiomeType.Grassland, BiomeType.Desert, BiomeType.Desert, BiomeType.Desert },
         {BiomeType.Ice, BiomeType.Tundra, BiomeType.Woodland, BiomeType.Woodland, BiomeType.Savannah, BiomeType.Savannah },
-        {BiomeType.Ice, BiomeType.Tundra, BiomeType.BorealForest, BiomeType.Woodland, BiomeType.Savannah, BiomeType.Savannah },
-        {BiomeType.Ice, BiomeType.Tundra, BiomeType.BorealForest, BiomeType.SeasonalForest, BiomeType.TropicalRainforest, BiomeType.TropicalRainforest },
-        {BiomeType.Ice, BiomeType.Tundra, BiomeType.BorealForest, BiomeType.TemperateRainforest, BiomeType.TropicalRainforest, BiomeType.TropicalRainforest },
+        {BiomeType.Ice, BiomeType.Tundra, BiomeType.Taiga, BiomeType.Woodland, BiomeType.Savannah, BiomeType.Savannah },
+        {BiomeType.Ice, BiomeType.Tundra, BiomeType.Taiga, BiomeType.SeasonalForest, BiomeType.TropicalRainforest, BiomeType.TropicalRainforest },
+        {BiomeType.Ice, BiomeType.Tundra, BiomeType.Taiga, BiomeType.TemperateRainforest, BiomeType.TropicalRainforest, BiomeType.TropicalRainforest },
     };
+
+    BiomeType[,] BiomeTable = new BiomeType[9, 11]
+    { //        -15                 -10                 -5              0                   5                               10                              15                              20                              25                              30                              35
+    /* <50 */   {BiomeType.Tundra, BiomeType.Tundra, BiomeType.Tundra, BiomeType.Taiga,     BiomeType.Grassland,            BiomeType.Grassland,            BiomeType.Desert,               BiomeType.Desert,               BiomeType.Desert,               BiomeType.Desert,               BiomeType.Desert},
+    /* <100 */  {BiomeType.Tundra, BiomeType.Tundra, BiomeType.Tundra, BiomeType.Taiga,     BiomeType.Grassland,            BiomeType.Grassland,            BiomeType.SeasonalForest,       BiomeType.Savannah,             BiomeType.Savannah,             BiomeType.Desert,               BiomeType.Savannah},
+    /* <150 */  {BiomeType.Tundra, BiomeType.Tundra, BiomeType.Tundra, BiomeType.Taiga,     BiomeType.Taiga,                BiomeType.SeasonalForest,       BiomeType.SeasonalForest,       BiomeType.Savannah,             BiomeType.Savannah,             BiomeType.Woodland,             BiomeType.Woodland},
+    /* <200 */  {BiomeType.Tundra, BiomeType.Tundra, BiomeType.Tundra, BiomeType.Taiga,     BiomeType.SeasonalForest,       BiomeType.SeasonalForest,       BiomeType.SeasonalForest,       BiomeType.Woodland,             BiomeType.Woodland,             BiomeType.Woodland,             BiomeType.Woodland},
+    /* <250 */  {BiomeType.Tundra, BiomeType.Tundra, BiomeType.Tundra, BiomeType.Taiga,     BiomeType.TemperateRainforest,  BiomeType.TemperateRainforest,  BiomeType.TemperateRainforest,  BiomeType.TropicalRainforest,   BiomeType.TropicalRainforest,   BiomeType.TropicalRainforest,   BiomeType.TropicalRainforest},
+    /* <300 */  {BiomeType.Tundra, BiomeType.Tundra, BiomeType.Tundra, BiomeType.Taiga,     BiomeType.TemperateRainforest,  BiomeType.TemperateRainforest,  BiomeType.TemperateRainforest,  BiomeType.TropicalRainforest,   BiomeType.TropicalRainforest,   BiomeType.TropicalRainforest,   BiomeType.TropicalRainforest},
+    /* <350 */  {BiomeType.Tundra, BiomeType.Tundra, BiomeType.Tundra, BiomeType.Taiga,     BiomeType.TemperateRainforest,  BiomeType.TemperateRainforest,  BiomeType.TemperateRainforest,  BiomeType.TropicalRainforest,   BiomeType.TropicalRainforest,   BiomeType.TropicalRainforest,   BiomeType.TropicalRainforest },
+    /* <400 */  {BiomeType.Tundra, BiomeType.Tundra, BiomeType.Tundra, BiomeType.Taiga,     BiomeType.TemperateRainforest,  BiomeType.TemperateRainforest,  BiomeType.TemperateRainforest,  BiomeType.TropicalRainforest,   BiomeType.TropicalRainforest,   BiomeType.TropicalRainforest,   BiomeType.TropicalRainforest},
+    /* >400 */  {BiomeType.Tundra, BiomeType.Tundra, BiomeType.Tundra, BiomeType.Taiga,     BiomeType.TemperateRainforest,  BiomeType.TemperateRainforest,  BiomeType.TemperateRainforest,  BiomeType.TropicalRainforest,   BiomeType.TropicalRainforest,   BiomeType.TropicalRainforest,   BiomeType.TropicalRainforest}
+    };
+
+
+
+
 
     public void Initialize()
     {
         tileChars = GetComponent<TileChars>();
-        tileFood = GetComponent<TileFood>();
+        tileFood = GetComponent<TileFood>();    
 
         sr = GetComponent<SpriteRenderer>();
         DetermineBiomeAndColor();
@@ -84,12 +101,20 @@ public class TileDrawer : MonoBehaviour
         float precipitation = tileChars.precipitation;
         float temperature = tileChars.temperature;
 
-        int temperatureInt = Mathf.FloorToInt(Mathf.InverseLerp(tempMinValue, tempMaxValue, temperature) * (BiomeTable.GetLength(0)-1));
-        int precipitationInt = Mathf.FloorToInt(Mathf.InverseLerp(precipitationMinValue, precipitationMaxValue, precipitation) * (BiomeTable.GetLength(1)-1));
+        int temperatureInt = Mathf.RoundToInt(temperature / 5f) + 3; // add three because we're offset from zero by 3 rows
+        int precipitationInt = Mathf.RoundToInt(precipitation / 50f);
 
 
+        if(precipitationInt >= 0 && precipitationInt < BiomeTable.GetLength(0) && temperatureInt >= 0 && temperatureInt < BiomeTable.GetLength(1))
+            tileType = BiomeTable[precipitationInt, temperatureInt];
 
-        tileType = tileFood.MaxFood <= 0 ? BiomeType.Barren : tileChars.isUnderwater ? BiomeType.Water : BiomeTable[precipitationInt, temperatureInt];
+
+        // special cases
+        if (temperature > tempMaxValue) tileType = BiomeType.Barren;
+        if (tileChars.isUnderwater) tileType = BiomeType.Water;
+        if (temperature < tempMinValue) tileType = BiomeType.Ice;
+    
+
         
         switch(tileType)
         {
@@ -105,7 +130,7 @@ public class TileDrawer : MonoBehaviour
             case BiomeType.Woodland:
                 sr.color = WoodlandColor;
                 break;
-            case BiomeType.BorealForest:
+            case BiomeType.Taiga:
                 sr.color = BorealForestColor;
                 break;
             case BiomeType.SeasonalForest:

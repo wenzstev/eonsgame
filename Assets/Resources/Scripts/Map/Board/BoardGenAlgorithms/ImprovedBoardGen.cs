@@ -7,6 +7,8 @@ public class ImprovedBoardGen : BoardGenAlgorithm
 {
     public float precipitationDropoff = .3f;
     public float elevationModifier = .05f;
+    public float bonusElevationPrecipitation = .02f;
+
 
     GameObject boardObj;
 
@@ -110,6 +112,8 @@ public class ImprovedBoardGen : BoardGenAlgorithm
 
         contributedPrecipitation -= elevationDistance * elevationModifier; 
         contributedPrecipitation = Mathf.Max(0, contributedPrecipitation); // can't have negative precipitation
+
+        contributedPrecipitation += curTileChars.elevation * bonusElevationPrecipitation; // higher elevations get more rainfall 
 
         return contributedPrecipitation;
     }
