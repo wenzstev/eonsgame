@@ -42,7 +42,6 @@ public abstract class CultureActionTest : BasicBoardTest
 
 
         CultureMemory TestCultureMemory = CultureObj.AddComponent<CultureMemory>();
-        TestCultureMemory.Culture = Culture;
         return Culture;
     }
 

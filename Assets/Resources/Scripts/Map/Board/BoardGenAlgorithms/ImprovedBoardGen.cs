@@ -102,7 +102,7 @@ public class ImprovedBoardGen : BoardGenAlgorithm
         TileChars curTileChars = curTile.GetComponent<TileChars>();
         TileChars adjacentTileChars = adjacentTile.GetComponent<TileChars>();
 
-        SigmoidCurve tempModifierCurve = new SigmoidCurve(1, -25, -.08f);
+        SigmoidCurve tempModifierCurve = new SigmoidCurve(1, 10, -.1f);
         float tempModifier = tempModifierCurve.GetPointOnCurve(curTileChars.temperature);
         contributedPrecipitation = adjacentTileChars.precipitation * (1 - precipitationDropoff) * tempModifier;
 

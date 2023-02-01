@@ -8,7 +8,7 @@ public class TileGreyscaleOverlayLink : MonoBehaviour
     public SpriteRenderer targetSprite;
     public TileFood _tileFood;
     GreyscaleOverlay _greyscaleOverlay;
-    float percentLowIndicator = .2f;
+    public float percentLowIndicator = .05f;
 
 
     public void Initialize()

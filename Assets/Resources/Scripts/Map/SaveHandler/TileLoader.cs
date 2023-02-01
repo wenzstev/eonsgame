@@ -58,9 +58,9 @@ public class TileLoader : MonoBehaviour
 
         JsonUtility.FromJsonOverwrite(st.serializedComponents[1], newTile.GetComponent<TileFood>());
         newTile.GetComponentInChildren<TileGreyscaleOverlayLink>().Initialize();
-        newTile.GetComponent<TileFood>().Initialize();
 
-        newTile.GetComponent<TileDrawer>().Initialize(); // tiledrawer has to come after tilefood to properly tell what's barren (don't like)
+        newTile.GetComponent<TileDrawer>().Initialize();
+        newTile.GetComponent<TileFood>().Initialize();
 
         newTile.transform.SetParent(curBoard.transform);
         newTile.name = loadedTileChars.x + ", " + loadedTileChars.y;

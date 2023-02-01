@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class CultureMemory : MonoBehaviour
 {
-    public Culture Culture;
+    Culture Culture;
 
     Tile _previousTile;
     public Tile previousTile { 
@@ -23,6 +23,8 @@ public class CultureMemory : MonoBehaviour
     }
 
     public string cultureParentName;
+
+    public int daysSinceEaten = 0;
 
     [SerializeField]
     Culture.State _previousState;
