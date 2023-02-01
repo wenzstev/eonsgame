@@ -29,13 +29,13 @@ public class LoadMapButton : MonoBehaviour
         this.filePath = filePath;
         saveName = GetComponentInChildren<TMP_Text>();
         fileName = Path.GetFileNameWithoutExtension(filePath);
-        if(fileName != "")
+        if(fileName == "" || Path.GetExtension(filePath) != ".json")
         {
-            saveName.text = fileName;
+            Destroy(gameObject);
         }
         else
         {
-            Destroy(gameObject);
+            saveName.text = fileName;
         }
     }
 

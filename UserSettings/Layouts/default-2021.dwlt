@@ -14,17 +14,91 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
+    x: 896.6667
+    y: 222
+    width: 641.3334
+    height: 603.3334
+  m_ShowMode: 0
+  m_Title: Build Settings
+  m_RootView: {fileID: 4}
+  m_MinSize: {x: 641, y: 603}
+  m_MaxSize: {x: 4001, y: 4023}
+  m_Maximized: 0
+--- !u!114 &2
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PixelRect:
+    serializedVersion: 2
     x: 0
     y: 42.666668
     width: 2560
     height: 1349.3334
   m_ShowMode: 4
-  m_Title: Console
-  m_RootView: {fileID: 2}
+  m_Title: Game
+  m_RootView: {fileID: 5}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
---- !u!114 &2
+--- !u!114 &3
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: BuildPlayerWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 641.3334
+    height: 603.3334
+  m_MinSize: {x: 641, y: 603}
+  m_MaxSize: {x: 4001, y: 4023}
+  m_ActualView: {fileID: 15}
+  m_Panes:
+  - {fileID: 15}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &4
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 3}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 641.3334
+    height: 603.3334
+  m_MinSize: {x: 641, y: 603}
+  m_MaxSize: {x: 4001, y: 4023}
+  vertical: 0
+  controlID: 108869
+--- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37,9 +111,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 3}
-  - {fileID: 5}
-  - {fileID: 4}
+  - {fileID: 6}
+  - {fileID: 8}
+  - {fileID: 7}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -52,7 +126,7 @@ MonoBehaviour:
   m_TopViewHeight: 30
   m_UseBottomView: 1
   m_BottomViewHeight: 20
---- !u!114 &3
+--- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74,7 +148,7 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
---- !u!114 &4
+--- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,7 +169,7 @@ MonoBehaviour:
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &5
+--- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,8 +182,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 6}
-  - {fileID: 11}
+  - {fileID: 9}
+  - {fileID: 14}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -119,8 +193,8 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 66
---- !u!114 &6
+  controlID: 96
+--- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,8 +207,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 7}
   - {fileID: 10}
+  - {fileID: 13}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -144,8 +218,8 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 52
---- !u!114 &7
+  controlID: 97
+--- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,19 +232,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 8}
-  - {fileID: 9}
+  - {fileID: 11}
+  - {fileID: 12}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
     width: 2092.6667
-    height: 673.3333
+    height: 893.3333
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 53
---- !u!114 &8
+  controlID: 98
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -188,16 +262,16 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 574.6667
-    height: 673.3333
+    height: 893.3333
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 13}
+  m_ActualView: {fileID: 17}
   m_Panes:
-  - {fileID: 13}
-  - {fileID: 14}
+  - {fileID: 17}
+  - {fileID: 18}
   m_Selected: 0
   m_LastSelected: 1
---- !u!114 &9
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -215,16 +289,16 @@ MonoBehaviour:
     x: 574.6667
     y: 0
     width: 1518
-    height: 673.3333
+    height: 893.3333
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 15}
+  m_ActualView: {fileID: 19}
   m_Panes:
-  - {fileID: 15}
-  - {fileID: 16}
+  - {fileID: 19}
+  - {fileID: 20}
   m_Selected: 0
   m_LastSelected: 1
---- !u!114 &10
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -234,27 +308,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 673.3333
+    y: 893.3333
     width: 2092.6667
-    height: 626.00006
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 18}
+    height: 406.00006
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 21}
   m_Panes:
-  - {fileID: 17}
-  - {fileID: 18}
-  - {fileID: 19}
-  - {fileID: 20}
   - {fileID: 21}
-  m_Selected: 1
-  m_LastSelected: 0
---- !u!114 &11
+  - {fileID: 22}
+  - {fileID: 23}
+  - {fileID: 24}
+  - {fileID: 25}
+  m_Selected: 0
+  m_LastSelected: 2
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -273,14 +347,64 @@ MonoBehaviour:
     y: 0
     width: 467.33325
     height: 1299.3334
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 12}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 16}
   m_Panes:
-  - {fileID: 12}
+  - {fileID: 16}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &12
+--- !u!114 &15
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12043, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 640, y: 580}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Build Settings
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 896.6667
+    y: 222
+    width: 641.3334
+    height: 582.3334
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_TreeViewState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 0
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -315,13 +439,13 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 270
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &13
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -344,7 +468,7 @@ MonoBehaviour:
     x: 0
     y: 72.66667
     width: 573.6667
-    height: 652.3333
+    height: 872.3333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -352,9 +476,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 80610000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 2c94feff3494feff3a94feff6294feff38fbffff80730000
+      m_ExpandedIDs: 8a3b0afdd83b0afd2c3e0afdd23f0afd2e4e0afd764e0afd404f0afdce500afdec510afd32520afd86540afd30560afd1c590afd64f12afdb2f12afd40f42afde8f52afdc28730fd0c8830fdd68830fd608a30fd688b30fdb28b30fd7c8c30fd068e30fd028f30fd4c8f30fd169030fda09130fd8e9330fdd89330fd649630fdee9730fd5ecf33fdd8cf33fde4cf33fdeccf33fdf2cf33fd1ad033fde8d033fd30d133fdfad133fd84d333fd5ad433fda4d433fdf8d633fd9ed833fd22de33fd6cde33fdc0e033fd6ae233fdb8e433fd06e533fd5ae733fd00e933fdf82738fd582c38fd962c38fd384d38fd7e4d38fd0a5038fd945138fd74cb38fdbecb38fd4ace38fdd2cf38fd2ebc64fda8bc64fdb4bc64fdbcbc64fdc2bc64fdeabc64fdc4b76afdcab76afdd2b76afdf0b76afdbaf26afd7efc6afd42066bfd06106bfde4946bfd5ebe6cfd64be6cfd6cbe6cfd8abe6cfd22c86cfd28c86cfd30c86cfd4ec86cfdbe566dfddebd6efddc0d70fd3e2270fd827771fda08a71fdd28a71fd4edf72fd2cd2f5fd4ed2f5fd60d2f5fd6cd2f5fd74d2f5fd7ad2f5fda2d2f5fd88a6f8fd92a6f8fda4a6f8fdb0a6f8fdb8a6f8fdbea6f8fde6a6f8fdfc03fafd0604fafd1804fafd2404fafd2c04fafd3204fafd5a04fafd42be01fe64be01fe76be01fe82be01fe8abe01fe90be01feb8be01fe3aac3ffed4d53ffe62c340fe902858fe7c5698fecad998fecee8c8fedee8c8fe18e9c8fe1ee9c8fe64e9c8fe5cebc8fe6cecc8feb2ecc8feaaeec8feb073cafef673cafeee75cafeaa77cafef077cafee879cafeb27bcafef87bcafe8892cafea43fdbfe6849dbfeb45adcfe3083effe4816f3feb605fffe0c19fffe6eb400ffbe0904ffa09e04ff36b20cff3cb20cff44b20cff62b20cfffe0f0dff60870eff6e870eff8c870eff2a910eff32910eff50910eff6aaf0eff78af0eff96af0effecee0effea2f38fff82f38ff163038ff94ab38ff0e7a44ff487a44ff4e7a44ffcaf7ffff44f8ffff50f8ffff58f8ffff5ef8ffff86f8ffff28fbffff0e63000036630000103f010050e8010092ed010050ef01003ef20100b229020082500200c4500200f6500200b0510200e85102000a5202000a7b02003e7b0200b27b02006c7c0200a47c020094a40200b4bb0200c0bb020074bc0200c0bc0200c6d90200
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -370,7 +494,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 8}
+        m_ClientGUIView: {fileID: 11}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -378,7 +502,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &14
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -401,18 +525,18 @@ MonoBehaviour:
     x: 0
     y: 72.66667
     width: 573.6667
-    height: 794.3333
+    height: 652.3333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_Spl:
-    ID: 934
+    ID: 30637
     splitterInitialOffset: 677.6667
     currentActiveSplitter: -1
     realSizes:
-    - 480
-    - 244
+    - 386
+    - 196
     relativeSizes:
     - 0.6633916
     - 0.3366084
@@ -422,7 +546,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 724
+    lastTotalSize: 582
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -432,14 +556,14 @@ MonoBehaviour:
     oldSplitSize: 0
   m_TestTypeToolbarIndex: 0
   m_PlayModeTestListGUI:
-    m_Window: {fileID: 14}
+    m_Window: {fileID: 18}
     m_NewResultList:
     - id: 1004
       uniqueId: '[My project][suite]'
       name: My project
       fullName: My project
       resultStatus: 2
-      duration: 1.9288474
+      duration: 18.178562
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -455,7 +579,7 @@ MonoBehaviour:
       name: Tests.dll
       fullName: C:/Users/wenze/Documents/Unity/Eons/Library/ScriptAssemblies/Tests.dll
       resultStatus: 2
-      duration: 1.8524773
+      duration: 18.010319
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -471,7 +595,7 @@ MonoBehaviour:
       name: AffinityManagerTestSuite
       fullName: AffinityManagerTestSuite
       resultStatus: 1
-      duration: 0.0732766
+      duration: 0.0757497
       messages: 
       output: 
       stacktrace: 
@@ -487,7 +611,7 @@ MonoBehaviour:
       name: CanDecayAffinityOnBiome
       fullName: AffinityManagerTestSuite.CanDecayAffinityOnBiome
       resultStatus: 1
-      duration: 0.0342188
+      duration: 0.0284461
       messages: 
       output: 'Final affinity for Grassland is 6.70962
 
@@ -513,7 +637,7 @@ MonoBehaviour:
       name: CanGainAffinityOnBiome
       fullName: AffinityManagerTestSuite.CanGainAffinityOnBiome
       resultStatus: 1
-      duration: 0.0123037
+      duration: 0.0156912
       messages: 
       output: 'Final affinity for Grassland is 3.083034
 
@@ -534,7 +658,7 @@ MonoBehaviour:
       name: CanGetClonedAffinityManager
       fullName: AffinityManagerTestSuite.CanGetClonedAffinityManager
       resultStatus: 1
-      duration: 0.0146627
+      duration: 0.0163537
       messages: 
       output: 'Final affinity for Grassland is 6.70962
 
@@ -560,7 +684,7 @@ MonoBehaviour:
         Testing
         TemperateRainforest
 
-        Testing BorealForest
+        Testing Taiga
 
         Testing Tundra
 
@@ -588,7 +712,7 @@ MonoBehaviour:
       name: AffinityStatsTestSuite
       fullName: AffinityStatsTestSuite
       resultStatus: 2
-      duration: 0.0165843
+      duration: 0.0211841
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -604,7 +728,7 @@ MonoBehaviour:
       name: CanCombineAffinity
       fullName: AffinityStatsTestSuite.CanCombineAffinity
       resultStatus: 2
-      duration: 0.0073295
+      duration: 0.0078833
       messages: "  Desert does not have expected decay rate!\r\n  Expected: 0.396850228f\r\n 
         But was:  0.672950029f\r\n"
       output: 'Final affinity for Grassland is 40
@@ -634,7 +758,7 @@ MonoBehaviour:
       name: CanDuplicateAffinity
       fullName: AffinityStatsTestSuite.CanDuplicateAffinity
       resultStatus: 1
-      duration: 0.0074849
+      duration: 0.0076807
       messages: 
       output: 'Final affinity for Grassland is 40
 
@@ -660,16 +784,16 @@ MonoBehaviour:
         Testing TemperateRainforest
 
         Testing
-        BorealForest
+        Taiga
 
         Testing Tundra
 
         Testing Ice
 
-        Testing
-        Water
+        Testing Water
 
-        Testing Barren
+        Testing
+        Barren
 
 '
       stacktrace: 
@@ -686,7 +810,7 @@ MonoBehaviour:
       name: BoardAgeTestSuite
       fullName: BoardAgeTestSuite
       resultStatus: 1
-      duration: 0.1327471
+      duration: 0.1633863
       messages: 
       output: 
       stacktrace: 
@@ -702,7 +826,7 @@ MonoBehaviour:
       name: CanGetBoardAgeAtStartup
       fullName: BoardAgeTestSuite.CanGetBoardAgeAtStartup
       resultStatus: 1
-      duration: 0.1055594
+      duration: 0.1355344
       messages: 
       output: 'clearing
 
@@ -721,7 +845,7 @@ MonoBehaviour:
       name: CanUpdateBoardAge
       fullName: BoardAgeTestSuite.CanUpdateBoardAge
       resultStatus: 1
-      duration: 0.0167699
+      duration: 0.0165536
       messages: 
       output: 'clearing
 
@@ -740,7 +864,7 @@ MonoBehaviour:
       name: BoardStatsTestSuite
       fullName: BoardStatsTestSuite
       resultStatus: 1
-      duration: 0.0065854
+      duration: 0.0070452
       messages: 
       output: 
       stacktrace: 
@@ -756,7 +880,7 @@ MonoBehaviour:
       name: CanGetAccurateBoardEdges
       fullName: BoardStatsTestSuite.CanGetAccurateBoardEdges
       resultStatus: 1
-      duration: 0.0033047
+      duration: 0.003426
       messages: 
       output: 'setting dimensions
 
@@ -777,7 +901,7 @@ MonoBehaviour:
       name: CameraBoundsTestSuite
       fullName: CameraBoundsTestSuite
       resultStatus: 2
-      duration: 0.0098001
+      duration: 0.0140191
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -793,7 +917,7 @@ MonoBehaviour:
       name: CanAllowCameraWhenLegalBoundsChange
       fullName: CameraBoundsTestSuite.CanAllowCameraWhenLegalBoundsChange
       resultStatus: 1
-      duration: 0.0030569
+      duration: 0.003673
       messages: 
       output: 'setting dimensions
 
@@ -814,7 +938,7 @@ MonoBehaviour:
       name: CanGetBoundsFromBoard
       fullName: CameraBoundsTestSuite.CanGetBoundsFromBoard
       resultStatus: 1
-      duration: 0.0007417
+      duration: 0.000814
       messages: 
       output: 'setting dimensions
 
@@ -835,7 +959,7 @@ MonoBehaviour:
       name: CanPreventCameraFromExceedingBoundsLarge
       fullName: CameraBoundsTestSuite.CanPreventCameraFromExceedingBoundsLarge
       resultStatus: 2
-      duration: 0.0014546
+      duration: 0.0012314
       messages: "  Camera did not properly stay in bounds!\r\n  Expected: (76.00,
         -43.00, 0.00)\r\n  But was:  (80.00, 50.00, 0.00)\r\n"
       output: 'setting dimensions
@@ -860,7 +984,7 @@ MonoBehaviour:
       name: CanPreventCameraFromExceedingBoundsSmall
       fullName: CameraBoundsTestSuite.CanPreventCameraFromExceedingBoundsSmall
       resultStatus: 2
-      duration: 0.0009081
+      duration: 0.0008159
       messages: "  Camera did not properly stay in bounds!\r\n  Expected: (0.00,
         4.50, 0.00)\r\n  But was:  (-96.00, 5.50, 0.00)\r\n"
       output: 'setting dimensions
@@ -885,7 +1009,7 @@ MonoBehaviour:
       name: CameraMovementTestSuite
       fullName: CameraMovementTestSuite
       resultStatus: 1
-      duration: 0.0073064
+      duration: 0.0100483
       messages: 
       output: 'Adding restriction: Camera (CameraBounds)
 
@@ -911,7 +1035,7 @@ MonoBehaviour:
       name: CanDetermineNewEdgesFromBounds
       fullName: CameraMovementTestSuite.CanDetermineNewEdgesFromBounds
       resultStatus: 1
-      duration: 0.0006718
+      duration: 0.0008418
       messages: 
       output: 
       stacktrace: 
@@ -928,7 +1052,7 @@ MonoBehaviour:
       name: CanDetermineNewOriginFromBounds
       fullName: CameraMovementTestSuite.CanDetermineNewOriginFromBounds
       resultStatus: 1
-      duration: 0.0002764
+      duration: 0.0003151
       messages: 
       output: 
       stacktrace: 
@@ -945,7 +1069,7 @@ MonoBehaviour:
       name: CanDetermineNewZoomFromBounds
       fullName: CameraMovementTestSuite.CanDetermineNewZoomFromBounds
       resultStatus: 1
-      duration: 0.0003129
+      duration: 0.0003569
       messages: 
       output: 
       stacktrace: 
@@ -962,7 +1086,7 @@ MonoBehaviour:
       name: NewTransformIsAccurate
       fullName: CameraMovementTestSuite.NewTransformIsAccurate
       resultStatus: 1
-      duration: 0.0005618
+      duration: 0.0005876
       messages: 
       output: 
       stacktrace: 
@@ -979,7 +1103,7 @@ MonoBehaviour:
       name: CultureContainerTestSuite
       fullName: CultureContainerTestSuite
       resultStatus: 1
-      duration: 0.0308115
+      duration: 0.0286607
       messages: 
       output: 
       stacktrace: 
@@ -995,7 +1119,7 @@ MonoBehaviour:
       name: CanAddCultureToContainer
       fullName: CultureContainerTestSuite.CanAddCultureToContainer
       resultStatus: 1
-      duration: 0.0043609
+      duration: 0.0055269
       messages: 
       output: 'clearing
 
@@ -1016,7 +1140,7 @@ MonoBehaviour:
       name: CanResortWhenCultureDestroyed
       fullName: CultureContainerTestSuite.CanResortWhenCultureDestroyed
       resultStatus: 1
-      duration: 0.0144666
+      duration: 0.0092968
       messages: 
       output: 'clearing
 
@@ -1037,7 +1161,7 @@ MonoBehaviour:
       name: CanResortWhenPopulationAdded
       fullName: CultureContainerTestSuite.CanResortWhenPopulationAdded
       resultStatus: 1
-      duration: 0.0038362
+      duration: 0.0045312
       messages: 
       output: 'clearing
 
@@ -1058,7 +1182,7 @@ MonoBehaviour:
       name: CanSortCultures
       fullName: CultureContainerTestSuite.CanSortCultures
       resultStatus: 1
-      duration: 0.003769
+      duration: 0.004319
       messages: 
       output: 'clearing
 
@@ -1079,7 +1203,7 @@ MonoBehaviour:
       name: CultureFoodStoreTestSuite
       fullName: CultureFoodStoreTestSuite
       resultStatus: 2
-      duration: 0.0825495
+      duration: 0.0860107
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -1095,11 +1219,11 @@ MonoBehaviour:
       name: CanCollectFoodFromTile
       fullName: CultureFoodStoreTestSuite.CanCollectFoodFromTile
       resultStatus: 1
-      duration: 0.0298418
+      duration: 0.0363945
       messages: 
       output: 'setting dimensions
 
-        Setup Complete. Culture name is vszxo(-97040)
+        Setup Complete. Culture name is sagpp(-20279812)
 
         clearing
 
@@ -1118,11 +1242,11 @@ MonoBehaviour:
       name: CanConsumeFoodInTurn
       fullName: CultureFoodStoreTestSuite.CanConsumeFoodInTurn
       resultStatus: 1
-      duration: 0.0202589
+      duration: 0.0186605
       messages: 
       output: 'setting dimensions
 
-        Setup Complete. Culture name is xtgjw(-97198)
+        Setup Complete. Culture name is dskat(-20279970)
 
         clearing
 
@@ -1141,11 +1265,11 @@ MonoBehaviour:
       name: CanConsumeFoodMultiplePopulation
       fullName: CultureFoodStoreTestSuite.CanConsumeFoodMultiplePopulation
       resultStatus: 1
-      duration: 0.0123488
+      duration: 0.0131035
       messages: 
       output: 'setting dimensions
 
-        Setup Complete. Culture name is hcuxs(-97356)
+        Setup Complete. Culture name is zvsjm(-20280128)
 
         clearing
 
@@ -1164,12 +1288,12 @@ MonoBehaviour:
       name: CanReduceFoodOnTile
       fullName: CultureFoodStoreTestSuite.CanReduceFoodOnTile
       resultStatus: 2
-      duration: 0.0160277
+      duration: 0.0121378
       messages: "  Food on tile is not what's expected!\r\n  Expected: 991\r\n  But
         was:  990.0f\r\n"
       output: 'setting dimensions
 
-        Setup Complete. Culture name is fkttz(-97514)
+        Setup Complete. Culture name is sacyd(-20280286)
 
         clearing
 
@@ -1195,7 +1319,7 @@ MonoBehaviour:
       name: CulturePlacementHandlerTestSuite
       fullName: CulturePlacementHandlerTestSuite
       resultStatus: 1
-      duration: 0.8576193
+      duration: 0.8497907
       messages: 
       output: 
       stacktrace: 
@@ -1211,7 +1335,7 @@ MonoBehaviour:
       name: CanNotShowAdditionalCulturesAfterThree
       fullName: CulturePlacementHandlerTestSuite.CanNotShowAdditionalCulturesAfterThree
       resultStatus: 1
-      duration: 0.1084531
+      duration: 0.1085755
       messages: 
       output: 'clearing
 
@@ -1232,7 +1356,7 @@ MonoBehaviour:
       name: CanRearrangeWhenPopChanges
       fullName: CulturePlacementHandlerTestSuite.CanRearrangeWhenPopChanges
       resultStatus: 1
-      duration: 0.2145981
+      duration: 0.207894
       messages: 
       output: 'clearing
 
@@ -1253,7 +1377,7 @@ MonoBehaviour:
       name: CanReduceFromThreeToTwoCulturesOnTile
       fullName: CulturePlacementHandlerTestSuite.CanReduceFromThreeToTwoCulturesOnTile
       resultStatus: 1
-      duration: 0.2068519
+      duration: 0.207805
       messages: 
       output: 'clearing
 
@@ -1274,7 +1398,7 @@ MonoBehaviour:
       name: CanShowOneCultureOnTile
       fullName: CulturePlacementHandlerTestSuite.CanShowOneCultureOnTile
       resultStatus: 1
-      duration: 0.106482
+      duration: 0.1065597
       messages: 
       output: 'clearing
 
@@ -1295,7 +1419,7 @@ MonoBehaviour:
       name: CanShowThreeCulturesOnTile
       fullName: CulturePlacementHandlerTestSuite.CanShowThreeCulturesOnTile
       resultStatus: 1
-      duration: 0.1062851
+      duration: 0.1067961
       messages: 
       output: 'clearing
 
@@ -1316,7 +1440,7 @@ MonoBehaviour:
       name: CanShowTwoCulturesOnTile
       fullName: CulturePlacementHandlerTestSuite.CanShowTwoCulturesOnTile
       resultStatus: 1
-      duration: 0.1073668
+      duration: 0.1069195
       messages: 
       output: 'clearing
 
@@ -1337,7 +1461,7 @@ MonoBehaviour:
       name: CultureTestSuite
       fullName: CultureTestSuite
       resultStatus: 1
-      duration: 0.0257854
+      duration: 0.0290031
       messages: 
       output: 
       stacktrace: 
@@ -1353,11 +1477,11 @@ MonoBehaviour:
       name: TestCanMerge
       fullName: CultureTestSuite.TestCanMerge
       resultStatus: 1
-      duration: 0.0064859
+      duration: 0.0072942
       messages: 
       output: 'setting dimensions
 
-        Setup Complete. Culture name is evahf(-97954)
+        Setup Complete. Culture name is netkq(-20280726)
 
         clearing
 
@@ -1376,11 +1500,11 @@ MonoBehaviour:
       name: TestCannotMerge
       fullName: CultureTestSuite.TestCannotMerge
       resultStatus: 1
-      duration: 0.0076159
+      duration: 0.0082793
       messages: 
       output: 'setting dimensions
 
-        Setup Complete. Culture name is cufdr(-98130)
+        Setup Complete. Culture name is vjihx(-20280902)
 
         clearing
 
@@ -1399,11 +1523,11 @@ MonoBehaviour:
       name: TestSplitCulture
       fullName: CultureTestSuite.TestSplitCulture
       resultStatus: 1
-      duration: 0.0080326
+      duration: 0.0092488
       messages: 
       output: 'setting dimensions
 
-        Setup Complete. Culture name is ujshc(-98306)
+        Setup Complete. Culture name is esmpg(-20281078)
 
         clearing
 
@@ -1422,7 +1546,7 @@ MonoBehaviour:
       name: CurveTestSuite
       fullName: CurveTestSuite
       resultStatus: 1
-      duration: 0.0051479
+      duration: 0.004709
       messages: 
       output: 
       stacktrace: 
@@ -1438,7 +1562,7 @@ MonoBehaviour:
       name: TestCompoundCurve
       fullName: CurveTestSuite.TestCompoundCurve
       resultStatus: 1
-      duration: 0.0005871
+      duration: 0.0005009
       messages: 
       output: 
       stacktrace: 
@@ -1455,7 +1579,7 @@ MonoBehaviour:
       name: TestGaussianCurve
       fullName: CurveTestSuite.TestGaussianCurve
       resultStatus: 1
-      duration: 0.0003058
+      duration: 0.0002758
       messages: 
       output: 
       stacktrace: 
@@ -1472,7 +1596,7 @@ MonoBehaviour:
       name: TestPowerCurve
       fullName: CurveTestSuite.TestPowerCurve
       resultStatus: 1
-      duration: 0.0001917
+      duration: 0.0002041
       messages: 
       output: 
       stacktrace: 
@@ -1489,7 +1613,7 @@ MonoBehaviour:
       name: TestSigmoidCurve
       fullName: CurveTestSuite.TestSigmoidCurve
       resultStatus: 1
-      duration: 0.0001836
+      duration: 0.0001823
       messages: 
       output: 
       stacktrace: 
@@ -1506,7 +1630,7 @@ MonoBehaviour:
       name: FoodAmountIndicatorTestSuite
       fullName: FoodAmountIndicatorTestSuite
       resultStatus: 2
-      duration: 0.0156269
+      duration: 0.0133367
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -1522,7 +1646,7 @@ MonoBehaviour:
       name: CanDisplayAccurateFoodCount
       fullName: FoodAmountIndicatorTestSuite.CanDisplayAccurateFoodCount
       resultStatus: 2
-      duration: 0.0063353
+      duration: 0.0062347
       messages: 'SetUp : Unhandled log message: ''[Exception] NullReferenceException:
         Object reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
       output: 'NullReferenceException: Object reference not set to an instance of
@@ -1543,7 +1667,7 @@ MonoBehaviour:
       name: CanGenerateFoodIndicatorAtExpectedInterval
       fullName: FoodAmountIndicatorTestSuite.CanGenerateFoodIndicatorAtExpectedInterval
       resultStatus: 2
-      duration: 0.0060823
+      duration: 0.0040756
       messages: 'SetUp : Unhandled log message: ''[Exception] NullReferenceException:
         Object reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
       output: 'NullReferenceException: Object reference not set to an instance of
@@ -1567,7 +1691,7 @@ MonoBehaviour:
       name: GreyscaleOverlayTestSuite
       fullName: GreyscaleOverlayTestSuite
       resultStatus: 1
-      duration: 0.0057316
+      duration: 0.0054307
       messages: 
       output: 
       stacktrace: 
@@ -1583,7 +1707,7 @@ MonoBehaviour:
       name: CanMakeImageGreyscale
       fullName: GreyscaleOverlayTestSuite.CanMakeImageGreyscale
       resultStatus: 1
-      duration: 0.0020183
+      duration: 0.0019406
       messages: 
       output: 'clearing
 
@@ -1602,7 +1726,7 @@ MonoBehaviour:
       name: CanSetToVariousTransparencies
       fullName: GreyscaleOverlayTestSuite.CanSetToVariousTransparencies
       resultStatus: 1
-      duration: 0.0008325
+      duration: 0.0007849
       messages: 
       output: 'clearing
 
@@ -1621,7 +1745,7 @@ MonoBehaviour:
       name: InfluenceActionTestSuite
       fullName: InfluenceActionTestSuite
       resultStatus: 1
-      duration: 0.0244949
+      duration: 0.024685
       messages: 
       output: 
       stacktrace: 
@@ -1637,11 +1761,11 @@ MonoBehaviour:
       name: CanInfluenceNeighborCulture
       fullName: InfluenceActionTestSuite.CanInfluenceNeighborCulture
       resultStatus: 1
-      duration: 0.0087822
+      duration: 0.0082865
       messages: 
       output: 'setting dimensions
 
-        Setup Complete. Culture name is kfhzv(-98656)
+        Setup Complete. Culture name is xwbrq(-20281428)
 
         clearing
 
@@ -1660,11 +1784,11 @@ MonoBehaviour:
       name: CanMergeIntoNewCultureIfClose
       fullName: InfluenceActionTestSuite.CanMergeIntoNewCultureIfClose
       resultStatus: 1
-      duration: 0.012147
+      duration: 0.0126688
       messages: 
       output: 'setting dimensions
 
-        Setup Complete. Culture name is acvol(-98826)
+        Setup Complete. Culture name is bcryo(-20281598)
 
         clearing
 
@@ -1682,9 +1806,9 @@ MonoBehaviour:
       uniqueId: Tests.dll/[Tests][MergeWithTileActionTestSuite][suite]
       name: MergeWithTileActionTestSuite
       fullName: MergeWithTileActionTestSuite
-      resultStatus: 1
-      duration: 0.0302093
-      messages: 
+      resultStatus: 2
+      duration: 18.0014
+      messages: One or more child tests had errors
       output: 
       stacktrace: 
       notRunnable: 0
@@ -1699,11 +1823,11 @@ MonoBehaviour:
       name: CanAddNewCultureToTile
       fullName: MergeWithTileActionTestSuite.CanAddNewCultureToTile
       resultStatus: 1
-      duration: 0.0066153
+      duration: 0.0145292
       messages: 
       output: 'setting dimensions
 
-        Setup Complete. Culture name is kpxiz(-98996)
+        Setup Complete. Culture name is tucoh(-20281768)
 
         clearing
 
@@ -1721,17 +1845,21 @@ MonoBehaviour:
       uniqueId: Tests.dll/MergeWithTileActionTestSuite/[Tests][MergeWithTileActionTestSuite.CanCreateAsNewCulture]
       name: CanCreateAsNewCulture
       fullName: MergeWithTileActionTestSuite.CanCreateAsNewCulture
-      resultStatus: 1
-      duration: 0.0105441
-      messages: 
+      resultStatus: 2
+      duration: 0.0084166
+      messages: "  Culture didn't get a name change!\r\n  Expected: 1\r\n  But was: 
+        0\r\n"
       output: 'setting dimensions
 
-        Setup Complete. Culture name is pstmr(-99166)
+        Setup Complete. Culture name is pxlli(-20281938)
 
         clearing
 
 '
-      stacktrace: 
+      stacktrace: 'at MergeWithTileActionTestSuite.CanCreateAsNewCulture () [0x00056]
+        in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\MergeWithTileActionTestSuite.cs:63
+
+'
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1744,17 +1872,24 @@ MonoBehaviour:
       uniqueId: Tests.dll/MergeWithTileActionTestSuite/[Tests][MergeWithTileActionTestSuite.CanMergeCultures]
       name: CanMergeCultures
       fullName: MergeWithTileActionTestSuite.CanMergeCultures
-      resultStatus: 1
-      duration: 0.0092617
-      messages: 
+      resultStatus: 2
+      duration: 17.965939
+      messages: "  Merged culture's population change isn't expected!\r\n  Expected:
+        1\r\n  But was:  -1\r\n"
       output: 'setting dimensions
 
-        Setup Complete. Culture name is eprpa(-99336)
+        Setup Complete. Culture name is yeipn(-20387366)
+
+        merging
+        cultures remain test(-20387380) and merge test(-20387366)
 
         clearing
 
 '
-      stacktrace: 
+      stacktrace: 'at MergeWithTileActionTestSuite.CanMergeCultures () [0x00088]
+        in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\MergeWithTileActionTestSuite.cs:34
+
+'
       notRunnable: 0
       ignoredOrSkipped: 0
       description: 
@@ -1768,7 +1903,7 @@ MonoBehaviour:
       name: MoveActionTestSuite
       fullName: MoveActionTestSuite
       resultStatus: 1
-      duration: 0.3709954
+      duration: 0.3787651
       messages: 
       output: 
       stacktrace: 
@@ -1784,11 +1919,11 @@ MonoBehaviour:
       name: MoveTileActionTest
       fullName: MoveActionTestSuite.MoveTileActionTest
       resultStatus: 1
-      duration: 0.143264
+      duration: 0.1430656
       messages: 
       output: 'setting dimensions
 
-        Setup Complete. Culture name is thyyl(-99506)
+        Setup Complete. Culture name is vkeds(-20282278)
 
         clearing
 
@@ -1807,11 +1942,11 @@ MonoBehaviour:
       name: MoveTileActionWhenLargeTest
       fullName: MoveActionTestSuite.MoveTileActionWhenLargeTest
       resultStatus: 1
-      duration: 0.1118866
+      duration: 0.1192051
       messages: 
       output: 'setting dimensions
 
-        Setup Complete. Culture name is wvgfr(-99662)
+        Setup Complete. Culture name is cbcnn(-20282434)
 
         clearing
 
@@ -1830,11 +1965,11 @@ MonoBehaviour:
       name: RepelledActionTest
       fullName: MoveActionTestSuite.RepelledActionTest
       resultStatus: 1
-      duration: 0.111805
+      duration: 0.1123303
       messages: 
       output: 'setting dimensions
 
-        Setup Complete. Culture name is nettl(-99862)
+        Setup Complete. Culture name is xaxri(-20282634)
 
         clearing
 
@@ -1853,7 +1988,7 @@ MonoBehaviour:
       name: OverpopulationActionTestSuite
       fullName: OverpopulationActionTestSuite
       resultStatus: 1
-      duration: 0.0104993
+      duration: 0.0090012
       messages: 
       output: 
       stacktrace: 
@@ -1869,11 +2004,11 @@ MonoBehaviour:
       name: CanBecomeOverPopulated
       fullName: OverpopulationActionTestSuite.CanBecomeOverPopulated
       resultStatus: 1
-      duration: 0.006528
+      duration: 0.0058985
       messages: 
       output: 'setting dimensions
 
-        Setup Complete. Culture name is vylau(-100018)
+        Setup Complete. Culture name is tewho(-20282790)
 
         clearing
 
@@ -1892,7 +2027,7 @@ MonoBehaviour:
       name: PerlinHeightmapGeneratorTestSuite
       fullName: PerlinHeightmapGeneratorTestSuite
       resultStatus: 1
-      duration: 0.0047954
+      duration: 0.0043327
       messages: 
       output: 
       stacktrace: 
@@ -1908,7 +2043,7 @@ MonoBehaviour:
       name: CanAssignExpectedValues
       fullName: PerlinHeightmapGeneratorTestSuite.CanAssignExpectedValues
       resultStatus: 1
-      duration: 0.0016184
+      duration: 0.0015989
       messages: 
       output: 
       stacktrace: 
@@ -1925,7 +2060,7 @@ MonoBehaviour:
       name: PopulationChangeIndicatorTestSuite
       fullName: PopulationChangeIndicatorTestSuite
       resultStatus: 1
-      duration: 0.0320382
+      duration: 0.0326891
       messages: 
       output: 
       stacktrace: 
@@ -1941,11 +2076,11 @@ MonoBehaviour:
       name: CanGenerateIndicator
       fullName: PopulationChangeIndicatorTestSuite.CanGenerateIndicator
       resultStatus: 1
-      duration: 0.0290562
+      duration: 0.0295231
       messages: 
       output: 'setting dimensions
 
-        Setup Complete. Culture name is jmutp(-100190)
+        Setup Complete. Culture name is vbcph(-20282962)
 
         clearing
 
@@ -1964,7 +2099,7 @@ MonoBehaviour:
       name: PopulationPipMakerTestSuite
       fullName: PopulationPipMakerTestSuite
       resultStatus: 1
-      duration: 0.027976
+      duration: 0.028281
       messages: 
       output: 
       stacktrace: 
@@ -1980,11 +2115,11 @@ MonoBehaviour:
       name: CanAddPip
       fullName: PopulationPipMakerTestSuite.CanAddPip
       resultStatus: 1
-      duration: 0.0103083
+      duration: 0.011518
       messages: 
       output: 'setting dimensions
 
-        Setup Complete. Culture name is ybhkw(-100366)
+        Setup Complete. Culture name is swrjd(-20283138)
 
         clearing
 
@@ -2003,11 +2138,11 @@ MonoBehaviour:
       name: CanRemovePip
       fullName: PopulationPipMakerTestSuite.CanRemovePip
       resultStatus: 1
-      duration: 0.0132564
+      duration: 0.0125202
       messages: 
       output: 'setting dimensions
 
-        Setup Complete. Culture name is gstfl(-100536)
+        Setup Complete. Culture name is vhqee(-20283308)
 
         clearing
 
@@ -2026,7 +2161,7 @@ MonoBehaviour:
       name: TileFoodTestSuite
       fullName: TileFoodTestSuite
       resultStatus: 2
-      duration: 0.0479758
+      duration: 0.0529737
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -2042,7 +2177,7 @@ MonoBehaviour:
       name: CanCalculateProperFoodRateDesert
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateDesert
       resultStatus: 2
-      duration: 0.0052049
+      duration: 0.0058004
       messages: "  Did not calculate the right new food!\r\n  Expected: 0.44600001f\r\n 
         But was:  0.0f\r\n"
       output: 'setting dimensions
@@ -2067,7 +2202,7 @@ MonoBehaviour:
       name: CanCalculateProperFoodRateRainforest
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateRainforest
       resultStatus: 2
-      duration: 0.0061658
+      duration: 0.0063805
       messages: "  Did not calculate right new food!\r\n  Expected: 1.39900005f\r\n 
         But was:  0.0f\r\n"
       output: 'setting dimensions
@@ -2092,7 +2227,7 @@ MonoBehaviour:
       name: CanCalculateProperFoodRateTundra
       fullName: TileFoodTestSuite.CanCalculateProperFoodRateTundra
       resultStatus: 2
-      duration: 0.0059753
+      duration: 0.0065231
       messages: "  Did not calculate right new food!\r\n  Expected: 0.0649999976f\r\n 
         But was:  0.0f\r\n"
       output: 'setting dimensions
@@ -2117,7 +2252,7 @@ MonoBehaviour:
       name: CanIncreaseFoodPerTick
       fullName: TileFoodTestSuite.CanIncreaseFoodPerTick
       resultStatus: 2
-      duration: 0.0087185
+      duration: 0.0110723
       messages: "  Food did not increase by expected amount!\r\n  Expected: 1.39999998f\r\n 
         But was:  0.0f\r\n"
       output: 'setting dimensions
@@ -2146,7 +2281,7 @@ MonoBehaviour:
       name: CanPreventAdditionalFood
       fullName: TileFoodTestSuite.CanPreventAdditionalFood
       resultStatus: 1
-      duration: 0.0094772
+      duration: 0.0095973
       messages: 
       output: 'setting dimensions
 
@@ -2167,7 +2302,7 @@ MonoBehaviour:
       name: CanSetFoodToMaxAtStart
       fullName: TileFoodTestSuite.CanSetFoodToMaxAtStart
       resultStatus: 1
-      duration: 0.0081483
+      duration: 0.0089367
       messages: 
       output: 'setting dimensions
 
@@ -2188,7 +2323,7 @@ MonoBehaviour:
       name: TileGreyscaleOverlayLinkTestSuite
       fullName: TileGreyscaleOverlayLinkTestSuite
       resultStatus: 2
-      duration: 0.0051285
+      duration: 0.0060445
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -2204,7 +2339,7 @@ MonoBehaviour:
       name: CanSetToGreyIfLow
       fullName: TileGreyscaleOverlayLinkTestSuite.CanSetToGreyIfLow
       resultStatus: 2
-      duration: 0.0023359
+      duration: 0.0027693
       messages: "  Test Food amount: 100 -- Greyscale Overlay is not expected transparency!\r\n 
         Expected: 0.5f\r\n  But was:  0.0f\r\n"
       output: 'clearing
@@ -2227,7 +2362,7 @@ MonoBehaviour:
       name: TurnTestSuite
       fullName: TurnTestSuite
       resultStatus: 2
-      duration: 0.0170999
+      duration: 0.0223919
       messages: One or more child tests had errors
       output: 
       stacktrace: 
@@ -2243,7 +2378,7 @@ MonoBehaviour:
       name: CanChangeTurnAfterUpdated
       fullName: TurnTestSuite.CanChangeTurnAfterUpdated
       resultStatus: 2
-      duration: 0.0024552
+      duration: 0.0038829
       messages: "  Expected: not equal to Turn\r\n  But was:  Turn\r\n"
       output: 'clearing
 
@@ -2264,7 +2399,7 @@ MonoBehaviour:
       name: CanGetPendingUpdatesFor
       fullName: TurnTestSuite.CanGetPendingUpdatesFor
       resultStatus: 1
-      duration: 0.0041744
+      duration: 0.0044429
       messages: 
       output: 'clearing
 
@@ -2283,7 +2418,7 @@ MonoBehaviour:
       name: CanUpdateAllCultures
       fullName: TurnTestSuite.CanUpdateAllCultures
       resultStatus: 1
-      duration: 0.0030804
+      duration: 0.0035765
       messages: 
       output: 'clearing
 
@@ -2302,7 +2437,7 @@ MonoBehaviour:
       name: TestAddUpdate
       fullName: TurnTestSuite.TestAddUpdate
       resultStatus: 1
-      duration: 0.0035267
+      duration: 0.0064419
       messages: 
       output: 'clearing
 
@@ -2316,17 +2451,19 @@ MonoBehaviour:
       - Uncategorized
       parentId: 1070
       parentUniqueId: Tests.dll/[Tests][TurnTestSuite][suite]
-    m_ResultText: 'My project (1.929s)
+    m_ResultText: "CanMergeCultures (17.966s)\n---\nMerged culture's population change
+      isn't expected!\r\n  Expected: 1\r\n  But was:  -1\n---\nat MergeWithTileActionTestSuite.CanMergeCultures
+      () [0x00088] in C:\\Users\\wenze\\Documents\\Unity\\Eons\\Assets\\Resources\\Scripts\\Tests\\MergeWithTileActionTestSuite.cs:34\n---\nsetting
+      dimensions\r\nSetup Complete. Culture name is yeipn(-20387366)\r\nmerging cultures
+      remain test(-20387380) and merge test(-20387366)\r\nclearing"
+    m_ResultStacktrace: 'at MergeWithTileActionTestSuite.CanMergeCultures () [0x00088]
+      in C:\Users\wenze\Documents\Unity\Eons\Assets\Resources\Scripts\Tests\MergeWithTileActionTestSuite.cs:34
 
-      ---
-
-      One or more child tests
-      had errors'
-    m_ResultStacktrace: 
+'
     m_TestListState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 03fe4433
-      m_LastClickedID: 860159491
+      scrollPos: {x: 0, y: 780}
+      m_SelectedIDs: 7bbc5b64
+      m_LastClickedID: 1683733627
       m_ExpandedIDs: bbb6ef82ce07e386c6ec6ba11cb03da8c2778cab371506b518e194b58e1814b84580fecc56c0c1dcaf90fae781f0ffed5fdcc4f89d8029056eca7a08b26d2713ad6ec22132b4d12703fe443357683e3426ecfc371a04ba42b71a114750a8734ec10a124feb084855a0eedc6e7c3b3c71ffffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -2355,7 +2492,7 @@ MonoBehaviour:
       - Uncategorized
     m_SelectedOption: 0
   m_EditModeTestListGUI:
-    m_Window: {fileID: 14}
+    m_Window: {fileID: 18}
     m_NewResultList:
     - id: 1000
       uniqueId: '[My project][suite]'
@@ -2405,7 +2542,7 @@ MonoBehaviour:
       selectedCategoryMask: 0
       availableCategories:
       - Uncategorized
---- !u!114 &15
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2428,7 +2565,7 @@ MonoBehaviour:
     x: 574.6667
     y: 72.66667
     width: 1516
-    height: 652.3333
+    height: 872.3333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2438,8 +2575,8 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: -98.666626, y: -26}
+      snapOffset: {x: -101, y: -26}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -2482,7 +2619,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 25.333334}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-transform-toolbar
@@ -2630,9 +2767,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1286.5648, y: 470.28802, z: -16.295792}
+    m_Target: {x: 1497.2993, y: 991.06964, z: 54.952984}
     speed: 2
-    m_Value: {x: 1286.5648, y: 470.28802, z: -16.295792}
+    m_Value: {x: 1145.0983, y: 606.806, z: -6.515093}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -2683,9 +2820,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 841.96967
+    m_Target: 1483.4684
     speed: 2
-    m_Value: 841.96967
+    m_Value: 430.82742
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -2710,7 +2847,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &16
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2733,7 +2870,7 @@ MonoBehaviour:
     x: 574.6667
     y: 72.66667
     width: 1516
-    height: 652.3333
+    height: 872.3333
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2744,7 +2881,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1920, y: 1080}
+  m_TargetSize: {x: 3840, y: 2160}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -2753,16 +2890,16 @@ MonoBehaviour:
   m_VSyncEnabled: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 03000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 06000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -640
-    m_HBaseRangeMax: 640
-    m_VBaseRangeMin: -360
-    m_VBaseRangeMax: 360
+    m_HBaseRangeMin: -1280
+    m_HBaseRangeMax: 1280
+    m_VBaseRangeMin: -720
+    m_VBaseRangeMax: 720
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -2781,28 +2918,28 @@ MonoBehaviour:
       x: 0
       y: 21
       width: 1516
-      height: 631.3333
-    m_Scale: {x: 0.8768518, y: 0.8768518}
-    m_Translation: {x: 758, y: 315.66666}
+      height: 851.3333
+    m_Scale: {x: 0.5912037, y: 0.5912037}
+    m_Translation: {x: 758, y: 425.66666}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -864.45624
-      y: -360
-      width: 1728.9125
-      height: 720
+      x: -1282.13
+      y: -720
+      width: 2564.26
+      height: 1440
     m_MinimalGUI: 1
-  m_defaultScale: 0.8768518
-  m_LastWindowPixelSize: {x: 2274, y: 978.5}
+  m_defaultScale: 0.5912037
+  m_LastWindowPixelSize: {x: 2274, y: 1308.5}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &17
+--- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2823,9 +2960,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 746
+    y: 966
     width: 2091.6667
-    height: 605.00006
+    height: 385.00006
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -2843,38 +2980,38 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Prefabs/Board
+    - Assets/Resources/Scripts/UI/LoadMapScreen
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Prefabs/Board
+  - Assets/Resources/Scripts/UI/LoadMapScreen
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\wenze\Documents\Unity\Eons
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 102.99994}
-    m_SelectedIDs: b4620000
-    m_LastClickedID: 25268
-    m_ExpandedIDs: 00000000ae620000b0620000b2620000b4620000b6620000b8620000ba620000da620000ec620000f26200001a6300003c63000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 338.99994}
+    m_SelectedIDs: d8680000
+    m_LastClickedID: 26840
+    m_ExpandedIDs: 00000000b8620000ba620000bc620000be620000c0620000c2620000c462000004690000a86900008c6a00000c6d0000ca6e00003272000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Controllers
+      m_OriginalName: Controllers
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 28492
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 10}
+      m_ClientGUIView: {fileID: 13}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -2886,7 +3023,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ae620000b0620000b2620000b4620000b6620000b8620000ba620000
+    m_ExpandedIDs: 00000000b8620000ba620000bc620000be620000c0620000c2620000c4620000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2911,8 +3048,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 80610000
-    m_LastClickedInstanceID: 24960
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300009e5f0000946c0000ca590000e65b0000a8700000345d00003e5a000080720000565a0000e693ffffc47100004484000038840000b45c0000cc5c000000000000d45b00007c5d0000785f0000705b0000545c0000485d0000ec5e000030600000
     m_RenameOverlay:
@@ -2930,7 +3067,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 10}
+      m_ClientGUIView: {fileID: 13}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -2942,7 +3079,7 @@ MonoBehaviour:
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 341
---- !u!114 &18
+--- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2963,14 +3100,14 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 746
+    y: 966
     width: 2091.6667
-    height: 605.00006
+    height: 385.00006
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
---- !u!114 &19
+--- !u!114 &23
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2991,17 +3128,17 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 581.3334
-    width: 2077.6667
-    height: 769.66675
+    y: 966
+    width: 2091.6667
+    height: 385.00006
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 73096
---- !u!114 &20
+  m_LastSelectedObjectID: 187176
+--- !u!114 &24
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3022,9 +3159,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 888
+    y: 966
     width: 2091.6667
-    height: 463.00006
+    height: 385.00006
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -3056,11 +3193,11 @@ MonoBehaviour:
     - e00: 1
       e01: 0
       e02: 0
-      e03: 148.66663
+      e03: 267
       e10: 0
       e11: 1
       e12: 0
-      e13: 4
+      e13: -104
       e20: 0
       e21: 0
       e22: 1
@@ -3088,11 +3225,11 @@ MonoBehaviour:
     - e00: 1.0032251
       e01: 0
       e02: 0
-      e03: 151.79115
+      e03: 166.79117
       e10: 0
       e11: 1.0032251
       e12: 0
-      e13: 100.01798
+      e13: 56.017963
       e20: 0
       e21: 0
       e22: 1
@@ -3118,9 +3255,11 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 6e1ea7ce95362bd43b6e9e2020a2a019, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 7932117235907219867, guid: 6e1ea7ce95362bd43b6e9e2020a2a019, type: 2}
+  - m_Target: {fileID: -2208600786771584181, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
+    m_ScrollPosition: {x: 0, y: 0}
+  - m_Target: {fileID: 8030200332961901116, guid: 19c24bbe2c3160645a67a1e40c1bc132, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -3133,7 +3272,7 @@ MonoBehaviour:
   m_CurrentEditor: 1
   m_LayerEditor:
     m_SelectedLayerIndex: 0
---- !u!114 &21
+--- !u!114 &25
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3154,9 +3293,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 888
+    y: 966
     width: 2091.6667
-    height: 463.00006
+    height: 385.00006
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -3202,7 +3341,7 @@ MonoBehaviour:
             scrollPos: {x: 0, y: 0}
             m_SelectedIDs: 
             m_LastClickedID: 0
-            m_ExpandedIDs: 040000003700000044000000450000005100000072000000c5000000
+            m_ExpandedIDs: 
             m_RenameOverlay:
               m_UserAcceptedRename: 0
               m_Name: 

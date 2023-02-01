@@ -182,9 +182,9 @@ MonoBehaviour:
   SavannahColor: {r: 0.745283, g: 0.461774, b: 0.08202792, a: 1}
   SteppeColor: {r: 0.3012044, g: 0.6698113, b: 0.51146615, a: 1}
   TropicalRainforestColor: {r: 0.15729803, g: 0.6509434, b: 0.12077248, a: 1}
-  GrasslandColor: {r: 0.4811321, g: 0.4782446, b: 0, a: 1}
+  GrasslandColor: {r: 0.6432431, g: 0.764151, b: 0.24991095, a: 1}
   WoodlandColor: {r: 0.3199936, g: 0.41568628, b: 0, a: 1}
-  SeasonalForestColor: {r: 0.44141975, g: 0.5754717, b: 0.23163636, a: 1}
+  SeasonalForestColor: {r: 0.48235294, g: 0.47843137, b: 0, a: 1}
   TemperateRainForestColor: {r: 0.2017186, g: 0.46226418, b: 0.15990266, a: 1}
   BorealForestColor: {r: 0.73537797, g: 0.6313726, b: 0, a: 1}
   TundraColor: {r: 0.32935798, g: 0.5754717, b: 0.40612617, a: 1}
@@ -388,7 +388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetSprite: {fileID: 1960078481896472822}
   _tileFood: {fileID: -4231853352628952675}
-  percentLowIndicator: 0.01
+  percentLowIndicator: 0.005
 --- !u!1 &5421071591610982658
 GameObject:
   m_ObjectHideFlags: 0
