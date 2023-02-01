@@ -44,7 +44,11 @@ public static class CultureUpdateGetter
         ColorUpdate.CultureChangeValue = newColor;
         ColorUpdate.Originator = originator;
         ColorUpdate._target = target;
-        ColorUpdate.ExecuteChangeAction = (colorUpdate, newColor) => colorUpdate.Target?.SetColor(newColor);
+        ColorUpdate.ExecuteChangeAction = (colorUpdate, newColor) =>
+        {
+            colorUpdate.Target?.SetColor(newColor);
+            if (UnityEngine.Random.value < 0.0001f) colorUpdate.Target.RenameCulture(Culture.MutateString(colorUpdate.Target.name));
+        };
         return ColorUpdate;
     }
 

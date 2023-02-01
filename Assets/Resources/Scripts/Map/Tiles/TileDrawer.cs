@@ -29,6 +29,7 @@ public class TileDrawer : MonoBehaviour
     public enum BiomeType
     {
         Desert,                     // temp above 5 degrees, precipitation 25 or below
+        Steppe,
         Savannah,                   // temp between 10 and 25, precipitation between 50 and 125 
         TropicalRainforest,         // temp above 18, precipitation greater than 168 cm
         Grassland,                  // temp between 5 and 20, precipitation between 25 and 50
@@ -44,6 +45,7 @@ public class TileDrawer : MonoBehaviour
 
     public Color DesertColor;
     public Color SavannahColor;
+    public Color SteppeColor;
     public Color TropicalRainforestColor;
     public Color GrasslandColor;
     public Color WoodlandColor;
@@ -67,8 +69,8 @@ public class TileDrawer : MonoBehaviour
 
     BiomeType[,] BiomeTable = new BiomeType[9, 11]
     { //        -15                 -10                 -5              0                   5                               10                              15                              20                              25                              30                              35
-    /* <50 */   {BiomeType.Tundra, BiomeType.Tundra, BiomeType.Tundra, BiomeType.Tundra,    BiomeType.Desert,               BiomeType.Desert,               BiomeType.Desert,               BiomeType.Desert,               BiomeType.Desert,               BiomeType.Desert,               BiomeType.Desert},
-    /* <100 */  {BiomeType.Tundra, BiomeType.Tundra, BiomeType.Tundra, BiomeType.Taiga,     BiomeType.Grassland,            BiomeType.Grassland,            BiomeType.Grassland,            BiomeType.Savannah,             BiomeType.Savannah,             BiomeType.Savannah,             BiomeType.Savannah},
+    /* <50 */   {BiomeType.Tundra, BiomeType.Tundra, BiomeType.Tundra, BiomeType.Tundra,    BiomeType.Steppe,               BiomeType.Steppe,               BiomeType.Desert,               BiomeType.Desert,               BiomeType.Desert,               BiomeType.Desert,               BiomeType.Desert},
+    /* <100 */  {BiomeType.Tundra, BiomeType.Tundra, BiomeType.Tundra, BiomeType.Steppe,    BiomeType.Grassland,            BiomeType.Grassland,            BiomeType.Grassland,            BiomeType.Savannah,             BiomeType.Savannah,             BiomeType.Savannah,             BiomeType.Savannah},
     /* <150 */  {BiomeType.Tundra, BiomeType.Tundra, BiomeType.Tundra, BiomeType.Taiga,     BiomeType.Taiga,                BiomeType.SeasonalForest,       BiomeType.SeasonalForest,       BiomeType.SeasonalForest,       BiomeType.SeasonalForest,       BiomeType.Woodland,             BiomeType.Woodland},
     /* <200 */  {BiomeType.Tundra, BiomeType.Tundra, BiomeType.Tundra, BiomeType.Taiga,     BiomeType.SeasonalForest,       BiomeType.SeasonalForest,       BiomeType.SeasonalForest,       BiomeType.Woodland,             BiomeType.Woodland,             BiomeType.Woodland,             BiomeType.Woodland},
     /* <250 */  {BiomeType.Tundra, BiomeType.Tundra, BiomeType.Tundra, BiomeType.Taiga,     BiomeType.TemperateRainforest,  BiomeType.TemperateRainforest,  BiomeType.TemperateRainforest,  BiomeType.TropicalRainforest,   BiomeType.TropicalRainforest,   BiomeType.TropicalRainforest,   BiomeType.TropicalRainforest},
@@ -123,6 +125,9 @@ public class TileDrawer : MonoBehaviour
                 break;
             case BiomeType.Savannah:
                 sr.color = SavannahColor;
+                break;
+            case BiomeType.Steppe:
+                sr.color = SteppeColor;
                 break;
             case BiomeType.Grassland:
                 sr.color = GrasslandColor;

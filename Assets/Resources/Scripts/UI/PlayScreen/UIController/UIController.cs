@@ -89,7 +89,7 @@ public class UIController : MonoBehaviour
                 SelectNewTile(g);
                 continue;
             }
-            if(g.GetComponent<Culture>() != null)
+            if(g.GetComponent<Culture>() != null && !Input.GetKey(KeyCode.D)) // deleting culture if "D" is held
             {
                 SelectNewCulture(g);
             }

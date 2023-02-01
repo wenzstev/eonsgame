@@ -21,6 +21,9 @@ public class GenerateNewMapFromOptions : MonoBehaviour
 
     public (int, int)[] sizes = { (50, 35), (75, 50), (100, 65) };
 
+    Board board;
+    BoardGenAlgorithm bga;
+
     private void Awake()
     {
         fader.OnFadeComplete += Fader_OnFadeComplete;
@@ -41,6 +44,9 @@ public class GenerateNewMapFromOptions : MonoBehaviour
         GameObject boardObj = Instantiate(BoardTemplate);
         GameObject boardCreator = Instantiate(MapGeneratorTemplate);
 
+        boardCreator.GetComponent<BoardGenAlgorithm>().OnBoardCalculationsCompleted += ImprovedBoardGen_OnBoardCompleted; // board is created with coroutines, so we need to wait till it's done to load the map
+        board = boardObj.GetComponent<Board>();
+
         BoardStats bs = boardObj.GetComponent<BoardStats>();
         bs.SetDimensions(mapSize.Item1, mapSize.Item2);
         bs.SetTileWidth(1);
@@ -52,7 +58,7 @@ public class GenerateNewMapFromOptions : MonoBehaviour
         boardObj.GetComponent<Board>().CreateBoard();
 
 
-        CreateSaveAndLoadMap(boardObj.GetComponent<Board>(), MapName.text);
+        //CreateSaveAndLoadMap(boardObj.GetComponent<Board>(), MapName.text);
     }
 
     void CreateSaveAndLoadMap(Board b, string mapName)
@@ -62,5 +68,10 @@ public class GenerateNewMapFromOptions : MonoBehaviour
         Save.SerializeSave(save, mapName);
         Save.CreatePersistantSave(save, mapName);
         SceneManager.LoadScene("PlayScene");
+    }
+
+    void ImprovedBoardGen_OnBoardCompleted(object sender, EventArgs empty)
+    {
+        CreateSaveAndLoadMap(board, MapName.text);
     }
 }

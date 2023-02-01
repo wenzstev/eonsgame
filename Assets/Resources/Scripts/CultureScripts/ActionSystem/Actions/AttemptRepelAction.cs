@@ -4,8 +4,8 @@ using UnityEngine;
 public static class AttemptRepelAction
 {
 
-    static float repelModifier = .8f;
-    static float dieoffPercent = .05f;
+    static float repelModifier = .6f;
+    static float dieoffPercent = .02f;
 
     public static void AttemptRepel(CultureTurnInfo cultureTurnInfo)
     {

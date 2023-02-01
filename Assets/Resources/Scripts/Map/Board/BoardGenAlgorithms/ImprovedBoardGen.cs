@@ -1,13 +1,14 @@
 using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using UnityEngine;
 
 public class ImprovedBoardGen : BoardGenAlgorithm
 {
-    public float precipitationDropoff = .3f;
+    public float precipitationDropoff = .01f;
     public float elevationModifier = .05f;
-    public float bonusElevationPrecipitation = .02f;
+    public float bonusElevationPrecipitation = 0.005f;
 
 
     GameObject boardObj;
@@ -25,19 +26,34 @@ public class ImprovedBoardGen : BoardGenAlgorithm
         bs.GetComponent<Board>().boardTileRelationship = perlinBoard;
 
         // step 2: temperature
-        CalculateTemperatures(perlinBoard.tiles);
+        //CalculateTemperatures(perlinBoard.tiles);
 
         // step 3: precipitation
-        CalculatePrecipitation(perlinBoard.tiles);
+        //CalculatePrecipitation(perlinBoard.tiles);
 
         // step 4: determine tile types (with sprites)
         //DetermineTileTypes(perlinBoard.tiles);
 
+        StartCoroutine(CalculateBoardInfo(perlinBoard.tiles));
+
         return perlinBoard;
     }
 
+    public void SetBoardObject(GameObject board)
+    {
+        boardObj = board;
+    }
+    
+    public IEnumerator CalculateBoardInfo(GameObject[,] tiles)
+    {
+        yield return StartCoroutine(CalculateTemperatures(tiles));
+        yield return StartCoroutine(CalculatePrecipitation(tiles));
+        Debug.Log("calculations complete");
 
-    void CalculatePrecipitation(GameObject [,] tiles)
+        OnBoardCalculationsCompleted?.Invoke(this, EventArgs.Empty);
+    }
+
+    IEnumerator CalculatePrecipitation(GameObject [,] tiles)
     {
         HashSet<GameObject> passedTiles = new HashSet<GameObject>();
         HashSet<GameObject> firstPass = new HashSet<GameObject>();
@@ -68,10 +84,12 @@ public class ImprovedBoardGen : BoardGenAlgorithm
 
                 passedTiles.Add(curTile.gameObject);
             }
+            yield return null;
+
         }
 
         // step two: pass in successive rings farther from the coast
-        while(firstPass.Count > 0)
+        while (firstPass.Count > 0)
         {
             foreach(GameObject tileObj in firstPass)
             {
@@ -93,16 +111,18 @@ public class ImprovedBoardGen : BoardGenAlgorithm
             firstPass.Clear();
             firstPass.UnionWith(secondPass);
             secondPass.Clear();
+            yield return null;
+
         }
     }
 
-    float calculatePrecipitation(GameObject curTile, GameObject adjacentTile)
+    public float calculatePrecipitation(GameObject curTile, GameObject adjacentTile)
     {
         float contributedPrecipitation;
         TileChars curTileChars = curTile.GetComponent<TileChars>();
         TileChars adjacentTileChars = adjacentTile.GetComponent<TileChars>();
 
-        SigmoidCurve tempModifierCurve = new SigmoidCurve(1, 10, -.1f);
+        SigmoidCurve tempModifierCurve = new SigmoidCurve(1, 0, -.1f);
         float tempModifier = tempModifierCurve.GetPointOnCurve(curTileChars.temperature);
         contributedPrecipitation = adjacentTileChars.precipitation * (1 - precipitationDropoff) * tempModifier;
 
@@ -120,7 +140,7 @@ public class ImprovedBoardGen : BoardGenAlgorithm
 
 
 
-    void CalculateTemperatures(GameObject[,] tiles)
+    IEnumerator CalculateTemperatures(GameObject[,] tiles)
     {
         for (int y = 0; y < tiles.GetLength(1); y++)
         {
@@ -128,10 +148,13 @@ public class ImprovedBoardGen : BoardGenAlgorithm
             {
                 tiles[x,y].GetComponent<TileChars>().temperature = CalculateTileTemperature(tiles[x, y].GetComponent<TileChars>());
             }
+            yield return null;
+
+
         }
     }
 
-    float CalculateTileTemperature(TileChars tileChars)
+    public float CalculateTileTemperature(TileChars tileChars)
     {
         BoardStats boardStats = boardObj.GetComponent<BoardStats>();
         // average temperature is at middle latitudes
