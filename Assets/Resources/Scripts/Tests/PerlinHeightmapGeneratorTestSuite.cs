@@ -24,7 +24,6 @@ public class PerlinHeightmapGeneratorTestSuite
         TestGenerator.LandRisePoint = .2f;
         TestGenerator.WaterLevel = .1f;
         TestGenerator.AvgAboveWaterElevation = .1f;
-        TestGenerator.MountainSteepness = 30;
         TestGenerator.SeaLevelRiseSteepness = 15;
 
         CompoundCurve TestCompoundCurve = TestGenerator.HeightModifier;

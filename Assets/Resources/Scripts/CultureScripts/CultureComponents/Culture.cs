@@ -99,7 +99,7 @@ public class Culture : MonoBehaviour
     [Range(0, .05f)]
     public float baseMutationMax = .01f;
 
-    [Range(0, .1f)]
+    [Range(0, 1f)]
     public float sameCultureCutoff = .1f;
 
     public float FertilityRate = .00007f;

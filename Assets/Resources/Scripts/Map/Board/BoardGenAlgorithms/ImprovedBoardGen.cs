@@ -7,6 +7,8 @@ public class ImprovedBoardGen : BoardGenAlgorithm
 {
     public float precipitationDropoff = .3f;
     public float elevationModifier = .05f;
+    public float bonusElevationPrecipitation = .02f;
+
 
     GameObject boardObj;
 
@@ -100,7 +102,7 @@ public class ImprovedBoardGen : BoardGenAlgorithm
         TileChars curTileChars = curTile.GetComponent<TileChars>();
         TileChars adjacentTileChars = adjacentTile.GetComponent<TileChars>();
 
-        SigmoidCurve tempModifierCurve = new SigmoidCurve(1, -25, -.08f);
+        SigmoidCurve tempModifierCurve = new SigmoidCurve(1, 10, -.1f);
         float tempModifier = tempModifierCurve.GetPointOnCurve(curTileChars.temperature);
         contributedPrecipitation = adjacentTileChars.precipitation * (1 - precipitationDropoff) * tempModifier;
 
@@ -110,6 +112,8 @@ public class ImprovedBoardGen : BoardGenAlgorithm
 
         contributedPrecipitation -= elevationDistance * elevationModifier; 
         contributedPrecipitation = Mathf.Max(0, contributedPrecipitation); // can't have negative precipitation
+
+        contributedPrecipitation += curTileChars.elevation * bonusElevationPrecipitation; // higher elevations get more rainfall 
 
         return contributedPrecipitation;
     }

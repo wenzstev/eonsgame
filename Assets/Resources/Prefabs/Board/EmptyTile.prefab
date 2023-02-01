@@ -174,17 +174,17 @@ MonoBehaviour:
   precipitationMax: {r: 0, g: 0, b: 0, a: 0}
   waterColor: {r: 0, g: 0.12593818, b: 1, a: 1}
   frozenColor: {r: 0, g: 0.68605995, b: 1, a: 1}
-  tempMinValue: 0
-  tempMaxValue: 30
+  tempMinValue: -15
+  tempMaxValue: 35
   precipitationMinValue: 0
-  precipitationMaxValue: 100
-  DesertColor: {r: 0.9716981, g: 0.9579877, b: 0, a: 1}
-  SavannahColor: {r: 1, g: 0.5735978, b: 0, a: 1}
-  TropicalRainforestColor: {r: 0.13052988, g: 0.6981132, b: 0, a: 1}
+  precipitationMaxValue: 450
+  DesertColor: {r: 0.9433962, g: 0.8233582, b: 0.2195324, a: 1}
+  SavannahColor: {r: 0.745283, g: 0.461774, b: 0.08202792, a: 1}
+  TropicalRainforestColor: {r: 0.15729803, g: 0.6509434, b: 0.12077248, a: 1}
   GrasslandColor: {r: 0.4811321, g: 0.4782446, b: 0, a: 1}
   WoodlandColor: {r: 0.3199936, g: 0.41568628, b: 0, a: 1}
   SeasonalForestColor: {r: 0.44141975, g: 0.5754717, b: 0.23163636, a: 1}
-  TemperateRainForestColor: {r: 0.052040704, g: 0.3679245, b: 0, a: 1}
+  TemperateRainForestColor: {r: 0.2017186, g: 0.46226418, b: 0.15990266, a: 1}
   BorealForestColor: {r: 0.73537797, g: 0.6313726, b: 0, a: 1}
   TundraColor: {r: 0.32935798, g: 0.5754717, b: 0.40612617, a: 1}
   IceColor: {r: 1, g: 1, b: 1, a: 1}
@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurFood: 0
-  MAX_FOOD_MODIFIER: 100000
+  MAX_FOOD_MODIFIER: 1000
   NewFoodPerTick: 0
   FoodGrowthPercent: 0.00143
 --- !u!114 &-6394847766927115716
@@ -351,7 +351,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 50a2f423cf63b6a47a9f4e1329938879, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -387,6 +387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetSprite: {fileID: 1960078481896472822}
   _tileFood: {fileID: -4231853352628952675}
+  percentLowIndicator: 0.01
 --- !u!1 &5421071591610982658
 GameObject:
   m_ObjectHideFlags: 0

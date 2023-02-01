@@ -44,20 +44,19 @@ public static class DefaultAction
 
         if (amountGathered - cultureTurnInfo.GetCost() > 0) return; // stay in default mode if you're gathering enough food
 
-        float starvingThreshold = .01f;
         float overpopulationThreshold = .05f;
         float seekingFoodThreshold = .4f;
         
         float FoodStore = CultureFoodStore.CurrentFoodStore;
         float MaxFoodStore = CultureFoodStore.MaxFoodStore;
 
-        Culture.State newState = FoodStore < starvingThreshold * MaxFoodStore ? Culture.State.Starving :
+        Culture.State newState = 
             FoodStore < overpopulationThreshold * MaxFoodStore ? 
             Culture.State.Overpopulated : 
             FoodStore < seekingFoodThreshold * MaxFoodStore ?
             Culture.State.SeekingFood : Culture.State.Default;
 
-        
+        if(newState == Culture.State.Default) Turn.AddIntUpdate(CultureUpdateGetter.GetOverpopulationUpdate(cultureTurnInfo, Culture, 0)); // reset population issue
 
         Turn.AddStateUpdate(CultureUpdateGetter.GetStateUpdate(cultureTurnInfo, Culture, newState));
     }
