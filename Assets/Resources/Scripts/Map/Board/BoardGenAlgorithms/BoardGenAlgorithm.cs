@@ -1,10 +1,13 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class BoardGenAlgorithm : MonoBehaviour
 {
     public GameObject EmptyTile;
+
+    public EventHandler<EventArgs> OnBoardCalculationsCompleted;
+
 
     public abstract BoardTileRelationship CreateBoard(BoardStats bs);
 

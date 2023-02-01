@@ -180,6 +180,7 @@ MonoBehaviour:
   precipitationMaxValue: 450
   DesertColor: {r: 0.9433962, g: 0.8233582, b: 0.2195324, a: 1}
   SavannahColor: {r: 0.745283, g: 0.461774, b: 0.08202792, a: 1}
+  SteppeColor: {r: 0.3012044, g: 0.6698113, b: 0.51146615, a: 1}
   TropicalRainforestColor: {r: 0.15729803, g: 0.6509434, b: 0.12077248, a: 1}
   GrasslandColor: {r: 0.4811321, g: 0.4782446, b: 0, a: 1}
   WoodlandColor: {r: 0.3199936, g: 0.41568628, b: 0, a: 1}
@@ -260,7 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurFood: 0
-  MAX_FOOD_MODIFIER: 1000
+  MAX_FOOD_MODIFIER: 1500
   NewFoodPerTick: 0
   FoodGrowthPercent: 0.00143
 --- !u!114 &-6394847766927115716

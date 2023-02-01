@@ -17,30 +17,22 @@ public static class MovePreferredTileAction
         Culture culture = cultureTurnInfo.Culture;
 
         Tile[] NeighboringTiles = GetNeighboringTiles(culture);
-        List<GameObject> ForbiddenTiles = SetForbiddenTiles(culture);
 
         foreach((TileDrawer.BiomeType, float) affinity in GetSortedAffinities(culture))
         {
-            Tile prospectiveTile = GetAndCheckTilesOfBiome(affinity.Item1, NeighboringTiles, ForbiddenTiles);
+            Tile prospectiveTile = GetAndCheckTilesOfBiome(affinity.Item1, NeighboringTiles);
             if (prospectiveTile != null) return prospectiveTile;
         }
         return null;
     }
 
-    static List<GameObject> SetForbiddenTiles(Culture culture)
-    {
-        List<GameObject> forbiddenTiles = new List<GameObject>();
-        if(culture.CultureMemory.previousTile != null) 
-            forbiddenTiles.Add(culture.GetComponent<CultureMemory>().previousTile.gameObject);     
-        return forbiddenTiles;
-    }
 
     static Tile[] GetNeighboringTiles(Culture culture)
     {
         return culture.Tile.TileLocation.GetAllNeighbors().Select(t => t.GetComponent<Tile>()).ToArray();
     }
 
-    static Tile GetAndCheckTilesOfBiome(TileDrawer.BiomeType b, Tile[] NeighboringTiles, List<GameObject> ForbiddenTiles)
+    static Tile GetAndCheckTilesOfBiome(TileDrawer.BiomeType b, Tile[] NeighboringTiles)
     {
         if (b == TileDrawer.BiomeType.Water) return null;
 
@@ -48,8 +40,7 @@ public static class MovePreferredTileAction
         while (TilesOfThisBiome.Count > 0)
         {
             Tile current = TilesOfThisBiome[Mathf.FloorToInt(Random.value * TilesOfThisBiome.Count)];
-            if (!ForbiddenTiles.Contains(current.gameObject)) return current;
-            TilesOfThisBiome.Remove(current);
+            return current;
         }
         return null;
     }

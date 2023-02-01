@@ -18,6 +18,8 @@ public class CulturePlacementHandler : MonoBehaviour
     Vector3[][] Positions;
     List<Vector3> ExpectedPositions; // cached
 
+    float timeBetweenChecks = 5;
+    float curTime = 0;
 
     public void Initialize()
     {
@@ -26,6 +28,7 @@ public class CulturePlacementHandler : MonoBehaviour
         CultureContainer.OnListChanged += CulturePlacementHandler_OnListChanged;
         ExpectedPositions = new List<Vector3>();
     }
+
 
     void CalculateCulturePositionList()
     {

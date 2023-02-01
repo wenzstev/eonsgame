@@ -39,10 +39,8 @@ public class CultureContainer : MonoBehaviour
     {
         //Debug.Log($"Before: {PrintContents()}");
         InsertCultureIntoList(culture);
-        Profiler.BeginSample("subscribing to culture events");
         culture.OnPopulationChanged += cc_OnPopulationChange;
         culture.OnCultureDestroyed += cc_onCulutureDestroyed;
-        Profiler.EndSample();
 
        // Debug.Log($"After: {PrintContents()}");
 
@@ -57,13 +55,8 @@ public class CultureContainer : MonoBehaviour
 
         //Debug.Log($"After: {PrintContents()}");
 
-        Profiler.BeginSample("removing onpopchange");
         culture.OnPopulationChanged -= cc_OnPopulationChange;
-        Profiler.EndSample();
-        Profiler.BeginSample("removing culturedestroyed");
-
         culture.OnCultureDestroyed -= cc_onCulutureDestroyed;
-        Profiler.EndSample();
         InvokeListChange();
 
         return true;

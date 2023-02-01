@@ -759,7 +759,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5695180184468728085, guid: 3681249039e02d34ebfe54f4c812318a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3681249039e02d34ebfe54f4c812318a, type: 3}
@@ -1081,7 +1081,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5217356476487281930, guid: 375657675557a8e45a07bee945f4df02, type: 3}
       propertyPath: m_Name
-      value: TilePlacer
+      value: PlayerPowers
       objectReference: {fileID: 0}
     - target: {fileID: 5217356476487281931, guid: 375657675557a8e45a07bee945f4df02, type: 3}
       propertyPath: culturePuck
@@ -1142,6 +1142,75 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2025647000 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5217356476487281930, guid: 375657675557a8e45a07bee945f4df02, type: 3}
+  m_PrefabInstance: {fileID: 1915567428}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2025647003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025647000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d88706806001b947b18ed6487310587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MouseActionsController: {fileID: 1218317985}
+--- !u!114 &2025647004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025647000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38dacfdcccf7b9a4cac0fd5ef2ee7b60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MouseActionsController: {fileID: 1218317985}
+  ImprovedBoardGen: {fileID: 2025647005}
+  BoardLoader: {fileID: 1079782344}
+  ElevationChangeAmount: 200
+  refreshTime: 1
+--- !u!114 &2025647005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025647000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76d3e805cb2d20d4d87c17e949010fdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EmptyTile: {fileID: 0}
+  precipitationDropoff: 0.01
+  elevationModifier: 0.05
+  bonusElevationPrecipitation: 0.005
+--- !u!114 &2025647006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025647000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a212aa2b3b7a1584ebfb7ef3e53e514d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tempChangePerEvent: 0.1
+  precipitationChangePerEvent: 1
+  seaLevelChangePerEvent: 0.0005
+  eventFrequency: 360
+  BoardLoader: {fileID: 1079782344}
+  ImprovedBoardGen: {fileID: 2025647005}
 --- !u!1001 &1389126394050262255
 PrefabInstance:
   m_ObjectHideFlags: 0

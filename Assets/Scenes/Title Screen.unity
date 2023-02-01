@@ -1776,15 +1776,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1668891175587230222, guid: 7ade4593fe5346944aa136430dc16211, type: 3}
       propertyPath: m_Value
-      value: 200
+      value: 350
       objectReference: {fileID: 0}
     - target: {fileID: 1668891175587230222, guid: 7ade4593fe5346944aa136430dc16211, type: 3}
       propertyPath: m_MaxValue
-      value: 400
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 1668891175587230222, guid: 7ade4593fe5346944aa136430dc16211, type: 3}
       propertyPath: m_MinValue
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1745667368999390729, guid: 7ade4593fe5346944aa136430dc16211, type: 3}
       propertyPath: m_AnchorMax.x
