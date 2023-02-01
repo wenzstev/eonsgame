@@ -54,10 +54,12 @@ public class TileLoader : MonoBehaviour
 
         TileChars loadedTileChars = newTile.GetComponent<TileChars>();
         newTile.transform.position = new Vector3(loadedTileChars.x, loadedTileChars.y);
-        newTile.GetComponent<TileDrawer>().Initialize();
+
 
         JsonUtility.FromJsonOverwrite(st.serializedComponents[1], newTile.GetComponent<TileFood>());
         newTile.GetComponentInChildren<TileGreyscaleOverlayLink>().Initialize();
+
+        newTile.GetComponent<TileDrawer>().Initialize();
         newTile.GetComponent<TileFood>().Initialize();
 
         newTile.transform.SetParent(curBoard.transform);

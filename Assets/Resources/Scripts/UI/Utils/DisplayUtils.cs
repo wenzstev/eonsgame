@@ -15,6 +15,19 @@ public class DisplayUtils
     }
 
     /// <summary>
+    /// Rounds the given value to the desired number of decimal points, eg 12.3456 becomes 12.3
+    /// </summary>
+    /// <param name="val"></param>
+    /// <param name="numDecimals"></param>
+    /// <returns></returns>
+    public static float RoundToDecimal(float val, int numDecimals)
+    {
+        int largeVal = Mathf.RoundToInt(val * Mathf.Pow(10, numDecimals));
+        return (float)largeVal / Mathf.Pow(10, numDecimals);
+    }
+
+
+    /// <summary>
     /// Break up a string in CamelCase, so that it has spaces (NewStringVal => New String Val)
     /// </summary>
     /// <param name="original"></param>

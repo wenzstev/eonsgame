@@ -10,13 +10,24 @@ public static class MergeWithTileAction
         Tile newTile = cultureTurnInfo.CurTile;
         CultureHandler cultureHandler = newTile.GetComponentInChildren<CultureHandler>();
 
-        //Debug.Log($"merging culture {Culture}({Culture.GetHashCode()}) with tile {NewTile}");
-        if (cultureHandler.HasCultureByName(culture.Name))
+        List<Culture> CultureList = cultureHandler.GetAllSettledCultures();
+
+        foreach (Culture c in CultureList)
         {
-            AttemptToCombineCultures(cultureTurnInfo, cultureHandler);
-            return;
+            if (AttemptToCombineCultures(culture, c, cultureTurnInfo)) return;
         }
         AddForeignCulture(cultureTurnInfo, cultureHandler);
+
+    }
+
+    static bool AttemptToCombineCultures(Culture a, Culture b, CultureTurnInfo cultureTurnInfo)
+    {
+        if(a.CanMerge(b))
+        {
+            MergeCultures(cultureTurnInfo, a, b);
+            return true;
+        }
+        return false;
     }
 
     static void AttemptToCombineCultures(CultureTurnInfo cultureTurnInfo, CultureHandler cultureHandler)
@@ -33,6 +44,7 @@ public static class MergeWithTileAction
 
     static void AddForeignCulture(CultureTurnInfo cultureTurnInfo, CultureHandler cultureHandler)
     {
+        
         SetExistingCulturesToInvaded(cultureTurnInfo, cultureHandler);
         cultureHandler.TransferArrivalToTile(cultureTurnInfo.Culture);
     }
@@ -57,7 +69,6 @@ public static class MergeWithTileAction
 
     static void MergeCultures(CultureTurnInfo cultureTurnInfo, Culture remain, Culture merged)
     {
-        //Debug.Log("merging cultures");
         float percentThisPopulation = (float)remain.Population / (remain.Population + merged.Population);
         Color lerpedColor = Color.Lerp(remain.Color, merged.Color, percentThisPopulation);
 

@@ -8,11 +8,13 @@ public class TileFood : MonoBehaviour
 {
     public float CurFood;
     public float MAX_FOOD_MODIFIER = 1f;
+
     public int MaxFood { get; private set; }
     
     public float NewFoodPerTick;
 
     TileChars tileChars;
+    TileDrawer tileDrawer;
 
     /// <summary>
     /// Percent of max food that is replenished every tick
@@ -20,8 +22,7 @@ public class TileFood : MonoBehaviour
     [Range(0, .01f)]
     public float FoodGrowthPercent;
 
-    CompoundCurve TempCurve;
-    CompoundCurve PrecipitationCurve;
+    SigmoidCurve PrecipitationCurve;
 
 
     public event EventHandler<OnFoodChangeEventArgs> OnFoodChange;
@@ -29,17 +30,17 @@ public class TileFood : MonoBehaviour
     private void Awake()
     {
         tileChars = GetComponent<TileChars>();
+        tileDrawer = GetComponent<TileDrawer>();
         tileChars.OnAllTileStatsCalculated += TileFood_OnAllTileStatsCalculated;
     }
 
-    void DetermineMaxFood()
+    public void DetermineMaxFood()
     {
-        MaxFood = Mathf.Max(0, Mathf.FloorToInt(CalculateFoodRate() * MAX_FOOD_MODIFIER));
+        MaxFood = (int) (CalculateFoodRate() * MAX_FOOD_MODIFIER);
     }
 
     public void Initialize()
     {
-        TempCurve = CreateTempCurve();
         PrecipitationCurve = CreatePrecipitationCurve();
         DetermineMaxFood();
 
@@ -52,7 +53,10 @@ public class TileFood : MonoBehaviour
 
     float CalculateFoodRate()
     {
-        return TempCurve.GetPointOnCurve(tileChars.temperature) - .1f + PrecipitationCurve.GetPointOnCurve(tileChars.precipitation);
+        if (tileChars.temperature > tileDrawer.tempMaxValue) return 0;
+        if (tileChars.temperature < tileDrawer.tempMinValue) return 0;
+
+        return PrecipitationCurve.GetPointOnCurve(tileChars.precipitation);
     }
 
     public float CalculateFoodPerTick()
@@ -60,18 +64,10 @@ public class TileFood : MonoBehaviour
         return MaxFood * FoodGrowthPercent; 
     }
 
-    CompoundCurve CreateTempCurve()
-    {
-        GaussianCurve gaussComponent = new GaussianCurve(.5f, 24, 10);
-        PowerCurve powComponent = new PowerCurve(2f, 43, -1, 1);
-        return new CompoundCurve(new List<ICurve> { gaussComponent, powComponent });
-    }
 
-    CompoundCurve CreatePrecipitationCurve()
+    SigmoidCurve CreatePrecipitationCurve()
     {
-        SigmoidCurve sigmoidComponent = new SigmoidCurve(1, 100, -.04f);
-        PowerCurve powComponent = new PowerCurve(.5f, 15, -1, 1);
-        return new CompoundCurve(new List<ICurve> { sigmoidComponent, powComponent });
+        return new SigmoidCurve(100, 100, -.05f);
     }
 
     public void SetMaxFood()

@@ -5,6 +5,7 @@ using System;
 
 public class GreyscaleOverlay : MonoBehaviour
 {
+    SpriteRenderer Target;
     SpriteRenderer _greyscaleSprite;
     Color _greyscaleColor;
     float currentTransparency;
@@ -45,6 +46,7 @@ public class GreyscaleOverlay : MonoBehaviour
     /// <param name="target">The sprite to take the color to turn greyscale.</param>
     public void Initialize(SpriteRenderer target)
     {
+        Target = target;
         _greyscaleSprite = GetComponent<SpriteRenderer>();
         _greyscaleColor = GetGreyscaleColor(target.color);
         _greyscaleSprite.color = GetGreyscaleColorTransparent(_greyscaleColor, 0);

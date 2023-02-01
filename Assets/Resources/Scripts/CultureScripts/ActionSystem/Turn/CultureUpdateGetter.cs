@@ -94,6 +94,19 @@ public static class CultureUpdateGetter
   
         return MoveUpdate;
     }
+
+    public static CultureUpdate<int> GetOverpopulationUpdate(CultureTurnInfo originator, Culture target, int newDays)
+    {
+        CultureUpdate<int> OverpopulationUpdate = new CultureUpdate<int>();
+        OverpopulationUpdate.CultureChangeValue = newDays;
+        OverpopulationUpdate.Originator = originator;
+        OverpopulationUpdate._target = target;
+        OverpopulationUpdate.ExecuteChangeAction = (overpopulationUpdate, dayCount) =>
+        {
+            if(overpopulationUpdate.Target != null) overpopulationUpdate.Target.CultureMemory.daysSinceEaten = newDays;
+        };
+        return OverpopulationUpdate;
+    }
 }
 
 
