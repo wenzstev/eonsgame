@@ -29,6 +29,7 @@ public class CultureFoodStore : MonoBehaviour
         }
     }
 
+    
     private void Awake()
     {
         _culture = GetComponent<Culture>();

@@ -5,6 +5,8 @@ using System.Linq;
 using UnityEngine;
 using System.Text;
 
+
+// todo: change the affinitystats class to inject the curves, so that you can test more easily (dependency injection?)
 [Serializable]
 public struct AffinityStats 
 {
@@ -78,7 +80,11 @@ public struct AffinityStats
     {
         for (int i = 0; i < decayRates.Length; i++)
         {
-            if(i != (int) current) decayRates[i].IncreaseDaysSinceHarvested();
+            if (i != (int)current)
+            {
+                decayRates[i].IncreaseDaysSinceHarvested();
+                if(UnityEngine.Random.value < .01f) affinities[i] = affinities[i] * decayRates[i].GetDecayRate();
+            }
         }
     }
 
@@ -114,7 +120,7 @@ public struct AffinityStats
     {
         for(int i = 0; i < other.affinities.Length; i++)
         {
-            other.affinities[i] = Mathf.Lerp(affinities[i], other.affinities[i], ratio);
+            other.affinities[i] = Mathf.Lerp(affinities[i], other.affinities[i], ratio); // the ones who know teach the others
             other.daysHarvested[i] = Mathf.FloorToInt(Mathf.Lerp(daysHarvested[i], other.daysHarvested[i], ratio));
             other.decayRates[i] = DecayTracker.CombineDecayRates(decayRates[i], other.decayRates[i], ratio);
         }
@@ -122,7 +128,20 @@ public struct AffinityStats
 
         return other; // since it's a struct, returning other doesn't change struct that was brought in
     }
+    
+    public static AffinityStats CopyAffinityStats(AffinityStats other)
+    {
+        AffinityStats newStats = InitializeStats();
 
+        for(int i = 0; i < other.affinities.Length; i++)
+        {
+            newStats.affinities[i] = other.affinities[i];
+            newStats.daysHarvested[i] = other.daysHarvested[i];
+            newStats.decayRates[i] = new DecayTracker(other.daysHarvested[i]);
+        }
+
+        return newStats;
+    }
 
 
 }

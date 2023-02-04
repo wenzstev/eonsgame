@@ -104,7 +104,7 @@ public class AffinityManager : MonoBehaviour
 
     public AffinityStats GetStatCopy()
     {
-        return affinityStats; // does this auto copy the struct?
+        return AffinityStats.CopyAffinityStats(affinityStats);
     }
 
     public AffinityStats GetStatMerge(AffinityManager other, float ratio)

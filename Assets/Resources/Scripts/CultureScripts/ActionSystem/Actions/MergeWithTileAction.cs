@@ -6,6 +6,7 @@ public static class MergeWithTileAction
 
     public static void CombineCultureWithNewTile(CultureTurnInfo cultureTurnInfo)
     {
+        //Debug.Log($"Adding {cultureTurnInfo.Culture} to tile {cultureTurnInfo.CurTile}");
         Culture culture = cultureTurnInfo.Culture;
         Tile newTile = cultureTurnInfo.CurTile;
         CultureHandler cultureHandler = newTile.GetComponentInChildren<CultureHandler>();
@@ -20,31 +21,20 @@ public static class MergeWithTileAction
 
     }
 
-    static bool AttemptToCombineCultures(Culture a, Culture b, CultureTurnInfo cultureTurnInfo)
+    static bool AttemptToCombineCultures(Culture merging, Culture onTile, CultureTurnInfo cultureTurnInfo)
     {
-        if(a.CanMerge(b))
+        if(merging.CanMerge(onTile)) // culture will attempt to prevent others if overpopulated
         {
-            MergeCultures(cultureTurnInfo, a, b);
+            //Debug.Log($"Can combine {merging} with {onTile}");
+            MergeCultures(cultureTurnInfo, onTile, merging);
             return true;
         }
         return false;
     }
 
-    static void AttemptToCombineCultures(CultureTurnInfo cultureTurnInfo, CultureHandler cultureHandler)
-    {
-        Culture culture = cultureTurnInfo.Culture;
-        Culture other = cultureHandler.GetCultureByName(culture.name);
-        if (culture.CanMerge(other))
-        {
-            MergeCultures(cultureTurnInfo, other, culture);
-            return;
-        }
-        CreateAsNewCulture(cultureTurnInfo);
-    }
-
     static void AddForeignCulture(CultureTurnInfo cultureTurnInfo, CultureHandler cultureHandler)
     {
-        
+        //Debug.Log($"Adding {cultureTurnInfo.Culture} as foreign culture");
         SetExistingCulturesToInvaded(cultureTurnInfo, cultureHandler);
         cultureHandler.TransferArrivalToTile(cultureTurnInfo.Culture);
     }
@@ -52,20 +42,20 @@ public static class MergeWithTileAction
     static void SetExistingCulturesToInvaded(CultureTurnInfo cultureTurnInfo, CultureHandler cultureHandler)
     {
         Culture culture = cultureTurnInfo.Culture;
-        foreach (Culture c in cultureHandler.GetAllSettledCultures())
+        List<Culture> ExistingCultures = cultureHandler.GetAllSettledCultures();
+        if (ExistingCultures.Count < 1)
+        {
+            Turn.AddStateUpdate(CultureUpdateGetter.GetStateUpdate(cultureTurnInfo, culture, Culture.State.Default));
+            return; // no cultures on tile, not an invader
+        }
+
+        foreach (Culture c in ExistingCultures)
         {
             Turn.AddStateUpdate(CultureUpdateGetter.GetStateUpdate(cultureTurnInfo, c, Culture.State.Invaded));
         }
         Turn.AddStateUpdate(CultureUpdateGetter.GetStateUpdate(cultureTurnInfo, culture, Culture.State.Invader));
     }
 
-    static void CreateAsNewCulture(CultureTurnInfo cultureTurnInfo)
-    {
-        Culture culture = cultureTurnInfo.Culture;
-        string newName = Culture.MutateString(culture.Name);
-        Turn.AddStringUpdate(CultureUpdateGetter.GetNameUpdate(cultureTurnInfo, culture, newName));
-        //Debug.Log($"Changing name of {Culture} to {newName}");
-    }
 
     static void MergeCultures(CultureTurnInfo cultureTurnInfo, Culture remain, Culture merged)
     {

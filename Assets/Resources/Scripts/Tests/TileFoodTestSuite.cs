@@ -59,7 +59,7 @@ public class TileFoodTestSuite : BasicBoardTest
     public IEnumerator CanIncreaseFoodPerTick()
     {
         TestTileFood.NewFoodPerTick = 1.4f;
-        TestTileFood.CurFood = 0;
+        TestTileFood.SetFood(0);
 
         EventManager.TriggerEvent("Tick", null);
         yield return null;

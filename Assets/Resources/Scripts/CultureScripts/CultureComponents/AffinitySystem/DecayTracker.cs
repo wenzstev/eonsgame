@@ -39,7 +39,7 @@ public struct DecayTracker
         _forgettingCurve = new PowerCurve(2, 0, 100, -1 / NumDaysHarvested);
         _totalDaysHarvested = NumDaysHarvested;
     }
-
+    
 
     public float GetDecayRate()
     {

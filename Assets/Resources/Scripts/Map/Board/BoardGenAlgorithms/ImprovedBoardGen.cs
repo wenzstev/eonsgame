@@ -10,12 +10,14 @@ public class ImprovedBoardGen : BoardGenAlgorithm
     public float elevationModifier = .05f;
     public float bonusElevationPrecipitation = 0.005f;
 
+    bool isFirstPass = false;
 
     GameObject boardObj;
 
 
     public override BoardTileRelationship CreateBoard(BoardStats bs)
     {
+        isFirstPass = true;
         HeightmapGenerator heightmapGenerator = GetComponent<HeightmapGenerator>();
         heightmapGenerator.LandRisePoint = bs.LandRisePoint;
         bs.NormalizedSeaLevel = heightmapGenerator.NormalizedSeaLevel;
@@ -48,7 +50,7 @@ public class ImprovedBoardGen : BoardGenAlgorithm
     {
         yield return StartCoroutine(CalculateTemperatures(tiles));
         yield return StartCoroutine(CalculatePrecipitation(tiles));
-        Debug.Log("calculations complete");
+        isFirstPass = false;
 
         OnBoardCalculationsCompleted?.Invoke(this, EventArgs.Empty);
     }
@@ -102,6 +104,7 @@ public class ImprovedBoardGen : BoardGenAlgorithm
 
                 // fire event to indicate that all stats are created
                 curTile.GetComponent<TileChars>().InformAllStatsCalculated();
+                if (isFirstPass) curTile.GetComponent<TileChars>().InformStatsFirstCalculated();
 
 
                 secondPass.UnionWith(neighbors.Where(e => !passedNeighbors.Contains(e)));

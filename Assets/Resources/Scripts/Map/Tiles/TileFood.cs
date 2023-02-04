@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
@@ -6,7 +6,9 @@ using System;
 [System.Serializable]
 public class TileFood : MonoBehaviour
 {
-    public float CurFood;
+    [SerializeField]
+    private float _curFood;
+    public float CurFood { get { return _curFood; } private set { _curFood = Mathf.Max(0, value); } }
     public float MAX_FOOD_MODIFIER = 1f;
 
     public int MaxFood { get; private set; }
@@ -32,22 +34,40 @@ public class TileFood : MonoBehaviour
         tileChars = GetComponent<TileChars>();
         tileDrawer = GetComponent<TileDrawer>();
         tileChars.OnAllTileStatsCalculated += TileFood_OnAllTileStatsCalculated;
+        tileChars.OnFirstStatsCreated += TileFood_OnFirstCreation;
+
+    }
+
+    public float AttemptHarvest(float amountDesired)
+    {
+        float amountHarvested = Mathf.Min(CurFood, amountDesired);
+        CurFood -= amountHarvested;
+        return amountHarvested;
+    }
+
+    public void SetFood(float food)
+    {
+        CurFood = food;
     }
 
     public void DetermineMaxFood()
     {
-        MaxFood = (int) (CalculateFoodRate() * MAX_FOOD_MODIFIER);
+        MaxFood = tileChars.isUnderwater ? 0 : (int) (CalculateFoodRate() * MAX_FOOD_MODIFIER);
     }
 
     public void Initialize()
     {
-        PrecipitationCurve = CreatePrecipitationCurve();
-        DetermineMaxFood();
 
-
-        NewFoodPerTick = CalculateFoodPerTick();
+        SetNewFoodStats();
         EventManager.StartListening("Tick", OnTick);
         FireFoodAction();
+    }
+
+    public void SetNewFoodStats()
+    {
+        PrecipitationCurve = CreatePrecipitationCurve();
+        DetermineMaxFood();
+        NewFoodPerTick = CalculateFoodPerTick();
 
     }
 
@@ -89,7 +109,11 @@ public class TileFood : MonoBehaviour
 
     public void TileFood_OnAllTileStatsCalculated(object sender, TileChars.OnAllTileStatsCalculatedEventArgs e)
     {
-        Initialize();
+        SetNewFoodStats();
+    }
+
+    public void TileFood_OnFirstCreation(object sender, EventArgs empty)
+    {
         SetMaxFood();
     }
 

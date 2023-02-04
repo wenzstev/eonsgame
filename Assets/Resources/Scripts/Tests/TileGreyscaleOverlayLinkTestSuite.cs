@@ -43,7 +43,7 @@ public class TileGreyscaleOverlayLinkTestSuite
 
         foreach((float, float) testValue in testValues)
         {
-            TestTileFood.CurFood = testValue.Item1;
+            TestTileFood.SetFood(testValue.Item1);
             TestTileFood.FireFoodAction();
             Assert.AreEqual(testValue.Item2, TestGreyscaleOverlay.PercentTransparent, $"Test Food amount: {testValue.Item1} -- Greyscale Overlay is not expected transparency!");
         }

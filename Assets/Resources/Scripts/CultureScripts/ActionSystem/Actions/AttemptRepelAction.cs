@@ -24,9 +24,9 @@ public static class AttemptRepelAction
     static bool AttemptRepelInvader(CultureTurnInfo cultureTurnInfo, Culture invader)
     {
         Culture culture = cultureTurnInfo.Culture;
+        TileDrawer.BiomeType biome = cultureTurnInfo.CurTile.TileChars.Biome;
         // ability to repel is function of population and affinity (and later tech)
-        //TODO: re-add affinity information so that repel ability is function of new affinity
-        float hasAffinityAdvantage = 0;
+        float hasAffinityAdvantage = (culture.AffinityManager.GetAffinity(biome) - invader.AffinityManager.GetAffinity(biome))/10f;
         float popAdvantage = ((float)culture.Population - invader.Population) / 10f;
         float repelThreshold = repelModifier + hasAffinityAdvantage + popAdvantage;
         //Debug.Log("repel threshold = .6 + " + hasAffinityAdvantage + " + " + popAdvantage);

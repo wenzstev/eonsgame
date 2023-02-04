@@ -9,6 +9,7 @@ public class TileChars : MonoBehaviour
     public int y;
 
     public event EventHandler<OnAllTileStatsCalculatedEventArgs> OnAllTileStatsCalculated;
+    public event EventHandler<EventArgs> OnFirstStatsCreated;
 
     TileDrawer tileDrawer;
 
@@ -68,6 +69,11 @@ public class TileChars : MonoBehaviour
     public void InformAllStatsCalculated()
     {
         OnAllTileStatsCalculated?.Invoke(this, new OnAllTileStatsCalculatedEventArgs() { TileChars = this });
+    }
+
+    public void InformStatsFirstCalculated()
+    {
+        OnFirstStatsCreated?.Invoke(this, EventArgs.Empty);
     }
 
 

@@ -29,7 +29,7 @@ public class CultureFoodStoreTestSuite : CultureActionTest
     [UnityTest]
     public IEnumerator CanConsumeFoodInTurn()
     {
-        TestTile.GetComponent<TileFood>().CurFood = 0;
+        TestTile.GetComponent<TileFood>().SetFood(0);
         TestCultureFoodStore.AlterFoodStore(TestCultureFoodStore.MaxFoodStore);
         CultureTurnInfo cultureTurnInfo = new CultureTurnInfo(TestCulture, Turn.CurrentTurn);
         DefaultAction.ExecuteTurn(cultureTurnInfo);
@@ -42,7 +42,7 @@ public class CultureFoodStoreTestSuite : CultureActionTest
     [UnityTest]
     public IEnumerator CanConsumeFoodMultiplePopulation()
     {
-        TestTile.GetComponent<TileFood>().CurFood = 0;
+        TestTile.GetComponent<TileFood>().SetFood(0);
         TestCulture.AddPopulation(5);
         TestCulture.GetComponent<CultureFoodStore>().AlterFoodStore(1000);
 
@@ -65,7 +65,7 @@ public class CultureFoodStoreTestSuite : CultureActionTest
 
     float SetFoodAndExecuteTurn()
     {
-        TestTile.GetComponent<TileFood>().CurFood = 1000;
+        TestTile.GetComponent<TileFood>().SetFood(1000);
         CultureTurnInfo cultureTurnInfo = new CultureTurnInfo(TestCulture, Turn.CurrentTurn);
         return GatherFoodAction.GatherFood(cultureTurnInfo);
     }

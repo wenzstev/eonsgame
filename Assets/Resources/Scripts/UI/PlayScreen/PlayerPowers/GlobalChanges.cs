@@ -16,8 +16,6 @@ public class GlobalChanges : MonoBehaviour
     BoardStats BoardStats;
     Board Board;
 
-    TileDrawer[,] TileDrawers;
-
     bool isListening;
 
     ChangeType CurrentState;
@@ -38,7 +36,7 @@ public class GlobalChanges : MonoBehaviour
         if ((int)age["age"] % eventFrequency == 0) ExecuteChangeEvent();
     }
 
-    private void Start()
+    private void Awake()
     {
         BoardLoader.OnBoardCreated += BoardLoader_OnBoardCreated;
     }
@@ -120,6 +118,7 @@ public class GlobalChanges : MonoBehaviour
 
     public void BoardLoader_OnBoardCreated(object sender, BoardLoader.OnBoardCreatedEventArgs e)
     {
+        //Debug.Log("adding board to poers");
         ImprovedBoardGen.SetBoardObject(e.BoardStats.gameObject);
         BoardStats = e.BoardStats;
         Board = BoardStats.GetComponent<Board>();

@@ -82,18 +82,7 @@ public class CultureHandler : MonoBehaviour
         Debug.LogError($"Tried to remove culture {c} from tile it wasn't on ({transform.parent})!");
     }
 
-    
-    public void RenameCulture(Culture c, string oldname)
-    {
-        // rename logic goes here, because we're moving the culture back to staging
-        if(CultureContainer.ContainsCulture(c))
-        {
-            CultureContainer.RemoveCulture(c);
-            CultureStaging.AddArrival(c);
-            c.transform.parent = CultureStaging.transform;
-        }
-    }
-    
+
 
     void FirePopulationChangedEvent()
     {

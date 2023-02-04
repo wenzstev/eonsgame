@@ -13,19 +13,18 @@ public static class GatherFoodAction
         float differenceBetweenMaxFoodAndCurFood = CultureFoodStore.MaxFoodStore - GetAmountAfterActionCost(CultureFoodStore, cultureTurnInfo.GetCost());
         float maxThatCouldBeGathered = GetMaxThatCouldBeGathered(TileFood, Culture);
 
-        if (maxThatCouldBeGathered == 0 || differenceBetweenMaxFoodAndCurFood < 0) return 0; // no food can be gathered; either no food on tile or pop has too much already
+        if (maxThatCouldBeGathered <= 0 || differenceBetweenMaxFoodAndCurFood < 0) return 0; // no food can be gathered; either no food on tile or pop has too much already
 
         float ActualAmountToGather = differenceBetweenMaxFoodAndCurFood < maxThatCouldBeGathered ? differenceBetweenMaxFoodAndCurFood : maxThatCouldBeGathered;
 
-        TileFood.CurFood -= ActualAmountToGather; // TODO: update tile food to be it's own turn system
-        return ActualAmountToGather;
+        return TileFood.AttemptHarvest(ActualAmountToGather); // TODO: update tile food to be it's own turn system
 
         //Debug.Log("Affinity rate was " + GetAndInformAffinity());
     }
 
     static float GetMaxThatCouldBeGathered(TileFood tileFood, Culture culture)
     {
-        return tileFood.CurFood * culture.FoodGatherRate * culture.Population * GetAndInformAffinity(culture.Tile.TileChars, culture);
+        return Mathf.Max(0, tileFood.CurFood * culture.FoodGatherRate * culture.Population * GetAndInformAffinity(culture.Tile.TileChars, culture));
     }
 
     static float GetAmountAfterActionCost(CultureFoodStore CultureFood, int actionCost)

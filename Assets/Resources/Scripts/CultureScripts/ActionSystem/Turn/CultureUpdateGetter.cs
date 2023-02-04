@@ -33,7 +33,6 @@ public static class CultureUpdateGetter
         GetNameUpdate.ExecuteChangeAction = (nameUpdate, newName) =>
         {
             nameUpdate.Target?.RenameCulture(newName);
-            nameUpdate.Target?.ChangeState(Culture.State.NewOnTile); // renaming resets culture to newontile in order to merge with other named cultures
         };
         return GetNameUpdate;
     }
@@ -47,7 +46,7 @@ public static class CultureUpdateGetter
         ColorUpdate.ExecuteChangeAction = (colorUpdate, newColor) =>
         {
             colorUpdate.Target?.SetColor(newColor);
-            if (UnityEngine.Random.value < 0.0001f) colorUpdate.Target.RenameCulture(Culture.MutateString(colorUpdate.Target.name));
+            if (UnityEngine.Random.value < 0.00001f) colorUpdate.Target.RenameCulture(Culture.MutateString(colorUpdate.Target.name));
         };
         return ColorUpdate;
     }

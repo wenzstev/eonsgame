@@ -84,6 +84,8 @@ public class Culture : MonoBehaviour
         }
     }
 
+
+
     SpriteRenderer layerMode;
     SpriteRenderer circleMode;
 
@@ -292,7 +294,6 @@ public class Culture : MonoBehaviour
         string oldName = Name;
         name = newName;
         gameObject.name = newName;
-        CultureHandler?.RenameCulture(this, oldName);
         onCultureNameChangedEventArgs.NewName = newName;
         onCultureNameChangedEventArgs.OldName = oldName;
         OnNameChanged?.Invoke(this, onCultureNameChangedEventArgs);

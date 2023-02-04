@@ -14,7 +14,7 @@ public class TileLoader : MonoBehaviour
         int height = board.GetComponent<Board>().Height;
         int width = board.GetComponent<Board>().Width;
 
-        Debug.Log($"{height} {width}");
+        //Debug.Log($"{height} {width}");
 
         GameObject[,] boardTiles = new GameObject[width, height];
         Dictionary<GameObject, (int, int)> tileLookup = new Dictionary<GameObject, (int, int)>();

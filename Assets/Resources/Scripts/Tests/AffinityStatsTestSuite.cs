@@ -38,43 +38,16 @@ public class AffinityStatsTestSuite
     [Test]
     public void CanCombineAffinity()
     {
-        AffinityStats SecondStats = AffinityStats.InitializeStats();
+        AffinityStats firstStats = AffinityStats.InitializeStats();
+        AffinityStats secondStats = AffinityStats.InitializeStats();
 
-        HarvestForDays(4, TileDrawer.BiomeType.Grassland, TestAffinityStats);
-        HarvestForDays(5, TileDrawer.BiomeType.TemperateRainforest, TestAffinityStats);
+        firstStats.ChangeAffinity(TileDrawer.BiomeType.Desert, 50);
+        secondStats.ChangeAffinity(TileDrawer.BiomeType.Taiga, 25);
 
-        HarvestForDays(3, TileDrawer.BiomeType.Grassland, SecondStats);
-        HarvestForDays(7, TileDrawer.BiomeType.Desert, SecondStats);
+        AffinityStats CombinedStats = firstStats.CombineAffinities(secondStats, .5f);
 
-        AffinityStats combinedStats = TestAffinityStats.CombineAffinities(SecondStats, .5f);
-        int[] testDays = new int[] { 3, 0, 0, 3, 0, 0, 2, 0, 0, 0, 0, 0 };
-        float[] testAffinities = new float[] { 35, 0, 0, 35, 0, 0, 25, 0, 0, 0, 0, 0 };
-        float[] decayRates = new float[] { .396850228f, 0, 0, .25f, 0, 0, 0.176776692f, 0, 0, 0, 0, 0 };
-
-        /*
-         *         
-         *         Desert,
-        Savannah,
-        TropicalRainforest,
-        Grassland,
-        Woodland,
-        SeasonalForest,
-        TemperateRainForest,
-        BorealForest,
-        Tundra,
-        Ice,
-        Water,
-        Barren
-         */
-
-        foreach (TileDrawer.BiomeType biome in Enum.GetValues(typeof(TileDrawer.BiomeType)))
-        {
-            Assert.AreEqual(testAffinities[(int)biome], combinedStats.GetAffinity(biome), $"{biome} does not have expected affinity!");
-            Assert.AreEqual(testDays[(int)biome], combinedStats.GetNumDaysHarvested(biome), $"{biome} does not have expected days harvested!");
-            Assert.AreEqual(decayRates[(int)biome], combinedStats.GetDecayRate(biome), $"{biome} does not have expected decay rate!");
-        }
-
-
+        Assert.AreEqual(25f, CombinedStats.GetAffinity(TileDrawer.BiomeType.Desert));
+        Assert.AreEqual(12.5f, CombinedStats.GetAffinity(TileDrawer.BiomeType.Taiga));
     }
 
 

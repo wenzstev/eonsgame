@@ -15,7 +15,7 @@ public class CameraMoveController : MonoBehaviour
 
     public void AddRestriction(ICameraRestriction restriction)
     {
-        Debug.Log("Adding restriction: " + restriction);
+        //Debug.Log("Adding restriction: " + restriction);
         Restrictions.Add(restriction);
     }
 
