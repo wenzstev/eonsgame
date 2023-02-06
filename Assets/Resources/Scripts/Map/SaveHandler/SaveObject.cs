@@ -35,6 +35,11 @@ public class SaveObject : MonoBehaviour
         Save.SerializeSave(newSave, saveName);
     }
 
-   
+    private void OnDestroy()
+    {
+        EventManager.StopListening("SaveGame", SaveGame);
+    }
+
+
 
 }

@@ -40,6 +40,7 @@ public class CulturePanelController: MonoBehaviour
 
     private void Culture_OnPopulationChanged(object sender, Culture.OnPopulationChangedEventArgs e)
     {
+        if (Culture.Population <= 0) DestroyPanel();
         SetPopulationText(Culture.Population);
     }
 
@@ -65,6 +66,11 @@ public class CulturePanelController: MonoBehaviour
         Culture.OnPopulationChanged -= Culture_OnPopulationChanged;
         Culture.OnNameChanged -= Culture_OnNameChanged;
         Culture.OnColorChanged -= Culture_OnColorChanged;
+    }
+
+    public void DestroyPanel()
+    {
+        Destroy(gameObject);
     }
 
 }

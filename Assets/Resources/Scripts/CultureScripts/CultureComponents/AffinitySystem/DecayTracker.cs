@@ -27,7 +27,7 @@ public struct DecayTracker
     {
         _daysSinceHarvested = 0;
         _currentDecayRate = -.5f;
-        _forgettingCurve = new PowerCurve(2, 0, 100, -1 / NumDaysHarvested);
+        _forgettingCurve = new PowerCurve(2, 0, 100, -1 / Mathf.Min(Mathf.Max(1, NumDaysHarvested), 36500)); // no less than 1, no more than 100 years
         _totalDaysHarvested = NumDaysHarvested;
         //Debug.Log($"forgetting curve for {biome} is {_forgettingCurve.PowerMultiplier}");
     }

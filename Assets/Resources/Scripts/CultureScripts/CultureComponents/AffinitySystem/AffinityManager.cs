@@ -101,6 +101,11 @@ public class AffinityManager : MonoBehaviour
         if(gameObject.activeInHierarchy) affinityStats.IncrementDecayDays(_currentBiome);
     }
 
+    private void OnDestroy()
+    {
+        EventManager.StopListening("Tick", OnTick);
+    }
+
 
     public AffinityStats GetStatCopy()
     {

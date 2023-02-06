@@ -8,7 +8,7 @@ public class CultureController : MonoBehaviour
     List<CultureBrain> AllCultures;
     List<CultureBrain> _culturesToExecute;
 
-    private void Start()
+    private void Awake()
     {
         AllCultures = new List<CultureBrain>();
 

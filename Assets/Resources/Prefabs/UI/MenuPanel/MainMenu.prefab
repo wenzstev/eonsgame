@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 535453325315305633}
   - component: {fileID: 535453325315305634}
   - component: {fileID: 8902239437774477304}
-  - component: {fileID: 955750721570846000}
   - component: {fileID: 5260767931196817065}
+  - component: {fileID: 3688359809732336276}
   m_Layer: 0
   m_Name: MainMenu
   m_TagString: Untagged
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 955750721570846000}
+      - m_Target: {fileID: 3688359809732336276}
         m_TargetAssemblyTypeName: SceneLoader, MainAssembly
         m_MethodName: LoadMainMenuScene
         m_Mode: 1
@@ -237,18 +237,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &955750721570846000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6975356741398885406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eef766e0fdcaef14daf0388d2a130d96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &5260767931196817065
 Animator:
   serializedVersion: 4
@@ -269,3 +257,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3688359809732336276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6975356741398885406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6c898fd416cb4e27ac5b6ee4cc6ac78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

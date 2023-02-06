@@ -14,6 +14,10 @@ public class AffinityBarController : MonoBehaviour
 
     public void SetValues(TileDrawer.BiomeType biome, float affinity, float MaxAffinityAmount)
     {
+        if (affinity == 0)
+        {
+            gameObject.SetActive(false);
+        }
         AffinityName.text = DisplayUtils.SplitCamelCase(biome.ToString());
 
         float barPercent = Mathf.InverseLerp(0, MaxAffinityAmount, affinity);
